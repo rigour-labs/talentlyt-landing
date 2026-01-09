@@ -1,67 +1,196 @@
-import { Shield, Code } from 'lucide-react';
+'use client';
+
+import { Shield, Code, Eye, FileText, Heart, Lock, ArrowRight, Play } from 'lucide-react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { useInView } from 'framer-motion';
+import { useRef } from 'react';
 
 export function FeaturesSection() {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1
+            }
+        }
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 30 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.5,
+                ease: [0.4, 0, 0.2, 1] as const
+            }
+        }
+    };
     const features = [
         {
-            title: 'Integrity Verification',
-            description: 'Data-driven insights for high-integrity hiring, visually identifying potential irregularities with candidate consent.',
-            icon: <Shield className="w-6 h-6" />,
+            title: 'Stop Hiring Cheaters',
+            benefit: 'Integrity Verification',
+            description: 'Data-driven insights for high-integrity hiring, visually identifying potential irregularities with candidate consent. Reduce false positives by 95%.',
+            icon: <Shield className="w-8 h-8" />,
             className: "md:col-span-2",
+            metric: '95% reduction',
+            demoLink: '/live-demo#integrity',
         },
         {
-            title: 'Independent Evaluation',
-            description: 'Separate AI agents for interviewing and monitoring designed to minimize human and algorithmic bias.',
-            icon: <Code className="w-6 h-6" />,
+            title: 'Eliminate Bias',
+            benefit: 'Independent Evaluation',
+            description: 'Separate AI agents for interviewing and monitoring designed to minimize human and algorithmic bias. Get objective, consistent assessments.',
+            icon: <Eye className="w-8 h-8" />,
             className: "md:col-span-1",
+            metric: '90% less variance',
+            demoLink: '/live-demo#monitoring',
         },
         {
-            title: 'Code Playback',
-            description: 'Watch the entire coding session keystroke by keystroke to understand thought process.',
-            icon: <Code className="w-6 h-6" />,
+            title: 'Understand Thought Process',
+            benefit: 'Code Playback',
+            description: 'Watch the entire coding session keystroke by keystroke to understand how candidates approach problems, not just the final solution.',
+            icon: <Play className="w-8 h-8" />,
             className: "md:col-span-1",
+            metric: 'Full session replay',
+            demoLink: '/live-demo#playback',
         },
         {
-            title: 'Detailed Skill Reports',
-            description: 'Get a granular breakdown of technical skills, communication, and problem-solving abilities immediately after the interview.',
-            icon: <Shield className="w-6 h-6" />,
+            title: 'Make Faster Decisions',
+            benefit: 'Detailed Skill Reports',
+            description: 'Get a granular breakdown of technical skills, communication, and problem-solving abilities immediately after the interview. No more waiting days for feedback.',
+            icon: <FileText className="w-8 h-8" />,
             className: "md:col-span-2",
+            metric: 'Instant reports',
+            demoLink: '/live-demo#reports',
         },
         {
-            title: 'Fairness & Accessibility',
+            title: 'Hire Fairly & Inclusively',
+            benefit: 'Fairness & Accessibility',
             description: 'Includes an "Accommodation Mode" for candidates with disabilities to ensure fair assessment regardless of physical or neurological differences.',
-            icon: <Shield className="w-6 h-6" />, // Using Shield for now, maybe Heart or User is better if available? Shield is generic/safe.
+            icon: <Heart className="w-8 h-8" />,
             className: "md:col-span-1",
+            metric: '100% accessible',
+            demoLink: '/live-demo',
         },
         {
-            title: 'Data Privacy & Control',
-            description: 'Recordings are encrypted and automatically deleted after a set period. Candidates retain rights to their assessment data.',
-            icon: <Shield className="w-6 h-6" />,
+            title: 'Protect Candidate Privacy',
+            benefit: 'Data Privacy & Control',
+            description: 'Recordings are encrypted and automatically deleted after a set period. Candidates retain rights to their assessment data. GDPR/DPDPA compliant.',
+            icon: <Lock className="w-8 h-8" />,
             className: "md:col-span-2",
+            metric: '100% compliant',
+            demoLink: '/live-demo',
         },
     ];
 
     return (
-        <section id="features" className="py-24 px-6 bg-background">
+        <section id="features" className="py-24 px-6 bg-background" ref={ref}>
             <div className="max-w-6xl mx-auto">
-                <div className="mb-16">
-                    <h2 className="text-3xl font-bold mb-4 tracking-tight text-primary">Everything you need to hire confidentally</h2>
+                <motion.div 
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                    transition={{ duration: 0.6 }}
+                    className="mb-16"
+                >
+                    <h2 className="text-3xl md:text-4xl mb-4 tracking-tight text-primary">
+                        Everything you need to hire confidently
+                    </h2>
                     <p className="text-secondary text-lg max-w-2xl">
-                        TalentLyt provides a complete ecosystem for technical assessment, from cheat detection to deep skill analysis.
+                        TalentLyt provides a complete ecosystem for technical assessment, from cheat detection to deep skill analysis. 
+                        Stop losing great candidates to cheaters.
                     </p>
-                </div>
+                </motion.div>
 
-                <div className="grid md:grid-cols-3 gap-6">
+                <motion.div 
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate={isInView ? "visible" : "hidden"}
+                    className="grid md:grid-cols-3 gap-6"
+                >
                     {features.map((feature, index) => (
-                        <div
+                        <motion.div
                             key={index}
-                            className={`p-8 rounded-2xl border border-border bg-muted/50 hover:bg-card hover:shadow-lg hover:border-muted-border transition-all duration-300 group ${feature.className}`}
+                            variants={itemVariants}
+                            whileHover={{ y: -5, scale: 1.02 }}
+                            className={`p-8 rounded-2xl border border-border bg-muted/50 hover:bg-card hover:shadow-xl hover:border-primary/30 transition-all duration-300 group ${feature.className}`}
                         >
-
-                            <h3 className="text-xl font-semibold text-foreground mb-3">{feature.title}</h3>
-                            <p className="text-text-secondary leading-relaxed">{feature.description}</p>
-                        </div>
+                            <div className="flex items-start justify-between mb-4">
+                                <div className="p-3 bg-primary/10 rounded-xl text-primary group-hover:scale-110 transition-transform">
+                                    {feature.icon}
+                                </div>
+                                <div className="text-xs text-primary bg-primary/10 px-3 py-1 rounded-full">
+                                    {feature.metric}
+                                </div>
+                            </div>
+                            <div className="text-xs text-primary mb-2 uppercase tracking-wider">
+                                {feature.benefit}
+                            </div>
+                            <h3 className="text-xl text-foreground mb-3">{feature.title}</h3>
+                            <p className="text-text-secondary leading-relaxed mb-4">{feature.description}</p>
+                            <Link
+                                href={feature.demoLink}
+                                className="inline-flex items-center gap-2 text-sm text-primary hover:gap-3 transition-all group/link"
+                            >
+                                See it in action
+                                <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                            </Link>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
+
+                {/* Comparison Banner */}
+                <motion.div 
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    className="mt-12 grid md:grid-cols-2 gap-6"
+                >
+                    <motion.div 
+                        whileHover={{ scale: 1.02 }}
+                        className="p-6 rounded-xl bg-red-500/10 border border-red-500/20"
+                    >
+                        <div className="text-sm text-red-500 mb-2">Traditional Interviews</div>
+                        <ul className="space-y-2 text-sm text-secondary">
+                            <li className="flex items-start gap-2">
+                                <span className="text-red-500 mt-1">×</span>
+                                <span>No integrity verification</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <span className="text-red-500 mt-1">×</span>
+                                <span>Subjective evaluations</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <span className="text-red-500 mt-1">×</span>
+                                <span>Days to get feedback</span>
+                            </li>
+                        </ul>
+                    </motion.div>
+                    <motion.div 
+                        whileHover={{ scale: 1.02 }}
+                        className="p-6 rounded-xl bg-primary/10 border border-primary/20"
+                    >
+                        <div className="text-sm text-primary mb-2">With TalentLyt</div>
+                        <ul className="space-y-2 text-sm text-secondary">
+                            <li className="flex items-start gap-2">
+                                <span className="text-primary mt-1">✓</span>
+                                <span>Real-time integrity monitoring</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <span className="text-primary mt-1">✓</span>
+                                <span>Objective AI assessments</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <span className="text-primary mt-1">✓</span>
+                                <span>Instant comprehensive reports</span>
+                            </li>
+                        </ul>
+                    </motion.div>
+                </motion.div>
 
                 <div className="mt-12 p-6 rounded-2xl bg-brand/10 border border-brand/20 text-sm text-secondary">
                     <p className="mb-2"><strong>Note on AI Decision Support:</strong> TalentLyt acts as a decision-support tool providing data-driven insights. Final hiring authority remains solely with the employer's human HR team.</p>

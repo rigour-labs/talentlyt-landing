@@ -29,7 +29,7 @@ export function Navbar() {
                 <div className="flex items-center justify-between">
                     <Link href="/" className="flex items-center gap-2 group">
 
-                        <span className="text-lg font-bold tracking-tight text-foreground">
+                        <span className="text-lg tracking-tight text-foreground">
                             Talent<span className="text-text-secondary">Lyt</span>
                         </span>
                     </Link>
@@ -39,7 +39,7 @@ export function Navbar() {
                         </Link>
                         <Link
                             href="/request-demo"
-                            className="px-4 py-2 text-sm font-semibold text-primary-foreground bg-primary rounded-lg hover:opacity-90 transition-all shadow-sm hover:shadow-md"
+                            className="px-4 py-2 text-sm text-primary-foreground bg-primary rounded-lg hover:opacity-90 transition-all shadow-sm hover:shadow-md"
                         >
                             Request Demo
                         </Link>
