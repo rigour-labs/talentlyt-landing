@@ -28,6 +28,26 @@ const config: Config = {
           DEFAULT: 'var(--card)',
           foreground: 'var(--card-foreground)',
         },
+        brand: {
+          DEFAULT: 'var(--brand)',
+          foreground: 'var(--brand-foreground)',
+          hover: 'var(--brand-hover)',
+        },
+        muted: {
+          DEFAULT: 'var(--muted)',
+          foreground: 'var(--muted-foreground)',
+          border: 'var(--muted-border)',
+        },
+        highlight: {
+          DEFAULT: 'var(--accent-highlight)',
+          foreground: 'var(--accent-highlight-foreground)',
+        },
+        text: {
+          primary: 'var(--text-primary)',
+          secondary: 'var(--text-secondary)',
+          muted: 'var(--text-muted)',
+          inverse: 'var(--text-inverse)',
+        },
       },
       animation: {
         'gradient': 'gradient 8s linear infinite',

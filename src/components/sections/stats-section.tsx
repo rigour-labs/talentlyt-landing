@@ -7,7 +7,7 @@ export function StatsSection() {
     ];
 
     return (
-        <section className="px-6 py-20 border-b border-gray-100 dark:border-white/10">
+        <section className="px-6 py-20 border-b border-border">
             <div className="max-w-6xl mx-auto">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
                     {stats.map((stat, index) => (

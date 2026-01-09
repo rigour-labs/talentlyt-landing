@@ -29,8 +29,8 @@ export function Navbar() {
                 <div className="flex items-center justify-between">
                     <Link href="/" className="flex items-center gap-2 group">
 
-                        <span className="text-lg font-bold tracking-tight text-gray-900 dark:text-white">
-                            Talent<span className="text-blue-600 dark:text-blue-500">Lyt</span>
+                        <span className="text-lg font-bold tracking-tight text-foreground">
+                            Talent<span className="text-text-secondary">Lyt</span>
                         </span>
                     </Link>
                     <div className="flex items-center gap-4 md:gap-6">

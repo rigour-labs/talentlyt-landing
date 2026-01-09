@@ -13,6 +13,22 @@
   --border: #e5e5e5;
   --card: #ffffff;
   --card-foreground: #0a0a0a;
+  /* Brand colors */
+  --brand: #2563eb;
+  --brand-foreground: #ffffff;
+  --brand-hover: #1d4ed8;
+  /* Muted colors for backgrounds and borders */
+  --muted: #f5f5f5;
+  --muted-foreground: #666666;
+  --muted-border: #e5e5e5;
+  /* Accent colors for highlights */
+  --accent-highlight: #f59e0b;
+  --accent-highlight-foreground: #ffffff;
+  /* Text colors */
+  --text-primary: #0a0a0a;
+  --text-secondary: #666666;
+  --text-muted: #999999;
+  --text-inverse: #ffffff;
 }
 
 .dark {
@@ -27,6 +43,22 @@
   --border: #333333;
   --card: #121212;
   --card-foreground: #ffffff;
+  /* Brand colors */
+  --brand: #3b82f6;
+  --brand-foreground: #000000;
+  --brand-hover: #60a5fa;
+  /* Muted colors for backgrounds and borders */
+  --muted: #1a1a1a;
+  --muted-foreground: #a3a3a3;
+  --muted-border: #333333;
+  /* Accent colors for highlights */
+  --accent-highlight: #fbbf24;
+  --accent-highlight-foreground: #000000;
+  /* Text colors */
+  --text-primary: #ffffff;
+  --text-secondary: #a3a3a3;
+  --text-muted: #666666;
+  --text-inverse: #0a0a0a;
 }
 
 @theme {
@@ -48,6 +80,22 @@
   --color-card-foreground: var(--card-foreground);
 
   --color-border: var(--border);
+  
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-brand-hover: var(--brand-hover);
+  
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted-border: var(--muted-border);
+  
+  --color-accent-highlight: var(--accent-highlight);
+  --color-accent-highlight-foreground: var(--accent-highlight-foreground);
+  
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-inverse: var(--text-inverse);
 }
 
 body {

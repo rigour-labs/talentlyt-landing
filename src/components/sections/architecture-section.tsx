@@ -2,7 +2,7 @@
 
 export function ArchitectureSection() {
     return (
-        <section id="architecture" className="px-6 py-24 bg-gray-50 dark:bg-black">
+        <section id="architecture" className="px-6 py-24 bg-muted">
             <div className="max-w-6xl mx-auto">
                 <div className="grid md:grid-cols-2 gap-16 items-center">
                     <div>
@@ -18,7 +18,7 @@ export function ArchitectureSection() {
                                 { title: 'Automated Quality Auditor', desc: 'Audits the session (with candidate consent) to verify integrity and evaluate technical accuracy.' }
                             ].map((item, i) => (
                                 <div key={i} className="flex gap-4">
-                                    <div className="w-1.5 h-full rounded-full bg-gray-200 dark:bg-white/10 mt-1"></div>
+                                    <div className="w-1.5 h-full rounded-full bg-muted-border mt-1"></div>
                                     <div>
                                         <h3 className="text-lg font-semibold text-primary">{item.title}</h3>
                                         <p className="text-secondary">{item.desc}</p>
@@ -29,11 +29,11 @@ export function ArchitectureSection() {
                     </div>
                     <div className="relative">
                         {/* Visual representation of the architecture */}
-                        <div className="aspect-square rounded-full border border-gray-200 dark:border-white/10 flex items-center justify-center p-12 relative animate-spin-slow">
-                            <div className="absolute inset-0 rounded-full border border-dashed border-gray-300 dark:border-white/20 animate-spin-reverse-slow"></div>
+                        <div className="aspect-square rounded-full border border-border flex items-center justify-center p-12 relative animate-spin-slow">
+                            <div className="absolute inset-0 rounded-full border border-dashed border-muted-border animate-spin-reverse-slow"></div>
                             <div className="text-center">
 
-                                <div className="text-xs font-mono text-gray-400">SECURE_ENVIRONMENT</div>
+                                <div className="text-xs font-mono text-text-muted">SECURE_ENVIRONMENT</div>
                             </div>
                         </div>
                     </div>

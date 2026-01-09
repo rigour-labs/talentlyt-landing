@@ -13,7 +13,7 @@ import { CTASection } from '@/components/sections/cta-section';
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white">
+    <div className="min-h-screen bg-background text-foreground">
       <Navbar />
       <HeroSection />
       <WhyWeBuiltThisSection />

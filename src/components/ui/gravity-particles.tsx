@@ -42,9 +42,19 @@ export function GravityParticles() {
         const ballRadius = 200;
 
         const initParticles = () => {
-            // Force white/blue for dark, black/blue for light.
-            // Rely on CSS class instead of just 'theme' to be sure
-            const isDark = document.documentElement.classList.contains('dark');
+            // Get colors from CSS variables for consistency
+            const root = document.documentElement;
+            const computedStyle = getComputedStyle(root);
+            const brandColor = computedStyle.getPropertyValue('--brand').trim() || '#3b82f6';
+            const foregroundColor = computedStyle.getPropertyValue('--foreground').trim() || '#ffffff';
+            
+            // Convert hex to rgba for canvas
+            const hexToRgba = (hex: string, alpha: number) => {
+                const r = parseInt(hex.slice(1, 3), 16);
+                const g = parseInt(hex.slice(3, 5), 16);
+                const b = parseInt(hex.slice(5, 7), 16);
+                return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+            };
 
             particles = [];
             for (let i = 0; i < particleCount; i++) {
@@ -59,9 +69,9 @@ export function GravityParticles() {
                     offsetRadius: Math.random() * ballRadius,
                     offsetAngle: Math.random() * Math.PI * 2,
                     orbitSpeed: (Math.random() - 0.5) * 0.02,
-                    color: isDark
-                        ? (Math.random() > 0.5 ? 'rgba(66, 133, 244, 1)' : 'rgba(255, 255, 255, 0.8)')
-                        : (Math.random() > 0.5 ? 'rgba(66, 133, 244, 1)' : 'rgba(10, 10, 10, 0.8)')
+                    color: Math.random() > 0.5 
+                        ? hexToRgba(brandColor, 1) 
+                        : hexToRgba(foregroundColor, 0.8)
                 });
             }
         };
