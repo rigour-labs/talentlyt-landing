@@ -1,4 +1,4 @@
-import { Shield } from 'lucide-react';
+
 
 export function ArchitectureSection() {
     return (
@@ -32,7 +32,7 @@ export function ArchitectureSection() {
                         <div className="aspect-square rounded-full border border-gray-200 dark:border-white/10 flex items-center justify-center p-12 relative animate-spin-slow">
                             <div className="absolute inset-0 rounded-full border border-dashed border-gray-300 dark:border-white/20 animate-spin-reverse-slow"></div>
                             <div className="text-center">
-                                <Shield className="w-16 h-16 mx-auto text-primary mb-4" />
+
                                 <div className="text-xs font-mono text-gray-400">SECURE_ENVIRONMENT</div>
                             </div>
                         </div>

@@ -56,9 +56,7 @@ export function FeaturesSection() {
                             key={index}
                             className={`p-8 rounded-2xl border border-gray-100 dark:border-white/10 bg-gray-50/50 dark:bg-white/5 hover:bg-white dark:hover:bg-black hover:shadow-lg hover:border-gray-200 dark:hover:border-white/20 transition-all duration-300 group ${feature.className}`}
                         >
-                            <div className="w-12 h-12 bg-white dark:bg-white/10 rounded-xl border border-gray-100 dark:border-white/10 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
-                                <div className="text-primary dark:text-white">{feature.icon}</div>
-                            </div>
+
                             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">{feature.title}</h3>
                             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{feature.description}</p>
                         </div>
