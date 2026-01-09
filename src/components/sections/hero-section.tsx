@@ -2,10 +2,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Code } from 'lucide-react';
 
+import { GravityParticles } from '@/components/ui/gravity-particles';
+
 export function HeroSection() {
     return (
-        <section className="pt-32 pb-20 px-6">
-            <div className="max-w-6xl mx-auto">
+        <section className="relative pt-32 pb-20 px-6 overflow-hidden">
+            <GravityParticles />
+            <div className="max-w-6xl mx-auto relative z-10">
                 <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 mb-8">
                         <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
