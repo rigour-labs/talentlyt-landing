@@ -1,19 +1,16 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import { Code } from 'lucide-react';
-
-import { GravityParticles } from '@/components/ui/gravity-particles';
+import { BlueParticles } from '@/components/ui/blue-particles';
 
 export function HeroSection() {
     return (
         <section className="relative min-h-screen flex flex-col justify-center pt-32 pb-20 px-6 overflow-hidden">
-            <GravityParticles />
+            <BlueParticles />
             <div className="max-w-6xl mx-auto relative z-10">
                 <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
 
                     {/* Removed text-balance and tweaked colors for better contrast */}
                     {/* Gold shimmer effect */}
-                    <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-[1.1] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-text-primary via-highlight to-text-primary dark:from-foreground dark:via-highlight dark:to-foreground animate-text-shimmer bg-[length:200%_auto] opacity-100 transform-none">
+                    <h1 className="text-5xl md:text-7xl mb-6 leading-[1.1] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-text-primary via-highlight to-text-primary dark:from-foreground dark:via-highlight dark:to-foreground animate-text-shimmer bg-[length:200%_auto] opacity-100 transform-none">
                         The standard for <br /> <span className="text-text-secondary">engineering hiring</span>
                     </h1>
                     <p className="text-lg md:text-xl text-secondary mb-10 leading-relaxed max-w-2xl">
