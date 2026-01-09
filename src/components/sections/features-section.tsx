@@ -1,6 +1,6 @@
 'use client';
 
-import { Shield, Code, Eye, FileText, Heart, Lock, ArrowRight, Play } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
@@ -36,7 +36,6 @@ export function FeaturesSection() {
             title: 'Stop Hiring Cheaters',
             benefit: 'Integrity Verification',
             description: 'Data-driven insights for high-integrity hiring, visually identifying potential irregularities with candidate consent. Reduce false positives by 95%.',
-            icon: <Shield className="w-8 h-8" />,
             className: "md:col-span-2",
             metric: '95% reduction',
             demoLink: '/live-demo#integrity',
@@ -45,7 +44,6 @@ export function FeaturesSection() {
             title: 'Eliminate Bias',
             benefit: 'Independent Evaluation',
             description: 'Separate AI agents for interviewing and monitoring designed to minimize human and algorithmic bias. Get objective, consistent assessments.',
-            icon: <Eye className="w-8 h-8" />,
             className: "md:col-span-1",
             metric: '90% less variance',
             demoLink: '/live-demo#monitoring',
@@ -54,7 +52,6 @@ export function FeaturesSection() {
             title: 'Understand Thought Process',
             benefit: 'Code Playback',
             description: 'Watch the entire coding session keystroke by keystroke to understand how candidates approach problems, not just the final solution.',
-            icon: <Play className="w-8 h-8" />,
             className: "md:col-span-1",
             metric: 'Full session replay',
             demoLink: '/live-demo#playback',
@@ -63,7 +60,6 @@ export function FeaturesSection() {
             title: 'Make Faster Decisions',
             benefit: 'Detailed Skill Reports',
             description: 'Get a granular breakdown of technical skills, communication, and problem-solving abilities immediately after the interview. No more waiting days for feedback.',
-            icon: <FileText className="w-8 h-8" />,
             className: "md:col-span-2",
             metric: 'Instant reports',
             demoLink: '/live-demo#reports',
@@ -72,7 +68,6 @@ export function FeaturesSection() {
             title: 'Hire Fairly & Inclusively',
             benefit: 'Fairness & Accessibility',
             description: 'Includes an "Accommodation Mode" for candidates with disabilities to ensure fair assessment regardless of physical or neurological differences.',
-            icon: <Heart className="w-8 h-8" />,
             className: "md:col-span-1",
             metric: '100% accessible',
             demoLink: '/live-demo',
@@ -81,7 +76,6 @@ export function FeaturesSection() {
             title: 'Protect Candidate Privacy',
             benefit: 'Data Privacy & Control',
             description: 'Recordings are encrypted and automatically deleted after a set period. Candidates retain rights to their assessment data. GDPR/DPDPA compliant.',
-            icon: <Lock className="w-8 h-8" />,
             className: "md:col-span-2",
             metric: '100% compliant',
             demoLink: '/live-demo',
@@ -120,9 +114,6 @@ export function FeaturesSection() {
                             className={`p-8 rounded-2xl border border-border bg-muted/50 hover:bg-card hover:shadow-xl hover:border-primary/30 transition-all duration-300 group ${feature.className}`}
                         >
                             <div className="flex items-start justify-between mb-4">
-                                <div className="p-3 bg-primary/10 rounded-xl text-primary group-hover:scale-110 transition-transform">
-                                    {feature.icon}
-                                </div>
                                 <div className="text-xs text-primary bg-primary/10 px-3 py-1 rounded-full">
                                     {feature.metric}
                                 </div>

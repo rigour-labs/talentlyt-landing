@@ -6,17 +6,10 @@ import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { motion, useInView } from 'framer-motion';
 import { 
-    Shield, 
-    Code, 
-    FileText, 
-    Eye, 
     CheckCircle2, 
     Play, 
     ArrowRight,
-    Clock,
-    Users,
-    TrendingUp,
-    Lock
+    Clock
 } from 'lucide-react';
 
 export default function LiveDemoPage() {
@@ -52,35 +45,30 @@ export default function LiveDemoPage() {
             title: 'Schedule Interview',
             description: 'Create an interview link in seconds and send it to your candidate.',
             time: '30 seconds',
-            icon: <Clock className="w-6 h-6" />,
             mockup: 'schedule-interface',
         },
         {
             title: 'Candidate Joins',
             description: 'Candidate receives the link and joins the secure interview environment.',
             time: '1 minute',
-            icon: <Users className="w-6 h-6" />,
             mockup: 'join-interface',
         },
         {
             title: 'Maya Conducts Interview',
             description: 'Our AI interviewer, Maya, guides the candidate through technical questions while maintaining a natural conversation.',
             time: '45-60 minutes',
-            icon: <Code className="w-6 h-6" />,
             mockup: 'interview-interface',
         },
         {
             title: 'Real-time Monitoring',
             description: 'The Automated Quality Auditor monitors the session in real-time, verifying integrity with candidate consent.',
             time: 'Continuous',
-            icon: <Eye className="w-6 h-6" />,
             mockup: 'monitoring-interface',
         },
         {
             title: 'Get Results',
             description: 'Receive comprehensive reports with integrity insights, skill breakdown, and code playback immediately after.',
             time: 'Instant',
-            icon: <FileText className="w-6 h-6" />,
             mockup: 'results-interface',
         },
     ];
@@ -96,7 +84,6 @@ export default function LiveDemoPage() {
                 'Anomaly detection alerts',
                 'Privacy-compliant tracking'
             ],
-            icon: <Shield className="w-8 h-8" />,
         },
         {
             id: 'playback',
@@ -108,7 +95,6 @@ export default function LiveDemoPage() {
                 'Timeline navigation',
                 'Speed controls'
             ],
-            icon: <Play className="w-8 h-8" />,
         },
         {
             id: 'reports',
@@ -120,7 +106,6 @@ export default function LiveDemoPage() {
                 'Problem-solving analysis',
                 'Comparison with benchmarks'
             ],
-            icon: <FileText className="w-8 h-8" />,
         },
         {
             id: 'monitoring',
@@ -132,7 +117,6 @@ export default function LiveDemoPage() {
                 'Privacy controls',
                 'Candidate consent tracking'
             ],
-            icon: <Eye className="w-8 h-8" />,
         },
     ];
 
@@ -183,10 +167,7 @@ export default function LiveDemoPage() {
                                             : 'bg-muted text-secondary hover:bg-card border border-border'
                                     }`}
                                 >
-                                    <div className="flex items-center gap-2">
-                                        {feature.icon}
-                                        <span>{feature.title}</span>
-                                    </div>
+                                    {feature.title}
                                 </motion.button>
                             ))}
                         </motion.div>
@@ -204,12 +185,7 @@ export default function LiveDemoPage() {
                                 >
                                     <div className="grid md:grid-cols-2 gap-12 items-center">
                                         <div>
-                                            <div className="flex items-center gap-3 mb-6">
-                                                <div className="p-3 bg-primary/10 rounded-xl text-primary">
-                                                    {feature.icon}
-                                                </div>
-                                                <h2 className="text-3xl text-primary">{feature.title}</h2>
-                                            </div>
+                                            <h2 className="text-3xl text-primary mb-6">{feature.title}</h2>
                                             <p className="text-lg text-secondary mb-6 leading-relaxed">
                                                 {feature.description}
                                             </p>
@@ -233,9 +209,6 @@ export default function LiveDemoPage() {
                                             {/* Mockup Placeholder */}
                                             <div className="aspect-video bg-muted border-2 border-dashed border-border rounded-xl flex items-center justify-center">
                                                 <div className="text-center">
-                                                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                                                        {feature.icon}
-                                                    </div>
                                                     <p className="text-sm text-secondary">
                                                         {feature.title} Interface
                                                     </p>
@@ -292,12 +265,12 @@ export default function LiveDemoPage() {
                                 >
                                     <div className="flex flex-col md:flex-row gap-8 items-start">
                                         <div className="flex-shrink-0">
-                                            <div className={`w-16 h-16 rounded-full flex items-center justify-center ${
+                                            <div className={`w-16 h-16 rounded-full flex items-center justify-center text-lg ${
                                                 activeStep === index
                                                     ? 'bg-primary text-primary-foreground'
                                                     : 'bg-muted text-secondary'
                                             }`}>
-                                                {step.icon}
+                                                {index + 1}
                                             </div>
                                         </div>
                                         <div className="flex-1">
@@ -324,9 +297,6 @@ export default function LiveDemoPage() {
                                                 <div className="mt-6 p-6 bg-muted rounded-xl border border-border">
                                                     <div className="aspect-video bg-background border border-border rounded-lg flex items-center justify-center mb-4">
                                                         <div className="text-center">
-                                                            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                                                                {step.icon}
-                                                            </div>
                                                             <p className="text-sm text-primary">
                                                                 {step.mockup.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}
                                                             </p>
@@ -356,27 +326,18 @@ export default function LiveDemoPage() {
                         </h2>
                         <div className="grid md:grid-cols-3 gap-8">
                             <div className="text-center">
-                                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <TrendingUp className="w-8 h-8 text-primary" />
-                                </div>
                                 <h3 className="text-xl mb-3 text-primary">95% Reduction</h3>
                                 <p className="text-secondary">
                                     In false positive hires with our integrity verification system
                                 </p>
                             </div>
                             <div className="text-center">
-                                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <Clock className="w-8 h-8 text-primary" />
-                                </div>
                                 <h3 className="text-xl mb-3 text-primary">50% Faster</h3>
                                 <p className="text-secondary">
                                     Interview-to-decision time with automated skill assessments
                                 </p>
                             </div>
                             <div className="text-center">
-                                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <Lock className="w-8 h-8 text-primary" />
-                                </div>
                                 <h3 className="text-xl mb-3 text-primary">100% Compliant</h3>
                                 <p className="text-secondary">
                                     GDPR/DPDPA compliant with candidate consent and data privacy controls

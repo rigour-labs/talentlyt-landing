@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
-import { TrendingDown, Users, Building2, Server, ArrowUp } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';
 
 interface Stat {
@@ -9,7 +9,7 @@ interface Stat {
     numericValue: number;
     label: string;
     description: string;
-    icon: React.ReactNode;
+    icon: React.ReactNode | null;
     comparison?: string;
 }
 
@@ -47,7 +47,7 @@ export function StatsSection() {
             numericValue: 0.1,
             label: 'False positive rate', 
             description: 'Industry-leading accuracy in identifying genuine talent',
-            icon: <TrendingDown className="w-6 h-6" />,
+            icon: null,
             comparison: 'vs 15-20% industry average'
         },
         { 
@@ -55,7 +55,7 @@ export function StatsSection() {
             numericValue: 10000,
             label: 'Interviews secured', 
             description: 'Trusted by engineering teams worldwide',
-            icon: <Users className="w-6 h-6" />,
+            icon: null,
             comparison: 'and growing daily'
         },
         { 
@@ -63,7 +63,7 @@ export function StatsSection() {
             numericValue: 200,
             label: 'Growth companies', 
             description: 'From startups to enterprises',
-            icon: <Building2 className="w-6 h-6" />,
+            icon: null,
             comparison: 'including Fortune 500'
         },
         { 
@@ -71,7 +71,7 @@ export function StatsSection() {
             numericValue: 99.9,
             label: 'Uptime SLA', 
             description: 'Reliable infrastructure you can count on',
-            icon: <Server className="w-6 h-6" />,
+            icon: null,
             comparison: 'guaranteed availability'
         },
     ];
@@ -112,11 +112,6 @@ export function StatsSection() {
                             whileHover={{ y: -5, scale: 1.05 }}
                             className="bg-card border border-border rounded-2xl p-6 text-center hover:shadow-lg hover:border-primary/30 transition-all group"
                         >
-                            <div className="flex justify-center mb-4">
-                                <div className="p-3 bg-primary/10 rounded-xl text-primary group-hover:scale-110 transition-transform">
-                                    {stat.icon}
-                                </div>
-                            </div>
                             <div className="text-4xl md:text-5xl tracking-tighter text-primary mb-2">
                                 {stat.value}
                             </div>

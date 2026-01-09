@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Users, CheckCircle2, Clock, ArrowRight, Shield, Zap } from 'lucide-react';
+import { CheckCircle2, ArrowRight } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 
@@ -23,9 +23,8 @@ export function CTASection() {
                         initial={{ opacity: 0, y: -20 }}
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-6"
+                        className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6"
                     >
-                        <Users className="w-4 h-4 text-primary" />
                         <span className="text-sm text-primary">
                             Join 200+ companies already using TalentLyt
                         </span>
@@ -60,7 +59,6 @@ export function CTASection() {
                                 href="/request-demo"
                                 className="group w-full sm:w-auto px-8 py-4 bg-primary text-primary-foreground rounded-xl hover:opacity-90 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
                             >
-                            <Zap className="w-5 h-5" />
                             Start Free Trial
                                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </Link>
@@ -101,14 +99,8 @@ export function CTASection() {
 
                     {/* Social Proof */}
                     <div className="flex items-center justify-center gap-6 text-sm text-text-muted mb-8">
-                        <div className="flex items-center gap-2">
-                            <Shield className="w-4 h-4" />
-                            <span>GDPR Compliant</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <Clock className="w-4 h-4" />
-                            <span>Setup in 5 minutes</span>
-                        </div>
+                        <span>GDPR Compliant</span>
+                        <span>Setup in 5 minutes</span>
                     </div>
 
                     {/* Legal Disclaimer */}

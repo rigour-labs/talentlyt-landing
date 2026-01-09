@@ -2,7 +2,7 @@
 
 import React, { useRef } from 'react';
 import Link from 'next/link';
-import { Clock, Send, Users, Code, FileText, ArrowRight, CheckCircle2, Play } from 'lucide-react';
+import { Clock, ArrowRight, CheckCircle2, Play } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';
 
 export function HowItWorksSection() {
@@ -36,27 +36,21 @@ export function HowItWorksSection() {
             title: 'Schedule Interview',
             description: 'Create an interview link in seconds. Send it to the candidate via email or your ATS.',
             time: '30 seconds',
-            icon: <Send className="w-6 h-6" />,
             output: 'Interview link ready',
-            color: 'bg-blue-500/10 text-blue-500',
             sample: 'https://talentlyt.com/interview/abc123',
         },
         {
             title: 'Conduct Interview',
             description: 'Candidate joins the session. Maya conducts the interview while the Automated Quality Auditor verifies integrity in real-time.',
             time: '45-60 minutes',
-            icon: <Code className="w-6 h-6" />,
             output: 'Live session with monitoring',
-            color: 'bg-primary/10 text-primary',
             sample: 'Real-time integrity dashboard',
         },
         {
             title: 'Get Instant Results',
             description: 'Review the recording, integrity insights, code playback, and comprehensive skill breakdown immediately after the interview.',
             time: 'Instant',
-            icon: <FileText className="w-6 h-6" />,
             output: 'Complete assessment report',
-            color: 'bg-green-500/10 text-green-500',
             sample: 'Skill scores + integrity report',
         },
     ];
@@ -102,13 +96,10 @@ export function HowItWorksSection() {
                                 whileHover={{ y: -10, scale: 1.02 }}
                                 className="bg-card border border-border rounded-2xl p-8 hover:shadow-xl hover:border-primary/30 transition-all h-full flex flex-col"
                             >
-                                {/* Step Number & Icon */}
-                                <div className="flex items-center justify-between mb-6">
+                                {/* Step Number */}
+                                <div className="flex items-center justify-start mb-6">
                                     <div className="w-16 h-16 rounded-full bg-background border-2 border-primary flex items-center justify-center text-lg text-primary shadow-lg">
                                         {index + 1}
-                                    </div>
-                                    <div className={`p-3 rounded-xl ${step.color}`}>
-                                        {step.icon}
                                     </div>
                                 </div>
 

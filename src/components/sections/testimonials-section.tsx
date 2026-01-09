@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useRef } from 'react';
-import { Quote, Star, TrendingUp, Users, Shield, Code } from 'lucide-react';
+import { Quote, Star } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';
 
 export function TestimonialsSection() {
@@ -37,7 +37,6 @@ export function TestimonialsSection() {
             role: "VP of Engineering",
             company: "TechFlow Inc.",
             metrics: "95% reduction in false positives",
-            icon: <TrendingUp className="w-6 h-6" />,
         },
         {
             quote: "The code playback feature is a game-changer. Being able to see exactly how candidates approach problems helps us understand their thought process beyond just the final solution.",
@@ -45,7 +44,6 @@ export function TestimonialsSection() {
             role: "Head of Talent",
             company: "ScaleUp Solutions",
             metrics: "50% faster interview reviews",
-            icon: <Code className="w-6 h-6" />,
         },
         {
             quote: "We were skeptical about AI interviews, but TalentLyt's dual-agent system maintains the human touch while providing objective assessments. Our candidate experience scores improved significantly.",
@@ -53,7 +51,6 @@ export function TestimonialsSection() {
             role: "Chief People Officer",
             company: "InnovateLabs",
             metrics: "40% better candidate satisfaction",
-            icon: <Users className="w-6 h-6" />,
         },
     ];
 
@@ -62,19 +59,16 @@ export function TestimonialsSection() {
             company: "GlobalTech",
             metric: "99.2%",
             description: "Integrity verification accuracy rate",
-            icon: <Shield className="w-5 h-5" />,
         },
         {
             company: "StartupHub",
             metric: "3x",
             description: "Increase in qualified candidates identified",
-            icon: <TrendingUp className="w-5 h-5" />,
         },
         {
             company: "EnterpriseCo",
             metric: "60%",
             description: "Reduction in interview bias complaints",
-            icon: <Users className="w-5 h-5" />,
         },
     ];
 
@@ -131,13 +125,8 @@ export function TestimonialsSection() {
                                     <div className="text-sm text-text-muted">{testimonial.company}</div>
                                 </div>
                             </div>
-                            <div className="flex items-center gap-2 pt-4 border-t border-border">
-                                <div className="p-2 bg-primary/10 rounded-lg text-primary">
-                                    {testimonial.icon}
-                                </div>
-                                <div>
-                                    <div className="text-sm text-primary">{testimonial.metrics}</div>
-                                </div>
+                            <div className="pt-4 border-t border-border">
+                                <div className="text-sm text-primary">{testimonial.metrics}</div>
                             </div>
                         </motion.div>
                     ))}
@@ -166,9 +155,6 @@ export function TestimonialsSection() {
                                 whileHover={{ scale: 1.05, y: -5 }}
                                 className="bg-card border border-border rounded-xl p-6 text-center hover:shadow-md transition-all"
                             >
-                                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
-                                    {study.icon}
-                                </div>
                                 <div className="text-3xl text-primary mb-2">{study.metric}</div>
                                 <div className="text-sm text-secondary mb-1">{study.company}</div>
                                 <div className="text-xs text-text-muted">{study.description}</div>

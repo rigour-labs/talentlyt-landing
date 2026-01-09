@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useRef } from 'react';
-import { X, CheckCircle2, AlertTriangle, Shield, Clock, Users, TrendingDown, TrendingUp } from 'lucide-react';
+import { X, CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
 import { motion, useInView } from 'framer-motion';
 
@@ -44,25 +44,21 @@ export function ProblemSolutionSection() {
     };
     const problems = [
         {
-            icon: <AlertTriangle className="w-6 h-6" />,
             title: 'Cheating & Integrity Issues',
             description: 'Candidates use multiple devices, share screens, or get help during remote interviews.',
             impact: '30-40% of remote interviews have integrity concerns',
         },
         {
-            icon: <Clock className="w-6 h-6" />,
             title: 'Time-Consuming Reviews',
             description: 'Reviewing interview recordings and code takes hours, delaying hiring decisions.',
             impact: 'Average 4-6 hours per candidate review',
         },
         {
-            icon: <Users className="w-6 h-6" />,
             title: 'Inconsistent Evaluations',
             description: 'Different interviewers assess candidates differently, leading to bias and inconsistency.',
             impact: 'Up to 50% variance in candidate scores',
         },
         {
-            icon: <TrendingDown className="w-6 h-6" />,
             title: 'False Positive Hires',
             description: 'Hiring candidates who can\'t perform on the job costs time, money, and team morale.',
             impact: 'Average $50K cost per bad hire',
@@ -71,25 +67,21 @@ export function ProblemSolutionSection() {
 
     const solutions = [
         {
-            icon: <Shield className="w-6 h-6" />,
             title: 'AI-Powered Integrity Verification',
             description: 'Real-time monitoring detects anomalies and potential cheating with candidate consent.',
             benefit: '95% reduction in integrity issues',
         },
         {
-            icon: <CheckCircle2 className="w-6 h-6" />,
             title: 'Automated Skill Assessment',
             description: 'Get comprehensive skill breakdowns and reports instantly after each interview.',
             benefit: '50% faster decision-making',
         },
         {
-            icon: <Users className="w-6 h-6" />,
             title: 'Objective Evaluation',
             description: 'Consistent, bias-free assessments using standardized AI evaluation criteria.',
             benefit: '90% reduction in evaluation variance',
         },
         {
-            icon: <TrendingUp className="w-6 h-6" />,
             title: 'Predictive Hiring Insights',
             description: 'Data-driven insights help identify candidates who will succeed in your role.',
             benefit: '3x better hire quality',
@@ -137,9 +129,6 @@ export function ProblemSolutionSection() {
                                     className="bg-card border border-border rounded-xl p-6"
                                 >
                                     <div className="flex items-start gap-4">
-                                        <div className="p-2 bg-red-500/10 rounded-lg text-red-500 flex-shrink-0">
-                                            {problem.icon}
-                                        </div>
                                         <div className="flex-1">
                                             <h4 className="text-primary mb-2">{problem.title}</h4>
                                             <p className="text-sm text-secondary mb-3 leading-relaxed">
@@ -177,9 +166,6 @@ export function ProblemSolutionSection() {
                                     className="bg-card border border-primary/20 rounded-xl p-6"
                                 >
                                     <div className="flex items-start gap-4">
-                                        <div className="p-2 bg-primary/10 rounded-lg text-primary flex-shrink-0">
-                                            {solution.icon}
-                                        </div>
                                         <div className="flex-1">
                                             <h4 className="text-primary mb-2">{solution.title}</h4>
                                             <p className="text-sm text-secondary mb-3 leading-relaxed">
