@@ -6,7 +6,7 @@ import { GravityParticles } from '@/components/ui/gravity-particles';
 
 export function HeroSection() {
     return (
-        <section className="relative pt-32 pb-20 px-6 overflow-hidden">
+        <section className="relative min-h-screen flex flex-col justify-center pt-32 pb-20 px-6 overflow-hidden">
             <GravityParticles />
             <div className="max-w-6xl mx-auto relative z-10">
                 <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
@@ -39,13 +39,23 @@ export function HeroSection() {
 
                 {/* Social Proof */}
                 {/* Social Proof */}
-                <div className="mt-16 pt-8 border-t border-gray-100 dark:border-white/10 flex flex-col md:flex-row items-center justify-center gap-8">
-                    <p className="text-sm text-gray-500 dark:text-gray-400 font-medium whitespace-nowrap">Trusted by engineering teams at</p>
-                    <div className="flex justify-center items-center gap-8 flex-wrap opacity-75 grayscale hover:grayscale-0 transition-all duration-500">
-                        {/* Increased opacity and contrast for logo placeholders */}
-                        {['Acme Corp', 'GlobalTech', 'Nebula', 'Vertex', 'Fusion'].map((company) => (
-                            <span key={company} className="text-lg font-bold text-gray-400 dark:text-gray-600 hover:text-gray-600 dark:hover:text-gray-300 transition-colors cursor-default">{company}</span>
-                        ))}
+                <div className="mt-16 pt-8 border-t border-gray-100 dark:border-white/10 flex flex-col md:flex-row items-center gap-8 max-w-full overflow-hidden">
+                    <p className="text-sm text-gray-500 dark:text-gray-400 font-medium whitespace-nowrap shrink-0">Trusted by engineering teams at</p>
+
+                    <div className="flex-1 overflow-hidden relative w-full mask-linear-fade">
+                        <div className="flex gap-12 animate-scroll items-center">
+                            {/* First set of logos */}
+                            {['Acme Corp', 'GlobalTech', 'Nebula', 'Vertex', 'Fusion', 'Apex', 'Horizon', 'Synergy'].map((company, i) => (
+                                <span key={`1-${company}-${i}`} className="text-lg font-bold text-gray-400 dark:text-gray-600 hover:text-gray-600 dark:hover:text-gray-300 transition-colors cursor-default whitespace-nowrap px-4">{company}</span>
+                            ))}
+                            {/* Duplicate set for seamless loop */}
+                            {['Acme Corp', 'GlobalTech', 'Nebula', 'Vertex', 'Fusion', 'Apex', 'Horizon', 'Synergy'].map((company, i) => (
+                                <span key={`2-${company}-${i}`} className="text-lg font-bold text-gray-400 dark:text-gray-600 hover:text-gray-600 dark:hover:text-gray-300 transition-colors cursor-default whitespace-nowrap px-4">{company}</span>
+                            ))}
+                        </div>
+                        {/* Gradient masks for smooth fade edges */}
+                        <div className="absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-white dark:from-black to-transparent pointer-events-none"></div>
+                        <div className="absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-white dark:from-black to-transparent pointer-events-none"></div>
                     </div>
                 </div>
             </div>

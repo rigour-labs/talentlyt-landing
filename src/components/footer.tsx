@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Shield } from 'lucide-react';
 
 export function Footer() {
     return (
@@ -7,10 +6,10 @@ export function Footer() {
             <div className="max-w-6xl mx-auto">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                     <div className="flex items-center gap-2">
-                        <div className="w-6 h-6 bg-primary rounded-md flex items-center justify-center text-white dark:text-black">
-                            <Shield className="w-3 h-3" />
-                        </div>
-                        <span className="text-sm font-bold text-primary">TalentLyt</span>
+
+                        <span className="text-sm font-bold text-primary">
+                            Talent<span className="text-blue-600 dark:text-blue-500">Lyt</span>
+                        </span>
                     </div>
                     <div className="flex items-center gap-8 text-sm font-medium text-secondary">
                         <Link href="/about" className="hover:text-primary transition-colors">About</Link>

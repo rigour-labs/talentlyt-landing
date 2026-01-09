@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
-import { Shield } from 'lucide-react';
+
 
 export function Navbar() {
     const [isScrolled, setIsScrolled] = React.useState(false);
@@ -29,10 +29,10 @@ export function Navbar() {
             <div className="max-w-6xl mx-auto px-6">
                 <div className="flex items-center justify-between">
                     <Link href="/" className="flex items-center gap-2 group">
-                        <div className="w-8 h-8 bg-gray-900 dark:bg-white rounded-lg flex items-center justify-center text-white dark:text-black">
-                            <Shield className="w-4 h-4" />
-                        </div>
-                        <span className="text-lg font-bold tracking-tight text-gray-900 dark:text-white">TalentLyt</span>
+
+                        <span className="text-lg font-bold tracking-tight text-gray-900 dark:text-white">
+                            Talent<span className="text-blue-600 dark:text-blue-500">Lyt</span>
+                        </span>
                     </Link>
                     <div className="flex items-center gap-4 md:gap-6">
                         <button

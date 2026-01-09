@@ -85,13 +85,27 @@ body {
   color: var(--background);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
 h6 {
   font-weight: 600;
   letter-spacing: -0.025em;
   color: var(--primary);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+  min-width: max-content;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
 }
