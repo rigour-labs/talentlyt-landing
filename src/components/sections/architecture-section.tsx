@@ -1,9 +1,9 @@
-
+import { GravityParticles } from '@/components/ui/gravity-particles';
 
 export function ArchitectureSection() {
     return (
-        <section id="architecture" className="px-6 py-24 bg-muted">
-            <div className="max-w-6xl mx-auto">
+        <section id="architecture" className="relative px-6 py-24 bg-muted overflow-hidden">
+            <div className="max-w-6xl mx-auto relative z-10">
                 <div className="grid md:grid-cols-2 gap-16 items-center">
                     <div>
                         <h2 className="text-3xl font-bold mb-6 text-primary tracking-tight">
@@ -29,10 +29,10 @@ export function ArchitectureSection() {
                     </div>
                     <div className="relative">
                         {/* Visual representation of the architecture */}
-                        <div className="aspect-square rounded-full border border-border flex items-center justify-center p-12 relative animate-spin-slow">
+                        <div className="aspect-square rounded-full border border-border flex items-center justify-center p-12 relative animate-spin-slow overflow-hidden">
+                            <GravityParticles />
                             <div className="absolute inset-0 rounded-full border border-dashed border-muted-border animate-spin-reverse-slow"></div>
-                            <div className="text-center">
-
+                            <div className="text-center relative z-10">
                                 <div className="text-xs font-mono text-text-muted">SECURE_ENVIRONMENT</div>
                             </div>
                         </div>

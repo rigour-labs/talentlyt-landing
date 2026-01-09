@@ -28,18 +28,26 @@ export function GravityParticles() {
         const ctx = canvas.getContext('2d');
         if (!ctx) return;
 
-        // precise sizing
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        // Set canvas size to match parent container
+        const resizeCanvas = () => {
+            const parent = canvas.parentElement;
+            if (parent) {
+                canvas.width = parent.clientWidth;
+                canvas.height = parent.clientHeight;
+            } else {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+        };
+        resizeCanvas();
 
         let animationFrameId: number;
         let particles: Particle[] = [];
-        let mouseX = window.innerWidth / 2;
-        let mouseY = window.innerHeight / 2;
+        const parentElement = canvas.parentElement;
 
         // Configuration
-        const particleCount = 120;
-        const ballRadius = 200;
+        const particleCount = 80;
+        const maxOrbitRadius = 0.4; // Max radius as fraction of canvas size
 
         const initParticles = () => {
             // Get colors from CSS variables for consistency
@@ -56,22 +64,30 @@ export function GravityParticles() {
                 return `rgba(${r}, ${g}, ${b}, ${alpha})`;
             };
 
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+            const minRadius = Math.min(canvas.width, canvas.height) * 0.1;
+            const maxRadius = Math.min(canvas.width, canvas.height) * maxOrbitRadius;
+
             particles = [];
             for (let i = 0; i < particleCount; i++) {
+                const orbitRadius = minRadius + Math.random() * (maxRadius - minRadius);
+                const initialAngle = Math.random() * Math.PI * 2;
+                
                 particles.push({
-                    x: Math.random() * canvas.width,
-                    y: Math.random() * canvas.height,
+                    x: centerX + Math.cos(initialAngle) * orbitRadius,
+                    y: centerY + Math.sin(initialAngle) * orbitRadius,
                     vx: 0,
                     vy: 0,
-                    size: Math.random() * 3 + 2, // Slightly larger
+                    size: Math.random() * 2 + 1.5,
                     angle: Math.random() * Math.PI * 2,
-                    speed: 0.04 + Math.random() * 0.04,
-                    offsetRadius: Math.random() * ballRadius,
-                    offsetAngle: Math.random() * Math.PI * 2,
-                    orbitSpeed: (Math.random() - 0.5) * 0.02,
+                    speed: 0.03 + Math.random() * 0.03,
+                    offsetRadius: orbitRadius,
+                    offsetAngle: initialAngle,
+                    orbitSpeed: (Math.random() - 0.5) * 0.015 + 0.01,
                     color: Math.random() > 0.5 
-                        ? hexToRgba(brandColor, 1) 
-                        : hexToRgba(foregroundColor, 0.8)
+                        ? hexToRgba(brandColor, 0.8) 
+                        : hexToRgba(foregroundColor, 0.6)
                 });
             }
         };
@@ -80,52 +96,72 @@ export function GravityParticles() {
             // Clear with a slight fade for trails? No, clean wipe.
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+            const radius = Math.min(canvas.width, canvas.height) / 2;
+
+            // Clip to circle
+            ctx.save();
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+            ctx.clip();
+
             particles.forEach(p => {
+                // Update orbit angle
                 p.offsetAngle += p.orbitSpeed;
 
-                const targetX = mouseX + Math.cos(p.offsetAngle) * p.offsetRadius;
-                const targetY = mouseY + Math.sin(p.offsetAngle) * p.offsetRadius;
+                // Calculate target position in circular orbit
+                const targetX = centerX + Math.cos(p.offsetAngle) * p.offsetRadius;
+                const targetY = centerY + Math.sin(p.offsetAngle) * p.offsetRadius;
 
-                // Ease
+                // Smooth movement towards target
                 p.x += (targetX - p.x) * p.speed;
                 p.y += (targetY - p.y) * p.speed;
 
+                // Rotate particle
                 p.angle += 0.02;
 
+                // Draw particle
                 ctx.fillStyle = p.color;
                 ctx.save();
                 ctx.translate(p.x, p.y);
                 ctx.rotate(p.angle);
-                // Draw simple rect for robustness
                 ctx.beginPath();
-                ctx.rect(-p.size * 2, -p.size / 2, p.size * 5, p.size);
+                ctx.rect(-p.size * 2, -p.size / 2, p.size * 4, p.size);
                 ctx.fill();
                 ctx.restore();
             });
 
+            ctx.restore(); // Restore clipping
+
             animationFrameId = requestAnimationFrame(render);
         };
 
-        const handleMouseMove = (e: MouseEvent) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-        };
-
         const handleResize = () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+            resizeCanvas();
             initParticles();
         };
 
+        // Use ResizeObserver to watch parent container size
+        const resizeObserver = new ResizeObserver(() => {
+            resizeCanvas();
+            initParticles();
+        });
+
+        if (parentElement) {
+            resizeObserver.observe(parentElement);
+        }
+
         window.addEventListener('resize', handleResize);
-        window.addEventListener('mousemove', handleMouseMove);
 
         initParticles();
         render();
 
         return () => {
             window.removeEventListener('resize', handleResize);
-            window.removeEventListener('mousemove', handleMouseMove);
+            if (parentElement) {
+                resizeObserver.unobserve(parentElement);
+            }
             cancelAnimationFrame(animationFrameId);
         };
     }, []); // Run once on mount. Colors are handled by checking doc class inside loop or init? 
@@ -140,7 +176,7 @@ export function GravityParticles() {
     return (
         <canvas
             ref={canvasRef}
-            className="fixed inset-0 z-0 pointer-events-none opacity-60"
+            className="absolute inset-0 z-0 pointer-events-none opacity-60"
             style={{ width: '100%', height: '100%' }}
         />
     );
