@@ -15,7 +15,7 @@ export function ArchitectureSection() {
                         <div className="space-y-6">
                             {[
                                 { title: 'Maya (Interviewer)', desc: 'Conducts the conversation, asks follow-up questions, and ensures a great candidate experience.' },
-                                { title: 'Governor (Monitor)', desc: 'Silently observes the session, checking for integrity violations and evaluating technical accuracy.' }
+                                { title: 'Automated Quality Auditor', desc: 'Audits the session (with candidate consent) to verify integrity and evaluate technical accuracy.' }
                             ].map((item, i) => (
                                 <div key={i} className="flex gap-4">
                                     <div className="w-1.5 h-full rounded-full bg-gray-200 dark:bg-white/10 mt-1"></div>

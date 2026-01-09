@@ -6,11 +6,11 @@ export function HowItWorksSection() {
         },
         {
             title: 'Interview',
-            description: 'Candidate joins the session. Maya conducts the interview while Governor monitors.',
+            description: 'Candidate joins the session. Maya conducts the interview while the Automated Quality Auditor verifies integrity.',
         },
         {
             title: 'Analyze',
-            description: 'Review the recording, integrity report, and skill breakdown immediately after.',
+            description: 'Review the recording, integrity insights, and skill breakdown immediately after.',
         },
     ];
 

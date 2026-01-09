@@ -10,16 +10,13 @@ export function HeroSection() {
             <GravityParticles />
             <div className="max-w-6xl mx-auto relative z-10">
                 <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/10 mb-8">
-                        <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                        <span className="text-xs font-medium text-secondary">New: Anti-cheat 2.0 Engine is live</span>
-                    </div>
+
                     {/* Removed text-balance and tweaked colors for better contrast */}
                     <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-[1.1] tracking-tight text-gray-900 dark:text-white opacity-100 transform-none">
                         The standard for <br /> <span className="text-gray-500 dark:text-gray-400">engineering hiring</span>
                     </h1>
                     <p className="text-lg md:text-xl text-secondary mb-10 leading-relaxed max-w-2xl">
-                        Conduct technical interviews with real-time integrity monitoring.
+                        Conduct technical interviews with integrity verification.
                         Automated reports, playback, and skill assessment in one platform.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">

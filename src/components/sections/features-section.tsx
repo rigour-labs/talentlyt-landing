@@ -3,14 +3,14 @@ import { Shield, Code } from 'lucide-react';
 export function FeaturesSection() {
     const features = [
         {
-            title: 'Real-time Monitoring',
-            description: 'Our AI visually analyzes candidate behavior for potential integrity violations in real-time.',
+            title: 'Integrity Verification',
+            description: 'Data-driven insights for high-integrity hiring, visually identifying potential irregularities with candidate consent.',
             icon: <Shield className="w-6 h-6" />,
             className: "md:col-span-2",
         },
         {
             title: 'Independent Evaluation',
-            description: 'Separate AI agents for interviewing and monitoring ensure zero bias in scoring.',
+            description: 'Separate AI agents for interviewing and monitoring designed to minimize human and algorithmic bias.',
             icon: <Code className="w-6 h-6" />,
             className: "md:col-span-1",
         },
@@ -23,6 +23,18 @@ export function FeaturesSection() {
         {
             title: 'Detailed Skill Reports',
             description: 'Get a granular breakdown of technical skills, communication, and problem-solving abilities immediately after the interview.',
+            icon: <Shield className="w-6 h-6" />,
+            className: "md:col-span-2",
+        },
+        {
+            title: 'Fairness & Accessibility',
+            description: 'Includes an "Accommodation Mode" for candidates with disabilities to ensure fair assessment regardless of physical or neurological differences.',
+            icon: <Shield className="w-6 h-6" />, // Using Shield for now, maybe Heart or User is better if available? Shield is generic/safe.
+            className: "md:col-span-1",
+        },
+        {
+            title: 'Data Privacy & Control',
+            description: 'Recordings are encrypted and automatically deleted after a set period. Candidates retain rights to their assessment data.',
             icon: <Shield className="w-6 h-6" />,
             className: "md:col-span-2",
         },
@@ -51,6 +63,11 @@ export function FeaturesSection() {
                             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{feature.description}</p>
                         </div>
                     ))}
+                </div>
+
+                <div className="mt-12 p-6 rounded-2xl bg-blue-50/50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-900/30 text-sm text-secondary">
+                    <p className="mb-2"><strong>Note on AI Decision Support:</strong> TalentLyt acts as a decision-support tool providing data-driven insights. Final hiring authority remains solely with the employer's human HR team.</p>
+                    <p>All monitoring is conducted only with the candidate's prior, explicit consent and is used solely for validating session integrity.</p>
                 </div>
             </div>
         </section>

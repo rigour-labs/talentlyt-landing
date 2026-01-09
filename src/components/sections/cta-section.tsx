@@ -25,6 +25,16 @@ export function CTASection() {
                             View Pricing
                         </Link>
                     </div>
+
+                    <div className="mt-8 text-xs text-gray-500 dark:text-gray-400 max-w-2xl mx-auto space-y-2 text-balance opacity-80">
+                        <p>
+                            * By using TalentLyt, you acknowledge that our AI agents provide assessment support based on observable metrics.
+                            TalentLyt is not a substitute for human judgment. We process data in compliance with GDPR/DPDPA.
+                        </p>
+                        <p>
+                            For more information on how we handle biometric and behavioral data, see our <Link href="/privacy" className="underline hover:text-gray-800 dark:hover:text-gray-200">Privacy Policy</Link> and <Link href="/ethics" className="underline hover:text-gray-800 dark:hover:text-gray-200">AI Ethics Disclosure</Link>.
+                        </p>
+                    </div>
                 </div>
 
                 {/* Abstract shapes background */}

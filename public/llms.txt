@@ -1,0 +1,23 @@
+# TalentLyt
+
+## Overview
+TalentLyt is a B2B SaaS platform for conducting AI-powered technical interviews with integrity verification. It helps engineering teams hire fair, unbiased candidates by using automated monitors ("Automated Quality Auditor") and interview agents ("Maya").
+
+## Core Features
+1. **Integrity Verification**: Real-time behavioral analysis to detect potential interview fraud, conducted with explicit candidate consent.
+2. **Independent Evaluation**: Separation of interviewer and evaluator agents to minimize human and algorithmic bias.
+3. **Accommodation Mode**: Dedicated features to support candidates with disabilities (ADA compliant).
+4. **Code Playback**: Keystroke-by-keystroke playback of coding sessions.
+
+## Pricing
+- Free Trial available.
+- Enterprise plans for large teams.
+
+## Legal & Ethics
+- GDPR & DPDPA Compliant.
+- No automated decision-making; TalentLyt is a decision-support tool.
+- Data is encrypted and deleted automatically based on retention policies.
+
+## Contact
+- Usage: B2B Engineering Teams.
+- Email: contact@talentlyt.com
