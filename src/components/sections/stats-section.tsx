@@ -83,18 +83,18 @@ export function StatsSection() {
     }, [isInView]);
 
     return (
-        <section ref={sectionRef} className="px-6 py-24 border-b border-border bg-muted/30">
+        <section ref={sectionRef} className="px-4 sm:px-6 py-12 sm:py-16 md:py-24 border-b border-border bg-muted/30">
             <div className="max-w-6xl mx-auto">
                 <motion.div 
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-12"
+                    className="text-center mb-8 sm:mb-12"
                 >
-                    <h2 className="text-2xl md:text-3xl mb-3 text-primary">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl mb-2 sm:mb-3 text-primary px-2">
                         Trusted by Engineering Teams
                     </h2>
-                    <p className="text-secondary">
+                    <p className="text-sm sm:text-base text-secondary px-2">
                         Real numbers from real companies using TalentLyt
                     </p>
                 </motion.div>
@@ -103,22 +103,22 @@ export function StatsSection() {
                     variants={containerVariants}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
-                    className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8"
+                    className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-8"
                 >
                     {stats.map((stat, index) => (
                         <motion.div 
                             key={index}
                             variants={itemVariants}
                             whileHover={{ y: -5, scale: 1.05 }}
-                            className="bg-card border border-border rounded-2xl p-6 text-center hover:shadow-lg hover:border-primary/30 transition-all group"
+                            className="bg-card border border-border rounded-xl sm:rounded-2xl p-4 sm:p-6 text-center hover:shadow-lg hover:border-primary/30 transition-all group"
                         >
-                            <div className="text-4xl md:text-5xl tracking-tighter text-primary mb-2">
+                            <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tighter text-primary mb-1 sm:mb-2">
                                 {stat.value}
                             </div>
-                            <div className="text-sm text-primary uppercase tracking-wider mb-2">
+                            <div className="text-xs sm:text-sm text-primary uppercase tracking-wider mb-1 sm:mb-2">
                                 {stat.label}
                             </div>
-                            <div className="text-xs text-secondary leading-relaxed mb-3">
+                            <div className="text-[10px] sm:text-xs text-secondary leading-relaxed mb-2 sm:mb-3">
                                 {stat.description}
                             </div>
                             {stat.comparison && (
@@ -136,9 +136,9 @@ export function StatsSection() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
-                    className="mt-12 bg-card border border-border rounded-2xl p-8"
+                    className="mt-8 sm:mt-12 bg-card border border-border rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8"
                 >
-                    <h3 className="text-xl text-center mb-6 text-primary">
+                    <h3 className="text-lg sm:text-xl text-center mb-4 sm:mb-6 text-primary">
                         Performance Comparison
                     </h3>
                     <div className="space-y-4">

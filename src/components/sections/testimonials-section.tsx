@@ -73,18 +73,18 @@ export function TestimonialsSection() {
     ];
 
     return (
-        <section id="testimonials" className="py-24 px-6 bg-background border-b border-border" ref={ref}>
+        <section id="testimonials" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 bg-background border-b border-border" ref={ref}>
             <div className="max-w-6xl mx-auto">
                 <motion.div 
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-16"
+                    className="text-center mb-8 sm:mb-12 md:mb-16"
                 >
-                    <h2 className="text-3xl md:text-4xl mb-4 tracking-tight text-primary">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl mb-3 sm:mb-4 tracking-tight text-primary px-2">
                         Trusted by Engineering Leaders
                     </h2>
-                    <p className="text-lg text-secondary max-w-2xl mx-auto">
+                    <p className="text-base sm:text-lg text-secondary max-w-2xl mx-auto px-2">
                         See how companies are transforming their hiring with TalentLyt
                     </p>
                 </motion.div>
@@ -94,14 +94,14 @@ export function TestimonialsSection() {
                     variants={containerVariants}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
-                    className="grid md:grid-cols-3 gap-8 mb-16"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12 md:mb-16"
                 >
                     {testimonials.map((testimonial, index) => (
                         <motion.div
                             key={index}
                             variants={itemVariants}
                             whileHover={{ y: -5, scale: 1.02 }}
-                            className="bg-card border border-border rounded-2xl p-8 hover:shadow-lg hover:border-muted-border transition-all group"
+                            className="bg-card border border-border rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:shadow-lg hover:border-muted-border transition-all group"
                         >
                             <div className="flex items-center gap-1 mb-4">
                                 {[...Array(5)].map((_, i) => (
@@ -112,21 +112,21 @@ export function TestimonialsSection() {
                                 ))}
                             </div>
                             <Quote className="w-8 h-8 text-primary/20 mb-4" />
-                            <p className="text-secondary leading-relaxed mb-6 text-balance">
+                            <p className="text-sm sm:text-base text-secondary leading-relaxed mb-4 sm:mb-6 text-balance">
                                 "{testimonial.quote}"
                             </p>
-                            <div className="flex items-center gap-3 mb-4">
-                                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                            <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+                                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center text-sm sm:text-base text-primary flex-shrink-0">
                                     {testimonial.author.split(' ').map(n => n[0]).join('')}
                                 </div>
-                                <div>
-                                    <div className="text-primary">{testimonial.author}</div>
-                                    <div className="text-sm text-secondary">{testimonial.role}</div>
-                                    <div className="text-sm text-text-muted">{testimonial.company}</div>
+                                <div className="min-w-0">
+                                    <div className="text-sm sm:text-base text-primary truncate">{testimonial.author}</div>
+                                    <div className="text-xs sm:text-sm text-secondary truncate">{testimonial.role}</div>
+                                    <div className="text-xs sm:text-sm text-text-muted truncate">{testimonial.company}</div>
                                 </div>
                             </div>
-                            <div className="pt-4 border-t border-border">
-                                <div className="text-sm text-primary">{testimonial.metrics}</div>
+                            <div className="pt-3 sm:pt-4 border-t border-border">
+                                <div className="text-xs sm:text-sm text-primary">{testimonial.metrics}</div>
                             </div>
                         </motion.div>
                     ))}
@@ -137,42 +137,42 @@ export function TestimonialsSection() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                     transition={{ duration: 0.6, delay: 0.3 }}
-                    className="bg-muted border border-border rounded-2xl p-8 md:p-12"
+                    className="bg-muted border border-border rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-12"
                 >
-                    <h3 className="text-2xl mb-8 text-center text-primary">
+                    <h3 className="text-xl sm:text-2xl mb-6 sm:mb-8 text-center text-primary px-2">
                         Proven Results Across Industries
                     </h3>
                     <motion.div 
                         variants={containerVariants}
                         initial="hidden"
                         animate={isInView ? "visible" : "hidden"}
-                        className="grid md:grid-cols-3 gap-6"
+                        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6"
                     >
                         {caseStudies.map((study, index) => (
                             <motion.div
                                 key={index}
                                 variants={itemVariants}
                                 whileHover={{ scale: 1.05, y: -5 }}
-                                className="bg-card border border-border rounded-xl p-6 text-center hover:shadow-md transition-all"
+                                className="bg-card border border-border rounded-xl p-4 sm:p-6 text-center hover:shadow-md transition-all"
                             >
-                                <div className="text-3xl text-primary mb-2">{study.metric}</div>
-                                <div className="text-sm text-secondary mb-1">{study.company}</div>
-                                <div className="text-xs text-text-muted">{study.description}</div>
+                                <div className="text-2xl sm:text-3xl text-primary mb-1 sm:mb-2">{study.metric}</div>
+                                <div className="text-xs sm:text-sm text-secondary mb-1">{study.company}</div>
+                                <div className="text-[10px] sm:text-xs text-text-muted">{study.description}</div>
                             </motion.div>
                         ))}
                     </motion.div>
                 </motion.div>
 
                 {/* Trust Badges */}
-                <div className="mt-12 text-center">
-                    <p className="text-sm text-text-muted mb-6 uppercase tracking-wider">
+                <div className="mt-8 sm:mt-12 text-center">
+                    <p className="text-xs sm:text-sm text-text-muted mb-4 sm:mb-6 uppercase tracking-wider px-2">
                         Trusted & Certified
                     </p>
-                    <div className="flex flex-wrap items-center justify-center gap-8 opacity-60">
-                        <div className="text-sm text-secondary">GDPR Compliant</div>
-                        <div className="text-sm text-secondary">DPDPA Compliant</div>
-                        <div className="text-sm text-secondary">SOC 2 Type II</div>
-                        <div className="text-sm text-secondary">ISO 27001</div>
+                    <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 opacity-60 px-2">
+                        <div className="text-xs sm:text-sm text-secondary">GDPR Compliant</div>
+                        <div className="text-xs sm:text-sm text-secondary">DPDPA Compliant</div>
+                        <div className="text-xs sm:text-sm text-secondary">SOC 2 Type II</div>
+                        <div className="text-xs sm:text-sm text-secondary">ISO 27001</div>
                     </div>
                 </div>
             </div>

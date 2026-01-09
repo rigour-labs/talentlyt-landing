@@ -44,7 +44,7 @@ export function ProblemSolutionSection() {
     };
     const problems = [
         {
-            title: 'Cheating & Integrity Issues',
+            title: 'Integrity & Verification Challenges',
             description: 'Candidates use multiple devices, share screens, or get help during remote interviews.',
             impact: '30-40% of remote interviews have integrity concerns',
         },
@@ -68,7 +68,7 @@ export function ProblemSolutionSection() {
     const solutions = [
         {
             title: 'AI-Powered Integrity Verification',
-            description: 'Real-time monitoring detects anomalies and potential cheating with candidate consent.',
+            description: 'Real-time monitoring detects anomalies and potential integrity concerns with candidate consent.',
             benefit: '95% reduction in integrity issues',
         },
         {
@@ -89,52 +89,52 @@ export function ProblemSolutionSection() {
     ];
 
     return (
-        <section className="py-24 px-6 bg-background border-b border-border" ref={ref}>
+        <section className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 bg-background border-b border-border" ref={ref}>
             <div className="max-w-6xl mx-auto">
                 <motion.div 
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-16"
+                    className="text-center mb-8 sm:mb-12 md:mb-16"
                 >
-                    <h2 className="text-3xl md:text-4xl mb-4 tracking-tight text-primary">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl mb-3 sm:mb-4 tracking-tight text-primary px-2">
                         The Problem We're Solving
                     </h2>
-                    <p className="text-lg text-secondary max-w-2xl mx-auto">
+                    <p className="text-base sm:text-lg text-secondary max-w-2xl mx-auto px-2">
                         Remote technical hiring is broken. Here's how TalentLyt fixes it.
                     </p>
                 </motion.div>
 
                 {/* Problems vs Solutions Comparison */}
-                <div className="grid md:grid-cols-2 gap-8 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12 md:mb-16">
                     {/* Problems Column */}
                     <motion.div 
                         variants={containerVariants}
                         initial="hidden"
                         animate={isInView ? "visible" : "hidden"}
-                        className="bg-muted border border-border rounded-2xl p-8"
+                        className="bg-muted border border-border rounded-xl sm:rounded-2xl p-6 sm:p-8"
                     >
-                        <div className="flex items-center gap-3 mb-6">
-                            <div className="p-2 bg-red-500/10 rounded-lg text-red-500">
-                                <X className="w-5 h-5" />
+                        <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
+                            <div className="p-1.5 sm:p-2 bg-red-500/10 rounded-lg text-red-500 flex-shrink-0">
+                                <X className="w-4 h-4 sm:w-5 sm:h-5" />
                             </div>
-                            <h3 className="text-2xl text-primary">Traditional Hiring</h3>
+                            <h3 className="text-xl sm:text-2xl text-primary">Traditional Hiring</h3>
                         </div>
-                        <div className="space-y-6">
+                        <div className="space-y-4 sm:space-y-6">
                             {problems.map((problem, index) => (
                                 <motion.div 
                                     key={index}
                                     variants={itemVariants}
                                     whileHover={{ scale: 1.02, x: 5 }}
-                                    className="bg-card border border-border rounded-xl p-6"
+                                    className="bg-card border border-border rounded-lg sm:rounded-xl p-4 sm:p-6"
                                 >
-                                    <div className="flex items-start gap-4">
-                                        <div className="flex-1">
-                                            <h4 className="text-primary mb-2">{problem.title}</h4>
-                                            <p className="text-sm text-secondary mb-3 leading-relaxed">
+                                    <div className="flex items-start gap-3 sm:gap-4">
+                                        <div className="flex-1 min-w-0">
+                                            <h4 className="text-base sm:text-lg text-primary mb-1 sm:mb-2">{problem.title}</h4>
+                                            <p className="text-xs sm:text-sm text-secondary mb-2 sm:mb-3 leading-relaxed">
                                                 {problem.description}
                                             </p>
-                                            <div className="text-xs text-red-500 bg-red-500/10 px-3 py-1 rounded-full inline-block">
+                                            <div className="text-[10px] sm:text-xs text-red-500 bg-red-500/10 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full inline-block break-words">
                                                 {problem.impact}
                                             </div>
                                         </div>
@@ -149,29 +149,29 @@ export function ProblemSolutionSection() {
                         variants={containerVariants}
                         initial="hidden"
                         animate={isInView ? "visible" : "hidden"}
-                        className="bg-muted border border-border rounded-2xl p-8 border-primary/20"
+                        className="bg-muted border border-border rounded-xl sm:rounded-2xl p-6 sm:p-8 border-primary/20"
                     >
-                        <div className="flex items-center gap-3 mb-6">
-                            <div className="p-2 bg-primary/10 rounded-lg text-primary">
-                                <CheckCircle2 className="w-5 h-5" />
+                        <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
+                            <div className="p-1.5 sm:p-2 bg-primary/10 rounded-lg text-primary flex-shrink-0">
+                                <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5" />
                             </div>
-                            <h3 className="text-2xl text-primary">With TalentLyt</h3>
+                            <h3 className="text-xl sm:text-2xl text-primary">With TalentLyt</h3>
                         </div>
-                        <div className="space-y-6">
+                        <div className="space-y-4 sm:space-y-6">
                             {solutions.map((solution, index) => (
                                 <motion.div 
                                     key={index}
                                     variants={solutionVariants}
                                     whileHover={{ scale: 1.02, x: -5 }}
-                                    className="bg-card border border-primary/20 rounded-xl p-6"
+                                    className="bg-card border border-primary/20 rounded-lg sm:rounded-xl p-4 sm:p-6"
                                 >
-                                    <div className="flex items-start gap-4">
-                                        <div className="flex-1">
-                                            <h4 className="text-primary mb-2">{solution.title}</h4>
-                                            <p className="text-sm text-secondary mb-3 leading-relaxed">
+                                    <div className="flex items-start gap-3 sm:gap-4">
+                                        <div className="flex-1 min-w-0">
+                                            <h4 className="text-base sm:text-lg text-primary mb-1 sm:mb-2">{solution.title}</h4>
+                                            <p className="text-xs sm:text-sm text-secondary mb-2 sm:mb-3 leading-relaxed">
                                                 {solution.description}
                                             </p>
-                                            <div className="text-xs text-primary bg-primary/10 px-3 py-1 rounded-full inline-block">
+                                            <div className="text-[10px] sm:text-xs text-primary bg-primary/10 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full inline-block break-words">
                                                 {solution.benefit}
                                             </div>
                                         </div>
@@ -187,29 +187,29 @@ export function ProblemSolutionSection() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
-                    className="bg-card border border-border rounded-2xl p-8 md:p-12 mb-12"
+                    className="bg-card border border-border rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-12 mb-8 sm:mb-12"
                 >
-                    <h3 className="text-2xl text-center mb-8 text-primary">
+                    <h3 className="text-xl sm:text-2xl text-center mb-6 sm:mb-8 text-primary px-2">
                         The TalentLyt Difference
                     </h3>
-                    <div className="grid md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
                         <div className="text-center">
-                            <div className="text-4xl text-primary mb-2">95%</div>
-                            <div className="text-sm text-secondary mb-4">Reduction in false positives</div>
+                            <div className="text-3xl sm:text-4xl text-primary mb-1 sm:mb-2">95%</div>
+                            <div className="text-xs sm:text-sm text-secondary mb-3 sm:mb-4">Reduction in false positives</div>
                             <div className="h-2 bg-muted rounded-full overflow-hidden">
                                 <div className="h-full bg-primary rounded-full" style={{ width: '95%' }}></div>
                             </div>
                         </div>
                         <div className="text-center">
-                            <div className="text-4xl text-primary mb-2">50%</div>
-                            <div className="text-sm text-secondary mb-4">Faster time-to-hire</div>
+                            <div className="text-3xl sm:text-4xl text-primary mb-1 sm:mb-2">50%</div>
+                            <div className="text-xs sm:text-sm text-secondary mb-3 sm:mb-4">Faster time-to-hire</div>
                             <div className="h-2 bg-muted rounded-full overflow-hidden">
                                 <div className="h-full bg-primary rounded-full" style={{ width: '50%' }}></div>
                             </div>
                         </div>
                         <div className="text-center">
-                            <div className="text-4xl text-primary mb-2">3x</div>
-                            <div className="text-sm text-secondary mb-4">Better candidate quality</div>
+                            <div className="text-3xl sm:text-4xl text-primary mb-1 sm:mb-2">3x</div>
+                            <div className="text-xs sm:text-sm text-secondary mb-3 sm:mb-4">Better candidate quality</div>
                             <div className="h-2 bg-muted rounded-full overflow-hidden">
                                 <div className="h-full bg-primary rounded-full" style={{ width: '75%' }}></div>
                             </div>

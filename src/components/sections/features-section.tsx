@@ -33,7 +33,7 @@ export function FeaturesSection() {
     };
     const features = [
         {
-            title: 'Stop Hiring Cheaters',
+            title: 'Ensure Hiring Integrity',
             benefit: 'Integrity Verification',
             description: 'Data-driven insights for high-integrity hiring, visually identifying potential irregularities with candidate consent. Reduce false positives by 95%.',
             className: "md:col-span-2",
@@ -83,20 +83,20 @@ export function FeaturesSection() {
     ];
 
     return (
-        <section id="features" className="py-24 px-6 bg-background" ref={ref}>
+        <section id="features" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 bg-background" ref={ref}>
             <div className="max-w-6xl mx-auto">
                 <motion.div 
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                     transition={{ duration: 0.6 }}
-                    className="mb-16"
+                    className="mb-8 sm:mb-12 md:mb-16"
                 >
-                    <h2 className="text-3xl md:text-4xl mb-4 tracking-tight text-primary">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl mb-3 sm:mb-4 tracking-tight text-primary">
                         Everything you need to hire confidently
                     </h2>
-                    <p className="text-secondary text-lg max-w-2xl">
-                        TalentLyt provides a complete ecosystem for technical assessment, from cheat detection to deep skill analysis. 
-                        Stop losing great candidates to cheaters.
+                    <p className="text-secondary text-base sm:text-lg max-w-2xl">
+                        TalentLyt provides a complete ecosystem for technical assessment, from integrity verification to deep skill analysis. 
+                        Stop losing great candidates to integrity issues.
                     </p>
                 </motion.div>
 
@@ -104,14 +104,14 @@ export function FeaturesSection() {
                     variants={containerVariants}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
-                    className="grid md:grid-cols-3 gap-6"
+                    className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6"
                 >
                     {features.map((feature, index) => (
                         <motion.div
                             key={index}
                             variants={itemVariants}
                             whileHover={{ y: -5, scale: 1.02 }}
-                            className={`p-8 rounded-2xl border border-border bg-muted/50 hover:bg-card hover:shadow-xl hover:border-primary/30 transition-all duration-300 group ${feature.className}`}
+                            className={`p-6 sm:p-8 rounded-2xl border border-border bg-muted/50 hover:bg-card hover:shadow-xl hover:border-primary/30 transition-all duration-300 group ${feature.className}`}
                         >
                             <div className="flex items-start justify-between mb-4">
                                 <div className="text-xs text-primary bg-primary/10 px-3 py-1 rounded-full">
@@ -121,8 +121,8 @@ export function FeaturesSection() {
                             <div className="text-xs text-primary mb-2 uppercase tracking-wider">
                                 {feature.benefit}
                             </div>
-                            <h3 className="text-xl text-foreground mb-3">{feature.title}</h3>
-                            <p className="text-text-secondary leading-relaxed mb-4">{feature.description}</p>
+                            <h3 className="text-lg sm:text-xl text-foreground mb-2 sm:mb-3">{feature.title}</h3>
+                            <p className="text-sm sm:text-base text-text-secondary leading-relaxed mb-3 sm:mb-4">{feature.description}</p>
                             <Link
                                 href={feature.demoLink}
                                 className="inline-flex items-center gap-2 text-sm text-primary hover:gap-3 transition-all group/link"
@@ -139,14 +139,14 @@ export function FeaturesSection() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                     transition={{ duration: 0.6, delay: 0.3 }}
-                    className="mt-12 grid md:grid-cols-2 gap-6"
+                    className="mt-8 sm:mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6"
                 >
                     <motion.div 
                         whileHover={{ scale: 1.02 }}
-                        className="p-6 rounded-xl bg-red-500/10 border border-red-500/20"
+                        className="p-4 sm:p-6 rounded-xl bg-red-500/10 border border-red-500/20"
                     >
                         <div className="text-sm text-red-500 mb-2">Traditional Interviews</div>
-                        <ul className="space-y-2 text-sm text-secondary">
+                        <ul className="space-y-2 text-xs sm:text-sm text-secondary">
                             <li className="flex items-start gap-2">
                                 <span className="text-red-500 mt-1">×</span>
                                 <span>No integrity verification</span>
@@ -163,10 +163,10 @@ export function FeaturesSection() {
                     </motion.div>
                     <motion.div 
                         whileHover={{ scale: 1.02 }}
-                        className="p-6 rounded-xl bg-primary/10 border border-primary/20"
+                        className="p-4 sm:p-6 rounded-xl bg-primary/10 border border-primary/20"
                     >
                         <div className="text-sm text-primary mb-2">With TalentLyt</div>
-                        <ul className="space-y-2 text-sm text-secondary">
+                        <ul className="space-y-2 text-xs sm:text-sm text-secondary">
                             <li className="flex items-start gap-2">
                                 <span className="text-primary mt-1">✓</span>
                                 <span>Real-time integrity monitoring</span>
@@ -183,7 +183,7 @@ export function FeaturesSection() {
                     </motion.div>
                 </motion.div>
 
-                <div className="mt-12 p-6 rounded-2xl bg-brand/10 border border-brand/20 text-sm text-secondary">
+                <div className="mt-8 sm:mt-12 p-4 sm:p-6 rounded-2xl bg-brand/10 border border-brand/20 text-xs sm:text-sm text-secondary">
                     <p className="mb-2"><strong>Note on AI Decision Support:</strong> TalentLyt acts as a decision-support tool providing data-driven insights. Final hiring authority remains solely with the employer's human HR team.</p>
                     <p>All monitoring is conducted only with the candidate's prior, explicit consent and is used solely for validating session integrity.</p>
                 </div>

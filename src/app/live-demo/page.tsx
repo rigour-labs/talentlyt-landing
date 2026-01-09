@@ -123,19 +123,19 @@ export default function LiveDemoPage() {
     return (
         <div className="min-h-screen bg-background text-foreground" ref={ref}>
             <Navbar />
-            <div className="pt-32 pb-20 px-6">
+            <div className="pt-24 sm:pt-32 pb-12 sm:pb-20 px-4 sm:px-6">
                 <div className="max-w-7xl mx-auto">
                     {/* Header */}
                     <motion.div 
                         initial={{ opacity: 0, y: 30 }}
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                         transition={{ duration: 0.6 }}
-                        className="text-center mb-16"
+                        className="text-center mb-8 sm:mb-12 md:mb-16"
                     >
-                        <h1 className="text-4xl md:text-6xl mb-6 tracking-tight text-primary">
+                        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-4 sm:mb-6 tracking-tight text-primary px-2">
                             See TalentLyt in Action
                         </h1>
-                        <p className="text-lg md:text-xl text-secondary max-w-3xl mx-auto mb-8">
+                        <p className="text-base sm:text-lg md:text-xl text-secondary max-w-3xl mx-auto mb-6 sm:mb-8 px-2">
                             Explore how TalentLyt transforms technical hiring with integrity verification, 
                             automated assessments, and comprehensive skill analysis.
                         </p>
@@ -152,7 +152,7 @@ export default function LiveDemoPage() {
                             variants={containerVariants}
                             initial="hidden"
                             animate={isInView ? "visible" : "hidden"}
-                            className="flex flex-wrap gap-3 justify-center mb-8"
+                            className="flex flex-wrap gap-2 sm:gap-3 justify-center mb-6 sm:mb-8"
                         >
                             {features.map((feature) => (
                                 <motion.button
@@ -161,7 +161,7 @@ export default function LiveDemoPage() {
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                     onClick={() => setActiveTab(feature.id)}
-                                    className={`px-6 py-3 rounded-xl transition-all ${
+                                    className={`px-4 sm:px-6 py-2 sm:py-3 rounded-xl transition-all text-xs sm:text-sm ${
                                         activeTab === feature.id
                                             ? 'bg-primary text-primary-foreground shadow-lg'
                                             : 'bg-muted text-secondary hover:bg-card border border-border'
@@ -181,25 +181,25 @@ export default function LiveDemoPage() {
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: -20 }}
                                     transition={{ duration: 0.4 }}
-                                    className="bg-card border border-border rounded-2xl p-8 md:p-12"
+                                    className="bg-card border border-border rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-12"
                                 >
-                                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
                                         <div>
-                                            <h2 className="text-3xl text-primary mb-6">{feature.title}</h2>
-                                            <p className="text-lg text-secondary mb-6 leading-relaxed">
+                                            <h2 className="text-2xl sm:text-3xl text-primary mb-4 sm:mb-6">{feature.title}</h2>
+                                            <p className="text-base sm:text-lg text-secondary mb-4 sm:mb-6 leading-relaxed">
                                                 {feature.description}
                                             </p>
-                                            <ul className="space-y-3 mb-8">
+                                            <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
                                                 {feature.highlights.map((highlight, idx) => (
-                                                    <li key={idx} className="flex items-start gap-3">
-                                                        <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                                                        <span className="text-secondary">{highlight}</span>
+                                                    <li key={idx} className="flex items-start gap-2 sm:gap-3">
+                                                        <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary mt-0.5 flex-shrink-0" />
+                                                        <span className="text-sm sm:text-base text-secondary">{highlight}</span>
                                                     </li>
                                                 ))}
                                             </ul>
                                             <Link
                                                 href="/request-demo"
-                                                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-xl hover:opacity-90 transition-all shadow-lg"
+                                                className="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-primary text-primary-foreground rounded-xl hover:opacity-90 transition-all shadow-lg text-sm sm:text-base"
                                             >
                                                 Try This Feature
                                                 <ArrowRight className="w-4 h-4" />
@@ -235,12 +235,12 @@ export default function LiveDemoPage() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                             transition={{ duration: 0.6, delay: 0.5 }}
-                            className="text-center mb-12"
+                            className="text-center mb-8 sm:mb-12"
                         >
-                            <h2 className="text-3xl md:text-4xl mb-4 text-primary">
+                            <h2 className="text-2xl sm:text-3xl md:text-4xl mb-3 sm:mb-4 text-primary px-2">
                                 Complete Interview Journey
                             </h2>
-                            <p className="text-lg text-secondary max-w-2xl mx-auto">
+                            <p className="text-base sm:text-lg text-secondary max-w-2xl mx-auto px-2">
                                 Follow a candidate through the entire TalentLyt interview process
                             </p>
                         </motion.div>
@@ -249,23 +249,23 @@ export default function LiveDemoPage() {
                             variants={containerVariants}
                             initial="hidden"
                             animate={isInView ? "visible" : "hidden"}
-                            className="space-y-8"
+                            className="space-y-4 sm:space-y-6 md:space-y-8"
                         >
                             {interviewSteps.map((step, index) => (
                                 <motion.div
                                     key={index}
                                     variants={itemVariants}
                                     whileHover={{ y: -5 }}
-                                    className={`bg-card border rounded-2xl p-8 transition-all cursor-pointer ${
+                                    className={`bg-card border rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 transition-all cursor-pointer ${
                                         activeStep === index
                                             ? 'border-primary shadow-xl scale-[1.02]'
                                             : 'border-border hover:border-muted-border hover:shadow-lg'
                                     }`}
                                     onClick={() => setActiveStep(index)}
                                 >
-                                    <div className="flex flex-col md:flex-row gap-8 items-start">
+                                    <div className="flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-8 items-start">
                                         <div className="flex-shrink-0">
-                                            <div className={`w-16 h-16 rounded-full flex items-center justify-center text-lg ${
+                                            <div className={`w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-base sm:text-lg ${
                                                 activeStep === index
                                                     ? 'bg-primary text-primary-foreground'
                                                     : 'bg-muted text-secondary'
@@ -273,36 +273,36 @@ export default function LiveDemoPage() {
                                                 {index + 1}
                                             </div>
                                         </div>
-                                        <div className="flex-1">
-                                            <div className="flex items-start justify-between mb-4">
-                                                <div>
-                                                    <div className="flex items-center gap-3 mb-2">
-                                                        <span className="text-sm text-primary bg-primary/10 px-3 py-1 rounded-full">
+                                        <div className="flex-1 min-w-0">
+                                            <div className="flex items-start justify-between mb-3 sm:mb-4">
+                                                <div className="min-w-0 flex-1">
+                                                    <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2">
+                                                        <span className="text-xs sm:text-sm text-primary bg-primary/10 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full">
                                                             Step {index + 1}
                                                         </span>
-                                                        <span className="text-sm text-text-muted flex items-center gap-1">
-                                                            <Clock className="w-4 h-4" />
+                                                        <span className="text-xs sm:text-sm text-text-muted flex items-center gap-1">
+                                                            <Clock className="w-3 h-3 sm:w-4 sm:h-4" />
                                                             {step.time}
                                                         </span>
                                                     </div>
-                                                    <h3 className="text-2xl text-primary mb-2">
+                                                    <h3 className="text-xl sm:text-2xl text-primary mb-1 sm:mb-2">
                                                         {step.title}
                                                     </h3>
                                                 </div>
                                             </div>
-                                            <p className="text-secondary text-lg leading-relaxed mb-6">
+                                            <p className="text-sm sm:text-base md:text-lg text-secondary leading-relaxed mb-4 sm:mb-6">
                                                 {step.description}
                                             </p>
                                             {activeStep === index && (
-                                                <div className="mt-6 p-6 bg-muted rounded-xl border border-border">
-                                                    <div className="aspect-video bg-background border border-border rounded-lg flex items-center justify-center mb-4">
-                                                        <div className="text-center">
-                                                            <p className="text-sm text-primary">
+                                                <div className="mt-4 sm:mt-6 p-4 sm:p-6 bg-muted rounded-lg sm:rounded-xl border border-border">
+                                                    <div className="aspect-video bg-background border border-border rounded-lg flex items-center justify-center mb-3 sm:mb-4">
+                                                        <div className="text-center px-2">
+                                                            <p className="text-xs sm:text-sm text-primary">
                                                                 {step.mockup.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}
                                                             </p>
                                                         </div>
                                                     </div>
-                                                    <p className="text-sm text-secondary text-center">
+                                                    <p className="text-xs sm:text-sm text-secondary text-center">
                                                         Interactive interface preview - Click to explore
                                                     </p>
                                                 </div>
@@ -319,27 +319,27 @@ export default function LiveDemoPage() {
                         initial={{ opacity: 0, y: 30 }}
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                         transition={{ duration: 0.6, delay: 0.6 }}
-                        className="bg-muted border border-border rounded-2xl p-8 md:p-12 mb-16"
+                        className="bg-muted border border-border rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-12 mb-8 sm:mb-12 md:mb-16"
                     >
-                        <h2 className="text-3xl text-center mb-12 text-primary">
+                        <h2 className="text-2xl sm:text-3xl text-center mb-8 sm:mb-12 text-primary px-2">
                             Why Engineering Teams Choose TalentLyt
                         </h2>
-                        <div className="grid md:grid-cols-3 gap-8">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
                             <div className="text-center">
-                                <h3 className="text-xl mb-3 text-primary">95% Reduction</h3>
-                                <p className="text-secondary">
+                                <h3 className="text-lg sm:text-xl mb-2 sm:mb-3 text-primary">95% Reduction</h3>
+                                <p className="text-sm sm:text-base text-secondary">
                                     In false positive hires with our integrity verification system
                                 </p>
                             </div>
                             <div className="text-center">
-                                <h3 className="text-xl mb-3 text-primary">50% Faster</h3>
-                                <p className="text-secondary">
+                                <h3 className="text-lg sm:text-xl mb-2 sm:mb-3 text-primary">50% Faster</h3>
+                                <p className="text-sm sm:text-base text-secondary">
                                     Interview-to-decision time with automated skill assessments
                                 </p>
                             </div>
-                            <div className="text-center">
-                                <h3 className="text-xl mb-3 text-primary">100% Compliant</h3>
-                                <p className="text-secondary">
+                            <div className="text-center sm:col-span-2 md:col-span-1">
+                                <h3 className="text-lg sm:text-xl mb-2 sm:mb-3 text-primary">100% Compliant</h3>
+                                <p className="text-sm sm:text-base text-secondary">
                                     GDPR/DPDPA compliant with candidate consent and data privacy controls
                                 </p>
                             </div>
@@ -351,29 +351,29 @@ export default function LiveDemoPage() {
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
                         transition={{ duration: 0.6, delay: 0.8 }}
-                        className="text-center bg-card border border-border rounded-2xl p-12"
+                        className="text-center bg-card border border-border rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-12"
                     >
-                        <h2 className="text-3xl md:text-4xl mb-4 text-primary">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl mb-3 sm:mb-4 text-primary px-2">
                             Ready to Transform Your Hiring Process?
                         </h2>
-                        <p className="text-lg text-secondary mb-8 max-w-2xl mx-auto">
+                        <p className="text-base sm:text-lg text-secondary mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
                             Join 200+ companies already using TalentLyt to hire with confidence
                         </p>
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 w-full">
                             <Link
                                 href="/request-demo"
-                                className="px-8 py-4 bg-primary text-primary-foreground rounded-xl hover:opacity-90 transition-all shadow-lg hover:shadow-xl"
+                                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-primary text-primary-foreground rounded-xl hover:opacity-90 transition-all shadow-lg hover:shadow-xl text-sm sm:text-base whitespace-nowrap inline-flex items-center justify-center"
                             >
                                 Start Free Trial
                             </Link>
                             <Link
                                 href="/pricing"
-                                className="px-8 py-4 bg-card border border-border text-foreground rounded-xl hover:bg-muted transition-all"
+                                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-card border border-border text-foreground rounded-xl hover:bg-muted transition-all text-sm sm:text-base whitespace-nowrap inline-flex items-center justify-center"
                             >
                                 View Pricing
             </Link>
                         </div>
-                        <p className="text-sm text-text-muted mt-6">
+                        <p className="text-xs sm:text-sm text-text-muted mt-4 sm:mt-6 px-2">
                             No credit card required • 14-day free trial • Cancel anytime
                         </p>
                     </motion.div>

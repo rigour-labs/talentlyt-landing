@@ -10,8 +10,8 @@ export function CTASection() {
     const isInView = useInView(ref, { once: true, margin: "-100px" });
 
     return (
-        <section className="px-6 py-24 bg-background" ref={ref}>
-            <div className="max-w-5xl mx-auto bg-muted rounded-3xl p-12 md:p-20 text-center text-foreground relative overflow-hidden border border-border">
+        <section className="px-4 sm:px-6 py-12 sm:py-16 md:py-24 bg-background" ref={ref}>
+            <div className="max-w-5xl mx-auto bg-muted rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 lg:p-20 text-center text-foreground relative overflow-hidden border border-border">
                 <motion.div 
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
@@ -23,9 +23,9 @@ export function CTASection() {
                         initial={{ opacity: 0, y: -20 }}
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6"
+                        className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 rounded-full mb-4 sm:mb-6"
                     >
-                        <span className="text-sm text-primary">
+                        <span className="text-xs sm:text-sm text-primary">
                             Join 200+ companies already using TalentLyt
                         </span>
                     </motion.div>
@@ -34,15 +34,15 @@ export function CTASection() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                         transition={{ duration: 0.6, delay: 0.3 }}
-                        className="text-4xl md:text-5xl mb-4 tracking-tight text-foreground"
+                        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-3 sm:mb-4 tracking-tight text-foreground px-2"
                     >
-                        Stop hiring cheaters. Start hiring confidently.
+                        Hire with confidence. Build better teams.
                     </motion.h2>
                     <motion.p 
                         initial={{ opacity: 0, y: 20 }}
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                         transition={{ duration: 0.6, delay: 0.4 }}
-                        className="text-lg text-text-secondary mb-8 max-w-xl mx-auto"
+                        className="text-base sm:text-lg text-text-secondary mb-6 sm:mb-8 max-w-xl mx-auto px-2"
                     >
                         Transform your technical hiring process with AI-powered integrity verification and automated assessments.
                     </motion.p>
@@ -52,29 +52,29 @@ export function CTASection() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                         transition={{ duration: 0.6, delay: 0.5 }}
-                        className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8"
+                        className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 mb-6 sm:mb-8 w-full"
                     >
-                        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto flex-shrink-0">
                             <Link
                                 href="/request-demo"
-                                className="group w-full sm:w-auto px-8 py-4 bg-primary text-primary-foreground rounded-xl hover:opacity-90 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                                className="group w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-primary text-primary-foreground rounded-xl hover:opacity-90 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 text-sm sm:text-base whitespace-nowrap"
                             >
                             Start Free Trial
-                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform flex-shrink-0" />
                             </Link>
                         </motion.div>
-                        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto flex-shrink-0">
                             <Link
                                 href="/live-demo"
-                                className="w-full sm:w-auto px-8 py-4 bg-card border border-border text-foreground rounded-xl hover:bg-muted transition-all flex items-center justify-center gap-2"
+                                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-card border border-border text-foreground rounded-xl hover:bg-muted transition-all flex items-center justify-center gap-2 text-sm sm:text-base whitespace-nowrap"
                             >
                                 Watch Live Demo
                             </Link>
                         </motion.div>
-                        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto flex-shrink-0">
                             <Link
                                 href="/pricing"
-                                className="w-full sm:w-auto px-8 py-4 bg-card border border-border text-foreground rounded-xl hover:bg-muted transition-all"
+                                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-card border border-border text-foreground rounded-xl hover:bg-muted transition-all text-sm sm:text-base whitespace-nowrap inline-flex items-center justify-center"
                             >
                                 View Pricing
                             </Link>
@@ -82,29 +82,29 @@ export function CTASection() {
                     </motion.div>
 
                     {/* Risk Reduction Elements */}
-                    <div className="grid md:grid-cols-3 gap-4 mb-8 max-w-3xl mx-auto">
-                        <div className="flex items-center gap-2 text-sm text-secondary">
-                            <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-6 sm:mb-8 max-w-3xl mx-auto">
+                        <div className="flex items-center justify-center sm:justify-start gap-2 text-xs sm:text-sm text-secondary">
+                            <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />
                             <span>14-day free trial</span>
                         </div>
-                        <div className="flex items-center gap-2 text-sm text-secondary">
-                            <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
+                        <div className="flex items-center justify-center sm:justify-start gap-2 text-xs sm:text-sm text-secondary">
+                            <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />
                             <span>No credit card required</span>
                         </div>
-                        <div className="flex items-center gap-2 text-sm text-secondary">
-                            <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
+                        <div className="flex items-center justify-center sm:justify-start gap-2 text-xs sm:text-sm text-secondary">
+                            <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />
                             <span>Cancel anytime</span>
                         </div>
                     </div>
 
                     {/* Social Proof */}
-                    <div className="flex items-center justify-center gap-6 text-sm text-text-muted mb-8">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm text-text-muted mb-6 sm:mb-8">
                         <span>GDPR Compliant</span>
                         <span>Setup in 5 minutes</span>
                     </div>
 
                     {/* Legal Disclaimer */}
-                    <div className="mt-8 text-xs text-text-secondary max-w-2xl mx-auto space-y-2 text-balance opacity-80">
+                    <div className="mt-6 sm:mt-8 text-[10px] sm:text-xs text-text-secondary max-w-2xl mx-auto space-y-1 sm:space-y-2 text-balance opacity-80 px-2">
                         <p>
                             * By using TalentLyt, you acknowledge that our AI agents provide assessment support based on observable metrics.
                             TalentLyt is not a substitute for human judgment. We process data in compliance with GDPR/DPDPA.

@@ -56,18 +56,18 @@ export function HowItWorksSection() {
     ];
 
     return (
-        <section id="how-it-works" className="px-6 py-24 bg-background border-b border-border" ref={ref}>
+        <section id="how-it-works" className="px-4 sm:px-6 py-12 sm:py-16 md:py-24 bg-background border-b border-border" ref={ref}>
             <div className="max-w-6xl mx-auto">
                 <motion.div 
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-16"
+                    className="text-center mb-8 sm:mb-12 md:mb-16"
                 >
-                    <h2 className="text-3xl md:text-4xl mb-4 tracking-tight text-primary">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl mb-3 sm:mb-4 tracking-tight text-primary px-2">
                         Simple workflow, powerful results
                     </h2>
-                    <p className="text-lg text-secondary max-w-2xl mx-auto">
+                    <p className="text-base sm:text-lg text-secondary max-w-2xl mx-auto px-2">
                         From scheduling to decision-making, TalentLyt streamlines your entire hiring process
                     </p>
                 </motion.div>
@@ -76,7 +76,7 @@ export function HowItWorksSection() {
                     variants={containerVariants}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
-                    className="grid md:grid-cols-3 gap-8 relative"
+                    className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 relative"
                 >
                     {/* Connecting Line */}
                     <motion.div 
@@ -94,36 +94,36 @@ export function HowItWorksSection() {
                         >
                             <motion.div 
                                 whileHover={{ y: -10, scale: 1.02 }}
-                                className="bg-card border border-border rounded-2xl p-8 hover:shadow-xl hover:border-primary/30 transition-all h-full flex flex-col"
+                                className="bg-card border border-border rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:shadow-xl hover:border-primary/30 transition-all h-full flex flex-col"
                             >
                                 {/* Step Number */}
-                                <div className="flex items-center justify-start mb-6">
-                                    <div className="w-16 h-16 rounded-full bg-background border-2 border-primary flex items-center justify-center text-lg text-primary shadow-lg">
+                                <div className="flex items-center justify-start mb-4 sm:mb-6">
+                                    <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-background border-2 border-primary flex items-center justify-center text-base sm:text-lg text-primary shadow-lg">
                                         {index + 1}
                                     </div>
                                 </div>
 
                                 {/* Content */}
                                 <div className="flex-1">
-                                    <div className="flex items-center gap-2 mb-3">
-                                        <Clock className="w-4 h-4 text-text-muted" />
-                                        <span className="text-xs text-text-muted uppercase tracking-wider">
+                                    <div className="flex items-center gap-2 mb-2 sm:mb-3">
+                                        <Clock className="w-3 h-3 sm:w-4 sm:h-4 text-text-muted" />
+                                        <span className="text-[10px] sm:text-xs text-text-muted uppercase tracking-wider">
                                             {step.time}
                                         </span>
                                     </div>
-                                    <h3 className="text-xl text-primary mb-3">{step.title}</h3>
-                                    <p className="text-secondary leading-relaxed mb-6">{step.description}</p>
+                                    <h3 className="text-lg sm:text-xl text-primary mb-2 sm:mb-3">{step.title}</h3>
+                                    <p className="text-sm sm:text-base text-secondary leading-relaxed mb-4 sm:mb-6">{step.description}</p>
 
                                     {/* Sample Output */}
-                                    <div className="bg-muted border border-border rounded-xl p-4 mb-6">
-                                        <div className="text-xs text-text-muted mb-2 uppercase tracking-wider">
+                                    <div className="bg-muted border border-border rounded-lg sm:rounded-xl p-3 sm:p-4 mb-4 sm:mb-6">
+                                        <div className="text-[10px] sm:text-xs text-text-muted mb-1 sm:mb-2 uppercase tracking-wider">
                                             Output
                                         </div>
                                         <div className="flex items-center gap-2">
-                                            <CheckCircle2 className="w-4 h-4 text-primary" />
-                                            <span className="text-sm text-primary">{step.output}</span>
+                                            <CheckCircle2 className="w-3 h-3 sm:w-4 sm:h-4 text-primary flex-shrink-0" />
+                                            <span className="text-xs sm:text-sm text-primary">{step.output}</span>
                                         </div>
-                                        <div className="mt-2 text-xs text-text-muted font-mono bg-background px-3 py-2 rounded border border-border">
+                                        <div className="mt-2 text-[10px] sm:text-xs text-text-muted font-mono bg-background px-2 sm:px-3 py-1.5 sm:py-2 rounded border border-border break-all">
                                             {step.sample}
                                         </div>
                                     </div>
@@ -147,14 +147,14 @@ export function HowItWorksSection() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     transition={{ duration: 0.6, delay: 0.8 }}
-                    className="mt-16 text-center"
+                    className="mt-8 sm:mt-12 md:mt-16 text-center"
                 >
                     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                         <Link
                             href="/live-demo"
-                            className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-xl hover:opacity-90 transition-all shadow-lg hover:shadow-xl"
+                            className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-primary text-primary-foreground rounded-xl hover:opacity-90 transition-all shadow-lg hover:shadow-xl text-sm sm:text-base"
                         >
-                            <Play className="w-5 h-5" />
+                            <Play className="w-4 h-4 sm:w-5 sm:h-5" />
                             Watch Full Demo
                         </Link>
                     </motion.div>
