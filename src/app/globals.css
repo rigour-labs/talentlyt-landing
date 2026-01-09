@@ -109,3 +109,17 @@ h6 {
 .animate-scroll:hover {
   animation-play-state: paused;
 }
+
+@keyframes shimmer {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.animate-text-shimmer {
+  animation: shimmer 8s linear infinite;
+}

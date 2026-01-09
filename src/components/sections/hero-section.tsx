@@ -12,7 +12,8 @@ export function HeroSection() {
                 <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
 
                     {/* Removed text-balance and tweaked colors for better contrast */}
-                    <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-[1.1] tracking-tight text-gray-900 dark:text-white opacity-100 transform-none">
+                    {/* Gold shimmer effect */}
+                    <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-[1.1] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-amber-500 to-gray-900 dark:from-white dark:via-amber-300 dark:to-white animate-text-shimmer bg-[length:200%_auto] opacity-100 transform-none">
                         The standard for <br /> <span className="text-gray-500 dark:text-gray-400">engineering hiring</span>
                     </h1>
                     <p className="text-lg md:text-xl text-secondary mb-10 leading-relaxed max-w-2xl">

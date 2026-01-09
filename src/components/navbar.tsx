@@ -2,12 +2,11 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { useTheme } from 'next-themes';
+
 
 
 export function Navbar() {
     const [isScrolled, setIsScrolled] = React.useState(false);
-    const { theme, setTheme } = useTheme();
     const [mounted, setMounted] = React.useState(false);
 
     React.useEffect(() => {
@@ -35,17 +34,6 @@ export function Navbar() {
                         </span>
                     </Link>
                     <div className="flex items-center gap-4 md:gap-6">
-                        <button
-                            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                            className="p-2 rounded-lg text-secondary hover:text-primary transition-colors hover:bg-gray-100 dark:hover:bg-white/10"
-                            aria-label="Toggle theme"
-                        >
-                            {theme === 'dark' ? (
-                                <div className="w-5 h-5"><div className="w-5 h-5 rounded-full border-2 border-current" /></div>
-                            ) : (
-                                <div className="w-5 h-5 bg-current rounded-full" />
-                            )}
-                        </button>
                         <Link href="/login" className="text-sm font-medium text-secondary hover:text-primary transition-colors hidden sm:block">
                             Sign In
                         </Link>
