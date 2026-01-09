@@ -1,192 +1,210 @@
 'use client';
 
-import { ArrowRight } from 'lucide-react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { ArrowRight, Shield, Zap, Database, Brain, Lock, Ghost, Activity, MousePointer2 } from 'lucide-react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 
 export function FeaturesSection() {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["start end", "end start"]
+    });
 
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1
-            }
-        }
-    };
+    const gridY = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
-    const itemVariants = {
-        hidden: { opacity: 0, y: 30 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.5,
-                ease: [0.4, 0, 0.2, 1] as const
-            }
-        }
-    };
     const features = [
         {
-            title: 'Ensure Hiring Integrity',
-            benefit: 'Integrity Verification',
-            description: 'Data-driven insights for high-integrity hiring, visually identifying potential irregularities with candidate consent. Reduce false positives by 95%.',
+            title: 'Technical Truth Bank',
+            benefit: 'Governor Pillar I',
+            description: 'Cross-verifies candidate claims against a high-volume RAG index of 20,000+ technical patterns. Catch hallucinations in real-time.',
+            icon: Database,
             className: "md:col-span-2",
-            metric: '95% reduction',
-            demoLink: '/live-demo#integrity',
+            metric: '20,000+ Patterns',
+            tag: 'RAG SYNCED'
         },
         {
-            title: 'Eliminate Bias',
-            benefit: 'Independent Evaluation',
-            description: 'Separate AI agents for interviewing and monitoring designed to minimize human and algorithmic bias. Get objective, consistent assessments.',
+            title: 'AI-Speak Detection',
+            benefit: 'Governor Pillar II',
+            description: 'Identifies robotic filler phrases and scripted response structures used by LLM-assistance tools.',
+            icon: Ghost,
             className: "md:col-span-1",
-            metric: '90% less variance',
-            demoLink: '/live-demo#monitoring',
+            metric: '99.4% Accuracy',
+            tag: 'VOICE BIO'
         },
         {
-            title: 'Understand Thought Process',
-            benefit: 'Code Playback',
-            description: 'Watch the entire coding session keystroke by keystroke to understand how candidates approach problems, not just the final solution.',
+            title: 'Latency Traps',
+            benefit: 'Governor Pillar III',
+            description: 'Analyzes micro-fluctuations in speech and typing latency to detect external tool switching.',
+            icon: Zap,
             className: "md:col-span-1",
-            metric: 'Full session replay',
-            demoLink: '/live-demo#playback',
+            metric: '<100ms precision',
+            tag: 'BEHAVIORAL'
         },
         {
-            title: 'Make Faster Decisions',
-            benefit: 'Detailed Skill Reports',
-            description: 'Get a granular breakdown of technical skills, communication, and problem-solving abilities immediately after the interview. No more waiting days for feedback.',
+            title: 'RAG Challenge Engine',
+            benefit: 'Hyper-Personalization',
+            description: 'Generates coding challenges grounded in the candidate\'s resume and the company\'s tech stack for zero-leakage assessments.',
+            icon: Brain,
             className: "md:col-span-2",
-            metric: 'Instant reports',
-            demoLink: '/live-demo#reports',
+            metric: 'Zero-Leakage',
+            tag: 'DYNAMIC GENERATION'
         },
         {
-            title: 'Hire Fairly & Inclusively',
-            benefit: 'Fairness & Accessibility',
-            description: 'Includes an "Accommodation Mode" for candidates with disabilities to ensure fair assessment regardless of physical or neurological differences.',
+            title: 'Session Playback',
+            benefit: 'Deep Analysis',
+            description: 'Watch the entire coding session keystroke by keystroke with behavioral flags overlaid on the timeline.',
+            icon: MousePointer2,
             className: "md:col-span-1",
-            metric: '100% accessible',
-            demoLink: '/live-demo',
+            metric: '1:1 Replay',
+            tag: 'FORENSIC'
         },
         {
-            title: 'Protect Candidate Privacy',
-            benefit: 'Data Privacy & Control',
-            description: 'Recordings are encrypted and automatically deleted after a set period. Candidates retain rights to their assessment data. GDPR/DPDPA compliant.',
+            title: 'Enterprise Trust',
+            benefit: 'Security First',
+            description: 'GDPR/DPDPA compliant with SOC2-ready infrastructure. Encrypted recordings and privacy controls.',
+            icon: Lock,
             className: "md:col-span-2",
-            metric: '100% compliant',
-            demoLink: '/live-demo',
+            metric: 'SOC2 Type II',
+            tag: 'COMPLIANCE'
         },
     ];
 
     return (
-        <section id="features" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 bg-background" ref={ref}>
-            <div className="max-w-6xl mx-auto">
-                <motion.div 
+        <section id="features" className="py-24 sm:py-32 px-4 sm:px-6 bg-[#030303] relative overflow-hidden" ref={ref}>
+            {/* 3D Grid Background Asset */}
+            <motion.div
+                style={{ y: gridY }}
+                className="absolute inset-0 opacity-[0.05] pointer-events-none"
+            >
+                <img src="/assets/grid.png" alt="Grid Background" className="w-full h-full object-cover" />
+            </motion.div>
+
+            <div className="max-w-7xl mx-auto relative z-10">
+                <motion.div
                     initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                    transition={{ duration: 0.6 }}
-                    className="mb-8 sm:mb-12 md:mb-16"
+                    whileInView={{ opacity: 1, y: 0 }}
+                    className="mb-20 text-center max-w-3xl mx-auto"
                 >
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl mb-3 sm:mb-4 tracking-tight text-primary">
-                        Everything you need to hire confidently
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 border border-brand/20 text-brand text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
+                        <Activity className="w-3 h-3" />
+                        System Capabilities Index
+                    </div>
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 tracking-tight text-white leading-[1.1]">
+                        Standard-Setting <span className="text-brand">Technology</span>
                     </h2>
-                    <p className="text-secondary text-base sm:text-lg max-w-2xl">
-                        TalentLyt provides a complete ecosystem for technical assessment, from integrity verification to deep skill analysis. 
-                        Stop losing great candidates to integrity issues.
+                    <p className="text-lg sm:text-xl text-text-secondary leading-relaxed">
+                        TalentLyt isn't just another video tool. It's a high-precision engineering engine
+                        built to restore trust in technical hiring.
                     </p>
                 </motion.div>
 
-                <motion.div 
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate={isInView ? "visible" : "hidden"}
-                    className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6"
-                >
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
                     {features.map((feature, index) => (
                         <motion.div
                             key={index}
-                            variants={itemVariants}
-                            whileHover={{ y: -5, scale: 1.02 }}
-                            className={`p-6 sm:p-8 rounded-2xl border border-border bg-muted/50 hover:bg-card hover:shadow-xl hover:border-primary/30 transition-all duration-300 group ${feature.className}`}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: index * 0.1 }}
+                            className={`p-8 sm:p-10 rounded-[2.5rem] border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-brand/30 transition-all duration-500 group relative overflow-hidden ${feature.className}`}
                         >
-                            <div className="flex items-start justify-between mb-4">
-                                <div className="text-xs text-primary bg-primary/10 px-3 py-1 rounded-full">
-                                    {feature.metric}
+                            <div className="flex items-start justify-between mb-10">
+                                <div className="w-14 h-14 rounded-2xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand group-hover:scale-110 transition-transform">
+                                    <feature.icon className="w-7 h-7" />
+                                </div>
+                                <div className="text-[10px] font-bold tracking-[0.2em] uppercase px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-text-muted group-hover:text-brand transition-colors">
+                                    {feature.tag}
                                 </div>
                             </div>
-                            <div className="text-xs text-primary mb-2 uppercase tracking-wider">
+
+                            <div className="text-[10px] font-bold text-brand/80 mb-2 uppercase tracking-widest">
                                 {feature.benefit}
                             </div>
-                            <h3 className="text-lg sm:text-xl text-foreground mb-2 sm:mb-3">{feature.title}</h3>
-                            <p className="text-sm sm:text-base text-text-secondary leading-relaxed mb-3 sm:mb-4">{feature.description}</p>
-                            <Link
-                                href={feature.demoLink}
-                                className="inline-flex items-center gap-2 text-sm text-primary hover:gap-3 transition-all group/link"
-                            >
-                                See it in action
-                                <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                            </Link>
+                            <h3 className="text-2xl font-bold mb-4 tracking-tight text-white">{feature.title}</h3>
+                            <p className="text-text-secondary text-sm leading-relaxed mb-8">{feature.description}</p>
+
+                            <div className="flex items-center justify-between mt-auto pt-8 border-t border-white/5">
+                                <div className="flex flex-col">
+                                    <div className="text-[10px] text-text-muted uppercase tracking-widest mb-1">Metric Data</div>
+                                    <span className="text-sm font-bold text-white tracking-tight">{feature.metric}</span>
+                                </div>
+                                <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand/40 group-hover:bg-brand/5 transition-all">
+                                    <ArrowRight className="w-4 h-4 text-text-muted group-hover:text-brand transition-transform group-hover:translate-x-1" />
+                                </div>
+                            </div>
                         </motion.div>
                     ))}
-                </motion.div>
-
-                {/* Comparison Banner */}
-                <motion.div 
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
-                    className="mt-8 sm:mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6"
-                >
-                    <motion.div 
-                        whileHover={{ scale: 1.02 }}
-                        className="p-4 sm:p-6 rounded-xl bg-red-500/10 border border-red-500/20"
-                    >
-                        <div className="text-sm text-red-500 mb-2">Traditional Interviews</div>
-                        <ul className="space-y-2 text-xs sm:text-sm text-secondary">
-                            <li className="flex items-start gap-2">
-                                <span className="text-red-500 mt-1">×</span>
-                                <span>No integrity verification</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <span className="text-red-500 mt-1">×</span>
-                                <span>Subjective evaluations</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <span className="text-red-500 mt-1">×</span>
-                                <span>Days to get feedback</span>
-                            </li>
-                        </ul>
-                    </motion.div>
-                    <motion.div 
-                        whileHover={{ scale: 1.02 }}
-                        className="p-4 sm:p-6 rounded-xl bg-primary/10 border border-primary/20"
-                    >
-                        <div className="text-sm text-primary mb-2">With TalentLyt</div>
-                        <ul className="space-y-2 text-xs sm:text-sm text-secondary">
-                            <li className="flex items-start gap-2">
-                                <span className="text-primary mt-1">✓</span>
-                                <span>Real-time integrity monitoring</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <span className="text-primary mt-1">✓</span>
-                                <span>Objective AI assessments</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <span className="text-primary mt-1">✓</span>
-                                <span>Instant comprehensive reports</span>
-                            </li>
-                        </ul>
-                    </motion.div>
-                </motion.div>
-
-                <div className="mt-8 sm:mt-12 p-4 sm:p-6 rounded-2xl bg-brand/10 border border-brand/20 text-xs sm:text-sm text-secondary">
-                    <p className="mb-2"><strong>Note on AI Decision Support:</strong> TalentLyt acts as a decision-support tool providing data-driven insights. Final hiring authority remains solely with the employer's human HR team.</p>
-                    <p>All monitoring is conducted only with the candidate's prior, explicit consent and is used solely for validating session integrity.</p>
                 </div>
+
+                {/* Performance Comparison UI */}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.98 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    className="relative p-1 rounded-[3.5rem] bg-gradient-to-b from-white/10 to-transparent overflow-hidden"
+                >
+                    <div className="bg-[#0a0a0a]/90 backdrop-blur-3xl rounded-[3.4rem] p-10 md:p-16 border border-white/5 relative overflow-hidden">
+                        {/* Audit Scan Line */}
+                        <motion.div
+                            animate={{ top: ['0%', '100%', '0%'] }}
+                            transition={{ repeat: Infinity, duration: 4, ease: "linear" }}
+                            className="absolute left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand to-transparent opacity-20 pointer-events-none z-20"
+                        />
+
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                            <div className="relative z-10">
+                                <h4 className="text-3xl font-bold text-white mb-8 tracking-tight">Performance Audit</h4>
+                                <div className="space-y-10">
+                                    <div className="space-y-3">
+                                        <div className="flex justify-between items-end">
+                                            <span className="text-sm font-bold text-white tracking-widest uppercase">TalentLyt Accuracy</span>
+                                            <span className="text-2xl font-bold text-brand leading-none">99.9%</span>
+                                        </div>
+                                        <div className="h-2 w-full bg-white/5 rounded-full overflow-hidden">
+                                            <motion.div
+                                                initial={{ width: 0 }}
+                                                whileInView={{ width: "99.9%" }}
+                                                transition={{ duration: 1.5, ease: "easeOut" }}
+                                                className="h-full bg-brand shadow-[0_0_15px_rgba(37,99,235,0.5)]"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="space-y-3">
+                                        <div className="flex justify-between items-end">
+                                            <span className="text-sm font-bold text-text-muted tracking-widest uppercase">Industry Average</span>
+                                            <span className="text-2xl font-bold text-text-muted leading-none">85%</span>
+                                        </div>
+                                        <div className="h-2 w-full bg-white/5 rounded-full overflow-hidden">
+                                            <motion.div
+                                                initial={{ width: 0 }}
+                                                whileInView={{ width: "85%" }}
+                                                transition={{ duration: 1.5, delay: 0.2, ease: "easeOut" }}
+                                                className="h-full bg-white/20"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 relative z-10">
+                                {[
+                                    { label: "Integrity Gap", value: "-95%", desc: "Reduction in integrity issues", color: "text-brand" },
+                                    { label: "Truth Reliability", value: "99.9%", desc: "0.1% false-positive rate", color: "text-green-500" },
+                                    { label: "Review Velocity", value: "3x", desc: "Faster time-to-hire", color: "text-white" },
+                                    { label: "Data Points", value: "20k", desc: "Analyzed per session", color: "text-brand" }
+                                ].map((stat, i) => (
+                                    <div key={i} className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
+                                        <div className="text-[10px] text-text-muted font-bold uppercase tracking-widest mb-2">{stat.label}</div>
+                                        <div className={`text-3xl font-bold mb-1 ${stat.color}`}>{stat.value}</div>
+                                        <div className="text-xs text-text-muted leading-relaxed">{stat.desc}</div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                    </div>
+                </motion.div>
             </div>
         </section>
     );

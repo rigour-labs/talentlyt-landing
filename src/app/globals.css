@@ -1,107 +1,67 @@
-@import "tailwindcss";
-@variant dark (&:where(.dark, .dark *));
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
-  --foreground: #0a0a0a;
-  --primary: #111111;
-  --primary-foreground: #ffffff;
-  --secondary: #666666;
+  --foreground: #020617;
+  --primary: #0f172a;
+  --primary-foreground: #f8fafc;
+  --secondary: #64748b;
   --secondary-foreground: #ffffff;
-  --accent: #000000;
+  --accent: #4f46e5;
   --accent-foreground: #ffffff;
-  --border: #e5e5e5;
+  --border: #e2e8f0;
   --card: #ffffff;
-  --card-foreground: #0a0a0a;
-  /* Brand colors */
-  --brand: #2563eb;
+  --card-foreground: #020617;
+  --brand: #6366f1;
   --brand-foreground: #ffffff;
-  --brand-hover: #1d4ed8;
-  /* Muted colors for backgrounds and borders */
-  --muted: #f5f5f5;
-  --muted-foreground: #666666;
-  --muted-border: #e5e5e5;
-  /* Accent colors for highlights */
-  --accent-highlight: #f59e0b;
-  --accent-highlight-foreground: #ffffff;
-  /* Text colors */
-  --text-primary: #0a0a0a;
-  --text-secondary: #666666;
-  --text-muted: #999999;
+  --brand-hover: #4f46e5;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --muted-border: #e2e8f0;
+  --highlight: #38bdf8;
+  --highlight-foreground: #ffffff;
+  --warning: #f59e0b;
+  --danger: #fb7185;
+  --text-primary: #020617;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
   --text-inverse: #ffffff;
 }
 
 .dark {
-  --background: #000000;
-  --foreground: #ffffff;
-  --primary: #ffffff;
-  --primary-foreground: #000000;
-  --secondary: #a3a3a3;
-  --secondary-foreground: #ffffff;
-  --accent: #ffffff;
-  --accent-foreground: #000000;
-  --border: #333333;
-  --card: #121212;
-  --card-foreground: #ffffff;
-  /* Brand colors */
-  --brand: #3b82f6;
-  --brand-foreground: #000000;
-  --brand-hover: #60a5fa;
-  /* Muted colors for backgrounds and borders */
-  --muted: #1a1a1a;
-  --muted-foreground: #a3a3a3;
-  --muted-border: #333333;
-  /* Accent colors for highlights */
-  --accent-highlight: #fbbf24;
-  --accent-highlight-foreground: #000000;
-  /* Text colors */
-  --text-primary: #ffffff;
-  --text-secondary: #a3a3a3;
-  --text-muted: #666666;
-  --text-inverse: #0a0a0a;
-}
-
-@theme {
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-
-  --color-border: var(--border);
-  
-  --color-brand: var(--brand);
-  --color-brand-foreground: var(--brand-foreground);
-  --color-brand-hover: var(--brand-hover);
-  
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-muted-border: var(--muted-border);
-  
-  --color-accent-highlight: var(--accent-highlight);
-  --color-accent-highlight-foreground: var(--accent-highlight-foreground);
-  
-  --color-text-primary: var(--text-primary);
-  --color-text-secondary: var(--text-secondary);
-  --color-text-muted: var(--text-muted);
-  --color-text-inverse: var(--text-inverse);
+  --background: #020617;
+  --foreground: #f8fafc;
+  --primary: #f8fafc;
+  --primary-foreground: #020617;
+  --secondary: #94a3b8;
+  --secondary-foreground: #f8fafc;
+  --accent: #818cf8;
+  --accent-foreground: #020617;
+  --border: #1e293b;
+  --card: #0f172a;
+  --card-foreground: #f8fafc;
+  --brand: #6366f1;
+  --brand-foreground: #ffffff;
+  --brand-hover: #818cf8;
+  --muted: #0f172a;
+  --muted-foreground: #cbd5e1;
+  --muted-border: #1e293b;
+  --highlight: #22d3ee;
+  --highlight-foreground: #020617;
+  --warning: #f59e0b;
+  --danger: #fb7185;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #64748b;
+  --text-inverse: #020617;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -109,34 +69,28 @@ body {
   letter-spacing: -0.01em;
 }
 
-/* Custom Utilities */
-/* Custom Utilities */
 .glass {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
 }
 
 .dark .glass {
-  background: rgba(0, 0, 0, 0.7);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
 }
 
-.text-balance {
-  text-wrap: balance;
-}
-
-/* Enhancements */
-::selection {
-  background: var(--primary);
-  color: var(--background);
-}
-
-h6 {
-  font-weight: 600;
-  letter-spacing: -0.025em;
-  color: var(--primary);
+.technical-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
 @keyframes scroll {
@@ -156,61 +110,4 @@ h6 {
 
 .animate-scroll:hover {
   animation-play-state: paused;
-}
-
-@keyframes shimmer {
-  from {
-    background-position: 0 0;
-  }
-
-  to {
-    background-position: -200% 0;
-  }
-}
-
-.animate-text-shimmer {
-  animation: shimmer 8s linear infinite;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out;
-}
-
-.animate-fade-in {
-  animation: fadeIn 0.6s ease-out;
-}
-
-.animate-scale-in {
-  animation: scaleIn 0.6s ease-out;
 }

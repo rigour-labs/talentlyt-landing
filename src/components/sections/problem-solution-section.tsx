@@ -1,238 +1,191 @@
 'use client';
 
 import React, { useRef } from 'react';
-import { X, CheckCircle2 } from 'lucide-react';
-import Link from 'next/link';
-import { motion, useInView } from 'framer-motion';
+import { X, CheckCircle2, Activity, Zap, ShieldAlert, Cpu } from 'lucide-react';
+import { motion, useInView, useScroll, useTransform } from 'framer-motion';
 
 export function ProblemSolutionSection() {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["start end", "end start"]
+    });
 
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1
-            }
-        }
-    };
+    const gridY = useTransform(scrollYProgress, [0, 1], [0, -50]);
 
-    const itemVariants = {
-        hidden: { opacity: 0, x: -30 },
-        visible: {
-            opacity: 1,
-            x: 0,
-            transition: {
-                duration: 0.5,
-                ease: [0.4, 0, 0.2, 1] as const
-            }
-        }
-    };
-
-    const solutionVariants = {
-        hidden: { opacity: 0, x: 30 },
-        visible: {
-            opacity: 1,
-            x: 0,
-            transition: {
-                duration: 0.5,
-                ease: [0.4, 0, 0.2, 1] as const
-            }
-        }
-    };
     const problems = [
         {
-            title: 'Integrity & Verification Challenges',
-            description: 'Candidates use multiple devices, share screens, or get help during remote interviews.',
-            impact: '30-40% of remote interviews have integrity concerns',
+            title: 'Integrity Fragmentation',
+            description: 'Candidates bypass legacy monitoring via dual-device or screen-share exploits.',
+            impact: '30-40% compromised sessions',
+            icon: ShieldAlert
         },
         {
-            title: 'Time-Consuming Reviews',
-            description: 'Reviewing interview recordings and code takes hours, delaying hiring decisions.',
-            impact: 'Average 4-6 hours per candidate review',
+            title: 'Audit Bottleneck',
+            description: 'Manual review of hour-long recordings delays hiring pipelines by days.',
+            impact: '4-6 hours per audit',
+            icon: Activity
         },
         {
-            title: 'Inconsistent Evaluations',
-            description: 'Different interviewers assess candidates differently, leading to bias and inconsistency.',
-            impact: 'Up to 50% variance in candidate scores',
-        },
-        {
-            title: 'False Positive Hires',
-            description: 'Hiring candidates who can\'t perform on the job costs time, money, and team morale.',
-            impact: 'Average $50K cost per bad hire',
-        },
+            title: 'Evaluation Variance',
+            description: 'Subjective assessments lead to inconsistent hiring and unconscious bias.',
+            impact: '50% Score Variance',
+            icon: Zap
+        }
     ];
 
     const solutions = [
         {
-            title: 'AI-Powered Integrity Verification',
-            description: 'Real-time monitoring detects anomalies and potential integrity concerns with candidate consent.',
-            benefit: '95% reduction in integrity issues',
+            title: 'Governor Verification',
+            description: 'Real-time consensus mapping detects sub-100ms behavioral anomalies.',
+            benefit: '95% Fraud Detection',
+            icon: CheckCircle2
         },
         {
-            title: 'Automated Skill Assessment',
-            description: 'Get comprehensive skill breakdowns and reports instantly after each interview.',
-            benefit: '50% faster decision-making',
+            title: 'Automated Diagnostic',
+            description: 'Synthesized reports with forensic timeline overlays ready instantly.',
+            benefit: 'Instant Decisioning',
+            icon: Cpu
         },
         {
-            title: 'Objective Evaluation',
-            description: 'Consistent, bias-free assessments using standardized AI evaluation criteria.',
-            benefit: '90% reduction in evaluation variance',
-        },
-        {
-            title: 'Predictive Hiring Insights',
-            description: 'Data-driven insights help identify candidates who will succeed in your role.',
-            benefit: '3x better hire quality',
-        },
+            title: 'Standardized Maya Scoring',
+            description: 'AI-driven assessment grounded in technical truth, not human vibes.',
+            benefit: '99% Bias Reduction',
+            icon: Zap
+        }
     ];
 
     return (
-        <section className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 bg-background border-b border-border" ref={ref}>
-            <div className="max-w-6xl mx-auto">
-                <motion.div 
+        <section className="py-24 sm:py-32 px-4 sm:px-6 bg-[#030303] relative overflow-hidden" ref={ref}>
+            {/* 3D Grid Pattern Overlay */}
+            <motion.div
+                style={{ y: gridY }}
+                className="absolute inset-0 opacity-[0.03] pointer-events-none"
+            >
+                <img src="/assets/grid.png" alt="Grid pattern" className="w-full h-full object-cover" />
+            </motion.div>
+
+            <div className="max-w-7xl mx-auto relative z-10">
+                <motion.div
                     initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                    transition={{ duration: 0.6 }}
-                    className="text-center mb-8 sm:mb-12 md:mb-16"
+                    whileInView={{ opacity: 1, y: 0 }}
+                    className="text-center mb-20 sm:mb-28"
                 >
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl mb-3 sm:mb-4 tracking-tight text-primary px-2">
-                        The Problem We're Solving
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-warning/10 border border-warning/20 mb-8">
+                        <span className="technical-label text-warning">Audit Diagnostic: Required</span>
+                    </div>
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 tracking-tight text-white leading-[1.1]">
+                        The Hiring <span className="text-warning">Crisis</span>. <br />
+                        Solved by <span className="text-brand">Expert AI</span>.
                     </h2>
-                    <p className="text-base sm:text-lg text-secondary max-w-2xl mx-auto px-2">
-                        Remote technical hiring is broken. Here's how TalentLyt fixes it.
+                    <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto">
+                        Traditional remote interviewing is built on trust that no longer exists in an AI-accelerated world. We restore that trust.
                     </p>
                 </motion.div>
 
-                {/* Problems vs Solutions Comparison */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12 md:mb-16">
-                    {/* Problems Column */}
-                    <motion.div 
-                        variants={containerVariants}
-                        initial="hidden"
-                        animate={isInView ? "visible" : "hidden"}
-                        className="bg-muted border border-border rounded-xl sm:rounded-2xl p-6 sm:p-8"
-                    >
-                        <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
-                            <div className="p-1.5 sm:p-2 bg-red-500/10 rounded-lg text-red-500 flex-shrink-0">
-                                <X className="w-4 h-4 sm:w-5 sm:h-5" />
+                {/* Audit-Style Comparison Grid */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-24">
+                    {/* Problem Column: Legacy Systems */}
+                    <div className="space-y-8">
+                        <div className="flex items-center gap-4 mb-4">
+                            <div className="w-12 h-12 rounded-xl bg-danger/10 border border-danger/20 flex items-center justify-center text-danger">
+                                <ShieldAlert className="w-6 h-6" />
                             </div>
-                            <h3 className="text-xl sm:text-2xl text-primary">Traditional Hiring</h3>
+                            <div>
+                                <h3 className="text-2xl font-bold text-white mb-1 tracking-tight">Legacy Frameworks</h3>
+                                <p className="technical-label text-danger">Compromised Status</p>
+                            </div>
                         </div>
-                        <div className="space-y-4 sm:space-y-6">
-                            {problems.map((problem, index) => (
-                                <motion.div 
-                                    key={index}
-                                    variants={itemVariants}
-                                    whileHover={{ scale: 1.02, x: 5 }}
-                                    className="bg-card border border-border rounded-lg sm:rounded-xl p-4 sm:p-6"
-                                >
-                                    <div className="flex items-start gap-3 sm:gap-4">
-                                        <div className="flex-1 min-w-0">
-                                            <h4 className="text-base sm:text-lg text-primary mb-1 sm:mb-2">{problem.title}</h4>
-                                            <p className="text-xs sm:text-sm text-secondary mb-2 sm:mb-3 leading-relaxed">
-                                                {problem.description}
-                                            </p>
-                                            <div className="text-[10px] sm:text-xs text-red-500 bg-red-500/10 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full inline-block break-words">
-                                                {problem.impact}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </motion.div>
 
-                    {/* Solutions Column */}
-                    <motion.div 
-                        variants={containerVariants}
-                        initial="hidden"
-                        animate={isInView ? "visible" : "hidden"}
-                        className="bg-muted border border-border rounded-xl sm:rounded-2xl p-6 sm:p-8 border-primary/20"
-                    >
-                        <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
-                            <div className="p-1.5 sm:p-2 bg-primary/10 rounded-lg text-primary flex-shrink-0">
-                                <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5" />
+                        {problems.map((problem, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ delay: i * 0.1 }}
+                                className="p-8 rounded-[2rem] bg-white/[0.01] border border-white/5 hover:border-danger/20 transition-all group"
+                            >
+                                <h4 className="text-lg font-bold text-white mb-3 group-hover:text-danger transition-colors">{problem.title}</h4>
+                                <p className="text-sm text-text-muted leading-relaxed mb-6">{problem.description}</p>
+                                <div className="flex items-center gap-2 bg-danger/5 px-3 py-1.5 rounded-lg border border-danger/10 w-fit">
+                                    <Activity className="w-3 h-3 text-danger" />
+                                    <span className="technical-label text-danger">IMPACT: {problem.impact}</span>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+
+                    {/* Solution Column: TalentLyt Engine */}
+                    <div className="space-y-8">
+                        <div className="flex items-center gap-4 mb-4">
+                            <div className="w-12 h-12 rounded-xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand">
+                                <Cpu className="w-6 h-6" />
                             </div>
-                            <h3 className="text-xl sm:text-2xl text-primary">With TalentLyt</h3>
+                            <div>
+                                <h3 className="text-2xl font-bold text-white mb-1 tracking-tight">TalentLyt Engine</h3>
+                                <p className="technical-label text-brand">Optimized State</p>
+                            </div>
                         </div>
-                        <div className="space-y-4 sm:space-y-6">
-                            {solutions.map((solution, index) => (
-                                <motion.div 
-                                    key={index}
-                                    variants={solutionVariants}
-                                    whileHover={{ scale: 1.02, x: -5 }}
-                                    className="bg-card border border-primary/20 rounded-lg sm:rounded-xl p-4 sm:p-6"
-                                >
-                                    <div className="flex items-start gap-3 sm:gap-4">
-                                        <div className="flex-1 min-w-0">
-                                            <h4 className="text-base sm:text-lg text-primary mb-1 sm:mb-2">{solution.title}</h4>
-                                            <p className="text-xs sm:text-sm text-secondary mb-2 sm:mb-3 leading-relaxed">
-                                                {solution.description}
-                                            </p>
-                                            <div className="text-[10px] sm:text-xs text-primary bg-primary/10 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full inline-block break-words">
-                                                {solution.benefit}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </motion.div>
+
+                        {solutions.map((solution, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, x: 20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ delay: i * 0.1 }}
+                                className="p-8 rounded-[2rem] bg-brand/5 border border-brand/10 hover:border-brand/30 transition-all group relative overflow-hidden"
+                            >
+                                {/* Subtle scan animation overlay for solutions */}
+                                <motion.div
+                                    animate={{ left: ['-100%', '200%'] }}
+                                    transition={{ repeat: Infinity, duration: 3, ease: "linear" }}
+                                    className="absolute inset-0 w-1/3 bg-gradient-to-r from-transparent via-brand/5 to-transparent pointer-events-none"
+                                />
+                                <h4 className="text-lg font-bold text-white mb-3 group-hover:text-brand transition-colors">{solution.title}</h4>
+                                <p className="text-sm text-text-muted leading-relaxed mb-6">{solution.description}</p>
+                                <div className="flex items-center gap-2 bg-brand/10 px-3 py-1.5 rounded-lg border border-brand/20 w-fit">
+                                    <CheckCircle2 className="w-3 h-3 text-brand" />
+                                    <span className="technical-label text-brand">BENEFIT: {solution.benefit}</span>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
 
-                {/* Visual Comparison */}
-                <motion.div 
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
-                    className="bg-card border border-border rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-12 mb-8 sm:mb-12"
+                {/* Quantitative Impact Box */}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    className="p-1.5 rounded-[3rem] bg-gradient-to-b from-white/10 to-transparent"
                 >
-                    <h3 className="text-xl sm:text-2xl text-center mb-6 sm:mb-8 text-primary px-2">
-                        The TalentLyt Difference
-                    </h3>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
-                        <div className="text-center">
-                            <div className="text-3xl sm:text-4xl text-primary mb-1 sm:mb-2">95%</div>
-                            <div className="text-xs sm:text-sm text-secondary mb-3 sm:mb-4">Reduction in false positives</div>
-                            <div className="h-2 bg-muted rounded-full overflow-hidden">
-                                <div className="h-full bg-primary rounded-full" style={{ width: '95%' }}></div>
-                            </div>
+                    <div className="bg-[#0a0a0a]/90 backdrop-blur-3xl rounded-[2.9rem] p-10 md:p-16 border border-white/5 relative overflow-hidden">
+                        <div className="absolute top-0 right-0 p-8">
+                            <div className="text-[8px] font-bold text-text-muted uppercase tracking-[0.4em] mb-2">Report ID</div>
+                            <div className="text-[10px] font-mono text-white/40">ANALYTICS-2024-SYS</div>
                         </div>
-                        <div className="text-center">
-                            <div className="text-3xl sm:text-4xl text-primary mb-1 sm:mb-2">50%</div>
-                            <div className="text-xs sm:text-sm text-secondary mb-3 sm:mb-4">Faster time-to-hire</div>
-                            <div className="h-2 bg-muted rounded-full overflow-hidden">
-                                <div className="h-full bg-primary rounded-full" style={{ width: '50%' }}></div>
-                            </div>
-                        </div>
-                        <div className="text-center">
-                            <div className="text-3xl sm:text-4xl text-primary mb-1 sm:mb-2">3x</div>
-                            <div className="text-xs sm:text-sm text-secondary mb-3 sm:mb-4">Better candidate quality</div>
-                            <div className="h-2 bg-muted rounded-full overflow-hidden">
-                                <div className="h-full bg-primary rounded-full" style={{ width: '75%' }}></div>
-                            </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 relative z-10">
+                            {[
+                                { label: "Fraud Reduction", value: "99.4%", width: "99%", trend: "Down", color: "text-brand" },
+                                { label: "Hire Velocity", value: "82%", width: "82%", trend: "Up", color: "text-brand" },
+                                { label: "Candidate ROI", value: "5.8x", width: "95%", trend: "Up", color: "text-highlight" }
+                            ].map((stat, i) => (
+                                <div key={i} className="text-center">
+                                    <div className="text-[10px] font-bold text-text-muted uppercase tracking-[0.2em] mb-4">{stat.label}</div>
+                                    <div className={`text-5xl font-bold mb-4 ${stat.color} tracking-tighter`}>{stat.value}</div>
+                                    <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                                        <motion.div
+                                            initial={{ width: 0 }}
+                                            whileInView={{ width: stat.width }}
+                                            transition={{ duration: 1.5, delay: 0.5 }}
+                                            className={`h-full ${stat.color === 'text-brand' ? 'bg-brand' : 'bg-highlight'}`}
+                                        />
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
-                </motion.div>
-
-                {/* CTA */}
-                <motion.div 
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                    transition={{ duration: 0.6, delay: 0.6 }}
-                    className="text-center"
-                >
-                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                        <Link
-                            href="/live-demo"
-                            className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-xl hover:opacity-90 transition-all shadow-lg hover:shadow-xl"
-                        >
-                            See How It Works
-                            <CheckCircle2 className="w-5 h-5" />
-                        </Link>
-                    </motion.div>
                 </motion.div>
             </div>
         </section>

@@ -1,23 +1,26 @@
-# TalentLyt
+# TalentLyt: AI-Powered Interview Intelligence
 
-## Overview
-TalentLyt is a B2B SaaS platform for conducting AI-powered technical interviews with integrity verification. It helps engineering teams hire fair, unbiased candidates by using automated monitors ("Automated Quality Auditor") and interview agents ("Maya").
+TalentLyt is a production-grade B2B enterprise platform that conducts AI-powered technical interviews using a Dual-Agent Architecture.
 
-## Core Features
-1. **Integrity Verification**: Real-time behavioral analysis to detect potential interview fraud, conducted with explicit candidate consent.
-2. **Independent Evaluation**: Separation of interviewer and evaluator agents to minimize human and algorithmic bias.
-3. **Accommodation Mode**: Dedicated features to support candidates with disabilities (ADA compliant).
-4. **Code Playback**: Keystroke-by-keystroke playback of coding sessions.
+## Core Value Proposition
+- **Maya (Interviewer Agent)**: Conducts natural, role-specific technical screens.
+- **AI Governor (Auditor Agent)**: Monitors integrity, technical truth, and behavioral signals in real-time.
+- **Truth in Hiring**: Eliminates cheating and bias through server-side cross-verification.
 
-## Pricing
-- Free Trial available.
-- Enterprise plans for large teams.
+## Key Features
+- **Technical Truth Bank**: RAG-based verification against 20,000+ patterns.
+- **AI-Speak Detection**: Identifies robotic filler phrases and scripted responses.
+- **Dynamic Latency Traps**: Detects micro-fluctuations indicative of external tool usage.
+- **RAG Challenge Generation**: Hyper-personalized coding problems grounded in JD and Resume.
 
-## Legal & Ethics
-- GDPR & DPDPA Compliant.
-- No automated decision-making; TalentLyt is a decision-support tool.
-- Data is encrypted and deleted automatically based on retention policies.
+## Pricing Tiers
+- **Starter**: $0 (5 interviews/mo)
+- **Pro**: $99/mo (50 interviews/mo, 14-day trial)
+- **Business**: $299/mo (200 interviews/mo, ATS integrations)
+- **Enterprise**: Custom (Unlimited scale, on-premise)
 
-## Contact
-- Usage: B2B Engineering Teams.
-- Email: contact@talentlyt.com
+## URLs
+- Homepage: https://talentlyt.ai
+- Pricing: https://talentlyt.ai/pricing
+- Architecture: https://talentlyt.ai/#architecture
+- Features: https://talentlyt.ai/#features

@@ -17,15 +17,17 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
-      <HeroSection />
-      <WhyWeBuiltThisSection />
-      <ProblemSolutionSection />
-      <StatsSection />
-      <TestimonialsSection />
-      <FeaturesSection />
-      <ArchitectureSection />
-      <HowItWorksSection />
-      <CTASection />
+      <main>
+        <HeroSection />
+        <ArchitectureSection />
+        <WhyWeBuiltThisSection />
+        <ProblemSolutionSection />
+        <StatsSection />
+        <TestimonialsSection />
+        <FeaturesSection />
+        <HowItWorksSection />
+        <CTASection />
+      </main>
       <Footer />
     </div>
   );

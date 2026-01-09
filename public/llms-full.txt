@@ -1,0 +1,38 @@
+# TalentLyt: Technical Specification and Product Manifesto
+
+## Product Vision
+TalentLyt aims to restore the integrity of engineering hiring in the age of LLM-assisted cheating. By deploying a Dual-Agent architecture, we separate the conversational experience from the technical validation layer.
+
+## Architecture: The Dual-Agent Command Center
+### Maya (The Interviewer)
+- Role: Real-time candidate interaction.
+- Capabilities: Adaptive logic, tone mirroring, dynamic follow-ups.
+- Tech Stack: Low-latency TTS, specialized LLM persona.
+
+### AI Governor (The Auditor)
+- Role: Silent session monitoring.
+- Capabilities: Behavioral gaze analysis, code pattern verification, speech latency tracking.
+- Consensus Engine: Maya and Governor work in tandem. Disagreements trigger manual human review.
+
+## Feature Deep Dive
+### Truth Banking
+A proprietary RAG index containing over 20,000 common and recursive technical patterns. If a candidate "hallucinates" a function or library that doesn't exist, the Governor flags it instantly.
+
+### Behavioral Integrity
+- **AI-Speak Detection**: Pattern matching for LLM-generated speech structures.
+- **Latency Traps**: Monitoring sub-100ms response deviations that suggest external tool usage.
+
+### RAG-Powered Challenge Generation
+No two candidates see the same problem. Challenges are generated on-the-fly based on:
+1. The specific Job Description requirements.
+2. The candidate's self-reported skills in their resume.
+3. Random technical "anchors" to prevent leakage to public databases.
+
+## Security & Compliance
+- **GDPR/DPDPA**: Full compliance with data residency and candidate right-to-be-forgotten.
+- **Data Encryption**: AES-256 at rest, TLS 1.3 in transit.
+- **Anonymization**: Support for fully anonymized technical rounds to eliminate human bias.
+
+## Business Model
+- **Hybrid Pricing**: Base monthly subscriptions (Starter, Pro, Business) combined with utility-based overages ($3-$5 per session).
+- **Enterprise**: SLA-guaranteed on-premise deployments and custom agent fine-tuning.

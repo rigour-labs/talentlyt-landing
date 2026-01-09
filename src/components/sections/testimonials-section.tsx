@@ -73,106 +73,123 @@ export function TestimonialsSection() {
     ];
 
     return (
-        <section id="testimonials" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 bg-background border-b border-border" ref={ref}>
-            <div className="max-w-6xl mx-auto">
-                <motion.div 
+        <section id="testimonials" className="py-24 sm:py-32 px-4 sm:px-6 bg-[#030303] relative overflow-hidden" ref={ref}>
+            {/* Background Accents */}
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand/5 blur-[120px] rounded-full -z-10" />
+            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand/5 blur-[120px] rounded-full -z-10" />
+
+            <div className="max-w-7xl mx-auto relative z-10">
+                <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                    transition={{ duration: 0.6 }}
-                    className="text-center mb-8 sm:mb-12 md:mb-16"
+                    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                    className="text-center mb-20 md:mb-24"
                 >
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl mb-3 sm:mb-4 tracking-tight text-primary px-2">
-                        Trusted by Engineering Leaders
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 border border-brand/20 text-brand text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
+                        Case Studies & Impact
+                    </div>
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 tracking-tight text-white leading-[1.1]">
+                        Trusted by <span className="text-brand">Engineering Leaders</span>
                     </h2>
-                    <p className="text-base sm:text-lg text-secondary max-w-2xl mx-auto px-2">
-                        See how companies are transforming their hiring with TalentLyt
+                    <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
+                        Join the elite engineering teams who have eliminated bad hires
+                        and restored trust in their technical interview process.
                     </p>
                 </motion.div>
 
                 {/* Testimonials Grid */}
-                <motion.div 
+                <motion.div
                     variants={containerVariants}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12 md:mb-16"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-24 md:mb-32"
                 >
                     {testimonials.map((testimonial, index) => (
                         <motion.div
                             key={index}
                             variants={itemVariants}
-                            whileHover={{ y: -5, scale: 1.02 }}
-                            className="bg-card border border-border rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:shadow-lg hover:border-muted-border transition-all group"
+                            whileHover={{ y: -8 }}
+                            className="relative group h-full"
                         >
-                            <div className="flex items-center gap-1 mb-4">
-                                {[...Array(5)].map((_, i) => (
-                                    <Star
-                                        key={i}
-                                        className="w-4 h-4 fill-accent-highlight text-accent-highlight"
-                                    />
-                                ))}
-                            </div>
-                            <Quote className="w-8 h-8 text-primary/20 mb-4" />
-                            <p className="text-sm sm:text-base text-secondary leading-relaxed mb-4 sm:mb-6 text-balance">
-                                "{testimonial.quote}"
-                            </p>
-                            <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center text-sm sm:text-base text-primary flex-shrink-0">
-                                    {testimonial.author.split(' ').map(n => n[0]).join('')}
+                            <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[2.5rem] -z-10" />
+                            <div className="h-full p-8 sm:p-10 rounded-[2.5rem] bg-white/[0.02] border border-white/5 hover:border-brand/30 transition-all duration-500 backdrop-blur-sm flex flex-col">
+                                <div className="flex items-center gap-1.5 mb-8">
+                                    {[...Array(5)].map((_, i) => (
+                                        <Star
+                                            key={i}
+                                            className="w-3.5 h-3.5 fill-brand text-brand"
+                                        />
+                                    ))}
                                 </div>
-                                <div className="min-w-0">
-                                    <div className="text-sm sm:text-base text-primary truncate">{testimonial.author}</div>
-                                    <div className="text-xs sm:text-sm text-secondary truncate">{testimonial.role}</div>
-                                    <div className="text-xs sm:text-sm text-text-muted truncate">{testimonial.company}</div>
+                                <Quote className="w-10 h-10 text-brand/20 mb-8 shrink-0" />
+                                <p className="text-lg text-white/90 leading-relaxed mb-10 italic font-medium">
+                                    "{testimonial.quote}"
+                                </p>
+                                <div className="mt-auto">
+                                    <div className="flex items-center gap-4 mb-6">
+                                        <div className="w-14 h-14 rounded-2xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand font-bold text-lg">
+                                            {testimonial.author.split(' ').map(n => n[0]).join('')}
+                                        </div>
+                                        <div className="min-w-0">
+                                            <div className="text-base font-bold text-white tracking-tight">{testimonial.author}</div>
+                                            <div className="text-xs text-text-muted font-medium mt-0.5">{testimonial.role}</div>
+                                            <div className="text-[10px] text-brand/80 font-bold uppercase tracking-widest mt-1.5">{testimonial.company}</div>
+                                        </div>
+                                    </div>
+                                    <div className="pt-6 border-t border-white/5">
+                                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-[11px] font-bold text-white tracking-tight">
+                                            {testimonial.metrics}
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="pt-3 sm:pt-4 border-t border-border">
-                                <div className="text-xs sm:text-sm text-primary">{testimonial.metrics}</div>
                             </div>
                         </motion.div>
                     ))}
                 </motion.div>
 
-                {/* Case Studies */}
-                <motion.div 
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
-                    className="bg-muted border border-border rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-12"
+                {/* Case Studies / Results Section */}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.98 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8 }}
+                    className="relative p-1 rounded-[3.5rem] bg-gradient-to-b from-white/10 to-transparent overflow-hidden"
                 >
-                    <h3 className="text-xl sm:text-2xl mb-6 sm:mb-8 text-center text-primary px-2">
-                        Proven Results Across Industries
-                    </h3>
-                    <motion.div 
-                        variants={containerVariants}
-                        initial="hidden"
-                        animate={isInView ? "visible" : "hidden"}
-                        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6"
-                    >
-                        {caseStudies.map((study, index) => (
-                            <motion.div
-                                key={index}
-                                variants={itemVariants}
-                                whileHover={{ scale: 1.05, y: -5 }}
-                                className="bg-card border border-border rounded-xl p-4 sm:p-6 text-center hover:shadow-md transition-all"
-                            >
-                                <div className="text-2xl sm:text-3xl text-primary mb-1 sm:mb-2">{study.metric}</div>
-                                <div className="text-xs sm:text-sm text-secondary mb-1">{study.company}</div>
-                                <div className="text-[10px] sm:text-xs text-text-muted">{study.description}</div>
-                            </motion.div>
-                        ))}
-                    </motion.div>
+                    <div className="bg-[#0a0a0a]/90 backdrop-blur-3xl rounded-[3.4rem] p-10 md:p-20 border border-white/5 relative overflow-hidden text-center">
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-brand/10 blur-[100px] rounded-full -z-10" />
+
+                        <h3 className="text-3xl sm:text-4xl font-bold text-white mb-16 tracking-tight">
+                            Proven Results Across Industries
+                        </h3>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
+                            {caseStudies.map((study, index) => (
+                                <div key={index} className="group flex flex-col items-center">
+                                    <div className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-4 tracking-tighter group-hover:text-brand transition-colors duration-500">
+                                        {study.metric}
+                                    </div>
+                                    <div className="text-sm font-bold text-brand uppercase tracking-[0.2em] mb-3">
+                                        {study.company}
+                                    </div>
+                                    <p className="text-text-secondary text-sm max-w-[200px] leading-relaxed">
+                                        {study.description}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </motion.div>
 
                 {/* Trust Badges */}
-                <div className="mt-8 sm:mt-12 text-center">
-                    <p className="text-xs sm:text-sm text-text-muted mb-4 sm:mb-6 uppercase tracking-wider px-2">
-                        Trusted & Certified
+                <div className="mt-24 text-center">
+                    <p className="text-[10px] font-bold text-text-muted mb-10 uppercase tracking-[0.3em]">
+                        Enterprise Security & Compliance
                     </p>
-                    <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 opacity-60 px-2">
-                        <div className="text-xs sm:text-sm text-secondary">GDPR Compliant</div>
-                        <div className="text-xs sm:text-sm text-secondary">DPDPA Compliant</div>
-                        <div className="text-xs sm:text-sm text-secondary">SOC 2 Type II</div>
-                        <div className="text-xs sm:text-sm text-secondary">ISO 27001</div>
+                    <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-20">
+                        {['GDPR Compliant', 'DPDPA Compliant', 'SOC 2 Type II', 'ISO 27001'].map((badge) => (
+                            <div key={badge} className="text-xs font-bold text-white/30 hover:text-white/60 transition-colors uppercase tracking-widest cursor-default">
+                                {badge}
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: ['/private/'],
         },
-        sitemap: 'https://talentlyt.com/sitemap.xml',
+        sitemap: 'https://talentlyt.cloud/sitemap.xml',
     }
 }

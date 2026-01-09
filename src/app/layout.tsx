@@ -9,32 +9,72 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'TalentLyt — AI-Powered Interview Intelligence with Integrity Verification',
+  metadataBase: new URL('https://talentlyt.cloud'),
+  title: {
+    default: 'TalentLyt — AI Technical Interview Platform with Integrity Verification',
+    template: '%s | TalentLyt'
+  },
   description:
-    'Production-grade B2B platform for AI-powered technical interviews with real-time behavioral insights and automated audit reports. Trusted by leading tech companies.',
+    'The gold standard for high-stakes technical hiring. Multi-Agent AI interviews featuring Maya (Conversational Lead) and Audit Sentinel (Truth Engine). Ensure integrity, reduce bias by 80%, cut interview overhead by 75%.',
   keywords: [
-    'AI interview',
-    'technical interview',
-    'hiring platform',
-    'integrity verification',
-    'remote interview',
-    'behavioral analysis',
-    'interview automation',
-    'B2B hiring',
+    'AI interview platform',
+    'technical interview automation',
+    'Audit Sentinel AI',
+    'Maya AI interviewer',
+    'integrity verification hiring',
+    'multi-agent interview system',
+    'B2B recruitment software',
+    'forensic technical assessment',
+    'interview integrity software',
+    'automated technical screening',
+    'AI coding interview',
+    'enterprise hiring solution',
+    'bias-free hiring platform',
+    'remote interview integrity',
+    'technical assessment tool'
   ],
+  alternates: {
+    canonical: 'https://talentlyt.cloud',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
-    title: 'TalentLyt — AI-Powered Interview Intelligence',
-    description: 'Conduct technical interviews with integrity verification',
+    title: 'TalentLyt — Truth in Hiring, Verified by Audit Sentinel',
+    description: 'World\'s first Multi-Agent technical interview suite. Maya conducts adaptive AI interviews while Audit Sentinel verifies integrity in real-time.',
+    url: 'https://talentlyt.cloud',
+    siteName: 'TalentLyt',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'TalentLyt — AI Interview Platform with Integrity Verification',
+      },
+    ],
+    locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'TalentLyt — AI-Powered Interview Intelligence',
-    description: 'Conduct technical interviews with real-time integrity monitoring',
+    title: 'TalentLyt — High-Stakes Hiring with Audit Sentinel',
+    description: 'Multi-Agent AI technical interview suite. Maya conducts, Audit Sentinel verifies. Ensure integrity with forensic-grade verification.',
+    images: ['/og-image.png'],
+    creator: '@talentlyt',
   },
+  category: 'Technology',
 };
 
 import { ThemeProvider } from '@/components/theme-provider';
+import { AnalyticsProvider } from '@/components/analytics';
 
 export default function RootLayout({
   children,
@@ -44,40 +84,42 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} font-sans antialiased`}>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'SoftwareApplication',
-              name: 'TalentLyt',
-              applicationCategory: 'BusinessApplication',
-              operatingSystem: 'Web',
-              offers: {
-                '@type': 'Offer',
-                price: '0',
-                priceCurrency: 'USD',
-                description: 'Free Trial Available'
-              },
-              description: 'AI-powered technical interview platform with integrity verification and bias-minimized evaluation.',
-              featureList: 'Integrity Verification, Automated Quality Auditor, Accommodation Mode, Code Playback, Skill Reports',
-              copyrightYear: new Date().getFullYear(),
-              author: {
-                '@type': 'Organization',
-                name: 'TalentLyt Inc.'
-              }
-            }),
-          }}
-        />
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          forcedTheme="dark"
-          enableSystem={false}
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        <AnalyticsProvider>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'SoftwareApplication',
+                name: 'TalentLyt',
+                applicationCategory: 'BusinessApplication',
+                operatingSystem: 'Web',
+                offers: {
+                  '@type': 'Offer',
+                  price: '0',
+                  priceCurrency: 'USD',
+                  description: 'Free Trial Available'
+                },
+                description: 'AI-powered technical interview platform with integrity verification and bias-minimized evaluation.',
+                featureList: 'Integrity Verification, Automated Quality Auditor, Accommodation Mode, Code Playback, Skill Reports',
+                copyrightYear: new Date().getFullYear(),
+                author: {
+                  '@type': 'Organization',
+                  name: 'Rigour Labs Inc.'
+                }
+              }),
+            }}
+          />
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            forcedTheme="dark"
+            enableSystem={false}
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </AnalyticsProvider>
       </body>
     </html>
   );
