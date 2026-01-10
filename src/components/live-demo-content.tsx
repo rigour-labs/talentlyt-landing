@@ -2,14 +2,12 @@
 
 import React, { useState, useRef } from 'react';
 import Link from 'next/link';
-import { motion, useInView } from 'framer-motion';
 import { CheckCircle2, ArrowRight, Clock } from 'lucide-react';
 
 export function LiveDemoContent() {
     const [activeTab, setActiveTab] = useState('integrity');
     const [activeStep, setActiveStep] = useState(0);
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-100px" });
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -53,18 +51,14 @@ export function LiveDemoContent() {
     return (
         <main className="pt-24 sm:pt-32 pb-12 sm:pb-20 px-4 sm:px-6" ref={ref}>
             <div className="max-w-7xl mx-auto">
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                    className="text-center mb-16"
-                >
+                <div className="text-center mb-16">
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight">
                         See TalentLyt in <span className="text-brand">Action</span>
                     </h1>
                     <p className="text-lg text-text-secondary max-w-3xl mx-auto">
                         Explore how TalentLyt transforms technical hiring with integrity verification and AI.
                     </p>
-                </motion.div>
+                </div>
 
                 <div className="mb-20">
                     <div className="flex flex-wrap gap-3 justify-center mb-12">
@@ -84,10 +78,8 @@ export function LiveDemoContent() {
 
                     {features.map((feature) => (
                         activeTab === feature.id && (
-                            <motion.div
+                            <div
                                 key={feature.id}
-                                initial={{ opacity: 0, scale: 0.98 }}
-                                animate={{ opacity: 1, scale: 1 }}
                                 className="bg-card border border-border/50 rounded-[2.5rem] p-8 md:p-12 overflow-hidden relative"
                             >
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
@@ -122,7 +114,7 @@ export function LiveDemoContent() {
                                         </div>
                                     </div>
                                 </div>
-                            </motion.div>
+                            </div>
                         )
                     ))}
                 </div>
@@ -131,11 +123,10 @@ export function LiveDemoContent() {
                     <h2 className="text-3xl font-bold text-center mb-12">Complete Interview Journey</h2>
                     <div className="space-y-6">
                         {interviewSteps.map((step, index) => (
-                            <motion.div
+                            <div
                                 key={index}
-                                variants={itemVariants}
-                                initial="hidden"
-                                animate={isInView ? "visible" : "hidden"}
+
+
                                 className={`p-8 rounded-[2rem] bg-card border transition-all cursor-pointer ${activeStep === index ? 'border-brand shadow-xl bg-brand/[0.02]' : 'border-border/50 hover:border-brand/20'
                                     }`}
                                 onClick={() => setActiveStep(index)}
@@ -155,7 +146,7 @@ export function LiveDemoContent() {
                                         <p className="text-text-secondary">{step.description}</p>
                                     </div>
                                 </div>
-                            </motion.div>
+                            </div>
                         ))}
                     </div>
                 </div>

@@ -3,7 +3,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import mixpanel from 'mixpanel-browser';
 
@@ -40,11 +39,6 @@ export function Navbar() {
                     >
                         <div className="relative w-8 h-8 rounded-lg bg-brand flex items-center justify-center shadow-[0_0_15px_rgba(99,102,241,0.4)] overflow-hidden">
                             <span className="text-white font-bold text-lg relative z-10">T</span>
-                            <motion.div
-                                animate={{ top: ['-100%', '200%'] }}
-                                transition={{ repeat: Infinity, duration: 3, ease: "linear" }}
-                                className="absolute left-0 w-full h-1/2 bg-white/20 -rotate-45"
-                            />
                         </div>
                         <span className="text-xl font-bold tracking-tight text-white group-hover:text-brand transition-colors">
                             Talent<span className="text-brand">Lyt</span>
@@ -105,17 +99,13 @@ export function Navbar() {
             </div>
 
             {/* Mobile Menu */}
-            <AnimatePresence>
-                {isMobileMenuOpen && (
-                    <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-background/95 backdrop-blur-2xl border-t border-white/10 overflow-hidden"
-                        role="dialog"
-                        aria-modal="true"
-                        aria-label="Mobile navigation menu"
-                    >
+            {isMobileMenuOpen && (
+                <div
+                    className="md:hidden bg-background/95 backdrop-blur-2xl border-t border-white/10 overflow-hidden"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-label="Mobile navigation menu"
+                >
                         <nav className="flex flex-col p-6 gap-4" aria-label="Mobile navigation">
                             {navLinks.map((link) => (
                                 <Link
@@ -149,9 +139,8 @@ export function Navbar() {
                                 Start Free Trial
                             </Link>
                         </nav>
-                    </motion.div>
+                    </div>
                 )}
-            </AnimatePresence>
         </nav>
     );
 }

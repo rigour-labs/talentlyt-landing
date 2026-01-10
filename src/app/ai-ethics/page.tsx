@@ -3,7 +3,6 @@
 import React from 'react';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
-import { motion } from 'framer-motion';
 import { Brain, Shield, Users, Scale, AlertTriangle, Eye, Target, Heart } from 'lucide-react';
 
 export default function AIEthicsPage() {
@@ -76,10 +75,7 @@ export default function AIEthicsPage() {
 
             <main className="flex-1 py-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-4xl mx-auto">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
+                    <div
                         className="text-center mb-16"
                     >
                         <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-brand/10 border border-brand/20 mb-6">
@@ -95,13 +91,10 @@ export default function AIEthicsPage() {
                         <p className="text-sm text-text-muted mt-4">
                             Last updated: January 10, 2026
                         </p>
-                    </motion.div>
+                    </div>
 
                     {/* Important Notice */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.1 }}
+                    <div
                         className="p-6 rounded-2xl bg-warning/10 border border-warning/30 mb-12"
                     >
                         <div className="flex gap-4">
@@ -113,16 +106,13 @@ export default function AIEthicsPage() {
                                 </p>
                             </div>
                         </div>
-                    </motion.div>
+                    </div>
 
                     {/* Principles Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                         {principles.map((principle, index) => (
-                            <motion.div
+                            <div
                                 key={principle.title}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
                                 className="p-6 rounded-[1.5rem] bg-card border border-border/50 hover:border-brand/20 transition-all"
                             >
                                 <div className="flex items-center gap-3 mb-4">
@@ -142,15 +132,12 @@ export default function AIEthicsPage() {
                                         </div>
                                     ))}
                                 </div>
-                            </motion.div>
+                            </div>
                         ))}
                     </div>
 
                     {/* Our Commitment */}
-                    <motion.section
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.8 }}
+                    <section
                         className="p-8 rounded-[2rem] bg-gradient-to-br from-brand/10 to-transparent border border-brand/20"
                     >
                         <h2 className="text-2xl font-bold mb-4">Our Ongoing Commitment</h2>
@@ -165,7 +152,7 @@ export default function AIEthicsPage() {
                                 Privacy Policy
                             </a>
                         </div>
-                    </motion.section>
+                    </section>
                 </div>
             </main>
 

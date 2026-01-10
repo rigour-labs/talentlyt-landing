@@ -3,7 +3,6 @@
 import React from 'react';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
-import { motion } from 'framer-motion';
 import { FileText, AlertCircle, Shield, CreditCard, Scale, Ban, RefreshCw } from 'lucide-react';
 
 export default function TermsPage() {
@@ -51,10 +50,7 @@ export default function TermsPage() {
 
             <main className="flex-1 py-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-4xl mx-auto">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
+                    <div
                         className="text-center mb-16"
                     >
                         <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-brand/10 border border-brand/20 mb-6">
@@ -70,15 +66,12 @@ export default function TermsPage() {
                         <p className="text-sm text-text-muted mt-4">
                             Last updated: January 10, 2026
                         </p>
-                    </motion.div>
+                    </div>
 
                     <div className="space-y-8">
                         {sections.map((section, index) => (
-                            <motion.section
+                            <section
                                 key={section.title}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
                                 className="p-8 rounded-[2rem] bg-card border border-border/50 hover:border-brand/20 transition-all"
                             >
                                 <div className="flex items-center gap-4 mb-4">
@@ -90,14 +83,11 @@ export default function TermsPage() {
                                 <p className="text-text-secondary text-sm leading-relaxed">
                                     {section.content}
                                 </p>
-                            </motion.section>
+                            </section>
                         ))}
 
                         {/* Governing Law */}
-                        <motion.section
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.8 }}
+                        <section
                             className="p-8 rounded-[2rem] bg-gradient-to-br from-brand/10 to-transparent border border-brand/20"
                         >
                             <h2 className="text-xl font-bold mb-4">Governing Law & Disputes</h2>
@@ -107,7 +97,7 @@ export default function TermsPage() {
                             <p className="text-text-muted text-xs">
                                 For questions about these terms, contact: <a href="mailto:legal@talentlyt.cloud" className="text-brand hover:underline">legal@talentlyt.cloud</a>
                             </p>
-                        </motion.section>
+                        </section>
                     </div>
                 </div>
             </main>

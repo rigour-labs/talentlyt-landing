@@ -1,18 +1,10 @@
 'use client';
 
 import React, { useRef, useState, useEffect } from 'react';
-import { motion, useInView, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { Clock, ArrowRight, CheckCircle2, Zap, Cpu, MousePointer2, ShieldCheck } from 'lucide-react';
 
 function KineticCard({ children, index }: { children: React.ReactNode; index: number }) {
-    const x = useMotionValue(0);
-    const y = useMotionValue(0);
-
-    const mouseXSpring = useSpring(x);
-    const mouseYSpring = useSpring(y);
-
-    const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["7deg", "-7deg"]);
-    const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-7deg", "7deg"]);
+    const [transform, setTransform] = useState({ x: 0, y: 0 });
 
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
         const rect = e.currentTarget.getBoundingClientRect();
@@ -20,25 +12,26 @@ function KineticCard({ children, index }: { children: React.ReactNode; index: nu
         const height = rect.height;
         const mouseX = e.clientX - rect.left;
         const mouseY = e.clientY - rect.top;
-        const xPct = mouseX / width - 0.5;
-        const yPct = mouseY / height - 0.5;
-        x.set(xPct);
-        y.set(yPct);
+        const xPct = (mouseX / width - 0.5) * 10;
+        const yPct = (mouseY / height - 0.5) * 10;
+        setTransform({ x: xPct, y: yPct });
     };
 
     const handleMouseLeave = () => {
-        x.set(0);
-        y.set(0);
+        setTransform({ x: 0, y: 0 });
     };
 
+    const rotateY = transform.x * 5;
+    const rotateX = -transform.y * 5;
+
     return (
-        <motion.div
+        <div
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
             style={{
-                rotateY,
-                rotateX,
+                transform: `perspective(1000px) rotateY(${rotateY}deg) rotateX(${rotateX}deg)`,
                 transformStyle: "preserve-3d",
+                transition: 'transform 0.1s ease-out',
             }}
             className="relative group"
         >
@@ -47,21 +40,18 @@ function KineticCard({ children, index }: { children: React.ReactNode; index: nu
             </div>
 
             {/* Glowing Edge Effect */}
-            <motion.div
+            <div
                 style={{
-                    rotateY,
-                    rotateX,
-                    transform: "translateZ(-10px)",
+                    transform: `perspective(1000px) rotateY(${rotateY}deg) rotateX(${rotateX}deg) translateZ(-10px)`,
                 }}
                 className="absolute inset-0 bg-brand/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[2.5rem] -z-10"
             />
-        </motion.div>
+        </div>
     );
 }
 
 export function HowItWorksSection() {
     const sectionRef = useRef(null);
-    const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
     const steps = [
         {
@@ -98,11 +88,7 @@ export function HowItWorksSection() {
             </div>
 
             <div className="max-w-7xl mx-auto relative z-10">
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    className="text-center mb-24"
-                >
+                <div className="text-center mb-24">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 border border-brand/20 mb-8">
                         <Zap className="w-3.5 h-3.5 text-brand animate-pulse" />
                         <span className="technical-label text-brand">Operational Protocol</span>
@@ -113,16 +99,12 @@ export function HowItWorksSection() {
                     <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto">
                         From initial handshake to forensic resolution, TalentLyt processes every signal with military-grade integrity.
                     </p>
-                </motion.div>
+                </div>
 
                 <div className="relative">
                     {/* Neon Pulse Conduit (Connecting Line) */}
                     <div className="hidden lg:block absolute top-[120px] left-[15%] right-[15%] h-[2px] bg-white/5 overflow-hidden">
-                        <motion.div
-                            animate={{ x: ['-100%', '200%'] }}
-                            transition={{ repeat: Infinity, duration: 4, ease: "linear" }}
-                            className="w-1/3 h-full bg-gradient-to-r from-transparent via-brand to-transparent shadow-[0_0_15px_#6366f1]"
-                        />
+                        <div className="w-1/3 h-full bg-gradient-to-r from-transparent via-brand to-transparent shadow-[0_0_15px_#6366f1]" />
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 xl:gap-12 relative z-10">
@@ -136,11 +118,7 @@ export function HowItWorksSection() {
                                             {index + 1}
                                         </div>
                                         {/* Orbital Ring */}
-                                        <motion.div
-                                            animate={{ rotate: 360 }}
-                                            transition={{ repeat: Infinity, duration: 8, ease: "linear" }}
-                                            className="absolute -inset-2 border border-brand/20 rounded-full border-dashed"
-                                        />
+                                        <div className="absolute -inset-2 border border-brand/20 rounded-full border-dashed" />
                                     </div>
 
                                     {/* Content Header */}
@@ -186,11 +164,7 @@ export function HowItWorksSection() {
                 </div>
 
                 {/* System-wide Action */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    className="mt-24 text-center"
-                >
+                <div className="mt-24 text-center">
                     <div className="relative inline-block group">
                         <div className="absolute -inset-1 bg-brand blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200" />
                         <button className="relative px-12 py-5 bg-brand text-white font-bold rounded-2xl flex items-center gap-3 transition-all hover:scale-[1.02] active:scale-[0.98]">
@@ -198,7 +172,7 @@ export function HowItWorksSection() {
                             SECURE YOUR PIPELINE
                         </button>
                     </div>
-                </motion.div>
+                </div>
             </div>
         </section>
     );

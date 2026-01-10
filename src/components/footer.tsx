@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 
 export function Footer() {
     return (
@@ -15,11 +14,6 @@ export function Footer() {
                     >
                         <div className="relative w-8 h-8 rounded-lg bg-brand flex items-center justify-center shadow-[0_0_15px_rgba(37,99,235,0.4)] overflow-hidden">
                             <span className="text-white font-bold text-lg relative z-10">T</span>
-                            <motion.div
-                                animate={{ top: ['-100%', '200%'] }}
-                                transition={{ repeat: Infinity, duration: 3, ease: "linear" }}
-                                className="absolute left-0 w-full h-1/2 bg-white/20 -rotate-45"
-                            />
                         </div>
                         <span className="text-xl font-bold tracking-tight text-white transition-colors">
                             Talent<span className="text-brand">Lyt</span>

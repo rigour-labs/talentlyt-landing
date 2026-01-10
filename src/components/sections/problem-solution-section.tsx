@@ -2,17 +2,9 @@
 
 import React, { useRef } from 'react';
 import { X, CheckCircle2, Activity, Zap, ShieldAlert, Cpu } from 'lucide-react';
-import { motion, useInView, useScroll, useTransform } from 'framer-motion';
 
 export function ProblemSolutionSection() {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-100px" });
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start end", "end start"]
-    });
-
-    const gridY = useTransform(scrollYProgress, [0, 1], [0, -50]);
+    const ref = useRef<HTMLElement>(null);
 
     const problems = [
         {
@@ -59,19 +51,12 @@ export function ProblemSolutionSection() {
     return (
         <section className="py-24 sm:py-32 px-4 sm:px-6 bg-[#030303] relative overflow-hidden" ref={ref}>
             {/* 3D Grid Pattern Overlay */}
-            <motion.div
-                style={{ y: gridY }}
-                className="absolute inset-0 opacity-[0.03] pointer-events-none"
-            >
+            <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
                 <img src="/assets/grid.png" alt="Grid pattern" className="w-full h-full object-cover" />
-            </motion.div>
+            </div>
 
             <div className="max-w-7xl mx-auto relative z-10">
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    className="text-center mb-20 sm:mb-28"
-                >
+                <div className="text-center mb-20 sm:mb-28">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-warning/10 border border-warning/20 mb-8">
                         <span className="technical-label text-warning">Audit Diagnostic: Required</span>
                     </div>
@@ -82,7 +67,7 @@ export function ProblemSolutionSection() {
                     <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto">
                         Traditional remote interviewing is built on trust that no longer exists in an AI-accelerated world. We restore that trust.
                     </p>
-                </motion.div>
+                </div>
 
                 {/* Audit-Style Comparison Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-24">
@@ -99,11 +84,8 @@ export function ProblemSolutionSection() {
                         </div>
 
                         {problems.map((problem, i) => (
-                            <motion.div
+                            <div
                                 key={i}
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ delay: i * 0.1 }}
                                 className="p-8 rounded-[2rem] bg-white/[0.01] border border-white/5 hover:border-danger/20 transition-all group"
                             >
                                 <h4 className="text-lg font-bold text-white mb-3 group-hover:text-danger transition-colors">{problem.title}</h4>
@@ -112,7 +94,7 @@ export function ProblemSolutionSection() {
                                     <Activity className="w-3 h-3 text-danger" />
                                     <span className="technical-label text-danger">IMPACT: {problem.impact}</span>
                                 </div>
-                            </motion.div>
+                            </div>
                         ))}
                     </div>
 
@@ -129,36 +111,25 @@ export function ProblemSolutionSection() {
                         </div>
 
                         {solutions.map((solution, i) => (
-                            <motion.div
+                            <div
                                 key={i}
-                                initial={{ opacity: 0, x: 20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ delay: i * 0.1 }}
                                 className="p-8 rounded-[2rem] bg-brand/5 border border-brand/10 hover:border-brand/30 transition-all group relative overflow-hidden"
                             >
                                 {/* Subtle scan animation overlay for solutions */}
-                                <motion.div
-                                    animate={{ left: ['-100%', '200%'] }}
-                                    transition={{ repeat: Infinity, duration: 3, ease: "linear" }}
-                                    className="absolute inset-0 w-1/3 bg-gradient-to-r from-transparent via-brand/5 to-transparent pointer-events-none"
-                                />
+                                <div className="absolute inset-0 w-1/3 bg-gradient-to-r from-transparent via-brand/5 to-transparent pointer-events-none" />
                                 <h4 className="text-lg font-bold text-white mb-3 group-hover:text-brand transition-colors">{solution.title}</h4>
                                 <p className="text-sm text-text-muted leading-relaxed mb-6">{solution.description}</p>
                                 <div className="flex items-center gap-2 bg-brand/10 px-3 py-1.5 rounded-lg border border-brand/20 w-fit">
                                     <CheckCircle2 className="w-3 h-3 text-brand" />
                                     <span className="technical-label text-brand">BENEFIT: {solution.benefit}</span>
                                 </div>
-                            </motion.div>
+                            </div>
                         ))}
                     </div>
                 </div>
 
                 {/* Quantitative Impact Box */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    className="p-1.5 rounded-[3rem] bg-gradient-to-b from-white/10 to-transparent"
-                >
+                <div className="p-1.5 rounded-[3rem] bg-gradient-to-b from-white/10 to-transparent">
                     <div className="bg-[#0a0a0a]/90 backdrop-blur-3xl rounded-[2.9rem] p-10 md:p-16 border border-white/5 relative overflow-hidden">
                         <div className="absolute top-0 right-0 p-8">
                             <div className="text-[8px] font-bold text-text-muted uppercase tracking-[0.4em] mb-2">Report ID</div>
@@ -175,10 +146,7 @@ export function ProblemSolutionSection() {
                                     <div className="text-[10px] font-bold text-text-muted uppercase tracking-[0.2em] mb-4">{stat.label}</div>
                                     <div className={`text-5xl font-bold mb-4 ${stat.color} tracking-tighter`}>{stat.value}</div>
                                     <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-                                        <motion.div
-                                            initial={{ width: 0 }}
-                                            whileInView={{ width: stat.width }}
-                                            transition={{ duration: 1.5, delay: 0.5 }}
+                                        <div
                                             className={`h-full ${stat.color === 'text-brand' ? 'bg-brand' : 'bg-highlight'}`}
                                         />
                                     </div>
@@ -186,7 +154,7 @@ export function ProblemSolutionSection() {
                             ))}
                         </div>
                     </div>
-                </motion.div>
+                </div>
             </div>
         </section>
     );

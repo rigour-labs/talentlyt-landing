@@ -2,17 +2,9 @@
 
 import React, { useRef, useState } from 'react';
 import { Star, ShieldCheck, Activity, Globe, Zap, Fingerprint, Search } from 'lucide-react';
-import { motion, useScroll, useTransform, useSpring, useMotionValue } from 'framer-motion';
 
 function KineticCard({ children, index }: { children: React.ReactNode, index: number }) {
-    const x = useMotionValue(0);
-    const y = useMotionValue(0);
-
-    const mouseXSpring = useSpring(x);
-    const mouseYSpring = useSpring(y);
-
-    const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["10deg", "-10deg"]);
-    const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-10deg", "10deg"]);
+    const [transform, setTransform] = useState({ x: 0, y: 0 });
 
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
         const rect = e.currentTarget.getBoundingClientRect();
@@ -20,43 +12,38 @@ function KineticCard({ children, index }: { children: React.ReactNode, index: nu
         const height = rect.height;
         const mouseX = e.clientX - rect.left;
         const mouseY = e.clientY - rect.top;
-        const xPct = mouseX / width - 0.5;
-        const yPct = mouseY / height - 0.5;
-        x.set(xPct);
-        y.set(yPct);
+        const xPct = (mouseX / width - 0.5) * 10;
+        const yPct = (mouseY / height - 0.5) * 10;
+        setTransform({ x: xPct, y: yPct });
     };
 
     const handleMouseLeave = () => {
-        x.set(0);
-        y.set(0);
+        setTransform({ x: 0, y: 0 });
     };
 
+    const rotateY = transform.x * 5;
+    const rotateX = -transform.y * 5;
+
     return (
-        <motion.div
+        <div
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
             style={{
-                rotateY,
-                rotateX,
+                transform: `perspective(1000px) rotateY(${rotateY}deg) rotateX(${rotateX}deg)`,
                 transformStyle: "preserve-3d",
+                transition: 'transform 0.1s ease-out',
             }}
             className="relative h-full"
         >
             <div style={{ transform: "translateZ(60px)" }} className="h-full">
                 {children}
             </div>
-        </motion.div>
+        </div>
     );
 }
 
 export function StatsSection() {
-    const sectionRef = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: sectionRef,
-        offset: ["start end", "end start"]
-    });
-
-    const gridY = useTransform(scrollYProgress, [0, 1], [0, -100]);
+    const sectionRef = useRef<HTMLElement>(null);
 
     const testimonials = [
         {
@@ -97,43 +84,33 @@ export function StatsSection() {
     return (
         <section ref={sectionRef} className="px-4 sm:px-6 py-32 sm:py-48 bg-[#030303] relative overflow-hidden border-b border-white/5">
             {/* 3D Flowing Background */}
-            <motion.div style={{ y: gridY }} className="absolute inset-0 opacity-[0.05] pointer-events-none">
+            <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
                 <div className="absolute inset-0 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:60px_60px]" />
-            </motion.div>
+            </div>
 
             {/* Energy Veins */}
             <svg className="absolute inset-0 w-full h-full opacity-20 pointer-events-none" viewBox="0 0 1200 800">
-                <motion.path
+                <path
                     d="M-100,200 Q300,300 600,200 T1300,100"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="1"
                     className="text-brand"
-                    initial={{ pathLength: 0 }}
-                    whileInView={{ pathLength: 1 }}
-                    transition={{ duration: 2, ease: "easeInOut" }}
                 />
-                <motion.path
+                <path
                     d="M-100,600 Q400,500 800,700 T1300,600"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="1"
                     className="text-warning"
-                    initial={{ pathLength: 0 }}
-                    whileInView={{ pathLength: 1 }}
-                    transition={{ duration: 2.5, ease: "easeInOut", delay: 0.5 }}
                 />
             </svg>
 
             <div className="max-w-7xl mx-auto relative z-10">
                 <div className="flex flex-col mb-24 max-w-2xl">
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        className="technical-label text-brand mb-6"
-                    >
+                    <div className="technical-label text-brand mb-6">
                         [Institutional_Trust_Metrics]
-                    </motion.div>
+                    </div>
                     <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-8 tracking-tighter text-white leading-[0.9]">
                         Validated by <br />
                         <span className="text-brand">The Experts.</span>
@@ -212,13 +189,9 @@ export function StatsSection() {
                 <div className="pt-32 border-t border-white/5">
                     <div className="flex flex-col md:flex-row justify-between items-end gap-12 mb-20">
                         <div className="max-w-xl">
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                className="px-3 py-1 rounded-full bg-success/10 border border-success/20 text-success text-[10px] font-bold uppercase tracking-[0.3em] mb-6 w-fit"
-                            >
+                            <div className="px-3 py-1 rounded-full bg-success/10 border border-success/20 text-success text-[10px] font-bold uppercase tracking-[0.3em] mb-6 w-fit">
                                 Industrial Scale Verification
-                            </motion.div>
+                            </div>
                             <h3 className="text-4xl sm:text-5xl font-bold text-white tracking-tight leading-none">
                                 Proven Results Across <br />
                                 <span className="text-white/40 italic">Key Ecosystems.</span>
@@ -262,11 +235,8 @@ export function StatsSection() {
                                 sector: "CORP_ENT"
                             }
                         ].map((result, i) => (
-                            <motion.div
+                            <div
                                 key={i}
-                                initial={{ opacity: 0 }}
-                                whileInView={{ opacity: 1 }}
-                                transition={{ delay: i * 0.15 }}
                                 className={`group relative p-8 sm:p-12 hover:bg-white/[0.02] transition-all duration-700 ${i !== 2 ? 'md:border-r border-white/5' : ''
                                     } ${i !== 2 ? 'border-b md:border-b-0 border-white/5' : ''}`}
                             >
@@ -305,7 +275,7 @@ export function StatsSection() {
                                         </div>
                                     </div>
                                 </div>
-                            </motion.div>
+                            </div>
                         ))}
                     </div>
                 </div>

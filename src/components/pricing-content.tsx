@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import { Check, ShieldCheck, Zap, Globe, MessageSquare, ArrowRight } from 'lucide-react';
 
 export function PricingContent() {
@@ -109,11 +108,8 @@ export function PricingContent() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
                     {tiers.map((tier, i) => (
-                        <motion.div
+                        <div
                             key={tier.name}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: i * 0.1 }}
                             className={`relative flex flex-col p-8 rounded-[2rem] border transition-all duration-300 ${tier.highlight
                                 ? 'bg-card border-brand/50 shadow-[0_20px_40px_rgba(37,99,235,0.1)] ring-1 ring-brand/50'
                                 : 'bg-card border-border/50 hover:border-brand/20'
@@ -158,24 +154,21 @@ export function PricingContent() {
                                 {tier.cta}
                                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                             </Link>
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
 
                 {/* Interview Packs */}
                 <section className="mb-20">
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl sm:text-4xl font-bold mb-4 tracking-tight">Pre-Paid Interview Packs</h2>
-                    <p className="text-text-secondary text-lg max-w-2xl mx-auto">Buy in bulk for seasonal hiring or budget predictability.</p>
-                </div>
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl sm:text-4xl font-bold mb-4 tracking-tight">Pre-Paid Interview Packs</h2>
+                        <p className="text-text-secondary text-lg max-w-2xl mx-auto">Buy in bulk for seasonal hiring or budget predictability.</p>
+                    </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {interviewPacks.map((pack, i) => (
-                            <motion.div
+                            <div
                                 key={pack.name}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: i * 0.1 }}
                                 className="relative p-8 rounded-[2rem] bg-gradient-to-br from-brand/5 to-transparent border border-brand/20 hover:border-brand/40 transition-all group"
                             >
                                 <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-[10px] font-bold uppercase tracking-wider">
@@ -190,7 +183,7 @@ export function PricingContent() {
                                     <span className="text-text-secondary text-sm">Effective rate:</span>
                                     <span className="text-brand font-bold">{pack.perInterview}/interview</span>
                                 </div>
-                            </motion.div>
+                            </div>
                         ))}
                     </div>
                 </section>

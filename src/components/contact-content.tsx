@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { Mail, MessageSquare, Building, Clock, Send, MapPin } from 'lucide-react';
 
 export function ContactContent() {
@@ -45,12 +44,7 @@ export function ContactContent() {
     return (
         <main className="flex-1 py-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-5xl mx-auto">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    className="text-center mb-16"
-                >
+                <div className="text-center mb-16">
                     <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-brand/10 border border-brand/20 mb-6">
                         <MessageSquare className="w-4 h-4 text-brand" />
                         <span className="text-sm font-medium text-brand">Get in Touch</span>
@@ -61,14 +55,10 @@ export function ContactContent() {
                     <p className="text-lg text-text-secondary max-w-2xl mx-auto">
                         Have questions about TalentLyt? We'd love to hear from you.
                     </p>
-                </motion.div>
+                </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, delay: 0.1 }}
-                    >
+                    <div>
                         <form onSubmit={handleSubmit} className="p-8 rounded-[2rem] bg-card border border-border/50">
                             <h2 className="text-2xl font-bold mb-6">Send us a message</h2>
                             <div className="space-y-5">
@@ -114,12 +104,9 @@ export function ContactContent() {
                                 </button>
                             </div>
                         </form>
-                    </motion.div>
+                    </div>
 
-                    <motion.div
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
+                    <div
                         className="space-y-6"
                     >
                         {contactMethods.map((method) => (
@@ -153,7 +140,7 @@ export function ContactContent() {
                                 <span>Rigour Labs Inc., Delaware, USA</span>
                             </div>
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
             </div>
         </main>

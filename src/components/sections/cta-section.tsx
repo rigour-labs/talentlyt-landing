@@ -2,65 +2,39 @@
 
 import Link from 'next/link';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
 import mixpanel from 'mixpanel-browser';
 
 export function CTASection() {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-100px" });
 
     return (
-        <section className="px-4 sm:px-6 py-24 sm:py-32 bg-[#030303] relative overflow-hidden" ref={ref}>
+        <section className="px-4 sm:px-6 py-24 sm:py-32 bg-[#030303] relative overflow-hidden">
             {/* Background Glows */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-4xl opacity-20 pointer-events-none">
                 <div className="absolute inset-0 bg-brand/20 blur-[120px] rounded-full animate-pulse" />
             </div>
 
             <div className="max-w-6xl mx-auto relative z-10">
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                    className="relative bg-white/[0.02] backdrop-blur-3xl border border-white/10 rounded-[4rem] p-12 sm:p-20 md:p-24 overflow-hidden group shadow-2xl"
-                >
-                    {/* Inner Glass Reflective Beam */}
-                    <motion.div
-                        animate={{ left: ['-100%', '200%'] }}
-                        transition={{ repeat: Infinity, duration: 4, ease: "linear" }}
-                        className="absolute inset-y-0 w-1/2 bg-gradient-to-r from-transparent via-white/5 to-transparent skew-x-12 pointer-events-none"
-                    />
+                <div className="relative bg-white/[0.02] backdrop-blur-3xl border border-white/10 rounded-[4rem] p-12 sm:p-20 md:p-24 overflow-hidden group shadow-2xl">
 
                     <div className="relative z-10 flex flex-col items-center">
                         {/* Urgency Badge */}
-                        <motion.div
-                            initial={{ opacity: 0, y: -20 }}
-                            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
-                            className="inline-flex items-center gap-2 px-4 py-2 bg-brand/10 border border-brand/20 rounded-full mb-10"
-                        >
+                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand/10 border border-brand/20 rounded-full mb-10">
                             <span className="technical-label text-[10px] text-brand">
                                 [Operational_Status: Scalable]
                             </span>
                             <div className="w-1.5 h-1.5 rounded-full bg-brand animate-pulse" />
-                        </motion.div>
+                        </div>
 
-                        <motion.h2
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 tracking-tighter text-white leading-[0.9] text-center"
-                        >
+                        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 tracking-tighter text-white leading-[0.9] text-center">
                             Hire with confidence. <br />
                             <span className="text-brand">Build better teams.</span>
-                        </motion.h2>
-                        <motion.p
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                            className="text-lg sm:text-xl text-text-secondary mb-12 max-w-2xl mx-auto text-center opacity-70"
-                        >
+                        </h2>
+                        <p className="text-lg sm:text-xl text-text-secondary mb-12 max-w-2xl mx-auto text-center opacity-70">
                             Transform your technical hiring process with AI-powered integrity verification and automated assessments grounded in technical truth.
-                        </motion.p>
+                        </p>
 
                         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-6 mb-16">
-                            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                            <div>
                                 <Link
                                     href="/request-demo"
                                     onClick={() => mixpanel.track('CTA_Click', { location: 'Bottom CTA', type: 'Start Trial' })}
@@ -71,7 +45,7 @@ export function CTASection() {
                                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" aria-hidden="true" />
                                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                                 </Link>
-                            </motion.div>
+                            </div>
                             <Link
                                 href="/live-demo"
                                 onClick={() => mixpanel.track('CTA_Click', { location: 'Bottom CTA', type: 'Watch Demo' })}
@@ -117,7 +91,7 @@ export function CTASection() {
                             </p>
                         </div>
                     </div>
-                </motion.div>
+                </div>
             </div>
         </section>
     );

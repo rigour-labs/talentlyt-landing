@@ -3,7 +3,6 @@
 import React from 'react';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
-import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Globe, UserCheck, Mail } from 'lucide-react';
 
 export default function PrivacyPolicyPage() {
@@ -106,10 +105,7 @@ export default function PrivacyPolicyPage() {
 
             <main className="flex-1 py-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-4xl mx-auto">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
+                    <div
                         className="text-center mb-16"
                     >
                         <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-brand/10 border border-brand/20 mb-6">
@@ -125,15 +121,12 @@ export default function PrivacyPolicyPage() {
                         <p className="text-sm text-text-muted mt-4">
                             Last updated: January 10, 2026
                         </p>
-                    </motion.div>
+                    </div>
 
                     <div className="space-y-12">
                         {sections.map((section, index) => (
-                            <motion.section
+                            <section
                                 key={section.title}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
                                 className="p-8 rounded-[2rem] bg-card border border-border/50 hover:border-brand/20 transition-all"
                             >
                                 <div className="flex items-center gap-4 mb-6">
@@ -151,14 +144,11 @@ export default function PrivacyPolicyPage() {
                                         </div>
                                     ))}
                                 </div>
-                            </motion.section>
+                            </section>
                         ))}
 
                         {/* Contact Section */}
-                        <motion.section
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.6 }}
+                        <section
                             className="p-8 rounded-[2rem] bg-gradient-to-br from-brand/10 to-transparent border border-brand/20"
                         >
                             <div className="flex items-center gap-4 mb-6">
@@ -174,13 +164,10 @@ export default function PrivacyPolicyPage() {
                                 <p><span className="text-text-muted">Email:</span> <a href="mailto:privacy@talentlyt.cloud" className="text-brand hover:underline">privacy@talentlyt.cloud</a></p>
                                 <p><span className="text-text-muted">Address:</span> Rigour Labs Inc., Delaware, United States</p>
                             </div>
-                        </motion.section>
+                        </section>
 
                         {/* Compliance Badges */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.7 }}
+                        <div
                             className="flex flex-wrap justify-center gap-6 pt-8"
                         >
                             {['GDPR Compliant', 'DPDPA Compliant', 'SOC 2 Type II', 'ISO 27001'].map((badge) => (
@@ -188,7 +175,7 @@ export default function PrivacyPolicyPage() {
                                     {badge}
                                 </div>
                             ))}
-                        </motion.div>
+                        </div>
                     </div>
                 </div>
             </main>

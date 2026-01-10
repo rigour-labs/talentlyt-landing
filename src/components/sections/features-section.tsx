@@ -1,19 +1,7 @@
 'use client';
 
 import { ArrowRight, Shield, Zap, Database, Brain, Lock, Ghost, Activity, MousePointer2 } from 'lucide-react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
-
 export function FeaturesSection() {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-100px" });
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start end", "end start"]
-    });
-
-    const gridY = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
     const features = [
         {
@@ -73,22 +61,14 @@ export function FeaturesSection() {
     ];
 
     return (
-        <section id="features" className="py-24 sm:py-32 px-4 sm:px-6 bg-[#030303] relative overflow-hidden" ref={ref}>
+        <section id="features" className="py-24 sm:py-32 px-4 sm:px-6 bg-[#030303] relative overflow-hidden">
             {/* 3D Grid Background Asset */}
-            <motion.div
-                style={{ y: gridY }}
-                className="absolute inset-0 opacity-[0.05] pointer-events-none"
-            >
+            <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
                 <img src="/assets/grid.png" alt="Grid Background" className="w-full h-full object-cover" />
-            </motion.div>
+            </div>
 
             <div className="max-w-7xl mx-auto relative z-10">
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    className="mb-20 text-center max-w-3xl mx-auto"
-                >
+                <div className="mb-20 text-center max-w-3xl mx-auto">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 border border-brand/20 text-brand text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
                         <Activity className="w-3 h-3" aria-hidden="true" />
                         System Capabilities Index
@@ -100,16 +80,12 @@ export function FeaturesSection() {
                         TalentLyt isn't just another video tool. It's a high-precision engineering engine
                         built to restore trust in technical hiring.
                     </p>
-                </motion.div>
+                </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
                     {features.map((feature, index) => (
-                        <motion.div
+                        <div
                             key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-50px" }}
-                            transition={{ delay: index * 0.1 }}
                             className={`p-8 sm:p-10 rounded-[2.5rem] border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-brand/30 transition-all duration-500 group relative overflow-hidden focus-within:ring-2 focus-within:ring-brand focus-within:ring-offset-2 focus-within:ring-offset-background ${feature.className}`}
                         >
                             <div className="flex items-start justify-between mb-10">
@@ -136,23 +112,15 @@ export function FeaturesSection() {
                                     <ArrowRight className="w-4 h-4 text-text-muted group-hover:text-brand transition-transform group-hover:translate-x-1" />
                                 </div>
                             </div>
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
 
                 {/* Performance Comparison UI */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.98 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    className="relative p-1 rounded-[3.5rem] bg-gradient-to-b from-white/10 to-transparent overflow-hidden"
-                >
+                <div className="relative p-1 rounded-[3.5rem] bg-gradient-to-b from-white/10 to-transparent overflow-hidden">
                     <div className="bg-[#0a0a0a]/90 backdrop-blur-3xl rounded-[3.4rem] p-10 md:p-16 border border-white/5 relative overflow-hidden">
                         {/* Audit Scan Line */}
-                        <motion.div
-                            animate={{ top: ['0%', '100%', '0%'] }}
-                            transition={{ repeat: Infinity, duration: 4, ease: "linear" }}
-                            className="absolute left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand to-transparent opacity-20 pointer-events-none z-20"
-                        />
+                        <div className="absolute left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand to-transparent opacity-20 pointer-events-none z-20" />
 
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                             <div className="relative z-10">
@@ -164,12 +132,7 @@ export function FeaturesSection() {
                                             <span className="text-2xl font-bold text-brand leading-none">99.9%</span>
                                         </div>
                                         <div className="h-2 w-full bg-white/5 rounded-full overflow-hidden">
-                                            <motion.div
-                                                initial={{ width: 0 }}
-                                                whileInView={{ width: "99.9%" }}
-                                                transition={{ duration: 1.5, ease: "easeOut" }}
-                                                className="h-full bg-brand shadow-[0_0_15px_rgba(37,99,235,0.5)]"
-                                            />
+                                            <div className="h-full bg-brand shadow-[0_0_15px_rgba(37,99,235,0.5)] w-[99.9%]" />
                                         </div>
                                     </div>
                                     <div className="space-y-3">
@@ -178,12 +141,7 @@ export function FeaturesSection() {
                                             <span className="text-2xl font-bold text-text-muted leading-none">85%</span>
                                         </div>
                                         <div className="h-2 w-full bg-white/5 rounded-full overflow-hidden">
-                                            <motion.div
-                                                initial={{ width: 0 }}
-                                                whileInView={{ width: "85%" }}
-                                                transition={{ duration: 1.5, delay: 0.2, ease: "easeOut" }}
-                                                className="h-full bg-white/20"
-                                            />
+                                            <div className="h-full bg-white/20 w-[85%]" />
                                         </div>
                                     </div>
                                 </div>
@@ -206,7 +164,7 @@ export function FeaturesSection() {
                         </div>
 
                     </div>
-                </motion.div>
+                </div>
             </div>
         </section>
     );

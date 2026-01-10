@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Play, Pause, Shield } from 'lucide-react';
 
 interface MayaVoiceWidgetProps {
@@ -74,26 +73,10 @@ export function MayaVoiceWidget({ isPlaying, onToggle, isSentinelMode, onToggleS
                     {/* Audio Visualizer */}
                     <div className="flex gap-[3px] h-6 items-center">
                         {[1, 2, 3, 4, 5, 6, 7, 8].map((bar, i) => (
-                            <motion.div
+                            <div
                                 key={i}
-                                animate={isPlaying ? {
-                                    height: [
-                                        "20%",
-                                        `${30 + Math.random() * 70}%`,
-                                        "20%"
-                                    ],
-                                    backgroundColor: ["rgba(255,255,255,0.2)", "#3b82f6", "rgba(255,255,255,0.2)"]
-                                } : {
-                                    height: "20%",
-                                    backgroundColor: "rgba(255,255,255,0.2)"
-                                }}
-                                transition={isPlaying ? {
-                                    repeat: Infinity,
-                                    duration: 0.5 + Math.random() * 0.5,
-                                    ease: "easeInOut",
-                                    delay: i * 0.05
-                                } : { duration: 0.3 }}
-                                className="w-1 rounded-full"
+                                className={`w-1 rounded-full ${isPlaying ? 'bg-brand' : 'bg-white/20'}`}
+                                style={{ height: isPlaying ? `${30 + (i * 10)}%` : '20%' }}
                             />
                         ))}
                     </div>

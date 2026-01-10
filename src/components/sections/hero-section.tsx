@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motion, useMotionValue, useSpring, useTransform, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Play, ShieldCheck, Sparkles, Activity, Cpu, Database, Eye } from 'lucide-react';
 import { BlueParticles } from '@/components/ui/blue-particles';
 import { MayaVoiceWidget } from '@/components/ui/maya-voice-widget';
@@ -13,16 +12,10 @@ export function HeroSection() {
     const [isMayaSpeaking, setIsMayaSpeaking] = useState(false);
     const [isSentinelMode, setIsSentinelMode] = useState(false);
     const videoRef = React.useRef<HTMLVideoElement>(null);
-    const mouseX = useMotionValue(0);
-    const mouseY = useMotionValue(0);
 
     useEffect(() => {
         setMounted(true);
     }, []);
-
-    // Smooth springs for gaze parallax
-    const rotateX = useSpring(useTransform(mouseY, [-400, 400], [8, -8]), { stiffness: 100, damping: 30 });
-    const rotateY = useSpring(useTransform(mouseX, [-400, 400], [-8, 8]), { stiffness: 100, damping: 30 });
 
     useEffect(() => {
         if (!videoRef.current) return;
@@ -35,17 +28,6 @@ export function HeroSection() {
         }
     }, [isMayaSpeaking]);
 
-    useEffect(() => {
-        const handleMouseMove = (e: MouseEvent) => {
-            const { clientX, clientY } = e;
-            const { innerWidth, innerHeight } = window;
-            mouseX.set(clientX - innerWidth / 2);
-            mouseY.set(clientY - innerHeight / 2);
-        };
-        window.addEventListener('mousemove', handleMouseMove);
-        return () => window.removeEventListener('mousemove', handleMouseMove);
-    }, [mouseX, mouseY]);
-
     return (
         <section className="relative min-h-[90vh] flex flex-col justify-center pt-24 pb-12 px-4 sm:px-6 overflow-hidden">
 
@@ -57,41 +39,21 @@ export function HeroSection() {
 
             <div className="max-w-7xl mx-auto relative z-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="flex flex-col items-start text-left max-w-2xl">
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.5 }}
-                        className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand/10 border border-brand/20 shadow-[0_0_15px_rgba(37,99,235,0.1)] mb-8"
-                    >
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand/10 border border-brand/20 shadow-[0_0_15px_rgba(37,99,235,0.1)] mb-8">
                         <Sparkles className="w-3.5 h-3.5 text-brand" />
                         <span className="technical-label text-brand">Next-Gen Multi-Agent AI</span>
-                    </motion.div>
+                    </div>
 
-                    <motion.h1
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[1.02] tracking-tight text-white"
-                    >
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[1.02] tracking-tight text-white">
                         Truth in Hiring. <br />
                         <span className="text-brand">Verified</span> by AI.
-                    </motion.h1>
+                    </h1>
 
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-                        className="text-lg sm:text-xl text-text-secondary mb-10 leading-relaxed max-w-xl"
-                    >
+                    <p className="text-lg sm:text-xl text-text-secondary mb-10 leading-relaxed max-w-xl">
                         Every bad hire costs your team time, money, and morale. TalentLyt is the world's first **Multi-Agent** interview suite that ensures you only hire candidates who can actually do the job.
-                    </motion.p>
+                    </p>
 
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                        className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto"
-                    >
+                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
                         <Link
                             href="/request-demo"
                             onClick={() => mixpanel.track('CTA_Click', { location: 'Hero', type: 'Early Access' })}
@@ -111,27 +73,19 @@ export function HeroSection() {
                             <Play className="w-4 h-4 fill-current" aria-hidden="true" />
                             Watch System
                         </Link>
-                    </motion.div>
+                    </div>
 
                     {/* Interactive Agent Controller - Moved here from video overlay */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.3 }}
-                        className="mt-8 w-full sm:w-auto min-w-[320px]"
-                    >
+                    <div className="mt-8 w-full sm:w-auto min-w-[320px]">
                         <MayaVoiceWidget
                             isPlaying={isMayaSpeaking}
                             onToggle={() => setIsMayaSpeaking(!isMayaSpeaking)}
                             isSentinelMode={isSentinelMode}
                             onToggleSentinel={() => setIsSentinelMode(!isSentinelMode)}
                         />
-                    </motion.div>
+                    </div>
 
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.6 }}
+                    <div
                         className="mt-12 flex items-center gap-8 sm:gap-12 border-t border-white/5 pt-8 w-full"
                         aria-label="Key metrics"
                     >
@@ -144,17 +98,11 @@ export function HeroSection() {
                             <div className="text-2xl sm:text-3xl font-bold text-white mb-1">5.8x</div>
                             <div className="technical-label text-text-muted text-xs sm:text-[10px]">Faster Hires</div>
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
 
-                {/* Hero Visual Element with Gaze Parallax */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.9, x: 20 }}
-                    animate={{ opacity: 1, scale: 1, x: 0 }}
-                    transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                    style={{ rotateX, rotateY, perspective: 1200 }}
-                    className="relative hidden lg:block"
-                >
+                {/* Hero Visual Element */}
+                <div className="relative hidden lg:block">
                     <div className="relative z-20 w-full aspect-square max-w-[600px] mx-auto rounded-[2.5rem] overflow-hidden shadow-[0_0_80px_rgba(37,99,235,0.15)] border border-white/20 bg-card/40 backdrop-blur-md">
                         <div className="w-full h-full relative">
                             <video
@@ -170,24 +118,17 @@ export function HeroSection() {
                             />
 
                             {/* Forensic Sentinel HUD Overlay */}
-                            <AnimatePresence>
-                                {isSentinelMode && (
-                                    <motion.div
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
-                                        exit={{ opacity: 0 }}
-                                        className="absolute inset-0 z-30 pointer-events-none"
-                                    >
-                                        {/* SVG Gaze Vectors (V-JEPA) */}
-                                        <svg className="absolute inset-0 w-full h-full">
-                                            <motion.line
-                                                x1="38%" y1="35%" x2="42%" y2="35%"
-                                                stroke="#2563eb" strokeWidth="1" strokeDasharray="4 2"
-                                                animate={{ opacity: [0.2, 0.8, 0.2] }} transition={{ repeat: Infinity, duration: 1.5 }}
-                                            />
-                                            <motion.circle cx="40%" cy="35%" r="20" stroke="#2563eb" strokeWidth="0.5" fill="none" animate={{ r: [18, 22, 18] }} transition={{ repeat: Infinity, duration: 2 }} />
-                                            <motion.circle cx="60%" cy="35%" r="20" stroke="#2563eb" strokeWidth="0.5" fill="none" animate={{ r: [18, 22, 18] }} transition={{ repeat: Infinity, duration: 2, delay: 0.5 }} />
-                                        </svg>
+                            {isSentinelMode && (
+                                <div className="absolute inset-0 z-30 pointer-events-none">
+                                    {/* SVG Gaze Vectors (V-JEPA) */}
+                                    <svg className="absolute inset-0 w-full h-full">
+                                        <line
+                                            x1="38%" y1="35%" x2="42%" y2="35%"
+                                            stroke="#2563eb" strokeWidth="1" strokeDasharray="4 2" opacity="0.5"
+                                        />
+                                        <circle cx="40%" cy="35%" r="20" stroke="#2563eb" strokeWidth="0.5" fill="none" />
+                                        <circle cx="60%" cy="35%" r="20" stroke="#2563eb" strokeWidth="0.5" fill="none" />
+                                    </svg>
 
                                         {/* Scanline Effect */}
                                         <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_2px,3px_100%] pointer-events-none opacity-20" />
@@ -195,15 +136,12 @@ export function HeroSection() {
                                         {/* Alpamayo Reasoning Stream */}
                                         <div className="absolute top-1/2 left-6 -translate-y-1/2 flex flex-col gap-1 font-mono text-[8px] text-brand/80">
                                             {['COG_AUTH: 0.998', 'SENTIMENT: NEUTRAL', 'LATENT_INTENT: VERIFIED', 'JITters: 0.002ms', 'V_JEPA_SYNC: OK'].map((trace, i) => (
-                                                <motion.div
+                                                <div
                                                     key={i}
-                                                    initial={{ opacity: 0, x: -10 }}
-                                                    animate={{ opacity: 1, x: 0 }}
-                                                    transition={{ delay: i * 0.1 }}
                                                     className="bg-black/40 px-1 border-l border-brand/50"
                                                 >
                                                     {trace}
-                                                </motion.div>
+                                                </div>
                                             ))}
                                         </div>
 
@@ -212,9 +150,8 @@ export function HeroSection() {
                                         <div className="absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-brand/40" />
                                         <div className="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-brand/40" />
                                         <div className="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-brand/40" />
-                                    </motion.div>
+                                    </div>
                                 )}
-                            </AnimatePresence>
                         </div>
                         <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent opacity-30" />
 
@@ -243,7 +180,7 @@ export function HeroSection() {
                     {/* Decorative Background Elements - Static */}
                     <div className="absolute -top-12 -right-12 w-80 h-80 bg-brand/10 blur-[100px] rounded-full -z-10" />
                     <div className="absolute -bottom-12 -left-12 w-80 h-80 bg-highlight/5 blur-[100px] rounded-full -z-10" />
-                </motion.div>
+                </div>
             </div>
 
             {/* Social Proof Bar */}

@@ -1,35 +1,9 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React from 'react';
 import { Quote, Star } from 'lucide-react';
-import { motion, useInView } from 'framer-motion';
 
 export function TestimonialsSection() {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.15
-            }
-        }
-    };
-
-    const itemVariants = {
-        hidden: { opacity: 0, y: 30, scale: 0.95 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            transition: {
-                duration: 0.5,
-                ease: [0.4, 0, 0.2, 1] as const
-            }
-        }
-    };
     const testimonials = [
         {
             quote: "TalentLyt transformed our hiring process. We've reduced false positives by 95% and cut our time-to-hire in half. The integrity verification gives us confidence we're making the right decisions.",
@@ -73,18 +47,13 @@ export function TestimonialsSection() {
     ];
 
     return (
-        <section id="testimonials" className="py-24 sm:py-32 px-4 sm:px-6 bg-[#030303] relative overflow-hidden" ref={ref}>
+        <section id="testimonials" className="py-24 sm:py-32 px-4 sm:px-6 bg-[#030303] relative overflow-hidden">
             {/* Background Accents */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand/5 blur-[120px] rounded-full -z-10" />
             <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand/5 blur-[120px] rounded-full -z-10" />
 
             <div className="max-w-7xl mx-auto relative z-10">
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                    className="text-center mb-20 md:mb-24"
-                >
+                <div className="text-center mb-20 md:mb-24">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 border border-brand/20 text-brand text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
                         Case Studies & Impact
                     </div>
@@ -95,22 +64,17 @@ export function TestimonialsSection() {
                         Join the elite engineering teams who have eliminated bad hires
                         and restored trust in their technical interview process.
                     </p>
-                </motion.div>
+                </div>
 
                 {/* Testimonials Grid */}
-                <motion.div
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate={isInView ? "visible" : "hidden"}
+                <div
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-24 md:mb-32"
                     role="list"
                     aria-label="Customer testimonials"
                 >
                     {testimonials.map((testimonial, index) => (
-                        <motion.article
+                        <article
                             key={index}
-                            variants={itemVariants}
-                            whileHover={{ y: -8 }}
                             className="relative group h-full"
                             role="listitem"
                         >
@@ -146,17 +110,12 @@ export function TestimonialsSection() {
                                     </div>
                                 </div>
                             </div>
-                        </motion.article>
+                        </article>
                     ))}
-                </motion.div>
+                </div>
 
                 {/* Case Studies / Results Section */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.98 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8 }}
-                    className="relative p-1 rounded-[3.5rem] bg-gradient-to-b from-white/10 to-transparent overflow-hidden"
-                >
+                <div className="relative p-1 rounded-[3.5rem] bg-gradient-to-b from-white/10 to-transparent overflow-hidden">
                     <div className="bg-[#0a0a0a]/90 backdrop-blur-3xl rounded-[3.4rem] p-10 md:p-20 border border-white/5 relative overflow-hidden text-center">
                         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-brand/10 blur-[100px] rounded-full -z-10" />
 
@@ -180,7 +139,7 @@ export function TestimonialsSection() {
                             ))}
                         </div>
                     </div>
-                </motion.div>
+                </div>
 
                 {/* Trust Badges */}
                 <div className="mt-24 text-center">
