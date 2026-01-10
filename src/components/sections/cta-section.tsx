@@ -2,14 +2,12 @@
 
 import Link from 'next/link';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import mixpanel from 'mixpanel-browser';
 
 export function CTASection() {
-    const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.2, triggerOnce: true });
 
     return (
-        <section ref={sectionRef as React.RefObject<HTMLElement>} className="px-4 sm:px-6 py-24 sm:py-32 bg-[#030303] relative overflow-hidden">
+        <section className="px-4 sm:px-6 py-24 sm:py-32 bg-[#030303] relative overflow-hidden">
             {/* Background Glows */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-4xl opacity-20 pointer-events-none">
                 <div className="absolute inset-0 bg-brand/20 blur-[120px] rounded-full animate-pulse" />
@@ -20,18 +18,18 @@ export function CTASection() {
 
                     <div className="relative z-10 flex flex-col items-center">
                         {/* Urgency Badge */}
-                        <div className={`inline-flex items-center gap-2 px-4 py-2 bg-brand/10 border border-brand/20 rounded-full mb-10 ${isVisible ? 'fade-in animate-delay-100' : 'animate-on-scroll'}`}>
+                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand/10 border border-brand/20 rounded-full mb-10">
                             <span className="technical-label text-[10px] text-brand">
                                 [Operational_Status: Scalable]
                             </span>
                             <div className="w-1.5 h-1.5 rounded-full bg-brand animate-pulse" />
                         </div>
 
-                        <h2 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 tracking-tighter text-white leading-[0.9] text-center ${isVisible ? 'slide-up animate-delay-200' : 'animate-on-scroll'}`}>
+                        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 tracking-tighter text-white leading-[0.9] text-center">
                             Hire with confidence. <br />
                             <span className="text-brand">Build better teams.</span>
                         </h2>
-                        <p className={`text-lg sm:text-xl text-text-secondary mb-12 max-w-2xl mx-auto text-center opacity-70 ${isVisible ? 'slide-up animate-delay-300' : 'animate-on-scroll'}`}>
+                        <p className="text-lg sm:text-xl text-text-secondary mb-12 max-w-2xl mx-auto text-center opacity-70">
                             Transform your technical hiring process with AI-powered integrity verification and automated assessments grounded in technical truth.
                         </p>
 

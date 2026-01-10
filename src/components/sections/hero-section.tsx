@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { ArrowRight, Play, ShieldCheck, Sparkles, Activity, Cpu, Database, Eye } from 'lucide-react';
 import { BlueParticles } from '@/components/ui/blue-particles';
 import { MayaVoiceWidget } from '@/components/ui/maya-voice-widget';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import mixpanel from 'mixpanel-browser';
 
 export function HeroSection() {
@@ -13,7 +12,6 @@ export function HeroSection() {
     const [isMayaSpeaking, setIsMayaSpeaking] = useState(false);
     const [isSentinelMode, setIsSentinelMode] = useState(false);
     const videoRef = React.useRef<HTMLVideoElement>(null);
-    const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation({ threshold: 0.2, triggerOnce: true });
 
     useEffect(() => {
         setMounted(true);
@@ -31,7 +29,7 @@ export function HeroSection() {
     }, [isMayaSpeaking]);
 
     return (
-        <section ref={heroRef as React.RefObject<HTMLElement>} className="relative min-h-[90vh] flex flex-col justify-center pt-24 pb-12 px-4 sm:px-6 overflow-hidden">
+        <section className="relative min-h-[90vh] flex flex-col justify-center pt-24 pb-12 px-4 sm:px-6 overflow-hidden">
 
             {/* Background Glows - Made static */}
             <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-full h-full max-w-6xl pointer-events-none -z-10">
@@ -40,18 +38,18 @@ export function HeroSection() {
             </div>
 
             <div className="max-w-7xl mx-auto relative z-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div className={`flex flex-col items-start text-left max-w-2xl ${heroVisible ? 'slide-up' : 'animate-on-scroll'}`}>
-                    <div className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand/10 border border-brand/20 shadow-[0_0_15px_rgba(37,99,235,0.1)] mb-8 ${heroVisible ? 'fade-in animate-delay-100' : 'animate-on-scroll'}`}>
+                <div className="flex flex-col items-start text-left max-w-2xl">
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand/10 border border-brand/20 shadow-[0_0_15px_rgba(37,99,235,0.1)] mb-8">
                         <Sparkles className="w-3.5 h-3.5 text-brand" />
                         <span className="technical-label text-brand">Next-Gen Multi-Agent AI</span>
                     </div>
 
-                    <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[1.02] tracking-tight text-white ${heroVisible ? 'slide-up animate-delay-200' : 'animate-on-scroll'}`}>
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[1.02] tracking-tight text-white">
                         Truth in Hiring. <br />
                         <span className="text-brand">Verified</span> by AI.
                     </h1>
 
-                    <p className={`text-lg sm:text-xl text-text-secondary mb-10 leading-relaxed max-w-xl ${heroVisible ? 'slide-up animate-delay-300' : 'animate-on-scroll'}`}>
+                    <p className="text-lg sm:text-xl text-text-secondary mb-10 leading-relaxed max-w-xl">
                         Every bad hire costs your team time, money, and morale. TalentLyt is the world's first **Multi-Agent** interview suite that ensures you only hire candidates who can actually do the job.
                     </p>
 
@@ -104,7 +102,7 @@ export function HeroSection() {
                 </div>
 
                 {/* Hero Visual Element */}
-                <div className={`relative hidden lg:block ${heroVisible ? 'slide-right animate-delay-300' : 'animate-on-scroll'}`}>
+                <div className="relative hidden lg:block">
                     <div className="relative z-20 w-full aspect-square max-w-[600px] mx-auto rounded-[2.5rem] overflow-hidden shadow-[0_0_80px_rgba(37,99,235,0.15)] border border-white/20 bg-card/40 backdrop-blur-md">
                         <div className="w-full h-full relative">
                             <video

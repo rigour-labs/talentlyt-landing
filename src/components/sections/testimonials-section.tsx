@@ -2,10 +2,8 @@
 
 import React from 'react';
 import { Quote, Star } from 'lucide-react';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 export function TestimonialsSection() {
-    const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.1, triggerOnce: true });
     const testimonials = [
         {
             quote: "TalentLyt transformed our hiring process. We've reduced false positives by 95% and cut our time-to-hire in half. The integrity verification gives us confidence we're making the right decisions.",
@@ -49,17 +47,17 @@ export function TestimonialsSection() {
     ];
 
     return (
-        <section ref={sectionRef as React.RefObject<HTMLElement>} id="testimonials" className="py-24 sm:py-32 px-4 sm:px-6 bg-[#030303] relative overflow-hidden">
+        <section id="testimonials" className="py-24 sm:py-32 px-4 sm:px-6 bg-[#030303] relative overflow-hidden">
             {/* Background Accents */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand/5 blur-[120px] rounded-full -z-10" />
             <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand/5 blur-[120px] rounded-full -z-10" />
 
             <div className="max-w-7xl mx-auto relative z-10">
-                <div className={`text-center mb-20 md:mb-24 ${isVisible ? 'slide-up' : 'animate-on-scroll'}`}>
-                    <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 border border-brand/20 text-brand text-[10px] font-bold uppercase tracking-[0.2em] mb-6 ${isVisible ? 'fade-in animate-delay-100' : 'animate-on-scroll'}`}>
+                <div className="text-center mb-20 md:mb-24">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 border border-brand/20 text-brand text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
                         Case Studies & Impact
                     </div>
-                    <h2 className={`text-4xl sm:text-5xl md:text-6xl font-bold mb-8 tracking-tight text-white leading-[1.1] ${isVisible ? 'slide-up animate-delay-200' : 'animate-on-scroll'}`}>
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 tracking-tight text-white leading-[1.1]">
                         Trusted by <span className="text-brand">Engineering Leaders</span>
                     </h2>
                     <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
@@ -74,13 +72,10 @@ export function TestimonialsSection() {
                     role="list"
                     aria-label="Customer testimonials"
                 >
-                    {testimonials.map((testimonial, index) => {
-                        const delayClass = index === 0 ? 'animate-delay-100' : index === 1 ? 'animate-delay-200' : 'animate-delay-300';
-                        const animationClass = isVisible ? `slide-up ${delayClass}` : 'animate-on-scroll';
-                        return (
+                    {testimonials.map((testimonial, index) => (
                         <article
                             key={index}
-                            className={`relative group h-full ${animationClass}`}
+                            className="relative group h-full"
                             role="listitem"
                         >
                             <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[2.5rem] -z-10" />
@@ -116,8 +111,7 @@ export function TestimonialsSection() {
                                 </div>
                             </div>
                         </article>
-                        );
-                    })}
+                    ))}
                 </div>
 
                 {/* Case Studies / Results Section */}
