@@ -1,499 +1,410 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { Bot, Shield, Zap, Search, Eye, Mic2, Activity, Database, Lock, Share2, ShieldCheck, Fingerprint } from 'lucide-react';
+import React, { useEffect, useState, useRef } from 'react';
+import { motion, useInView, AnimatePresence } from 'framer-motion';
+import { Bot, Shield, Fingerprint, Mic2, Database, Activity, ShieldCheck, Cpu, Zap, Lock, Search, Sparkles } from 'lucide-react';
+
+const SignalPath = ({ startRef, endRef, active, color = "#2563eb" }: { startRef: React.RefObject<HTMLDivElement | null>, endRef: React.RefObject<HTMLDivElement | null>, active: boolean, color?: string }) => {
+    const [path, setPath] = useState("");
+
+    useEffect(() => {
+        const updatePath = () => {
+            if (!startRef.current || !endRef.current) return;
+            const startRect = startRef.current.getBoundingClientRect();
+            const endRect = endRef.current.getBoundingClientRect();
+            const parentRect = startRef.current.closest('.grid')?.getBoundingClientRect();
+
+            if (!parentRect) return;
+
+            const x1 = startRect.left + startRect.width - parentRect.left;
+            const y1 = startRect.top + startRect.height / 3 - parentRect.top;
+            const x2 = endRect.left - parentRect.left;
+            const y2 = endRect.top + endRect.height / 3 - parentRect.top;
+
+            const midX = x1 + (x2 - x1) * 0.5;
+            setPath(`M ${x1} ${y1} L ${midX} ${y1} L ${midX} ${y2} L ${x2} ${y2}`);
+        };
+
+        const timer = setTimeout(updatePath, 500);
+        window.addEventListener('resize', updatePath);
+        return () => {
+            window.removeEventListener('resize', updatePath);
+            clearTimeout(timer);
+        };
+    }, [active]);
+
+    return (
+        <svg className="absolute inset-0 w-full h-full pointer-events-none z-0 hidden lg:block overflow-visible">
+            <defs>
+                <filter id="neon-glow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="3" result="blur" />
+                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+            </defs>
+            <motion.path
+                d={path}
+                fill="none"
+                stroke={color}
+                strokeWidth="2"
+                strokeOpacity="0.05"
+                initial={{ pathLength: 0 }}
+                animate={active ? { pathLength: 1 } : {}}
+                transition={{ duration: 1.5 }}
+            />
+            {active && (
+                <React.Fragment>
+                    {/* The Packet Visual */}
+                    <motion.circle r="4" fill={color} filter="url(#neon-glow)">
+                        <animateMotion dur="4s" repeatCount="Infinity" path={path} />
+                    </motion.circle>
+
+                    {/* The Trail */}
+                    <motion.path
+                        d={path}
+                        fill="none"
+                        stroke={color}
+                        strokeWidth="2"
+                        strokeDasharray="40, 400"
+                        animate={{ strokeDashoffset: [-440, 0] }}
+                        transition={{ repeat: Infinity, duration: 4, ease: "linear" }}
+                        className="opacity-40"
+                    />
+                </React.Fragment>
+            )}
+        </svg>
+    );
+};
+
+const NeuralCore = () => (
+    <div className="relative w-full h-full flex items-center justify-center bg-brand/5 overflow-hidden">
+        {/* Holographic Mesh */}
+        <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#2563eb_1.5px,transparent_1.5px)] bg-[size:24px_24px]" />
+
+        {/* 3D Rotating Rings */}
+        {[1, 2, 3].map((ring) => (
+            <motion.div
+                key={ring}
+                className="absolute border border-brand/30 rounded-full"
+                style={{
+                    width: `${ring * 65}px`,
+                    height: `${ring * 65}px`,
+                    perspective: '1000px'
+                }}
+                animate={{
+                    rotate: ring % 2 === 0 ? 360 : -360,
+                    scale: [1, 1.02, 1],
+                    opacity: [0.2, 0.4, 0.2]
+                }}
+                transition={{
+                    rotate: { duration: 8 + ring * 4, repeat: Infinity, ease: "linear" },
+                    scale: { duration: 3, repeat: Infinity, ease: "easeInOut" },
+                    opacity: { duration: 3, repeat: Infinity, ease: "easeInOut" }
+                }}
+            >
+                <div className={`absolute -top-1 left-1/2 w-2 h-2 rounded-full bg-brand shadow-[0_0_15px_#2563eb]`} />
+                {ring === 2 && <div className={`absolute bottom-0 right-1/4 w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_10px_#22d3ee]`} />}
+            </motion.div>
+        ))}
+
+        {/* Central Intelligence Unit */}
+        <motion.div
+            className="relative z-10 w-20 h-20 rounded-full bg-brand/40 flex items-center justify-center backdrop-blur-xl border border-brand/50 shadow-[0_0_60px_rgba(37,99,235,0.4)]"
+            animate={{
+                scale: [1, 1.08, 1],
+                rotateY: [0, 180, 360]
+            }}
+            transition={{
+                scale: { duration: 2, repeat: Infinity, ease: "easeInOut" },
+                rotateY: { duration: 10, repeat: Infinity, ease: "linear" }
+            }}
+        >
+            <Shield className="w-10 h-10 text-white" />
+
+            {/* Inner Glitch Effect */}
+            <motion.div
+                className="absolute inset-0 bg-brand/20 rounded-full"
+                animate={{ opacity: [0, 0.3, 0], scale: [1, 1.2, 1] }}
+                transition={{ duration: 0.1, repeat: Infinity, repeatDelay: 2 }}
+            />
+        </motion.div>
+
+        {/* Neural Network Nodes */}
+        {[...Array(8)].map((_, i) => (
+            <motion.div
+                key={i}
+                className="absolute w-1 h-1 bg-cyan-500 rounded-full"
+                animate={{
+                    x: [Math.random() * 180 - 90, Math.random() * 180 - 90],
+                    y: [Math.random() * 180 - 90, Math.random() * 180 - 90],
+                    opacity: [0, 0.6, 0]
+                }}
+                transition={{
+                    duration: 4 + Math.random() * 3,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                }}
+            />
+        ))}
+    </div>
+);
 
 export function ArchitectureSection() {
     const [mounted, setMounted] = useState(false);
-    const [telemetry, setTelemetry] = useState<string[]>([]);
-    const [integrityScore, setIntegrityScore] = useState(0);
-    const [syncRate, setSyncRate] = useState(0);
+    const sectionRef = useRef(null);
+    const isInView = useInView(sectionRef, { once: false, amount: 0.2 });
+
+    const card1Ref = useRef<HTMLDivElement>(null);
+    const card2Ref = useRef<HTMLDivElement>(null);
+    const card3Ref = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         setMounted(true);
-        setTelemetry([...Array(20)].map(() => Math.random().toString(16).slice(2, 10).toUpperCase()));
-
-        // Animated counters
-        const integrityInterval = setInterval(() => {
-            setIntegrityScore(prev => prev < 99.8 ? Math.min(prev + 2.5, 99.8) : 99.8);
-        }, 50);
-        const syncInterval = setInterval(() => {
-            setSyncRate(prev => prev < 100 ? Math.min(prev + 3, 100) : 100);
-        }, 40);
-
-        return () => {
-            clearInterval(integrityInterval);
-            clearInterval(syncInterval);
-        };
     }, []);
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-    const cardVariants = {
-        hidden: { opacity: 0, y: 30 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.8,
-                ease: [0.16, 1, 0.3, 1] as any
-            }
+    const agents = [
+        {
+            id: 'maya',
+            ref: card1Ref,
+            name: "Conversational Sentinel",
+            role: "MAYA - LEAD AUDITOR",
+            tag: "Voice & Behavioral Analysis",
+            icon: Bot,
+            color: "brand",
+            image: "/assets/maya.png",
+            features: [
+                { icon: Mic2, text: "Nova-grade Voice Auth" },
+                { icon: Activity, text: "Micro-expression Gaze Sync" },
+                { icon: ShieldCheck, text: "Behavioral Fingerprinting" }
+            ]
+        },
+        {
+            id: 'nemo',
+            ref: card2Ref,
+            name: "Security Sentinel",
+            role: "NEURAL FIREWALL",
+            tag: "Interaction Integrity",
+            icon: Shield,
+            color: "brand",
+            visual: "neural",
+            features: [
+                { icon: Lock, text: "Jailbreak Defense" },
+                { icon: Zap, text: "Off-Topic Filtering" },
+                { icon: Database, text: "RAG Verification" }
+            ]
+        },
+        {
+            id: 'audit',
+            ref: card3Ref,
+            name: "Forensic Truth Engine",
+            role: "ALPAMAYO + V-JEPA",
+            tag: "Cognitive & Motion Trace Audit",
+            icon: Fingerprint,
+            color: "warning",
+            image: "/assets/governor.jpg",
+            features: [
+                { icon: Search, text: "Reasoning Trace Analysis" },
+                { icon: Cpu, text: "V-JEPA Predictive Sync" },
+                { icon: Database, text: "Defensible Audit Trails" }
+            ]
         }
-    };
+    ];
+
+    if (!mounted) return null;
 
     return (
-        <section id="architecture" className="relative py-24 sm:py-32 px-4 sm:px-6 overflow-hidden bg-background" ref={ref}>
-            {/* Background Grid */}
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:60px:60px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] -z-10" />
+        <section id="architecture" className="relative py-32 px-4 sm:px-6 overflow-hidden bg-black" ref={sectionRef}>
+            {/* Space-like Background Depths */}
+            <div className="absolute inset-0 opacity-30 pointer-events-none">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1.5px,transparent_1.5px),linear-gradient(to_bottom,#1e293b_1.5px,transparent_1.5px)] bg-[size:40px_40px]" />
+                <div className="absolute inset-0 bg-radial-gradient from-brand/10 via-transparent to-transparent" />
+            </div>
 
             <div className="max-w-7xl mx-auto relative z-10">
-                <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-20 sm:mb-28">
+                <header className="text-center max-w-4xl mx-auto mb-20">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
-                        className="px-4 py-1 rounded-full bg-highlight/10 border border-highlight/20 text-highlight text-[10px] font-bold uppercase tracking-[0.3em] mb-8"
+                        className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-brand/10 border border-brand/30 mb-8 shadow-[0_0_20px_rgba(37,99,235,0.1)]"
                     >
-                        Next-Gen Multi-Agent AI
+                        <Shield className="w-4 h-4 text-brand" />
+                        <span className="technical-label text-[10px] text-brand tracking-[0.2em]">Consensus Audit Protocol v4.0</span>
                     </motion.div>
-                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 tracking-tight text-white leading-tight">
-                        The Command Center for <br /><span className="text-brand">Technical Truth</span>
+                    <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-8 tracking-tighter">
+                        The <span className="text-brand">Sentinel</span> Hierarchy
                     </h2>
-                    <p className="text-lg sm:text-xl text-text-secondary leading-relaxed max-w-2xl mb-6">
-                        TalentLyt isn't just an interview tool. It's a high-precision verification engine
-                        where multiple specialized agents maintain a continuous consensus on candidate integrity.
+                    <p className="text-xl text-text-secondary leading-relaxed max-w-2xl mx-auto font-medium">
+                        A decentralized multi-agent network ensuring continuous technical verification through sub-millisecond consensus.
                     </p>
+                </header>
+
+                <div className="relative grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+
+                    {/* Animated Connection Lines with Neon Flow */}
+                    <SignalPath startRef={card1Ref} endRef={card2Ref} active={isInView} />
+                    <SignalPath startRef={card2Ref} endRef={card3Ref} active={isInView} />
+
+                    {agents.map((agent, i) => (
+                        <motion.div
+                            key={agent.id}
+                            ref={agent.ref}
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: i * 0.15, type: "spring", stiffness: 50 }}
+                            whileHover={{ y: -12, scale: 1.01 }}
+                            className={`relative group p-7 rounded-[3rem] bg-card/30 border border-white/5 backdrop-blur-3xl transition-all duration-700 overflow-hidden`}
+                        >
+                            {/* Macro-Pulse Aura on Global Consensus */}
+                            {isInView && (
+                                <motion.div
+                                    animate={{
+                                        opacity: [0, 0.4, 0],
+                                        boxShadow: [
+                                            `0 0 0 0px ${agent.color === 'warning' ? 'rgba(245,158,11,0)' : 'rgba(37,99,235,0)'}`,
+                                            `0 0 40px 10px ${agent.color === 'warning' ? 'rgba(245,158,11,0.2)' : 'rgba(37,99,235,0.2)'}`,
+                                            `0 0 0 0px ${agent.color === 'warning' ? 'rgba(245,158,11,0)' : 'rgba(37,99,235,0)'}`
+                                        ]
+                                    }}
+                                    transition={{ repeat: Infinity, duration: 4, delay: i * 1.3, ease: "easeInOut" }}
+                                    className="absolute inset-0 rounded-[3rem] pointer-events-none border-2 border-brand/5"
+                                />
+                            )}
+
+                            <div className="relative z-10">
+                                {/* Agent Identity */}
+                                <div className="flex items-center gap-5 mb-10">
+                                    <div className={`w-16 h-16 rounded-2xl bg-${agent.color}/10 border border-${agent.color}/20 flex items-center justify-center text-${agent.color} group-hover:bg-${agent.color}/20 transition-colors shadow-2xl`}>
+                                        <agent.icon className="w-8 h-8" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-2xl font-bold text-white leading-tight transition-colors group-hover:text-brand">{agent.name}</h3>
+                                        <div className={`text-[10px] font-bold text-${agent.color} uppercase tracking-[0.25em] mb-1`}>{agent.role}</div>
+                                    </div>
+                                </div>
+
+                                {/* Visual Verification Surface */}
+                                <div className="relative aspect-[4/3] rounded-[2rem] overflow-hidden mb-10 border border-white/10 bg-black/60 shadow-2xl group/visual">
+                                    {agent.visual === 'neural' ? (
+                                        <NeuralCore />
+                                    ) : (
+                                        <div className="relative w-full h-full">
+                                            <img
+                                                src={agent.image}
+                                                alt={agent.name}
+                                                className={`w-full h-full object-cover transition-all duration-[2s] group-hover:scale-110 ${agent.id === 'audit' ? 'grayscale brightness-75' : 'brightness-[1.1]'}`}
+                                            />
+
+                                            {/* Technical HUD Layer */}
+                                            <div className="absolute inset-0 pointer-events-none z-20">
+                                                {/* Corner Sights */}
+                                                <div className="absolute top-6 left-6 w-5 h-5 border-t border-l border-white/30" />
+                                                <div className="absolute bottom-6 right-6 w-5 h-5 border-b border-r border-white/30" />
+
+                                                {/* Scanning Horizon */}
+                                                <motion.div
+                                                    animate={{ top: ['0%', '100%', '0%'] }}
+                                                    transition={{ repeat: Infinity, duration: 4, ease: "linear" }}
+                                                    className={`absolute left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-${agent.color === 'warning' ? 'warning' : 'brand'} to-transparent opacity-60 shadow-[0_0_15px_rgba(37,99,235,0.8)]`}
+                                                />
+
+                                                {/* Data Overlays */}
+                                                {agent.id === 'maya' && (
+                                                    <div className="absolute inset-0 flex items-center justify-center opacity-40">
+                                                        <motion.div
+                                                            animate={{ rotate: 360 }}
+                                                            transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
+                                                            className="w-40 h-40 border-[0.5px] border-dashed border-brand/40 rounded-full"
+                                                        />
+                                                    </div>
+                                                )}
+
+                                                {agent.id === 'audit' && (
+                                                    <div className="absolute bottom-8 right-8 font-mono text-[8px] text-warning/80 space-y-1.5 bg-black/40 p-2 backdrop-blur-md rounded-lg border border-warning/20">
+                                                        <div className="flex items-center gap-2">
+                                                            <div className="w-1.5 h-1.5 bg-warning rounded-full animate-pulse" />
+                                                            <span>VJEPA_PREDICT_SYNC: OK</span>
+                                                        </div>
+                                                        <div className="flex items-center gap-2">
+                                                            <div className="w-1.5 h-1.5 bg-green-500 rounded-full" />
+                                                            <span>ALPAMAYO_COGNITIVE: 0.99</span>
+                                                        </div>
+                                                    </div>
+                                                )}
+                                            </div>
+                                        </div>
+                                    )}
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-70" />
+
+                                    {/* Real-time Telemetry Tag */}
+                                    <div className="absolute top-6 right-6 z-30">
+                                        <motion.div
+                                            animate={{ opacity: [0.6, 1, 0.6] }}
+                                            transition={{ repeat: Infinity, duration: 2 }}
+                                            className="px-4 py-2 rounded-xl bg-black/60 border border-white/10 backdrop-blur-xl flex items-center gap-2.5"
+                                        >
+                                            <Sparkles className={`w-3 h-3 text-${agent.color}`} />
+                                            <span className="text-[10px] font-bold text-white uppercase tracking-widest">{agent.id === 'audit' ? 'Auditing' : 'Sentinel Active'}</span>
+                                        </motion.div>
+                                    </div>
+                                </div>
+
+                                {/* Capability Matrix */}
+                                <div className="space-y-3">
+                                    <div className="text-[10px] technical-label text-text-muted mb-4 px-2 uppercase tracking-[0.2em]">Verification Pipeline</div>
+                                    {agent.features.map((feature, idx) => (
+                                        <div key={idx} className="flex gap-4 items-center group/item p-3.5 rounded-2xl hover:bg-brand/5 transition-all duration-300 border border-transparent hover:border-brand/10">
+                                            <div className={`w-10 h-10 rounded-xl bg-white/5 border border-white/5 flex items-center justify-center text-text-muted group-hover/item:text-brand group-hover/item:border-brand/30 transition-all shadow-lg`}>
+                                                <feature.icon className="w-5 h-5" />
+                                            </div>
+                                            <div>
+                                                <div className="text-sm font-bold text-white group-hover/item:translate-x-1 transition-transform">{feature.text}</div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </motion.div>
+                    ))}
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 relative">
-                    {/* Maya Card */}
-                    <motion.div
-                        variants={cardVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        className="group relative p-8 rounded-[3.5rem] bg-card/30 border border-white/5 hover:border-brand/20 transition-all flex flex-col backdrop-blur-md overflow-hidden"
-                    >
-                        <div className="absolute -top-24 -right-24 w-96 h-96 bg-brand/10 blur-[100px] rounded-full -z-10 group-hover:bg-brand/20 transition-colors" />
-
-                        <div className="flex items-center gap-5 mb-10">
-                            <div className="w-16 h-16 rounded-[1.25rem] bg-brand/10 border border-brand/20 flex items-center justify-center text-brand">
-                                <Bot className="w-9 h-9" />
-                            </div>
-                            <div>
-                                <h3 className="text-2xl font-bold text-white mb-1">Maya</h3>
-                                <div className="text-[10px] text-brand font-bold uppercase tracking-[0.2em]">Conversational Lead</div>
-                            </div>
-                        </div>
-
-                        <div className="relative aspect-[4/3] rounded-3xl mb-10 overflow-hidden border border-white/10 bg-black/50 shadow-2xl group/core">
-                            {/* Animated Scanning Beam */}
-                            <motion.div
-                                animate={{ top: ['-10%', '110%'] }}
-                                transition={{ repeat: Infinity, duration: 3, ease: "linear", repeatDelay: 1 }}
-                                className="absolute left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-brand to-transparent opacity-50 blur-sm z-30"
-                            />
-                            <motion.div
-                                animate={{ top: ['-10%', '110%'] }}
-                                transition={{ repeat: Infinity, duration: 3, ease: "linear", repeatDelay: 1 }}
-                                className="absolute left-0 right-0 h-[20px] bg-gradient-to-r from-transparent via-brand/20 to-transparent blur-md z-30"
-                            />
-
-                            <img src="/assets/maya.png" alt="Maya Visual" className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105 brightness-[1.1]" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60" />
-
-                            {/* Animated Status Overlays */}
-                            {mounted && (
-                                <React.Fragment>
-                                    {/* Top Right Status Badges - Staggered entrance */}
-                                    <motion.div
-                                        initial={{ opacity: 0, x: 30, scale: 0.9 }}
-                                        animate={{ opacity: 1, x: 0, scale: 1 }}
-                                        transition={{ delay: 0.3, duration: 0.5, type: "spring", stiffness: 100 }}
-                                        className="absolute top-4 right-4 space-y-2 z-40"
-                                    >
-                                        <motion.div
-                                            initial={{ opacity: 0, y: -10 }}
-                                            animate={{ opacity: 1, y: 0 }}
-                                            transition={{ delay: 0.5, duration: 0.4 }}
-                                            className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-black/70 backdrop-blur-md border border-brand/30"
-                                        >
-                                            <motion.div
-                                                animate={{ scale: [1, 1.3, 1], opacity: [0.7, 1, 0.7] }}
-                                                transition={{ repeat: Infinity, duration: 1.5 }}
-                                                className="w-2 h-2 rounded-full bg-brand"
-                                            />
-                                            <span className="text-[9px] font-mono text-white/60 uppercase tracking-wider">Sync Rate</span>
-                                            <motion.span
-                                                className="text-[11px] font-bold text-brand tabular-nums"
-                                            >
-                                                {syncRate.toFixed(0)}Hz
-                                            </motion.span>
-                                        </motion.div>
-                                        <motion.div
-                                            initial={{ opacity: 0, y: -10 }}
-                                            animate={{ opacity: 1, y: 0 }}
-                                            transition={{ delay: 0.7, duration: 0.4 }}
-                                            className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-black/70 backdrop-blur-md border border-cyan-500/30"
-                                        >
-                                            <motion.div
-                                                animate={{ scale: [1, 1.2, 1] }}
-                                                transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-                                                className="w-1.5 h-1.5 rounded-full bg-cyan-400"
-                                            />
-                                            <span className="text-[9px] font-mono text-white/60 uppercase tracking-wider">Context Depth</span>
-                                            <motion.span
-                                                initial={{ opacity: 0 }}
-                                                animate={{ opacity: [0.5, 1, 0.5] }}
-                                                transition={{ repeat: Infinity, duration: 2 }}
-                                                className="text-[10px] font-bold text-cyan-400"
-                                            >
-                                                Active
-                                            </motion.span>
-                                        </motion.div>
-                                    </motion.div>
-
-                                    {/* Bottom Left Status */}
-                                    <motion.div
-                                        initial={{ opacity: 0, y: 20 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: 0.8, duration: 0.6 }}
-                                        className="absolute bottom-4 left-4 z-40"
-                                    >
-                                        <div className="px-4 py-2.5 rounded-xl bg-black/70 backdrop-blur-md border border-brand/30">
-                                            <div className="text-[8px] font-mono text-brand uppercase tracking-widest mb-1">Agent Status</div>
-                                            <div className="flex items-center gap-2">
-                                                <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                                                <span className="text-sm font-bold text-white">Maya Interactive</span>
-                                            </div>
-                                        </div>
-                                    </motion.div>
-
-                                    {/* Bottom Right Live Indicator */}
-                                    <motion.div
-                                        initial={{ opacity: 0, scale: 0.8 }}
-                                        animate={{ opacity: 1, scale: 1 }}
-                                        transition={{ delay: 1, duration: 0.5 }}
-                                        className="absolute bottom-4 right-4 z-40"
-                                    >
-                                        <div className="px-3 py-1.5 rounded-lg bg-black/70 backdrop-blur-md border border-brand/40">
-                                            <div className="flex items-center gap-2">
-                                                <span className="text-[9px] font-mono text-white/50 uppercase tracking-wider">AI Interviewer</span>
-                                                <div className="flex items-center gap-1.5">
-                                                    <div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
-                                                    <span className="text-[10px] font-bold text-white">MAYA LIVE</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </motion.div>
-                                </React.Fragment>
-                            )}
-                        </div>
-
-                        <div className="space-y-4">
-                            {[
-                                { icon: Mic2, text: "Natural Conversation", desc: "Human-like Nova voice feedback" },
-                                { icon: Database, text: "RAG-Powered Questions", desc: "Role-specific context injection" },
-                                { icon: Activity, text: "Adaptive Difficulty", desc: "Junior to Staff progression" }
-                            ].map((item, i) => (
-                                <div key={i} className="flex gap-4 items-start group/item">
-                                    <div className="mt-1 w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover/item:bg-brand/10 group-hover/item:border-brand/20 transition-colors">
-                                        <item.icon className="w-4 h-4 text-text-muted group-hover/item:text-brand" />
-                                    </div>
-                                    <div>
-                                        <div className="text-sm font-bold text-white mb-0.5">{item.text}</div>
-                                        <div className="text-xs text-text-muted">{item.desc}</div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </motion.div>
-
-                    {/* Guardrails Card (The Security Layer) */}
-                    <motion.div
-                        variants={cardVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        className="group relative p-8 rounded-[3.5rem] bg-brand/5 border border-brand/20 hover:border-brand/40 transition-all flex flex-col backdrop-blur-md overflow-hidden lg:translate-y-12"
-                    >
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#2563eb10_0%,transparent_70%)]" />
-
-                        <div className="flex items-center gap-5 mb-10">
-                            <div className="w-16 h-16 rounded-[1.25rem] bg-brand/20 border border-brand/30 flex items-center justify-center text-brand">
-                                <Shield className="w-9 h-9" />
-                            </div>
-                            <div>
-                                <h3 className="text-2xl font-bold text-white mb-1">NeMo Guardrails</h3>
-                                <div className="text-[10px] text-brand font-bold uppercase tracking-[0.2em]">The Security Layer</div>
-                            </div>
-                        </div>
-
-                        <div className="flex-1 flex flex-col justify-center space-y-4 relative py-8">
-                            {/* Animated vertical connection line */}
-                            <motion.div
-                                initial={{ scaleY: 0 }}
-                                animate={{ scaleY: 1 }}
-                                transition={{ duration: 1.5, ease: "easeOut" }}
-                                style={{ originY: 0 }}
-                                className="absolute left-1/2 -translate-x-1/2 top-8 bottom-8 w-[2px] bg-gradient-to-b from-brand/50 via-brand/30 to-brand/50"
-                            />
-
-                            {[
-                                { label: "Jailbreak Detection", status: "SECURE", delay: 0.2 },
-                                { label: "Off-Topic Filtering", status: "ACTIVE", delay: 0.4 },
-                                { label: "Help Rejection", status: "LOCKED", delay: 0.6 },
-                                { label: "RAG Verification", status: "SYNCED", delay: 0.8 }
-                            ].map((rail, idx) => (
-                                <React.Fragment key={idx}>
-                                    {/* Animated Arrow pointing down between boxes */}
-                                    {idx > 0 && (
-                                        <motion.div
-                                            initial={{ opacity: 0, scale: 0 }}
-                                            animate={{ opacity: 1, scale: 1 }}
-                                            transition={{ delay: rail.delay - 0.1, duration: 0.3 }}
-                                            className="flex justify-center -my-1"
-                                        >
-                                            <motion.div
-                                                animate={{ y: [0, 4, 0] }}
-                                                transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-                                                className="text-brand"
-                                            >
-                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M10 4V16M10 16L5 11M10 16L15 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                                </svg>
-                                            </motion.div>
-                                        </motion.div>
-                                    )}
-
-                                    {/* Animated Box */}
-                                    <motion.div
-                                        initial={{ opacity: 0, y: 20, scale: 0.9 }}
-                                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                                        transition={{ delay: rail.delay, duration: 0.5, type: "spring", stiffness: 100 }}
-                                        whileHover={{ scale: 1.08, boxShadow: "0 0 30px rgba(99, 102, 241, 0.3)" }}
-                                        className="relative z-10 mx-auto px-6 py-4 rounded-2xl bg-black/60 border border-brand/20 backdrop-blur-xl w-full max-w-[200px] flex flex-col items-center gap-2 group/rail hover:border-brand/50 transition-all cursor-pointer"
-                                    >
-                                        <motion.span
-                                            initial={{ opacity: 0 }}
-                                            animate={{ opacity: 1 }}
-                                            transition={{ delay: rail.delay + 0.2, duration: 0.3 }}
-                                            className="text-[11px] font-bold text-white/80 group-hover/rail:text-white transition-colors"
-                                        >
-                                            {rail.label}
-                                        </motion.span>
-                                        <div className="flex items-center gap-2">
-                                            <motion.div
-                                                animate={{ scale: [1, 1.3, 1], opacity: [0.6, 1, 0.6] }}
-                                                transition={{ repeat: Infinity, duration: 1.5, delay: idx * 0.2 }}
-                                                className="w-1.5 h-1.5 rounded-full bg-brand"
-                                            />
-                                            <motion.span
-                                                initial={{ opacity: 0 }}
-                                                animate={{ opacity: 1 }}
-                                                transition={{ delay: rail.delay + 0.3, duration: 0.3 }}
-                                                className="text-[9px] font-mono text-brand uppercase tracking-widest"
-                                            >
-                                                {rail.status}
-                                            </motion.span>
-                                        </div>
-                                    </motion.div>
-                                </React.Fragment>
-                            ))}
-                        </div>
-
-                        <div className="mt-8 pt-8 border-t border-brand/10">
-                            <p className="text-xs text-brand/60 font-medium text-center italic">
-                                Enterprise security against manipulation and LLM jailbreaking.
-                            </p>
-                        </div>
-                    </motion.div>
-
-                    {/* Audit Sentinel Card */}
-                    <motion.div
-                        variants={cardVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        className="group relative p-8 rounded-[3.5rem] bg-card/30 border border-white/5 hover:border-warning/20 transition-all flex flex-col backdrop-blur-md overflow-hidden"
-                    >
-                        <div className="absolute -top-24 -right-24 w-96 h-96 bg-warning/5 blur-[100px] rounded-full -z-10 group-hover:bg-warning/10 transition-colors" />
-
-                        <div className="flex items-center gap-5 mb-10">
-                            <div className="w-16 h-16 rounded-[1.25rem] bg-warning/10 border border-warning/20 flex items-center justify-center text-warning">
-                                <Fingerprint className="w-9 h-9" />
-                            </div>
-                            <div>
-                                <h3 className="text-2xl font-bold text-white mb-1">Audit Sentinel</h3>
-                                <div className="text-[10px] text-warning font-bold uppercase tracking-[0.2em]">The Truth Engine</div>
-                            </div>
-                        </div>
-
-                        <div className="relative aspect-[4/3] rounded-3xl mb-10 overflow-hidden border border-white/10 bg-black/50 shadow-2xl group/core">
-                            {/* Micro-Telemetry Stream */}
-                            <div className="absolute inset-y-0 left-4 w-12 py-8 overflow-hidden pointer-events-none opacity-20">
-                                {mounted && (
-                                    <motion.div
-                                        animate={{ y: [0, -100] }}
-                                        transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
-                                        className="font-mono text-[6px] text-warning space-y-1"
-                                    >
-                                        {telemetry.map((val, i) => (
-                                            <div key={i}>{val}</div>
-                                        ))}
-                                    </motion.div>
-                                )}
-                            </div>
-
-                            <img src="/assets/governor.jpg" alt="Audit Sentinel Visual" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000 grayscale brightness-75" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-80" />
-
-                            {/* Animated Scanning Beam */}
-                            <motion.div
-                                animate={{ top: ['-10%', '110%'] }}
-                                transition={{ repeat: Infinity, duration: 2.5, ease: "linear", repeatDelay: 0.5 }}
-                                className="absolute left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-warning to-transparent opacity-60 blur-sm z-30"
-                            />
-                            <motion.div
-                                animate={{ top: ['-10%', '110%'] }}
-                                transition={{ repeat: Infinity, duration: 2.5, ease: "linear", repeatDelay: 0.5 }}
-                                className="absolute left-0 right-0 h-[20px] bg-gradient-to-r from-transparent via-warning/30 to-transparent blur-md z-30"
-                            />
-
-                            {/* Animated Status Overlays */}
-                            {mounted && (
-                                <React.Fragment>
-                                    {/* Top Right Metrics - Staggered entrance */}
-                                    <motion.div
-                                        initial={{ opacity: 0, x: 30, scale: 0.9 }}
-                                        animate={{ opacity: 1, x: 0, scale: 1 }}
-                                        transition={{ delay: 0.3, duration: 0.5, type: "spring", stiffness: 100 }}
-                                        className="absolute top-4 right-4 space-y-2 z-40"
-                                    >
-                                        <motion.div
-                                            initial={{ opacity: 0, y: -10 }}
-                                            animate={{ opacity: 1, y: 0 }}
-                                            transition={{ delay: 0.5, duration: 0.4 }}
-                                            className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-black/70 backdrop-blur-md border border-warning/30"
-                                        >
-                                            <motion.div
-                                                animate={{ rotate: [0, 10, -10, 0] }}
-                                                transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-                                            >
-                                                <ShieldCheck className="w-3 h-3 text-warning" />
-                                            </motion.div>
-                                            <span className="text-[9px] font-mono text-white/60 uppercase tracking-wider">Integrity Scan</span>
-                                            <motion.span
-                                                className="text-[11px] font-bold text-warning tabular-nums"
-                                            >
-                                                {integrityScore.toFixed(1)}%
-                                            </motion.span>
-                                        </motion.div>
-                                        <motion.div
-                                            initial={{ opacity: 0, y: -10 }}
-                                            animate={{ opacity: 1, y: 0 }}
-                                            transition={{ delay: 0.7, duration: 0.4 }}
-                                            className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-black/70 backdrop-blur-md border border-green-500/30"
-                                        >
-                                            <motion.div
-                                                animate={{ scale: [1, 1.1, 1] }}
-                                                transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-                                            >
-                                                <Database className="w-3 h-3 text-green-400" />
-                                            </motion.div>
-                                            <span className="text-[9px] font-mono text-white/60 uppercase tracking-wider">Truth Index</span>
-                                            <motion.span
-                                                initial={{ opacity: 0 }}
-                                                animate={{ opacity: 1 }}
-                                                transition={{ delay: 1.5, duration: 0.5 }}
-                                                className="text-[10px] font-bold text-green-400"
-                                            >
-                                                ✓ Verified
-                                            </motion.span>
-                                        </motion.div>
-                                    </motion.div>
-
-                                    {/* Bottom Right Forensic Badge */}
-                                    <motion.div
-                                        initial={{ opacity: 0, y: 20 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: 0.8, duration: 0.6 }}
-                                        className="absolute bottom-4 right-4 z-40"
-                                    >
-                                        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-black/70 backdrop-blur-md border border-warning/30">
-                                            <Lock className="w-4 h-4 text-warning animate-pulse" />
-                                            <span className="technical-label text-warning uppercase">Forensic Active</span>
-                                        </div>
-                                    </motion.div>
-
-                                    {/* Bottom Left Audit Status */}
-                                    <motion.div
-                                        initial={{ opacity: 0, scale: 0.8 }}
-                                        animate={{ opacity: 1, scale: 1 }}
-                                        transition={{ delay: 1, duration: 0.5 }}
-                                        className="absolute bottom-4 left-4 z-40"
-                                    >
-                                        <div className="px-3 py-1.5 rounded-lg bg-black/70 backdrop-blur-md border border-warning/40">
-                                            <div className="flex items-center gap-2">
-                                                <div className="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse" />
-                                                <span className="text-[10px] font-bold text-white">AUDIT LIVE</span>
-                                            </div>
-                                        </div>
-                                    </motion.div>
-                                </React.Fragment>
-                            )}
-                        </div>
-
-                        <div className="space-y-4">
-                            {[
-                                { icon: ShieldCheck, text: "Real-time Scoring", desc: "Q&A evaluated with 1-10 accuracy" },
-                                { icon: Database, text: "RAG Verification", desc: "Cross-referenced against knowledge base" },
-                                { icon: Activity, text: "Anomaly Detection", desc: "Script detection & latency analysis" }
-                            ].map((item, i) => (
-                                <div key={i} className="flex gap-4 items-start group/item">
-                                    <div className="mt-1 w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover/item:bg-warning/10 group-hover/item:border-warning/20 transition-colors">
-                                        <item.icon className="w-4 h-4 text-text-muted group-hover/item:text-warning" />
-                                    </div>
-                                    <div>
-                                        <div className="text-sm font-bold text-white mb-0.5">{item.text}</div>
-                                        <div className="text-xs text-text-muted">{item.desc}</div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </motion.div>
-                </div >
-
+                {/* Consensus Integration Bar */}
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    className="mt-16 p-10 rounded-[2.5rem] bg-white/[0.02] border border-white/5 flex flex-col md:flex-row items-center justify-between gap-12"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    className="mt-20 p-12 rounded-[4rem] bg-[linear-gradient(135deg,rgba(37,99,235,0.08),rgba(0,0,0,0))] border border-white/5 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12 group"
                 >
-                    <div className="max-w-2xl">
-                        <div className="flex items-center gap-3 mb-4">
-                            <div className="w-2 h-2 rounded-full bg-brand animate-pulse" />
-                            <h4 className="text-xl font-bold text-white tracking-tight">Consensus Mechanism</h4>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,#2563eb05_0%,transparent_50%29]" />
+
+                    <div className="relative z-10 max-w-xl text-center md:text-left">
+                        <div className="inline-flex items-center gap-3 mb-6 text-brand">
+                            <Activity className="w-5 h-5 animate-pulse" />
+                            <span className="technical-label text-[11px] uppercase tracking-[0.3em]">Protocol Consensus Verified</span>
                         </div>
-                        <p className="text-base text-white/50 font-medium leading-relaxed">
-                            Maya conducts the session while Governor verifies technical truth in real-time.
+                        <h4 className="text-3xl font-bold text-white mb-5 tracking-tight">Decentralized Trust Network</h4>
+                        <p className="text-base text-white/50 leading-relaxed font-medium">
+                            The TalentLyt protocol demands a cryptographically signed consensus between Conversational, Security, and Forensic Sentinels. Zero hallucinations, 100% technical truth.
                         </p>
                     </div>
-                    <div className="flex items-center gap-8 shrink-0">
-                        <div className="flex -space-x-5">
-                            {[1, 2, 3].map((i) => (
-                                <div key={i} className="w-14 h-14 rounded-full border-4 border-[#0a0a0a] bg-muted overflow-hidden shadow-2xl">
-                                    <img src={`https://i.pravatar.cc/100?img=${i + 30}`} alt="auditor" className="w-full h-full object-cover" />
-                                </div>
-                            ))}
+
+                    <div className="relative z-10 flex items-center gap-10 shrink-0 bg-black/40 p-10 rounded-[3rem] border border-white/5 backdrop-blur-xl">
+                        <div className="text-right">
+                            <motion.div
+                                animate={{ color: ["#fff", "#2563eb", "#fff"] }}
+                                transition={{ duration: 4, repeat: Infinity }}
+                                className="text-5xl font-bold mb-2 tabular-nums"
+                            >
+                                0.8ms
+                            </motion.div>
+                            <div className="text-[10px] text-text-muted font-bold uppercase tracking-[0.2em]">Consensus Lag</div>
                         </div>
-                        <div className="text-center">
-                            <div className="text-2xl font-bold text-white leading-none mb-1">2k+</div>
-                            <div className="text-[10px] text-text-muted font-bold uppercase tracking-[0.2em]">Audits/Day</div>
+                        <div className="w-px h-16 bg-white/10" />
+                        <div className="text-left">
+                            <div className="text-5xl font-bold text-brand mb-2 tabular-nums">100%</div>
+                            <div className="text-[10px] text-brand font-bold uppercase tracking-[0.2em]">Authenticity</div>
                         </div>
                     </div>
                 </motion.div>
-            </div >
-        </section >
+            </div>
+        </section>
     );
 }

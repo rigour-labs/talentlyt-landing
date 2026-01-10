@@ -11,6 +11,7 @@ import mixpanel from 'mixpanel-browser';
 export function HeroSection() {
     const [mounted, setMounted] = useState(false);
     const [isMayaSpeaking, setIsMayaSpeaking] = useState(false);
+    const [isSentinelMode, setIsSentinelMode] = useState(false);
     const videoRef = React.useRef<HTMLVideoElement>(null);
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
@@ -121,6 +122,8 @@ export function HeroSection() {
                         <MayaVoiceWidget
                             isPlaying={isMayaSpeaking}
                             onToggle={() => setIsMayaSpeaking(!isMayaSpeaking)}
+                            isSentinelMode={isSentinelMode}
+                            onToggleSentinel={() => setIsSentinelMode(!isSentinelMode)}
                         />
                     </motion.div>
 
@@ -161,6 +164,53 @@ export function HeroSection() {
                                 onEnded={() => setIsMayaSpeaking(false)}
                                 preload="auto"
                             />
+
+                            {/* Forensic Sentinel HUD Overlay */}
+                            <AnimatePresence>
+                                {isSentinelMode && (
+                                    <motion.div
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 0 }}
+                                        className="absolute inset-0 z-30 pointer-events-none"
+                                    >
+                                        {/* SVG Gaze Vectors (V-JEPA) */}
+                                        <svg className="absolute inset-0 w-full h-full">
+                                            <motion.line
+                                                x1="38%" y1="35%" x2="42%" y2="35%"
+                                                stroke="#2563eb" strokeWidth="1" strokeDasharray="4 2"
+                                                animate={{ opacity: [0.2, 0.8, 0.2] }} transition={{ repeat: Infinity, duration: 1.5 }}
+                                            />
+                                            <motion.circle cx="40%" cy="35%" r="20" stroke="#2563eb" strokeWidth="0.5" fill="none" animate={{ r: [18, 22, 18] }} transition={{ repeat: Infinity, duration: 2 }} />
+                                            <motion.circle cx="60%" cy="35%" r="20" stroke="#2563eb" strokeWidth="0.5" fill="none" animate={{ r: [18, 22, 18] }} transition={{ repeat: Infinity, duration: 2, delay: 0.5 }} />
+                                        </svg>
+
+                                        {/* Scanline Effect */}
+                                        <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_2px,3px_100%] pointer-events-none opacity-20" />
+
+                                        {/* Alpamayo Reasoning Stream */}
+                                        <div className="absolute top-1/2 left-6 -translate-y-1/2 flex flex-col gap-1 font-mono text-[8px] text-brand/80">
+                                            {['COG_AUTH: 0.998', 'SENTIMENT: NEUTRAL', 'LATENT_INTENT: VERIFIED', 'JITters: 0.002ms', 'V_JEPA_SYNC: OK'].map((trace, i) => (
+                                                <motion.div
+                                                    key={i}
+                                                    initial={{ opacity: 0, x: -10 }}
+                                                    animate={{ opacity: 1, x: 0 }}
+                                                    transition={{ delay: i * 0.1 }}
+                                                    className="bg-black/40 px-1 border-l border-brand/50"
+                                                >
+                                                    {trace}
+                                                </motion.div>
+                                            ))}
+                                        </div>
+
+                                        {/* HUD Corners */}
+                                        <div className="absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-brand/40" />
+                                        <div className="absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-brand/40" />
+                                        <div className="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-brand/40" />
+                                        <div className="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-brand/40" />
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
                         </div>
                         <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent opacity-30" />
 

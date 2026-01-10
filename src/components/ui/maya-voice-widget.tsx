@@ -2,14 +2,16 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Play, Pause } from 'lucide-react';
+import { Play, Pause, Shield } from 'lucide-react';
 
 interface MayaVoiceWidgetProps {
     isPlaying: boolean;
     onToggle: () => void;
+    isSentinelMode?: boolean;
+    onToggleSentinel?: () => void;
 }
 
-export function MayaVoiceWidget({ isPlaying, onToggle }: MayaVoiceWidgetProps) {
+export function MayaVoiceWidget({ isPlaying, onToggle, isSentinelMode, onToggleSentinel }: MayaVoiceWidgetProps) {
     return (
         <div className="relative p-5 rounded-2xl bg-black/40 border border-white/10 backdrop-blur-2xl shadow-2xl overflow-hidden group">
             {/* Dynamic Background Glow */}
@@ -35,6 +37,28 @@ export function MayaVoiceWidget({ isPlaying, onToggle }: MayaVoiceWidgetProps) {
 
                 {/* Controls & Visualizer */}
                 <div className="flex items-center gap-4">
+                    {/* Sentinel Mode Toggle */}
+                    {onToggleSentinel && (
+                        <button
+                            onClick={onToggleSentinel}
+                            title="Forensic Sentinel Mode"
+                            className={`flex items-center justify-center w-10 h-10 rounded-full border transition-all ${isSentinelMode
+                                ? 'bg-brand/20 border-brand text-brand shadow-[0_0_15px_rgba(37,99,235,0.4)]'
+                                : 'bg-white/5 border-white/10 text-white/40 hover:text-white hover:bg-white/10'
+                                }`}
+                        >
+                            <div className="relative">
+                                <Shield className={`w-4 h-4 ${isSentinelMode ? 'animate-pulse' : ''}`} />
+                                {isSentinelMode && (
+                                    <span className="absolute -top-1 -right-1 flex h-2 w-2">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-75"></span>
+                                        <span className="relative inline-flex rounded-full h-2 w-2 bg-brand"></span>
+                                    </span>
+                                )}
+                            </div>
+                        </button>
+                    )}
+
                     {/* Play Button */}
                     <button
                         onClick={onToggle}
