@@ -59,22 +59,24 @@ export function CTASection() {
                             Transform your technical hiring process with AI-powered integrity verification and automated assessments grounded in technical truth.
                         </motion.p>
 
-                        <div className="flex flex-col sm:flex-row items-center gap-6 mb-16">
+                        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-6 mb-16">
                             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                                 <Link
                                     href="/request-demo"
                                     onClick={() => mixpanel.track('CTA_Click', { location: 'Bottom CTA', type: 'Start Trial' })}
-                                    className="group relative px-10 py-5 bg-brand text-white font-bold rounded-2xl transition-all shadow-[0_0_30px_rgba(37,99,235,0.3)] hover:shadow-[0_0_50px_rgba(37,99,235,0.5)] flex items-center justify-center gap-3 overflow-hidden text-lg"
+                                    className="group relative px-10 py-5 bg-brand text-white font-bold rounded-2xl transition-all shadow-[0_0_30px_rgba(37,99,235,0.3)] hover:shadow-[0_0_50px_rgba(37,99,235,0.5)] flex items-center justify-center gap-3 overflow-hidden text-lg focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
+                                    aria-label="Start free trial"
                                 >
                                     <span className="relative z-10 technical-label text-xs">Start Free Trial</span>
-                                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
+                                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" aria-hidden="true" />
                                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                                 </Link>
                             </motion.div>
                             <Link
                                 href="/live-demo"
                                 onClick={() => mixpanel.track('CTA_Click', { location: 'Bottom CTA', type: 'Watch Demo' })}
-                                className="px-10 py-5 bg-white/5 border border-white/10 text-white font-bold rounded-2xl hover:bg-white/10 transition-all backdrop-blur-md technical-label text-xs"
+                                className="px-10 py-5 bg-white/5 border border-white/10 text-white font-bold rounded-2xl hover:bg-white/10 transition-all backdrop-blur-md technical-label text-xs focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-background text-center"
+                                aria-label="Watch demo"
                             >
                                 Watch Demo
                             </Link>

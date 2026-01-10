@@ -103,13 +103,16 @@ export function TestimonialsSection() {
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-24 md:mb-32"
+                    role="list"
+                    aria-label="Customer testimonials"
                 >
                     {testimonials.map((testimonial, index) => (
-                        <motion.div
+                        <motion.article
                             key={index}
                             variants={itemVariants}
                             whileHover={{ y: -8 }}
                             className="relative group h-full"
+                            role="listitem"
                         >
                             <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[2.5rem] -z-10" />
                             <div className="h-full p-8 sm:p-10 rounded-[2.5rem] bg-white/[0.02] border border-white/5 hover:border-brand/30 transition-all duration-500 backdrop-blur-sm flex flex-col">
@@ -143,7 +146,7 @@ export function TestimonialsSection() {
                                     </div>
                                 </div>
                             </div>
-                        </motion.div>
+                        </motion.article>
                     ))}
                 </motion.div>
 

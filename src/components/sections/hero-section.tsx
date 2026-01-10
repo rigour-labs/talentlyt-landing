@@ -90,23 +90,25 @@ export function HeroSection() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                        className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
+                        className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto"
                     >
                         <Link
                             href="/request-demo"
                             onClick={() => mixpanel.track('CTA_Click', { location: 'Hero', type: 'Early Access' })}
-                            className="group relative px-10 py-5 bg-brand text-white font-bold rounded-2xl transition-all shadow-[0_0_30px_rgba(99,102,241,0.3)] hover:shadow-[0_0_50px_rgba(99,102,241,0.5)] flex items-center justify-center gap-3 overflow-hidden"
+                            className="group relative px-10 py-5 bg-brand text-white font-bold rounded-2xl transition-all shadow-[0_0_30px_rgba(99,102,241,0.3)] hover:shadow-[0_0_50px_rgba(99,102,241,0.5)] flex items-center justify-center gap-3 overflow-hidden focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
+                            aria-label="Start free trial"
                         >
                             <span className="relative z-10 technical-label text-xs">Start Free Trial</span>
-                            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
+                            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" aria-hidden="true" />
                             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                         </Link>
                         <Link
                             href="/live-demo"
                             onClick={() => mixpanel.track('CTA_Click', { location: 'Hero', type: 'Watch System' })}
-                            className="w-full sm:w-auto px-8 py-4 bg-white/5 text-white border border-white/10 font-bold rounded-2xl hover:bg-white/10 transition-all flex items-center justify-center gap-2 backdrop-blur-md"
+                            className="w-full sm:w-auto px-8 py-4 bg-white/5 text-white border border-white/10 font-bold rounded-2xl hover:bg-white/10 transition-all flex items-center justify-center gap-2 backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-background"
+                            aria-label="Watch system demo"
                         >
-                            <Play className="w-4 h-4 fill-current" />
+                            <Play className="w-4 h-4 fill-current" aria-hidden="true" />
                             Watch System
                         </Link>
                     </motion.div>
@@ -130,16 +132,17 @@ export function HeroSection() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.6 }}
-                        className="mt-12 flex items-center gap-12 border-t border-white/5 pt-8 w-full"
+                        className="mt-12 flex items-center gap-8 sm:gap-12 border-t border-white/5 pt-8 w-full"
+                        aria-label="Key metrics"
                     >
                         <div>
-                            <div className="text-2xl font-bold text-white mb-1">99.4%</div>
-                            <div className="technical-label text-text-muted">Verified Integrity</div>
+                            <div className="text-2xl sm:text-3xl font-bold text-white mb-1">99.4%</div>
+                            <div className="technical-label text-text-muted text-xs sm:text-[10px]">Verified Integrity</div>
                         </div>
-                        <div className="w-px h-8 bg-white/10" />
+                        <div className="w-px h-8 bg-white/10" aria-hidden="true" />
                         <div>
-                            <div className="text-2xl font-bold text-white mb-1">5.8x</div>
-                            <div className="technical-label text-text-muted">Faster Hires</div>
+                            <div className="text-2xl sm:text-3xl font-bold text-white mb-1">5.8x</div>
+                            <div className="technical-label text-text-muted text-xs sm:text-[10px]">Faster Hires</div>
                         </div>
                     </motion.div>
                 </div>
@@ -162,6 +165,8 @@ export function HeroSection() {
                                 playsInline
                                 onEnded={() => setIsMayaSpeaking(false)}
                                 preload="auto"
+                                aria-label="Maya AI interviewer demonstration"
+                                muted
                             />
 
                             {/* Forensic Sentinel HUD Overlay */}
@@ -243,15 +248,15 @@ export function HeroSection() {
 
             {/* Social Proof Bar */}
             <div className="mt-20 w-full border-y border-white/5 py-10 bg-white/[0.01]">
-                <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-12">
-                    <span className="text-[10px] font-bold text-text-muted uppercase tracking-[0.3em] shrink-0">Standardizing Hiring At</span>
-                    <div className="flex-1 overflow-hidden relative w-full [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-                        <div className="flex gap-16 animate-scroll items-center opacity-30 grayscale hover:grayscale-0 transition-all duration-700">
+                <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+                    <span className="text-[10px] font-bold text-text-muted uppercase tracking-[0.3em] shrink-0 text-center md:text-left">Standardizing Hiring At</span>
+                    <div className="flex-1 overflow-hidden relative w-full [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]" aria-label="Trusted by companies">
+                        <div className="flex gap-12 md:gap-16 animate-scroll items-center opacity-30 grayscale hover:grayscale-0 transition-all duration-700">
                             {['Acme Corp', 'GlobalTech', 'Nebula', 'Vertex', 'Fusion', 'Apex', 'Horizon', 'Synergy'].map((company, i) => (
-                                <span key={`1-${company}-${i}`} className="text-xl font-bold tracking-widest text-white whitespace-nowrap uppercase">{company}</span>
+                                <span key={`1-${company}-${i}`} className="text-lg md:text-xl font-bold tracking-widest text-white whitespace-nowrap uppercase">{company}</span>
                             ))}
                             {['Acme Corp', 'GlobalTech', 'Nebula', 'Vertex', 'Fusion', 'Apex', 'Horizon', 'Synergy'].map((company, i) => (
-                                <span key={`2-${company}-${i}`} className="text-xl font-bold tracking-widest text-white whitespace-nowrap uppercase">{company}</span>
+                                <span key={`2-${company}-${i}`} className="text-lg md:text-xl font-bold tracking-widest text-white whitespace-nowrap uppercase">{company}</span>
                             ))}
                         </div>
                     </div>

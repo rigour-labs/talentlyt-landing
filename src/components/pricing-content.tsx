@@ -148,13 +148,15 @@ export function PricingContent() {
 
                             <Link
                                 href={tier.ctaLink}
-                                className={`w-full py-4 px-6 rounded-2xl font-bold text-sm transition-all text-center flex items-center justify-center gap-2 group ${tier.highlight
-                                    ? 'bg-brand text-brand-foreground hover:bg-brand-hover shadow-lg'
-                                    : 'bg-muted text-text-primary hover:bg-border border border-border/20'
-                                    }`}
+                                className={`w-full py-4 px-6 rounded-2xl font-bold text-sm transition-all text-center flex items-center justify-center gap-2 group focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background ${
+                                    tier.highlight
+                                        ? 'bg-brand text-brand-foreground hover:bg-brand-hover shadow-lg'
+                                        : 'bg-muted text-text-primary hover:bg-border border border-border/20'
+                                }`}
+                                aria-label={`${tier.cta} for ${tier.name} plan`}
                             >
                                 {tier.cta}
-                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                             </Link>
                         </motion.div>
                     ))}
@@ -162,10 +164,10 @@ export function PricingContent() {
 
                 {/* Interview Packs */}
                 <section className="mb-20">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold mb-4">Pre-Paid Interview Packs</h2>
-                        <p className="text-text-secondary">Buy in bulk for seasonal hiring or budget predictability.</p>
-                    </div>
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl sm:text-4xl font-bold mb-4 tracking-tight">Pre-Paid Interview Packs</h2>
+                    <p className="text-text-secondary text-lg max-w-2xl mx-auto">Buy in bulk for seasonal hiring or budget predictability.</p>
+                </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {interviewPacks.map((pack, i) => (
@@ -196,8 +198,8 @@ export function PricingContent() {
                 {/* Usage Based Add-ons */}
                 <section className="mb-20">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold mb-4">Precision Add-Ons</h2>
-                        <p className="text-text-secondary">Tailor the platform to your specific requirements.</p>
+                        <h2 className="text-3xl sm:text-4xl font-bold mb-4 tracking-tight">Precision Add-Ons</h2>
+                        <p className="text-text-secondary text-lg max-w-2xl mx-auto">Tailor the platform to your specific requirements.</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -241,7 +243,7 @@ export function PricingContent() {
 
                 {/* FAQ */}
                 <section className="max-w-4xl mx-auto">
-                    <h2 className="text-3xl font-bold mb-12 text-center underline-offset-8">Frequently Asked Questions</h2>
+                    <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center tracking-tight">Frequently Asked Questions</h2>
                     <div className="space-y-4">
                         {[
                             {
