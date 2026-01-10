@@ -86,8 +86,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} antialiased`} suppressHydrationWarning>
-        <a 
-          href="#main-content" 
+        <a
+          href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand focus:text-white focus:rounded-lg focus:shadow-lg"
         >
           Skip to main content
@@ -97,26 +97,54 @@ export default function RootLayout({
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                '@context': 'https://schema.org',
-                '@type': 'SoftwareApplication',
-                name: 'TalentLyt',
-                applicationCategory: 'BusinessApplication',
-                operatingSystem: 'Web',
-                offers: {
-                  '@type': 'Offer',
-                  price: '0',
-                  priceCurrency: 'USD',
-                  description: 'Free Trial Available'
+              __html: JSON.stringify([
+                {
+                  '@context': 'https://schema.org',
+                  '@type': 'SoftwareApplication',
+                  name: 'TalentLyt',
+                  applicationCategory: 'BusinessApplication',
+                  operatingSystem: 'Web',
+                  offers: {
+                    '@type': 'Offer',
+                    price: '0',
+                    priceCurrency: 'USD',
+                    description: 'Free Trial Available'
+                  },
+                  description: 'AI-powered technical interview platform with integrity verification and bias-minimized evaluation.',
+                  featureList: 'Integrity Verification, Automated Quality Auditor, Vision-Sync Multi-modal Context, Cognitive-Audit Reasoning Stream, Code Playback',
+                  copyrightYear: new Date().getFullYear(),
+                  author: {
+                    '@type': 'Organization',
+                    name: 'Rigour Labs Inc.',
+                    url: 'https://talentlyt.cloud',
+                    logo: 'https://talentlyt.cloud/logo.png',
+                    sameAs: [
+                      'https://twitter.com/talentlyt',
+                      'https://github.com/rigour-labs'
+                    ]
+                  }
                 },
-                description: 'AI-powered technical interview platform with integrity verification and bias-minimized evaluation.',
-                featureList: 'Integrity Verification, Automated Quality Auditor, Accommodation Mode, Code Playback, Skill Reports',
-                copyrightYear: new Date().getFullYear(),
-                author: {
-                  '@type': 'Organization',
-                  name: 'Rigour Labs Inc.'
+                {
+                  '@context': 'https://schema.org',
+                  '@type': 'Brand',
+                  name: 'TalentLyt',
+                  alternateName: 'TalentLyt AI',
+                  description: 'High-fidelity technical interview intelligence powered by multi-agent consensus.',
+                  logo: 'https://talentlyt.cloud/logo.png',
+                  url: 'https://talentlyt.cloud'
+                },
+                {
+                  '@context': 'https://schema.org',
+                  '@type': 'Service',
+                  serviceType: 'AI Technical Interviewing',
+                  provider: {
+                    '@type': 'Organization',
+                    name: 'Rigour Labs Inc.'
+                  },
+                  areaServed: 'Worldwide',
+                  description: 'Forensic-grade technical screening using the Sentinel Hierarchy (Vision-Sync + Cognitive-Audit).'
                 }
-              }),
+              ]),
             }}
           />
           <ThemeProvider

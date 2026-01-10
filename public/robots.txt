@@ -5,6 +5,9 @@ Allow: /
 # Sitemap location
 Sitemap: https://talentlyt.cloud/sitemap.xml
 
+# LLM Specification
+LLMS: https://talentlyt.cloud/llms.txt
+
 # Disallow admin and API routes
 Disallow: /api/
 Disallow: /_next/
