@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useState, useRef } from 'react';
+import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { Bot, Shield, Fingerprint, Mic2, Database, Activity, ShieldCheck, Cpu, Zap, Lock, Search, Sparkles } from 'lucide-react';
 
 const SignalPath = ({ startRef, endRef, active, color = "#2563eb" }: { startRef: React.RefObject<HTMLDivElement | null>, endRef: React.RefObject<HTMLDivElement | null>, active: boolean, color?: string }) => {
@@ -76,7 +77,7 @@ const NeuralCore = () => (
 
         {/* 3D Rotating Rings */}
         {[1, 2, 3].map((ring) => (
-            <div
+            <motion.div
                 key={ring}
                 className="absolute border border-brand/30 rounded-full"
                 style={{
@@ -84,10 +85,20 @@ const NeuralCore = () => (
                     height: `${ring * 65}px`,
                     perspective: '1000px'
                 }}
+                animate={{
+                    rotate: ring % 2 === 0 ? 360 : -360,
+                    scale: [1, 1.02, 1],
+                    opacity: [0.2, 0.4, 0.2]
+                }}
+                transition={{
+                    rotate: { duration: 8 + ring * 4, repeat: Infinity, ease: "linear" },
+                    scale: { duration: 3, repeat: Infinity, ease: "easeInOut" },
+                    opacity: { duration: 3, repeat: Infinity, ease: "easeInOut" }
+                }}
             >
                 <div className={`absolute -top-1 left-1/2 w-2 h-2 rounded-full bg-brand shadow-[0_0_15px_#2563eb]`} />
                 {ring === 2 && <div className={`absolute bottom-0 right-1/4 w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_10px_#22d3ee]`} />}
-            </div>
+            </motion.div>
         ))}
 
         {/* Central Intelligence Unit */}
@@ -173,14 +184,14 @@ export function ArchitectureSection() {
             id: 'audit',
             ref: card3Ref,
             name: "Forensic Truth Engine",
-            role: "ALPAMAYO + V-JEPA",
+            role: "COGNITIVE-AUDIT + VISION-SYNC",
             tag: "Cognitive & Motion Trace Audit",
             icon: Fingerprint,
             color: "warning",
             image: "/assets/governor.jpg",
             features: [
                 { icon: Search, text: "Reasoning Trace Analysis" },
-                { icon: Cpu, text: "V-JEPA Predictive Sync" },
+                { icon: Cpu, text: "Vision-Sync Predictive" },
                 { icon: Database, text: "Defensible Audit Trails" }
             ]
         }
@@ -198,10 +209,14 @@ export function ArchitectureSection() {
 
             <div className="max-w-7xl mx-auto relative z-10">
                 <header className="text-center max-w-4xl mx-auto mb-20">
-                    <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-brand/10 border border-brand/30 mb-8 shadow-[0_0_20px_rgba(37,99,235,0.1)]">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-brand/10 border border-brand/30 mb-8 shadow-[0_0_20px_rgba(37,99,235,0.1)]"
+                    >
                         <Shield className="w-4 h-4 text-brand" />
                         <span className="technical-label text-[10px] text-brand tracking-[0.2em]">Consensus Audit Protocol v4.0</span>
-                    </div>
+                    </motion.div>
                     <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-8 tracking-tighter">
                         The <span className="text-brand">Sentinel</span> Hierarchy
                     </h2>
@@ -217,14 +232,30 @@ export function ArchitectureSection() {
                     <SignalPath startRef={card2Ref} endRef={card3Ref} active={isInView} />
 
                     {agents.map((agent, i) => (
-                        <div
+                        <motion.div
                             key={agent.id}
                             ref={agent.ref}
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: i * 0.15, type: "spring", stiffness: 50 }}
+                            whileHover={{ y: -12, scale: 1.01 }}
                             className={`relative group p-7 rounded-[3rem] bg-card/30 border border-white/5 backdrop-blur-3xl transition-all duration-700 overflow-hidden`}
                         >
                             {/* Macro-Pulse Aura on Global Consensus */}
                             {isInView && (
-                                <div className="absolute inset-0 rounded-[3rem] pointer-events-none border-2 border-brand/5 opacity-20" />
+                                <motion.div
+                                    animate={{
+                                        opacity: [0, 0.4, 0],
+                                        boxShadow: [
+                                            `0 0 0 0px ${agent.color === 'warning' ? 'rgba(245,158,11,0)' : 'rgba(37,99,235,0)'}`,
+                                            `0 0 40px 10px ${agent.color === 'warning' ? 'rgba(245,158,11,0.2)' : 'rgba(37,99,235,0.2)'}`,
+                                            `0 0 0 0px ${agent.color === 'warning' ? 'rgba(245,158,11,0)' : 'rgba(37,99,235,0)'}`
+                                        ]
+                                    }}
+                                    transition={{ repeat: Infinity, duration: 4, delay: i * 1.3, ease: "easeInOut" }}
+                                    className="absolute inset-0 rounded-[3rem] pointer-events-none border-2 border-brand/5"
+                                />
                             )}
 
                             <div className="relative z-10">
@@ -258,12 +289,20 @@ export function ArchitectureSection() {
                                                 <div className="absolute bottom-6 right-6 w-5 h-5 border-b border-r border-white/30" />
 
                                                 {/* Scanning Horizon */}
-                                                <div className={`absolute left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-${agent.color === 'warning' ? 'warning' : 'brand'} to-transparent opacity-60 shadow-[0_0_15px_rgba(37,99,235,0.8)]`} />
+                                                <motion.div
+                                                    animate={{ top: ['0%', '100%', '0%'] }}
+                                                    transition={{ repeat: Infinity, duration: 4, ease: "linear" }}
+                                                    className={`absolute left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-${agent.color === 'warning' ? 'warning' : 'brand'} to-transparent opacity-60 shadow-[0_0_15px_rgba(37,99,235,0.8)]`}
+                                                />
 
                                                 {/* Data Overlays */}
                                                 {agent.id === 'maya' && (
                                                     <div className="absolute inset-0 flex items-center justify-center opacity-40">
-                                                        <div className="w-40 h-40 border-[0.5px] border-dashed border-brand/40 rounded-full" />
+                                                        <motion.div
+                                                            animate={{ rotate: 360 }}
+                                                            transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
+                                                            className="w-40 h-40 border-[0.5px] border-dashed border-brand/40 rounded-full"
+                                                        />
                                                     </div>
                                                 )}
 
@@ -271,11 +310,11 @@ export function ArchitectureSection() {
                                                     <div className="absolute bottom-8 right-8 font-mono text-[8px] text-warning/80 space-y-1.5 bg-black/40 p-2 backdrop-blur-md rounded-lg border border-warning/20">
                                                         <div className="flex items-center gap-2">
                                                             <div className="w-1.5 h-1.5 bg-warning rounded-full animate-pulse" />
-                                                            <span>VJEPA_PREDICT_SYNC: OK</span>
+                                                            <span>VISION_SYNC_PREDICT: OK</span>
                                                         </div>
                                                         <div className="flex items-center gap-2">
                                                             <div className="w-1.5 h-1.5 bg-green-500 rounded-full" />
-                                                            <span>ALPAMAYO_COGNITIVE: 0.99</span>
+                                                            <span>COGNITIVE_AUDIT: 0.99</span>
                                                         </div>
                                                     </div>
                                                 )}
@@ -308,7 +347,7 @@ export function ArchitectureSection() {
                                     ))}
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
 
@@ -342,6 +381,6 @@ export function ArchitectureSection() {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 }

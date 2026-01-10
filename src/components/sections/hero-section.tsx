@@ -114,13 +114,12 @@ export function HeroSection() {
                                 onEnded={() => setIsMayaSpeaking(false)}
                                 preload="auto"
                                 aria-label="Maya AI interviewer demonstration"
-                                muted
                             />
 
                             {/* Forensic Sentinel HUD Overlay */}
                             {isSentinelMode && (
                                 <div className="absolute inset-0 z-30 pointer-events-none">
-                                    {/* SVG Gaze Vectors (V-JEPA) */}
+                                    {/* SVG Gaze Vectors (Vision-Sync) */}
                                     <svg className="absolute inset-0 w-full h-full">
                                         <line
                                             x1="38%" y1="35%" x2="42%" y2="35%"
@@ -130,28 +129,28 @@ export function HeroSection() {
                                         <circle cx="60%" cy="35%" r="20" stroke="#2563eb" strokeWidth="0.5" fill="none" />
                                     </svg>
 
-                                        {/* Scanline Effect */}
-                                        <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_2px,3px_100%] pointer-events-none opacity-20" />
+                                    {/* Scanline Effect */}
+                                    <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_2px,3px_100%] pointer-events-none opacity-20" />
 
-                                        {/* Alpamayo Reasoning Stream */}
-                                        <div className="absolute top-1/2 left-6 -translate-y-1/2 flex flex-col gap-1 font-mono text-[8px] text-brand/80">
-                                            {['COG_AUTH: 0.998', 'SENTIMENT: NEUTRAL', 'LATENT_INTENT: VERIFIED', 'JITters: 0.002ms', 'V_JEPA_SYNC: OK'].map((trace, i) => (
-                                                <div
-                                                    key={i}
-                                                    className="bg-black/40 px-1 border-l border-brand/50"
-                                                >
-                                                    {trace}
-                                                </div>
-                                            ))}
-                                        </div>
-
-                                        {/* HUD Corners */}
-                                        <div className="absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-brand/40" />
-                                        <div className="absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-brand/40" />
-                                        <div className="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-brand/40" />
-                                        <div className="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-brand/40" />
+                                    {/* Cognitive-Audit Reasoning Stream */}
+                                    <div className="absolute top-1/2 left-6 -translate-y-1/2 flex flex-col gap-1 font-mono text-[8px] text-brand/80">
+                                        {['COG_AUTH: 0.998', 'SENTIMENT: NEUTRAL', 'LATENT_INTENT: VERIFIED', 'JITters: 0.002ms', 'VISION_SYNC: OK'].map((trace, i) => (
+                                            <div
+                                                key={i}
+                                                className="bg-black/40 px-1 border-l border-brand/50"
+                                            >
+                                                {trace}
+                                            </div>
+                                        ))}
                                     </div>
-                                )}
+
+                                    {/* HUD Corners */}
+                                    <div className="absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-brand/40" />
+                                    <div className="absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-brand/40" />
+                                    <div className="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-brand/40" />
+                                    <div className="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-brand/40" />
+                                </div>
+                            )}
                         </div>
                         <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent opacity-30" />
 
