@@ -2,13 +2,16 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { motion, useMotionValue, useSpring, useTransform, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Play, ShieldCheck, Sparkles, Activity, Cpu, Database, Eye } from 'lucide-react';
 import { BlueParticles } from '@/components/ui/blue-particles';
+import { MayaVoiceWidget } from '@/components/ui/maya-voice-widget';
 import mixpanel from 'mixpanel-browser';
 
 export function HeroSection() {
     const [mounted, setMounted] = useState(false);
+    const [isMayaSpeaking, setIsMayaSpeaking] = useState(false);
+    const videoRef = React.useRef<HTMLVideoElement>(null);
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
 
@@ -19,6 +22,17 @@ export function HeroSection() {
     // Smooth springs for gaze parallax
     const rotateX = useSpring(useTransform(mouseY, [-400, 400], [8, -8]), { stiffness: 100, damping: 30 });
     const rotateY = useSpring(useTransform(mouseX, [-400, 400], [-8, 8]), { stiffness: 100, damping: 30 });
+
+    useEffect(() => {
+        if (!videoRef.current) return;
+
+        if (isMayaSpeaking) {
+            videoRef.current.play().catch(console.error);
+        } else {
+            videoRef.current.pause();
+            videoRef.current.currentTime = 0; // Reset to frame 1 when paused
+        }
+    }, [isMayaSpeaking]);
 
     useEffect(() => {
         const handleMouseMove = (e: MouseEvent) => {
@@ -35,10 +49,10 @@ export function HeroSection() {
         <section className="relative min-h-[90vh] flex flex-col justify-center pt-24 pb-12 px-4 sm:px-6 overflow-hidden">
             <BlueParticles />
 
-            {/* Background Glows */}
+            {/* Background Glows - Made static */}
             <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-full h-full max-w-6xl pointer-events-none -z-10">
-                <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-brand/10 blur-[120px] rounded-full animate-pulse" />
-                <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-highlight/5 blur-[100px] rounded-full animate-pulse delay-700" />
+                <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-brand/5 blur-[120px] rounded-full" />
+                <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-highlight/5 blur-[100px] rounded-full" />
             </div>
 
             <div className="max-w-7xl mx-auto relative z-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -97,6 +111,19 @@ export function HeroSection() {
                         </Link>
                     </motion.div>
 
+                    {/* Interactive Agent Controller - Moved here from video overlay */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.3 }}
+                        className="mt-8 w-full sm:w-auto min-w-[320px]"
+                    >
+                        <MayaVoiceWidget
+                            isPlaying={isMayaSpeaking}
+                            onToggle={() => setIsMayaSpeaking(!isMayaSpeaking)}
+                        />
+                    </motion.div>
+
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -123,27 +150,30 @@ export function HeroSection() {
                     style={{ rotateX, rotateY, perspective: 1200 }}
                     className="relative hidden lg:block"
                 >
-                    <div className="relative z-20 w-full aspect-square max-w-[600px] mx-auto rounded-[2.5rem] overflow-hidden shadow-[0_0_120px_rgba(37,99,235,0.25)] border border-white/20 group bg-card/40 backdrop-blur-md">
-                        <img
-                            src="/assets/maya.png"
-                            alt="Maya AI Avatar"
-                            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 brightness-[1.05]"
-                        />
+                    <div className="relative z-20 w-full aspect-square max-w-[600px] mx-auto rounded-[2.5rem] overflow-hidden shadow-[0_0_80px_rgba(37,99,235,0.15)] border border-white/20 bg-card/40 backdrop-blur-md">
+                        <div className="w-full h-full relative">
+                            <video
+                                ref={videoRef}
+                                src="https://onbadqcmbugvszb0.public.blob.vercel-storage.com/maya-speaking.mp4"
+                                poster="/assets/maya.png"
+                                className="w-full h-full object-cover brightness-[1.05]"
+                                playsInline
+                                onEnded={() => setIsMayaSpeaking(false)}
+                                preload="auto"
+                            />
+                        </div>
                         <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent opacity-30" />
 
-                        {/* Thinking HUD - Floating Panels */}
-                        <div className="absolute top-10 right-10 flex flex-col gap-3 pointer-events-none">
+                        {/* Floating HUD - Strictly top-right to avoid center/bottom area */}
+                        <div className="absolute top-6 right-6 flex flex-col gap-3 pointer-events-none">
                             {[
                                 { label: 'Integrity Scan', value: '99.8%', icon: ShieldCheck, color: 'text-brand' },
                                 { label: 'Context Depth', value: 'Active', icon: Cpu, color: 'text-highlight' },
                                 { label: 'Truth Index', value: 'Verified', icon: Database, color: 'text-green-500' }
                             ].map((stat, i) => (
-                                <motion.div
+                                <div
                                     key={i}
-                                    initial={{ opacity: 0, x: 20 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    transition={{ delay: 1 + (i * 0.1) }}
-                                    className="p-3 rounded-xl bg-black/40 backdrop-blur-xl border border-white/10 flex items-center gap-3"
+                                    className="p-3 rounded-xl bg-black/60 backdrop-blur-xl border border-white/10 flex items-center gap-3"
                                 >
                                     <div className={`p-1.5 rounded-lg bg-white/5 ${stat.color}`}>
                                         <stat.icon className="w-3.5 h-3.5" />
@@ -152,45 +182,13 @@ export function HeroSection() {
                                         <div className="technical-label text-text-muted text-[8px] leading-none mb-1">{stat.label}</div>
                                         <div className="text-xs text-white font-bold leading-none">{stat.value}</div>
                                     </div>
-                                </motion.div>
+                                </div>
                             ))}
                         </div>
-
-                        {/* Interactive Status Badge */}
-                        <div className="absolute bottom-10 left-10 p-5 rounded-2xl bg-black/40 border border-white/10 backdrop-blur-2xl shadow-2xl">
-                            <div className="flex items-center justify-between gap-6 mb-3">
-                                <div>
-                                    <div className="technical-label text-brand text-[8px] mb-1.5 leading-none">Agent Status</div>
-                                    <div className="text-white font-bold flex items-center gap-2.5">
-                                        <span className="relative flex h-2 w-2">
-                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                                            <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                                        </span>
-                                        Maya Interactive
-                                    </div>
-                                </div>
-                                <div className="h-8 w-px bg-white/10" />
-                                <div>
-                                    <div className="technical-label text-highlight text-[8px] mb-1.5 leading-none">Sync Rate</div>
-                                    <div className="text-xs font-mono text-white/80">100Hz</div>
-                                </div>
-                            </div>
-                            {/* Simulated Data Stream */}
-                            <div className="w-full flex gap-1 h-3 items-end overflow-hidden">
-                                {mounted && [40, 70, 45, 90, 65, 30, 80, 50, 60, 40, 55, 75, 35, 85].map((h, i) => (
-                                    <motion.div
-                                        key={i}
-                                        animate={{ height: [`${h}%`, `${Math.random() * 100}%`, `${h}%`] }}
-                                        transition={{ repeat: Infinity, duration: 1 + Math.random(), ease: "easeInOut" }}
-                                        className="w-1 bg-brand/40 rounded-t-[1px] shrink-0"
-                                    />
-                                ))}
-                            </div>
-                        </div>
                     </div>
-                    {/* Decorative Background Elements */}
-                    <div className="absolute -top-12 -right-12 w-80 h-80 bg-brand/15 blur-[100px] rounded-full -z-10 animate-pulse" />
-                    <div className="absolute -bottom-12 -left-12 w-80 h-80 bg-highlight/10 blur-[100px] rounded-full -z-10 animate-pulse delay-1000" />
+                    {/* Decorative Background Elements - Static */}
+                    <div className="absolute -top-12 -right-12 w-80 h-80 bg-brand/10 blur-[100px] rounded-full -z-10" />
+                    <div className="absolute -bottom-12 -left-12 w-80 h-80 bg-highlight/5 blur-[100px] rounded-full -z-10" />
                 </motion.div>
             </div>
 
