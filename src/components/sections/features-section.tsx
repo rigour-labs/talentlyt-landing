@@ -1,7 +1,10 @@
 'use client';
 
 import { ArrowRight, Shield, Zap, Database, Brain, Lock, Ghost, Activity, MousePointer2 } from 'lucide-react';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+
 export function FeaturesSection() {
+    const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.1, triggerOnce: true });
 
     const features = [
         {
@@ -61,33 +64,36 @@ export function FeaturesSection() {
     ];
 
     return (
-        <section id="features" className="py-24 sm:py-32 px-4 sm:px-6 bg-[#030303] relative overflow-hidden">
+        <section ref={sectionRef as React.RefObject<HTMLElement>} id="features" className="py-24 sm:py-32 px-4 sm:px-6 bg-[#030303] relative overflow-hidden">
             {/* 3D Grid Background Asset */}
             <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
                 <img src="/assets/grid.png" alt="Grid Background" className="w-full h-full object-cover" />
             </div>
 
             <div className="max-w-7xl mx-auto relative z-10">
-                <div className="mb-20 text-center max-w-3xl mx-auto">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 border border-brand/20 text-brand text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
+                <div className={`mb-20 text-center max-w-3xl mx-auto ${isVisible ? 'slide-up' : 'animate-on-scroll'}`}>
+                    <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 border border-brand/20 text-brand text-[10px] font-bold uppercase tracking-[0.2em] mb-6 ${isVisible ? 'fade-in animate-delay-100' : 'animate-on-scroll'}`}>
                         <Activity className="w-3 h-3" aria-hidden="true" />
                         System Capabilities Index
                     </div>
-                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 tracking-tight text-white leading-[1.1]">
+                    <h2 className={`text-4xl sm:text-5xl md:text-6xl font-bold mb-8 tracking-tight text-white leading-[1.1] ${isVisible ? 'slide-up animate-delay-200' : 'animate-on-scroll'}`}>
                         Standard-Setting <span className="text-brand">Technology</span>
                     </h2>
-                    <p className="text-lg sm:text-xl text-text-secondary leading-relaxed">
+                    <p className={`text-lg sm:text-xl text-text-secondary leading-relaxed ${isVisible ? 'slide-up animate-delay-300' : 'animate-on-scroll'}`}>
                         TalentLyt isn't just another video tool. It's a high-precision engineering engine
                         built to restore trust in technical hiring.
                     </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
-                    {features.map((feature, index) => (
-                        <div
-                            key={index}
-                            className={`p-8 sm:p-10 rounded-[2.5rem] border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-brand/30 transition-all duration-500 group relative overflow-hidden focus-within:ring-2 focus-within:ring-brand focus-within:ring-offset-2 focus-within:ring-offset-background ${feature.className}`}
-                        >
+                    {features.map((feature, index) => {
+                        const delayClass = index === 0 ? 'animate-delay-100' : index === 1 ? 'animate-delay-200' : index === 2 ? 'animate-delay-300' : index === 3 ? 'animate-delay-400' : index === 4 ? 'animate-delay-500' : 'animate-delay-600';
+                        const animationClass = isVisible ? `slide-up ${delayClass}` : 'animate-on-scroll';
+                        return (
+                            <div
+                                key={index}
+                                className={`p-8 sm:p-10 rounded-[2.5rem] border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-brand/30 transition-all duration-500 group relative overflow-hidden focus-within:ring-2 focus-within:ring-brand focus-within:ring-offset-2 focus-within:ring-offset-background ${feature.className} ${animationClass}`}
+                            >
                             <div className="flex items-start justify-between mb-10">
                                 <div className="w-14 h-14 rounded-2xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand group-hover:scale-110 transition-transform" aria-hidden="true">
                                     <feature.icon className="w-7 h-7" />
@@ -112,8 +118,9 @@ export function FeaturesSection() {
                                     <ArrowRight className="w-4 h-4 text-text-muted group-hover:text-brand transition-transform group-hover:translate-x-1" />
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                            </div>
+                        );
+                    })}
                 </div>
 
                 {/* Performance Comparison UI */}
