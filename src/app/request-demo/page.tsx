@@ -1,4 +1,10 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+    title: 'Request a Demo | See TalentLyt in Action',
+    description: 'Schedule a personalized demo of TalentLyt. Discover how our AI-powered technical interview platform can help you hire better, faster, and with 100% integrity.',
+};
 
 export default function RequestDemoPage() {
     return (

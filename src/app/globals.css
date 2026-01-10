@@ -14,13 +14,13 @@
   --border: #e2e8f0;
   --card: #ffffff;
   --card-foreground: #020617;
-  --brand: #6366f1;
+  --brand: #4f46e5;
   --brand-foreground: #ffffff;
-  --brand-hover: #4f46e5;
+  --brand-hover: #4338ca;
   --muted: #f1f5f9;
   --muted-foreground: #64748b;
   --muted-border: #e2e8f0;
-  --highlight: #38bdf8;
+  --highlight: #0ea5e9;
   --highlight-foreground: #ffffff;
   --warning: #f59e0b;
   --danger: #fb7185;
@@ -48,7 +48,7 @@
   --muted: #0f172a;
   --muted-foreground: #cbd5e1;
   --muted-border: #1e293b;
-  --highlight: #22d3ee;
+  --highlight: #38bdf8;
   --highlight-foreground: #020617;
   --warning: #f59e0b;
   --danger: #fb7185;

@@ -48,7 +48,6 @@ export function HeroSection() {
 
     return (
         <section className="relative min-h-[90vh] flex flex-col justify-center pt-24 pb-12 px-4 sm:px-6 overflow-hidden">
-            <BlueParticles />
 
             {/* Background Glows - Made static */}
             <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-full h-full max-w-6xl pointer-events-none -z-10">
@@ -96,7 +95,7 @@ export function HeroSection() {
                         <Link
                             href="/request-demo"
                             onClick={() => mixpanel.track('CTA_Click', { location: 'Hero', type: 'Early Access' })}
-                            className="group relative px-10 py-5 bg-brand text-white font-bold rounded-2xl transition-all shadow-[0_0_30px_rgba(37,99,235,0.3)] hover:shadow-[0_0_50px_rgba(37,99,235,0.5)] flex items-center justify-center gap-3 overflow-hidden"
+                            className="group relative px-10 py-5 bg-brand text-white font-bold rounded-2xl transition-all shadow-[0_0_30px_rgba(99,102,241,0.3)] hover:shadow-[0_0_50px_rgba(99,102,241,0.5)] flex items-center justify-center gap-3 overflow-hidden"
                         >
                             <span className="relative z-10 technical-label text-xs">Start Free Trial</span>
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />

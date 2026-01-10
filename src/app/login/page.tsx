@@ -1,4 +1,10 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+    title: 'Login | TalentLyt Platform',
+    description: 'Login to your TalentLyt account to manage interviews, view integrity reports, and access your hiring dashboard.',
+};
 
 export default function LoginPage() {
     return (

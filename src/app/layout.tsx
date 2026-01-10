@@ -76,6 +76,7 @@ export const metadata: Metadata = {
 
 import { ThemeProvider } from '@/components/theme-provider';
 import { AnalyticsProvider } from '@/components/analytics';
+import { GlobalBackground } from '@/components/ui/global-background';
 
 export default function RootLayout({
   children,
@@ -84,8 +85,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} font-sans antialiased`}>
+      <body className={`${inter.className} antialiased`} suppressHydrationWarning>
         <AnalyticsProvider>
+          {/* SEO JSON-LD scripts... */}
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
@@ -118,6 +120,7 @@ export default function RootLayout({
             enableSystem={false}
             disableTransitionOnChange
           >
+            <GlobalBackground />
             {children}
           </ThemeProvider>
         </AnalyticsProvider>
