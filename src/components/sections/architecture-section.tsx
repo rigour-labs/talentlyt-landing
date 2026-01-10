@@ -17,9 +17,9 @@ const SignalPath = ({ startRef, endRef, active, color = "#2563eb" }: { startRef:
             if (!parentRect) return;
 
             const x1 = startRect.left + startRect.width - parentRect.left;
-            const y1 = startRect.top + startRect.height / 3 - parentRect.top;
+            const y1 = startRect.top + startRect.height / 2 - parentRect.top;
             const x2 = endRect.left - parentRect.left;
-            const y2 = endRect.top + endRect.height / 3 - parentRect.top;
+            const y2 = endRect.top + endRect.height / 2 - parentRect.top;
 
             const midX = x1 + (x2 - x1) * 0.5;
             setPath(`M ${x1} ${y1} L ${midX} ${y1} L ${midX} ${y2} L ${x2} ${y2}`);
@@ -31,7 +31,7 @@ const SignalPath = ({ startRef, endRef, active, color = "#2563eb" }: { startRef:
             window.removeEventListener('resize', updatePath);
             clearTimeout(timer);
         };
-    }, [active]);
+    }, [active, startRef, endRef]);
 
     return (
         <svg className="absolute inset-0 w-full h-full pointer-events-none z-0 hidden lg:block overflow-visible">
@@ -40,30 +40,44 @@ const SignalPath = ({ startRef, endRef, active, color = "#2563eb" }: { startRef:
                     <feGaussianBlur stdDeviation="3" result="blur" />
                     <feComposite in="SourceGraphic" in2="blur" operator="over" />
                 </filter>
+                <linearGradient id="path-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor={color} stopOpacity="0" />
+                    <stop offset="50%" stopColor={color} stopOpacity="0.2" />
+                    <stop offset="100%" stopColor={color} stopOpacity="0" />
+                </linearGradient>
             </defs>
             <path
                 d={path}
                 fill="none"
-                stroke={color}
+                stroke="url(#path-gradient)"
                 strokeWidth="2"
-                strokeOpacity="0.05"
+                className="opacity-20"
             />
             {active && (
                 <React.Fragment>
-                    {/* The Packet Visual */}
-                    <circle r="4" fill={color} filter="url(#neon-glow)">
-                        <animateMotion dur="4s" repeatCount="Infinity" path={path} />
-                    </circle>
+                    {/* The Packet Visuals - Multiple packets for better flow */}
+                    {[0, 1.5, 3].map((delay) => (
+                        <circle key={delay} r="3" fill={color} filter="url(#neon-glow)">
+                            <animateMotion dur="4s" repeatCount="Infinity" path={path} begin={`${delay}s`} />
+                        </circle>
+                    ))}
 
-                    {/* The Trail */}
+                    {/* Traveling Light Beam */}
                     <path
                         d={path}
                         fill="none"
                         stroke={color}
-                        strokeWidth="2"
-                        strokeDasharray="40, 400"
-                        className="opacity-40"
-                    />
+                        strokeWidth="1.5"
+                        strokeDasharray="50, 400"
+                    >
+                        <animate
+                            attributeName="stroke-dashoffset"
+                            from="450"
+                            to="0"
+                            dur="3s"
+                            repeatCount="Infinity"
+                        />
+                    </path>
                 </React.Fragment>
             )}
         </svg>
@@ -116,6 +130,105 @@ const NeuralCore = () => (
                 className="absolute w-1 h-1 bg-cyan-500 rounded-full opacity-30"
             />
         ))}
+    </div>
+);
+
+const NeuralMesh = () => (
+    <div className="absolute inset-0 z-0 pointer-events-none opacity-30">
+        <svg width="100%" height="100%" className="absolute inset-0">
+            <defs>
+                <pattern id="neural-grid" width="60" height="60" patternUnits="userSpaceOnUse">
+                    <circle cx="0" cy="0" r="1.5" fill="#2563eb" fillOpacity="0.2" />
+                    <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#2563eb" strokeWidth="0.5" strokeOpacity="0.1" />
+                </pattern>
+                <radialGradient id="mesh-mask" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stopColor="white" stopOpacity="1" />
+                    <stop offset="100%" stopColor="white" stopOpacity="0" />
+                </radialGradient>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#neural-grid)" />
+
+            {/* Pulsing Intersections */}
+            {[...Array(6)].map((_, i) => (
+                <motion.circle
+                    key={i}
+                    cx={`${20 + i * 15}%`}
+                    cy={`${30 + (i % 3) * 20}%`}
+                    r="2"
+                    fill="#2563eb"
+                    animate={{ opacity: [0, 0.5, 0], scale: [1, 2, 1] }}
+                    transition={{ duration: 4, repeat: Infinity, delay: i * 0.7 }}
+                />
+            ))}
+        </svg>
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
+    </div>
+);
+
+const AgentOrb = ({ color = "brand", active }: { color?: string, active: boolean }) => (
+    <div className="relative w-full h-full flex items-center justify-center overflow-hidden bg-black/20">
+        {/* Animated Background Aura */}
+        <motion.div
+            animate={active ? {
+                scale: [1, 1.3, 1],
+                opacity: [0.1, 0.25, 0.1],
+            } : {}}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            className={`absolute inset-4 bg-${color === 'warning' ? 'amber-500' : 'brand'} rounded-full blur-[80px]`}
+        />
+
+        {/* Rotating Tech Rings */}
+        {[...Array(2)].map((_, i) => (
+            <motion.div
+                key={i}
+                animate={active ? {
+                    rotate: i % 2 === 0 ? 360 : -360,
+                    scale: [0.95, 1.05, 0.95],
+                } : {}}
+                transition={{ duration: 15 + i * 10, repeat: Infinity, ease: "linear" }}
+                className={`absolute border border-${color === 'warning' ? 'amber-500/10' : 'brand/10'} rounded-full`}
+                style={{
+                    width: `${75 + i * 15}%`,
+                    height: `${75 + i * 15}%`,
+                }}
+            />
+        ))}
+
+        {/* Floating Data Nodes */}
+        {[...Array(4)].map((_, i) => (
+            <motion.div
+                key={i}
+                animate={active ? {
+                    x: [0, Math.sin(i) * 30, 0],
+                    y: [0, Math.cos(i) * 30, 0],
+                    opacity: [0.2, 0.5, 0.2]
+                } : {}}
+                transition={{ duration: 4 + i, repeat: Infinity, ease: "easeInOut" }}
+                className={`absolute w-1.5 h-1.5 rounded-full bg-${color === 'warning' ? 'amber-400' : 'brand'} shadow-[0_0_10px_currentColor]`}
+                style={{
+                    left: `${25 + (i % 2) * 50}%`,
+                    top: `${25 + Math.floor(i / 2) * 50}%`,
+                }}
+            />
+        ))}
+
+        {/* Core Pulsing Nucleus */}
+        <motion.div
+            animate={active ? {
+                scale: [0.95, 1.05, 0.95],
+                boxShadow: [
+                    `0 0 30px ${color === 'warning' ? 'rgba(245,158,11,0.1)' : 'rgba(37,99,235,0.1)'}`,
+                    `0 0 60px ${color === 'warning' ? 'rgba(245,158,11,0.3)' : 'rgba(37,99,235,0.3)'}`,
+                    `0 0 30px ${color === 'warning' ? 'rgba(245,158,11,0.1)' : 'rgba(37,99,235,0.1)'}`
+                ]
+            } : {}}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            className={`relative z-10 w-28 h-28 rounded-full bg-gradient-to-br from-${color === 'warning' ? 'amber-500/20' : 'brand/20'} to-transparent flex items-center justify-center backdrop-blur-2xl border border-white/10`}
+        >
+            <div className={`w-14 h-14 rounded-full bg-black/40 flex items-center justify-center border border-white/5 shadow-inner`}>
+                <Cpu className={`w-7 h-7 text-${color === 'warning' ? 'amber-400' : 'brand'} animate-pulse`} />
+            </div>
+        </motion.div>
     </div>
 );
 
@@ -188,7 +301,7 @@ export function ArchitectureSection() {
             tag: "Cognitive & Motion Trace Audit",
             icon: Fingerprint,
             color: "warning",
-            image: "/assets/governor.jpg",
+            visual: "orb", // Changed to orb for better connection feel
             features: [
                 { icon: Search, text: "Reasoning Trace Analysis" },
                 { icon: Cpu, text: "Vision-Sync Predictive" },
@@ -201,10 +314,11 @@ export function ArchitectureSection() {
 
     return (
         <section id="architecture" className="relative py-32 px-4 sm:px-6 overflow-hidden bg-black" ref={sectionRef}>
-            {/* Space-like Background Depths */}
-            <div className="absolute inset-0 opacity-30 pointer-events-none">
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1.5px,transparent_1.5px),linear-gradient(to_bottom,#1e293b_1.5px,transparent_1.5px)] bg-[size:40px_40px]" />
-                <div className="absolute inset-0 bg-radial-gradient from-brand/10 via-transparent to-transparent" />
+            {/* LiveKit-style Neural Mesh Background */}
+            <NeuralMesh />
+
+            <div className="absolute inset-0 opacity-20 pointer-events-none">
+                <div className="absolute inset-0 bg-radial-gradient from-brand/20 via-transparent to-transparent" />
             </div>
 
             <div className="max-w-7xl mx-auto relative z-10">
@@ -274,6 +388,8 @@ export function ArchitectureSection() {
                                 <div className="relative aspect-[4/3] rounded-[2rem] overflow-hidden mb-10 border border-white/10 bg-black/60 shadow-2xl group/visual">
                                     {agent.visual === 'neural' ? (
                                         <NeuralCore />
+                                    ) : agent.visual === 'orb' ? (
+                                        <AgentOrb color={agent.color} active={isInView} />
                                     ) : (
                                         <div className="relative w-full h-full">
                                             <img
