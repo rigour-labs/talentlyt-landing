@@ -133,26 +133,26 @@ export function HowItWorksSection() {
 
     const steps = [
         {
-            title: 'Schedule Interview',
-            description: 'Hyper-personalized links with automated integrity pre-check. Integrated with your entire stack.',
+            title: 'Recognize & Verify',
+            description: 'Secure, unique session links with automated biometric recognition and identity pre-check.',
             time: '30s SETUP',
-            output: 'Session_Link_Active',
+            output: 'RECOGNITION_ACTIVE',
             sample: 'https://talentlyt.cloud/envoy/x72-99',
             icon: MousePointer2
         },
         {
             title: 'Conduct Interview',
-            description: 'Maya engages while Governor audits. Sub-100ms sync loop ensures total verification depth.',
+            description: 'Maya engages while Governor audits. Continuous candidate recognition ensuring session focus and integrity.',
             time: 'LIVE_ENGINE',
-            output: 'Neural_Consensus_Active',
+            output: 'RECOGNITION_CONSENSUS',
             sample: 'Audit_Heartbeat: 120Hz',
             icon: Cpu
         },
         {
-            title: 'Get Instant Results',
-            description: 'Forensic reports with code playback and behavioral truth mapping delivered instantly.',
+            title: 'Legal-Advisor Review',
+            description: 'Instant forensic reports with full code playback and legally-defensible truth mapping.',
             time: 'INSTANT_AUDIT',
-            output: 'Report_Verified_A1',
+            output: 'REPORT_FINALIZED',
             sample: 'Integrity_Score: 99.4%',
             icon: ShieldCheck
         },

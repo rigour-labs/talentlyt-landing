@@ -72,9 +72,8 @@ export function CTASection() {
                             ))}
                         </div>
 
-                        {/* Social Proof */}
                         <div className="mt-20 flex flex-wrap items-center justify-center gap-8 text-[9px] text-white/60 uppercase tracking-[0.3em]">
-                            <span className="technical-label text-white/80">GDPR COMPLIANT</span>
+                            <span className="technical-label text-white/80">PRIVACY FIRST</span>
                             <div className="w-1.5 h-1.5 rounded-full bg-white/20" />
                             <span className="technical-label text-white/80">SETUP IN 5MIN</span>
                             <div className="w-1.5 h-1.5 rounded-full bg-white/20" />

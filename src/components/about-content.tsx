@@ -13,7 +13,7 @@ export function AboutContent() {
         {
             icon: Shield,
             title: "Integrity First",
-            description: "Our Audit Sentinel ensures every assessment is fair, transparent, and forensically verifiable."
+            description: "Our Forensic Engine ensures every assessment is fair, transparent, and legally defensible."
         },
         {
             icon: Zap,
@@ -29,8 +29,7 @@ export function AboutContent() {
 
     const milestones = [
         { year: "2024", event: "Founded by engineers who experienced hiring pain firsthand" },
-        { year: "2025", event: "Launched Maya AI Interviewer and Audit Sentinel Truth Engine" },
-        { year: "2025", event: "Achieved SOC 2 Type II certification" },
+        { year: "2025", event: "Launched Maya AI Interviewer and Legal-Advisor Forensic Engine" },
         { year: "2026", event: "Trusted by 500+ engineering teams worldwide" }
     ];
 

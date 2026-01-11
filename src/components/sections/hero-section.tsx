@@ -218,22 +218,23 @@ export function HeroSection() {
                 </div>
             </div>
 
-            {/* Social Proof Bar */}
-            <div className="mt-20 w-full border-y border-white/5 py-10 bg-white/[0.01]">
-                <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
-                    <span className="text-[10px] font-bold text-text-muted uppercase tracking-[0.3em] shrink-0 text-center md:text-left">Standardizing Hiring At</span>
-                    <div className="flex-1 overflow-hidden relative w-full [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]" aria-label="Trusted by companies">
-                        <div className="flex gap-12 md:gap-16 animate-scroll items-center opacity-30 grayscale hover:grayscale-0 transition-all duration-700">
-                            {['Acme Corp', 'GlobalTech', 'Nebula', 'Vertex', 'Fusion', 'Apex', 'Horizon', 'Synergy'].map((company, i) => (
-                                <span key={`1-${company}-${i}`} className="text-lg md:text-xl font-bold tracking-widest text-white whitespace-nowrap uppercase">{company}</span>
-                            ))}
-                            {['Acme Corp', 'GlobalTech', 'Nebula', 'Vertex', 'Fusion', 'Apex', 'Horizon', 'Synergy'].map((company, i) => (
-                                <span key={`2-${company}-${i}`} className="text-lg md:text-xl font-bold tracking-widest text-white whitespace-nowrap uppercase">{company}</span>
-                            ))}
+            {/* {false && (
+                <div className="mt-20 w-full border-y border-white/5 py-10 bg-white/[0.01]">
+                    <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+                        <span className="text-[10px] font-bold text-text-muted uppercase tracking-[0.3em] shrink-0 text-center md:text-left">Standardizing Hiring At</span>
+                        <div className="flex-1 overflow-hidden relative w-full [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]" aria-label="Trusted by companies">
+                            <div className="flex gap-12 md:gap-16 animate-scroll items-center opacity-30 grayscale hover:grayscale-0 transition-all duration-700">
+                                {['Acme Corp', 'GlobalTech', 'Nebula', 'Vertex', 'Fusion', 'Apex', 'Horizon', 'Synergy'].map((company, i) => (
+                                    <span key={`1-${company}-${i}`} className="text-lg md:text-xl font-bold tracking-widest text-white whitespace-nowrap uppercase">{company}</span>
+                                ))}
+                                {['Acme Corp', 'GlobalTech', 'Nebula', 'Vertex', 'Fusion', 'Apex', 'Horizon', 'Synergy'].map((company, i) => (
+                                    <span key={`2-${company}-${i}`} className="text-lg md:text-xl font-bold tracking-widest text-white whitespace-nowrap uppercase">{company}</span>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            )} */}
         </section>
     );
 }

@@ -50,13 +50,13 @@ export function FeaturesSection() {
             tag: 'FORENSIC'
         },
         {
-            title: 'Enterprise Trust',
-            benefit: 'Security First',
-            description: 'GDPR/DPDPA compliant with SOC2-ready infrastructure. Encrypted recordings and privacy controls.',
-            icon: Lock,
+            title: 'Candidate Recognition',
+            benefit: 'Authentication & Focus',
+            description: 'Automated facial recognition and continuous focus monitoring to ensure the candidate remains engaged and unassisted.',
+            icon: Shield,
             className: "md:col-span-2",
-            metric: 'SOC2 Type II',
-            tag: 'COMPLIANCE'
+            metric: '99.9% Match',
+            tag: 'PROPRIETARY SYNC'
         },
     ];
 

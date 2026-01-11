@@ -22,9 +22,9 @@ export default function AIEthicsPage() {
             title: "Fairness & Non-Discrimination",
             description: "Our AI systems are designed to reduce bias, not amplify it. We actively test for and mitigate discriminatory patterns.",
             commitments: [
-                "Regular bias audits by independent third parties",
-                "Demographic parity testing across protected classes",
-                "Continuous monitoring for disparate impact"
+                "Continuous internal bias auditing and mitigation protocols",
+                "Demographic parity testing throughout our model training",
+                "Dedicated monitoring for disparate impact"
             ]
         },
         {

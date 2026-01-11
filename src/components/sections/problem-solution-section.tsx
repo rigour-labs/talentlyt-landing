@@ -24,6 +24,12 @@ export function ProblemSolutionSection() {
             description: 'Subjective assessments lead to inconsistent hiring and unconscious bias.',
             impact: '50% Score Variance',
             icon: Zap
+        },
+        {
+            title: 'Proxy Interleaving',
+            description: 'Candidates swap identities mid-session or use proxy actors for technical rounds.',
+            impact: 'Critical Integrity Breach',
+            icon: ShieldAlert
         }
     ];
 
@@ -35,9 +41,9 @@ export function ProblemSolutionSection() {
             icon: CheckCircle2
         },
         {
-            title: 'Automated Diagnostic',
-            description: 'Synthesized reports with forensic timeline overlays ready instantly.',
-            benefit: 'Instant Decisioning',
+            title: 'Biometric Guard',
+            description: 'Proprietary candidate recognition with automated matching and continuous focus re-verification.',
+            benefit: 'Zero Identity Fraud',
             icon: Cpu
         },
         {

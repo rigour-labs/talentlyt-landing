@@ -15,7 +15,7 @@ export function PricingContent() {
                 '5 Interviews per month',
                 '1 Admin user',
                 'Technical rounds only',
-                'Basic Audit Reports',
+                'Basic Forensic Reports',
                 '30-day data retention',
                 'Community support'
             ],
@@ -34,7 +34,7 @@ export function PricingContent() {
                 '$5/interview overage',
                 '5 Admin users',
                 'All round types',
-                'Full Audit Reports',
+                'Full Forensic Audit Reports',
                 'Zapier integration',
                 '90-day data retention',
                 'Email support (48h)',
@@ -144,11 +144,10 @@ export function PricingContent() {
 
                             <Link
                                 href={tier.ctaLink}
-                                className={`w-full py-4 px-6 rounded-2xl font-bold text-sm transition-all text-center flex items-center justify-center gap-2 group focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background ${
-                                    tier.highlight
+                                className={`w-full py-4 px-6 rounded-2xl font-bold text-sm transition-all text-center flex items-center justify-center gap-2 group focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background ${tier.highlight
                                         ? 'bg-brand text-brand-foreground hover:bg-brand-hover shadow-lg'
                                         : 'bg-muted text-text-primary hover:bg-border border border-border/20'
-                                }`}
+                                    }`}
                                 aria-label={`${tier.cta} for ${tier.name} plan`}
                             >
                                 {tier.cta}

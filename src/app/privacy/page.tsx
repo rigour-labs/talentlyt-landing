@@ -39,7 +39,7 @@ export default function PrivacyPolicyPage() {
                 },
                 {
                     subtitle: "Infrastructure Security",
-                    text: "Our infrastructure is hosted on SOC 2 Type II certified cloud providers with continuous security monitoring and intrusion detection."
+                    text: "Our infrastructure is hosted on industry-standard cloud providers with continuous security monitoring and intrusion detection."
                 }
             ]
         },
@@ -166,11 +166,11 @@ export default function PrivacyPolicyPage() {
                             </div>
                         </section>
 
-                        {/* Compliance Badges */}
+                        {/* Compliance Focus */}
                         <div
                             className="flex flex-wrap justify-center gap-6 pt-8"
                         >
-                            {['GDPR Compliant', 'DPDPA Compliant', 'SOC 2 Type II', 'ISO 27001'].map((badge) => (
+                            {['Data Protection', 'Privacy First', 'Secure Auditing'].map((badge) => (
                                 <div key={badge} className="px-4 py-2 rounded-full bg-muted/50 border border-border/30 text-xs font-medium text-text-muted">
                                     {badge}
                                 </div>

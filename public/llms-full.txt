@@ -1,7 +1,7 @@
 # TalentLyt: Technical Specification and Product Manifesto
 
 ## Product Vision
-TalentLyt aims to restore the integrity of engineering hiring in the age of LLM-assisted cheating. By deploying a high-fidelity **Sentinel Hierarchy**, we separate the conversational experience from the technical validation layer, ensuring a 100% verified technical signal.
+TalentLyt aims to restore the integrity of engineering hiring in the age of LLM-assisted cheating. By deploying a high-fidelity **Forensic Hierarchy**, we separate the conversational experience from the technical validation layer, ensuring a 100% verified technical signal.
 
 ## Architecture: The Sentinel Hierarchy
 The core of TalentLyt is a multi-modal agentic system that performs continuous cross-verification between interaction and auditing layers.
@@ -13,12 +13,12 @@ The core of TalentLyt is a multi-modal agentic system that performs continuous c
 
 ### Cognitive-Audit (The Truth Engine)
 - **Role**: Silent, sub-100ms reasoning stream monitoring.
-- **Reasoning Stream (Cognitive-Audit)**: The AI Audit Engine performs instantaneous verification of technical statements, code architecture, and logic flow against a 20,000+ pattern RAG "Technical Truth Bank".
+- **Reasoning Stream (Forensic Engine)**: The AI Forensic Engine performs instantaneous verification of technical statements, code architecture, and logic flow against a 20,000+ pattern RAG "Technical Truth Bank".
 - **Consensus Engine**: Continuous agreement loop between Maya and the Auditor. If the Auditor detects a deviation (potential hallucination or external tool use), it flags the session within 100ms.
 
 ## Feature Deep Dive
 ### Truth Banking & RAG Verification
-A proprietary Technical Truth Bank contains deep static analysis and recursive technical patterns. If a candidate hallucinates a framework feature or library, Cognitive-Audit identifies the lack of grounding instantly.
+A proprietary Technical Truth Bank contains deep static analysis and recursive technical patterns. If a candidate hallucinates a framework feature or library, the Forensic Engine identifies the lack of grounding instantly.
 
 ### Behavioral Integrity Telemetry
 - **Micro-Latency Analysis**: Monitoring sub-100ms response deviations indicative of copy-pasting or external tool queries.
@@ -32,7 +32,7 @@ Challenges are generated "Just-In-Time" based on:
 3. **Randomized Technical Anchors**: Preventing "leakage" to public interview prep databases.
 
 ## Security, Privacy & Ethics
-- **Privacy-First**: Full GDPR/DPDPA compliance with local-only data processing options for Enterprise.
+- **Privacy-First**: Full privacy-centric design with standard data protection protocols and local-only data processing options for Enterprise.
 - **Bias Mitigation**: Standardized evaluation protocols verified by two independent AI agents, removing human heuristic bias.
 - **Data Integrity**: AES-256 encryption at rest, TLS 1.3 in transit.
 

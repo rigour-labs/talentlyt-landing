@@ -7,8 +7,8 @@ export function Footer() {
         <footer className="py-12 sm:py-16 px-4 sm:px-6 border-t border-border bg-background" role="contentinfo">
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-12">
-                    <Link 
-                        href="/" 
+                    <Link
+                        href="/"
                         className="flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded-lg px-2 py-1 -ml-2"
                         aria-label="TalentLyt Home"
                     >
@@ -20,32 +20,32 @@ export function Footer() {
                         </span>
                     </Link>
                     <nav className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 text-xs sm:text-sm text-secondary" aria-label="Footer navigation">
-                        <Link 
-                            href="/about" 
+                        <Link
+                            href="/about"
                             className="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded px-2 py-1"
                         >
                             About
                         </Link>
-                        <Link 
-                            href="/privacy" 
+                        <Link
+                            href="/privacy"
                             className="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded px-2 py-1"
                         >
                             Privacy
                         </Link>
-                        <Link 
-                            href="/terms" 
+                        <Link
+                            href="/terms"
                             className="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded px-2 py-1"
                         >
                             Terms
                         </Link>
-                        <Link 
-                            href="/ai-ethics" 
+                        <Link
+                            href="/ai-ethics"
                             className="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded px-2 py-1"
                         >
                             AI Ethics
                         </Link>
-                        <Link 
-                            href="/contact" 
+                        <Link
+                            href="/contact"
                             className="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded px-2 py-1"
                         >
                             Contact
@@ -53,25 +53,25 @@ export function Footer() {
                     </nav>
                 </div>
 
-                {/* AI Disclosure */}
+                {/* AI Disclosure & Legal Advisory */}
                 <div className="text-center py-8 border-t border-white/5 mt-8">
                     <p className="text-xs text-white/40 max-w-2xl mx-auto leading-relaxed">
-                        * By using TalentLyt, you acknowledge that our AI agents provide assessment support based on observable metrics. TalentLyt is not a substitute for human judgment.
+                        * TalentLyt provides automated assessment signals and integrity auditing. All data processed is subject to our standard data protection protocols. TalentLyt is designed to assist human decision-making, not replace it.
                     </p>
                     <p className="text-xs text-white/40 mt-2">
-                        For more information on how we handle biometric and behavioral data, see our{' '}
-                        <Link 
-                            href="/privacy" 
+                        For information on our legally-defensible audit trails and candidate recognition protocols, review our{' '}
+                        <Link
+                            href="/privacy"
                             className="text-white/60 underline hover:text-brand transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded"
                         >
-                            Privacy Policy
+                            Privacy Framework
                         </Link>
                         {' '}and{' '}
-                        <Link 
-                            href="/ai-ethics" 
+                        <Link
+                            href="/ai-ethics"
                             className="text-white/60 underline hover:text-brand transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded"
                         >
-                            AI Ethics Disclosure
+                            AI Ethics Governance
                         </Link>.
                     </p>
                 </div>

@@ -141,13 +141,12 @@ export function TestimonialsSection() {
                     </div>
                 </div>
 
-                {/* Trust Badges */}
                 <div className="mt-24 text-center">
                     <p className="text-[10px] font-bold text-text-muted mb-10 uppercase tracking-[0.3em]">
-                        Enterprise Security & Compliance
+                        Enterprise-Grade Security Foundations
                     </p>
                     <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-20">
-                        {['GDPR Compliant', 'DPDPA Compliant', 'SOC 2 Type II', 'ISO 27001'].map((badge) => (
+                        {['Data Protection', 'AES-256 Encryption', 'Privacy First Architecture', 'Audit Intelligence'].map((badge) => (
                             <div key={badge} className="text-xs font-bold text-white/30 hover:text-white/60 transition-colors uppercase tracking-widest cursor-default">
                                 {badge}
                             </div>

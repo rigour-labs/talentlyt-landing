@@ -297,15 +297,15 @@ export function ArchitectureSection() {
             id: 'audit',
             ref: card3Ref,
             name: "Forensic Truth Engine",
-            role: "COGNITIVE-AUDIT + VISION-SYNC",
-            tag: "Cognitive & Motion Trace Audit",
+            role: "LEGAL-ADVISOR + FORENSIC ENGINE",
+            tag: "Audit & Compliance Logic",
             icon: Fingerprint,
             color: "warning",
             visual: "orb", // Changed to orb for better connection feel
             features: [
-                { icon: Search, text: "Reasoning Trace Analysis" },
-                { icon: Cpu, text: "Vision-Sync Predictive" },
-                { icon: Database, text: "Defensible Audit Trails" }
+                { icon: ShieldCheck, text: "Candidate Recognition Sync" },
+                { icon: Cpu, text: "Vision-Sync Focus Audit" },
+                { icon: Database, text: "Legally-Defensible Trails" }
             ]
         }
     ];

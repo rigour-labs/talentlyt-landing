@@ -4,7 +4,7 @@ TalentLyt is a production-grade B2B enterprise platform that conducts AI-powered
 
 ## The Sentinel Hierarchy
 - **Vision-Sync (Interviewer Context)**: Maya utilizes Vision-Sync (formerly V-JEPA) for multi-modal context awareness, matching non-verbal signals with technical performance.
-- **Cognitive-Audit (Reasoning Stream)**: The AI Audit Engine (formerly Alpamayo) performs sub-100ms reasoning audits to ensure technical truth and zero-cheat compliance.
+- **Forensic Engine (Reasoning Stream)**: The AI Forensic Engine performs sub-100ms reasoning audits to ensure technical truth and zero-cheat compliance.
 - **Consensus Protocol**: A real-time verification loop between the conversational agent and the auditor to minimize false positives and bias.
 
 ## Core Value Proposition

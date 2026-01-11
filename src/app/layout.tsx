@@ -16,11 +16,11 @@ export const metadata: Metadata = {
     template: '%s | TalentLyt'
   },
   description:
-    'The gold standard for high-stakes technical hiring. Multi-Agent AI interviews featuring Maya (Conversational Lead) and Audit Sentinel (Truth Engine). Ensure integrity, reduce bias by 80%, cut interview overhead by 75%.',
+    'The gold standard for high-stakes technical hiring. Multi-Agent AI interviews featuring Maya (Conversational Lead) and a Legal-Advisor Forensic Engine (Integrity Verification). Ensure integrity, reduce bias by 80%, cut interview overhead by 75%.',
   keywords: [
     'AI interview platform',
     'technical interview automation',
-    'Audit Sentinel AI',
+    'Forensic Engine AI',
     'Maya AI interviewer',
     'integrity verification hiring',
     'multi-agent interview system',
@@ -49,8 +49,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'TalentLyt — Truth in Hiring, Verified by Audit Sentinel',
-    description: 'World\'s first Multi-Agent technical interview suite. Maya conducts adaptive AI interviews while Audit Sentinel verifies integrity in real-time.',
+    title: 'TalentLyt — Truth in Hiring, Verified by Forensic Intelligence',
+    description: 'World\'s first Multi-Agent technical interview suite. Maya conducts adaptive AI interviews while our Forensic Engine verifies integrity in real-time.',
     url: 'https://talentlyt.cloud',
     siteName: 'TalentLyt',
     images: [
@@ -66,8 +66,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'TalentLyt — High-Stakes Hiring with Audit Sentinel',
-    description: 'Multi-Agent AI technical interview suite. Maya conducts, Audit Sentinel verifies. Ensure integrity with forensic-grade verification.',
+    title: 'TalentLyt — High-Stakes Hiring with Forensic Auditing',
+    description: 'Multi-Agent AI technical interview suite. Maya conducts, the Forensic Engine verifies. Ensure integrity with forensic-grade verification.',
     images: ['/og-image.png'],
     creator: '@talentlyt',
   },
