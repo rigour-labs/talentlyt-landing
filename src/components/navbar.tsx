@@ -32,8 +32,8 @@ export function Navbar() {
         >
             <div className="max-w-7xl mx-auto px-6 sm:px-8">
                 <div className="flex items-center justify-between">
-                    <Link 
-                        href="/" 
+                    <Link
+                        href="/"
                         className="flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded-lg px-2 py-1 -ml-2"
                         aria-label="TalentLyt Home"
                     >
@@ -50,18 +50,16 @@ export function Navbar() {
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className={`px-5 py-2 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background ${
-                                    pathname === link.href 
-                                        ? 'bg-brand/20' 
+                                className={`px-5 py-2 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background ${pathname === link.href
+                                        ? 'bg-brand/20'
                                         : 'hover:bg-white/5'
-                                }`}
+                                    }`}
                                 aria-current={pathname === link.href ? 'page' : undefined}
                             >
-                                <span className={`technical-label text-[10px] ${
-                                    pathname === link.href 
-                                        ? 'text-brand' 
+                                <span className={`technical-label text-[10px] ${pathname === link.href
+                                        ? 'text-brand'
                                         : 'text-white/50 group-hover:text-white'
-                                }`}>
+                                    }`}>
                                     {link.name}
                                 </span>
                             </Link>
@@ -69,16 +67,16 @@ export function Navbar() {
                     </nav>
 
                     <div className="flex items-center gap-4 sm:gap-8">
-                        <a 
-                            href="https://platform.talentlyt.cloud" 
+                        <a
+                            href="https://platform.talentlyt.cloud"
                             className="technical-label text-[10px] text-white/50 hover:text-white transition-colors hidden md:block focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded px-2 py-1"
                             aria-label="Sign in to platform"
                         >
                             Sign In
                         </a>
                         <Link
-                            href="/request-demo"
-                            onClick={() => mixpanel.track('CTA_Click', { location: 'Navbar', type: 'Request Demo' })}
+                            href="/contact"
+                            onClick={() => mixpanel.track('CTA_Click', { location: 'Navbar', type: 'Start Trial' })}
                             className="group relative px-6 py-2.5 bg-brand text-white rounded-xl hover:shadow-[0_0_25px_rgba(99,102,241,0.4)] transition-all flex items-center gap-2 overflow-hidden hidden sm:flex focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
                             aria-label="Start free trial"
                         >
@@ -106,41 +104,40 @@ export function Navbar() {
                     aria-modal="true"
                     aria-label="Mobile navigation menu"
                 >
-                        <nav className="flex flex-col p-6 gap-4" aria-label="Mobile navigation">
-                            {navLinks.map((link) => (
-                                <Link
-                                    key={link.name}
-                                    href={link.href}
-                                    onClick={() => setIsMobileMenuOpen(false)}
-                                    className={`px-4 py-3 rounded-xl transition-all focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background ${
-                                        pathname === link.href 
-                                            ? 'bg-brand/10 text-brand' 
-                                            : 'text-white/70 hover:bg-white/5'
-                                    }`}
-                                    aria-current={pathname === link.href ? 'page' : undefined}
-                                >
-                                    <span className="technical-label">{link.name}</span>
-                                </Link>
-                            ))}
-                            <div className="h-px bg-white/10 my-2" role="separator" />
-                            <a 
-                                href="https://platform.talentlyt.cloud" 
-                                className="px-4 py-3 text-white/70 technical-label hover:bg-white/5 rounded-xl transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
-                                aria-label="Sign in to platform"
-                            >
-                                Sign In
-                            </a>
+                    <nav className="flex flex-col p-6 gap-4" aria-label="Mobile navigation">
+                        {navLinks.map((link) => (
                             <Link
-                                href="/request-demo"
+                                key={link.name}
+                                href={link.href}
                                 onClick={() => setIsMobileMenuOpen(false)}
-                                className="px-4 py-4 bg-brand text-white rounded-xl text-center technical-label hover:bg-brand-hover transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
-                                aria-label="Start free trial"
+                                className={`px-4 py-3 rounded-xl transition-all focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background ${pathname === link.href
+                                        ? 'bg-brand/10 text-brand'
+                                        : 'text-white/70 hover:bg-white/5'
+                                    }`}
+                                aria-current={pathname === link.href ? 'page' : undefined}
                             >
-                                Start Free Trial
+                                <span className="technical-label">{link.name}</span>
                             </Link>
-                        </nav>
-                    </div>
-                )}
+                        ))}
+                        <div className="h-px bg-white/10 my-2" role="separator" />
+                        <a
+                            href="https://platform.talentlyt.cloud"
+                            className="px-4 py-3 text-white/70 technical-label hover:bg-white/5 rounded-xl transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
+                            aria-label="Sign in to platform"
+                        >
+                            Sign In
+                        </a>
+                        <Link
+                            href="/contact"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="px-4 py-4 bg-brand text-white rounded-xl text-center technical-label hover:bg-brand-hover transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
+                            aria-label="Start free trial"
+                        >
+                            Start Free Trial
+                        </Link>
+                    </nav>
+                </div>
+            )}
         </nav>
     );
 }

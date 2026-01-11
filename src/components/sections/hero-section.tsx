@@ -76,22 +76,22 @@ export function HeroSection() {
             <div className="max-w-7xl mx-auto relative z-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className={`flex flex-col items-start text-left max-w-2xl ${heroVisible ? 'slide-up' : 'animate-on-scroll'}`}>
                     <div className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand/10 border border-brand/20 shadow-[0_0_15px_rgba(37,99,235,0.1)] mb-8 ${heroVisible ? 'fade-in animate-delay-100' : 'animate-on-scroll'}`}>
-                        <Sparkles className="w-3.5 h-3.5 text-brand" />
-                        <span className="technical-label text-brand">Next-Gen Multi-Agent AI</span>
+                        <ShieldCheck className="w-3.5 h-3.5 text-brand" />
+                        <span className="technical-label text-brand">Zero-Trust Recruitment Platform</span>
                     </div>
 
                     <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[1.02] tracking-tight text-white ${heroVisible ? 'slide-up animate-delay-200' : 'animate-on-scroll'}`}>
-                        Truth in Hiring. <br />
-                        <span className="text-brand">Verified</span> by AI.
+                        Zero-Trust <span className="text-brand">Hiring</span>. <br />
+                        Verified by AI.
                     </h1>
 
                     <p className={`text-lg sm:text-xl text-text-secondary mb-10 leading-relaxed max-w-xl ${heroVisible ? 'slide-up animate-delay-300' : 'animate-on-scroll'}`}>
-                        Every bad hire costs your team time, money, and morale. TalentLyt is the world's first **Multi-Agent** interview suite that ensures you only hire candidates who can actually do the job.
+                        TalentLyt is a comprehensive **SaaS Platform** for multi-stage recruitment. Our Multi-Agent AI verifies candidate integrity and skill in real-time, preventing bad-hire costs before they happen.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
                         <Link
-                            href="/request-demo"
+                            href="/contact"
                             onClick={() => mixpanel.track('CTA_Click', { location: 'Hero', type: 'Early Access' })}
                             className="group relative px-10 py-5 bg-brand text-white font-bold rounded-2xl transition-all shadow-[0_0_30px_rgba(99,102,241,0.3)] hover:shadow-[0_0_50px_rgba(99,102,241,0.5)] flex items-center justify-center gap-3 overflow-hidden focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
                             aria-label="Start free trial"
@@ -110,6 +110,27 @@ export function HeroSection() {
                             Watch System
                         </Link>
                     </div>
+
+                    {/* Sentinel Impact Alert */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={heroVisible ? { opacity: 1, y: 0 } : {}}
+                        transition={{ delay: 0.5, duration: 0.6 }}
+                        className="mt-8 p-4 rounded-2xl bg-brand/5 border border-brand/20 flex items-center gap-4 max-w-md group hover:bg-brand/10 transition-all cursor-default"
+                    >
+                        <div className="w-12 h-12 rounded-xl bg-brand/20 flex items-center justify-center text-brand shrink-0">
+                            <ShieldCheck className="w-6 h-6 animate-pulse" />
+                        </div>
+                        <div>
+                            <div className="text-[10px] font-bold text-brand uppercase tracking-widest mb-0.5">Live Sentinel Alert</div>
+                            <div className="text-sm font-semibold text-white leading-tight">
+                                Detected 91% integrity failure in a live candidate audit.
+                            </div>
+                            <div className="text-[11px] text-text-muted mt-1">
+                                Potential saved cost: <span className="text-brand font-bold">$15,000 per bad hire</span>
+                            </div>
+                        </div>
+                    </motion.div>
 
                     {/* Interactive Agent Controller - Moved here from video overlay */}
                     <div className="mt-8 w-full sm:w-auto min-w-[320px]">

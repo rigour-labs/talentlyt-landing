@@ -19,25 +19,11 @@ export function ContactContent() {
 
     const contactMethods = [
         {
-            icon: Mail,
-            title: "Email Us",
-            description: "For general inquiries",
-            value: "hello@talentlyt.cloud",
-            href: "mailto:hello@talentlyt.cloud"
-        },
-        {
             icon: MessageSquare,
             title: "Sales",
             description: "For enterprise and business plans",
             value: "sales@talentlyt.cloud",
             href: "mailto:sales@talentlyt.cloud"
-        },
-        {
-            icon: Building,
-            title: "Partnerships",
-            description: "For integrations and partnerships",
-            value: "partners@talentlyt.cloud",
-            href: "mailto:partners@talentlyt.cloud"
         }
     ];
 
@@ -110,36 +96,22 @@ export function ContactContent() {
                         className="space-y-6"
                     >
                         {contactMethods.map((method) => (
-                            <a
+                            <div
                                 key={method.title}
-                                href={method.href}
-                                className="block p-6 rounded-[1.5rem] bg-card border border-border/50 hover:border-brand/20 transition-all group"
+                                className="block p-8 rounded-[2rem] bg-card border border-brand/20 transition-all group"
                             >
                                 <div className="flex items-start gap-4">
                                     <div className="w-12 h-12 rounded-xl bg-brand/10 flex items-center justify-center group-hover:bg-brand/20 transition-colors">
                                         <method.icon className="w-5 h-5 text-brand" />
                                     </div>
                                     <div>
-                                        <h3 className="font-bold mb-1">{method.title}</h3>
-                                        <p className="text-text-muted text-sm mb-2">{method.description}</p>
-                                        <p className="text-brand text-sm">{method.value}</p>
+                                        <h3 className="text-xl font-bold mb-1">{method.title}</h3>
+                                        <p className="text-text-muted text-sm mb-4">{method.description}</p>
+                                        <a href={method.href} className="text-brand text-lg font-bold hover:underline">{method.value}</a>
                                     </div>
                                 </div>
-                            </a>
+                            </div>
                         ))}
-                        <div className="p-6 rounded-[1.5rem] bg-gradient-to-br from-brand/10 to-transparent border border-brand/20">
-                            <div className="flex items-center gap-3 mb-4">
-                                <Clock className="w-5 h-5 text-brand" />
-                                <h3 className="font-bold">Response Time</h3>
-                            </div>
-                            <p className="text-text-secondary text-sm mb-4">
-                                We typically respond within 24 hours on business days.
-                            </p>
-                            <div className="flex items-center gap-3 text-sm text-text-muted">
-                                <MapPin className="w-4 h-4" />
-                                <span>Rigour Labs Inc., Delaware, USA</span>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

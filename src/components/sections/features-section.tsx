@@ -7,10 +7,10 @@ export function FeaturesSection() {
         {
             title: 'Technical Truth Bank',
             benefit: 'Governor Pillar I',
-            description: 'Cross-verifies candidate claims against a high-volume RAG index of 20,000+ technical patterns. Catch hallucinations in real-time.',
+            description: 'Cross-references live technical signals against an evolving RAG-core of expert patterns. Exposed hallucinations in sub-millisecond real-time.',
             icon: Database,
             className: "md:col-span-2",
-            metric: '20,000+ Patterns',
+            metric: 'Neural Verification',
             tag: 'RAG SYNCED'
         },
         {
@@ -50,9 +50,9 @@ export function FeaturesSection() {
             tag: 'FORENSIC'
         },
         {
-            title: 'Candidate Recognition',
+            title: 'Sentinel Audit',
             benefit: 'Authentication & Focus',
-            description: 'Automated facial recognition and continuous focus monitoring to ensure the candidate remains engaged and unassisted.',
+            description: 'Advanced forensic audit that detects interleaving proxies and identity fraud across multi-stage workflows.',
             icon: Shield,
             className: "md:col-span-2",
             metric: '99.9% Match',
@@ -77,8 +77,7 @@ export function FeaturesSection() {
                         Standard-Setting <span className="text-brand">Technology</span>
                     </h2>
                     <p className="text-lg sm:text-xl text-text-secondary leading-relaxed">
-                        TalentLyt isn't just another video tool. It's a high-precision engineering engine
-                        built to restore trust in technical hiring.
+                        TalentLyt is a comprehensive **SaaS Platform** built to orchestrate multi-stage recruitment workflows with forensic-level trust.
                     </p>
                 </div>
 

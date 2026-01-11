@@ -7,84 +7,81 @@ import { Check, ShieldCheck, Zap, Globe, MessageSquare, ArrowRight } from 'lucid
 export function PricingContent() {
     const tiers = [
         {
-            name: 'Starter',
+            name: 'The Pilot',
             price: '$0',
-            description: 'Perfect for evaluating TalentLyt with your team.',
-            valueTag: 'Free Forever',
+            unit: 'First 3 Candidates',
+            description: 'The "Proof of Concept" for modern hiring teams.',
+            valueTag: 'Forensic Value: Experience the full depth of the Sentinel Audit with no commitment.',
             features: [
-                '5 Interviews per month',
-                '1 Admin user',
-                'Technical rounds only',
-                'Basic Forensic Reports',
-                '30-day data retention',
-                'Community support'
+                'Full depth Sentinel Audit',
+                'Neural Calibration Map',
+                'Temporal Intelligence Map',
+                'Zero-Storage ID Verification',
+                'Automated Forensic Report',
+                '7-day data retention'
             ],
-            cta: 'Start for Free',
+            cta: 'Start Your Trust Trial',
             ctaLink: '/request-demo',
             highlight: false,
+            woo: 'Run 3 interviews and see the Temporal Intelligence Map in action.'
         },
         {
-            name: 'Pro',
-            price: '$99',
-            unit: '/mo',
-            description: 'Built for scaling startups and growing teams.',
-            valueTag: '$2/interview equivalent',
+            name: 'The Starter',
+            price: '$25',
+            unit: '/ Candidate',
+            description: 'Precision integrity for solo recruiters and specialist teams.',
+            valueTag: 'Forensic Value: Surgical assessment of every candidate with a Unified Integrity Score.',
             features: [
-                '50 Interviews per month',
-                '$5/interview overage',
-                '5 Admin users',
-                'All round types',
-                'Full Forensic Audit Reports',
-                'Zapier integration',
-                '90-day data retention',
-                'Email support (48h)',
-                '14-day Free Trial'
+                'Side-Channel Analysis',
+                'Biometric Continuity Sync',
+                'Unified Integrity Scoring',
+                'Hardware Layer Telemetry',
+                'Full Maya AI Capabilities',
+                '30-day data retention'
             ],
-            cta: 'Start 14-Day Trial',
+            cta: 'Get Started Now',
             ctaLink: '/request-demo',
             highlight: true,
-            tag: 'Most Popular'
+            tag: 'Precision Standard',
+            woo: 'Detect the "invisible" fingerprints of screen scrapers and AI tools.'
         },
         {
-            name: 'Business',
+            name: 'The Engine',
             price: '$299',
-            unit: '/mo',
-            description: 'Enterprise-grade features for hiring teams.',
-            valueTag: '$1.50/interview at full usage',
+            unit: '/ Month',
+            description: 'Scaling startups building a zero-trust hiring funnel.',
+            valueTag: 'Forensic Value: Access the Pipeline Builder to design multi-round forensic gauntlets.',
             features: [
-                '200 Interviews per month',
-                '$3/interview overage',
-                '20 Admin users',
-                'ATS Integrations (Greenhouse, Lever)',
-                'SSO & SAML Authentication',
-                'Full Reports + Export',
-                '1-year data retention',
-                'Priority support (24h)',
-                '99.5% SLA'
+                'Includes 15 Credits/mo ($20 overage)',
+                'Multi-stage Pipeline Builder',
+                'Biometric Chain of Custody',
+                'Behavioral Drift Analysis',
+                'Skill Variance Reporting',
+                '90-day data retention'
             ],
-            cta: 'Contact Sales',
+            cta: 'Scale Your Integrity',
             ctaLink: '/request-demo',
             highlight: false,
+            woo: 'Orchestrate 100+ candidates through automated screening stages.'
         },
         {
-            name: 'Enterprise',
+            name: 'The Fortress',
             price: 'Custom',
-            description: 'Unlimited scale for global organizations.',
-            valueTag: 'Volume discounts available',
+            unit: '/ Annual',
+            description: 'The gold standard for high-security, high-volume global hiring.',
+            valueTag: 'Forensic Value: Custom Calibration Protocols tailored to your specific requirements.',
             features: [
-                'Unlimited Interviews',
-                'Negotiated overage rate',
-                'Unlimited Admin users',
-                'Custom Agent Personas',
-                'API + Custom Integrations',
-                'Dedicated Success Manager',
-                'On-premise available',
-                'Custom data retention',
-                '99.9% SLA Guarantee'
+                'Bulk Credit Allocation',
+                'Evervault-Encrypted Audit Logs',
+                'SOC2/GDPR/DPDP Compliance',
+                'White-Label Forensic Integrity',
+                'Custom Calibration Protocols',
+                'Dedicated Account Manager'
             ],
-            cta: 'Talk to Enterprise',
+            cta: 'Contact Security Sales',
             ctaLink: '/request-demo',
             highlight: false,
+            woo: 'Dedicated expert to analyze "Anomalous Trends" across your organization.'
         }
     ];
 
@@ -97,12 +94,15 @@ export function PricingContent() {
     return (
         <main className="flex-1 py-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
-                <div className="text-center max-w-3xl mx-auto mb-20 animate-fade-in">
+                <div className="text-center max-w-4xl mx-auto mb-20 animate-fade-in">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 border border-brand/20 text-brand text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
+                        Pricing Protocols
+                    </div>
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight">
-                        Fair Pricing for <span className="text-brand">Verified</span> Talent.
+                        Choose Your Level of <span className="text-brand">Trust</span>.
                     </h1>
-                    <p className="text-lg text-text-secondary">
-                        Choose a plan that scales with your hiring needs. All paid plans include a 14-day Pro trial with no credit card required.
+                    <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+                        No <span className="text-brand font-bold">Basic</span> tiers. No compromised integrity. Every TalentLyt session is protected by the Sentinel Forensic Engine by default.
                     </p>
                 </div>
 
@@ -130,14 +130,20 @@ export function PricingContent() {
                                 {tier.valueTag && (
                                     <div className="text-[10px] font-bold text-brand uppercase tracking-wider mb-3">{tier.valueTag}</div>
                                 )}
-                                <p className="text-text-secondary text-sm leading-relaxed">{tier.description}</p>
+                                <p className="text-text-secondary text-sm leading-relaxed mb-6">{tier.description}</p>
+                                {tier.woo && (
+                                    <div className="p-4 rounded-2xl bg-brand/5 border border-brand/10 text-brand text-[11px] font-medium leading-relaxed mb-8 relative overflow-hidden group/woo">
+                                        <div className="absolute inset-y-0 left-0 w-1 bg-brand" />
+                                        {tier.woo}
+                                    </div>
+                                )}
                             </div>
 
                             <div className="flex-1 space-y-3 mb-10">
                                 {tier.features.map((feature) => (
                                     <div key={feature} className="flex gap-3 text-sm">
-                                        <Check className={`w-4 h-4 shrink-0 mt-0.5 ${tier.highlight ? 'text-brand' : 'text-text-muted'}`} />
-                                        <span className="text-text-secondary">{feature}</span>
+                                        <ShieldCheck className={`w-4 h-4 shrink-0 mt-0.5 ${tier.highlight ? 'text-brand' : 'text-text-muted'}`} />
+                                        <span className="text-text-secondary leading-tight">{feature}</span>
                                     </div>
                                 ))}
                             </div>
@@ -145,8 +151,8 @@ export function PricingContent() {
                             <Link
                                 href={tier.ctaLink}
                                 className={`w-full py-4 px-6 rounded-2xl font-bold text-sm transition-all text-center flex items-center justify-center gap-2 group focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background ${tier.highlight
-                                        ? 'bg-brand text-brand-foreground hover:bg-brand-hover shadow-lg'
-                                        : 'bg-muted text-text-primary hover:bg-border border border-border/20'
+                                    ? 'bg-brand text-brand-foreground hover:bg-brand-hover shadow-lg'
+                                    : 'bg-muted text-text-primary hover:bg-border border border-border/20'
                                     }`}
                                 aria-label={`${tier.cta} for ${tier.name} plan`}
                             >
@@ -157,110 +163,94 @@ export function PricingContent() {
                     ))}
                 </div>
 
-                {/* Interview Packs */}
-                <section className="mb-20">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl sm:text-4xl font-bold mb-4 tracking-tight">Pre-Paid Interview Packs</h2>
-                        <p className="text-text-secondary text-lg max-w-2xl mx-auto">Buy in bulk for seasonal hiring or budget predictability.</p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        {interviewPacks.map((pack, i) => (
-                            <div
-                                key={pack.name}
-                                className="relative p-8 rounded-[2rem] bg-gradient-to-br from-brand/5 to-transparent border border-brand/20 hover:border-brand/40 transition-all group"
-                            >
-                                <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-[10px] font-bold uppercase tracking-wider">
-                                    Save {pack.savings}
+                {/* Sentinel Proof Visual Anchor */}
+                <section className="mb-24">
+                    <div className="p-1 px-1.5 rounded-[3.5rem] bg-gradient-to-b from-brand/20 to-transparent">
+                        <div className="bg-[#0a0a0a]/90 backdrop-blur-3xl rounded-[3.4rem] p-10 md:p-16 border border-brand/20 relative overflow-hidden">
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+                                <div className="order-2 lg:order-1 relative">
+                                    <div className="absolute -inset-10 bg-brand/10 blur-[100px] rounded-full -z-10" />
+                                    <img
+                                        src="https://onbadqcmbugvszb0.public.blob.vercel-storage.com/screencapture-platform-talentlyt-cloud-dashboard-audit-cmk9wgczv000001s6hl78jtgm-2026-01-11-22_26_25.png"
+                                        alt="Sentinel Forensic Audit - Tamper Detected"
+                                        className="rounded-2xl border border-brand/30 shadow-2xl grayscale-[0.5] hover:grayscale-0 transition-all duration-700"
+                                    />
+                                    {/* Overlay Badge */}
+                                    <div className="absolute top-6 left-6 px-4 py-2 bg-danger text-white technical-label text-xs font-bold rounded-lg shadow-xl animate-pulse">
+                                        TAMPER DETECTED: 9% SCORE
+                                    </div>
                                 </div>
-
-                                <h4 className="text-lg font-bold mb-2">{pack.name}</h4>
-                                <div className="text-3xl font-bold text-brand mb-1">{pack.price}</div>
-                                <div className="text-text-muted text-sm mb-4">{pack.interviews} interviews</div>
-
-                                <div className="flex items-center gap-2 pt-4 border-t border-border/30">
-                                    <span className="text-text-secondary text-sm">Effective rate:</span>
-                                    <span className="text-brand font-bold">{pack.perInterview}/interview</span>
+                                <div className="order-1 lg:order-2">
+                                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 border border-brand/20 text-brand text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
+                                        Visual Anchor: The Sentinel Proof
+                                    </div>
+                                    <h3 className="text-3xl sm:text-4xl font-bold text-white mb-6 tracking-tight leading-tight">
+                                        Caught in <span className="text-brand">4 Minutes</span>.
+                                    </h3>
+                                    <p className="text-xl text-text-secondary mb-12 leading-relaxed">
+                                        Join the pilot clients saving <span className="font-bold">$15,000 per bad hire</span> with our zero-trust forensic engine. See Maya AI orchestrate multi-stage workflows in real-time.
+                                    </p>
+                                    <p className="text-text-secondary leading-relaxed mb-8">
+                                        TalentLyt saved one pilot user <span className="font-bold">$15,000 per bad hire</span> by detecting surgical-level tampering that human eyes simply cannot see.
+                                    </p>
+                                    <Link
+                                        href="/request-demo"
+                                        className="inline-flex items-center gap-2 text-brand font-bold hover:underline group"
+                                    >
+                                        Read the Full Forensic Report <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                    </Link>
                                 </div>
                             </div>
-                        ))}
+                        </div>
                     </div>
                 </section>
 
-                {/* Usage Based Add-ons */}
-                <section className="mb-20">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl sm:text-4xl font-bold mb-4 tracking-tight">Precision Add-Ons</h2>
-                        <p className="text-text-secondary text-lg max-w-2xl mx-auto">Tailor the platform to your specific requirements.</p>
+                {/* Risk Mitigation Section */}
+                <section className="mb-24 py-16 border-y border-white/5 relative overflow-hidden">
+                    <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+                        <img src="/assets/grid.png" alt="Grid" className="w-full h-full object-cover" />
+                    </div>
+                    <div className="text-center mb-16 relative z-10">
+                        <h2 className="text-3xl sm:text-4xl font-bold mb-4 tracking-tight">Forensic Risk Mitigation</h2>
+                        <p className="text-text-secondary text-lg max-w-2xl mx-auto">Beyond features. We solve the fundamental risks of remote hiring.</p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
                         {[
                             {
-                                title: 'Interview Overages',
-                                price: '$3-$5',
-                                unit: '/session',
-                                desc: 'Scale beyond your plan limits without commitment changes.',
-                                icon: Zap
+                                title: '"Stop the Proxy"',
+                                value: "$15,000 Risk Avoidance",
+                                desc: "One bad hire costs $15,000. One TalentLyt audit costs $25. The ROI is immediate and forensic.",
+                                icon: ShieldCheck,
+                                color: "text-brand"
                             },
                             {
-                                title: 'Session Recording',
-                                price: '$2',
-                                unit: '/session',
-                                desc: '1080p full session video storage and cloud replay.',
-                                icon: ShieldCheck
+                                title: '"Zero Liability"',
+                                value: "In-Memory Processing",
+                                desc: "We process IDs in-memory and discard them. You get the proof; we don't keep the metadata or PII.",
+                                icon: Zap,
+                                color: "text-green-500"
                             },
                             {
-                                title: 'API Access',
-                                price: '$50',
-                                unit: '/mo',
-                                desc: 'Full REST API for custom internal dashboard integrations.',
-                                icon: Globe
+                                title: '"Orchestrate at Scale"',
+                                value: "100+ Parallel Audits",
+                                desc: "Maya interviews 100 people simultaneously while you sleep, ensuring no bottleneck in your hiring pipeline.",
+                                icon: Globe,
+                                color: "text-brand"
                             }
-                        ].map((addon) => (
-                            <div key={addon.title} className="p-8 rounded-[2rem] bg-muted/30 border border-border/50 hover:border-brand/30 transition-all group">
-                                <div className="w-10 h-10 rounded-xl bg-brand/5 flex items-center justify-center mb-6 group-hover:bg-brand/10 transition-colors">
-                                    <addon.icon className="w-5 h-5 text-brand" />
+                        ].map((risk, i) => (
+                            <div key={i} className="p-10 rounded-[2.5rem] bg-white/[0.02] border border-white/5 hover:border-brand/30 transition-all group">
+                                <div className={`w-12 h-12 rounded-xl bg-brand/10 flex items-center justify-center mb-8 ${risk.color}`}>
+                                    <risk.icon className="w-6 h-6" />
                                 </div>
-                                <h4 className="text-lg font-bold mb-2">{addon.title}</h4>
-                                <div className="flex items-baseline gap-1 mb-4">
-                                    <span className="text-2xl font-bold">{addon.price}</span>
-                                    <span className="text-text-muted text-xs font-medium">{addon.unit}</span>
-                                </div>
-                                <p className="text-text-secondary text-sm">{addon.desc}</p>
+                                <h3 className="text-2xl font-bold mb-2 text-white">{risk.title}</h3>
+                                <div className={`text-xs font-bold uppercase tracking-widest mb-4 ${risk.color}`}>{risk.value}</div>
+                                <p className="text-text-secondary leading-relaxed">{risk.desc}</p>
                             </div>
                         ))}
                     </div>
                 </section>
 
-                {/* FAQ */}
-                <section className="max-w-4xl mx-auto">
-                    <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center tracking-tight">Frequently Asked Questions</h2>
-                    <div className="space-y-4">
-                        {[
-                            {
-                                q: "How does the consumption-based model work?",
-                                a: "Each plan comes with a base number of interviews. If you exceed this, you're charged at a per-interview overage rate."
-                            },
-                            {
-                                q: "Do you offer custom agent personas?",
-                                a: "Yes, on our Enterprise plan, we can fine-tune Maya's persona to match your company's hiring style."
-                            },
-                            {
-                                q: "Is candidate data encrypted?",
-                                a: "Absolutely. All session data, recordings, and transcripts are encrypted at rest (AES-256) and in transit (TLS 1.3)."
-                            }
-                        ].map((faq, i) => (
-                            <div key={i} className="p-8 rounded-[1.5rem] bg-card border border-border/50 hover:border-brand/20 transition-all">
-                                <h4 className="font-bold mb-3 flex items-center gap-3">
-                                    <MessageSquare className="w-4 h-4 text-brand" />
-                                    {faq.q}
-                                </h4>
-                                <p className="text-text-secondary text-sm leading-relaxed">{faq.a}</p>
-                            </div>
-                        ))}
-                    </div>
-                </section>
             </div>
         </main>
     );

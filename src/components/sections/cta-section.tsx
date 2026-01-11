@@ -36,7 +36,7 @@ export function CTASection() {
                         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-6 mb-16">
                             <div>
                                 <Link
-                                    href="/request-demo"
+                                    href="/contact"
                                     onClick={() => mixpanel.track('CTA_Click', { location: 'Bottom CTA', type: 'Start Trial' })}
                                     className="group relative px-10 py-5 bg-brand text-white font-bold rounded-2xl transition-all shadow-[0_0_30px_rgba(37,99,235,0.3)] hover:shadow-[0_0_50px_rgba(37,99,235,0.5)] flex items-center justify-center gap-3 overflow-hidden text-lg focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
                                     aria-label="Start free trial"
@@ -56,21 +56,6 @@ export function CTASection() {
                             </Link>
                         </div>
 
-                        {/* Risk Reduction Elements */}
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12 w-full max-w-4xl border-t border-white/5 pt-16">
-                            {[
-                                { label: "14-day free trial", id: "01" },
-                                { label: "No credit card required", id: "02" },
-                                { label: "Cancel anytime", id: "03" }
-                            ].map((item, i) => (
-                                <div key={i} className="flex flex-col items-center gap-3 group">
-                                    <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-brand/50 transition-colors">
-                                        <CheckCircle2 className="w-6 h-6 text-brand" />
-                                    </div>
-                                    <span className="technical-label text-[12px] font-bold text-white group-hover:text-brand transition-colors">{item.label}</span>
-                                </div>
-                            ))}
-                        </div>
 
                         <div className="mt-20 flex flex-wrap items-center justify-center gap-8 text-[9px] text-white/60 uppercase tracking-[0.3em]">
                             <span className="technical-label text-white/80">PRIVACY FIRST</span>

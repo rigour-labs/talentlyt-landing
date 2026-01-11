@@ -134,33 +134,55 @@ export function ProblemSolutionSection() {
                     </div>
                 </div>
 
-                {/* Quantitative Impact Box - Hidden for legal compliance */}
-                {/* <div className="p-1.5 rounded-[3rem] bg-gradient-to-b from-white/10 to-transparent">
-                    <div className="bg-[#0a0a0a]/90 backdrop-blur-3xl rounded-[2.9rem] p-10 md:p-16 border border-white/5 relative overflow-hidden">
+                {/* Live Audit Case Study - Sentinel Audit */}
+                <div className="p-1.5 rounded-[3.5rem] bg-gradient-to-b from-brand/20 to-transparent">
+                    <div className="bg-[#0a0a0a]/90 backdrop-blur-3xl rounded-[3.4rem] p-10 md:p-16 border border-brand/20 relative overflow-hidden">
                         <div className="absolute top-0 right-0 p-8">
-                            <div className="text-[8px] font-bold text-text-muted uppercase tracking-[0.4em] mb-2">Report ID</div>
-                            <div className="text-[10px] font-mono text-white/40">ANALYTICS-2024-SYS</div>
+                            <div className="text-[8px] font-bold text-brand uppercase tracking-[0.4em] mb-2">Audit ID</div>
+                            <div className="text-[10px] font-mono text-brand/40">SENTINEL-7492-LIVE</div>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 relative z-10">
-                            {[
-                                { label: "Fraud Reduction", value: "99.4%", width: "99%", trend: "Down", color: "text-brand" },
-                                { label: "Hire Velocity", value: "82%", width: "82%", trend: "Up", color: "text-brand" },
-                                { label: "Candidate ROI", value: "5.8x", width: "95%", trend: "Up", color: "text-highlight" }
-                            ].map((stat, i) => (
-                                <div key={i} className="text-center">
-                                    <div className="text-[10px] font-bold text-text-muted uppercase tracking-[0.2em] mb-4">{stat.label}</div>
-                                    <div className={`text-5xl font-bold mb-4 ${stat.color} tracking-tighter`}>{stat.value}</div>
-                                    <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-                                        <div
-                                            className={`h-full ${stat.color === 'text-brand' ? 'bg-brand' : 'bg-highlight'}`}
-                                        />
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+                            <div>
+                                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 border border-brand/20 text-brand text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
+                                    Forensic Case Study
+                                </div>
+                                <h3 className="text-3xl sm:text-4xl font-bold text-white mb-6 tracking-tight leading-tight">
+                                    The <span className="text-brand">Sentinel Audit</span> in Action.
+                                </h3>
+                                <p className="text-sm font-semibold text-white/90 leading-relaxed italic">
+                                    "Commercial Impact: Detected 91% integrity failure in a live candidate audit, saving a pilot client <span className="font-bold">$15,000 per bad hire</span>."
+                                </p>
+                                <div className="flex items-center gap-4 p-4 rounded-2xl bg-brand/5 border border-brand/10">
+                                    <div className="w-12 h-12 rounded-xl bg-brand/20 flex items-center justify-center text-brand shrink-0">
+                                        <ShieldAlert className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <div className="text-[10px] font-bold text-brand uppercase tracking-widest mb-0.5">Commercial Impact</div>
+                                        <div className="text-lg font-bold text-white">
+                                            $15,000 bad-hire cost avoided.
+                                        </div>
                                     </div>
                                 </div>
-                            ))}
+                            </div>
+
+                            <div className="grid grid-cols-2 gap-4">
+                                {[
+                                    { label: "Integrity Failure", value: "91%", sub: "Forensic Certainty", color: "text-brand" },
+                                    { label: "Detection Time", value: "<1.2s", sub: "Latency Trap", color: "text-white" },
+                                    { label: "Proxy Type", value: "Advanced", sub: "Interleaving", color: "text-white" },
+                                    { label: "Status", value: "FLAGGED", sub: "Session Terminated", color: "text-danger" }
+                                ].map((stat, i) => (
+                                    <div key={i} className="p-6 rounded-2xl bg-white/[0.03] border border-white/5 group hover:border-brand/30 transition-all">
+                                        <div className="text-[10px] text-text-muted font-bold uppercase tracking-widest mb-3">{stat.label}</div>
+                                        <div className={`text-4xl font-bold mb-1 ${stat.color} tracking-tighter`}>{stat.value}</div>
+                                        <div className="text-[10px] text-text-muted font-mono uppercase">{stat.sub}</div>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
-                </div> */}
+                </div>
             </div>
         </section>
     );
