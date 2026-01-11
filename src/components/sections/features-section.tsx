@@ -77,7 +77,7 @@ export function FeaturesSection() {
                         Standard-Setting <span className="text-brand">Technology</span>
                     </h2>
                     <p className="text-lg sm:text-xl text-text-secondary leading-relaxed">
-                        TalentLyt is a comprehensive **SaaS Platform** built to orchestrate multi-stage recruitment workflows with forensic-level trust.
+                        TalentLyt is a comprehensive <span className="text-white font-bold">SaaS Platform</span> built to orchestrate <span className="text-white font-bold">multi-stage recruitment workflows</span> with forensic-level trust.
                     </p>
                 </div>
 

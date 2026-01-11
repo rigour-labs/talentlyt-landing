@@ -86,7 +86,7 @@ export function HeroSection() {
                     </h1>
 
                     <p className={`text-lg sm:text-xl text-text-secondary mb-10 leading-relaxed max-w-xl ${heroVisible ? 'slide-up animate-delay-300' : 'animate-on-scroll'}`}>
-                        TalentLyt is a comprehensive **SaaS Platform** for multi-stage recruitment. Our Multi-Agent AI verifies candidate integrity and skill in real-time, preventing bad-hire costs before they happen.
+                        TalentLyt is a comprehensive <span className="text-white font-bold">SaaS Platform</span> for <span className="text-white font-bold">multi-stage recruitment</span>. Our Multi-Agent AI verifies candidate integrity and skill in real-time, preventing bad-hire costs before they happen.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
