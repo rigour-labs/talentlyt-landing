@@ -9,9 +9,9 @@ export function PricingContent() {
         {
             name: 'The Pilot',
             price: '$0',
-            unit: 'First 3 Candidates',
-            description: 'The "Proof of Concept" for modern hiring teams.',
-            valueTag: 'Forensic Value: Experience the full depth of the Sentinel Audit with no commitment.',
+            unit: 'First 3 Interviews',
+            description: 'Run 3 full-depth Sentinel Audits with no commitment.',
+            valueTag: 'Forensic Value: Experience the full depth of the Sentinel Audit.',
             features: [
                 'Full depth Sentinel Audit',
                 'Neural Calibration Map',
@@ -20,56 +20,56 @@ export function PricingContent() {
                 'Automated Forensic Report',
                 '7-day data retention'
             ],
-            cta: 'Start Your Trust Trial',
-            ctaLink: '/request-demo',
+            cta: 'Start Pilot Access',
+            ctaLink: '/contact',
             highlight: false,
-            woo: 'Run 3 interviews and see the Temporal Intelligence Map in action.'
+            woo: 'Run 3 interviews and see the Sentinel Forensic HUD in action.'
         },
         {
             name: 'The Starter',
             price: '$25',
-            unit: '/ Candidate',
-            description: 'Precision integrity for solo recruiters and specialist teams.',
-            valueTag: 'Forensic Value: Surgical assessment of every candidate with a Unified Integrity Score.',
+            unit: '/ Interview',
+            description: 'Precision integrity for solo recruiters. Pay only for the sessions you conduct.',
+            valueTag: 'Forensic Value: Pay-per-interview with no monthly commitment.',
             features: [
+                'Unified Integrity Scoring',
                 'Side-Channel Analysis',
                 'Biometric Continuity Sync',
-                'Unified Integrity Scoring',
                 'Hardware Layer Telemetry',
                 'Full Maya AI Capabilities',
                 '30-day data retention'
             ],
-            cta: 'Get Started Now',
-            ctaLink: '/request-demo',
+            cta: 'Get Started',
+            ctaLink: '/contact',
             highlight: true,
             tag: 'Precision Standard',
-            woo: 'Detect the "invisible" fingerprints of screen scrapers and AI tools.'
+            woo: 'Surgical assessment of every candidate with a Unified Integrity Score.'
         },
         {
             name: 'The Engine',
             price: '$299',
             unit: '/ Month',
-            description: 'Scaling startups building a zero-trust hiring funnel.',
-            valueTag: 'Forensic Value: Access the Pipeline Builder to design multi-round forensic gauntlets.',
+            description: 'Scaled startups. Includes the Multi-stage Pipeline Builder.',
+            valueTag: 'Forensic Value: $20 per overage interview.',
             features: [
-                'Includes 15 Credits/mo ($20 overage)',
+                'Includes 15 Interviews/mo',
                 'Multi-stage Pipeline Builder',
                 'Biometric Chain of Custody',
                 'Behavioral Drift Analysis',
                 'Skill Variance Reporting',
                 '90-day data retention'
             ],
-            cta: 'Scale Your Integrity',
-            ctaLink: '/request-demo',
+            cta: 'Scale Your Pipeline',
+            ctaLink: '/contact',
             highlight: false,
-            woo: 'Orchestrate 100+ candidates through automated screening stages.'
+            woo: 'Orchestrate automated screening stages with Maya AI.'
         },
         {
             name: 'The Fortress',
             price: 'Custom',
             unit: '/ Annual',
-            description: 'The gold standard for high-security, high-volume global hiring.',
-            valueTag: 'Forensic Value: Custom Calibration Protocols tailored to your specific requirements.',
+            description: 'Bulk credit allocation for high-volume global hiring.',
+            valueTag: 'Forensic Value: Enterprise-grade compliance and security.',
             features: [
                 'Bulk Credit Allocation',
                 'Evervault-Encrypted Audit Logs',
@@ -79,9 +79,9 @@ export function PricingContent() {
                 'Dedicated Account Manager'
             ],
             cta: 'Contact Security Sales',
-            ctaLink: '/request-demo',
+            ctaLink: '/contact',
             highlight: false,
-            woo: 'Dedicated expert to analyze "Anomalous Trends" across your organization.'
+            woo: 'Custom Calibration Protocols tailored to your specific requirements.'
         }
     ];
 
@@ -194,7 +194,7 @@ export function PricingContent() {
                                         TalentLyt saved one pilot user <span className="font-bold">$15,000 per bad hire</span> by detecting surgical-level tampering that human eyes simply cannot see.
                                     </p>
                                     <Link
-                                        href="/request-demo"
+                                        href="/contact"
                                         className="inline-flex items-center gap-2 text-brand font-bold hover:underline group"
                                     >
                                         Read the Full Forensic Report <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
