@@ -484,15 +484,15 @@ export function ArchitectureSection() {
 
                     <div className="relative z-10 flex items-center gap-10 shrink-0 bg-black/40 p-10 rounded-[3rem] border border-white/5 backdrop-blur-xl">
                         <div className="text-right">
-                            <div className="text-5xl font-bold mb-2 tabular-nums">
-                                0.8ms
+                            <div className="text-5xl font-bold mb-2 tabular-nums uppercase">
+                                Active
                             </div>
-                            <div className="text-[10px] text-text-muted font-bold uppercase tracking-[0.2em]">Consensus Lag</div>
+                            <div className="text-[10px] text-text-muted font-bold uppercase tracking-[0.2em]">Consensus State</div>
                         </div>
                         <div className="w-px h-16 bg-white/10" />
                         <div className="text-left">
-                            <div className="text-5xl font-bold text-brand mb-2 tabular-nums">100%</div>
-                            <div className="text-[10px] text-brand font-bold uppercase tracking-[0.2em]">Authenticity</div>
+                            <div className="text-5xl font-bold text-brand mb-2 tabular-nums uppercase">Sync</div>
+                            <div className="text-[10px] text-brand font-bold uppercase tracking-[0.2em]">Verification</div>
                         </div>
                     </div>
                 </div>

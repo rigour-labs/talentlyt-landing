@@ -105,8 +105,8 @@ export function FeaturesSection() {
 
                             <div className="flex items-center justify-between mt-auto pt-8 border-t border-white/5">
                                 <div className="flex flex-col">
-                                    <div className="text-[10px] text-text-muted uppercase tracking-widest mb-1">Metric Data</div>
-                                    <span className="text-sm font-bold text-white tracking-tight">{feature.metric}</span>
+                                    <div className="text-[10px] text-text-muted uppercase tracking-widest mb-1">Status</div>
+                                    <span className="text-sm font-bold text-white tracking-tight uppercase">Operational</span>
                                 </div>
                                 <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand/40 group-hover:bg-brand/5 transition-all" aria-hidden="true">
                                     <ArrowRight className="w-4 h-4 text-text-muted group-hover:text-brand transition-transform group-hover:translate-x-1" />
@@ -116,10 +116,9 @@ export function FeaturesSection() {
                     ))}
                 </div>
 
-                {/* Performance Comparison UI */}
-                <div className="relative p-1 rounded-[3.5rem] bg-gradient-to-b from-white/10 to-transparent overflow-hidden">
+                {/* Performance Comparison UI - Hidden for legal compliance */}
+                {/* <div className="relative p-1 rounded-[3.5rem] bg-gradient-to-b from-white/10 to-transparent overflow-hidden">
                     <div className="bg-[#0a0a0a]/90 backdrop-blur-3xl rounded-[3.4rem] p-10 md:p-16 border border-white/5 relative overflow-hidden">
-                        {/* Audit Scan Line */}
                         <div className="absolute left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand to-transparent opacity-20 pointer-events-none z-20" />
 
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -164,7 +163,7 @@ export function FeaturesSection() {
                         </div>
 
                     </div>
-                </div>
+                </div> */}
             </div>
         </section>
     );

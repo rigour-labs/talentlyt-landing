@@ -98,7 +98,7 @@ export function ProblemSolutionSection() {
                                 <p className="text-sm text-text-muted leading-relaxed mb-6">{problem.description}</p>
                                 <div className="flex items-center gap-2 bg-danger/5 px-3 py-1.5 rounded-lg border border-danger/10 w-fit">
                                     <Activity className="w-3 h-3 text-danger" />
-                                    <span className="technical-label text-danger">IMPACT: {problem.impact}</span>
+                                    <span className="technical-label text-danger uppercase tracking-widest">Incident Risk</span>
                                 </div>
                             </div>
                         ))}
@@ -127,15 +127,15 @@ export function ProblemSolutionSection() {
                                 <p className="text-sm text-text-muted leading-relaxed mb-6">{solution.description}</p>
                                 <div className="flex items-center gap-2 bg-brand/10 px-3 py-1.5 rounded-lg border border-brand/20 w-fit">
                                     <CheckCircle2 className="w-3 h-3 text-brand" />
-                                    <span className="technical-label text-brand">BENEFIT: {solution.benefit}</span>
+                                    <span className="technical-label text-brand uppercase tracking-widest">Verified Signal</span>
                                 </div>
                             </div>
                         ))}
                     </div>
                 </div>
 
-                {/* Quantitative Impact Box */}
-                <div className="p-1.5 rounded-[3rem] bg-gradient-to-b from-white/10 to-transparent">
+                {/* Quantitative Impact Box - Hidden for legal compliance */}
+                {/* <div className="p-1.5 rounded-[3rem] bg-gradient-to-b from-white/10 to-transparent">
                     <div className="bg-[#0a0a0a]/90 backdrop-blur-3xl rounded-[2.9rem] p-10 md:p-16 border border-white/5 relative overflow-hidden">
                         <div className="absolute top-0 right-0 p-8">
                             <div className="text-[8px] font-bold text-text-muted uppercase tracking-[0.4em] mb-2">Report ID</div>
@@ -160,7 +160,7 @@ export function ProblemSolutionSection() {
                             ))}
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </section>
     );

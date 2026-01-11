@@ -12,9 +12,9 @@ The core of TalentLyt is a multi-modal agentic system that performs continuous c
 - **Adaptive Challenge Engine**: Dynamically adjusts interview depth based on candidate performance, ensuring high-density signal extraction.
 
 ### Cognitive-Audit (The Truth Engine)
-- **Role**: Silent, sub-100ms reasoning stream monitoring.
-- **Reasoning Stream (Forensic Engine)**: The AI Forensic Engine performs instantaneous verification of technical statements, code architecture, and logic flow against a 20,000+ pattern RAG "Technical Truth Bank".
-- **Consensus Engine**: Continuous agreement loop between Maya and the Auditor. If the Auditor detects a deviation (potential hallucination or external tool use), it flags the session within 100ms.
+- **Role**: Silent, real-time reasoning stream monitoring.
+- **Reasoning Stream (Forensic Engine)**: The AI Forensic Engine performs instantaneous verification of technical statements, code architecture, and logic flow against a vast "Technical Truth Bank".
+- **Consensus Engine**: Continuous agreement loop between Maya and the Auditor. If the Auditor detects a deviation (potential hallucination or external tool use), it flags the session instantly.
 
 ## Feature Deep Dive
 ### Truth Banking & RAG Verification

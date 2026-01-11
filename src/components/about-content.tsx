@@ -29,8 +29,7 @@ export function AboutContent() {
 
     const milestones = [
         { year: "2024", event: "Founded by engineers who experienced hiring pain firsthand" },
-        { year: "2025", event: "Launched Maya AI Interviewer and Legal-Advisor Forensic Engine" },
-        { year: "2026", event: "Trusted by 500+ engineering teams worldwide" }
+        { year: "2025", event: "Launched Maya AI Interviewer and Legal-Advisor Forensic Engine" }
     ];
 
     return (

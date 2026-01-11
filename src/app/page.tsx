@@ -26,8 +26,8 @@ export default function LandingPage() {
         <ArchitectureSection />
         <WhyWeBuiltThisSection />
         <ProblemSolutionSection />
-        <StatsSection />
-        <TestimonialsSection />
+        {/* <StatsSection /> */}
+        {/* <TestimonialsSection /> */}
         <FeaturesSection />
         <HowItWorksSection />
         <CTASection />

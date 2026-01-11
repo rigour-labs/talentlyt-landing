@@ -121,7 +121,7 @@ export function HeroSection() {
                         />
                     </div>
 
-                    <div
+                    {/* <div
                         className="mt-12 flex items-center gap-8 sm:gap-12 border-t border-white/5 pt-8 w-full"
                         aria-label="Key metrics"
                     >
@@ -134,7 +134,7 @@ export function HeroSection() {
                             <div className="text-2xl sm:text-3xl font-bold text-white mb-1">5.8x</div>
                             <div className="technical-label text-text-muted text-xs sm:text-[10px]">Faster Hires</div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* Hero Visual Element */}

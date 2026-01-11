@@ -135,7 +135,7 @@ export function HowItWorksSection() {
         {
             title: 'Recognize & Verify',
             description: 'Secure, unique session links with automated biometric recognition and identity pre-check.',
-            time: '30s SETUP',
+            time: 'CONFIGURED',
             output: 'RECOGNITION_ACTIVE',
             sample: 'https://talentlyt.cloud/envoy/x72-99',
             icon: MousePointer2
@@ -153,7 +153,7 @@ export function HowItWorksSection() {
             description: 'Instant forensic reports with full code playback and legally-defensible truth mapping.',
             time: 'INSTANT_AUDIT',
             output: 'REPORT_FINALIZED',
-            sample: 'Integrity_Score: 99.4%',
+            sample: 'Integrity_Status: VERIFIED',
             icon: ShieldCheck
         },
     ];
