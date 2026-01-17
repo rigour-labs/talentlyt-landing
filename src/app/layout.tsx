@@ -72,6 +72,12 @@ export const metadata: Metadata = {
     creator: '@talentlyt',
   },
   category: 'Technology',
+  other: {
+    'apple-mobile-web-app-title': 'TalentLyt',
+    'application-name': 'TalentLyt',
+    'msapplication-TileColor': '#4f46e5',
+    'theme-color': '#020617',
+  }
 };
 
 import { ThemeProvider } from '@/components/theme-provider';
@@ -143,6 +149,30 @@ export default function RootLayout({
                   },
                   areaServed: 'Worldwide',
                   description: 'Forensic-grade technical screening using the Sentinel Hierarchy (Vision-Sync + Cognitive-Audit).'
+                },
+                {
+                  '@context': 'https://schema.org',
+                  '@type': 'BreadcrumbList',
+                  'itemListElement': [
+                    {
+                      '@type': 'ListItem',
+                      'position': 1,
+                      'name': 'Home',
+                      'item': 'https://talentlyt.cloud/'
+                    },
+                    {
+                      '@type': 'ListItem',
+                      'position': 2,
+                      'name': 'Pricing',
+                      'item': 'https://talentlyt.cloud/pricing'
+                    },
+                    {
+                      '@type': 'ListItem',
+                      'position': 3,
+                      'name': 'About',
+                      'item': 'https://talentlyt.cloud/about'
+                    }
+                  ]
                 },
                 {
                   '@context': 'https://schema.org',
