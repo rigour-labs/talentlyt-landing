@@ -143,6 +143,36 @@ export default function RootLayout({
                   },
                   areaServed: 'Worldwide',
                   description: 'Forensic-grade technical screening using the Sentinel Hierarchy (Vision-Sync + Cognitive-Audit).'
+                },
+                {
+                  '@context': 'https://schema.org',
+                  '@type': 'FAQPage',
+                  'mainEntity': [
+                    {
+                      '@type': 'Question',
+                      'name': 'What is an AI Interview Platform?',
+                      'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': 'An AI interview platform uses artificial intelligence to conduct, evaluate, and verify technical interviews, providing a more objective and efficient hiring process.'
+                      }
+                    },
+                    {
+                      '@type': 'Question',
+                      'name': 'How does TalentLyt ensure integrity in AI interviews?',
+                      'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': 'TalentLyt uses a Multi-Agent AI system and forensic auditing to detect anomalies, proxy actors, and LLM assistance in real-time.'
+                      }
+                    },
+                    {
+                      '@type': 'Question',
+                      'name': 'Can AI interviews reduce hiring bias?',
+                      'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': 'Yes, AI interviews like those conducted by TalentLyt use standardized scoring based on technical truth, reducing human subconscious bias by up to 80%.'
+                      }
+                    }
+                  ]
                 }
               ]),
             }}

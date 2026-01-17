@@ -2,6 +2,7 @@
 
 import React, { useRef } from 'react';
 import { X, CheckCircle2, Activity, Zap, ShieldAlert, Cpu } from 'lucide-react';
+import Image from 'next/image';
 
 export function ProblemSolutionSection() {
     const ref = useRef<HTMLElement>(null);
@@ -58,7 +59,13 @@ export function ProblemSolutionSection() {
         <section className="py-24 sm:py-32 px-4 sm:px-6 bg-[#030303] relative overflow-hidden" ref={ref}>
             {/* 3D Grid Pattern Overlay */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
-                <img src="/assets/grid.png" alt="Grid pattern" className="w-full h-full object-cover" />
+                <Image
+                    src="/assets/grid.png"
+                    alt="AI Interview Technical Assessment Grid"
+                    fill
+                    className="object-cover"
+                    sizes="100vw"
+                />
             </div>
 
             <div className="max-w-7xl mx-auto relative z-10">
@@ -67,8 +74,8 @@ export function ProblemSolutionSection() {
                         <span className="technical-label text-warning">Audit Diagnostic: Required</span>
                     </div>
                     <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 tracking-tight text-white leading-[1.1]">
-                        The Hiring <span className="text-warning">Crisis</span>. <br />
-                        Solved by <span className="text-brand">Expert AI</span>.
+                        The <span className="text-warning">Remote Hiring</span> Crisis. <br />
+                        The <span className="text-brand">AI Interview</span> Solution.
                     </h2>
                     <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto">
                         Traditional remote interviewing is built on trust that no longer exists in an AI-accelerated world. We restore that trust.

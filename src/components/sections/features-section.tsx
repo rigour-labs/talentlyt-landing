@@ -1,6 +1,7 @@
 'use client';
 
 import { ArrowRight, Shield, Zap, Database, Brain, Lock, Ghost, Activity, MousePointer2 } from 'lucide-react';
+import Image from 'next/image';
 export function FeaturesSection() {
 
     const features = [
@@ -64,7 +65,13 @@ export function FeaturesSection() {
         <section id="features" className="py-24 sm:py-32 px-4 sm:px-6 bg-[#030303] relative overflow-hidden">
             {/* 3D Grid Background Asset */}
             <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
-                <img src="/assets/grid.png" alt="Grid Background" className="w-full h-full object-cover" />
+                <Image
+                    src="/assets/grid.png"
+                    alt="AI Interview Platform Matrix Background"
+                    fill
+                    className="object-cover"
+                    sizes="100vw"
+                />
             </div>
 
             <div className="max-w-7xl mx-auto relative z-10">
@@ -74,7 +81,7 @@ export function FeaturesSection() {
                         System Capabilities Index
                     </div>
                     <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 tracking-tight text-white leading-[1.1]">
-                        Standard-Setting <span className="text-brand">Technology</span>
+                        The Ultimate <span className="text-brand">AI Interview</span> Platform
                     </h2>
                     <p className="text-lg sm:text-xl text-text-secondary leading-relaxed">
                         TalentLyt is a comprehensive <span className="text-white font-bold">SaaS Platform</span> built to orchestrate <span className="text-white font-bold">multi-stage recruitment workflows</span> with forensic-level trust.

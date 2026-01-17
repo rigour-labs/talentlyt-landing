@@ -3,6 +3,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { Bot, Shield, Fingerprint, Mic2, Database, Activity, ShieldCheck, Cpu, Zap, Lock, Search, Sparkles } from 'lucide-react';
+import Image from 'next/image';
 
 const SignalPath = ({ startRef, endRef, active, color = "#2563eb" }: { startRef: React.RefObject<HTMLDivElement | null>, endRef: React.RefObject<HTMLDivElement | null>, active: boolean, color?: string }) => {
     const [path, setPath] = useState("");
@@ -392,10 +393,12 @@ export function ArchitectureSection() {
                                         <AgentOrb color={agent.color} active={isInView} />
                                     ) : (
                                         <div className="relative w-full h-full">
-                                            <img
-                                                src={agent.image}
-                                                alt={agent.name}
-                                                className={`w-full h-full object-cover transition-all duration-[2s] group-hover:scale-110 ${agent.id === 'audit' ? 'grayscale brightness-75' : 'brightness-[1.1]'}`}
+                                            <Image
+                                                src={agent.image || ''}
+                                                alt={`${agent.name} - ${agent.tag} | TalentLyt AI Interview`}
+                                                fill
+                                                className={`object-cover transition-all duration-[2s] group-hover:scale-110 ${agent.id === 'audit' ? 'grayscale brightness-75' : 'brightness-[1.1]'}`}
+                                                sizes="(max-width: 1024px) 100vw, 400px"
                                             />
 
                                             {/* Technical HUD Layer */}

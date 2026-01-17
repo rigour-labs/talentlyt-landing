@@ -27,10 +27,10 @@ export function CTASection() {
 
                         <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 tracking-tighter text-white leading-[0.9] text-center">
                             Hire with confidence. <br />
-                            <span className="text-brand">Build better teams.</span>
+                            The #1 <span className="text-brand">AI Interview Platform.</span>
                         </h2>
                         <p className="text-lg sm:text-xl text-text-secondary mb-12 max-w-2xl mx-auto text-center opacity-70">
-                            Transform your technical hiring process with AI-powered integrity verification and automated assessments grounded in technical truth.
+                            Transform your process with the world's most advanced <span className="text-white font-bold">AI Interview</span> technology. Verified integrity, automated assessments, and zero bias.
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-6 mb-16">

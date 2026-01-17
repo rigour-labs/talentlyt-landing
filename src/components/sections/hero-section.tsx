@@ -6,7 +6,8 @@ import { ArrowRight, Play, ShieldCheck, Sparkles, Activity, Cpu, Database, Eye }
 import { BlueParticles } from '@/components/ui/blue-particles';
 import { MayaVoiceWidget } from '@/components/ui/maya-voice-widget';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 import mixpanel from 'mixpanel-browser';
 
 const ConnectivityMesh = () => (
@@ -81,12 +82,12 @@ export function HeroSection() {
                     </div>
 
                     <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[1.02] tracking-tight text-white ${heroVisible ? 'slide-up animate-delay-200' : 'animate-on-scroll'}`}>
-                        Zero-Trust <span className="text-brand">Hiring</span>. <br />
-                        Verified by AI.
+                        The #1 <span className="text-brand">AI Interview</span> <br />
+                        Platform for Hiring.
                     </h1>
 
                     <p className={`text-lg sm:text-xl text-text-secondary mb-10 leading-relaxed max-w-xl ${heroVisible ? 'slide-up animate-delay-300' : 'animate-on-scroll'}`}>
-                        TalentLyt is a comprehensive <span className="text-white font-bold">SaaS Platform</span> for <span className="text-white font-bold">multi-stage recruitment</span>. Our Multi-Agent AI verifies candidate integrity and skill in real-time, preventing bad-hire costs before they happen.
+                        TalentLyt is the world's most advanced <span className="text-white font-bold">AI Interview Platform</span> for technical recruitment. Our Multi-Agent AI conducts and verifies <span className="text-white font-bold">AI Interviews</span> in real-time to ensure 100% integrity.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
@@ -161,15 +162,32 @@ export function HeroSection() {
                 {/* Hero Visual Element */}
                 <div className={`relative hidden lg:block ${heroVisible ? 'slide-right animate-delay-300' : 'animate-on-scroll'}`}>
                     <div className="relative z-20 w-full aspect-square max-w-[600px] mx-auto rounded-[2.5rem] overflow-hidden shadow-[0_0_80px_rgba(37,99,235,0.15)] border border-white/20 bg-card/40 backdrop-blur-md">
-                        <div className="w-full h-full relative">
+                        <div className="w-full h-full relative group/video">
+                            <AnimatePresence>
+                                {!isMayaSpeaking && (
+                                    <motion.div
+                                        initial={{ opacity: 1 }}
+                                        exit={{ opacity: 0 }}
+                                        className="absolute inset-0 z-10"
+                                    >
+                                        <Image
+                                            src="/assets/maya.png"
+                                            alt="Maya AI Interviewer - Leading AI Interview Platform"
+                                            fill
+                                            priority
+                                            className="object-cover brightness-[1.1]"
+                                            sizes="(max-width: 768px) 100vw, 600px"
+                                        />
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
                             <video
                                 ref={videoRef}
                                 src="https://onbadqcmbugvszb0.public.blob.vercel-storage.com/maya-speaking.mp4"
-                                poster="/assets/maya.png"
                                 className="w-full h-full object-cover brightness-[1.05]"
                                 playsInline
                                 onEnded={() => setIsMayaSpeaking(false)}
-                                preload="auto"
+                                preload="metadata"
                                 aria-label="Maya AI interviewer demonstration"
                             />
 
