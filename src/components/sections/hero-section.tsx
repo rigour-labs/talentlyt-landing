@@ -171,7 +171,7 @@ export function HeroSection() {
                                         className="absolute inset-0 z-10"
                                     >
                                         <Image
-                                            src="/assets/maya.png"
+                                            src="/assets/maya.jpg"
                                             alt="Maya AI Interviewer - Leading AI Interview Platform"
                                             fill
                                             priority

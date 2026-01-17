@@ -272,7 +272,7 @@ export function ArchitectureSection() {
             tag: "Voice & Behavioral Analysis",
             icon: Bot,
             color: "brand",
-            image: "/assets/maya.png",
+            image: "/assets/maya.jpg",
             features: [
                 { icon: Mic2, text: "Nova-grade Voice Auth" },
                 { icon: Activity, text: "Micro-expression Gaze Sync" },
