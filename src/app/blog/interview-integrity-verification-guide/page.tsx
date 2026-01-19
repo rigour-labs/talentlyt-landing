@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { ArrowLeft, Clock, ShieldCheck, Eye, AlertTriangle, Fingerprint } from 'lucide-react';
+import { RelatedArticles } from '@/components/blog/related-articles';
 
 export const metadata: Metadata = {
     title: 'Interview Integrity Verification: Complete Guide for Technical Hiring',
@@ -241,6 +242,9 @@ export default function InterviewIntegrityVerificationPage() {
                                 </p>
                             </section>
                         </div>
+
+                        {/* Related Articles */}
+                        <RelatedArticles currentSlug="interview-integrity-verification-guide" />
 
                         {/* CTA */}
                         <div className="mt-16 p-8 rounded-[2rem] bg-gradient-to-b from-brand/10 to-transparent border border-brand/20 text-center">

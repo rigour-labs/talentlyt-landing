@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { ArrowLeft, Clock, AlertTriangle, Eye, Keyboard, Users, Monitor, Shield } from 'lucide-react';
+import { RelatedArticles } from '@/components/blog/related-articles';
 
 export const metadata: Metadata = {
     title: 'How to Detect Cheating in Remote Technical Interviews | Expert Guide',
@@ -248,6 +249,9 @@ export default function DetectCheatingPage() {
                                 </p>
                             </section>
                         </div>
+
+                        {/* Related Articles */}
+                        <RelatedArticles currentSlug="detect-cheating-remote-interviews" />
 
                         <div className="mt-16 p-8 rounded-[2rem] bg-gradient-to-b from-brand/10 to-transparent border border-brand/20 text-center">
                             <Shield className="w-12 h-12 text-brand mx-auto mb-4" />

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { ArrowLeft, Clock, BookOpen } from 'lucide-react';
+import { RelatedArticles } from '@/components/blog/related-articles';
 
 export const metadata: Metadata = {
     title: 'What is an AI Interview Platform? Complete Guide for 2025',
@@ -202,6 +203,9 @@ export default function WhatIsAIInterviewPlatformPage() {
                                 </p>
                             </section>
                         </div>
+
+                        {/* Related Articles for Internal Linking */}
+                        <RelatedArticles currentSlug="what-is-ai-interview-platform" />
 
                         {/* CTA */}
                         <div className="mt-16 p-8 rounded-[2rem] bg-gradient-to-b from-brand/10 to-transparent border border-brand/20 text-center">

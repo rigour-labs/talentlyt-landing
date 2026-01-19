@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { ArrowLeft, Clock, Bot, Cpu, Shield, Users, Zap } from 'lucide-react';
+import { RelatedArticles } from '@/components/blog/related-articles';
 
 export const metadata: Metadata = {
     title: 'Multi-Agent AI for Technical Interviews: The Future of Hiring',
@@ -186,6 +187,9 @@ export default function MultiAgentAIPage() {
                                 </p>
                             </section>
                         </div>
+
+                        {/* Related Articles */}
+                        <RelatedArticles currentSlug="multi-agent-ai-interviews" />
 
                         <div className="mt-16 p-8 rounded-[2rem] bg-gradient-to-b from-brand/10 to-transparent border border-brand/20 text-center">
                             <h3 className="text-2xl font-bold text-white mb-4">

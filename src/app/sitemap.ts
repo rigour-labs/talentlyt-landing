@@ -17,6 +17,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.9,
         },
         {
+            url: `${baseUrl}/glossary`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        },
+        {
             url: `${baseUrl}/blog/what-is-ai-interview-platform`,
             lastModified: new Date('2025-01-15'),
             changeFrequency: 'monthly',

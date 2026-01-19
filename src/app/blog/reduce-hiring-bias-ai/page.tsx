@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { ArrowLeft, Clock, Scale, Users, Brain, Target, TrendingDown } from 'lucide-react';
+import { RelatedArticles } from '@/components/blog/related-articles';
 
 export const metadata: Metadata = {
     title: 'How to Reduce Hiring Bias with AI Interviews | Complete Guide',
@@ -176,6 +177,9 @@ export default function ReduceHiringBiasPage() {
                                 </p>
                             </section>
                         </div>
+
+                        {/* Related Articles */}
+                        <RelatedArticles currentSlug="reduce-hiring-bias-ai" />
 
                         <div className="mt-16 p-8 rounded-[2rem] bg-gradient-to-b from-brand/10 to-transparent border border-brand/20 text-center">
                             <Scale className="w-12 h-12 text-brand mx-auto mb-4" />

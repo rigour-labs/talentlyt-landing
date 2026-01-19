@@ -105,6 +105,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Preconnect for performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Preload critical hero image for LCP */}
+        <link rel="preload" as="image" href="/assets/maya.jpg" />
+      </head>
       <body className={`${inter.className} antialiased`} suppressHydrationWarning>
         <a
           href="#main-content"
