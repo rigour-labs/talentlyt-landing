@@ -19,7 +19,9 @@ export function Navbar() {
 
     const navLinks = [
         { name: 'Platform', href: '/' },
+        { name: 'Compare', href: '/compare' },
         { name: 'Pricing', href: '/pricing' },
+        { name: 'Blog', href: '/blog' },
         { name: 'About', href: '/about' },
     ];
 
@@ -51,14 +53,14 @@ export function Navbar() {
                                 key={link.name}
                                 href={link.href}
                                 className={`px-5 py-2 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background ${pathname === link.href
-                                        ? 'bg-brand/20'
-                                        : 'hover:bg-white/5'
+                                    ? 'bg-brand/20'
+                                    : 'hover:bg-white/5'
                                     }`}
                                 aria-current={pathname === link.href ? 'page' : undefined}
                             >
                                 <span className={`technical-label text-[10px] ${pathname === link.href
-                                        ? 'text-brand'
-                                        : 'text-white/50 group-hover:text-white'
+                                    ? 'text-brand'
+                                    : 'text-white/50 group-hover:text-white'
                                     }`}>
                                     {link.name}
                                 </span>
@@ -111,8 +113,8 @@ export function Navbar() {
                                 href={link.href}
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className={`px-4 py-3 rounded-xl transition-all focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background ${pathname === link.href
-                                        ? 'bg-brand/10 text-brand'
-                                        : 'text-white/70 hover:bg-white/5'
+                                    ? 'bg-brand/10 text-brand'
+                                    : 'text-white/70 hover:bg-white/5'
                                     }`}
                                 aria-current={pathname === link.href ? 'page' : undefined}
                             >

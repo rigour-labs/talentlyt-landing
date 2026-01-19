@@ -82,12 +82,12 @@ export function HeroSection() {
                     </div>
 
                     <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[1.02] tracking-tight text-white ${heroVisible ? 'slide-up animate-delay-200' : 'animate-on-scroll'}`}>
-                        The #1 <span className="text-brand">AI Interview</span> <br />
-                        Platform for Hiring.
+                        The #1 <span className="text-brand">AI Interview Platform</span> <br />
+                        for Technical Hiring.
                     </h1>
 
                     <p className={`text-lg sm:text-xl text-text-secondary mb-10 leading-relaxed max-w-xl ${heroVisible ? 'slide-up animate-delay-300' : 'animate-on-scroll'}`}>
-                        TalentLyt is the world's most advanced <span className="text-white font-bold">AI Interview Platform</span> for technical recruitment. Our Multi-Agent AI conducts and verifies <span className="text-white font-bold">AI Interviews</span> in real-time to ensure 100% integrity.
+                        TalentLyt is the world's most advanced <span className="text-white font-bold">AI interview platform</span> for technical recruitment. Our Multi-Agent AI conducts and verifies <span className="text-white font-bold">technical interviews</span> in real-time with <span className="text-white font-bold">forensic integrity verification</span>.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
@@ -172,7 +172,7 @@ export function HeroSection() {
                                     >
                                         <Image
                                             src="/assets/maya.jpg"
-                                            alt="Maya AI Interviewer - Leading AI Interview Platform"
+                                            alt="Maya AI interviewer conducting a live technical coding interview with real-time integrity verification and fraud detection on TalentLyt AI interview platform"
                                             fill
                                             priority
                                             className="object-cover brightness-[1.1]"
@@ -188,7 +188,7 @@ export function HeroSection() {
                                 playsInline
                                 onEnded={() => setIsMayaSpeaking(false)}
                                 preload="metadata"
-                                aria-label="Maya AI interviewer demonstration"
+                                aria-label="Maya AI interviewer demonstration showing real-time technical interview with integrity verification"
                             />
 
                             {/* Forensic Sentinel HUD Overlay */}

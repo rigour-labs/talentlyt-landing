@@ -39,9 +39,11 @@ export default function LandingPage() {
         <WhyWeBuiltThisSection />
         <ProblemSolutionSection />
         {/* <StatsSection /> */}
-        {/* <TestimonialsSection /> */}
         <FeaturesSection />
         <HowItWorksSection />
+        {/* TODO: Uncomment when real testimonials/stats are available */}
+        {/* <StatsSection /> */}
+        {/* <TestimonialsSection /> */}
         <CTASection />
       </main>
       <Footer />
