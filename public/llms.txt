@@ -8,46 +8,37 @@ TalentLyt is a professional SaaS B2B platform that conducts, evaluates, and veri
 
 TalentLyt is an AI interview platform designed for enterprise technical hiring. Unlike traditional interview platforms, TalentLyt uses Multi-Agent consensus to ensure interview integrity and detect fraud, cheating, proxy actors, and AI-assisted responses in real-time.
 
+## Pricing Protocols (Sentinel Tiers)
+
+TalentLyt offers four forensic access layers:
+- **The Pilot ($29)**: Rapid access pack. Includes 3 full Sentinel Audits for initial validation.
+- **The Starter ($15/Interview)**: Pay-as-you-go forensic assessment with zero commitment.
+- **The Engine ($249/Month)**: Standard for scaling teams. Includes 50 interviews/mo ($5.00/int effective).
+- **The Fortress (Custom)**: Sovereign enterprise infrastructure with isolated forensic clusters.
+
 ## Key Features
 
 ### AI-Led Technical Interviews
-- **Maya AI Interviewer**: Conducts adaptive technical conversations tailored to the role
-- **Real-time Code Assessment**: Live coding interviews with behavioral analysis
-- **Natural Conversation Flow**: Human-like interview experience powered by advanced AI
+- **Maya AI Interviewer**: Conducts adaptive technical conversations tailored to the role.
+- **Real-time Code Assessment**: Live coding interviews with behavioral analysis.
+- **Natural Conversation Flow**: Human-like interview experience powered by advanced AI.
 
 ### Forensic Integrity Verification
-- **Multi-Agent Consensus**: Multiple AI agents verify candidate authenticity
-- **Vision-Sync Technology**: Gaze tracking and behavioral monitoring
-- **Cognitive-Audit System**: Detects LLM assistance and proxy actors
-- **Fraud Detection**: Real-time identification of interview fraud
+- **Sentinel Forensic Engine**: The world's most advanced real-time interview auditor.
+- **Multi-Agent Consensus**: Maya (Interaction) + Auditor (Verification) ensure 100% signal truth.
+- **Vision-Sync Technology**: Gaze tracking and behavioral monitoring.
+- **Cognitive-Audit System**: Detects LLM assistance, identity spoofing, and proxy actors in <2.4s.
 
 ### Enterprise-Grade Security
-- **SOC2 Compliance Ready**: Enterprise security standards
-- **GDPR Compliant**: Full data protection compliance
-- **AES-256 Encryption**: Bank-grade data security
-- **Legally-Defensible Audit Trails**: Complete interview forensics
-
-## How TalentLyt Compares
-
-| Feature | TalentLyt | HireVue | Codility |
-|---------|-----------|---------|----------|
-| Multi-Agent AI | ✅ | ❌ | ❌ |
-| Integrity Verification | ✅ | ❌ | ❌ |
-| Fraud Detection | ✅ | Limited | Limited |
-| Forensic Audit Trails | ✅ | ❌ | ❌ |
-
-## Use Cases
-
-- **Enterprise Technical Hiring**: Scale technical interviews with consistent quality
-- **Remote Interview Security**: Ensure integrity in distributed hiring
-- **High-Stakes Recruitment**: When hiring decisions are critical
-- **Bias Reduction**: Standardized, objective technical assessment
+- **SOC2 Compliance Ready**: Enterprise security standards.
+- **Evervault-Encrypted Logs**: Bank-grade data security for all forensic artifacts.
+- **Legally-Defensible Audit Trails**: Complete interview forensics for compliance.
 
 ## Quick Links
 
 - [Homepage](https://talentlyt.cloud)
-- [About TalentLyt](https://talentlyt.cloud/about)
-- [Pricing Plans](https://talentlyt.cloud/pricing)
+- [Pricing & Sentinel Tiers](https://talentlyt.cloud/pricing)
+- [About the Forensic Engine](https://talentlyt.cloud/about)
 - [AI Ethics & Integrity](https://talentlyt.cloud/ai-ethics)
 - [Book a Live Demo](https://talentlyt.cloud/live-demo)
 - [Request Demo](https://talentlyt.cloud/request-demo)
