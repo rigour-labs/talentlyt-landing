@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, ShieldCheck, Activity, Globe, Zap, Database, Search } from 'lucide-react';
+import { InteractiveDemoForm } from './interactive-demo-form';
 
 export function LiveDemoContent() {
     const sections = [
@@ -63,15 +64,41 @@ export function LiveDemoContent() {
             <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand/5 blur-[120px] rounded-full -z-10 animate-pulse" />
 
             <div className="max-w-7xl mx-auto">
+                {/* Interactive Demo Form - Try Now */}
+                <div className="mb-24">
+                    <div className="text-center mb-10 animate-fade-in">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 border border-brand/20 text-brand text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
+                            3-Minute Live Demo
+                        </div>
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight">
+                            Experience the Future of
+                            <br />
+                            <span className="text-brand">Technical Hiring</span>
+                        </h1>
+                        <p className="text-lg text-text-secondary max-w-xl mx-auto">
+                            Maya AI interviews. AI Sentinel monitors. No signup required.
+                        </p>
+                    </div>
+                    
+                    <InteractiveDemoForm />
+                </div>
+
+                {/* Divider */}
+                <div className="flex items-center gap-4 mb-24">
+                    <div className="flex-1 h-px bg-white/10" />
+                    <span className="text-text-muted text-sm font-medium uppercase tracking-wider">Or explore the system</span>
+                    <div className="flex-1 h-px bg-white/10" />
+                </div>
+
                 <div className="text-center mb-24 animate-fade-in">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 border border-brand/20 text-brand text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.03] border border-white/10 text-text-muted text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
                         System Walkthrough
                     </div>
-                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight">
-                        Experience the <span className="text-brand">Future</span> of Technical Hiring.
-                    </h1>
+                    <h2 className="text-3xl sm:text-4xl font-bold mb-6 tracking-tight">
+                        The <span className="text-brand">Forensic Lifecycle</span>
+                    </h2>
                     <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-                        Follow the forensic lifecycle of a candidate from initial initiation to the final verdict.
+                        Follow a candidate from initial initiation to the final verdict.
                     </p>
                 </div>
 
