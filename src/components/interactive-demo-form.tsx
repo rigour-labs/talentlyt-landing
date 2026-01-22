@@ -41,6 +41,8 @@ export function InteractiveDemoForm() {
   const [role, setRole] = useState<RoleInterest>('ENGINEER');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [rateLimitExceeded, setRateLimitExceeded] = useState(false);
+  const [bookingUrl, setBookingUrl] = useState<string | null>(null);
 
   const handleStart = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -51,6 +53,7 @@ export function InteractiveDemoForm() {
     
     setIsLoading(true);
     setError(null);
+    setRateLimitExceeded(false);
     
     try {
       const res = await fetch(`${PLATFORM_URL}/api/demo/create`, {
@@ -60,6 +63,16 @@ export function InteractiveDemoForm() {
       });
       
       const data = await res.json();
+      
+      // Handle rate limit specially - show booking option
+      if (res.status === 429) {
+        setRateLimitExceeded(true);
+        setBookingUrl(data.bookingUrl || 'https://calendly.com/talentlyt/demo');
+        setError(data.error);
+        setIsLoading(false);
+        return;
+      }
+      
       if (!res.ok) throw new Error(data.error || 'Failed to start demo');
       
       // Redirect to demo room on main platform
@@ -141,9 +154,24 @@ export function InteractiveDemoForm() {
             </div>
           </div>
 
-          {/* Error */}
-          {error && (
+          {/* Error / Rate Limit */}
+          {error && !rateLimitExceeded && (
             <p className="text-red-400 text-sm text-center">{error}</p>
+          )}
+          
+          {rateLimitExceeded && (
+            <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl p-4 text-center">
+              <p className="text-amber-300 text-sm mb-3">{error}</p>
+              <a 
+                href={bookingUrl || 'https://calendly.com/talentlyt/demo'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-brand to-emerald-500 hover:from-brand/90 hover:to-emerald-400 rounded-lg text-white font-medium text-sm transition-all"
+              >
+                Book a Personalized Demo
+                <ChevronRight className="w-4 h-4" />
+              </a>
+            </div>
           )}
 
           {/* Submit */}
