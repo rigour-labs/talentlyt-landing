@@ -1,0 +1,178 @@
+import { Metadata } from 'next';
+import Link from 'next/link';
+import { Navbar } from '@/components/navbar';
+import { Footer } from '@/components/footer';
+import { ArrowLeft, Clock, Shield, Eye, Lock, Zap, AlertTriangle, Search } from 'lucide-react';
+import { RelatedArticles } from '@/components/blog/related-articles';
+
+export const metadata: Metadata = {
+    title: 'The Ghost in the Machine: Detecting Deepfake Proxy Candidates',
+    description: 'Recruiting has entered a new chapter. Real-time deepfakes are infiltrating the technical hiring funnel. Here is how forensic engines are fighting back.',
+    keywords: [
+        'detect deepfake candidates',
+        'AI interview integrity',
+        'proxy interviewers',
+        'forensic technical screening',
+        'identity verification AI',
+        'interview ethics',
+        'biometric privacy'
+    ],
+    openGraph: {
+        title: 'The Ghost in the Machine: Detecting Deepfake Proxy Candidates',
+        description: 'Forensic strategies to identify fraud, proxy actors, and deepfake technology in remote technical hiring.',
+        type: 'article',
+        publishedTime: '2026-01-23T00:00:00Z',
+    },
+};
+
+export default function DeepfakeDetectionPage() {
+    return (
+        <div className="min-h-screen bg-background text-foreground">
+            <Navbar />
+            <main id="main-content" role="main" className="pt-24 pb-16">
+                <article className="px-4 sm:px-6 py-12">
+                    <div className="max-w-4xl mx-auto">
+                        <nav className="mb-8">
+                            <Link href="/blog" className="inline-flex items-center gap-2 text-text-muted hover:text-brand transition-colors text-sm">
+                                <ArrowLeft className="w-4 h-4" />
+                                Back to Blog
+                            </Link>
+                        </nav>
+
+                        <header className="mb-12">
+                            <div className="flex items-center gap-4 mb-6">
+                                <span className="px-3 py-1 rounded-lg bg-brand/10 text-brand text-xs font-bold uppercase tracking-wider">
+                                    Forensics & Ethics
+                                </span>
+                                <div className="flex items-center gap-2 text-text-muted text-xs">
+                                    <Clock className="w-3 h-3" />
+                                    10 min read
+                                </div>
+                            </div>
+                            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-6 tracking-tight leading-[1.1]">
+                                The Ghost in the Machine: Detecting <span className="text-brand">Deepfake</span> Proxy Candidates
+                            </h1>
+                            <p className="text-xl text-text-secondary leading-relaxed max-w-2xl font-medium">
+                                Recruiting has entered a new, darker chapter. Real-time deepfakes aren't just a gimmick anymore—they are actively infiltrating the technical hiring funnel. Here is what we&apos;re seeing on the front lines.
+                            </p>
+                            <time className="block mt-8 text-sm text-text-muted font-mono uppercase tracking-widest">
+                                By Rigour Labs Forensics | Jan 23, 2026
+                            </time>
+                        </header>
+
+                        <div className="prose prose-invert prose-lg max-w-none">
+                            <section className="mb-16">
+                                <p className="text-text-secondary mb-6 italic border-l-4 border-brand/30 pl-6 py-2">
+                                    &quot;He looked like the guy in the passport. He spoke like a senior engineer. But four minutes in, my gut felt something was wrong. The mouth was just... off.&quot;
+                                    <br />— Anonymous Engineering Manager, Fortune 500 company.
+                                </p>
+                                <p className="text-text-secondary mb-6">
+                                    Last year, &quot;proxy interviewing&quot; meant someone else was whispering answers into an earpiece. Today, it’s a high-stakes tech-stack of its own. Using generative adversarial networks (GANs), bad actors are now injecting real-time video feeds into Zoom, Teams, and specialized platforms. They aren’t just helping candidates; they <span className="text-white italic">are</span> the candidates.
+                                </p>
+                                <p className="text-text-secondary mb-6">
+                                    At TalentLyt, we’ve analyzed over 50,000 interview hours. We don&apos;t just see pixels; we see the systematic artifacts left behind by neural injection.
+                                </p>
+                            </section>
+
+                            <section className="mb-16">
+                                <h2 className="text-3xl font-black text-white mb-8 tracking-tight">The &quot;Uncanny Valley&quot; in Recruitment</h2>
+                                <p className="text-text-secondary mb-8">
+                                    A deepfake proxy isn&apos;t a static image. It’s a dynamic mask. But even the best consumer-grade GPUs can’t perfectly replicate the complex physics of a human face during a high-stress technical explanation. We look for specific &quot;tells&quot; that human eyes often miss, but forensic algorithms catch instantly:
+                                </p>
+
+                                <div className="space-y-8 mb-12">
+                                    <div className="group p-8 rounded-[2rem] bg-card/50 border border-white/5 hover:border-brand/30 transition-all duration-500">
+                                        <h4 className="text-xl font-bold text-white mb-3 tracking-tight">1. Phonetic-to-Visual Latency (The &quot;Drip&quot;)</h4>
+                                        <p className="text-base text-text-secondary leading-relaxed">
+                                            The brain processes sound and light at different speeds, but our speech muscles are biological clocks. Real-time neural re-rendering usually introduces a 150ms to 300ms lag. In a technical interview where speed of thought is key, this drift becomes a mathematical certainty for detection.
+                                        </p>
+                                    </div>
+
+                                    <div className="group p-8 rounded-[2rem] bg-card/50 border border-white/5 hover:border-brand/30 transition-all duration-500">
+                                        <h4 className="text-xl font-bold text-white mb-3 tracking-tight">2. Neural Boundary Tearing</h4>
+                                        <p className="text-base text-text-secondary leading-relaxed">
+                                            Watch the edges. When a proxy candidate moves their head suddenly or raises a hand near their face, the neural mask &quot;tears.&quot; These are sub-pixel micro-glitches where the AI fails to map the depth of the occlusion. It looks like a shimmer to some; to us, it&apos;s a fraud alert.
+                                        </p>
+                                    </div>
+
+                                    <div className="group p-8 rounded-[2rem] bg-card/50 border border-white/5 hover:border-brand/30 transition-all duration-500">
+                                        <h4 className="text-xl font-bold text-white mb-3 tracking-tight">3. Illumination Spectrum Mismatch</h4>
+                                        <p className="text-base text-text-secondary leading-relaxed">
+                                            A deepfake might match the color of the room, but it often fails to match the <span className="text-white">specular highlights</span> on the pupils. Real light bounces off an eye in a specific way; AI-generated light lacks the environmental consistency of the proxy&apos;s actual room.
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section className="mb-16">
+                                <h2 className="text-3xl font-black text-white mb-8 tracking-tight">The Legal & Ethical Wall</h2>
+                                <p className="text-text-secondary mb-6">
+                                    Detecting fraud isn&apos;t just about catching &quot;bad guys&quot;—it’s about protecting the <span className="text-white italic">true</span> candidates who spent years honing their skills. However, this level of surveillance comes with a massive responsibility.
+                                </p>
+                                <div className="p-8 rounded-3xl bg-danger/5 border border-danger/20 mb-8">
+                                    <div className="flex gap-4 items-start">
+                                        <Shield className="w-6 h-6 text-danger shrink-0 mt-1" />
+                                        <div className="text-sm text-text-secondary space-y-4">
+                                            <p><strong className="text-white uppercase tracking-wider">A Note on Privacy:</strong> As a recruiter or engineering leader, you must ensure that your forensic tools are compliant with GDPR, CCPA, and BIPA. At TalentLyt, we use &quot;ephemeral processing.&quot; We don&apos;t build biometric databases; we analyze signals in real-time and discard the raw biological markers immediately after verification.</p>
+                                            <p><em>Always disclose that automated integrity verification is in use. Transparency is the best deterrent.</em></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section className="mb-16">
+                                <h2 className="text-3xl font-black text-white mb-8 tracking-tight">Why We Built Sentinel</h2>
+                                <p className="text-text-secondary mb-8">
+                                    We didn&apos;t build the Sentinel Engine because we wanted to be &quot;Big Brother.&quot; We built it because we saw honest companies losing millions and honest engineers losing jobs to proxy actors. Our approach uses <span className="text-white">SyncNet</span> and adversarial modeling to create a &quot;Zero-Trust&quot; environment for every interview.
+                                </p>
+                                <p className="text-text-secondary mb-12">
+                                    The &quot;resume check&quot; is dead. The &quot;video check&quot; is dying. The only thing left that you can actually trust is verified, real-time behavioral telemetry.
+                                </p>
+
+                                <div className="p-10 rounded-[3rem] bg-gradient-to-br from-brand/10 to-transparent border border-brand/20 mb-16 text-center">
+                                    <Zap className="w-10 h-10 text-brand mb-6 mx-auto animate-pulse" />
+                                    <h2 className="text-2xl font-bold text-white mb-4">Zero Trust for Technical Hiring</h2>
+                                    <p className="text-text-secondary max-w-xl mx-auto leading-relaxed mb-8">
+                                        The era of &quot;honest video&quot; is over. Companies must adopt a zero-trust architecture for technical assessments to ensure they are actually hiring the person they saw on screen.
+                                    </p>
+                                    <Link href="/pricing" className="inline-flex items-center gap-2 text-brand font-black uppercase tracking-widest text-xs hover:gap-4 transition-all">
+                                        View Sentinel Access Tiers <ArrowLeft className="w-4 h-4 rotate-180" />
+                                    </Link>
+                                </div>
+                            </section>
+                        </div>
+
+                        {/* Related Articles */}
+                        <RelatedArticles currentSlug="detect-deepfake-proxy-candidates" />
+
+                        <div className="mt-16 p-1 rounded-[2.5rem] bg-gradient-to-r from-brand/50 to-transparent">
+                            <div className="bg-[#050505] p-10 md:p-16 rounded-[2.4rem] text-center">
+                                <h3 className="text-3xl font-black text-white mb-6 tracking-tight">
+                                    Secure Your Hiring Layer
+                                </h3>
+                                <p className="text-text-secondary mb-10 max-w-xl mx-auto text-lg">
+                                    Don&apos;t leave your integrity to chance. Run every interview through the Sentinel Forensic engine.
+                                </p>
+                                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                                    <Link
+                                        href="/contact"
+                                        className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand text-white font-black rounded-2xl hover:bg-brand-hover transition-all uppercase tracking-widest text-xs shadow-xl shadow-brand/20"
+                                    >
+                                        Deploy Sentinel Now
+                                    </Link>
+                                    <Link
+                                        href="/pricing"
+                                        className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/5 text-white font-black rounded-2xl border border-white/10 hover:bg-white/10 transition-all uppercase tracking-widest text-xs"
+                                    >
+                                        View Pricing
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </main>
+            <Footer />
+        </div>
+    );
+}

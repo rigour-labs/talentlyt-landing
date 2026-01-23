@@ -20,7 +20,7 @@ export default function TermsPage() {
         {
             icon: CreditCard,
             title: "Billing & Subscriptions",
-            content: `Paid subscriptions are billed monthly or annually as selected. You may cancel at any time, effective at the end of your billing period. Refunds are provided only as required by law. Interview overages are billed at the end of each billing cycle. Pre-paid interview packs are non-refundable and expire after 12 months.`
+            content: `TalentLyt uses a minutes-based billing model. Pilot access is a one-time purchase. Starter is pay-as-you-go. Engine includes a monthly quota with metered overage. Payments are processed via Stripe (PCI DSS Compliant). You may cancel recurring subscriptions at any time through the billing portal. Refunds are provided only as required by law. Unused minutes on recurring plans do not roll over to the next billing cycle.`
         },
         {
             icon: AlertCircle,
@@ -64,7 +64,7 @@ export default function TermsPage() {
                             Please read these terms carefully before using TalentLyt. By using our platform, you agree to be bound by these terms.
                         </p>
                         <p className="text-sm text-text-muted mt-4">
-                            Last updated: January 10, 2026
+                            Last updated: January 23, 2026
                         </p>
                     </div>
 

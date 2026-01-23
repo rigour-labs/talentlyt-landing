@@ -2,23 +2,23 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
-import { ArrowLeft, Clock, Scale, Users, Brain, Target, TrendingDown } from 'lucide-react';
+import { ArrowLeft, Clock, Scale, Users, Brain, Target, TrendingDown, ShieldAlert } from 'lucide-react';
 import { RelatedArticles } from '@/components/blog/related-articles';
 
 export const metadata: Metadata = {
-    title: 'How to Reduce Hiring Bias with AI Interviews | Complete Guide',
-    description: 'Learn proven strategies to reduce unconscious bias in technical hiring using AI interview platforms. Data-driven approaches for fair, objective candidate evaluation.',
+    title: 'Objective Truth: How AI Can Strip Bias from Technical Hiring',
+    description: 'Recruitment is inherently human—and inherently biased. Discover how high-integrity AI systems can level the playing field for global technical talent.',
     keywords: [
-        'reduce hiring bias',
-        'AI interview bias reduction',
-        'fair hiring practices',
+        'hiring bias reduction',
         'unbiased technical interviews',
-        'objective hiring AI',
-        'diversity hiring technology',
+        'AI recruitment ethics',
+        'fair hiring technology',
+        'DEI technical recruitment',
+        'objective candidate evaluation'
     ],
     openGraph: {
-        title: 'How to Reduce Hiring Bias with AI Interviews',
-        description: 'Proven strategies to reduce unconscious bias in technical hiring using AI.',
+        title: 'Objective Truth: How AI Can Strip Bias from Technical Hiring',
+        description: 'Strip away the noise and focus on technical truth. A guide to fairer hiring in 2026.',
         type: 'article',
         publishedTime: '2025-01-01T00:00:00Z',
     },
@@ -30,7 +30,7 @@ export default function ReduceHiringBiasPage() {
             <Navbar />
             <main id="main-content" role="main" className="pt-24 pb-16">
                 <article className="px-4 sm:px-6 py-12">
-                    <div className="max-w-3xl mx-auto">
+                    <div className="max-w-4xl mx-auto">
                         <nav className="mb-8">
                             <Link href="/blog" className="inline-flex items-center gap-2 text-text-muted hover:text-brand transition-colors text-sm">
                                 <ArrowLeft className="w-4 h-4" />
@@ -41,139 +41,107 @@ export default function ReduceHiringBiasPage() {
                         <header className="mb-12">
                             <div className="flex items-center gap-4 mb-6">
                                 <span className="px-3 py-1 rounded-lg bg-brand/10 text-brand text-xs font-bold uppercase tracking-wider">
-                                    Best Practices
+                                    Ethics & Leadership
                                 </span>
                                 <div className="flex items-center gap-2 text-text-muted text-xs">
                                     <Clock className="w-3 h-3" />
-                                    6 min read
+                                    7 min read
                                 </div>
                             </div>
-                            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight leading-tight">
-                                How to Reduce Hiring Bias with AI Interviews
+                            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-6 tracking-tight leading-[1.1]">
+                                Objective Truth: How AI Strips <span className="text-brand">Bias</span> from Technical Hiring
                             </h1>
-                            <p className="text-lg text-text-secondary leading-relaxed">
-                                Learn proven strategies to minimize unconscious bias in your technical hiring process using AI-powered interview platforms.
+                            <p className="text-xl text-text-secondary leading-relaxed max-w-2xl font-medium">
+                                We like to think we&apos;re objective. The data suggests otherwise. Technical hiring is often a mirror of our own unconscious preferences.
                             </p>
-                            <time className="block mt-6 text-sm text-text-muted">
-                                Published January 1, 2025
+                            <time className="block mt-8 text-sm text-text-muted font-mono uppercase tracking-widest">
+                                By The TalentLyt Ethics Committee | Jan 1, 2026
                             </time>
                         </header>
 
                         <div className="prose prose-invert prose-lg max-w-none">
-                            <section className="mb-12">
-                                <h2 className="text-2xl font-bold text-white mb-4">The Hidden Cost of Hiring Bias</h2>
-                                <p className="text-text-secondary leading-relaxed mb-4">
-                                    <strong className="text-white">Unconscious bias</strong> in hiring costs companies more than they realize. It leads to homogeneous teams, missed talent, and reduced innovation. Studies suggest that biased hiring practices can reduce team performance by up to 30% compared to optimally diverse teams.
+                            <section className="mb-16">
+                                <p className="text-text-secondary mb-6">
+                                    Hiring is one of the most high-stakes decisions a human can make about another human. It is also one of the most flawed.
                                 </p>
-                                <p className="text-text-secondary leading-relaxed mb-4">
-                                    The challenge is that bias is often invisible. Interviewers don&apos;t intend to discriminate—but subtle factors like name recognition, communication style, and educational background influence decisions in ways we don&apos;t consciously recognize.
+                                <p className="text-text-secondary mb-6">
+                                    Whether we like it or not, our brains are hard-wired for &quot;pattern matching.&quot; We look for signals of <em>familiarity</em> and mistake them for signals of <em>competence</em>. This is how homogeneous engineering teams are built—not by malice, but by the subtle gravity of collective unconscious bias.
                                 </p>
                             </section>
 
-                            <section className="mb-12">
-                                <h2 className="text-2xl font-bold text-white mb-4">Types of Bias in Technical Hiring</h2>
-                                <div className="grid gap-4 my-8">
-                                    {[
-                                        { icon: Users, title: 'Affinity Bias', description: 'Favoring candidates who are similar to the interviewer in background, interests, or communication style.' },
-                                        { icon: Brain, title: 'Confirmation Bias', description: 'Seeking information that confirms initial impressions formed in the first few minutes.' },
-                                        { icon: Target, title: 'Halo Effect', description: 'Letting one positive trait (like a prestigious school) overshadow objective skill assessment.' },
-                                        { icon: TrendingDown, title: 'Attribution Bias', description: 'Attributing success to skill for some candidates and luck for others based on group membership.' },
-                                    ].map((bias, i) => (
-                                        <div key={i} className="p-5 rounded-xl bg-white/[0.02] border border-white/10">
-                                            <div className="flex items-center gap-3 mb-2">
-                                                <bias.icon className="w-5 h-5 text-brand" />
-                                                <h4 className="text-white font-bold">{bias.title}</h4>
-                                            </div>
-                                            <p className="text-text-secondary text-sm">{bias.description}</p>
+                            <section className="mb-16">
+                                <h2 className="text-3xl font-black text-white mb-8 tracking-tight">The &quot;Resume-School&quot; Trap</h2>
+                                <p className="text-text-secondary mb-10">
+                                    When a recruiter sees a &quot;Big Tech&quot; logo or an Ivy League school on a resume, their brain performs a cognitive shortcut. They assume the candidate is capable before the interview even begins. Conversely, a brilliant self-taught engineer from a non-traditional background often has to work twice as hard to prove the same baseline level of skill.
+                                </p>
+
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                                    <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/5 group hover:border-brand/30 transition-all">
+                                        <div className="flex items-center gap-3 mb-4">
+                                            <Target className="w-6 h-6 text-brand" />
+                                            <h4 className="text-white font-bold">Halo Effect</h4>
                                         </div>
-                                    ))}
+                                        <p className="text-sm text-text-secondary leading-relaxed">
+                                            Allowing one positive trait—like a prior employer or a charismatic greeting—to cloud the actual technical assessment results.
+                                        </p>
+                                    </div>
+                                    <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/5 group hover:border-brand/30 transition-all">
+                                        <div className="flex items-center gap-3 mb-4">
+                                            <Users className="w-6 h-6 text-blue-500" />
+                                            <h4 className="text-white font-bold">Affinity Bias</h4>
+                                        </div>
+                                        <p className="text-sm text-text-secondary leading-relaxed">
+                                            The &quot;Beer Test.&quot; Favoring candidates who share similar cultural references, hobbies, or speaking styles as the interviewer.
+                                        </p>
+                                    </div>
                                 </div>
                             </section>
 
-                            <section className="mb-12">
-                                <h2 className="text-2xl font-bold text-white mb-4">How AI Reduces Interview Bias</h2>
-                                <p className="text-text-secondary leading-relaxed mb-4">
-                                    AI interview platforms can significantly reduce bias through several mechanisms:
+                            <section className="mb-16">
+                                <h2 className="text-3xl font-black text-white mb-8 tracking-tight">AI as the &quot;Great Equalizer&quot;</h2>
+                                <p className="text-text-secondary mb-8 leading-relaxed">
+                                    A correctly architected AI, like <strong>Maya</strong>, is fundamentally indifferent to who you are. She doesn&apos;t know what you look like (unless forensic verification is required), she doesn&apos;t care about your accent, and she doesn&apos;t get &quot;vibes.&quot; She only cares about your logic.
                                 </p>
-
-                                <h3 className="text-xl font-bold text-white mb-3 mt-8">1. Standardized Evaluation Criteria</h3>
-                                <p className="text-text-secondary leading-relaxed mb-4">
-                                    Every candidate is evaluated against the same criteria using the same process. There&apos;s no variation based on which interviewer they happen to get or what time of day the interview occurs.
-                                </p>
-
-                                <h3 className="text-xl font-bold text-white mb-3 mt-8">2. Focus on Technical Truth</h3>
-                                <p className="text-text-secondary leading-relaxed mb-4">
-                                    AI evaluates what candidates <em>know</em> and <em>can do</em>—not how they present themselves. This shifts focus from surface-level impressions to actual competence.
-                                </p>
-
-                                <h3 className="text-xl font-bold text-white mb-3 mt-8">3. Blind Evaluation Possible</h3>
-                                <p className="text-text-secondary leading-relaxed mb-4">
-                                    AI-generated assessments can be reviewed without identifying information, allowing hiring managers to evaluate candidates purely on merit.
-                                </p>
-
-                                <h3 className="text-xl font-bold text-white mb-3 mt-8">4. Data-Driven Decisions</h3>
-                                <p className="text-text-secondary leading-relaxed mb-4">
-                                    AI provides quantifiable metrics rather than gut feelings. This makes it easier to identify and correct when bias might be influencing decisions.
-                                </p>
+                                <div className="space-y-6">
+                                    <div className="flex gap-4 p-8 rounded-[2rem] bg-card border border-white/5">
+                                        <div className="w-2 h-2 rounded-full bg-brand mt-2.5 shrink-0" />
+                                        <div>
+                                            <h4 className="text-white font-bold mb-2">Technical Truth Over Soft-Skills Noise</h4>
+                                            <p className="text-sm text-text-secondary leading-relaxed">AI evaluations focus on <em>how</em> a candidate navigates a code-block, not how confidently they talk about it. In technical hiring, this distinction is often where true talent is found.</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex gap-4 p-8 rounded-[2rem] bg-card border border-white/5">
+                                        <div className="w-2 h-2 rounded-full bg-brand mt-2.5 shrink-0" />
+                                        <div>
+                                            <h4 className="text-white font-bold mb-2">Standardized Difficulty Scaling</h4>
+                                            <p className="text-text-secondary text-sm leading-relaxed">Human interviewers often get harder or easier on candidates based on their own mood. AI provides a consistent, adaptive difficulty curve for every candidate, every time.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </section>
 
-                            <section className="mb-12">
-                                <h2 className="text-2xl font-bold text-white mb-4">Best Practices for Bias Reduction</h2>
-                                <p className="text-text-secondary leading-relaxed mb-4">
-                                    To maximize bias reduction when using AI interview platforms:
+                            <section className="mb-16">
+                                <h2 className="text-3xl font-black text-white mb-8 tracking-tight">The Ethics of Algorithmic Fairness</h2>
+                                <p className="text-text-secondary mb-6 leading-relaxed">
+                                    We must be careful: AI can inherit the biases of its training data. This is why TalentLyt uses a <strong>Multi-Agent Architecture.</strong>
                                 </p>
-                                <ol className="list-decimal pl-6 space-y-4 text-text-secondary">
-                                    <li>
-                                        <strong className="text-white">Define clear, objective criteria</strong> before interviews begin. What specific skills and knowledge are required? How will they be measured?
-                                    </li>
-                                    <li>
-                                        <strong className="text-white">Use structured interviews</strong> where all candidates answer the same core questions. This provides a fair comparison baseline.
-                                    </li>
-                                    <li>
-                                        <strong className="text-white">Review AI assessments before human interviews</strong> to prevent first impressions from overriding objective data.
-                                    </li>
-                                    <li>
-                                        <strong className="text-white">Track diversity metrics</strong> at each stage of your funnel. If diverse candidates drop off at a specific stage, investigate why.
-                                    </li>
-                                    <li>
-                                        <strong className="text-white">Use multiple evaluators</strong>—including AI agents—to reduce individual bias impact.
-                                    </li>
-                                </ol>
+                                <p className="text-text-secondary mb-8">
+                                    If one model shows a preference pattern for certain syntax or reasoning styles, other models in the consensus loop can counterbalance it. We actively audit our models for &quot;disparate impact&quot; to ensure our technology is a tool for equity, not automated exclusion.
+                                </p>
+                                <div className="p-8 rounded-3xl bg-amber-500/5 border border-amber-500/20 mb-8">
+                                    <h4 className="text-white font-bold mb-3 flex items-center gap-2">
+                                        <ShieldAlert className="w-5 h-5 text-amber-500" /> Legal Safeguards
+                                    </h4>
+                                    <p className="text-sm text-text-secondary leading-relaxed">
+                                        Any AI-driven hiring must comply with the <strong>NYC Automated Employment Decision Tool (AEDT)</strong> law and similar global regulations. We provide our clients with fully transparent audit trails to prove that their hiring decisions are based on skill, not bias.
+                                    </p>
+                                </div>
                             </section>
 
-                            <section className="mb-12">
-                                <h2 className="text-2xl font-bold text-white mb-4">The Role of Multi-Agent AI</h2>
-                                <p className="text-text-secondary leading-relaxed mb-4">
-                                    Single AI models can inherit biases from their training data. Multi-Agent AI systems, like TalentLyt&apos;s, reduce this risk by requiring consensus between multiple agents with different architectures and training approaches.
-                                </p>
-                                <p className="text-text-secondary leading-relaxed mb-4">
-                                    If one agent shows bias in a particular direction, the others can counterbalance it. The consensus mechanism ensures that no single perspective—biased or otherwise—dominates the final assessment.
-                                </p>
-                            </section>
-
-                            <section className="mb-12">
-                                <h2 className="text-2xl font-bold text-white mb-4">Measuring Bias Reduction</h2>
-                                <p className="text-text-secondary leading-relaxed mb-4">
-                                    How do you know if your efforts are working? Track these metrics:
-                                </p>
-                                <ul className="list-disc pl-6 space-y-2 text-text-secondary">
-                                    <li>Diversity of candidates passing each interview stage</li>
-                                    <li>Correlation between interviewer demographics and candidate outcomes</li>
-                                    <li>Variance in scores across different interviewer/AI combinations</li>
-                                    <li>Long-term performance of hires vs. their interview scores</li>
-                                </ul>
-                                <p className="text-text-secondary leading-relaxed mt-4">
-                                    The goal isn&apos;t equal outcomes for all demographics—it&apos;s ensuring that outcomes correlate with actual job performance, not background factors.
-                                </p>
-                            </section>
-
-                            <section className="mb-12">
-                                <h2 className="text-2xl font-bold text-white mb-4">Conclusion</h2>
-                                <p className="text-text-secondary leading-relaxed mb-4">
-                                    Reducing hiring bias isn&apos;t just about fairness—it&apos;s about building better teams. When you evaluate candidates on technical truth rather than unconscious impressions, you find talent that others miss.
-                                </p>
+                            <section className="mb-16">
+                                <h2 className="text-3xl font-black text-white mb-8 tracking-tight">Conclusion</h2>
                                 <p className="text-text-secondary leading-relaxed">
-                                    AI interview platforms provide the tools to make this happen: standardized evaluation, objective metrics, and data-driven decisions. Combined with thoughtful human oversight, they can help create a hiring process that&apos;s both fair and effective.
+                                    Bias isn&apos;t something we can ever fully &quot;solve&quot; in humans. But we can build tools that operate outside our own limitations. By focusing on technical truth and using consensus-based AI, we can build teams that aren&apos;t just more diverse, but fundamentally more capable.
                                 </p>
                             </section>
                         </div>
@@ -181,19 +149,19 @@ export default function ReduceHiringBiasPage() {
                         {/* Related Articles */}
                         <RelatedArticles currentSlug="reduce-hiring-bias-ai" />
 
-                        <div className="mt-16 p-8 rounded-[2rem] bg-gradient-to-b from-brand/10 to-transparent border border-brand/20 text-center">
-                            <Scale className="w-12 h-12 text-brand mx-auto mb-4" />
-                            <h3 className="text-2xl font-bold text-white mb-4">
-                                Build a Fairer Hiring Process
+                        <div className="mt-16 p-10 md:p-16 rounded-[3rem] bg-gradient-to-br from-brand/10 to-transparent border border-brand/20 text-center">
+                            <Scale className="w-12 h-12 text-brand mb-8 mx-auto" />
+                            <h3 className="text-3xl font-black text-white mb-6 tracking-tight">
+                                Ready to Hire for Merit?
                             </h3>
-                            <p className="text-text-secondary mb-6 max-w-xl mx-auto">
-                                TalentLyt&apos;s Multi-Agent AI evaluates candidates on technical truth, not unconscious bias.
+                            <p className="text-text-secondary mb-10 max-w-xl mx-auto text-lg leading-relaxed font-medium">
+                                Level the playing field for your engineering funnel. Deploy an objective assessment layer that cares about code, not pedigree.
                             </p>
                             <Link
                                 href="/contact"
-                                className="inline-flex items-center gap-2 px-8 py-4 bg-brand text-white font-bold rounded-2xl hover:shadow-[0_0_30px_rgba(99,102,241,0.4)] transition-all"
+                                className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-brand text-white font-black rounded-2xl hover:bg-brand-hover shadow-2xl shadow-brand/40 transition-all uppercase tracking-[0.2em] text-xs"
                             >
-                                Start Free Trial
+                                Start Unbiased Hiring <ArrowLeft className="w-4 h-4 rotate-180" />
                             </Link>
                         </div>
                     </div>

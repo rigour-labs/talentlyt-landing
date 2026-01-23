@@ -5,16 +5,16 @@ import { Footer } from '@/components/footer';
 import { PricingContent } from '@/components/pricing-content';
 
 export const metadata: Metadata = {
-    title: 'Pricing & Sentinel Access Layers | TalentLyt AI Interview Platform',
-    description: 'Stop Hiring Blindly. Deploy the Sentinel Forensic Engine to verify candidate identity and technical skill in real-time. Zero trust, human-centric, forensic-grade auditing for technical recruitment.',
+    title: 'Transparent Pricing | TalentLyt AI Interview Platform',
+    description: 'Usage-based pricing for the world\'s most advanced AI technical interview platform. Zero feature gates, unlimited team seats, and metered minutes starting at $0.35/min. Secure your hiring pipeline today.',
     keywords: [
-        'AI interview pricing',
-        'automated technical interview cost',
-        'technical screening price',
-        'Sentinel Forensic Engine',
-        'Maya AI interview price',
-        'integrity verification cost',
-        'enterprise hiring software pricing'
+        'AI interview platform pricing',
+        'usage-based technical screening',
+        'Sentinel Forensic Engine cost',
+        'Maya AI interview minutes',
+        'enterprise AI recruitment pricing',
+        'transparent hiring software costs',
+        'technical interview automation price'
     ]
 };
 

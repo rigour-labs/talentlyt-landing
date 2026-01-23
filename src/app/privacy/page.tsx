@@ -85,7 +85,7 @@ export default function PrivacyPolicyPage() {
             content: [
                 {
                     subtitle: "Retention Periods",
-                    text: "Interview data is retained according to your subscription tier (30 days to 1 year). You can request early deletion at any time."
+                    text: "Data retention is tied to your subscription tier: Pilot (7 days), Starter (30 days), Engine (90 days), and Fortress (up to 3 years). You can request manual early deletion at any time through the compliance dashboard."
                 },
                 {
                     subtitle: "International Transfers",
@@ -119,7 +119,7 @@ export default function PrivacyPolicyPage() {
                             TalentLyt is committed to protecting your privacy and ensuring transparency in how we collect, use, and safeguard your data.
                         </p>
                         <p className="text-sm text-text-muted mt-4">
-                            Last updated: January 10, 2026
+                            Last updated: January 23, 2026
                         </p>
                     </div>
 

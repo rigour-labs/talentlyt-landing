@@ -5,17 +5,27 @@ import { Footer } from '@/components/footer';
 import { ArrowRight, BookOpen, Clock } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'Blog | AI Interview Platform Insights & Technical Hiring Guides',
-    description: 'Expert insights on AI interview platforms, technical hiring best practices, interview integrity verification, and the future of recruitment technology.',
+    title: 'Blog | AI Interview Integrity & Technical Hiring Guides',
+    description: 'Expert insights on AI interview platforms, technical hiring best practices, forensic integrity verification, and detecting deepfake proxy candidates.',
     keywords: [
         'AI interview blog',
         'technical hiring tips',
-        'interview integrity',
-        'recruitment technology',
+        'interview integrity verification',
+        'detect deepfake candidates',
+        'proxy interviewer detection',
+        'recruitment technology insights',
     ],
 };
 
 const blogPosts = [
+    {
+        slug: 'detect-deepfake-proxy-candidates',
+        title: 'AI Interview Integrity: How to Detect Deepfake Proxy Candidates',
+        excerpt: 'Forensic techniques and AI-powered signals used to detect deepfake proxy candidates and verify candidate identity in real-time.',
+        category: 'Forensics',
+        readTime: '10 min read',
+        date: '2026-01-23',
+    },
     {
         slug: 'what-is-ai-interview-platform',
         title: 'What is an AI Interview Platform? Complete Guide for 2025',

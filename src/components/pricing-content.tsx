@@ -3,87 +3,87 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ShieldCheck, Zap, Globe, ArrowRight, Sparkles, Activity } from 'lucide-react';
+import { ShieldCheck, Zap, Globe, ArrowRight, Sparkles, Activity, Check, Minus, Info, HelpCircle, CreditCard, Lock } from 'lucide-react';
 
 export function PricingContent() {
     const tiers = [
         {
             name: 'The Pilot',
             price: '$29',
-            unit: 'Rapid Access Pack',
-            description: 'Validate the engine in 24 hours. Includes 3 full Sentinel Audits.',
-            valueTag: 'Forensic Value: Full Audit Depth',
+            unit: 'One-Time',
+            description: 'Experience the full platform. 90 minutes to validate.',
+            valueTag: 'Rate: $0.32 / min',
             features: [
-                '3x Full Sentinel Audits',
-                'Neural Calibration Map',
-                'Temporal Intelligence Map',
-                'Zero-Storage ID Verification',
-                'Automated Forensic Report',
-                '7-day data retention'
+                '90 Minutes Included',
+                'Maya AI Interviewer',
+                'Panel Mode (AI + Human)',
+                '12-Signal Fraud Detection',
+                'Deepfake & Voice Forensics',
+                '7-Day Data Retention'
             ],
-            cta: 'Start Pilot Access',
+            cta: 'Start Your Pilot',
             ctaLink: '/contact',
             highlight: false,
-            woo: 'Run 3 interviews and see the Sentinel Forensic HUD in action.'
+            woo: '3x 30-min sessions or 2x 45-min sessions. Zero commitment.'
         },
         {
             name: 'The Starter',
-            price: '$15',
-            unit: '/ Interview',
-            description: 'Zero commitment. Instant scale. Pay only for the sessions you conduct.',
-            valueTag: 'Forensic Value: Pay-Per-Session',
+            price: '$0.35',
+            unit: '/ Minute',
+            description: 'Full platform. Zero commitment. Pay as you go.',
+            valueTag: 'Forensic Value: PAYG',
             features: [
-                'Unified Integrity Scoring',
-                'Side-Channel Analysis',
-                'Biometric Continuity Sync',
-                'Hardware Layer Telemetry',
-                'Full Maya AI Capabilities',
-                '30-day data retention'
+                'Unlimited Minutes',
+                'Real-time Maya AI',
+                'Adversarial Fraud Detection',
+                'Voice Biometrics (ECAPA-TDNN)',
+                'Unlimited Team Seats',
+                '30-Day Data Retention'
             ],
             cta: 'Get Started',
             ctaLink: '/contact',
             highlight: false,
             tag: 'Pay As You Go',
-            woo: 'Surgical assessment of every candidate with a Unified Integrity Score.'
+            woo: 'Ideal for agencies and variable hiring needs. Pay only for what you use.'
         },
         {
             name: 'The Engine',
             price: '$249',
             unit: '/ Month',
-            description: 'The standard for growing teams. Includes 50 interviews per month.',
-            valueTag: 'Forensic Value: $5.00/int effective',
+            description: 'The standard for growing teams. 3,000 minutes included.',
+            valueTag: 'Rate: $0.083 / min',
             features: [
-                'Includes 50 Interviews/mo',
-                'Multi-stage Pipeline Builder',
-                'Biometric Chain of Custody',
-                'Behavioral Drift Analysis',
-                'Skill Variance Reporting',
-                '90-day data retention'
+                '3,000 Minutes Included',
+                '$0.10/min Overage Rate',
+                'Priority Support (24h)',
+                '99.5% Uptime SLA',
+                'Unlimited Pipelines',
+                '90-Day Data Retention'
             ],
             cta: 'Scale Your Pipeline',
             ctaLink: '/contact',
             highlight: true,
             tag: 'Most Popular',
-            woo: 'Orchestrate automated screening stages with Maya AI.'
+            woo: 'Save 76% vs Starter rates. Perfect for high-volume technical screening.'
         },
         {
             name: 'The Fortress',
             price: 'Custom',
-            unit: '/ Platform',
-            description: 'Sovereign infrastructure for high-volume enterprise hiring.',
-            valueTag: 'Forensic Value: Isolated Environment',
+            unit: 'Enterprise',
+            description: 'Unlimited minutes. Enterprise-grade operations.',
+            valueTag: 'Forensic Value: Full Sovereignty',
             features: [
-                'Bulk Credit Allocation',
-                'Evervault-Encrypted Logs',
-                'Dedicated Forensic Analyst',
-                'White-Label Forensic Integrity',
-                'Custom Calibration Protocols',
-                'SAML / SSO Integration'
+                'Unlimited Minutes',
+                'SAML / SSO (WorkOS)',
+                'REST API + Webhooks',
+                'White-Label Reports',
+                'Dedicated Slack + CSM',
+                'Custom Retention (3yr)'
             ],
-            cta: 'Contact Security Sales',
+            cta: 'Contact Sales',
             ctaLink: '/contact',
             highlight: false,
-            woo: 'Custom Calibration Protocols tailored to your specific requirements.'
+            woo: 'Includes Unlimited Sentinel Forensic scans and 99.9% uptime guarantee.'
         }
     ];
 
@@ -153,164 +153,315 @@ export function PricingContent() {
                         <motion.div
                             key={tier.name}
                             variants={cardVariants}
-                            whileHover={{ y: -8, transition: { duration: 0.2 } }}
+                            whileHover={{ y: -12, transition: { duration: 0.3, ease: "easeOut" } }}
                             className={`group relative flex flex-col p-8 rounded-[2.5rem] border transition-all duration-500 overflow-hidden ${tier.highlight
-                                ? 'bg-card/40 border-brand shadow-[0_30px_60px_-15px_rgba(99,102,241,0.2)] backdrop-blur-xl ring-1 ring-brand/20'
-                                : 'bg-card/40 border-border/50 hover:border-brand/40 shadow-xl backdrop-blur-sm'
+                                ? 'bg-[#0A0A0B] border-brand/50 shadow-[0_40px_80px_-15px_rgba(99,102,241,0.25)] ring-1 ring-brand/30'
+                                : 'bg-card/30 border-white/5 hover:border-white/20 shadow-2xl backdrop-blur-md'
                                 }`}
                         >
-                            {/* Inner Glass Highlight */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-white/[0.05] to-transparent pointer-events-none" />
+                            {/* Premium Background Glow for Highlighted Card */}
+                            {tier.highlight && (
+                                <div className="absolute -top-24 -right-24 w-64 h-64 bg-brand/20 blur-[80px] rounded-full pointer-events-none opacity-50 group-hover:opacity-80 transition-opacity" />
+                            )}
 
-                            <div className="relative z-10">
-                                <div className="flex justify-between items-start mb-6">
+                            {/* Inner Glass Highlight */}
+                            <div className="absolute inset-0 bg-gradient-to-br from-white/[0.03] to-transparent pointer-events-none" />
+
+                            <div className="relative z-10 flex flex-col h-full">
+                                <div className="flex justify-between items-start mb-8">
                                     <div>
-                                        <h3 className="text-xs font-bold text-text-muted uppercase tracking-[0.2em] mb-1">{tier.name}</h3>
-                                        <div className="flex items-baseline gap-1">
-                                            <span className="text-4xl font-black tracking-tighter text-white">{tier.price}</span>
-                                            {tier.unit && <span className="text-text-muted font-bold text-xs uppercase tracking-wider">{tier.unit}</span>}
+                                        <div className="flex items-center gap-2 mb-2">
+                                            <h3 className="text-[10px] font-black text-brand uppercase tracking-[0.25em]">{tier.name}</h3>
+                                            {tier.tag && (
+                                                <span className="px-2 py-0.5 rounded-full bg-brand text-brand-foreground text-[8px] font-black uppercase tracking-tighter shadow-lg shadow-brand/20">
+                                                    {tier.tag}
+                                                </span>
+                                            )}
+                                        </div>
+                                        <div className="flex items-baseline gap-1.5">
+                                            <span className="text-5xl font-black tracking-tight text-white">{tier.price}</span>
+                                            <span className="text-[10px] font-bold text-text-muted uppercase tracking-widest">{tier.unit}</span>
                                         </div>
                                     </div>
-                                    {tier.tag && (
-                                        <div className={`px-3 py-1 rounded-full text-[9px] font-black uppercase tracking-wider border ${tier.highlight
-                                            ? 'bg-brand text-brand-foreground border-brand shadow-[0_0_15px_rgba(99,102,241,0.5)]'
-                                            : 'bg-white/5 text-white/70 border-white/10'
-                                            }`}>
-                                            {tier.tag}
-                                        </div>
-                                    )}
                                 </div>
 
-                                <div className="mb-6">
-                                    <div className="text-[10px] font-bold text-brand uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                                        <Sparkles className="w-3 h-3" />
+                                <div className="mb-8">
+                                    <div className="text-[10px] font-bold text-white/50 uppercase tracking-widest mb-3 flex items-center gap-2">
+                                        <Sparkles className="w-3 h-3 text-brand" />
                                         {tier.valueTag}
                                     </div>
-                                    <p className="text-text-secondary text-sm leading-relaxed font-medium">{tier.description}</p>
+                                    <p className="text-text-secondary text-sm leading-relaxed font-medium min-h-[40px]">{tier.description}</p>
                                 </div>
 
-                                <div className="p-4 rounded-2xl bg-brand/[0.03] border border-brand/10 text-brand text-[10px] sm:text-[11px] font-bold leading-relaxed mb-8 relative group-hover:bg-brand/[0.05] transition-colors">
-                                    <div className="absolute inset-y-0 left-0 w-1 bg-brand rounded-full" />
+                                <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/5 text-text-secondary text-[10px] font-medium leading-relaxed mb-8 relative group-hover:bg-white/[0.05] transition-colors">
+                                    <div className="absolute inset-y-0 left-0 w-1 bg-brand rounded-full opacity-50" />
                                     {tier.woo}
                                 </div>
 
-                                <div className="space-y-4 mb-10">
+                                <div className="space-y-4 mb-10 flex-grow">
                                     {tier.features.map((feature) => (
                                         <div key={feature} className="flex gap-3 items-start group/feat">
-                                            <div className="p-1 rounded-md bg-brand/5 border border-brand/10 mt-0.5 group-hover/feat:bg-brand/10 transition-colors">
-                                                <ShieldCheck className={`w-3.5 h-3.5 ${tier.highlight ? 'text-brand' : 'text-text-muted'}`} />
+                                            <div className="p-1 rounded-md bg-brand/10 border border-brand/20 mt-0.5 group-hover/feat:bg-brand/20 transition-colors">
+                                                <ShieldCheck className="w-3.5 h-3.5 text-brand" />
                                             </div>
-                                            <span className="text-text-secondary text-sm font-medium leading-tight group-hover/feat:text-white transition-colors">{feature}</span>
+                                            <span className="text-text-secondary text-xs font-semibold leading-tight group-hover/feat:text-white transition-colors">{feature}</span>
                                         </div>
                                     ))}
                                 </div>
 
                                 <Link
                                     href={tier.ctaLink}
-                                    className={`w-full py-4 px-6 rounded-2xl font-black text-xs uppercase tracking-widest transition-all text-center flex items-center justify-center gap-2 relative overflow-hidden ${tier.highlight
-                                        ? 'bg-brand text-brand-foreground hover:bg-brand-hover shadow-[0_10px_20px_-10px_rgba(99,102,241,0.5)]'
+                                    className={`w-full py-4 px-6 rounded-2xl font-black text-xs uppercase tracking-[0.2em] transition-all text-center flex items-center justify-center gap-2 relative overflow-hidden group ${tier.highlight
+                                        ? 'bg-brand text-brand-foreground hover:bg-brand-hover shadow-[0_20px_40px_-10px_rgba(99,102,241,0.5)]'
                                         : 'bg-white/5 text-white hover:bg-white/10 border border-white/10'
                                         }`}
                                 >
-                                    {tier.cta}
-                                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                    <span className="relative z-10">{tier.cta}</span>
+                                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform relative z-10" />
                                 </Link>
                             </div>
                         </motion.div>
                     ))}
                 </motion.div>
 
-                {/* Sentinel Proof - Premium Visual Block */}
+                {/* Pricing Philosophy - No Feature Gates */}
+                <motion.section
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="mb-32"
+                >
+                    <div className="text-center mb-16">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 border border-brand/20 text-brand text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
+                            Core Philosophy
+                        </div>
+                        <h2 className="text-3xl sm:text-4xl font-black mb-12 tracking-tight">
+                            Simple. Transparent. <span className="text-brand">No Feature Gates.</span>
+                        </h2>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {[
+                            {
+                                title: "Unlimited Everything",
+                                desc: "Team seats, pipelines, and features are never capped. We scale with your growth, not your headcount.",
+                                icon: Globe,
+                                color: "text-blue-400"
+                            },
+                            {
+                                title: "Value-Based Billing",
+                                desc: "You pay for minutes, not for capabilities. Every user gets the full Sentinel Forensic engine.",
+                                icon: Zap,
+                                color: "text-brand"
+                            },
+                            {
+                                title: "Honest Economics",
+                                desc: "A 15-minute screen costs less than a 60-minute deep dive. Transparent usage-based pricing.",
+                                icon: Activity,
+                                color: "text-emerald-400"
+                            }
+                        ].map((item, i) => (
+                            <div key={i} className="group p-10 rounded-[2.5rem] bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] hover:border-white/10 transition-all duration-500 relative overflow-hidden">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-brand/5 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+                                <item.icon className={`w-10 h-10 ${item.color} mb-8`} />
+                                <h3 className="text-xl font-bold text-white mb-4 tracking-tight">{item.title}</h3>
+                                <p className="text-text-secondary text-sm leading-relaxed font-medium">{item.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+                </motion.section>
+
+                {/* Sentinel Forensic - Product 2 */}
                 <motion.section
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="mb-32 group"
+                    className="mb-32 relative"
                 >
-                    <div className="p-px rounded-[3.5rem] bg-gradient-to-b from-brand/30 via-brand/5 to-transparent hover:from-brand/50 transition-colors duration-1000">
-                        <div className="bg-[#050505] rounded-[3.4rem] p-10 md:p-16 border border-white/5 relative overflow-hidden backdrop-blur-3xl shadow-2xl">
-                            {/* Decorative background blur */}
-                            <div className="absolute -top-1/2 -right-1/4 w-[800px] h-[800px] bg-brand/10 blur-[120px] rounded-full pointer-events-none" />
+                    <div className="absolute inset-0 bg-brand/5 blur-[120px] rounded-full pointer-events-none -z-10" />
+                    <div className="text-center mb-16">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 border border-brand/20 text-brand text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
+                            Forensic Intelligence
+                        </div>
+                        <h2 className="text-4xl sm:text-5xl font-black mb-6 tracking-tighter">Sentinel <span className="text-brand">Forensic</span></h2>
+                        <p className="text-text-secondary max-w-2xl mx-auto text-lg font-medium">
+                            Deep post-interview analysis for high-stakes hires. <br className="hidden md:block" /> Powered by <span className="text-white">SyncNet</span> and <span className="text-white">ECAPA-TDNN</span>.
+                        </p>
+                    </div>
 
-                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
-                                <div className="relative">
-                                    <motion.div
-                                        whileHover={{ scale: 1.02 }}
-                                        transition={{ type: "spring", stiffness: 300 }}
-                                        className="relative p-2 rounded-[2rem] bg-white/5 border border-white/10 shadow-2xl"
-                                    >
-                                        <img
-                                            src="https://onbadqcmbugvszb0.public.blob.vercel-storage.com/screencapture-platform-talentlyt-cloud-dashboard-audit-cmk9wgczv000001s6hl78jtgm-2026-01-11-22_26_25.png"
-                                            alt="Sentinel Forensic Audit - Tamper Detected"
-                                            className="rounded-[1.5rem] w-full"
-                                        />
-                                        <div className="absolute top-8 left-8 px-4 py-2 bg-danger text-white technical-label text-[10px] font-black rounded-lg shadow-[0_0_30px_rgba(251,113,133,0.5)] animate-pulse border border-danger/50">
-                                            ALERT: TAMPER_DETECTION_LVL_4
-                                        </div>
-                                    </motion.div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {[
+                            {
+                                name: 'Sentinel Basic',
+                                price: '$35',
+                                unit: '/ Scan',
+                                features: ['Wav2Lip Forensics', 'SyncNet CNN Analysis', 'Voice Biometric Deep Sync', 'Evidence PDF Report'],
+                                availability: 'Available Now',
+                                highlight: false
+                            },
+                            {
+                                name: 'Sentinel Advanced',
+                                price: '$50',
+                                unit: '/ Scan',
+                                features: ['v-JEPA2 Integration', 'Temporal Consistency', 'Motion Anomaly Detection', 'Enhanced Video Reasoning'],
+                                availability: 'Q2 2026',
+                                highlight: true
+                            },
+                            {
+                                name: 'Sentinel Premium',
+                                price: '$75',
+                                unit: '/ Scan',
+                                features: ['NVIDIA Alpamayo 10B', 'Behavioral Reasoning', 'Natural Language Explanation', 'Multi-modal Verification'],
+                                availability: 'Q3 2026',
+                                highlight: false
+                            }
+                        ].map((tier, i) => (
+                            <div key={i} className={`group p-8 rounded-[2.5rem] border backdrop-blur-3xl transition-all duration-500 overflow-hidden ${tier.highlight ? 'bg-brand/10 border-brand/40 shadow-2xl ring-1 ring-brand/20' : 'bg-card/30 border-white/5 hover:border-white/10'}`}>
+                                <div className="absolute -bottom-12 -right-12 w-32 h-32 bg-brand/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+                                <div className="text-[10px] font-black uppercase tracking-[0.2em] text-text-muted mb-4">{tier.name}</div>
+                                <div className="flex items-baseline gap-1.5 mb-8">
+                                    <span className="text-5xl font-black text-white">{tier.price}</span>
+                                    <span className="text-xs font-bold text-text-muted uppercase tracking-widest">{tier.unit}</span>
                                 </div>
-                                <div>
-                                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 border border-brand/20 text-brand text-[10px] font-bold uppercase tracking-[0.2em] mb-8">
-                                        Forensic Hub: Sentinel HUD
-                                    </div>
-                                    <h2 className="text-4xl sm:text-5xl font-black text-white mb-8 tracking-tighter leading-tight">
-                                        Caught in <span className="text-brand italic">4 Minutes</span>.
-                                    </h2>
-                                    <p className="text-xl text-text-secondary mb-10 leading-relaxed font-medium">
-                                        Join the pilot clients saving <span className="text-white font-bold">$15,000 per bad hire</span> with our zero-trust forensic engine.
-                                    </p>
-                                    <div className="space-y-8 mb-12">
-                                        <div className="flex gap-4">
-                                            <div className="w-12 h-12 rounded-xl bg-brand/10 border border-brand/20 flex items-center justify-center shrink-0">
-                                                <Zap className="w-6 h-6 text-brand" />
-                                            </div>
-                                            <div>
-                                                <h4 className="font-bold text-white mb-1">Instant Detection</h4>
-                                                <p className="text-sm text-text-secondary leading-relaxed">Identity spoofing and proxy candidates are neutralized via behavioral biometrics.</p>
-                                            </div>
+                                <div className="space-y-4 mb-10 min-h-[160px]">
+                                    {tier.features.map(f => (
+                                        <div key={f} className="flex items-center gap-3 text-sm text-text-secondary font-medium">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-brand" /> {f}
                                         </div>
-                                        <div className="flex gap-4">
-                                            <div className="w-12 h-12 rounded-xl bg-green-500/10 border border-green-500/20 flex items-center justify-center shrink-0">
-                                                <ShieldCheck className="w-6 h-6 text-green-500" />
-                                            </div>
-                                            <div>
-                                                <h4 className="font-bold text-white mb-1">Zero Trust Protocol</h4>
-                                                <p className="text-sm text-text-secondary leading-relaxed">Ephemeral data processing ensures total privacy while maintaining absolute evidence.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <Link
-                                        href="/contact"
-                                        className="inline-flex items-center gap-3 px-8 py-4 bg-brand text-brand-foreground rounded-2xl font-black text-sm uppercase tracking-[0.2em] hover:bg-brand-hover hover:-translate-y-1 transition-all shadow-[0_15px_30px_-10px_rgba(99,102,241,0.5)]"
-                                    >
-                                        Deploy Sentinel Engine <ArrowRight className="w-4 h-4" />
-                                    </Link>
+                                    ))}
+                                </div>
+                                <div className={`text-center py-3 px-6 rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] transition-all ${tier.highlight ? 'bg-brand text-white shadow-lg shadow-brand/20' : 'bg-white/5 text-text-muted border border-white/10 group-hover:bg-white/10 group-hover:text-white'}`}>
+                                    {tier.availability}
                                 </div>
                             </div>
+                        ))}
+                    </div>
+                </motion.section>
+
+                {/* Competitive Matrix */}
+                <motion.section
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="mb-32"
+                >
+                    <div className="p-10 rounded-[3rem] bg-card/20 border border-white/5 backdrop-blur-3xl overflow-hidden relative">
+                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand/50 to-transparent" />
+                        <div className="text-center mb-16">
+                            <h2 className="text-3xl font-black mb-4 tracking-tight">Competitive Matrix</h2>
+                            <p className="text-text-secondary font-medium text-sm px-6">How TalentLyt scales and secures where traditional platforms fail.</p>
+                        </div>
+
+                        <div className="overflow-x-auto px-4 md:px-0">
+                            <table className="w-full text-left border-collapse min-w-[600px]">
+                                <thead>
+                                    <tr className="border-b border-white/10">
+                                        <th className="py-8 px-6 text-[10px] font-black text-text-muted uppercase tracking-[0.2em]">Capability</th>
+                                        <th className="py-8 px-6 text-[10px] font-black text-brand uppercase tracking-[0.2em]">TalentLyt Engine</th>
+                                        <th className="py-8 px-6 text-[10px] font-black text-text-muted uppercase tracking-[0.2em]">Traditional ATS / AI</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-white/5">
+                                    {[
+                                        { feature: 'Interview Model', talent: 'Live Multi-Agent Voice', trad: 'Asynchronous / One-way' },
+                                        { feature: 'Cost Protocol', talent: 'Metered Minutes', trad: 'Static Per-User Fees' },
+                                        { feature: 'Fraud Analysis', talent: '12-Signal Adversarial', trad: 'Basic Human Review' },
+                                        { feature: 'Deepfake Defense', talent: 'Wav2Lip + SyncNet', trad: 'None / Proxy-prone' },
+                                        { feature: 'Feature Availability', talent: 'Zero Gates (All Tiers)', trad: 'Pay-for-Access Gates' },
+                                        { feature: 'Collaboration', talent: 'Unlimited Team Seats', trad: 'Limited Seats / Overage' }
+                                    ].map((row, i) => (
+                                        <tr key={i} className="group/row hover:bg-white/[0.02] transition-colors">
+                                            <td className="py-6 px-6 text-sm font-bold text-white tracking-tight">{row.feature}</td>
+                                            <td className="py-6 px-6 text-sm font-black text-brand">
+                                                <div className="flex items-center gap-2">
+                                                    <div className="w-5 h-5 rounded-full bg-brand/20 flex items-center justify-center">
+                                                        <Check className="w-3 h-3" />
+                                                    </div>
+                                                    {row.talent}
+                                                </div>
+                                            </td>
+                                            <td className="py-6 px-6 text-sm text-text-secondary font-medium italic opacity-60 group-hover/row:opacity-100 transition-opacity">
+                                                <div className="flex items-center gap-2">
+                                                    <Minus className="w-4 h-4" /> {row.trad}
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </motion.section>
 
-                {/* Final Grid Callout */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-                    {[
-                        { title: 'Elastic Capacity', desc: 'Spin up 1,000 parallel sessions. No manual interview scheduling latency.', icon: Globe },
-                        { title: 'Neural Fingerprints', desc: 'Maya AI learns candidate behavioral patterns to detect anomalies in real-time.', icon: Activity },
-                        { title: 'Global Edge Architecture', desc: 'Sub-100ms latency for candidates regardless of geographic location.', icon: Zap }
-                    ].map((item, i) => (
-                        <motion.div
-                            key={i}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: i * 0.1 }}
-                            className="p-8 rounded-3xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] transition-colors"
-                        >
-                            <item.icon className="w-6 h-6 text-brand mb-4 text-brand/70" />
-                            <h5 className="font-bold text-white mb-2 tracking-tight">{item.title}</h5>
-                            <p className="text-sm text-text-secondary leading-relaxed font-medium">{item.desc}</p>
-                        </motion.div>
-                    ))}
+                {/* FAQ Section */}
+                <motion.section
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="mb-32"
+                >
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl sm:text-4xl font-black mb-6 tracking-tight">Frequently Asked <span className="text-brand">Questions</span></h2>
+                        <p className="text-text-secondary font-medium">Clarity on the world's first minutes-based AI interview platform.</p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                        {[
+                            {
+                                q: "Why minutes instead of per-interview?",
+                                a: "Transparency. A 15-minute verification shouldn't cost as much as a 60-minute technical deep-dive. Minutes ensures you only pay for exactly what you consume."
+                            },
+                            {
+                                q: "Are there any seat limits or feature gates?",
+                                a: "Never. Seat limits and feature gates are artificial barriers. We give you the full power of Maya AI and Sentinel 12-signal detection on every tier."
+                            },
+                            {
+                                q: "What happens if I run out of minutes mid-interview?",
+                                a: "Zero interruption policy. The interview continues seamlessly. For 'Engine' clients, overage is billed at $0.10/min. For 'Starter', it's simple usage-based billing."
+                            },
+                            {
+                                q: "Is registration required for external interviewers?",
+                                a: "No. You can invite unlimited guest interviewers to join Panel Mode. They don't need seats, as seats are unlimited for your internal team anyway."
+                            }
+                        ].map((faq, i) => (
+                            <div key={i} className="group p-8 rounded-[2.5rem] bg-white/[0.02] border border-white/5 hover:border-brand/20 transition-all duration-500">
+                                <h4 className="font-bold text-white mb-4 flex items-start gap-4 text-lg">
+                                    <div className="w-8 h-8 rounded-xl bg-brand/10 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-brand group-hover:text-white transition-colors">
+                                        <HelpCircle className="w-4 h-4" />
+                                    </div>
+                                    {faq.q}
+                                </h4>
+                                <p className="text-text-secondary leading-relaxed pl-12 font-medium">
+                                    {faq.a}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </motion.section>
+
+                {/* Trust Footer */}
+                <div className="flex flex-col items-center gap-12 pt-16 border-t border-white/5">
+                    <div className="flex flex-wrap items-center justify-center gap-8">
+                        <div className="flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-white/[0.02] border border-white/5 group grayscale hover:grayscale-0 transition-all hover:bg-white/[0.04]">
+                            <CreditCard className="w-4 h-4 text-text-muted group-hover:text-brand" />
+                            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-text-muted group-hover:text-white">Powered by Stripe</span>
+                        </div>
+                        <div className="flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-white/[0.02] border border-white/5 group grayscale hover:grayscale-0 transition-all hover:bg-white/[0.04]">
+                            <Lock className="w-4 h-4 text-text-muted group-hover:text-green-500" />
+                            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-text-muted group-hover:text-white">PCI DSS Compliant</span>
+                        </div>
+                        <div className="flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-white/[0.02] border border-white/5 group grayscale hover:grayscale-0 transition-all hover:bg-white/[0.04]">
+                            <ShieldCheck className="w-4 h-4 text-text-muted group-hover:text-blue-500" />
+                            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-text-muted group-hover:text-white">Bank-Grade Invoicing</span>
+                        </div>
+                    </div>
+                    <div className="text-center space-y-4">
+                        <p className="text-[10px] text-text-muted max-w-xl leading-relaxed font-bold uppercase tracking-widest">
+                            Prices in USD. India: ₹18/min. Pakistan: $0.18/min.
+                        </p>
+                        <p className="text-[9px] text-white/20 max-w-2xl leading-relaxed">
+                            TalentLyt uses legally-defensible biometric chain-of-custody protocols. All pricing is subject to our <Link href="/terms" className="underline hover:text-brand">Terms of Service</Link> and data retention schedules.
+                        </p>
+                    </div>
                 </div>
             </div>
         </main>
