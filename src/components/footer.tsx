@@ -1,6 +1,39 @@
 'use client';
 
 import Link from 'next/link';
+import { analytics } from '@/lib/analytics';
+
+/**
+ * Tracked footer link component
+ * Fires link_clicked event on click
+ */
+function FooterLink({
+    href,
+    children,
+    className,
+}: {
+    href: string;
+    children: React.ReactNode;
+    className?: string;
+}) {
+    const handleClick = () => {
+        analytics.track({
+            event: 'link_clicked',
+            properties: {
+                location: 'footer',
+                link_type: href.startsWith('http') ? 'external' : 'internal',
+                link_text: typeof children === 'string' ? children : 'Link',
+                destination_url: href,
+            },
+        });
+    };
+
+    return (
+        <Link href={href} onClick={handleClick} className={className}>
+            {children}
+        </Link>
+    );
+}
 
 export function Footer() {
     return (
@@ -20,36 +53,36 @@ export function Footer() {
                         </span>
                     </Link>
                     <nav className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 text-xs sm:text-sm text-secondary" aria-label="Footer navigation">
-                        <Link
+                        <FooterLink
                             href="/about"
                             className="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded px-2 py-1"
                         >
                             About
-                        </Link>
-                        <Link
+                        </FooterLink>
+                        <FooterLink
                             href="/privacy"
                             className="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded px-2 py-1"
                         >
                             Privacy
-                        </Link>
-                        <Link
+                        </FooterLink>
+                        <FooterLink
                             href="/terms"
                             className="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded px-2 py-1"
                         >
                             Terms
-                        </Link>
-                        <Link
+                        </FooterLink>
+                        <FooterLink
                             href="/ai-ethics"
                             className="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded px-2 py-1"
                         >
                             AI Ethics
-                        </Link>
-                        <Link
+                        </FooterLink>
+                        <FooterLink
                             href="/contact"
                             className="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded px-2 py-1"
                         >
                             Contact
-                        </Link>
+                        </FooterLink>
                     </nav>
                 </div>
 
@@ -60,19 +93,19 @@ export function Footer() {
                     </p>
                     <p className="text-xs text-white/40 mt-2">
                         For information on our legally-defensible audit trails and candidate recognition protocols, review our{' '}
-                        <Link
+                        <FooterLink
                             href="/privacy"
                             className="text-white/60 underline hover:text-brand transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded"
                         >
                             Privacy Framework
-                        </Link>
+                        </FooterLink>
                         {' '}and{' '}
-                        <Link
+                        <FooterLink
                             href="/ai-ethics"
                             className="text-white/60 underline hover:text-brand transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded"
                         >
                             AI Ethics Governance
-                        </Link>.
+                        </FooterLink>.
                     </p>
                 </div>
 

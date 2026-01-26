@@ -1,17 +1,17 @@
 'use client';
 
-import React from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
-import mixpanel from 'mixpanel-browser';
+import { analytics } from '@/lib/analytics';
 
 export function Navbar() {
-    const [isScrolled, setIsScrolled] = React.useState(false);
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const pathname = usePathname();
 
-    React.useEffect(() => {
+    useEffect(() => {
         const handleScroll = () => setIsScrolled(window.scrollY > 20);
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
@@ -79,7 +79,15 @@ export function Navbar() {
                         </a>
                         <Link
                             href="/contact"
-                            onClick={() => mixpanel.track('CTA_Click', { location: 'Navbar', type: 'Start Trial' })}
+                            onClick={() => analytics.track({
+                                event: 'cta_clicked',
+                                properties: {
+                                    location: 'navbar',
+                                    cta_type: 'start_trial',
+                                    cta_text: 'Start Free Trial',
+                                    destination_url: '/contact',
+                                },
+                            })}
                             className="group relative px-6 py-2.5 bg-brand text-white rounded-xl hover:shadow-[0_0_25px_rgba(99,102,241,0.4)] transition-all flex items-center gap-2 overflow-hidden hidden sm:flex focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
                             aria-label="Start free trial"
                         >

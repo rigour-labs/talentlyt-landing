@@ -8,7 +8,7 @@ import { MayaVoiceWidget } from '@/components/ui/maya-voice-widget';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import mixpanel from 'mixpanel-browser';
+import { analytics } from '@/lib/analytics';
 
 const ConnectivityMesh = () => (
     <div className="absolute inset-0 z-[-1] opacity-20 pointer-events-none">
@@ -93,7 +93,15 @@ export function HeroSection() {
                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
                         <Link
                             href="/contact"
-                            onClick={() => mixpanel.track('CTA_Click', { location: 'Hero', type: 'Early Access' })}
+                            onClick={() => analytics.track({
+                                event: 'cta_clicked',
+                                properties: {
+                                    location: 'hero',
+                                    cta_type: 'start_trial',
+                                    cta_text: 'Start Free Trial',
+                                    destination_url: '/contact',
+                                },
+                            })}
                             className="group relative px-10 py-5 bg-brand text-white font-bold rounded-2xl transition-all shadow-[0_0_30px_rgba(99,102,241,0.3)] hover:shadow-[0_0_50px_rgba(99,102,241,0.5)] flex items-center justify-center gap-3 overflow-hidden focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
                             aria-label="Start free trial"
                         >
@@ -103,12 +111,20 @@ export function HeroSection() {
                         </Link>
                         <Link
                             href="/live-demo"
-                            onClick={() => mixpanel.track('CTA_Click', { location: 'Hero', type: 'Watch System' })}
+                            onClick={() => analytics.track({
+                                event: 'cta_clicked',
+                                properties: {
+                                    location: 'hero',
+                                    cta_type: 'watch_demo',
+                                    cta_text: 'Live Demo',
+                                    destination_url: '/live-demo',
+                                },
+                            })}
                             className="w-full sm:w-auto px-8 py-4 bg-white/5 text-white border border-white/10 font-bold rounded-2xl hover:bg-white/10 transition-all flex items-center justify-center gap-2 backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-background"
-                            aria-label="Watch system demo"
+                            aria-label="Try live demo"
                         >
                             <Play className="w-4 h-4 fill-current" aria-hidden="true" />
-                            Watch System
+                            Live Demo
                         </Link>
                     </div>
 

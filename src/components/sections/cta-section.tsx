@@ -1,8 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { CheckCircle2, ArrowRight } from 'lucide-react';
-import mixpanel from 'mixpanel-browser';
+import { ArrowRight } from 'lucide-react';
+import { analytics } from '@/lib/analytics';
 
 export function CTASection() {
 
@@ -37,7 +37,15 @@ export function CTASection() {
                             <div>
                                 <Link
                                     href="/contact"
-                                    onClick={() => mixpanel.track('CTA_Click', { location: 'Bottom CTA', type: 'Start Trial' })}
+                                    onClick={() => analytics.track({
+                                        event: 'cta_clicked',
+                                        properties: {
+                                            location: 'bottom_cta',
+                                            cta_type: 'start_trial',
+                                            cta_text: 'Start Free Trial',
+                                            destination_url: '/contact',
+                                        },
+                                    })}
                                     className="group relative px-10 py-5 bg-brand text-white font-bold rounded-2xl transition-all shadow-[0_0_30px_rgba(37,99,235,0.3)] hover:shadow-[0_0_50px_rgba(37,99,235,0.5)] flex items-center justify-center gap-3 overflow-hidden text-lg focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
                                     aria-label="Start free trial"
                                 >
@@ -48,11 +56,19 @@ export function CTASection() {
                             </div>
                             <Link
                                 href="/live-demo"
-                                onClick={() => mixpanel.track('CTA_Click', { location: 'Bottom CTA', type: 'Watch Demo' })}
+                                onClick={() => analytics.track({
+                                    event: 'cta_clicked',
+                                    properties: {
+                                        location: 'bottom_cta',
+                                        cta_type: 'watch_demo',
+                                        cta_text: 'Live Demo',
+                                        destination_url: '/live-demo',
+                                    },
+                                })}
                                 className="px-10 py-5 bg-white/5 border border-white/10 text-white font-bold rounded-2xl hover:bg-white/10 transition-all backdrop-blur-md technical-label text-xs focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-background text-center"
-                                aria-label="Watch demo"
+                                aria-label="Try live demo"
                             >
-                                Watch Demo
+                                Live Demo
                             </Link>
                         </div>
 

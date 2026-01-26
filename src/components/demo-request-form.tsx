@@ -1,12 +1,58 @@
 'use client';
 
-import React, { useActionState } from 'react';
+import { useActionState, useEffect, useRef } from 'react';
 import { submitDemoRequest } from '@/app/actions';
 import { ArrowRight, CheckCircle2, Loader2, ShieldCheck, Mail, Building2, User } from 'lucide-react';
 import Link from 'next/link';
+import { analytics, extractDomain } from '@/lib/analytics';
 
 export function DemoRequestForm() {
     const [state, formAction, isPending] = useActionState(submitDemoRequest, null);
+    const hasTrackedStart = useRef(false);
+    const formRef = useRef<HTMLFormElement>(null);
+
+    // Track form start on first interaction
+    const handleFormInteraction = () => {
+        if (hasTrackedStart.current) return;
+        hasTrackedStart.current = true;
+
+        analytics.track({
+            event: 'form_started',
+            properties: {
+                form_type: 'demo_request',
+                location: 'contact_page',
+            },
+        });
+    };
+
+    // Track form submission result
+    useEffect(() => {
+        if (!state) return;
+
+        if (state.success) {
+            // Extract email from form for domain tracking
+            const formData = new FormData(formRef.current!);
+            const email = formData.get('email') as string;
+
+            analytics.track({
+                event: 'form_submitted',
+                properties: {
+                    form_type: 'demo_request',
+                    location: 'contact_page',
+                    company_domain: email ? extractDomain(email) : undefined,
+                },
+            });
+        } else if (state.errors || state.message) {
+            analytics.track({
+                event: 'form_error',
+                properties: {
+                    form_type: 'demo_request',
+                    error_type: state.errors ? 'validation' : 'submission',
+                    error_message: state.message || 'Validation failed',
+                },
+            });
+        }
+    }, [state]);
 
     if (state?.success) {
         return (
@@ -31,7 +77,12 @@ export function DemoRequestForm() {
     }
 
     return (
-        <form action={formAction} className="space-y-6 animate-slide-up">
+        <form
+            ref={formRef}
+            action={formAction}
+            onFocus={handleFormInteraction}
+            className="space-y-6 animate-slide-up"
+        >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                     <label htmlFor="name" className="technical-label text-[10px] text-text-muted uppercase tracking-widest pl-2">Full Name</label>

@@ -1,9 +1,9 @@
 'use client';
 
-import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ShieldCheck, Zap, Globe, ArrowRight, Sparkles, Activity, Check, Minus, Info, HelpCircle, CreditCard, Lock } from 'lucide-react';
+import { ShieldCheck, Zap, Globe, ArrowRight, Sparkles, Activity, Check, Minus, HelpCircle, CreditCard, Lock } from 'lucide-react';
+import { analytics, normalizeTierName } from '@/lib/analytics';
 
 export function PricingContent() {
     const tiers = [
@@ -211,6 +211,16 @@ export function PricingContent() {
 
                                 <Link
                                     href={tier.ctaLink}
+                                    onClick={() => {
+                                        analytics.track({
+                                            event: 'pricing_cta_clicked',
+                                            properties: {
+                                                tier_name: normalizeTierName(tier.name),
+                                                cta_text: tier.cta,
+                                                price: tier.price,
+                                            },
+                                        });
+                                    }}
                                     className={`w-full py-4 px-6 rounded-2xl font-black text-xs uppercase tracking-[0.2em] transition-all text-center flex items-center justify-center gap-2 relative overflow-hidden group ${tier.highlight
                                         ? 'bg-brand text-brand-foreground hover:bg-brand-hover shadow-[0_20px_40px_-10px_rgba(99,102,241,0.5)]'
                                         : 'bg-white/5 text-white hover:bg-white/10 border border-white/10'
