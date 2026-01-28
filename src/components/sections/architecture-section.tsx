@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
-import { Bot, Shield, Fingerprint, Mic2, Database, Activity, ShieldCheck, Cpu, Zap, Lock, Search, Sparkles } from 'lucide-react';
+import { Bot, Shield, Fingerprint, Mic2, Database, Activity, ShieldCheck, Cpu, Zap, Lock, Search, Sparkles, AudioLines, ScanEye, Binary, Brain, ShieldAlert, Filter, Anchor, Layers, Merge, TrendingUp, Dna, BadgeCheck, EyeOff } from 'lucide-react';
 import Image from 'next/image';
 
 const SignalPath = ({ startRef, endRef, active, color = "#2563eb" }: { startRef: React.RefObject<HTMLDivElement | null>, endRef: React.RefObject<HTMLDivElement | null>, active: boolean, color?: string }) => {
@@ -274,9 +274,11 @@ export function ArchitectureSection() {
             color: "brand",
             image: "/assets/maya.jpg",
             features: [
-                { icon: Mic2, text: "Nova-grade Voice Auth" },
-                { icon: Activity, text: "Micro-expression Gaze Sync" },
-                { icon: ShieldCheck, text: "Behavioral Fingerprinting" }
+                { icon: AudioLines, text: "Identity-Linked Voice Auth" },
+                { icon: ScanEye, text: "Multi-point Gaze Verification" },
+                { icon: ShieldCheck, text: "Session Integrity Mapping" },
+                { icon: Binary, text: "Adaptive Technical Probing" },
+                { icon: Brain, text: "Continuous Skill Validation" }
             ]
         },
         {
@@ -289,9 +291,11 @@ export function ArchitectureSection() {
             color: "brand",
             visual: "neural",
             features: [
-                { icon: Lock, text: "Jailbreak Defense" },
-                { icon: Zap, text: "Off-Topic Filtering" },
-                { icon: Database, text: "RAG Verification" }
+                { icon: ShieldAlert, text: "Context-Aware Safety Rails" },
+                { icon: Filter, text: "Communication Noise Filtering" },
+                { icon: Anchor, text: "Technical Grounding Audit" },
+                { icon: EyeOff, text: "Privacy-Preserving Verification" },
+                { icon: Layers, text: "12-Signal Verification Stack" }
             ]
         },
         {
@@ -304,9 +308,11 @@ export function ArchitectureSection() {
             color: "warning",
             visual: "orb", // Changed to orb for better connection feel
             features: [
-                { icon: ShieldCheck, text: "Candidate Recognition Sync" },
-                { icon: Cpu, text: "Vision-Sync Focus Audit" },
-                { icon: Database, text: "Legally-Defensible Trails" }
+                { icon: Merge, text: "12-Signal Signal Synthesis" },
+                { icon: Cpu, text: "Continuous Learning Weights" },
+                { icon: TrendingUp, text: "85% Predictive Reliability" },
+                { icon: Dna, text: "Interview Genome Archiving" },
+                { icon: BadgeCheck, text: "Verified Competency Record" }
             ]
         }
     ];
@@ -453,7 +459,9 @@ export function ArchitectureSection() {
 
                                 {/* Capability Matrix */}
                                 <div className="space-y-3">
-                                    <div className="text-[10px] technical-label text-text-muted mb-4 px-2 uppercase tracking-[0.2em]">Verification Pipeline</div>
+                                    <div className="text-[10px] technical-label text-text-muted mb-4 px-2 uppercase tracking-[0.2em]">
+                                        {agent.id === 'maya' ? 'Audit Pipeline' : agent.id === 'nemo' ? 'Defense Pipeline' : 'Intelligence Pipeline'}
+                                    </div>
                                     {agent.features.map((feature, idx) => (
                                         <div key={idx} className="flex gap-4 items-center group/item p-3.5 rounded-2xl hover:bg-brand/5 transition-all duration-300 border border-transparent hover:border-brand/10">
                                             <div className={`w-10 h-10 rounded-xl bg-white/5 border border-white/5 flex items-center justify-center text-text-muted group-hover/item:text-brand group-hover/item:border-brand/30 transition-all shadow-lg`}>
@@ -477,11 +485,11 @@ export function ArchitectureSection() {
                     <div className="relative z-10 max-w-xl text-center md:text-left">
                         <div className="inline-flex items-center gap-3 mb-6 text-brand">
                             <Activity className="w-5 h-5 animate-pulse" />
-                            <span className="technical-label text-[11px] uppercase tracking-[0.3em]">Protocol Consensus Verified</span>
+                            <span className="technical-label text-[11px] uppercase tracking-[0.3em]">Protocol Intelligence Verified</span>
                         </div>
-                        <h4 className="text-3xl font-bold text-white mb-5 tracking-tight">Decentralized Trust Network</h4>
+                        <h4 className="text-3xl font-bold text-white mb-5 tracking-tight">World-First Truth Verification</h4>
                         <p className="text-base text-white/50 leading-relaxed font-medium">
-                            The TalentLyt protocol demands a cryptographically signed consensus between Conversational, Security, and Forensic Sentinels. Zero hallucinations, 100% technical truth.
+                            TalentLyt logic demands a signed consensus between Sentinels. We don't just detect fraud; we extract claims, verify depth, and predict success using a decentralized intelligence stack.
                         </p>
                     </div>
 

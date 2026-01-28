@@ -1,63 +1,63 @@
 'use client';
 
-import { ArrowRight, Shield, Zap, Database, Brain, Lock, Ghost, Activity, MousePointer2 } from 'lucide-react';
+import { ArrowRight, Shield, Zap, Database, Brain, Lock, Activity, Cpu } from 'lucide-react';
 import Image from 'next/image';
 export function FeaturesSection() {
 
     const features = [
         {
-            title: 'Technical Truth Bank',
-            benefit: 'Governor Pillar I',
-            description: 'Cross-references live technical signals against an evolving RAG-core of expert patterns. Exposed hallucinations in sub-millisecond real-time.',
+            title: 'Interview Genome',
+            benefit: 'Phase II World-First',
+            description: 'Maintain a secure, portable record of architectural decisions and verified technical competencies. The Interview Genome allows candidates to build trust over time while reducing redundant screenings.',
             icon: Database,
             className: "md:col-span-2",
-            metric: 'Neural Verification',
-            tag: 'RAG SYNCED'
+            metric: 'Portable Intelligence',
+            tag: 'V2 PREVIEW'
         },
         {
-            title: 'AI-Speak Detection',
-            benefit: 'Governor Pillar II',
-            description: 'Identifies robotic filler phrases and scripted response structures used by LLM-assistance tools.',
-            icon: Ghost,
-            className: "md:col-span-1",
-            metric: '99.4% Accuracy',
-            tag: 'VOICE BIO'
-        },
-        {
-            title: 'Latency Traps',
-            benefit: 'Governor Pillar III',
-            description: 'Analyzes micro-fluctuations in speech and typing latency to detect external tool switching.',
-            icon: Zap,
-            className: "md:col-span-1",
-            metric: '<100ms precision',
-            tag: 'BEHAVIORAL'
-        },
-        {
-            title: 'RAG Challenge Engine',
-            benefit: 'Hyper-Personalization',
-            description: 'Generates coding challenges grounded in the candidate\'s resume and the company\'s tech stack for zero-leakage assessments.',
+            title: 'Predictive Job Success',
+            benefit: 'AI Forecasting',
+            description: 'Leverage predictive models built on deep behavioral signals to identify long-term fit and performance potential with a high degree of statistical reliability.',
             icon: Brain,
-            className: "md:col-span-2",
-            metric: 'Zero-Leakage',
-            tag: 'DYNAMIC GENERATION'
-        },
-        {
-            title: 'Session Playback',
-            benefit: 'Deep Analysis',
-            description: 'Watch the entire coding session keystroke by keystroke with behavioral flags overlaid on the timeline.',
-            icon: MousePointer2,
             className: "md:col-span-1",
-            metric: '1:1 Replay',
-            tag: 'FORENSIC'
+            metric: '85% Accuracy',
+            tag: 'ML POWERED'
         },
         {
-            title: 'Sentinel Audit',
-            benefit: 'Authentication & Focus',
-            description: 'Advanced forensic audit that detects interleaving proxies and identity fraud across multi-stage workflows.',
+            title: 'Claim Verification',
+            benefit: 'Truth Matrix',
+            description: 'Sophisticated Maya agents identify key technical claims and use adaptive probing to verify the depth and authenticity of a candidate\'s hands-on experience.',
             icon: Shield,
+            className: "md:col-span-1",
+            metric: 'Real-time Audit',
+            tag: 'GOVERNOR+'
+        },
+        {
+            title: 'Symbiotic AI (Whispering)',
+            benefit: 'Human Augmentation',
+            description: 'Empower your human interviewers with Maya Whispers—real-time suggestions and high-signal probing questions delivered via sub-ms neural sync.',
+            icon: Zap,
             className: "md:col-span-2",
-            metric: '99.9% Match',
-            tag: 'PROPRIETARY SYNC'
+            metric: 'Zero-Latency',
+            tag: 'PANEL MODE'
+        },
+        {
+            title: 'Interview Digital Twin',
+            benefit: 'Simulation',
+            description: 'Eliminate uncertainty by simulating alternative interview scenarios to pressure-test potential: "What would happen if we asked harder questions?" solved.',
+            icon: Cpu,
+            className: "md:col-span-1",
+            metric: 'Simulation Engine',
+            tag: 'WOT-IF'
+        },
+        {
+            title: '12-Signal AI Sentinel',
+            benefit: 'Detection Excellence',
+            description: 'Ensure session integrity through a 12-signal verification stack, including biometric-aware lip-sync and gaze verification for high-trust technical hiring.',
+            icon: Lock,
+            className: "md:col-span-2",
+            metric: '99.9% Detection',
+            tag: 'SENTINEL v4'
         },
     ];
 
@@ -81,7 +81,8 @@ export function FeaturesSection() {
                         System Capabilities Index
                     </div>
                     <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 tracking-tight text-white leading-[1.1]">
-                        The Ultimate <span className="text-brand">AI Interview</span> Platform
+                        The <span className="text-brand">World-First</span> <br />
+                        Interview Intelligence Stack
                     </h2>
                     <p className="text-lg sm:text-xl text-text-secondary leading-relaxed">
                         TalentLyt is a comprehensive <span className="text-white font-bold">SaaS Platform</span> built to orchestrate <span className="text-white font-bold">multi-stage recruitment workflows</span> with forensic-level trust.
@@ -111,11 +112,12 @@ export function FeaturesSection() {
 
                             <div className="flex items-center justify-between mt-auto pt-8 border-t border-white/5">
                                 <div className="flex flex-col">
+                                    <div className="text-[10px] text-text-muted uppercase tracking-widest mb-1">{feature.metric.includes('%') || feature.metric.includes('x') ? 'Performance' : 'Core Metric'}</div>
+                                    <span className="text-sm font-bold text-brand tracking-tight uppercase">{feature.metric}</span>
+                                </div>
+                                <div className="text-right">
                                     <div className="text-[10px] text-text-muted uppercase tracking-widest mb-1">Status</div>
                                     <span className="text-sm font-bold text-white tracking-tight uppercase">Operational</span>
-                                </div>
-                                <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand/40 group-hover:bg-brand/5 transition-all" aria-hidden="true">
-                                    <ArrowRight className="w-4 h-4 text-text-muted group-hover:text-brand transition-transform group-hover:translate-x-1" />
                                 </div>
                             </div>
                         </div>

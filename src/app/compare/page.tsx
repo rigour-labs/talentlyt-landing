@@ -5,19 +5,20 @@ import { Footer } from '@/components/footer';
 import { Check, X, ShieldCheck, Bot, Eye, Fingerprint, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'How TalentLyt is Different | AI Interview Platform Comparison',
-    description: 'See how TalentLyt compares to traditional AI interview platforms. The only platform with Multi-Agent consensus and forensic integrity verification for technical hiring.',
+    title: 'World-First Interview Intelligence Platform | TalentLyt Comparison',
+    description: 'Compare TalentLyt to traditional AI platforms. The only world-first interview intelligence platform with truth verification, job success prediction, and portable genomes.',
     keywords: [
         'AI interview platform comparison',
         'best AI interview software',
         'interview platform features',
         'technical interview platform',
-        'AI hiring platform comparison',
-        'interview integrity platform',
+        'Job Success Prediction',
+        'Interview Genome',
+        '12-signal fraud detection',
     ],
     openGraph: {
-        title: 'How TalentLyt is Different | AI Interview Platform Comparison',
-        description: 'The only AI interview platform with Multi-Agent consensus and forensic integrity verification.',
+        title: 'TalentLyt vs Traditional | World-First Interview Intelligence',
+        description: 'The only platform with truth verification, job success prediction, and portable candidate intelligence.',
         type: 'website',
     },
 };
@@ -27,42 +28,34 @@ export default function ComparisonPage() {
 
     const comparisonFeatures: { category: string; features: { name: string; talentlyt: FeatureValue; traditional: FeatureValue }[] }[] = [
         {
-            category: 'AI Interview Technology',
+            category: 'Interview Intelligence',
             features: [
-                { name: 'AI-Conducted Interviews', talentlyt: true, traditional: true },
-                { name: 'Adaptive Questioning', talentlyt: true, traditional: 'partial' },
-                { name: 'Multi-Agent AI Consensus', talentlyt: true, traditional: false },
-                { name: 'Real-time Code Assessment', talentlyt: true, traditional: true },
+                { name: 'Live Multi-Agent AI (Maya)', talentlyt: true, traditional: true },
+                { name: 'Predictive Job Success (85%)', talentlyt: true, traditional: false },
+                { name: 'Interview Genome Export', talentlyt: true, traditional: false },
+                { name: 'Federated Collective Intelligence', talentlyt: true, traditional: false },
+                { name: 'Adaptive Claim Probing', talentlyt: true, traditional: 'partial' },
             ],
         },
         {
-            category: 'Integrity & Verification',
+            category: 'Forensic Integrity & Trust',
             features: [
-                { name: 'Forensic Integrity Verification', talentlyt: true, traditional: false },
-                { name: 'Proxy Actor Detection', talentlyt: true, traditional: false },
-                { name: 'AI-Assistance Detection', talentlyt: true, traditional: false },
-                { name: 'Behavioral Analysis', talentlyt: true, traditional: 'partial' },
-                { name: 'Gaze Tracking (Vision-Sync)', talentlyt: true, traditional: false },
-                { name: 'Cognitive Pattern Analysis', talentlyt: true, traditional: false },
+                { name: '12-Signal Fraud Audit', talentlyt: true, traditional: false },
+                { name: 'Nova-grade Voice Auth', talentlyt: true, traditional: false },
+                { name: 'Lip-Sync & Gaze Sync', talentlyt: true, traditional: false },
+                { name: 'Micro-expression Analysis', talentlyt: true, traditional: false },
+                { name: 'Jailbreak & Prompt Defense', talentlyt: true, traditional: false },
+                { name: 'Cognitive Load Analysis', talentlyt: true, traditional: false },
             ],
         },
         {
-            category: 'Enterprise Features',
+            category: 'Enterprise Governance',
             features: [
-                { name: 'SOC2 Compliance Ready', talentlyt: true, traditional: true },
-                { name: 'GDPR Compliant', talentlyt: true, traditional: true },
+                { name: 'Bias Auditor (EEOC)', talentlyt: true, traditional: 'partial' },
+                { name: 'Self-Learning RL Weights', talentlyt: true, traditional: false },
                 { name: 'Legally-Defensible Audit Trails', talentlyt: true, traditional: 'partial' },
-                { name: 'Complete Session Recording', talentlyt: true, traditional: true },
-                { name: 'Code Playback Analysis', talentlyt: true, traditional: 'partial' },
-            ],
-        },
-        {
-            category: 'Bias & Fairness',
-            features: [
-                { name: 'Standardized Evaluation', talentlyt: true, traditional: true },
-                { name: 'Bias Reduction Technology', talentlyt: true, traditional: 'partial' },
-                { name: 'Technical Truth Focus', talentlyt: true, traditional: false },
-                { name: 'Consensus-Based Scoring', talentlyt: true, traditional: false },
+                { name: 'White-Label Reports', talentlyt: true, traditional: 'partial' },
+                { name: 'SAML / SSO (WorkOS)', talentlyt: true, traditional: true },
             ],
         },
     ];
@@ -70,23 +63,23 @@ export default function ComparisonPage() {
     const uniqueAdvantages = [
         {
             icon: Bot,
-            title: 'Multi-Agent AI Architecture',
-            description: 'Unlike single-model platforms, TalentLyt uses multiple AI agents (Maya + Forensic Engine) that must reach consensus. This eliminates hallucinations and ensures accurate assessments.',
+            title: 'World-First Interview Genome',
+            description: 'TalentLyt creates portable, cryptographically-signed candidate profiles. Verified skills that travel with the candidate, eliminating repetitive evaluation and securing hiring intent.',
         },
         {
             icon: ShieldCheck,
-            title: 'Forensic Integrity Verification',
-            description: 'We don\'t just assess skills—we verify authenticity. Our system detects proxy actors, AI-assisted responses, and cheating attempts in real-time.',
+            title: '12-Signal Forensic Audit',
+            description: 'We analyze 12 distinct biometric and behavioral signals (lip-sync, gaze, voice biometrics) in real-time to ensure absolute session integrity and zero fraud.',
         },
         {
             icon: Eye,
-            title: 'Vision-Sync Technology',
-            description: 'Advanced gaze tracking and behavioral analysis ensure candidates are fully engaged and not receiving off-screen assistance.',
+            title: 'Predictive Job Success',
+            description: 'Our proprietary ML models predict actual on-the-job performance probability with 85% accuracy, synthesized from million-point interview signals.',
         },
         {
             icon: Fingerprint,
-            title: 'Cognitive-Audit System',
-            description: 'Our proprietary system analyzes cognitive patterns to detect inconsistencies that indicate fraudulent behavior.',
+            title: 'Self-Learning Neural Weights',
+            description: 'Our system uses reinforcement learning (RL) to continuously calibrate integrity scores against global patterns, ensuring the most accurate audit in the world.',
         },
     ];
 
@@ -102,11 +95,10 @@ export default function ComparisonPage() {
                             Platform Comparison
                         </div>
                         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">
-                            Not Just Another <span className="text-brand">AI Interview Platform</span>
+                            The World&apos;s First <span className="text-brand">Interview Intelligence</span> Platform
                         </h1>
                         <p className="text-lg sm:text-xl text-text-secondary leading-relaxed max-w-3xl mx-auto">
-                            Traditional AI interview platforms assess skills. TalentLyt verifies truth.
-                            We&apos;re the only platform built from the ground up for <strong className="text-white">integrity-first technical hiring</strong>.
+                            Traditional platforms automate assessment. <strong className="text-white">TalentLyt defines a new category</strong>: Intelligence-First hiring. We verify truth, predict success, and build portable candidate genomes.
                         </p>
                     </div>
                 </section>

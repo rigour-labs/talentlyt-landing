@@ -82,12 +82,12 @@ export function HeroSection() {
                     </div>
 
                     <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[1.02] tracking-tight text-white ${heroVisible ? 'slide-up animate-delay-200' : 'animate-on-scroll'}`}>
-                        The #1 <span className="text-brand">AI Interview Platform</span> <br />
-                        for Technical Hiring.
+                        The World's First <br />
+                        <span className="text-brand">Interview Intelligence</span> Platform.
                     </h1>
 
                     <p className={`text-lg sm:text-xl text-text-secondary mb-10 leading-relaxed max-w-xl ${heroVisible ? 'slide-up animate-delay-300' : 'animate-on-scroll'}`}>
-                        TalentLyt is the world's most advanced <span className="text-white font-bold">AI interview platform</span> for technical recruitment. Our Multi-Agent AI conducts and verifies <span className="text-white font-bold">technical interviews</span> in real-time with <span className="text-white font-bold">forensic integrity verification</span>.
+                        Establish a foundation of technical truth in hiring. TalentLyt is a comprehensive interview intelligence platform—combining <span className="text-white font-bold">12-signal session verification</span> with <span className="text-white font-bold">predictive competency mapping</span> and portable candidate profiles.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
@@ -139,12 +139,12 @@ export function HeroSection() {
                             <ShieldCheck className="w-6 h-6 animate-pulse" />
                         </div>
                         <div>
-                            <div className="text-[10px] font-bold text-brand uppercase tracking-widest mb-0.5">Live Sentinel Alert</div>
+                            <div className="text-[10px] font-bold text-brand uppercase tracking-widest mb-0.5">Integrity Verification Active</div>
                             <div className="text-sm font-semibold text-white leading-tight">
-                                Detected 91% integrity failure in a live candidate audit.
+                                High-confidence signal mismatch detected in recent verification.
                             </div>
                             <div className="text-[11px] text-text-muted mt-1">
-                                Potential saved cost: <span className="text-brand font-bold">$15,000 per bad hire</span>
+                                Protecting hiring quality by <span className="text-brand font-bold">verifying individual competency</span>.
                             </div>
                         </div>
                     </motion.div>

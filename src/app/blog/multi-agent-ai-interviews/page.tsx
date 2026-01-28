@@ -73,9 +73,9 @@ export default function MultiAgentAIPage() {
                             </section>
 
                             <section className="mb-16">
-                                <h2 className="text-3xl font-black text-white mb-8 tracking-tight">The Forensic Jury</h2>
+                                <h2 className="text-3xl font-black text-white mb-8 tracking-tight">The Verification Panel</h2>
                                 <p className="text-text-secondary mb-10">
-                                    Think of our Multi-Agent AI not as a single robot, but as an expert jury. Each &quot;agent&quot; has a specific, narrow expertise. They don&apos;t just work together; they actively audit one another.
+                                    Think of our Multi-Agent AI not as a single model, but as an expert panel. Each &quot;agent&quot; has a specific, narrow expertise. They don&apos;t just work together; they actively provide checks and balances for one another.
                                 </p>
 
                                 <div className="space-y-6 mb-12">
@@ -86,7 +86,7 @@ export default function MultiAgentAIPage() {
                                         <div>
                                             <h3 className="text-xl font-bold text-white mb-2">The Interrogator (Maya)</h3>
                                             <p className="text-text-secondary text-base leading-relaxed">
-                                                Focused solely on candidate empathy and technical probing. She handles the &quot;reach&quot; of the conversation, adapting to the candidate&apos;s level.
+                                                Focused on candidate engagement and multi-level technical probing. She handles the natural flow of the conversation, adapting to the candidate&apos;s specific domain of expertise.
                                             </p>
                                         </div>
                                     </div>
@@ -96,9 +96,9 @@ export default function MultiAgentAIPage() {
                                             <Shield className="w-6 h-6 text-purple-500" />
                                         </div>
                                         <div>
-                                            <h3 className="text-xl font-bold text-white mb-2">The Forensic Auditor</h3>
+                                            <h3 className="text-xl font-bold text-white mb-2">The 12-Signal Verification Monitor</h3>
                                             <p className="text-text-secondary text-base leading-relaxed">
-                                                She doesn&apos;t care about the answers. She cares about the <em>delivery</em>. She monitors the sub-millisecond sync of video and audio, watching for the artifacts of an adversarial attack.
+                                                Monitoring session integrity across 12 distinct signal types. From lip-sync to voice biometrics, this agent ensures a consistent and high-trust evaluation record.
                                             </p>
                                         </div>
                                     </div>
@@ -110,7 +110,7 @@ export default function MultiAgentAIPage() {
                                         <div>
                                             <h3 className="text-xl font-bold text-white mb-2">The Consensus Arbiter</h3>
                                             <p className="text-text-secondary text-base leading-relaxed">
-                                                If Maya thinks a candidate is a genius but the Auditor flags a 200ms audio drift, the Arbiter steps in. It forces a deeper technical probe to break the tie. No single model has the &quot;final word.&quot;
+                                                If there is a discrepancy between technical performance and integrity signals, the Arbiter facilitates a deeper probe to resolve the ambiguity. This architecture ensures no single model makes an unverified decision.
                                             </p>
                                         </div>
                                     </div>
@@ -118,17 +118,17 @@ export default function MultiAgentAIPage() {
                             </section>
 
                             <section className="mb-16">
-                                <h2 className="text-3xl font-black text-white mb-8 tracking-tight">Killing the AI Hallucination</h2>
+                                <h2 className="text-3xl font-black text-white mb-8 tracking-tight">Addressing AI Hallucination</h2>
                                 <p className="text-text-secondary mb-6">
-                                    Single-model AI is prone to &quot;hallucinating&quot;—stating falsehoods with extreme confidence. In a multi-agent environment, this is virtually impossible.
+                                    A common challenge with AI models is the tendency to generate incorrect information with high confidence. In a multi-agent environment, the risk of such inaccuracies is significantly mitigated.
                                 </p>
                                 <p className="text-text-secondary mb-6">
-                                    Why? Because for an error to reach the recruiter&apos;s dashboard, multiple independent models trained on different datasets must all make the <em>exact same error</em> simultaneously. It is a probabilistic defense against technical inaccuracy.
+                                    Why? Because for an error to reach the recruiter&apos;s dashboard, multiple independent models trained on different datasets must all reach the same incorrect conclusion simultaneously. This creates a multi-layered defense against technical inaccuracies.
                                 </p>
                                 <div className="p-8 rounded-[2rem] bg-brand/5 border border-brand/20 my-12 flex gap-6 items-center">
                                     <MessageSquareQuote className="w-12 h-12 text-brand shrink-0" />
                                     <p className="text-text-secondary text-base leading-relaxed margin-0">
-                                        &quot;By moving to a multi-agent architecture, we reduced our assessment error rate by over 40%. It turns out, AI is better at grading humans when it has peers to debate with.&quot;
+                                        &quot;By moving to a multi-agent architecture, we significantly improved our assessment reliability. AI is most effective when it has specialized peers to cross-verify conclusions.&quot;
                                     </p>
                                 </div>
                             </section>
@@ -136,10 +136,10 @@ export default function MultiAgentAIPage() {
                             <section className="mb-16">
                                 <h2 className="text-3xl font-black text-white mb-8 tracking-tight">The Road Ahead</h2>
                                 <p className="text-text-secondary mb-8 leading-relaxed">
-                                    We believe that any autonomous system making decisions about human livelihood must be built on <strong>Consensus Architecture.</strong>
+                                    We believe that any autonomous system informing human professional decisions must be built on a <strong>Consensus-Based Architecture.</strong>
                                 </p>
                                 <p className="text-text-secondary mb-12">
-                                    The future of hiring isn&apos;t just one big brain; it&apos;s a network of specialized ones working in perfect, forensic harmony.
+                                    The future of hiring isn&apos;t built on a single monolithic model; it&apos;s a network of specialized ones working in coordinated and verified harmony.
                                 </p>
                             </section>
                         </div>

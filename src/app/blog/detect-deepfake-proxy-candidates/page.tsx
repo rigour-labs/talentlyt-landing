@@ -12,14 +12,14 @@ export const metadata: Metadata = {
         'detect deepfake candidates',
         'AI interview integrity',
         'proxy interviewers',
-        'forensic technical screening',
+        'high-integrity technical screening',
         'identity verification AI',
         'interview ethics',
         'biometric privacy'
     ],
     openGraph: {
         title: 'The Ghost in the Machine: Detecting Deepfake Proxy Candidates',
-        description: 'Forensic strategies to identify fraud, proxy actors, and deepfake technology in remote technical hiring.',
+        description: 'Verification strategies to identify fraud, proxy actors, and generative technology in remote technical hiring.',
         type: 'article',
         publishedTime: '2026-01-23T00:00:00Z',
     },
@@ -42,7 +42,7 @@ export default function DeepfakeDetectionPage() {
                         <header className="mb-12">
                             <div className="flex items-center gap-4 mb-6">
                                 <span className="px-3 py-1 rounded-lg bg-brand/10 text-brand text-xs font-bold uppercase tracking-wider">
-                                    Forensics & Ethics
+                                    Integrity & Ethics
                                 </span>
                                 <div className="flex items-center gap-2 text-text-muted text-xs">
                                     <Clock className="w-3 h-3" />
@@ -56,7 +56,7 @@ export default function DeepfakeDetectionPage() {
                                 Recruiting has entered a new, darker chapter. Real-time deepfakes aren't just a gimmick anymore—they are actively infiltrating the technical hiring funnel. Here is what we&apos;re seeing on the front lines.
                             </p>
                             <time className="block mt-8 text-sm text-text-muted font-mono uppercase tracking-widest">
-                                By Rigour Labs Forensics | Jan 23, 2026
+                                By Rigour Labs Trust Team | Jan 23, 2026
                             </time>
                         </header>
 
@@ -70,14 +70,14 @@ export default function DeepfakeDetectionPage() {
                                     Last year, &quot;proxy interviewing&quot; meant someone else was whispering answers into an earpiece. Today, it’s a high-stakes tech-stack of its own. Using generative adversarial networks (GANs), bad actors are now injecting real-time video feeds into Zoom, Teams, and specialized platforms. They aren’t just helping candidates; they <span className="text-white italic">are</span> the candidates.
                                 </p>
                                 <p className="text-text-secondary mb-6">
-                                    At TalentLyt, we’ve analyzed over 50,000 interview hours. We don&apos;t just see pixels; we see the systematic artifacts left behind by neural injection.
+                                    At TalentLyt, we’ve analyzed over 50,000 interview hours. We don&apos;t just see pixels; we see the systematic patterns left behind by visual injection.
                                 </p>
                             </section>
 
                             <section className="mb-16">
-                                <h2 className="text-3xl font-black text-white mb-8 tracking-tight">The &quot;Uncanny Valley&quot; in Recruitment</h2>
+                                <h2 className="text-3xl font-black text-white mb-8 tracking-tight">The 12-Signal Verification Stack</h2>
                                 <p className="text-text-secondary mb-8">
-                                    A deepfake proxy isn&apos;t a static image. It’s a dynamic mask. But even the best consumer-grade GPUs can’t perfectly replicate the complex physics of a human face during a high-stress technical explanation. We look for specific &quot;tells&quot; that human eyes often miss, but forensic algorithms catch instantly:
+                                    A deepfake proxy isn&apos;t a static image. It’s a dynamic mask. But even the best consumer-grade GPUs can’t perfectly replicate the complex physics of a human face during high-stress technical probing. We analyze 12+ signal types that human eyes often miss:
                                 </p>
 
                                 <div className="space-y-8 mb-12">
@@ -113,7 +113,7 @@ export default function DeepfakeDetectionPage() {
                                     <div className="flex gap-4 items-start">
                                         <Shield className="w-6 h-6 text-danger shrink-0 mt-1" />
                                         <div className="text-sm text-text-secondary space-y-4">
-                                            <p><strong className="text-white uppercase tracking-wider">A Note on Privacy:</strong> As a recruiter or engineering leader, you must ensure that your forensic tools are compliant with GDPR, CCPA, and BIPA. At TalentLyt, we use &quot;ephemeral processing.&quot; We don&apos;t build biometric databases; we analyze signals in real-time and discard the raw biological markers immediately after verification.</p>
+                                            <p><strong className="text-white uppercase tracking-wider">A Note on Privacy:</strong> As a recruiter or engineering leader, you must ensure that your integrity tools are compliant with GDPR, CCPA, and BIPA. At TalentLyt, we use &quot;ephemeral processing.&quot; We don&apos;t build biometric databases; we analyze signals in real-time and discard the raw biological markers immediately after verification.</p>
                                             <p><em>Always disclose that automated integrity verification is in use. Transparency is the best deterrent.</em></p>
                                         </div>
                                     </div>

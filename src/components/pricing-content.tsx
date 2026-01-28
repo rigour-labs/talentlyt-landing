@@ -50,40 +50,40 @@ export function PricingContent() {
             name: 'The Engine',
             price: '$249',
             unit: '/ Month',
-            description: 'The standard for growing teams. 3,000 minutes included.',
+            description: 'Growth-Ready Intelligence. 3,000 minutes included.',
             valueTag: 'Rate: $0.083 / min',
             features: [
+                'All World-First Features',
+                'Job Success Prediction',
+                'Interview Genome Export',
                 '3,000 Minutes Included',
                 '$0.10/min Overage Rate',
-                'Priority Support (24h)',
-                '99.5% Uptime SLA',
-                'Unlimited Pipelines',
-                '90-Day Data Retention'
+                'Priority Support (24h)'
             ],
             cta: 'Scale Your Pipeline',
             ctaLink: '/contact',
             highlight: true,
             tag: 'Most Popular',
-            woo: 'Save 76% vs Starter rates. Perfect for high-volume technical screening.'
+            woo: 'Includes all intelligence features: Success Prediction, Genome Building, and Maya Whispering.'
         },
         {
             name: 'The Fortress',
             price: 'Custom',
             unit: 'Enterprise',
-            description: 'Unlimited minutes. Enterprise-grade operations.',
-            valueTag: 'Forensic Value: Full Sovereignty',
+            description: 'Unlimited Scale. Forensic Sovereignty.',
+            valueTag: 'Value: Full Intelligence Stack',
             features: [
-                'Unlimited Minutes',
+                'Interview Marketplace Access',
+                'Federated Learning Support',
+                'Bias Auditor (EEOC)',
+                'White-Label Intelligence',
                 'SAML / SSO (WorkOS)',
-                'REST API + Webhooks',
-                'White-Label Reports',
-                'Dedicated Slack + CSM',
-                'Custom Retention (3yr)'
+                'Dedicated Slack + CSM'
             ],
             cta: 'Contact Sales',
             ctaLink: '/contact',
             highlight: false,
-            woo: 'Includes Unlimited Sentinel Forensic scans and 99.9% uptime guarantee.'
+            woo: 'Includes All-Access Interview Genome and Unlimited Sentinel Forensic scans.'
         }
     ];
 
@@ -138,7 +138,7 @@ export function PricingContent() {
                         transition={{ delay: 0.2 }}
                         className="text-lg text-text-secondary max-w-2xl mx-auto font-medium"
                     >
-                        No <span className="text-brand font-bold underline underline-offset-4 decoration-brand/30">Basic</span> tiers. No compromised integrity. Every session is protected by the Sentinel Forensic Engine.
+                        No <span className="text-brand font-bold underline underline-offset-4 decoration-brand/30">Basic</span> tiers. No compromised integrity. Every session is protected by the Sentinel Verification Engine.
                     </motion.p>
                 </div>
 
@@ -259,7 +259,7 @@ export function PricingContent() {
                             },
                             {
                                 title: "Value-Based Billing",
-                                desc: "You pay for minutes, not for capabilities. Every user gets the full Sentinel Forensic engine.",
+                                desc: "You pay for minutes, not for capabilities. Every user gets the full Sentinel Verification engine.",
                                 icon: Zap,
                                 color: "text-brand"
                             },
@@ -290,9 +290,9 @@ export function PricingContent() {
                     <div className="absolute inset-0 bg-brand/5 blur-[120px] rounded-full pointer-events-none -z-10" />
                     <div className="text-center mb-16">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 border border-brand/20 text-brand text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
-                            Forensic Intelligence
+                            Advanced Verification
                         </div>
-                        <h2 className="text-4xl sm:text-5xl font-black mb-6 tracking-tighter">Sentinel <span className="text-brand">Forensic</span></h2>
+                        <h2 className="text-4xl sm:text-5xl font-black mb-6 tracking-tighter">Sentinel <span className="text-brand">Verification</span></h2>
                         <p className="text-text-secondary max-w-2xl mx-auto text-lg font-medium">
                             Deep post-interview analysis for high-stakes hires. <br className="hidden md:block" /> Powered by <span className="text-white">SyncNet</span> and <span className="text-white">ECAPA-TDNN</span>.
                         </p>
@@ -304,7 +304,7 @@ export function PricingContent() {
                                 name: 'Sentinel Basic',
                                 price: '$35',
                                 unit: '/ Scan',
-                                features: ['Wav2Lip Forensics', 'SyncNet CNN Analysis', 'Voice Biometric Deep Sync', 'Evidence PDF Report'],
+                                features: ['Lip-Sync & Voice Bio', 'SyncNet CNN Analysis', 'Deepfake Detection', 'Evidence PDF Report'],
                                 availability: 'Available Now',
                                 highlight: false
                             },
@@ -312,7 +312,7 @@ export function PricingContent() {
                                 name: 'Sentinel Advanced',
                                 price: '$50',
                                 unit: '/ Scan',
-                                features: ['v-JEPA2 Integration', 'Temporal Consistency', 'Motion Anomaly Detection', 'Enhanced Video Reasoning'],
+                                features: ['v-JEPA2 Video Analysis', 'Temporal Consistency', 'Motion Anomaly', 'Enhanced Reasoning'],
                                 availability: 'Q2 2026',
                                 highlight: true
                             },
@@ -320,7 +320,7 @@ export function PricingContent() {
                                 name: 'Sentinel Premium',
                                 price: '$75',
                                 unit: '/ Scan',
-                                features: ['NVIDIA Alpamayo 10B', 'Behavioral Reasoning', 'Natural Language Explanation', 'Multi-modal Verification'],
+                                features: ['NVIDIA Alpamayo 10B', 'Behavioral Reasoning', 'Natural Language Logic', 'Forensic Evidence Chain'],
                                 availability: 'Q3 2026',
                                 highlight: false
                             }
@@ -373,11 +373,12 @@ export function PricingContent() {
                                 <tbody className="divide-y divide-white/5">
                                     {[
                                         { feature: 'Interview Model', talent: 'Live Multi-Agent Voice', trad: 'Asynchronous / One-way' },
-                                        { feature: 'Cost Protocol', talent: 'Metered Minutes', trad: 'Static Per-User Fees' },
+                                        { feature: 'Job Success Prediction', talent: 'AI-Forecasting (85% Accuracy)', trad: 'Manual Intuition / None' },
+                                        { feature: 'Candidate Intelligence', talent: 'Portable Interview Genomes', trad: 'Static PDF Resumes' },
                                         { feature: 'Fraud Analysis', talent: '12-Signal Adversarial', trad: 'Basic Human Review' },
-                                        { feature: 'Deepfake Defense', talent: 'Wav2Lip + SyncNet', trad: 'None / Proxy-prone' },
+                                        { feature: 'Real-time Adaptation', talent: 'Claim Extraction & Probing', trad: 'Static Question Bank' },
+                                        { feature: 'Learning Model', talent: 'Federated Collective Intelligence', trad: 'Siloed / Zero-Learning' },
                                         { feature: 'Feature Availability', talent: 'Zero Gates (All Tiers)', trad: 'Pay-for-Access Gates' },
-                                        { feature: 'Collaboration', talent: 'Unlimited Team Seats', trad: 'Limited Seats / Overage' }
                                     ].map((row, i) => (
                                         <tr key={i} className="group/row hover:bg-white/[0.02] transition-colors">
                                             <td className="py-6 px-6 text-sm font-bold text-white tracking-tight">{row.feature}</td>
@@ -417,20 +418,20 @@ export function PricingContent() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                         {[
                             {
+                                q: "Are the 'Intelligence' features an extra cost?",
+                                a: "No. In line with our 'No Feature Gates' philosophy, Job Success Prediction, Interview Genome, and Maya Whisper are included in our standard tiers. We believe intelligence shouldn't be a premium add-on."
+                            },
+                            {
+                                q: "How does the Interview Genome work?",
+                                a: "Every interview conducted builds the candidate's verified genome. Candidates can export this signed JSON to other TalentLyt-enabled companies, and you can browse the Marketplace for pre-verified talent."
+                            },
+                            {
                                 q: "Why minutes instead of per-interview?",
                                 a: "Transparency. A 15-minute verification shouldn't cost as much as a 60-minute technical deep-dive. Minutes ensures you only pay for exactly what you consume."
                             },
                             {
-                                q: "Are there any seat limits or feature gates?",
-                                a: "Never. Seat limits and feature gates are artificial barriers. We give you the full power of Maya AI and Sentinel 12-signal detection on every tier."
-                            },
-                            {
-                                q: "What happens if I run out of minutes mid-interview?",
-                                a: "Zero interruption policy. The interview continues seamlessly. For 'Engine' clients, overage is billed at $0.10/min. For 'Starter', it's simple usage-based billing."
-                            },
-                            {
-                                q: "Is registration required for external interviewers?",
-                                a: "No. You can invite unlimited guest interviewers to join Panel Mode. They don't need seats, as seats are unlimited for your internal team anyway."
+                                q: "What is Federated Learning?",
+                                a: "It's how we improve. We learn from millions of anonymized interview signals across organizations without ever sharing raw candidate data, ensuring your predictions are always world-class."
                             }
                         ].map((faq, i) => (
                             <div key={i} className="group p-8 rounded-[2.5rem] bg-white/[0.02] border border-white/5 hover:border-brand/20 transition-all duration-500">

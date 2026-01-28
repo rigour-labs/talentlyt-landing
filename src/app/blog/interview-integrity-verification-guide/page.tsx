@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'The Trust Crisis: Why Interview Integrity Is the New Technical Standard',
-        description: 'Forensic reality check: How to protect your technical hiring funnel from sophisticated modern fraud.',
+        description: 'Verification reality check: How to protect your technical hiring funnel from sophisticated modern fraud.',
         type: 'article',
         publishedTime: '2025-01-10T00:00:00Z',
     },
@@ -42,7 +42,7 @@ export default function InterviewIntegrityVerificationPage() {
                         <header className="mb-12">
                             <div className="flex items-center gap-4 mb-6">
                                 <span className="px-3 py-1 rounded-lg bg-brand/10 text-brand text-xs font-bold uppercase tracking-wider">
-                                    Forensic Deep Dive
+                                    Integrity Deep Dive
                                 </span>
                                 <div className="flex items-center gap-2 text-text-muted text-xs">
                                     <Clock className="w-3 h-3" />
@@ -108,9 +108,9 @@ export default function InterviewIntegrityVerificationPage() {
                             </section>
 
                             <section className="mb-16">
-                                <h2 className="text-3xl font-black text-white mb-8 tracking-tight">The Forensic Approach: Signals vs. Symptoms</h2>
+                                <h2 className="text-3xl font-black text-white mb-8 tracking-tight">The Verification Approach: Signals vs. Symptoms</h2>
                                 <p className="text-text-secondary mb-8">
-                                    To catch modern fraud, you can&apos;t just look for &quot;cheating.&quot; You have to look for <strong>biological inconsistencies.</strong> Our Sentinel Engine analyzes 12 signal layers that are impossible for a proxy or AI to fake simultaneously:
+                                    To catch modern fraud, we look for <strong>behavioral and technical inconsistencies.</strong> Our Sentinel Engine analyzes 12 signal layers that are difficult to replicate simultaneously:
                                 </p>
                                 <div className="space-y-6">
                                     <div className="flex gap-4 p-6 rounded-2xl bg-white/[0.01] border border-white/5">
@@ -134,7 +134,7 @@ export default function InterviewIntegrityVerificationPage() {
                                     We are often asked: <em>&quot;Is this too much? Are we invading privacy?&quot;</em>
                                 </p>
                                 <p className="text-text-secondary mb-6">
-                                    Our answer is rooted in fairness. A candidate who prepares for six months only to lose a role to a proxy actor is the victim. Forensic oversight is the mechanism that ensures the <span className="text-white italic">right</span> person gets the job.
+                                    Our answer is rooted in fairness. A candidate who prepares for months only to lose a role to a proxy actor is the true victim. Verification is the mechanism that ensures the <span className="text-white italic">most qualified</span> person gets the job.
                                 </p>
                                 <div className="p-8 rounded-3xl bg-blue-500/5 border border-blue-500/20 mb-8">
                                     <h4 className="text-white font-bold mb-3 flex items-center gap-2">
@@ -147,12 +147,12 @@ export default function InterviewIntegrityVerificationPage() {
                             </section>
 
                             <section className="mb-16">
-                                <h2 className="text-3xl font-black text-white mb-8 tracking-tight">Closing the Loop</h2>
-                                <p className="text-text-secondary leading-relaxed">
-                                    In 2026, companies that ignore interview integrity are effectively operating with an &quot;open border&quot; policy for their culture and their codebase. By the time you find a fraudulent hire, the damage is already done.
+                                <h2 className="text-3xl font-black text-white mb-8 tracking-tight">The Future: Portable Integrity</h2>
+                                <p className="text-text-secondary leading-relaxed mb-6">
+                                    In 2026, companies that ignore interview integrity are effectively operating with an &quot;open border&quot; policy for their culture and their codebase. But for the candidate, integrity isn&apos;t just about detection—it&apos;s about building a <strong className="text-white">portable Interview Genome</strong>.
                                 </p>
-                                <p className="text-text-secondary leading-relaxed mt-4">
-                                    At TalentLyt, we help you build that wall of trust—honorable, transparent, and forensic-grade.
+                                <p className="text-text-secondary leading-relaxed">
+                                    A verified session doesn&apos;t just catch fraud; it produces a <strong className="text-white">85% accurate job success prediction</strong> and a signed, portable profile that traveling with the candidate. This is how we ensure that trust scales across the entire technical ecosystem.
                                 </p>
                             </section>
                         </div>
@@ -175,7 +175,7 @@ export default function InterviewIntegrityVerificationPage() {
                                         href="/contact"
                                         className="inline-flex items-center justify-center gap-2 px-10 py-5 bg-brand text-white font-black rounded-2xl hover:bg-brand-hover transition-all uppercase tracking-widest text-xs shadow-2xl shadow-brand/40"
                                     >
-                                        Request Forensic Audit
+                                        Request Integrity Audit
                                     </Link>
                                     <Link
                                         href="/pricing"

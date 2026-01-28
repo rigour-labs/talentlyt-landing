@@ -15,7 +15,7 @@ export default function TermsPage() {
         {
             icon: Shield,
             title: "Service Description",
-            content: `TalentLyt provides AI-powered technical interview and assessment services. Our platform includes Maya (AI Interviewer) and a Legal-Advisor Forensic Engine (Integrity Verification). The Service is designed to assist in hiring decisions but does not guarantee hiring outcomes. All AI-generated assessments should be reviewed by qualified human recruiters.`
+            content: `TalentLyt provides the world's first complete Interview Intelligence platform. Our services include Maya (AI Interviewer), the 12-Signal Forensic Audit Engine, Job Success Prediction, and the Interview Genome. The Service is designed to assist in hiring decisions through verified technical truth but does not guarantee specific hiring outcomes.`
         },
         {
             icon: CreditCard,

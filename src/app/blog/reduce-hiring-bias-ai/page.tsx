@@ -100,14 +100,14 @@ export default function ReduceHiringBiasPage() {
                             <section className="mb-16">
                                 <h2 className="text-3xl font-black text-white mb-8 tracking-tight">AI as the &quot;Great Equalizer&quot;</h2>
                                 <p className="text-text-secondary mb-8 leading-relaxed">
-                                    A correctly architected AI, like <strong>Maya</strong>, is fundamentally indifferent to who you are. She doesn&apos;t know what you look like (unless forensic verification is required), she doesn&apos;t care about your accent, and she doesn&apos;t get &quot;vibes.&quot; She only cares about your logic.
+                                    A structured AI evaluation environment, like <strong>Maya</strong>, is designed to be indifferent to personal background. She focuses on technical reasoning, communication clarity, and problem-solving logic rather than subjective &quot;vibes.&quot;
                                 </p>
                                 <div className="space-y-6">
                                     <div className="flex gap-4 p-8 rounded-[2rem] bg-card border border-white/5">
                                         <div className="w-2 h-2 rounded-full bg-brand mt-2.5 shrink-0" />
                                         <div>
-                                            <h4 className="text-white font-bold mb-2">Technical Truth Over Soft-Skills Noise</h4>
-                                            <p className="text-sm text-text-secondary leading-relaxed">AI evaluations focus on <em>how</em> a candidate navigates a code-block, not how confidently they talk about it. In technical hiring, this distinction is often where true talent is found.</p>
+                                            <h4 className="text-white font-bold mb-2">Technical Proficiency Over Subjective Signals</h4>
+                                            <p className="text-sm text-text-secondary leading-relaxed">AI evaluations focus on <em>how</em> a candidate navigates a technical problem, providing a more objective measure of skill compared to traditional conversational screening.</p>
                                         </div>
                                     </div>
                                     <div className="flex gap-4 p-8 rounded-[2rem] bg-card border border-white/5">
@@ -139,9 +139,12 @@ export default function ReduceHiringBiasPage() {
                             </section>
 
                             <section className="mb-16">
-                                <h2 className="text-3xl font-black text-white mb-8 tracking-tight">Conclusion</h2>
+                                <h2 className="text-3xl font-black text-white mb-8 tracking-tight">The Future of meritocracy</h2>
+                                <p className="text-text-secondary leading-relaxed mb-6">
+                                    Bias is a complex human challenge that we can mitigate with the right tools. By focusing on technical proficiency and leveraging high-reliability predictive models, we can build teams that are both diverse and highly capable.
+                                </p>
                                 <p className="text-text-secondary leading-relaxed">
-                                    Bias isn&apos;t something we can ever fully &quot;solve&quot; in humans. But we can build tools that operate outside our own limitations. By focusing on technical truth and using consensus-based AI, we can build teams that aren&apos;t just more diverse, but fundamentally more capable.
+                                    With the <strong className="text-white">Interview Genome</strong>, we ensure that a candidate&apos;s verified skills are portable—allowing them to skip the bias-prone &quot;first glance&quot; of traditional resume screenings in the future.
                                 </p>
                             </section>
                         </div>

@@ -56,7 +56,7 @@ export function AboutContent() {
                         <h2 className="text-3xl font-bold">Our Mission</h2>
                     </div>
                     <p className="text-xl text-text-secondary leading-relaxed">
-                        To make every technical hire a <span className="text-white font-semibold">verified hire</span>. We combine conversational AI with forensic integrity monitoring.
+                        To make every technical hire a <span className="text-white font-semibold">verified hire</span>. We combine conversational AI with <span className="text-white font-semibold">12-signal integrity verification</span>, <span className="text-white font-semibold">predictive competency mapping</span>, and the world-first <span className="text-white font-semibold">Interview Genome</span>.
                     </p>
                 </section>
 

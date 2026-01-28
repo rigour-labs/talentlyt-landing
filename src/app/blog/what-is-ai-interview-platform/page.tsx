@@ -85,9 +85,9 @@ export default function WhatIsAIInterviewPlatformPage() {
                                     </div>
                                     <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/5">
                                         <ShieldCheck className="w-8 h-8 text-emerald-500 mb-6" />
-                                        <h3 className="text-xl font-bold text-white mb-3">Forensic Guardrails</h3>
+                                        <h3 className="text-xl font-bold text-white mb-3">12-Signal Verification</h3>
                                         <p className="text-sm text-text-secondary leading-relaxed">
-                                            Integrity is binary. Either you know it&apos;s the right candidate, or you don&apos;t. Modern platforms must detect deepfakes and proxy actors in real-time.
+                                            Integrity is fundamental. TalentLyt analyzes 12 distinct signal types in real-time to maintain session authenticity through high-precision technical mapping.
                                         </p>
                                     </div>
                                     <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/5">
@@ -133,12 +133,12 @@ export default function WhatIsAIInterviewPlatformPage() {
                             </section>
 
                             <section className="mb-16">
-                                <h2 className="text-3xl font-black text-white mb-8 tracking-tight">Conclusion</h2>
+                                <h2 className="text-3xl font-black text-white mb-8 tracking-tight">The Verification Lifecycle</h2>
                                 <p className="text-text-secondary mb-8 leading-relaxed">
-                                    An AI interview platform isn&apos;t a replacement for your engineering team. It&apos;s a filter that ensures your team&apos;s time is only spent with candidates who are already verified, technically capable, and ready to contribute.
+                                    An AI interview platform provides a comprehensive intelligence layer for technical hiring. Every session results in high-reliability competency mapping and the generation of a portable Interview Genome.
                                 </p>
                                 <p className="text-text-secondary leading-relaxed">
-                                    The future of hiring isn&apos;t &quot;No Humans.&quot; It&apos;s &quot;Humans focusing on what matters.&quot;
+                                    The future of hiring is centered on efficiency, verified individual capability, and portable intelligence for the AI-accelerated era.
                                 </p>
                             </section>
                         </div>

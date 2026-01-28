@@ -56,6 +56,11 @@ const glossaryTerms = [
         category: 'Platform',
     },
     {
+        term: '12-Signal Forensic Audit',
+        definition: 'TalentLyt\'s world-first integrity stack that analyzes 12 distinct signal types—including lip-sync, voice biometrics, and gaze tracking—to ensure absolute session authenticity.',
+        category: 'Integrity',
+    },
+    {
         term: 'Gaze Tracking',
         definition: 'Technology that monitors where a candidate is looking during an interview to detect if they are reading from notes, a second screen, or receiving off-camera assistance.',
         category: 'Integrity',
@@ -65,6 +70,11 @@ const glossaryTerms = [
         definition: 'The process of ensuring that an interview candidate is authentic and completing assessments without unauthorized assistance, including proxy detection and fraud prevention.',
         category: 'Integrity',
         relatedLink: '/blog/interview-integrity-verification-guide',
+    },
+    {
+        term: 'Interview Genome',
+        definition: 'A portable, cryptographically-signed record of a candidate\'s verified skills and interview performance. The world-first portable intelligence standard for engineering hiring.',
+        category: 'Platform',
     },
     {
         term: 'Keystroke Dynamics',
@@ -107,6 +117,11 @@ const glossaryTerms = [
     {
         term: 'Technical Screening',
         definition: 'The process of evaluating a candidate\'s technical skills, usually through coding challenges, system design questions, or technical discussions.',
+        category: 'Assessment',
+    },
+    {
+        term: 'Predictive Job Success',
+        definition: 'An ML-driven model that analyzes interview performance and behavioral signals to predict a candidate\'s likelihood of success in a specific role with 85% accuracy.',
         category: 'Assessment',
     },
     {

@@ -16,14 +16,13 @@ export const metadata: Metadata = {
     template: '%s | TalentLyt - AI Interview Platform'
   },
   description:
-    'TalentLyt is the leading AI interview platform for technical hiring. Our Multi-Agent AI (Maya + Forensic Engine) conducts and verifies interviews in real-time. Reduce hiring bias by 80%, cut interview time by 75%. Trusted by engineering teams worldwide.',
+    'TalentLyt is the world-first AI interview intelligence platform for technical hiring. Our Multi-Agent AI (Maya + Verification Engine) conducts and verifies technical depth in real-time. Features include 12-signal integrity verification, Job Success Prediction, and the portable Interview Genome. Trusted by elite engineering teams.',
   keywords: [
     'AI interview platform',
     'AI interview software',
     'technical interview automation',
     'AI technical interview',
     'automated interview platform',
-    'video interview software',
     'technical screening software',
     'AI recruiting tools',
     'interview cheating detection',
@@ -32,14 +31,15 @@ export const metadata: Metadata = {
     'integrity verification hiring',
     'multi-agent interview system',
     'B2B recruitment software',
-    'forensic technical assessment',
+    'verification technical assessment',
     'interview integrity software',
     'automated technical screening',
     'AI coding interview',
-    'enterprise hiring solution',
-    'bias-free hiring platform',
-    'technical assessment tool',
-    'interview fraud detection',
+    'Job Success Prediction AI',
+    'Interview Genome',
+    'technical meritocracy',
+    'predictive hiring intelligence',
+    '12-signal verification',
     'AI hiring platform',
     'technical interview AI'
   ],
@@ -80,8 +80,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'TalentLyt — High-Stakes Hiring with Forensic Auditing',
-    description: 'Multi-Agent AI technical interview suite. Maya conducts, the Forensic Engine verifies. Ensure integrity with forensic-grade verification.',
+    title: 'TalentLyt — High-Stakes Hiring with Technical Verification',
+    description: 'Multi-Agent AI technical interview suite. Maya conducts, the Verification Engine confirms depth. Ensure integrity with 12-signal verification.',
     images: ['/og-image.png'],
     creator: '@talentlyt',
   },
@@ -137,8 +137,8 @@ export default function RootLayout({
                     priceCurrency: 'USD',
                     description: 'Free Trial Available'
                   },
-                  description: 'AI-powered technical interview platform with integrity verification and bias-minimized evaluation.',
-                  featureList: 'Integrity Verification, Automated Quality Auditor, Vision-Sync Multi-modal Context, Cognitive-Audit Reasoning Stream, Code Playback',
+                  description: 'AI-powered technical interview intelligence with 12-signal verification, Job Success Prediction, and the Interview Genome.',
+                  featureList: '12-Signal Verification, Automated Quality Auditor, Predictive Competency Mapping, Interview Genome, Code Playback',
                   copyrightYear: new Date().getFullYear(),
                   author: {
                     '@type': 'Organization',
@@ -169,7 +169,7 @@ export default function RootLayout({
                     name: 'Rigour Labs Inc.'
                   },
                   areaServed: 'Worldwide',
-                  description: 'Forensic-grade technical screening using the Sentinel Hierarchy (Vision-Sync + Cognitive-Audit).'
+                  description: 'High-integrity technical screening using the Sentinel Hierarchy (12-signal verification + Predictive Competency Mapping).'
                 },
                 {
                   '@context': 'https://schema.org',
@@ -202,7 +202,7 @@ export default function RootLayout({
                   'alternateName': 'TalentLyt AI Interview Platform',
                   'url': 'https://talentlyt.cloud',
                   'logo': 'https://talentlyt.cloud/logo.png',
-                  'description': 'TalentLyt is the leading AI interview platform for technical hiring, featuring Multi-Agent AI with real-time integrity verification.',
+                  'description': 'TalentLyt is the world-first AI interview intelligence platform, featuring Multi-Agent AI with real-time 12-signal verification and predictive success mapping.',
                   'foundingDate': '2024',
                   'sameAs': [
                     'https://twitter.com/talentlyt',
@@ -224,7 +224,7 @@ export default function RootLayout({
                       'name': 'What is an AI Interview Platform?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'An AI interview platform uses artificial intelligence to conduct, evaluate, and verify technical interviews, providing a more objective and efficient hiring process. TalentLyt is the leading AI interview platform that combines Multi-Agent AI technology with forensic-grade integrity verification.'
+                        'text': 'An AI interview intelligence platform uses artificial intelligence to conduct, evaluate, and verify technical depth, providing an objective and efficient hiring process. TalentLyt is the world-first platform that combines Multi-Agent AI with 12-signal integrity verification, Job Success Prediction, and the Interview Genome.'
                       }
                     },
                     {

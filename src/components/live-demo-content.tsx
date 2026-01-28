@@ -10,50 +10,50 @@ export function LiveDemoContent() {
         {
             id: 'initiation',
             tag: 'Section 1: The Secure Initiation',
-            title: 'Identity Verification & Neural Calibration',
-            copy: 'We establish a biometric and identity baseline in 60 seconds—Zero-Storage, 100% Privacy. Identity is verified before a single line of code is written.',
+            title: 'Identity Verification & Technical Calibration',
+            copy: 'We establish a baseline for identity and technical environment in 60 seconds. Our zero-storage protocol ensures absolute privacy while verifying authenticity before the session begins.',
             image: 'https://onbadqcmbugvszb0.public.blob.vercel-storage.com/screencapture-localhost-3000-join-cmk9zk46300008p1t9fhlvbcs-2026-01-11-22_38_21.png',
             icon: ShieldCheck,
-            highlights: ['Biometric Handshake', 'Identity Verification', 'Neural Calibration']
+            highlights: ['Multi-factor Identity Verification', 'Technical Environment Check', 'Communication Calibration', 'Privacy-First Protocol Initiation']
         },
         {
             id: 'nexus',
             tag: 'Section 2: The Nexus Environment',
-            title: 'The Unified Interview Command Center',
-            copy: 'A unified interview command center. While the candidate codes, the Sentinel runs real-time telemetry on the hardware layer.',
+            title: 'The Unified Interview Interface',
+            copy: 'A streamlined environment for technical evaluation. While the candidate solves problems, our system monitors session integrity through multi-modal signal analysis.',
             images: [
                 'https://onbadqcmbugvszb0.public.blob.vercel-storage.com/screencapture-localhost-3000-interview-cmk9zk46300008p1t9fhlvbcs-2026-01-11-22_38_58.png',
                 'https://onbadqcmbugvszb0.public.blob.vercel-storage.com/Gemini_Generated_Image_2e29iy2e29iy2e29.png'
             ],
             icon: Zap,
-            highlights: ['Hardware Telemetry', 'Maya AI Orchestration', 'Real-time Signal Analysis']
+            highlights: ['Integrated Coding Surface', 'Real-time Signal Monitoring', 'Maya AI Guidance', 'Adaptive Evaluation Paths']
         },
         {
             id: 'verdict',
-            tag: 'Section 3: The Verdict',
-            title: 'Human-Verified Results You Can Act On',
-            copy: 'We caught the 91% integrity anomaly that a human eye would have missed. The 9% Sentinel Score for Vipin Kumar is your strongest evidence that the system works.',
+            tag: 'Section 3: The Verification',
+            title: '12-Signal Integrity Synthesis',
+            copy: 'Sessions are reviewed across 12 distinct signal types, including biometric-aware lip-sync and gaze patterns, to generate a comprehensive record of interview integrity.',
             image: 'https://onbadqcmbugvszb0.public.blob.vercel-storage.com/screencapture-platform-talentlyt-cloud-dashboard-audit-cmk9wgczv000001s6hl78jtgm-2026-01-11-22_26_25.png',
             icon: Search,
-            highlights: ['Anomaly Detection', 'Tamper Analysis', 'Surgical Integrity Scoring']
+            highlights: ['12-Signal Verification Stack', 'Multi-Modal Signal Audit', 'Integrity Confidence Scoring', 'Transparent Audit Records']
         },
         {
             id: 'orchestration',
             tag: 'Section 4: The Scale',
-            title: 'Pipeline Orchestration & Automation',
-            copy: 'Orchestrate your entire hiring funnel. From initial screening to final technical evaluation, we maintain the biometric chain of custody.',
+            title: 'Enterprise Pipeline Automation',
+            copy: 'Efficiently manage high-volume recruitment funnels. Maintain a consistent standard of quality and trust from initial screening to technical deep-dives.',
             image: 'https://onbadqcmbugvszb0.public.blob.vercel-storage.com/screencapture-localhost-3000-dashboard-pipelines-cmk6u61ir000201s6kre057t6-2026-01-11-22_31_15.png',
             icon: Database,
-            highlights: ['Chain of Custody', 'Automated Funnels', 'Growth-Ready Scaling']
+            highlights: ['Automated Workflow Templates', 'Pipeline Integrity Tracking', 'Scalable Candidate Management', 'Standardized Evaluation Nodes']
         },
         {
             id: 'intelligence',
-            tag: 'Section 5: Depth of Intelligence',
-            title: 'The Transcript & Executive Summary',
-            copy: 'Maya summarizes 45-minute interviews into a scannable executive report. Deep static analysis meets behavioral insights.',
+            tag: 'Section 5: Strategic Intelligence',
+            title: 'Competency Mapping & The Interview Genome',
+            copy: 'Synthesize session data into a detailed competency map and an Interview Genome—a portable, verified record of a candidate\'s technical depth and potential.',
             image: 'https://onbadqcmbugvszb0.public.blob.vercel-storage.com/screencapture-localhost-3000-dashboard-audit-cmk77brjr013401s6usey0luk-2026-01-11-22_51_01.png',
             icon: Activity,
-            highlights: ['AI Executive Summary', 'Keystroke Replay', 'Behavioral Drift Analysis']
+            highlights: ['Detailed Competency Mapping', 'Verified Interview Genome', 'Behavioral Signal Analysis', 'Portable Professional Record']
         }
     ];
 
@@ -79,7 +79,7 @@ export function LiveDemoContent() {
                             Maya AI interviews. AI Sentinel monitors. No signup required.
                         </p>
                     </div>
-                    
+
                     <InteractiveDemoForm />
                 </div>
 
@@ -95,10 +95,10 @@ export function LiveDemoContent() {
                         System Walkthrough
                     </div>
                     <h2 className="text-3xl sm:text-4xl font-bold mb-6 tracking-tight">
-                        The <span className="text-brand">Forensic Lifecycle</span>
+                        The <span className="text-brand">Verification Lifecycle</span>
                     </h2>
                     <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-                        Follow a candidate from initial initiation to the final verdict.
+                        A detailed view of how we maintain integrity from initiation to final report.
                     </p>
                 </div>
 

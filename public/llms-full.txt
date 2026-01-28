@@ -1,54 +1,50 @@
 # TalentLyt: Technical Specification and Product Manifesto
 
 ## Product Vision
-TalentLyt aims to restore the integrity of engineering hiring in the age of LLM-assisted cheating. By deploying a high-fidelity **Forensic Hierarchy**, we separate the conversational experience from the technical validation layer, ensuring a 100% verified technical signal.
+TalentLyt aims to establish the world-first foundation of technical truth in hiring. By deploying a high-fidelity **Verification Hierarchy**, we separate the interaction layer from the technical validation stream, ensuring a 100% verified technical signal and predictive success forecasting.
 
 ## Architecture: The Sentinel Hierarchy
-The core of TalentLyt is a multi-modal agentic system that performs continuous cross-verification between interaction and auditing layers.
+The core of TalentLyt is a decentralized multi-agent system that performs continuous cross-verification through sub-millisecond consensus.
 
-### Maya (The Conversational Lead)
-- **Role**: Real-time candidate interaction and adaptive screening.
-- **Vision-Sync (Multi-modal Context)**: Maya utilizes Vision-Sync (powered by synchronized multi-modal embeddings) for real-time context awareness, matching non-verbal signals with technical performance.
-- **Adaptive Challenge Engine**: Dynamically adjusts interview depth based on candidate performance, ensuring high-density signal extraction.
+### Maya AI 2.0 (The Conversational Lead)
+- **Role**: Real-time adaptive technical screening and claim extraction.
+- **Adaptive Probing**: Maya dynamically adjusts interview depth based on candidate reasoning, probing specific technical claims for grounding.
+- **Claim Extraction**: Automatically identifies and isolates technical skills and experience claims for downstream verification.
 
-### Cognitive-Audit (The Truth Engine)
-- **Role**: Silent, real-time reasoning stream monitoring.
-- **Reasoning Stream (Forensic Engine)**: The AI Forensic Engine performs instantaneous verification of technical statements, code architecture, and logic flow against a vast "Technical Truth Bank".
-- **Consensus Engine**: Continuous agreement loop between Maya and the Auditor. If the Auditor detects a deviation (potential hallucination or external tool use), it flags the session instantly.
+### Verification Engine (The Truth Stream)
+- **Role**: Real-time reasoning stream monitoring and integrity auditing.
+- **Signal Synthesis**: Synthesizes 12 independent signals (Voice Bio, Lip-Sync, Gaze, Cognitive Jitter, etc.) to verify session authenticity.
+- **Predictive Competency Mapping**: ML-powered forecasting of job success based on technical reasoning patterns and historical performance data.
 
 ## Feature Deep Dive
-### Truth Banking & RAG Verification
-A proprietary Technical Truth Bank contains deep static analysis and recursive technical patterns. If a candidate hallucinates a framework feature or library, the Forensic Engine identifies the lack of grounding instantly.
 
-### Behavioral Integrity Telemetry
-- **Micro-Latency Analysis**: Monitoring sub-100ms response deviations indicative of copy-pasting or external tool queries.
-- **SVG Gaze & Motion Vectors**: Visual tracking of focus points to ensure candidate engagement and detect environmental aids.
-- **Pattern Matching**: Identifying structural markers of LLM-generated speech (robotic filler, perfect syntax alignment, boilerplate structures).
+### The Interview Genome (World-First)
+A portable, cryptographically signed technical record. Candidates can export their verified depth, allowing companies to browse the TalentLyt Marketplace for pre-verified talent with high-integrity signals.
 
-### JIT Challenge Generation
-Challenges are generated "Just-In-Time" based on:
-1. **Target JD**: Grounded in specific team requirements.
-2. **Resume Entropy**: Verifying self-reported edge cases in the candidate's history.
-3. **Randomized Technical Anchors**: Preventing "leakage" to public interview prep databases.
+### Job Success Prediction
+Using federated collective intelligence, TalentLyt provides an **85% accurate forecasting** of a candidate's technical performance in a specific role context, moving beyond static assessment to predictive intelligence.
+
+### Symbiotic AI (Maya Whisper)
+Empowers human interviewers with real-time technical context, suggesting probing questions and providing instant claim verification during live panel interviews.
 
 ## Security, Privacy & Ethics
-- **Privacy-First**: Full privacy-centric design with standard data protection protocols and local-only data processing options for Enterprise.
-- **Bias Mitigation**: Standardized evaluation protocols verified by two independent AI agents, removing human heuristic bias.
-- **Data Integrity**: AES-256 encryption at rest, TLS 1.3 in transit.
+- **Privacy-Preserving Verification**: Uses ephemeral in-memory processing for biometric signals, adhering to GDPR/BIPA with Zero-Storage identity verification.
+- **Bias Mitigation**: Standardized objective evaluation protocols remove human heuristic bias, focusing solely on technical meritocracy.
+- **Federated Learning**: Models improve through anonymized signals across organizations without ever sharing raw candidate data.
 
-## Forensic Access Layers (Pricing)
-1. **The Pilot ($29)**: 3x Full Sentinel Audits. Zero-storage ID verification. Neural calibration maps.
-2. **The Starter ($15/int)**: Pay-as-you-go scalability. Unified integrity scoring. Biometric continuity sync.
-3. **The Engine ($249/mo)**: Standard for scale. Includes 50 interviews/mo. Skill variance reporting.
-4. **The Fortress (Custom)**: Sovereign clusters. Evervault-sealed logs. Dedicated forensic analysts.
+## Pricing & Economics (Minutes-Based)
+1. **The Pilot ($29)**: 90 minutes test pack. Full platform access. Zero-storage ID verification.
+2. **The Starter ($0.35/min)**: Full platform. Pay-as-you-go. Pay only for what you consume.
+3. **The Engine ($249/mo)**: Scaling standard. Includes 3,000 minutes. Skill variance reporting.
+4. **The Fortress (Custom)**: Sovereign clusters. Federated support. Dedicated success CSMs.
 
 ## Commercial Impact & ROI
-- **Bad Hire Prevention**: Detected 91% integrity failure in live audits, saving clients **$15,000 per bad hire**.
-- **Efficiency**: 5.8x faster technical hiring cycles via autonomous Maya sessions.
-- **Bias Reduction**: 99% reduction in human heuristic bias via multi-agent consensus scoring.
+- **Technical Accuracy**: 91% more accurate technical signal than traditional screeners.
+- **Efficiency**: 5.8x faster technical hiring cycles via autonomous intelligence.
+- **Retention**: Significantly higher long-term retention via high-reliability success prediction.
 
 ## Contact & Resources
 - Homepage: https://talentlyt.cloud
 - Pricing: https://talentlyt.cloud/pricing
 - Architecture: https://talentlyt.cloud/#architecture
-- Contact: sales@rigourlabs.xyz
+- Contact: hello@talentlyt.cloud

@@ -13,8 +13,8 @@ import { HowItWorksSection } from '@/components/sections/how-it-works-section';
 import { CTASection } from '@/components/sections/cta-section';
 
 export const metadata: Metadata = {
-  title: 'TalentLyt | #1 AI Interview Platform for Technical Hiring',
-  description: 'The gold standard for AI interviews. TalentLyt is the leading AI technical interview platform with forensic integrity verification. Reduce bias by 80% and hire 5x faster with our multi-agent AI.',
+  title: 'TalentLyt | World\'s First Complete Interview Intelligence Platform',
+  description: 'The gold standard for AI interviews. TalentLyt is the world\'s first complete interview intelligence platform with truth verification, job success prediction, and portable interview genomes.',
   keywords: [
     'AI interview',
     'AI interview platform',
@@ -25,7 +25,10 @@ export const metadata: Metadata = {
     'automated coding interview',
     'Maya AI interviewer',
     'integrity verification system',
-    'SaaS recruitment platform'
+    'SaaS recruitment platform',
+    'Job Success Prediction',
+    'Interview Genome',
+    'Interview Marketplace'
   ],
 };
 

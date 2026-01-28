@@ -71,14 +71,14 @@ export function ProblemSolutionSection() {
             <div className="max-w-7xl mx-auto relative z-10">
                 <div className="text-center mb-20 sm:mb-28">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-warning/10 border border-warning/20 mb-8">
-                        <span className="technical-label text-warning">Audit Diagnostic: Required</span>
+                        <span className="technical-label text-warning">Market Diagnostic: Global</span>
                     </div>
                     <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 tracking-tight text-white leading-[1.1]">
-                        The <span className="text-warning">Remote Hiring</span> Crisis. <br />
-                        The <span className="text-brand">AI Interview</span> Solution.
+                        The <span className="text-warning">Remote Truth</span> Crisis. <br />
+                        The <span className="text-brand">Live Intelligence</span> Solution.
                     </h2>
                     <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto">
-                        Traditional remote interviewing is built on trust that no longer exists in an AI-accelerated world. We restore that trust.
+                        Traditional hiring is broken by pre-recorded questions and siloed data. TalentLyt restores trust with <span className="text-white font-bold">live adaptive AI</span> and collective <span className="text-white font-bold">federated learning</span>.
                     </p>
                 </div>
 
