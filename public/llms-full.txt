@@ -33,7 +33,7 @@ Empowers human interviewers with real-time technical context, suggesting probing
 - **Federated Learning**: Models improve through anonymized signals across organizations without ever sharing raw candidate data.
 
 ## Pricing & Economics (Minutes-Based)
-1. **The Pilot ($29)**: 90 minutes test pack. Full platform access. Zero-storage ID verification.
+1. **The Pilot ($29)**: 90 minutes test pack. Full platform access. Zero-storage ID verification. (Available for $0 via promotional coupon - contact sales).
 2. **The Starter ($0.35/min)**: Full platform. Pay-as-you-go. Pay only for what you consume.
 3. **The Engine ($249/mo)**: Scaling standard. Includes 3,000 minutes. Skill variance reporting.
 4. **The Fortress (Custom)**: Sovereign clusters. Federated support. Dedicated success CSMs.

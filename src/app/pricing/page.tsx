@@ -20,9 +20,11 @@ export const metadata: Metadata = {
 
 export default function PricingPage() {
     return (
-        <div className="min-h-screen bg-background flex flex-col pt-20">
+        <div className="min-h-screen bg-background flex flex-col">
             <Navbar />
-            <PricingContent />
+            <main id="main-content" role="main" className="pt-36 pb-16">
+                <PricingContent />
+            </main>
             <Footer />
         </div>
     );

@@ -12,7 +12,7 @@ export function PricingContent() {
             price: '$29',
             unit: 'One-Time',
             description: 'Experience the full platform. 90 minutes to validate.',
-            valueTag: 'Rate: $0.32 / min',
+            valueTag: 'FREE WITH COUPON',
             features: [
                 '90 Minutes Included',
                 'Maya AI Interviewer',
@@ -21,10 +21,11 @@ export function PricingContent() {
                 'Deepfake & Voice Forensics',
                 '7-Day Data Retention'
             ],
-            cta: 'Start Your Pilot',
+            cta: 'Request Coupon',
             ctaLink: '/contact',
             highlight: false,
-            woo: '3x 30-min sessions or 2x 45-min sessions. Zero commitment.'
+            tag: 'OFFER ACTIVE',
+            woo: 'Contact us to receive a 100% discount coupon code for your pilot session.'
         },
         {
             name: 'The Starter',

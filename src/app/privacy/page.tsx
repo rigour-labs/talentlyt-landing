@@ -100,7 +100,7 @@ export default function PrivacyPolicyPage() {
     ];
 
     return (
-        <div className="min-h-screen bg-background flex flex-col pt-20">
+        <div className="min-h-screen bg-background flex flex-col pt-32">
             <Navbar />
 
             <main className="flex-1 py-16 px-4 sm:px-6 lg:px-8">

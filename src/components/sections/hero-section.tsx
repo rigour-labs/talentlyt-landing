@@ -64,7 +64,7 @@ export function HeroSection() {
     }, [isMayaSpeaking]);
 
     return (
-        <section ref={heroRef as React.RefObject<HTMLElement>} className="relative min-h-[90vh] flex flex-col justify-center pt-24 pb-12 px-4 sm:px-6 overflow-hidden">
+        <section ref={heroRef as React.RefObject<HTMLElement>} className="relative min-h-[90vh] flex flex-col justify-center pt-32 pb-12 px-4 sm:px-6 overflow-hidden">
             {/* LiveKit-inspired Connectivity Background */}
             <ConnectivityMesh />
 
@@ -128,34 +128,35 @@ export function HeroSection() {
                         </Link>
                     </div>
 
-                    {/* Sentinel Impact Alert */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={heroVisible ? { opacity: 1, y: 0 } : {}}
-                        transition={{ delay: 0.5, duration: 0.6 }}
-                        className="mt-8 p-4 rounded-2xl bg-brand/5 border border-brand/20 flex items-center gap-4 max-w-md group hover:bg-brand/10 transition-all cursor-default"
-                    >
-                        <div className="w-12 h-12 rounded-xl bg-brand/20 flex items-center justify-center text-brand shrink-0">
-                            <ShieldCheck className="w-6 h-6 animate-pulse" />
-                        </div>
-                        <div>
-                            <div className="text-[10px] font-bold text-brand uppercase tracking-widest mb-0.5">Integrity Verification Active</div>
-                            <div className="text-sm font-semibold text-white leading-tight">
-                                High-confidence signal mismatch detected in recent verification.
-                            </div>
-                            <div className="text-[11px] text-text-muted mt-1">
-                                Protecting hiring quality by <span className="text-brand font-bold">verifying individual competency</span>.
-                            </div>
-                        </div>
-                    </motion.div>
-
-                    {/* Interactive Agent Controller - Moved here from video overlay */}
-                    <div className="mt-8 w-full sm:w-auto min-w-[320px]">
+                    {/* Interactive Agent Controller */}
+                    <div className="mt-12 w-full sm:w-auto min-w-[320px]">
                         <MayaVoiceWidget
                             isPlaying={isMayaSpeaking}
-                            onToggle={() => setIsMayaSpeaking(!isMayaSpeaking)}
+                            onToggle={() => {
+                                const newState = !isMayaSpeaking;
+                                setIsMayaSpeaking(newState);
+                                analytics.track({
+                                    event: 'feature_toggled',
+                                    properties: {
+                                        feature_name: 'maya_voice',
+                                        enabled: newState,
+                                        location: 'hero',
+                                    },
+                                });
+                            }}
                             isSentinelMode={isSentinelMode}
-                            onToggleSentinel={() => setIsSentinelMode(!isSentinelMode)}
+                            onToggleSentinel={() => {
+                                const newState = !isSentinelMode;
+                                setIsSentinelMode(newState);
+                                analytics.track({
+                                    event: 'feature_toggled',
+                                    properties: {
+                                        feature_name: 'sentinel_mode',
+                                        enabled: newState,
+                                        location: 'hero',
+                                    },
+                                });
+                            }}
                         />
                     </div>
 

@@ -17,6 +17,12 @@
 
 import mixpanel from 'mixpanel-browser';
 
+declare global {
+  interface Window {
+    dataLayer: any[];
+  }
+}
+
 // ============================================================================
 // EVENT DEFINITIONS
 // ============================================================================
@@ -28,8 +34,8 @@ import mixpanel from 'mixpanel-browser';
 interface CTAClickedEvent {
   event: 'cta_clicked';
   properties: {
-    location: 'hero' | 'navbar' | 'footer' | 'pricing' | 'bottom_cta' | 'blog' | 'comparison';
-    cta_type: 'start_trial' | 'watch_demo' | 'contact_sales' | 'book_demo' | 'get_started' | 'scale_pipeline' | 'start_pilot';
+    location: 'hero' | 'navbar' | 'footer' | 'pricing' | 'bottom_cta' | 'blog' | 'comparison' | 'announcement_bar';
+    cta_type: 'start_trial' | 'watch_demo' | 'contact_sales' | 'book_demo' | 'get_started' | 'scale_pipeline' | 'start_pilot' | 'request_coupon';
     cta_text: string;
     destination_url?: string;
   };
@@ -242,7 +248,17 @@ class Analytics {
     }
 
     try {
+      // 1. Existing Mixpanel Tracking
       mixpanel.track(payload.event, payload.properties);
+
+      // 2. Google Tag Manager / DataLayer Sync
+      if (typeof window !== 'undefined') {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: payload.event,
+          ...payload.properties,
+        });
+      }
 
       if (process.env.NODE_ENV === 'development') {
         console.log('[Analytics] Tracked:', payload.event, payload.properties);

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sparkles, ArrowRight } from 'lucide-react';
 import { analytics } from '@/lib/analytics';
 
 export function Navbar() {
@@ -27,128 +27,174 @@ export function Navbar() {
     ];
 
     return (
-        <nav
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b ${isScrolled || isMobileMenuOpen
-                ? 'bg-background/80 backdrop-blur-xl border-white/10 py-3'
-                : 'bg-transparent border-transparent py-5'
-                }`}
-        >
-            <div className="max-w-7xl mx-auto px-6 sm:px-8">
-                <div className="flex items-center justify-between">
-                    <Link
-                        href="/"
-                        className="flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded-lg px-2 py-1 -ml-2"
-                        aria-label="TalentLyt Home"
-                    >
-                        <div className="relative w-8 h-8 rounded-lg bg-brand flex items-center justify-center shadow-[0_0_15px_rgba(99,102,241,0.4)] overflow-hidden">
-                            <span className="text-white font-bold text-lg relative z-10">T</span>
+        <header className="fixed top-0 left-0 right-0 z-50">
+            {/* Top Announcement Bar - Dynamic Eye-Catcher */}
+            <div className="relative overflow-hidden bg-[#030712] border-b border-brand/20">
+                {/* Background Shimmer Sweep */}
+                <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand/10 to-transparent w-1/2 animate-shimmer-sweep opacity-50" />
+                </div>
+
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.2),transparent_70%)]" />
+
+                <div className="relative z-10 flex items-center justify-center gap-4 py-3 px-4 backdrop-blur-xl">
+                    <div className="flex items-center gap-3">
+                        {/* Flashing "LIVE" indicator */}
+                        <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-red-500/10 border border-red-500/30 animate-pulse">
+                            <div className="w-1.5 h-1.5 rounded-full bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.8)]" />
+                            <span className="text-[9px] font-black text-red-500 uppercase tracking-widest">Live Offer</span>
                         </div>
-                        <span className="text-xl font-bold tracking-tight text-white group-hover:text-brand transition-colors">
-                            Talent<span className="text-brand">Lyt</span>
-                        </span>
-                    </Link>
 
-                    <nav className="hidden md:flex items-center gap-1 px-1 py-1 rounded-full bg-white/[0.03] border border-white/10 backdrop-blur-md" aria-label="Main navigation">
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.name}
-                                href={link.href}
-                                className={`px-5 py-2 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background ${pathname === link.href
-                                    ? 'bg-brand/20'
-                                    : 'hover:bg-white/5'
-                                    }`}
-                                aria-current={pathname === link.href ? 'page' : undefined}
-                            >
-                                <span className={`technical-label text-[10px] ${pathname === link.href
-                                    ? 'text-brand'
-                                    : 'text-white/50 group-hover:text-white'
-                                    }`}>
-                                    {link.name}
-                                </span>
-                            </Link>
-                        ))}
-                    </nav>
-
-                    <div className="flex items-center gap-4 sm:gap-8">
-                        <a
-                            href="https://platform.talentlyt.cloud"
-                            className="technical-label text-[10px] text-white/50 hover:text-white transition-colors hidden md:block focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded px-2 py-1"
-                            aria-label="Sign in to platform"
-                        >
-                            Sign In
-                        </a>
-                        <Link
-                            href="/contact"
-                            onClick={() => analytics.track({
-                                event: 'cta_clicked',
-                                properties: {
-                                    location: 'navbar',
-                                    cta_type: 'start_trial',
-                                    cta_text: 'Start Free Trial',
-                                    destination_url: '/contact',
-                                },
-                            })}
-                            className="group relative px-6 py-2.5 bg-brand text-white rounded-xl hover:shadow-[0_0_25px_rgba(99,102,241,0.4)] transition-all flex items-center gap-2 overflow-hidden hidden sm:flex focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
-                            aria-label="Start free trial"
-                        >
-                            <span className="technical-label text-[10px] relative z-10">Start Free Trial</span>
-                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-                        </Link>
-
-                        <button
-                            className="md:hidden p-2 text-white/70 hover:text-white focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded-lg transition-colors"
-                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                            aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
-                            aria-expanded={isMobileMenuOpen}
-                        >
-                            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                        </button>
+                        <p className="text-[10px] sm:text-[11px] font-bold text-white tracking-wide flex items-center gap-2">
+                            <Sparkles className="w-3.5 h-3.5 text-brand animate-pulse-soft" />
+                            <span>
+                                Get <span className="text-white underline underline-offset-4 decoration-brand/50">"The Pilot"</span> pack for <span className="text-brand font-black text-xs sm:text-sm animate-pulse-soft">Free</span> (Value $29)
+                            </span>
+                        </p>
                     </div>
+
+                    <Link
+                        href="/contact"
+                        onClick={() => analytics.track({
+                            event: 'cta_clicked',
+                            properties: {
+                                location: 'announcement_bar',
+                                cta_type: 'request_coupon',
+                                cta_text: 'Claim Pilot Access',
+                            },
+                        })}
+                        className="group relative px-5 py-2 bg-brand text-white text-[10px] font-black rounded-full transition-all hover:scale-105 active:scale-95 flex items-center gap-2 overflow-hidden shadow-[0_0_20px_rgba(99,102,241,0.4)] hover:shadow-[0_0_30px_rgba(99,102,241,0.6)]"
+                    >
+                        <span className="relative z-10 uppercase tracking-widest">Claim Free Session</span>
+                        <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform relative z-10" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+                    </Link>
                 </div>
             </div>
 
-            {/* Mobile Menu */}
-            {isMobileMenuOpen && (
-                <div
-                    className="md:hidden bg-background/95 backdrop-blur-2xl border-t border-white/10 overflow-hidden"
-                    role="dialog"
-                    aria-modal="true"
-                    aria-label="Mobile navigation menu"
-                >
-                    <nav className="flex flex-col p-6 gap-4" aria-label="Mobile navigation">
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.name}
-                                href={link.href}
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className={`px-4 py-3 rounded-xl transition-all focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background ${pathname === link.href
-                                    ? 'bg-brand/10 text-brand'
-                                    : 'text-white/70 hover:bg-white/5'
-                                    }`}
-                                aria-current={pathname === link.href ? 'page' : undefined}
-                            >
-                                <span className="technical-label">{link.name}</span>
-                            </Link>
-                        ))}
-                        <div className="h-px bg-white/10 my-2" role="separator" />
-                        <a
-                            href="https://platform.talentlyt.cloud"
-                            className="px-4 py-3 text-white/70 technical-label hover:bg-white/5 rounded-xl transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
-                            aria-label="Sign in to platform"
-                        >
-                            Sign In
-                        </a>
+            <nav
+                className={`transition-all duration-500 border-b ${isScrolled || isMobileMenuOpen
+                    ? 'bg-background/80 backdrop-blur-xl border-white/10 py-3'
+                    : 'bg-transparent border-transparent py-5'
+                    }`}
+            >
+                <div className="max-w-7xl mx-auto px-6 sm:px-8">
+                    <div className="flex items-center justify-between">
                         <Link
-                            href="/contact"
-                            onClick={() => setIsMobileMenuOpen(false)}
-                            className="px-4 py-4 bg-brand text-white rounded-xl text-center technical-label hover:bg-brand-hover transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
-                            aria-label="Start free trial"
+                            href="/"
+                            className="flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded-lg px-2 py-1 -ml-2"
+                            aria-label="TalentLyt Home"
                         >
-                            Start Free Trial
+                            <div className="relative w-8 h-8 rounded-lg bg-brand flex items-center justify-center shadow-[0_0_15px_rgba(99,102,241,0.4)] overflow-hidden">
+                                <span className="text-white font-bold text-lg relative z-10">T</span>
+                            </div>
+                            <span className="text-xl font-bold tracking-tight text-white group-hover:text-brand transition-colors">
+                                Talent<span className="text-brand">Lyt</span>
+                            </span>
                         </Link>
-                    </nav>
+
+                        <nav className="hidden md:flex items-center gap-1 px-1 py-1 rounded-full bg-white/[0.03] border border-white/10 backdrop-blur-md" aria-label="Main navigation">
+                            {navLinks.map((link) => (
+                                <Link
+                                    key={link.name}
+                                    href={link.href}
+                                    className={`px-5 py-2 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background ${pathname === link.href
+                                        ? 'bg-brand/20'
+                                        : 'hover:bg-white/5'
+                                        }`}
+                                    aria-current={pathname === link.href ? 'page' : undefined}
+                                >
+                                    <span className={`technical-label text-[10px] ${pathname === link.href
+                                        ? 'text-brand'
+                                        : 'text-white/50 group-hover:text-white'
+                                        }`}>
+                                        {link.name}
+                                    </span>
+                                </Link>
+                            ))}
+                        </nav>
+
+                        <div className="flex items-center gap-4 sm:gap-8">
+                            <a
+                                href="https://platform.talentlyt.cloud"
+                                className="technical-label text-[10px] text-white/50 hover:text-white transition-colors hidden md:block focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded px-2 py-1"
+                                aria-label="Sign in to platform"
+                            >
+                                Sign In
+                            </a>
+                            <Link
+                                href="/contact"
+                                onClick={() => analytics.track({
+                                    event: 'cta_clicked',
+                                    properties: {
+                                        location: 'navbar',
+                                        cta_type: 'start_trial',
+                                        cta_text: 'Start Free Trial',
+                                        destination_url: '/contact',
+                                    },
+                                })}
+                                className="group relative px-6 py-2.5 bg-brand text-white rounded-xl hover:shadow-[0_0_25px_rgba(99,102,241,0.4)] transition-all flex items-center gap-2 overflow-hidden hidden sm:flex focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
+                                aria-label="Start free trial"
+                            >
+                                <span className="technical-label text-[10px] relative z-10">Start Free Trial</span>
+                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                            </Link>
+
+                            <button
+                                className="md:hidden p-2 text-white/70 hover:text-white focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded-lg transition-colors"
+                                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                                aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+                                aria-expanded={isMobileMenuOpen}
+                            >
+                                {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                            </button>
+                        </div>
+                    </div>
                 </div>
-            )}
-        </nav>
+
+                {/* Mobile Menu */}
+                {isMobileMenuOpen && (
+                    <div
+                        className="md:hidden bg-background/95 backdrop-blur-2xl border-t border-white/10 overflow-hidden"
+                        role="dialog"
+                        aria-modal="true"
+                        aria-label="Mobile navigation menu"
+                    >
+                        <nav className="flex flex-col p-6 gap-4" aria-label="Mobile navigation">
+                            {navLinks.map((link) => (
+                                <Link
+                                    key={link.name}
+                                    href={link.href}
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    className={`px-4 py-3 rounded-xl transition-all focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background ${pathname === link.href
+                                        ? 'bg-brand/10 text-brand'
+                                        : 'text-white/70 hover:bg-white/5'
+                                        }`}
+                                    aria-current={pathname === link.href ? 'page' : undefined}
+                                >
+                                    <span className="technical-label">{link.name}</span>
+                                </Link>
+                            ))}
+                            <div className="h-px bg-white/10 my-2" role="separator" />
+                            <a
+                                href="https://platform.talentlyt.cloud"
+                                className="px-4 py-3 text-white/70 technical-label hover:bg-white/5 rounded-xl transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
+                                aria-label="Sign in to platform"
+                            >
+                                Sign In
+                            </a>
+                            <Link
+                                href="/contact"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="px-4 py-4 bg-brand text-white rounded-xl text-center technical-label hover:bg-brand-hover transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
+                                aria-label="Start free trial"
+                            >
+                                Start Free Trial
+                            </Link>
+                        </nav>
+                    </div>
+                )}
+            </nav>
+        </header>
     );
 }

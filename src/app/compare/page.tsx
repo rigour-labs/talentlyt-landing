@@ -86,7 +86,7 @@ export default function ComparisonPage() {
     return (
         <div className="min-h-screen bg-background text-foreground">
             <Navbar />
-            <main id="main-content" role="main" className="pt-24 pb-16">
+            <main id="main-content" role="main" className="pt-36 pb-16">
                 {/* Hero */}
                 <section className="px-4 sm:px-6 py-16 sm:py-24">
                     <div className="max-w-5xl mx-auto text-center">

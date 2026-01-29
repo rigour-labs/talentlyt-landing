@@ -11,7 +11,7 @@ TalentLyt is an Interview Intelligence platform designed for enterprise technica
 ## Pricing Protocols (Intelligence Tiers)
 
 TalentLyt operates on a transparent, minutes-based billing model with "No Feature Gates":
-- **The Pilot ($29)**: Experience the full platform. 90 minutes to validate. Zero commitment.
+- **The Pilot ($29)**: Experience the full platform. 90 minutes to validate. Zero commitment. (Contact us for a 100% discount coupon).
 - **The Starter ($0.35/Min)**: Full platform access with pay-as-you-go scalability. 
 - **The Engine ($249/Month)**: Standard for scaling teams. Includes 3,000 minutes ($0.083/min effective).
 - **The Fortress (Custom)**: Sovereign enterprise infrastructure with unlimited intelligence scaling.

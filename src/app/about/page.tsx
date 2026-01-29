@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
     return (
-        <div className="min-h-screen bg-background flex flex-col pt-20">
+        <div className="min-h-screen bg-background flex flex-col pt-32">
             <Navbar />
             <AboutContent />
             <Footer />
