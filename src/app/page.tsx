@@ -11,6 +11,7 @@ import { FeaturesSection } from '@/components/sections/features-section';
 import { ArchitectureSection } from '@/components/sections/architecture-section';
 import { HowItWorksSection } from '@/components/sections/how-it-works-section';
 import { CTASection } from '@/components/sections/cta-section';
+import { BeforeAfterSection } from '@/components/sections/before-after-section';
 
 export const metadata: Metadata = {
   title: 'TalentLyt | World\'s First Complete Interview Intelligence Platform',
@@ -38,6 +39,7 @@ export default function LandingPage() {
       <Navbar />
       <main id="main-content" role="main">
         <HeroSection />
+        <BeforeAfterSection />
         <ArchitectureSection />
         <WhyWeBuiltThisSection />
         <ProblemSolutionSection />

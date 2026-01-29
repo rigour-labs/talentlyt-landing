@@ -28,6 +28,20 @@ const TypingText = ({ text, delay = 0 }: { text: string; delay?: number }) => {
 };
 
 const ForensicVisual = ({ stepIndex }: { stepIndex: number }) => {
+    const [mounted, setMounted] = useState(false);
+    const [randomPoints, setRandomPoints] = useState<{ cx: number, cy: number, dur: string, begin: string }[]>([]);
+
+    useEffect(() => {
+        setMounted(true);
+        const points = [...Array(15)].map(() => ({
+            cx: Math.random() * 80 + 10,
+            cy: Math.random() * 80 + 10,
+            dur: `${2 + Math.random() * 2}s`,
+            begin: `${Math.random() * 2}s`
+        }));
+        setRandomPoints(points);
+    }, []);
+
     if (stepIndex === 0) {
         return (
             <div className="absolute top-0 right-0 w-32 h-32 opacity-20 group-hover:opacity-40 transition-opacity pointer-events-none">
@@ -37,9 +51,9 @@ const ForensicVisual = ({ stepIndex }: { stepIndex: number }) => {
                         <animate attributeName="y2" values="20;80;20" dur="4s" repeatCount="Infinity" />
                     </line>
                     <path d="M 10 10 L 90 10 L 90 90 L 10 90 Z" fill="none" stroke="currentColor" strokeWidth="0.2" strokeDasharray="2 2" />
-                    {[...Array(15)].map((_, i) => (
-                        <circle key={i} cx={Math.random() * 80 + 10} cy={Math.random() * 80 + 10} r="0.5" fill="currentColor">
-                            <animate attributeName="opacity" values="0;1;0" dur={`${2 + Math.random() * 2}s`} begin={`${Math.random() * 2}s`} repeatCount="Infinity" />
+                    {mounted && randomPoints.map((point, i) => (
+                        <circle key={i} cx={point.cx} cy={point.cy} r="0.5" fill="currentColor">
+                            <animate attributeName="opacity" values="0;1;0" dur={point.dur} begin={point.begin} repeatCount="Infinity" />
                         </circle>
                     ))}
                 </svg>
