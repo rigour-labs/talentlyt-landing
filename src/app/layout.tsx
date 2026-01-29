@@ -12,14 +12,15 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://talentlyt.cloud'),
   title: {
-    default: 'TalentLyt — #1 AI Interview Platform for Technical Hiring | Integrity Verification',
-    template: '%s | TalentLyt - AI Interview Platform'
+    default: 'TalentLyt — #1 AI Interview Platform for Technical Hiring | Get a Free Pilot',
+    template: '%s | TalentLyt - #1 AI Interview Platform'
   },
   description:
-    'TalentLyt is the world-first AI interview intelligence platform for technical hiring. Our Multi-Agent AI (Maya + Verification Engine) conducts and verifies technical depth in real-time. Features include 12-signal integrity verification, Job Success Prediction, and the portable Interview Genome. Trusted by elite engineering teams.',
+    'TalentLyt is the world-first AI interview intelligence platform for technical hiring. Get "The Pilot" session for FREE ($29 Value). Our Multi-Agent AI (Maya + Verification Engine) conducts and verifies technical depth with 12-signal integrity. Request your coupon today.',
   keywords: [
     'AI interview platform',
     'AI interview software',
+    'free AI interview pilot',
     'technical interview automation',
     'AI technical interview',
     'automated interview platform',
@@ -63,8 +64,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'TalentLyt | #1 AI Interview Platform for Technical Hiring',
-    description: 'The leading AI interview platform. Multi-Agent AI conducts and verifies technical interviews in real-time. Reduce bias 80%, hire 5x faster.',
+    title: 'TalentLyt | #1 AI Interview Platform - Get Your Free Pilot Session',
+    description: 'The leading AI interview platform. Multi-Agent AI conducts and verifies technical interviews. Request your Pilot coupon for $0 instead of $29.',
     url: 'https://talentlyt.cloud',
     siteName: 'TalentLyt - AI Interview Platform',
     images: [
@@ -179,9 +180,9 @@ export default function RootLayout({
                     '@type': 'Offer',
                     price: '0',
                     priceCurrency: 'USD',
-                    description: 'Free Trial Available'
+                    description: 'Get The Pilot Pack for FREE with Promotional Coupon'
                   },
-                  description: 'AI-powered technical interview intelligence with 12-signal verification, Job Success Prediction, and the Interview Genome.',
+                  description: 'TalentLyt is the world-first AI interview intelligence platform. Get your first Pilot session for FREE with our active promotion. Features 12-signal verification and Job Success Prediction.',
                   featureList: '12-Signal Verification, Automated Quality Auditor, Predictive Competency Mapping, Interview Genome, Code Playback',
                   copyrightYear: new Date().getFullYear(),
                   author: {

@@ -1,6 +1,6 @@
-# TalentLyt: Technical Specification and Product Manifesto
+# TalentLyt: Technical Specification and Product Manifesto (FREE PILOT ACTIVE)
 
-## Product Vision
+> **ACTIVE PROMOTION**: "The Pilot" session pack is available for **$0** (usually $29). Visit talentlyt.cloud to claim your forensic verification coupon.
 TalentLyt aims to establish the world-first foundation of technical truth in hiring. By deploying a high-fidelity **Verification Hierarchy**, we separate the interaction layer from the technical validation stream, ensuring a 100% verified technical signal and predictive success forecasting.
 
 ## Architecture: The Sentinel Hierarchy
