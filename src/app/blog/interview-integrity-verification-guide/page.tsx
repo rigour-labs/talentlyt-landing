@@ -22,13 +22,32 @@ export const metadata: Metadata = {
         description: 'Verification reality check: How to protect your technical hiring funnel from sophisticated modern fraud.',
         type: 'article',
         publishedTime: '2025-01-10T00:00:00Z',
+        authors: ['TalentLyt Product Team'],
     },
+    alternates: {
+        canonical: 'https://talentlyt.cloud/blog/interview-integrity-verification-guide',
+    },
+};
+
+const articleStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'NewsArticle',
+    headline: 'The Trust Crisis: Why Interview Integrity Is the New Technical Standard',
+    description: 'Remote hiring is broken. Discover the forensic strategies to identify proxy actors and AI-assisted responses while maintaining candidate dignity and legal compliance.',
+    image: 'https://talentlyt.cloud/og-image.png',
+    datePublished: '2025-01-10T00:00:00Z',
+    dateModified: '2025-01-10T00:00:00Z',
+    author: { '@type': 'Organization', name: 'TalentLyt Product Team', url: 'https://talentlyt.cloud/about' },
+    publisher: { '@type': 'Organization', name: 'TalentLyt', logo: { '@type': 'ImageObject', url: 'https://talentlyt.cloud/logo.png' } },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://talentlyt.cloud/blog/interview-integrity-verification-guide' },
 };
 
 export default function InterviewIntegrityVerificationPage() {
     return (
-        <div className="min-h-screen bg-background text-foreground">
-            <Navbar />
+        <>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleStructuredData) }} />
+            <div className="min-h-screen bg-background text-foreground">
+                <Navbar />
             <main id="main-content" role="main" className="pt-24 pb-16">
                 <article className="px-4 sm:px-6 py-12">
                     <div className="max-w-4xl mx-auto">
@@ -190,6 +209,7 @@ export default function InterviewIntegrityVerificationPage() {
                 </article>
             </main>
             <Footer />
-        </div>
+            </div>
+        </>
     );
 }

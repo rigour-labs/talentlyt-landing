@@ -21,13 +21,32 @@ export const metadata: Metadata = {
         description: 'A security-first guide to identifying and neutralizing fraud in the interview room.',
         type: 'article',
         publishedTime: '2024-12-20T00:00:00Z',
+        authors: ['TalentLyt Product Team'],
     },
+    alternates: {
+        canonical: 'https://talentlyt.cloud/blog/detect-cheating-remote-interviews',
+    },
+};
+
+const articleStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'NewsArticle',
+    headline: 'The Cat and Mouse Game: Modern Fraud in Remote Technical Hiring',
+    description: 'Cheating in remote interviews is evolving. From hidden earpieces to live code-injection, discover the expert strategies for maintaining your hiring integrity.',
+    image: 'https://talentlyt.cloud/og-image.png',
+    datePublished: '2024-12-20T00:00:00Z',
+    dateModified: '2024-12-20T00:00:00Z',
+    author: { '@type': 'Organization', name: 'TalentLyt Product Team', url: 'https://talentlyt.cloud/about' },
+    publisher: { '@type': 'Organization', name: 'TalentLyt', logo: { '@type': 'ImageObject', url: 'https://talentlyt.cloud/logo.png' } },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://talentlyt.cloud/blog/detect-cheating-remote-interviews' },
 };
 
 export default function DetectCheatingPage() {
     return (
-        <div className="min-h-screen bg-background text-foreground">
-            <Navbar />
+        <>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleStructuredData) }} />
+            <div className="min-h-screen bg-background text-foreground">
+                <Navbar />
             <main id="main-content" role="main" className="pt-24 pb-16">
                 <article className="px-4 sm:px-6 py-12">
                     <div className="max-w-4xl mx-auto">
@@ -166,6 +185,7 @@ export default function DetectCheatingPage() {
                 </article>
             </main>
             <Footer />
-        </div>
+            </div>
+        </>
     );
 }

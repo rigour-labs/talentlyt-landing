@@ -21,13 +21,32 @@ export const metadata: Metadata = {
         description: 'Strip away the noise and focus on technical truth. A guide to fairer hiring in 2026.',
         type: 'article',
         publishedTime: '2025-01-01T00:00:00Z',
+        authors: ['TalentLyt Product Team'],
     },
+    alternates: {
+        canonical: 'https://talentlyt.cloud/blog/reduce-hiring-bias-ai',
+    },
+};
+
+const articleStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'NewsArticle',
+    headline: 'Objective Truth: How AI Can Strip Bias from Technical Hiring',
+    description: 'Recruitment is inherently human—and inherently biased. Discover how high-integrity AI systems can level the playing field for global technical talent.',
+    image: 'https://talentlyt.cloud/og-image.png',
+    datePublished: '2025-01-01T00:00:00Z',
+    dateModified: '2025-01-01T00:00:00Z',
+    author: { '@type': 'Organization', name: 'TalentLyt Product Team', url: 'https://talentlyt.cloud/about' },
+    publisher: { '@type': 'Organization', name: 'TalentLyt', logo: { '@type': 'ImageObject', url: 'https://talentlyt.cloud/logo.png' } },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://talentlyt.cloud/blog/reduce-hiring-bias-ai' },
 };
 
 export default function ReduceHiringBiasPage() {
     return (
-        <div className="min-h-screen bg-background text-foreground">
-            <Navbar />
+        <>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleStructuredData) }} />
+            <div className="min-h-screen bg-background text-foreground">
+                <Navbar />
             <main id="main-content" role="main" className="pt-24 pb-16">
                 <article className="px-4 sm:px-6 py-12">
                     <div className="max-w-4xl mx-auto">
@@ -171,6 +190,7 @@ export default function ReduceHiringBiasPage() {
                 </article>
             </main>
             <Footer />
-        </div>
+            </div>
+        </>
     );
 }

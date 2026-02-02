@@ -22,13 +22,32 @@ export const metadata: Metadata = {
         description: 'Verification strategies to identify fraud, proxy actors, and generative technology in remote technical hiring.',
         type: 'article',
         publishedTime: '2026-01-23T00:00:00Z',
+        authors: ['TalentLyt Product Team'],
     },
+    alternates: {
+        canonical: 'https://talentlyt.cloud/blog/detect-deepfake-proxy-candidates',
+    },
+};
+
+const articleStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'NewsArticle',
+    headline: 'The Ghost in the Machine: Detecting Deepfake Proxy Candidates',
+    description: 'Recruiting has entered a new chapter. Real-time deepfakes are infiltrating the technical hiring funnel. Here is how forensic engines are fighting back.',
+    image: 'https://talentlyt.cloud/og-image.png',
+    datePublished: '2026-01-23T00:00:00Z',
+    dateModified: '2026-01-23T00:00:00Z',
+    author: { '@type': 'Organization', name: 'TalentLyt Product Team', url: 'https://talentlyt.cloud/about' },
+    publisher: { '@type': 'Organization', name: 'TalentLyt', logo: { '@type': 'ImageObject', url: 'https://talentlyt.cloud/logo.png' } },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://talentlyt.cloud/blog/detect-deepfake-proxy-candidates' },
 };
 
 export default function DeepfakeDetectionPage() {
     return (
-        <div className="min-h-screen bg-background text-foreground">
-            <Navbar />
+        <>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleStructuredData) }} />
+            <div className="min-h-screen bg-background text-foreground">
+                <Navbar />
             <main id="main-content" role="main" className="pt-24 pb-16">
                 <article className="px-4 sm:px-6 py-12">
                     <div className="max-w-4xl mx-auto">
@@ -173,6 +192,7 @@ export default function DeepfakeDetectionPage() {
                 </article>
             </main>
             <Footer />
-        </div>
+            </div>
+        </>
     );
 }
