@@ -174,6 +174,23 @@ export default function RootLayout({
           }}
         />
 
+        {/* Google Reader Revenue Manager */}
+        <script async src="https://news.google.com/swg/js/v1/swg-basic.js" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (self.SWG_BASIC = self.SWG_BASIC || []).push(function(basicSubscriptions) {
+                basicSubscriptions.init({
+                  type: "NewsArticle",
+                  isPartOfType: ["Product"],
+                  isPartOfProductId: "CAowm5zEDA:openaccess",
+                  clientOptions: { theme: "light", lang: "en-GB" },
+                });
+              });
+            `,
+          }}
+        />
+
         {/* Preconnect for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
