@@ -5,7 +5,7 @@ import { z } from 'zod';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const schema = z.object({
+const demoSchema = z.object({
     name: z.string().min(2, "Name is required"),
     email: z.string().email("Invalid email address"),
     company: z.string().min(2, "Company is required"),
@@ -13,8 +13,14 @@ const schema = z.object({
     message: z.string().optional(),
 });
 
+const contactSchema = z.object({
+    name: z.string().min(2, "Name is required"),
+    email: z.string().email("Invalid email address"),
+    message: z.string().min(10, "Message must be at least 10 characters"),
+});
+
 export async function submitDemoRequest(prevState: any, formData: FormData) {
-    const validatedFields = schema.safeParse({
+    const validatedFields = demoSchema.safeParse({
         name: formData.get('name'),
         email: formData.get('email'),
         company: formData.get('company'),
@@ -57,6 +63,58 @@ export async function submitDemoRequest(prevState: any, formData: FormData) {
         return {
             success: true,
             message: "Thank you! We've received your request and will reach out shortly.",
+        };
+    } catch (err) {
+        console.error('Submission error:', err);
+        return {
+            success: false,
+            message: 'An unexpected error occurred.',
+        };
+    }
+}
+
+export async function submitContactForm(prevState: any, formData: FormData) {
+    const validatedFields = contactSchema.safeParse({
+        name: formData.get('name'),
+        email: formData.get('email'),
+        message: formData.get('message'),
+    });
+
+    if (!validatedFields.success) {
+        return {
+            success: false,
+            errors: validatedFields.error.flatten().fieldErrors,
+        };
+    }
+
+    const { name, email, message } = validatedFields.data;
+
+    try {
+        const { data, error } = await resend.emails.send({
+            from: 'notifications@talentlyt.cloud',
+            to: ['sales@talentlyt.cloud'],
+            replyTo: email,
+            subject: `Contact Form: ${name}`,
+            html: `
+        <h2>New Contact Form Submission</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message}</p>
+      `,
+        });
+
+        if (error) {
+            console.error('Resend error:', error);
+            return {
+                success: false,
+                message: 'Failed to send message. Please try again later.',
+            };
+        }
+
+        return {
+            success: true,
+            message: name,
         };
     } catch (err) {
         console.error('Submission error:', err);
