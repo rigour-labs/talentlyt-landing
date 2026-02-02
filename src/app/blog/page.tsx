@@ -5,14 +5,18 @@ import { Footer } from '@/components/footer';
 import { ArrowRight, BookOpen, Clock } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'Blog — AI Interview & Technical Hiring Guides',
-    description: 'Guides on AI interview platforms, technical hiring best practices, interview integrity verification, and detecting fraud in remote interviews.',
+    title: 'Blog — AI Interview Fraud Detection & Technical Hiring Guides 2026',
+    description: 'Expert guides on detecting ChatGPT cheating, deepfake candidates, interview fraud prevention, and AI-powered technical hiring. Updated for 2026.',
     keywords: [
-        'AI interview blog',
-        'technical hiring tips',
-        'interview integrity verification',
-        'detect deepfake candidates',
-        'recruitment technology insights',
+        'ChatGPT cheating interviews',
+        'detect AI cheating job interview',
+        'deepfake candidate detection',
+        'interview fraud prevention',
+        'AI interview platform',
+        'technical hiring 2026',
+        'remote interview fraud',
+        'coding interview cheating',
+        'cost of bad hire',
     ],
     alternates: {
         canonical: 'https://talentlyt.cloud/blog',
@@ -20,6 +24,30 @@ export const metadata: Metadata = {
 };
 
 const blogPosts = [
+    {
+        slug: 'chatgpt-cheating-interviews-detection',
+        title: 'ChatGPT Cheating in Technical Interviews: Detection & Prevention Guide 2026',
+        excerpt: '1 in 5 candidates now uses AI during interviews. Learn how to detect ChatGPT-assisted answers, deepfake proxies, and AI interview fraud.',
+        category: 'Urgent',
+        readTime: '12 min read',
+        date: '2026-02-02',
+    },
+    {
+        slug: 'cost-of-bad-hire-engineering',
+        title: 'The Real Cost of a Bad Engineering Hire (And How to Avoid It)',
+        excerpt: 'A bad engineering hire costs $150K-$500K. Here is the breakdown of hidden costs and proven strategies to protect your hiring investment.',
+        category: 'Business Case',
+        readTime: '9 min read',
+        date: '2026-02-01',
+    },
+    {
+        slug: 'remote-hiring-challenges-2026',
+        title: 'Remote Hiring in 2026: The New Challenges Nobody Prepared For',
+        excerpt: 'Interview fraud up 340%, timezone coordination nightmares, and AI arms races. The remote hiring landscape has fundamentally changed.',
+        category: 'Industry Trends',
+        readTime: '8 min read',
+        date: '2026-01-28',
+    },
     {
         slug: 'detect-deepfake-proxy-candidates',
         title: 'AI Interview Integrity: How to Detect Deepfake Proxy Candidates',
@@ -30,7 +58,7 @@ const blogPosts = [
     },
     {
         slug: 'what-is-ai-interview-platform',
-        title: 'What is an AI Interview Platform? Complete Guide for 2025',
+        title: 'What is an AI Interview Platform? Complete Guide for 2026',
         excerpt: 'Learn how AI interview platforms are transforming technical hiring with automated assessments, integrity verification, and bias reduction.',
         category: 'Guide',
         readTime: '8 min read',

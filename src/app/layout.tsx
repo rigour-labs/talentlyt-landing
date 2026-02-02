@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: '%s | TalentLyt'
   },
   description:
-    'TalentLyt is the only AI interview platform with real-time fraud detection. Catch proxy candidates, deepfakes & cheating that HireVue and Talently.ai miss. 13-signal integrity verification + predictive job success.',
+    'AI interview platform with real-time fraud detection. Catch deepfakes, proxy candidates & cheating. 13-signal integrity verification.',
   keywords: [
     // Primary high-intent keywords
     'AI interview platform',

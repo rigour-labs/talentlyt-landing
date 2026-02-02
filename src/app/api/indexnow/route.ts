@@ -83,6 +83,9 @@ export async function GET(request: NextRequest) {
     const allUrls = [
         `https://${SITE_HOST}/`,
         `https://${SITE_HOST}/blog`,
+        `https://${SITE_HOST}/blog/chatgpt-cheating-interviews-detection`,
+        `https://${SITE_HOST}/blog/cost-of-bad-hire-engineering`,
+        `https://${SITE_HOST}/blog/remote-hiring-challenges-2026`,
         `https://${SITE_HOST}/blog/what-is-ai-interview-platform`,
         `https://${SITE_HOST}/blog/detect-cheating-remote-interviews`,
         `https://${SITE_HOST}/blog/detect-deepfake-proxy-candidates`,
