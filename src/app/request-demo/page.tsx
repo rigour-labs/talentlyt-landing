@@ -2,64 +2,99 @@ import { Metadata } from 'next';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { DemoRequestForm } from '@/components/demo-request-form';
-import { ShieldCheck, Activity, Globe } from 'lucide-react';
-
-import { redirect } from 'next/navigation';
+import { ShieldCheck, Activity, Globe, Sparkles } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'Request a Demo | TalentLyt Zero-Trust Recruitment',
-    description: 'Schedule a personalized demo of TalentLyt. Discover how our AI-powered technical interview platform can help you hire better, faster, and with 100% integrity.',
+    title: 'Request a Demo | TalentLyt AI Interview Platform',
+    description: 'Schedule a personalized demo of TalentLyt. Discover how our AI-powered technical interview platform with fraud detection can transform your hiring.',
+    alternates: {
+        canonical: 'https://talentlyt.cloud/request-demo',
+    },
 };
 
 export default function RequestDemoPage() {
     return (
         <div className="min-h-screen bg-background flex flex-col pt-32">
             <Navbar />
-            <main className="flex-grow container mx-auto px-4 py-8">
-                <div className="max-w-3xl mx-auto text-center mb-12">
-                    <h1 className="text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
-                        Request a Personalized Demo
+            <main className="flex-grow container mx-auto px-4 py-12">
+                {/* Header */}
+                <div className="max-w-3xl mx-auto text-center mb-16">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand/10 border border-brand/20 mb-6">
+                        <Sparkles className="w-4 h-4 text-brand" />
+                        <span className="text-sm font-medium text-brand">Free Personalized Demo</span>
+                    </div>
+                    <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4 leading-tight">
+                        See TalentLyt in <span className="text-brand">Action</span>
                     </h1>
-                    <p className="text-xl text-gray-600">
-                        See how TalentLyt can transform your technical hiring process.
+                    <p className="text-xl text-text-secondary">
+                        Get a personalized walkthrough of our AI interview platform and fraud detection capabilities.
                     </p>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
+                    {/* Left Column - Benefits */}
                     <div className="space-y-8">
-                        <h2 className="text-3xl font-bold text-gray-900">
-                            What you&apos;ll discover in your demo:
+                        <h2 className="text-2xl font-bold text-white">
+                            What you&apos;ll discover:
                         </h2>
-                        <ul className="space-y-6 text-lg text-gray-700">
-                            <li className="flex items-start">
-                                <ShieldCheck className="flex-shrink-0 w-7 h-7 text-primary-600 mr-4 mt-1" />
-                                <div>
-                                    <strong className="block text-gray-900">Zero-Trust Integrity:</strong>
-                                    Experience our AI-powered proctoring and anti-cheating measures that guarantee authentic results.
+
+                        <div className="space-y-6">
+                            <div className="flex items-start gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5">
+                                <div className="w-10 h-10 rounded-lg bg-brand/10 flex items-center justify-center shrink-0">
+                                    <ShieldCheck className="w-5 h-5 text-brand" />
                                 </div>
-                            </li>
-                            <li className="flex items-start">
-                                <Activity className="flex-shrink-0 w-7 h-7 text-primary-600 mr-4 mt-1" />
                                 <div>
-                                    <strong className="block text-gray-900">Actionable Insights:</strong>
-                                    Dive into detailed candidate performance analytics and skill breakdowns to make data-driven decisions.
+                                    <h3 className="font-semibold text-white mb-1">13-Signal Fraud Detection</h3>
+                                    <p className="text-text-secondary text-sm leading-relaxed">
+                                        See how our forensic engine catches deepfakes, proxy candidates, and AI-assisted cheating in real-time.
+                                    </p>
                                 </div>
-                            </li>
-                            <li className="flex items-start">
-                                <Globe className="flex-shrink-0 w-7 h-7 text-primary-600 mr-4 mt-1" />
+                            </div>
+
+                            <div className="flex items-start gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5">
+                                <div className="w-10 h-10 rounded-lg bg-brand/10 flex items-center justify-center shrink-0">
+                                    <Activity className="w-5 h-5 text-brand" />
+                                </div>
                                 <div>
-                                    <strong className="block text-gray-900">Global Talent Access:</strong>
-                                    Learn how to efficiently assess and hire top technical talent from anywhere in the world.
+                                    <h3 className="font-semibold text-white mb-1">AI-Powered Assessments</h3>
+                                    <p className="text-text-secondary text-sm leading-relaxed">
+                                        Experience Maya, our AI interviewer that conducts adaptive technical interviews with detailed skill analysis.
+                                    </p>
                                 </div>
-                            </li>
-                        </ul>
-                        <p className="text-lg text-gray-700">
-                            Our team will walk you through a tailored demonstration, addressing your specific hiring challenges and showing you how TalentLyt provides a competitive edge.
-                        </p>
+                            </div>
+
+                            <div className="flex items-start gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5">
+                                <div className="w-10 h-10 rounded-lg bg-brand/10 flex items-center justify-center shrink-0">
+                                    <Globe className="w-5 h-5 text-brand" />
+                                </div>
+                                <div>
+                                    <h3 className="font-semibold text-white mb-1">Job Success Prediction</h3>
+                                    <p className="text-text-secondary text-sm leading-relaxed">
+                                        Learn how our predictive models help you identify candidates who will actually succeed in the role.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="p-6 rounded-xl bg-gradient-to-br from-brand/10 to-transparent border border-brand/20">
+                            <p className="text-text-secondary text-sm leading-relaxed">
+                                <span className="text-white font-medium">Tailored to you:</span> Our team will address your specific hiring challenges and show you exactly how TalentLyt fits your workflow.
+                            </p>
+                        </div>
+
+                        {/* Trust Indicators */}
+                        <div className="flex flex-wrap gap-3">
+                            {['No credit card required', 'Free pilot access', '15-minute setup'].map((item) => (
+                                <span key={item} className="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-text-muted">
+                                    {item}
+                                </span>
+                            ))}
+                        </div>
                     </div>
 
-                    <div className="bg-white p-8 rounded-lg shadow-lg border border-gray-200">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+                    {/* Right Column - Form */}
+                    <div className="bg-card p-8 rounded-[2rem] border border-white/10 shadow-2xl">
+                        <h2 className="text-2xl font-bold text-white mb-6 text-center">
                             Schedule Your Demo
                         </h2>
                         <DemoRequestForm />
