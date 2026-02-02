@@ -96,7 +96,7 @@ export default function MultiAgentAIPage() {
                                             <Shield className="w-6 h-6 text-purple-500" />
                                         </div>
                                         <div>
-                                            <h3 className="text-xl font-bold text-white mb-2">The 12-Signal Verification Monitor</h3>
+                                            <h3 className="text-xl font-bold text-white mb-2">The 13-Signal Verification Monitor</h3>
                                             <p className="text-text-secondary text-base leading-relaxed">
                                                 Monitoring session integrity across 12 distinct signal types. From lip-sync to voice biometrics, this agent ensures a consistent and high-trust evaluation record.
                                             </p>

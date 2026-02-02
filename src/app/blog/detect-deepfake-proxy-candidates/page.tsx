@@ -75,7 +75,7 @@ export default function DeepfakeDetectionPage() {
                             </section>
 
                             <section className="mb-16">
-                                <h2 className="text-3xl font-black text-white mb-8 tracking-tight">The 12-Signal Verification Stack</h2>
+                                <h2 className="text-3xl font-black text-white mb-8 tracking-tight">The 13-Signal Verification Stack</h2>
                                 <p className="text-text-secondary mb-8">
                                     A deepfake proxy isn&apos;t a static image. It’s a dynamic mask. But even the best consumer-grade GPUs can’t perfectly replicate the complex physics of a human face during high-stress technical probing. We analyze 12+ signal types that human eyes often miss:
                                 </p>

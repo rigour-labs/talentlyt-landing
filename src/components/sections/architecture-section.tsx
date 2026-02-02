@@ -117,7 +117,7 @@ const NeuralCore = () => (
         ))}
 
         {/* Central Intelligence Unit */}
-        <div className="relative z-10 w-20 h-20 rounded-full bg-brand/40 flex items-center justify-center backdrop-blur-xl border border-brand/50 shadow-[0_0_60px_rgba(37,99,235,0.4)]">
+        <div className="relative z-10 w-20 h-20 rounded-full bg-brand/40 flex items-center justify-center backdrop-blur-xl border border-brand/50 shadow-[0_0_60px_rgba(0,102,255,0.4)]">
             <Shield className="w-10 h-10 text-white" />
 
             {/* Inner Glitch Effect */}
@@ -218,9 +218,9 @@ const AgentOrb = ({ color = "brand", active }: { color?: string, active: boolean
             animate={active ? {
                 scale: [0.95, 1.05, 0.95],
                 boxShadow: [
-                    `0 0 30px ${color === 'warning' ? 'rgba(245,158,11,0.1)' : 'rgba(37,99,235,0.1)'}`,
-                    `0 0 60px ${color === 'warning' ? 'rgba(245,158,11,0.3)' : 'rgba(37,99,235,0.3)'}`,
-                    `0 0 30px ${color === 'warning' ? 'rgba(245,158,11,0.1)' : 'rgba(37,99,235,0.1)'}`
+                    `0 0 30px ${color === 'warning' ? 'rgba(245,158,11,0.1)' : 'rgba(0,102,255,0.1)'}`,
+                    `0 0 60px ${color === 'warning' ? 'rgba(245,158,11,0.3)' : 'rgba(0,102,255,0.3)'}`,
+                    `0 0 30px ${color === 'warning' ? 'rgba(245,158,11,0.1)' : 'rgba(0,102,255,0.1)'}`
                 ]
             } : {}}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
@@ -295,7 +295,7 @@ export function ArchitectureSection() {
                 { icon: Filter, text: "Communication Noise Filtering" },
                 { icon: Anchor, text: "Technical Grounding Audit" },
                 { icon: EyeOff, text: "Privacy-Preserving Verification" },
-                { icon: Layers, text: "12-Signal Verification Stack" }
+                { icon: Layers, text: "13-Signal Verification Stack" }
             ]
         },
         {
@@ -308,7 +308,7 @@ export function ArchitectureSection() {
             color: "warning",
             visual: "orb", // Changed to orb for better connection feel
             features: [
-                { icon: Merge, text: "12-Signal Signal Synthesis" },
+                { icon: Merge, text: "13-Signal Signal Synthesis" },
                 { icon: Cpu, text: "Continuous Learning Weights" },
                 { icon: TrendingUp, text: "85% Predictive Reliability" },
                 { icon: Dna, text: "Interview Genome Archiving" },
@@ -333,7 +333,7 @@ export function ArchitectureSection() {
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
-                        className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-brand/10 border border-brand/30 mb-8 shadow-[0_0_20px_rgba(37,99,235,0.1)]"
+                        className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-brand/10 border border-brand/30 mb-8 shadow-[0_0_20px_rgba(0,102,255,0.1)]"
                     >
                         <Shield className="w-4 h-4 text-brand" />
                         <span className="technical-label text-[10px] text-brand tracking-[0.2em]">Consensus Audit Protocol v4.0</span>
@@ -369,9 +369,9 @@ export function ArchitectureSection() {
                                     animate={{
                                         opacity: [0, 0.4, 0],
                                         boxShadow: [
-                                            `0 0 0 0px ${agent.color === 'warning' ? 'rgba(245,158,11,0)' : 'rgba(37,99,235,0)'}`,
-                                            `0 0 40px 10px ${agent.color === 'warning' ? 'rgba(245,158,11,0.2)' : 'rgba(37,99,235,0.2)'}`,
-                                            `0 0 0 0px ${agent.color === 'warning' ? 'rgba(245,158,11,0)' : 'rgba(37,99,235,0)'}`
+                                            `0 0 0 0px ${agent.color === 'warning' ? 'rgba(245,158,11,0)' : 'rgba(0,102,255,0)'}`,
+                                            `0 0 40px 10px ${agent.color === 'warning' ? 'rgba(245,158,11,0.2)' : 'rgba(0,102,255,0.2)'}`,
+                                            `0 0 0 0px ${agent.color === 'warning' ? 'rgba(245,158,11,0)' : 'rgba(0,102,255,0)'}`
                                         ]
                                     }}
                                     transition={{ repeat: Infinity, duration: 4, delay: i * 1.3, ease: "easeInOut" }}
@@ -417,7 +417,7 @@ export function ArchitectureSection() {
                                                 <motion.div
                                                     animate={{ top: ['0%', '100%', '0%'] }}
                                                     transition={{ repeat: Infinity, duration: 4, ease: "linear" }}
-                                                    className={`absolute left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-${agent.color === 'warning' ? 'warning' : 'brand'} to-transparent opacity-60 shadow-[0_0_15px_rgba(37,99,235,0.8)]`}
+                                                    className={`absolute left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-${agent.color === 'warning' ? 'warning' : 'brand'} to-transparent opacity-60 shadow-[0_0_15px_rgba(0,102,255,0.8)]`}
                                                 />
 
                                                 {/* Data Overlays */}
@@ -479,7 +479,7 @@ export function ArchitectureSection() {
                 </div>
 
                 {/* Consensus Integration Bar */}
-                <div className="mt-20 p-12 rounded-[4rem] bg-[linear-gradient(135deg,rgba(37,99,235,0.08),rgba(0,0,0,0))] border border-white/5 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12 group">
+                <div className="mt-20 p-12 rounded-[4rem] bg-[linear-gradient(135deg,rgba(0,102,255,0.08),rgba(0,0,0,0))] border border-white/5 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12 group">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,#2563eb05_0%,transparent_50%29]" />
 
                     <div className="relative z-10 max-w-xl text-center md:text-left">

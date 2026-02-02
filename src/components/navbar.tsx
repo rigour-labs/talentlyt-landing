@@ -35,20 +35,20 @@ export function Navbar() {
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand/10 to-transparent w-1/2 animate-shimmer-sweep opacity-50" />
                 </div>
 
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.2),transparent_70%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(0,102,255,0.2),transparent_70%)]" />
 
                 <div className="relative z-10 flex items-center justify-center gap-4 py-3 px-4 backdrop-blur-xl">
                     <div className="flex items-center gap-3">
-                        {/* Flashing "LIVE" indicator */}
-                        <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-red-500/10 border border-red-500/30 animate-pulse">
+                        {/* Flashing "LIVE" indicator - hidden on smallest screens */}
+                        <div className="hidden xs:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-red-500/10 border border-red-500/30 animate-pulse">
                             <div className="w-1.5 h-1.5 rounded-full bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.8)]" />
-                            <span className="text-[9px] font-black text-red-500 uppercase tracking-widest">Live Offer</span>
+                            <span className="text-[10px] sm:text-[11px] font-black text-red-500 uppercase tracking-widest">Live Offer</span>
                         </div>
 
-                        <p className="text-[10px] sm:text-[11px] font-bold text-white tracking-wide flex items-center gap-2">
-                            <Sparkles className="w-3.5 h-3.5 text-brand animate-pulse-soft" />
+                        <p className="text-[11px] sm:text-xs font-bold text-white tracking-wide flex items-center gap-2">
+                            <Sparkles className="w-3.5 h-3.5 text-brand animate-pulse-soft shrink-0" />
                             <span>
-                                Get <span className="text-white underline underline-offset-4 decoration-brand/50">"The Pilot"</span> pack for <span className="text-brand font-black text-xs sm:text-sm animate-pulse-soft">Free</span> (Value $29)
+                                <span className="hidden sm:inline">Get </span><span className="text-white underline underline-offset-4 decoration-brand/50">"The Pilot"</span> <span className="text-brand font-black">Free</span><span className="hidden sm:inline"> ($29)</span>
                             </span>
                         </p>
                     </div>
@@ -63,10 +63,10 @@ export function Navbar() {
                                 cta_text: 'Claim Pilot Access',
                             },
                         })}
-                        className="group relative px-5 py-2 bg-brand text-white text-[10px] font-black rounded-full transition-all hover:scale-105 active:scale-95 flex items-center gap-2 overflow-hidden shadow-[0_0_20px_rgba(99,102,241,0.4)] hover:shadow-[0_0_30px_rgba(99,102,241,0.6)]"
+                        className="group relative px-3 sm:px-5 py-2 bg-brand text-white text-[10px] sm:text-[11px] font-black rounded-full transition-all hover:scale-105 active:scale-95 flex items-center gap-1.5 sm:gap-2 overflow-hidden shadow-[0_0_20px_rgba(0,102,255,0.4)] hover:shadow-[0_0_30px_rgba(0,102,255,0.6)] shrink-0"
                     >
-                        <span className="relative z-10 uppercase tracking-widest">Claim Free Session</span>
-                        <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform relative z-10" />
+                        <span className="relative z-10 uppercase tracking-wider sm:tracking-widest">Claim Now</span>
+                        <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 group-hover:translate-x-0.5 transition-transform relative z-10" />
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
                     </Link>
                 </div>
@@ -85,7 +85,7 @@ export function Navbar() {
                             className="flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded-lg px-2 py-1 -ml-2"
                             aria-label="TalentLyt Home"
                         >
-                            <div className="relative w-8 h-8 rounded-lg bg-brand flex items-center justify-center shadow-[0_0_15px_rgba(99,102,241,0.4)] overflow-hidden">
+                            <div className="relative w-8 h-8 rounded-lg bg-brand flex items-center justify-center shadow-[0_0_15px_rgba(0,102,255,0.4)] overflow-hidden">
                                 <span className="text-white font-bold text-lg relative z-10">T</span>
                             </div>
                             <span className="text-xl font-bold tracking-tight text-white group-hover:text-brand transition-colors">
@@ -133,7 +133,7 @@ export function Navbar() {
                                         destination_url: '/contact',
                                     },
                                 })}
-                                className="group relative px-6 py-2.5 bg-brand text-white rounded-xl hover:shadow-[0_0_25px_rgba(99,102,241,0.4)] transition-all flex items-center gap-2 overflow-hidden hidden sm:flex focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
+                                className="group relative px-6 py-2.5 bg-brand text-white rounded-xl hover:shadow-[0_0_25px_rgba(0,102,255,0.4)] transition-all flex items-center gap-2 overflow-hidden hidden sm:flex focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
                                 aria-label="Start free trial"
                             >
                                 <span className="technical-label text-[10px] relative z-10">Start Free Trial</span>

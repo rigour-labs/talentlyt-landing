@@ -56,7 +56,7 @@ const glossaryTerms = [
         category: 'Platform',
     },
     {
-        term: '12-Signal Forensic Audit',
+        term: '13-Signal Forensic Audit',
         definition: 'TalentLyt\'s world-first integrity stack that analyzes 12 distinct signal types—including lip-sync, voice biometrics, and gaze tracking—to ensure absolute session authenticity.',
         category: 'Integrity',
     },
@@ -211,7 +211,7 @@ export default function GlossaryPage() {
                             </p>
                             <Link
                                 href="/contact"
-                                className="inline-flex items-center gap-2 px-8 py-4 bg-brand text-white font-bold rounded-2xl hover:shadow-[0_0_30px_rgba(99,102,241,0.4)] transition-all"
+                                className="inline-flex items-center gap-2 px-8 py-4 bg-brand text-white font-bold rounded-2xl hover:shadow-[0_0_30px_rgba(0,102,255,0.4)] transition-all"
                             >
                                 Start Free Trial
                             </Link>

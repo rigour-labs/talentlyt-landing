@@ -5,16 +5,18 @@ import { Footer } from '@/components/footer';
 import { ArrowRight, BookOpen, Clock } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'Blog | AI Interview Integrity & Technical Hiring Guides',
-    description: 'Expert insights on AI interview platforms, technical hiring best practices, forensic integrity verification, and detecting deepfake proxy candidates.',
+    title: 'Blog — AI Interview & Technical Hiring Guides',
+    description: 'Guides on AI interview platforms, technical hiring best practices, interview integrity verification, and detecting fraud in remote interviews.',
     keywords: [
         'AI interview blog',
         'technical hiring tips',
         'interview integrity verification',
         'detect deepfake candidates',
-        'proxy interviewer detection',
         'recruitment technology insights',
     ],
+    alternates: {
+        canonical: 'https://talentlyt.cloud/blog',
+    },
 };
 
 const blogPosts = [

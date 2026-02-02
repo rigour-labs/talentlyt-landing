@@ -42,7 +42,7 @@ export function MayaVoiceWidget({ isPlaying, onToggle, isSentinelMode, onToggleS
                             onClick={onToggleSentinel}
                             title="Forensic Sentinel Mode"
                             className={`flex items-center justify-center w-10 h-10 rounded-full border transition-all ${isSentinelMode
-                                ? 'bg-brand/20 border-brand text-brand shadow-[0_0_15px_rgba(37,99,235,0.4)]'
+                                ? 'bg-brand/20 border-brand text-brand shadow-[0_0_15px_rgba(0,102,255,0.4)]'
                                 : 'bg-white/5 border-white/10 text-white/40 hover:text-white hover:bg-white/10'
                                 }`}
                         >

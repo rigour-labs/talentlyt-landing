@@ -1,5 +1,55 @@
 import type { NextConfig } from 'next';
 
+const securityHeaders = [
+  // Strict Transport Security - enforce HTTPS
+  {
+    key: 'Strict-Transport-Security',
+    value: 'max-age=63072000; includeSubDomains; preload',
+  },
+  // Prevent clickjacking
+  {
+    key: 'X-Frame-Options',
+    value: 'SAMEORIGIN',
+  },
+  // Prevent MIME type sniffing
+  {
+    key: 'X-Content-Type-Options',
+    value: 'nosniff',
+  },
+  // Referrer policy for privacy
+  {
+    key: 'Referrer-Policy',
+    value: 'strict-origin-when-cross-origin',
+  },
+  // Permissions policy - restrict browser features
+  {
+    key: 'Permissions-Policy',
+    value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
+  },
+  // Cross-Origin policies for isolation
+  {
+    key: 'Cross-Origin-Opener-Policy',
+    value: 'same-origin-allow-popups',
+  },
+  // Content Security Policy - comprehensive protection
+  {
+    key: 'Content-Security-Policy',
+    value: [
+      "default-src 'self'",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://consent.cookiebot.com https://va.vercel-scripts.com",
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "img-src 'self' data: blob: https: http:",
+      "font-src 'self' https://fonts.gstatic.com",
+      "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://consent.cookiebot.com https://vitals.vercel-insights.com",
+      "frame-src 'self' https://www.googletagmanager.com https://consent.cookiebot.com",
+      "frame-ancestors 'self'",
+      "form-action 'self'",
+      "base-uri 'self'",
+      "upgrade-insecure-requests",
+    ].join('; '),
+  },
+];
+
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
@@ -10,6 +60,21 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
+  },
+  // Consistent trailing slash behavior for SEO
+  trailingSlash: false,
+  // Skip type checking during build (faster deploys, assumes types checked in CI)
+  typescript: {
+    ignoreBuildErrors: false,
+  },
+  // Security headers for Best Practices score
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: securityHeaders,
+      },
+    ];
   },
 };
 

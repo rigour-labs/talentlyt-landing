@@ -7,57 +7,57 @@ export function FeaturesSection() {
     const features = [
         {
             title: 'Interview Genome',
-            benefit: 'Phase II World-First',
-            description: 'Maintain a secure, portable record of architectural decisions and verified technical competencies. The Interview Genome allows candidates to build trust over time while reducing redundant screenings.',
+            benefit: 'World-First Technology',
+            description: 'Create portable, cryptographically-signed candidate profiles. Verified skills travel with the candidate—eliminating redundant screenings and building trust over time.',
             icon: Database,
             className: "md:col-span-2",
             metric: 'Portable Intelligence',
-            tag: 'V2 PREVIEW'
+            tag: 'LIVE'
         },
         {
             title: 'Predictive Job Success',
             benefit: 'AI Forecasting',
-            description: 'Leverage predictive models built on deep behavioral signals to identify long-term fit and performance potential with a high degree of statistical reliability.',
+            description: 'Our ML models predict actual on-the-job performance probability with 85% accuracy, synthesized from behavioral signals and technical depth indicators.',
             icon: Brain,
             className: "md:col-span-1",
             metric: '85% Accuracy',
             tag: 'ML POWERED'
         },
         {
-            title: 'Claim Verification',
-            benefit: 'Truth Matrix',
-            description: 'Sophisticated Maya agents identify key technical claims and use adaptive probing to verify the depth and authenticity of a candidate\'s hands-on experience.',
+            title: 'Identity Verification',
+            benefit: 'Anti-Fraud Shield',
+            description: 'Face matching with ID documents, liveness checks, and candidate swap detection. Ensure the person you interview is the person you hire.',
             icon: Shield,
             className: "md:col-span-1",
             metric: 'Real-time Audit',
-            tag: 'GOVERNOR+'
+            tag: 'LIVENESS+'
         },
         {
-            title: 'Symbiotic AI (Whispering)',
+            title: 'Panel Mode (Maya Whispers)',
             benefit: 'Human Augmentation',
-            description: 'Empower your human interviewers with Maya Whispers—real-time suggestions and high-signal probing questions delivered via sub-ms neural sync.',
+            description: 'Your human interviewers get real-time AI suggestions and high-signal probing questions. Maya handles the technical deep-dive while you observe.',
             icon: Zap,
             className: "md:col-span-2",
             metric: 'Zero-Latency',
             tag: 'PANEL MODE'
         },
         {
-            title: 'Interview Digital Twin',
-            benefit: 'Simulation',
-            description: 'Eliminate uncertainty by simulating alternative interview scenarios to pressure-test potential: "What would happen if we asked harder questions?" solved.',
+            title: 'Standalone Forensic Scans',
+            benefit: 'Video Analysis',
+            description: 'Upload any recorded interview (Zoom, Teams, etc.) for deepfake and lip-sync analysis. Get verdicts on existing footage—no live interview required.',
             icon: Cpu,
             className: "md:col-span-1",
-            metric: 'Simulation Engine',
-            tag: 'WOT-IF'
+            metric: '$35 Per Scan',
+            tag: 'SENTINEL SOLO'
         },
         {
-            title: '12-Signal AI Sentinel',
+            title: '13-Signal Fraud Detection',
             benefit: 'Detection Excellence',
-            description: 'Ensure session integrity through a 12-signal verification stack, including biometric-aware lip-sync and gaze verification for high-trust technical hiring.',
+            description: 'Real-time monitoring for gaze drift, tab switching, voice mismatches, typing bursts, clipboard activity, and deepfake indicators during live interviews.',
             icon: Lock,
             className: "md:col-span-2",
             metric: '99.9% Detection',
-            tag: 'SENTINEL v4'
+            tag: 'GOVERNOR'
         },
     ];
 
@@ -139,7 +139,7 @@ export function FeaturesSection() {
                                             <span className="text-2xl font-bold text-brand leading-none">99.9%</span>
                                         </div>
                                         <div className="h-2 w-full bg-white/5 rounded-full overflow-hidden">
-                                            <div className="h-full bg-brand shadow-[0_0_15px_rgba(37,99,235,0.5)] w-[99.9%]" />
+                                            <div className="h-full bg-brand shadow-[0_0_15px_rgba(0,102,255,0.5)] w-[99.9%]" />
                                         </div>
                                     </div>
                                     <div className="space-y-3">

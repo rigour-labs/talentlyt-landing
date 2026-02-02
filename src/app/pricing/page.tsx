@@ -5,17 +5,18 @@ import { Footer } from '@/components/footer';
 import { PricingContent } from '@/components/pricing-content';
 
 export const metadata: Metadata = {
-    title: 'Transparent Pricing | TalentLyt AI Interview Platform',
-    description: 'Usage-based pricing for the world\'s most advanced AI technical interview platform. Zero feature gates, unlimited team seats, and metered minutes starting at $0.35/min. Secure your hiring pipeline today.',
+    title: 'Pricing — Usage-Based AI Interview Platform',
+    description: 'Pay only for what you use. AI technical interviews starting at $0.35/min with unlimited team seats, no feature gates, and full integrity verification included.',
     keywords: [
         'AI interview platform pricing',
         'usage-based technical screening',
-        'Sentinel Forensic Engine cost',
-        'Maya AI interview minutes',
-        'enterprise AI recruitment pricing',
-        'transparent hiring software costs',
-        'technical interview automation price'
-    ]
+        'AI interview cost',
+        'technical interview automation price',
+        'enterprise recruitment pricing'
+    ],
+    alternates: {
+        canonical: 'https://talentlyt.cloud/pricing',
+    },
 };
 
 export default function PricingPage() {

@@ -17,7 +17,7 @@ export function PricingContent() {
                 '90 Minutes Included',
                 'Maya AI Interviewer',
                 'Panel Mode (AI + Human)',
-                '12-Signal Fraud Detection',
+                '13-Signal Fraud Detection',
                 'Deepfake & Voice Forensics',
                 '7-Day Data Retention'
             ],
@@ -156,7 +156,7 @@ export function PricingContent() {
                             variants={cardVariants}
                             whileHover={{ y: -12, transition: { duration: 0.3, ease: "easeOut" } }}
                             className={`group relative flex flex-col p-8 rounded-[2.5rem] border transition-all duration-500 overflow-hidden ${tier.highlight
-                                ? 'bg-[#0A0A0B] border-brand/50 shadow-[0_40px_80px_-15px_rgba(99,102,241,0.25)] ring-1 ring-brand/30'
+                                ? 'bg-[#0A0A0B] border-brand/50 shadow-[0_40px_80px_-15px_rgba(0,102,255,0.25)] ring-1 ring-brand/30'
                                 : 'bg-card/30 border-white/5 hover:border-white/20 shadow-2xl backdrop-blur-md'
                                 }`}
                         >
@@ -223,7 +223,7 @@ export function PricingContent() {
                                         });
                                     }}
                                     className={`w-full py-4 px-6 rounded-2xl font-black text-xs uppercase tracking-[0.2em] transition-all text-center flex items-center justify-center gap-2 relative overflow-hidden group ${tier.highlight
-                                        ? 'bg-brand text-brand-foreground hover:bg-brand-hover shadow-[0_20px_40px_-10px_rgba(99,102,241,0.5)]'
+                                        ? 'bg-brand text-brand-foreground hover:bg-brand-hover shadow-[0_20px_40px_-10px_rgba(0,102,255,0.5)]'
                                         : 'bg-white/5 text-white hover:bg-white/10 border border-white/10'
                                         }`}
                                 >
@@ -376,7 +376,7 @@ export function PricingContent() {
                                         { feature: 'Interview Model', talent: 'Live Multi-Agent Voice', trad: 'Asynchronous / One-way' },
                                         { feature: 'Job Success Prediction', talent: 'AI-Forecasting (85% Accuracy)', trad: 'Manual Intuition / None' },
                                         { feature: 'Candidate Intelligence', talent: 'Portable Interview Genomes', trad: 'Static PDF Resumes' },
-                                        { feature: 'Fraud Analysis', talent: '12-Signal Adversarial', trad: 'Basic Human Review' },
+                                        { feature: 'Fraud Analysis', talent: '13-Signal Adversarial', trad: 'Basic Human Review' },
                                         { feature: 'Real-time Adaptation', talent: 'Claim Extraction & Probing', trad: 'Static Question Bank' },
                                         { feature: 'Learning Model', talent: 'Federated Collective Intelligence', trad: 'Siloed / Zero-Learning' },
                                         { feature: 'Feature Availability', talent: 'Zero Gates (All Tiers)', trad: 'Pay-for-Access Gates' },

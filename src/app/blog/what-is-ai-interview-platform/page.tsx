@@ -85,7 +85,7 @@ export default function WhatIsAIInterviewPlatformPage() {
                                     </div>
                                     <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/5">
                                         <ShieldCheck className="w-8 h-8 text-emerald-500 mb-6" />
-                                        <h3 className="text-xl font-bold text-white mb-3">12-Signal Verification</h3>
+                                        <h3 className="text-xl font-bold text-white mb-3">13-Signal Verification</h3>
                                         <p className="text-sm text-text-secondary leading-relaxed">
                                             Integrity is fundamental. TalentLyt analyzes 12 distinct signal types in real-time to maintain session authenticity through high-precision technical mapping.
                                         </p>

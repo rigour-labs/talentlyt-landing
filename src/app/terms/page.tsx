@@ -15,7 +15,7 @@ export default function TermsPage() {
         {
             icon: Shield,
             title: "Service Description",
-            content: `TalentLyt provides the world's first complete Interview Intelligence platform. Our services include Maya (AI Interviewer), the 12-Signal Forensic Audit Engine, Job Success Prediction, and the Interview Genome. The Service is designed to assist in hiring decisions through verified technical truth but does not guarantee specific hiring outcomes.`
+            content: `TalentLyt provides the world's first complete Interview Intelligence platform. Our services include Maya (AI Interviewer), the 13-Signal Forensic Audit Engine, Job Success Prediction, and the Interview Genome. The Service is designed to assist in hiring decisions through verified technical truth but does not guarantee specific hiring outcomes.`
         },
         {
             icon: CreditCard,

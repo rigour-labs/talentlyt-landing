@@ -5,20 +5,30 @@ import { Footer } from '@/components/footer';
 import { Check, X, ShieldCheck, Bot, Eye, Fingerprint, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'World-First Interview Intelligence Platform | TalentLyt Comparison',
-    description: 'Compare TalentLyt to traditional AI platforms. The only world-first interview intelligence platform with truth verification, job success prediction, and portable genomes.',
+    title: 'TalentLyt vs HireVue vs Codility vs Talently.ai — AI Interview Platform Comparison 2025',
+    description: 'Compare TalentLyt with HireVue, Codility, Talently.ai, HackerRank. Only TalentLyt offers 13-signal fraud detection, deepfake detection, and proxy candidate identification. See the full comparison.',
     keywords: [
+        'TalentLyt vs HireVue',
+        'TalentLyt vs Codility',
+        'TalentLyt vs Talently.ai',
+        'TalentLyt vs HackerRank',
+        'TalentLyt vs TalentLyft',
+        'HireVue alternative',
+        'Codility alternative',
+        'Talently.ai alternative',
+        'HackerRank alternative',
+        'best AI interview platform 2025',
         'AI interview platform comparison',
-        'best AI interview software',
-        'interview platform features',
-        'technical interview platform',
-        'Job Success Prediction',
-        'Interview Genome',
-        '12-signal fraud detection',
+        'interview fraud detection comparison',
+        'deepfake detection interview platform',
+        'proxy candidate detection software',
     ],
+    alternates: {
+        canonical: 'https://talentlyt.cloud/compare',
+    },
     openGraph: {
-        title: 'TalentLyt vs Traditional | World-First Interview Intelligence',
-        description: 'The only platform with truth verification, job success prediction, and portable candidate intelligence.',
+        title: 'TalentLyt vs HireVue vs Codility vs Talently.ai — Full Comparison 2025',
+        description: 'Only TalentLyt offers 13-signal fraud detection, deepfake detection, and proxy candidate identification. Compare all AI interview platforms.',
         type: 'website',
     },
 };
@@ -40,7 +50,7 @@ export default function ComparisonPage() {
         {
             category: 'Forensic Integrity & Trust',
             features: [
-                { name: '12-Signal Fraud Audit', talentlyt: true, traditional: false },
+                { name: '13-Signal Fraud Audit', talentlyt: true, traditional: false },
                 { name: 'Nova-grade Voice Auth', talentlyt: true, traditional: false },
                 { name: 'Lip-Sync & Gaze Sync', talentlyt: true, traditional: false },
                 { name: 'Micro-expression Analysis', talentlyt: true, traditional: false },
@@ -68,7 +78,7 @@ export default function ComparisonPage() {
         },
         {
             icon: ShieldCheck,
-            title: '12-Signal Forensic Audit',
+            title: '13-Signal Forensic Audit',
             description: 'We analyze 12 distinct biometric and behavioral signals (lip-sync, gaze, voice biometrics) in real-time to ensure absolute session integrity and zero fraud.',
         },
         {
@@ -95,10 +105,10 @@ export default function ComparisonPage() {
                             Platform Comparison
                         </div>
                         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">
-                            The World&apos;s First <span className="text-brand">Interview Intelligence</span> Platform
+                            TalentLyt vs HireVue, Codility, <span className="text-brand">Talently.ai</span> & Others
                         </h1>
                         <p className="text-lg sm:text-xl text-text-secondary leading-relaxed max-w-3xl mx-auto">
-                            Traditional platforms automate assessment. <strong className="text-white">TalentLyt defines a new category</strong>: Intelligence-First hiring. We verify truth, predict success, and build portable candidate genomes.
+                            Looking for a HireVue alternative? Comparing Codility vs TalentLyt? <strong className="text-white">TalentLyt is the only AI interview platform with real-time fraud detection</strong>—catching deepfakes, proxy candidates, and cheating that other platforms miss entirely.
                         </p>
                     </div>
                 </section>
@@ -263,7 +273,7 @@ export default function ComparisonPage() {
                             </p>
                             <Link
                                 href="/contact"
-                                className="inline-flex items-center gap-2 px-8 py-4 bg-brand text-white font-bold rounded-2xl hover:shadow-[0_0_30px_rgba(99,102,241,0.4)] transition-all"
+                                className="inline-flex items-center gap-2 px-8 py-4 bg-brand text-white font-bold rounded-2xl hover:shadow-[0_0_30px_rgba(0,102,255,0.4)] transition-all"
                             >
                                 Start Free Trial
                                 <ArrowRight className="w-5 h-5" />

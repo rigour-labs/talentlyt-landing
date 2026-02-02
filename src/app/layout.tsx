@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { Analytics } from "@vercel/analytics/next";
@@ -9,40 +9,72 @@ const inter = Inter({
   display: 'swap',
 });
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: '#020617',
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://talentlyt.cloud'),
   title: {
-    default: 'TalentLyt — #1 AI Interview Platform for Technical Hiring | Get a Free Pilot',
-    template: '%s | TalentLyt - #1 AI Interview Platform'
+    default: 'TalentLyt — AI Interview Platform with Fraud Detection | Not Talently or TalentLyft',
+    template: '%s | TalentLyt'
   },
   description:
-    'TalentLyt is the world-first AI interview intelligence platform for technical hiring. Get "The Pilot" session for FREE ($29 Value). Our Multi-Agent AI (Maya + Verification Engine) conducts and verifies technical depth with 12-signal integrity. Request your coupon today.',
+    'TalentLyt is the only AI interview platform with real-time fraud detection. Catch proxy candidates, deepfakes & cheating that HireVue and Talently.ai miss. 13-signal integrity verification + predictive job success.',
   keywords: [
+    // Primary high-intent keywords
     'AI interview platform',
     'AI interview software',
-    'free AI interview pilot',
-    'technical interview automation',
-    'AI technical interview',
-    'automated interview platform',
-    'technical screening software',
-    'AI recruiting tools',
-    'interview cheating detection',
+    'technical interview platform',
+    'automated interview software',
+    // Direct competitor differentiation (similar names)
+    'Talently.ai alternative',
+    'TalentLyft alternative',
+    'HeyMilo AI alternative',
+    // Major competitor comparison
+    'HireVue alternative',
+    'Codility alternative',
+    'HackerRank alternative',
+    'Karat alternative',
+    'CoderPad alternative',
+    // Unique differentiators (fraud detection - what others lack)
+    'interview fraud detection',
+    'detect interview cheating',
+    'prevent proxy interviews',
+    'deepfake detection hiring',
+    'AI proctoring with fraud detection',
+    'candidate identity verification',
     'remote interview proctoring',
+    // Solution keywords
+    'AI technical assessment',
+    'automated coding interview',
+    'AI coding assessment',
+    'technical screening automation',
+    'developer assessment platform',
+    'engineering interview software',
+    // Feature keywords (unique capabilities)
+    'interview integrity verification',
+    'multi-agent AI interview',
+    'predictive hiring AI',
+    'job success prediction AI',
+    'proxy candidate detection',
+    // Brand keywords (exact match for brand searches)
+    'TalentLyt',
+    'TalentLyt AI',
+    'TalentLyt interview platform',
     'Maya AI interviewer',
-    'integrity verification hiring',
-    'multi-agent interview system',
-    'B2B recruitment software',
-    'verification technical assessment',
-    'interview integrity software',
-    'automated technical screening',
-    'AI coding interview',
-    'Job Success Prediction AI',
     'Interview Genome',
-    'technical meritocracy',
-    'predictive hiring intelligence',
-    '12-signal verification',
-    'AI hiring platform',
-    'technical interview AI'
+    '13-signal verification',
+    // Long-tail high-intent
+    'best AI interview platform 2025',
+    'AI interview with fraud detection',
+    'enterprise technical hiring software',
+    'SOC2 compliant interview platform',
+    'free AI interview trial',
   ],
   alternates: {
     canonical: 'https://talentlyt.cloud',
@@ -64,8 +96,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'TalentLyt | #1 AI Interview Platform - Get Your Free Pilot Session',
-    description: 'The leading AI interview platform. Multi-Agent AI conducts and verifies technical interviews. Request your Pilot coupon for $0 instead of $29.',
+    title: 'TalentLyt — AI Interview Platform for Technical Hiring',
+    description: 'AI-powered technical interview platform with real-time integrity verification. Conduct, evaluate, and verify candidate skills with Multi-Agent AI.',
     url: 'https://talentlyt.cloud',
     siteName: 'TalentLyt - AI Interview Platform',
     images: [
@@ -82,7 +114,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'TalentLyt — High-Stakes Hiring with Technical Verification',
-    description: 'Multi-Agent AI technical interview suite. Maya conducts, the Verification Engine confirms depth. Ensure integrity with 12-signal verification.',
+    description: 'Multi-Agent AI technical interview suite. Maya conducts, the Verification Engine confirms depth. Ensure integrity with 13-signal verification.',
     images: ['/og-image.png'],
     creator: '@talentlyt',
   },
@@ -182,8 +214,8 @@ export default function RootLayout({
                     priceCurrency: 'USD',
                     description: 'Get The Pilot Pack for FREE with Promotional Coupon'
                   },
-                  description: 'TalentLyt is the world-first AI interview intelligence platform. Get your first Pilot session for FREE with our active promotion. Features 12-signal verification and Job Success Prediction.',
-                  featureList: '12-Signal Verification, Automated Quality Auditor, Predictive Competency Mapping, Interview Genome, Code Playback',
+                  description: 'TalentLyt is the world-first AI interview intelligence platform. Get your first Pilot session for FREE with our active promotion. Features 13-signal verification and Job Success Prediction.',
+                  featureList: '13-Signal Verification, Automated Quality Auditor, Predictive Competency Mapping, Interview Genome, Code Playback',
                   copyrightYear: new Date().getFullYear(),
                   author: {
                     '@type': 'Organization',
@@ -214,7 +246,7 @@ export default function RootLayout({
                     name: 'Rigour Labs Inc.'
                   },
                   areaServed: 'Worldwide',
-                  description: 'High-integrity technical screening using the Sentinel Hierarchy (12-signal verification + Predictive Competency Mapping).'
+                  description: 'High-integrity technical screening using the Sentinel Hierarchy (13-signal verification + Predictive Competency Mapping).'
                 },
                 {
                   '@context': 'https://schema.org',
@@ -247,7 +279,7 @@ export default function RootLayout({
                   'alternateName': 'TalentLyt AI Interview Platform',
                   'url': 'https://talentlyt.cloud',
                   'logo': 'https://talentlyt.cloud/logo.png',
-                  'description': 'TalentLyt is the world-first AI interview intelligence platform, featuring Multi-Agent AI with real-time 12-signal verification and predictive success mapping.',
+                  'description': 'TalentLyt is the world-first AI interview intelligence platform, featuring Multi-Agent AI with real-time 13-signal verification and predictive success mapping.',
                   'foundingDate': '2024',
                   'sameAs': [
                     'https://twitter.com/talentlyt',
@@ -269,7 +301,7 @@ export default function RootLayout({
                       'name': 'What is an AI Interview Platform?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'An AI interview intelligence platform uses artificial intelligence to conduct, evaluate, and verify technical depth, providing an objective and efficient hiring process. TalentLyt is the world-first platform that combines Multi-Agent AI with 12-signal integrity verification, Job Success Prediction, and the Interview Genome.'
+                        'text': 'An AI interview intelligence platform uses artificial intelligence to conduct, evaluate, and verify technical depth, providing an objective and efficient hiring process. TalentLyt is the world-first platform that combines Multi-Agent AI with 13-signal integrity verification, Job Success Prediction, and the Interview Genome.'
                       }
                     },
                     {
@@ -311,29 +343,88 @@ export default function RootLayout({
                         '@type': 'Answer',
                         'text': 'Yes, TalentLyt is designed for enterprise-scale technical hiring. We offer SOC2 compliance, legally-defensible audit trails, and can handle high-volume recruitment with consistent quality and integrity verification.'
                       }
+                    },
+                    {
+                      '@type': 'Question',
+                      'name': 'How does TalentLyt detect deepfakes in interviews?',
+                      'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': 'TalentLyt uses 13-signal verification including lip-sync analysis, voice biometrics, facial recognition consistency, and video feed analysis to detect deepfakes in real-time. Our Governor agent identifies visual anomalies and voice irregularities that indicate AI-generated content.'
+                      }
+                    },
+                    {
+                      '@type': 'Question',
+                      'name': 'What is the difference between TalentLyt and Talently.ai?',
+                      'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': 'TalentLyt and Talently.ai are different products. TalentLyt provides 13-signal fraud detection, deepfake identification, and proxy candidate detection that Talently.ai lacks. TalentLyt also offers Interview Genome (portable verified profiles) and 85% accurate job success prediction.'
+                      }
+                    },
+                    {
+                      '@type': 'Question',
+                      'name': 'Can TalentLyt detect proxy candidates?',
+                      'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': 'Yes. TalentLyt detects proxy candidates through continuous identity verification, voice biometrics, behavioral analysis, and cognitive pattern detection. If someone other than the verified candidate attempts to answer questions, TalentLyt flags the anomaly immediately.'
+                      }
+                    },
+                    {
+                      '@type': 'Question',
+                      'name': 'Does TalentLyt detect AI-assisted cheating like ChatGPT?',
+                      'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': 'Yes. TalentLyt detects AI-assisted cheating through keystroke dynamics, response timing patterns, tab switching detection, clipboard monitoring, and cognitive load indicators. The system identifies when candidates use ChatGPT, Claude, or other AI tools during interviews.'
+                      }
+                    },
+                    {
+                      '@type': 'Question',
+                      'name': 'How is TalentLyt different from InterviewGuard or Talview?',
+                      'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': 'TalentLyt combines AI interviewing (Maya AI) with fraud detection in one platform. InterviewGuard and Talview focus on proctoring existing interviews. TalentLyt conducts the entire interview autonomously while simultaneously verifying integrity with 13 signals.'
+                      }
                     }
                   ]
                 },
                 {
                   '@context': 'https://schema.org',
+                  '@type': 'VideoObject',
+                  'name': 'Maya AI Interviewer Demo - TalentLyt Technical Interview Platform',
+                  'description': 'Watch Maya AI conduct a live technical interview with real-time fraud detection and integrity verification. See how TalentLyt detects proxy candidates, deepfakes, and cheating.',
+                  'thumbnailUrl': 'https://talentlyt.cloud/assets/maya.jpg',
+                  'uploadDate': '2024-12-01T00:00:00+00:00',
+                  'duration': 'PT2M30S',
+                  'contentUrl': 'https://onbadqcmbugvszb0.public.blob.vercel-storage.com/maya-speaking.mp4',
+                  'embedUrl': 'https://talentlyt.cloud/',
+                  'publisher': {
+                    '@type': 'Organization',
+                    'name': 'TalentLyt',
+                    'logo': {
+                      '@type': 'ImageObject',
+                      'url': 'https://talentlyt.cloud/logo.png'
+                    }
+                  }
+                },
+                {
+                  '@context': 'https://schema.org',
                   '@type': 'HowTo',
-                  'name': 'How to Conduct AI Interviews with TalentLyt',
-                  'description': 'Learn how to use TalentLyt AI interview platform for technical hiring with integrity verification.',
+                  'name': 'How to Detect Interview Fraud with TalentLyt',
+                  'description': 'Learn how to detect proxy candidates, deepfakes, and cheating in remote interviews using TalentLyt 13-signal fraud detection.',
                   'step': [
                     {
                       '@type': 'HowToStep',
-                      'name': 'Create Interview',
-                      'text': 'Set up a technical interview with your requirements and job role specifications.'
+                      'name': 'Enable Fraud Detection',
+                      'text': 'TalentLyt automatically enables 13-signal fraud detection including lip-sync analysis, voice biometrics, and gaze tracking.'
                     },
                     {
                       '@type': 'HowToStep',
-                      'name': 'AI Conducts Interview',
-                      'text': 'Maya AI conducts an adaptive technical conversation while the Forensic Engine monitors integrity in real-time.'
+                      'name': 'AI Monitors in Real-Time',
+                      'text': 'The Governor agent continuously monitors for deepfakes, proxy candidates, AI-assisted cheating, and identity mismatches during the interview.'
                     },
                     {
                       '@type': 'HowToStep',
-                      'name': 'Review Results',
-                      'text': 'Access the comprehensive audit trail with integrity scores, code playback, and AI-generated assessments.'
+                      'name': 'Review Integrity Report',
+                      'text': 'Access detailed forensic reports showing all detected anomalies, verification scores, and recommendations.'
                     }
                   ]
                 }

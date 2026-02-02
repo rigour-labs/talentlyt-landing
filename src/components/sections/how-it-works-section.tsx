@@ -202,7 +202,7 @@ export function HowItWorksSection() {
                                 initial={{ x: "-100%" }}
                                 animate={{ x: "200%" }}
                                 transition={{ duration: 3, repeat: Infinity, delay: delay, ease: "linear" }}
-                                className="absolute top-0 bottom-0 w-1/4 bg-gradient-to-r from-transparent via-brand/40 to-transparent shadow-[0_0_15px_rgba(99,102,241,0.2)]"
+                                className="absolute top-0 bottom-0 w-1/4 bg-gradient-to-r from-transparent via-brand/40 to-transparent shadow-[0_0_15px_rgba(0,102,255,0.2)]"
                             />
                         ))}
                     </div>
@@ -215,7 +215,7 @@ export function HowItWorksSection() {
 
                                     {/* Orbital Step Number */}
                                     <div className="mb-12 relative w-fit">
-                                        <div className="w-16 h-16 rounded-full bg-black border border-brand/50 flex items-center justify-center text-xl font-bold text-white shadow-[0_0_30px_rgba(99,102,241,0.2)] relative z-10 group-hover/card:border-brand transition-colors duration-500">
+                                        <div className="w-16 h-16 rounded-full bg-black border border-brand/50 flex items-center justify-center text-xl font-bold text-white shadow-[0_0_30px_rgba(0,102,255,0.2)] relative z-10 group-hover/card:border-brand transition-colors duration-500">
                                             {index + 1}
                                         </div>
                                         {/* Rotating Tech Ring */}

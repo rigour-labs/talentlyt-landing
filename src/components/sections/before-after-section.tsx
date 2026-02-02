@@ -98,7 +98,7 @@ const TalentLytProductView = () => (
             <div
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] opacity-[0.07]"
                 style={{
-                    background: 'radial-gradient(circle, rgba(99,102,241,0.2) 0%, transparent 60%)'
+                    background: 'radial-gradient(circle, rgba(0,102,255,0.2) 0%, transparent 60%)'
                 }}
             />
         </div>
@@ -280,7 +280,7 @@ export function BeforeAfterSection() {
                                     </div>
 
                                     <div className="pt-6">
-                                        <button className="flex items-center gap-3 px-8 py-4 rounded-2xl bg-brand text-white font-bold hover:bg-brand-hover transition-all shadow-[0_0_30px_rgba(37,99,235,0.3)]">
+                                        <button className="flex items-center gap-3 px-8 py-4 rounded-2xl bg-brand text-white font-bold hover:bg-brand-hover transition-all shadow-[0_0_30px_rgba(0,102,255,0.3)]">
                                             Upgrade Your Pipeline
                                             <ArrowRight className="w-5 h-5" />
                                         </button>

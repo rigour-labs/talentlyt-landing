@@ -45,7 +45,7 @@ export function Footer() {
                         className="flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded-lg px-2 py-1 -ml-2"
                         aria-label="TalentLyt Home"
                     >
-                        <div className="relative w-8 h-8 rounded-lg bg-brand flex items-center justify-center shadow-[0_0_15px_rgba(37,99,235,0.4)] overflow-hidden">
+                        <div className="relative w-8 h-8 rounded-lg bg-brand flex items-center justify-center shadow-[0_0_15px_rgba(0,102,255,0.4)] overflow-hidden">
                             <span className="text-white font-bold text-lg relative z-10">T</span>
                         </div>
                         <span className="text-xl font-bold tracking-tight text-white transition-colors">

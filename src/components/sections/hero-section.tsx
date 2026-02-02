@@ -74,20 +74,20 @@ export function HeroSection() {
                 <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-highlight/5 blur-[100px] rounded-full" />
             </div>
 
-            <div className="max-w-7xl mx-auto relative z-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div className={`flex flex-col items-start text-left max-w-2xl ${heroVisible ? 'slide-up' : 'animate-on-scroll'}`}>
-                    <div className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand/10 border border-brand/20 shadow-[0_0_15px_rgba(37,99,235,0.1)] mb-8 ${heroVisible ? 'fade-in animate-delay-100' : 'animate-on-scroll'}`}>
+            <div className="max-w-7xl mx-auto relative z-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <div className={`flex flex-col items-start text-left max-w-2xl order-2 lg:order-1 ${heroVisible ? 'slide-up' : 'animate-on-scroll'}`}>
+                    <div className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand/10 border border-brand/20 shadow-[0_0_15px_rgba(0,102,255,0.1)] mb-8 ${heroVisible ? 'fade-in animate-delay-100' : 'animate-on-scroll'}`}>
                         <ShieldCheck className="w-3.5 h-3.5 text-brand" />
                         <span className="technical-label text-brand">Zero-Trust Recruitment Platform</span>
                     </div>
 
                     <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[1.02] tracking-tight text-white ${heroVisible ? 'slide-up animate-delay-200' : 'animate-on-scroll'}`}>
-                        The World's First <br />
-                        <span className="text-brand">Interview Intelligence</span> Platform.
+                        AI Interviews That <br />
+                        <span className="text-brand">Detect Fraud</span> in Real-Time.
                     </h1>
 
                     <p className={`text-lg sm:text-xl text-text-secondary mb-10 leading-relaxed max-w-xl ${heroVisible ? 'slide-up animate-delay-300' : 'animate-on-scroll'}`}>
-                        Establish a foundation of technical truth in hiring. TalentLyt is a comprehensive interview intelligence platform—combining <span className="text-white font-bold">12-signal session verification</span> with <span className="text-white font-bold">predictive competency mapping</span> and portable candidate profiles.
+                        Stop proxy candidates, deepfakes, and AI-assisted cheating. TalentLyt's <span className="text-white font-bold">13-signal integrity verification</span> catches what HireVue and Codility miss—while Maya AI conducts adaptive technical interviews with <span className="text-white font-bold">predictive job success scoring</span>.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
@@ -102,7 +102,7 @@ export function HeroSection() {
                                     destination_url: '/contact',
                                 },
                             })}
-                            className="group relative px-10 py-5 bg-brand text-white font-bold rounded-2xl transition-all shadow-[0_0_30px_rgba(99,102,241,0.3)] hover:shadow-[0_0_50px_rgba(99,102,241,0.5)] flex items-center justify-center gap-3 overflow-hidden focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
+                            className="group relative px-10 py-5 bg-brand text-white font-bold rounded-2xl transition-all shadow-[0_0_30px_rgba(0,102,255,0.3)] hover:shadow-[0_0_50px_rgba(0,102,255,0.5)] flex items-center justify-center gap-3 overflow-hidden focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
                             aria-label="Start free trial"
                         >
                             <span className="relative z-10 technical-label text-xs">Start Free Trial</span>
@@ -129,7 +129,7 @@ export function HeroSection() {
                     </div>
 
                     {/* Interactive Agent Controller */}
-                    <div className="mt-12 w-full sm:w-auto min-w-[320px]">
+                    <div className="mt-8 lg:mt-12 w-full sm:w-auto sm:min-w-[320px]">
                         <MayaVoiceWidget
                             isPlaying={isMayaSpeaking}
                             onToggle={() => {
@@ -177,8 +177,8 @@ export function HeroSection() {
                 </div>
 
                 {/* Hero Visual Element */}
-                <div className={`relative hidden lg:block ${heroVisible ? 'slide-right animate-delay-300' : 'animate-on-scroll'}`}>
-                    <div className="relative z-20 w-full aspect-square max-w-[600px] mx-auto rounded-[2.5rem] overflow-hidden shadow-[0_0_80px_rgba(37,99,235,0.15)] border border-white/20 bg-card/40 backdrop-blur-md">
+                <div className={`relative order-1 lg:order-2 ${heroVisible ? 'slide-right animate-delay-300' : 'animate-on-scroll'}`}>
+                    <div className="relative z-20 w-full aspect-square max-w-[400px] lg:max-w-[600px] mx-auto rounded-[1.5rem] lg:rounded-[2.5rem] overflow-hidden shadow-[0_0_40px_rgba(0,102,255,0.1)] lg:shadow-[0_0_80px_rgba(0,102,255,0.15)] border border-white/20 bg-card/40 backdrop-blur-md">
                         <div className="w-full h-full relative group/video">
                             <AnimatePresence>
                                 {!isMayaSpeaking && (
@@ -210,7 +210,7 @@ export function HeroSection() {
 
                             {/* Forensic Sentinel HUD Overlay */}
                             {isSentinelMode && (
-                                <div className="absolute inset-0 z-30 pointer-events-none">
+                                <div className="absolute inset-0 z-30 pointer-events-none hidden sm:block">
                                     {/* SVG Gaze Vectors (Vision-Sync) */}
                                     <svg className="absolute inset-0 w-full h-full">
                                         <line
@@ -247,7 +247,7 @@ export function HeroSection() {
                         <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent opacity-30" />
 
                         {/* Floating HUD - Strictly top-right to avoid center/bottom area */}
-                        <div className="absolute top-6 right-6 flex flex-col gap-3 pointer-events-none">
+                        <div className="absolute top-4 right-4 lg:top-6 lg:right-6 flex flex-col gap-2 lg:gap-3 pointer-events-none hidden sm:flex">
                             {[
                                 { label: 'Integrity Scan', value: '99.8%', icon: ShieldCheck, color: 'text-brand' },
                                 { label: 'Context Depth', value: 'Active', icon: Cpu, color: 'text-highlight' },
