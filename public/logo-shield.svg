@@ -1,0 +1,20 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066FF"/>
+      <stop offset="100%" style="stop-color:#0052CC"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Shield shape background -->
+  <path d="M20 2L36 8V18C36 28 28 36 20 38C12 36 4 28 4 18V8L20 2Z" fill="url(#shieldGradient)"/>
+
+  <!-- Inner shield highlight -->
+  <path d="M20 4L34 9.5V18C34 26.5 27 33.5 20 35.5C13 33.5 6 26.5 6 18V9.5L20 4Z" fill="none" stroke="white" stroke-opacity="0.15" stroke-width="1"/>
+
+  <!-- T letter centered in shield -->
+  <path d="M11 12H29V16H22V28H18V16H11V12Z" fill="white"/>
+
+  <!-- Checkmark accent -->
+  <path d="M28 22L31 25L36 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+</svg>

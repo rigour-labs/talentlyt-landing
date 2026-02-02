@@ -1,0 +1,12 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background rounded square -->
+  <rect width="40" height="40" rx="10" fill="#0066FF"/>
+
+  <!-- T letter with integrated signal waves -->
+  <path d="M10 12H30V16H22V30H18V16H10V12Z" fill="white"/>
+
+  <!-- Signal waves (representing 13-signal detection) -->
+  <path d="M30 22C32 22 33.5 23.5 33.5 25.5" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.9"/>
+  <path d="M30 18C34.5 18 38 21.5 38 26" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  <path d="M30 14C37 14 42.5 19.5 42.5 26.5" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+</svg>

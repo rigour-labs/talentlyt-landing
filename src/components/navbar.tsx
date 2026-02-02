@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X, Sparkles, ArrowRight } from 'lucide-react';
 import { analytics } from '@/lib/analytics';
+import { Logo } from './logo';
 
 export function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -82,15 +83,10 @@ export function Navbar() {
                     <div className="flex items-center justify-between">
                         <Link
                             href="/"
-                            className="flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded-lg px-2 py-1 -ml-2"
+                            className="flex items-center group focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded-lg px-2 py-1 -ml-2"
                             aria-label="TalentLyt Home"
                         >
-                            <div className="relative w-8 h-8 rounded-lg bg-brand flex items-center justify-center shadow-[0_0_15px_rgba(0,102,255,0.4)] overflow-hidden">
-                                <span className="text-white font-bold text-lg relative z-10">T</span>
-                            </div>
-                            <span className="text-xl font-bold tracking-tight text-white group-hover:text-brand transition-colors">
-                                Talent<span className="text-brand">Lyt</span>
-                            </span>
+                            <Logo size="md" />
                         </Link>
 
                         <nav className="hidden md:flex items-center gap-1 px-1 py-1 rounded-full bg-white/[0.03] border border-white/10 backdrop-blur-md" aria-label="Main navigation">
