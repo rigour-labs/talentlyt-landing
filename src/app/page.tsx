@@ -14,8 +14,8 @@ import { CTASection } from '@/components/sections/cta-section';
 import { BeforeAfterSection } from '@/components/sections/before-after-section';
 
 export const metadata: Metadata = {
-  title: 'TalentLyt | World\'s First Complete Interview Intelligence Platform',
-  description: 'The gold standard for AI interviews. TalentLyt is the world\'s first complete interview intelligence platform with truth verification, job success prediction, and portable interview genomes.',
+  title: 'TalentLyt | AI Interview Platform - 6,800+ Anomalies Detected in Beta',
+  description: 'The gold standard for AI interviews. Beta results: 6,800+ anomalies detected, 41% fraud flag rate across 82 interviews. TalentLyt is a complete interview intelligence platform with 13-signal fraud detection, job success prediction, and portable interview genomes.',
   keywords: [
     'AI interview',
     'AI interview platform',
@@ -43,7 +43,7 @@ export default function LandingPage() {
         <ArchitectureSection />
         <WhyWeBuiltThisSection />
         <ProblemSolutionSection />
-        {/* <StatsSection /> */}
+        <StatsSection />
         <FeaturesSection />
         <HowItWorksSection />
         {/* TODO: Uncomment when real testimonials/stats are available */}

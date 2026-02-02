@@ -57,7 +57,7 @@ const glossaryTerms = [
     },
     {
         term: '13-Signal Forensic Audit',
-        definition: 'TalentLyt\'s world-first integrity stack that analyzes 12 distinct signal types—including lip-sync, voice biometrics, and gaze tracking—to ensure absolute session authenticity.',
+        definition: 'TalentLyt\'s comprehensive integrity stack that analyzes 13 distinct signal types—including lip-sync, voice biometrics, and gaze tracking—to ensure absolute session authenticity.',
         category: 'Integrity',
     },
     {
@@ -73,7 +73,7 @@ const glossaryTerms = [
     },
     {
         term: 'Interview Genome',
-        definition: 'A portable, cryptographically-signed record of a candidate\'s verified skills and interview performance. The world-first portable intelligence standard for engineering hiring.',
+        definition: 'A portable, cryptographically-signed record of a candidate\'s verified skills and interview performance. A portable intelligence standard for engineering hiring that travels with the candidate.',
         category: 'Platform',
     },
     {

@@ -487,7 +487,7 @@ export function ArchitectureSection() {
                             <Activity className="w-5 h-5 animate-pulse" />
                             <span className="technical-label text-[11px] uppercase tracking-[0.3em]">Protocol Intelligence Verified</span>
                         </div>
-                        <h4 className="text-3xl font-bold text-white mb-5 tracking-tight">World-First Truth Verification</h4>
+                        <h4 className="text-3xl font-bold text-white mb-5 tracking-tight">Real-Time Truth Verification</h4>
                         <p className="text-base text-white/50 leading-relaxed font-medium">
                             TalentLyt logic demands a signed consensus between Sentinels. We don't just detect fraud; we extract claims, verify depth, and predict success using a decentralized intelligence stack.
                         </p>

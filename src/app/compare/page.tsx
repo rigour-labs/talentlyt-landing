@@ -5,8 +5,8 @@ import { Footer } from '@/components/footer';
 import { Check, X, ShieldCheck, Bot, Eye, Fingerprint, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'TalentLyt vs HireVue vs Codility vs Talently.ai — AI Interview Platform Comparison 2025',
-    description: 'Compare TalentLyt with HireVue, Codility, Talently.ai, HackerRank. Only TalentLyt offers 13-signal fraud detection, deepfake detection, and proxy candidate identification. See the full comparison.',
+    title: 'TalentLyt vs HireVue vs Codility vs Talently.ai — AI Interview Platform Comparison 2026',
+    description: 'Compare TalentLyt with HireVue, Codility, Talently.ai, HackerRank. TalentLyt offers 13-signal fraud detection with 6,800+ anomalies detected in beta. See the full comparison.',
     keywords: [
         'TalentLyt vs HireVue',
         'TalentLyt vs Codility',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
         'Codility alternative',
         'Talently.ai alternative',
         'HackerRank alternative',
-        'best AI interview platform 2025',
+        'best AI interview platform 2026',
         'AI interview platform comparison',
         'interview fraud detection comparison',
         'deepfake detection interview platform',
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
         canonical: 'https://talentlyt.cloud/compare',
     },
     openGraph: {
-        title: 'TalentLyt vs HireVue vs Codility vs Talently.ai — Full Comparison 2025',
-        description: 'Only TalentLyt offers 13-signal fraud detection, deepfake detection, and proxy candidate identification. Compare all AI interview platforms.',
+        title: 'TalentLyt vs HireVue vs Codility vs Talently.ai — Full Comparison 2026',
+        description: 'TalentLyt offers 13-signal fraud detection with 6,800+ anomalies detected in beta testing. Compare all AI interview platforms.',
         type: 'website',
     },
 };
@@ -73,7 +73,7 @@ export default function ComparisonPage() {
     const uniqueAdvantages = [
         {
             icon: Bot,
-            title: 'World-First Interview Genome',
+            title: 'Portable Interview Genome',
             description: 'TalentLyt creates portable, cryptographically-signed candidate profiles. Verified skills that travel with the candidate, eliminating repetitive evaluation and securing hiring intent.',
         },
         {
@@ -108,7 +108,7 @@ export default function ComparisonPage() {
                             TalentLyt vs HireVue, Codility, <span className="text-brand">Talently.ai</span> & Others
                         </h1>
                         <p className="text-lg sm:text-xl text-text-secondary leading-relaxed max-w-3xl mx-auto">
-                            Looking for a HireVue alternative? Comparing Codility vs TalentLyt? <strong className="text-white">TalentLyt is the only AI interview platform with real-time fraud detection</strong>—catching deepfakes, proxy candidates, and cheating that other platforms miss entirely.
+                            Looking for a HireVue alternative? Comparing Codility vs TalentLyt? <strong className="text-white">TalentLyt features real-time 13-signal fraud detection</strong>—catching deepfakes, proxy candidates, and cheating that other platforms miss entirely.
                         </p>
                     </div>
                 </section>

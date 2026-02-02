@@ -54,7 +54,7 @@ export function PricingContent() {
             description: 'Growth-Ready Intelligence. 3,000 minutes included.',
             valueTag: 'Rate: $0.083 / min',
             features: [
-                'All World-First Features',
+                'All Premium Features',
                 'Job Success Prediction',
                 'Interview Genome Export',
                 '3,000 Minutes Included',
@@ -413,7 +413,7 @@ export function PricingContent() {
                 >
                     <div className="text-center mb-16">
                         <h2 className="text-3xl sm:text-4xl font-black mb-6 tracking-tight">Frequently Asked <span className="text-brand">Questions</span></h2>
-                        <p className="text-text-secondary font-medium">Clarity on the world's first minutes-based AI interview platform.</p>
+                        <p className="text-text-secondary font-medium">Clarity on our minutes-based AI interview platform.</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">

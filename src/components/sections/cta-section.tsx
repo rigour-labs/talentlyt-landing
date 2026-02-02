@@ -82,12 +82,12 @@ export function CTASection() {
                         </div>
 
                         {/* Legal Disclaimer */}
-                        <div className="mt-16 text-[9px] text-white/40 max-w-3xl mx-auto space-y-2 text-center font-mono uppercase tracking-wider">
+                        <div className="mt-16 text-xs text-slate-400 max-w-3xl mx-auto space-y-2 text-center leading-relaxed">
                             <p>
-                                * BY USING TALENTLYT, YOU ACKNOWLEDGE THAT OUR AI AGENTS PROVIDE ASSESSMENT SUPPORT BASED ON OBSERVABLE METRICS. TALENTLYT IS NOT A SUBSTITUTE FOR HUMAN JUDGMENT.
+                                By using TalentLyt, you acknowledge that our AI agents provide assessment support based on observable metrics. TalentLyt is not a substitute for human judgment.
                             </p>
                             <p>
-                                FOR MORE INFORMATION ON HOW WE HANDLE BIOMETRIC AND BEHAVIORAL DATA, SEE OUR <Link href="/privacy" className="underline hover:text-white/60 transition-colors">PRIVACY POLICY</Link> AND <Link href="/ethics" className="underline hover:text-white/60 transition-colors">AI ETHICS DISCLOSURE</Link>.
+                                For more information on how we handle biometric and behavioral data, see our <Link href="/privacy" className="underline text-slate-300 hover:text-white transition-colors">Privacy Policy</Link> and <Link href="/ethics" className="underline text-slate-300 hover:text-white transition-colors">AI Ethics Disclosure</Link>.
                             </p>
                         </div>
                     </div>

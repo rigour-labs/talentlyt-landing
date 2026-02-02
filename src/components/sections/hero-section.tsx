@@ -160,20 +160,25 @@ export function HeroSection() {
                         />
                     </div>
 
-                    {/* <div
-                        className="mt-12 flex items-center gap-8 sm:gap-12 border-t border-white/5 pt-8 w-full"
-                        aria-label="Key metrics"
+                    <div
+                        className="mt-12 flex items-center gap-6 sm:gap-10 border-t border-white/5 pt-8 w-full"
+                        aria-label="Beta testing metrics"
                     >
                         <div>
-                            <div className="text-2xl sm:text-3xl font-bold text-white mb-1">99.4%</div>
-                            <div className="technical-label text-text-muted text-xs sm:text-[10px]">Verified Integrity</div>
+                            <div className="text-2xl sm:text-3xl font-bold text-white mb-1">6,800+</div>
+                            <div className="technical-label text-text-muted text-xs sm:text-[10px]">Anomalies Detected</div>
                         </div>
                         <div className="w-px h-8 bg-white/10" aria-hidden="true" />
                         <div>
-                            <div className="text-2xl sm:text-3xl font-bold text-white mb-1">5.8x</div>
-                            <div className="technical-label text-text-muted text-xs sm:text-[10px]">Faster Hires</div>
+                            <div className="text-2xl sm:text-3xl font-bold text-white mb-1">41%</div>
+                            <div className="technical-label text-text-muted text-xs sm:text-[10px]">Fraud Flag Rate</div>
                         </div>
-                    </div> */}
+                        <div className="w-px h-8 bg-white/10 hidden sm:block" aria-hidden="true" />
+                        <div className="hidden sm:block">
+                            <div className="text-2xl sm:text-3xl font-bold text-white mb-1">82</div>
+                            <div className="technical-label text-text-muted text-xs sm:text-[10px]">Beta Interviews</div>
+                        </div>
+                    </div>
                 </div>
 
                 {/* Hero Visual Element */}

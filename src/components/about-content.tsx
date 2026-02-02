@@ -28,8 +28,8 @@ export function AboutContent() {
     ];
 
     const milestones = [
-        { year: "2024", event: "Founded by engineers who experienced hiring pain firsthand" },
-        { year: "2025", event: "Launched Maya AI Interviewer and Legal-Advisor Forensic Engine" }
+        { year: "2025", event: "Founded in June by engineers who experienced hiring pain firsthand" },
+        { year: "2026", event: "Launched Maya AI Interviewer, Forensic Engine, and completed beta testing with 6,800+ anomalies detected" }
     ];
 
     return (
@@ -56,7 +56,7 @@ export function AboutContent() {
                         <h2 className="text-3xl font-bold">Our Mission</h2>
                     </div>
                     <p className="text-xl text-text-secondary leading-relaxed">
-                        To make every technical hire a <span className="text-white font-semibold">verified hire</span>. We combine conversational AI with <span className="text-white font-semibold">13-signal integrity verification</span>, <span className="text-white font-semibold">predictive competency mapping</span>, and the world-first <span className="text-white font-semibold">Interview Genome</span>.
+                        To make every technical hire a <span className="text-white font-semibold">verified hire</span>. We combine conversational AI with <span className="text-white font-semibold">13-signal integrity verification</span>, <span className="text-white font-semibold">predictive competency mapping</span>, and the portable <span className="text-white font-semibold">Interview Genome</span>.
                     </p>
                 </section>
 

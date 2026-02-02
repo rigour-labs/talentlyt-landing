@@ -141,49 +141,50 @@ export function ProblemSolutionSection() {
                     </div>
                 </div>
 
-                {/* Live Audit Case Study - Sentinel Audit */}
-                <div className="p-1.5 rounded-[3.5rem] bg-gradient-to-b from-brand/20 to-transparent">
-                    <div className="bg-[#0a0a0a]/90 backdrop-blur-3xl rounded-[3.4rem] p-10 md:p-16 border border-brand/20 relative overflow-hidden">
-                        <div className="absolute top-0 right-0 p-8">
-                            <div className="text-[8px] font-bold text-brand uppercase tracking-[0.4em] mb-2">Audit ID</div>
-                            <div className="text-[10px] font-mono text-brand/40">SENTINEL-7492-LIVE</div>
+                {/* Real Beta Results */}
+                <div className="p-1.5 rounded-[2rem] sm:rounded-[3rem] bg-gradient-to-b from-brand/20 to-transparent">
+                    <div className="bg-slate-900 rounded-[1.8rem] sm:rounded-[2.8rem] p-6 sm:p-10 md:p-16 border border-brand/20 relative overflow-hidden">
+                        <div className="absolute top-4 right-4 sm:top-8 sm:right-8">
+                            <div className="text-[10px] font-bold text-brand uppercase tracking-wider mb-1">Beta Program</div>
+                            <div className="text-xs font-mono text-slate-400">Jan 2026</div>
                         </div>
 
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center relative z-10">
                             <div>
-                                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 border border-brand/20 text-brand text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
-                                    Forensic Case Study
+                                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/10 border border-green-500/30 mb-6">
+                                    <div className="w-2 h-2 rounded-full bg-green-400" />
+                                    <span className="text-green-400 text-xs font-bold uppercase tracking-wide">Live Beta Results</span>
                                 </div>
-                                <h3 className="text-3xl sm:text-4xl font-bold text-white mb-6 tracking-tight leading-tight">
-                                    The <span className="text-brand">Sentinel Audit</span> in Action.
+                                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight leading-tight">
+                                    Real <span className="text-brand">Detection Results</span> from Beta Testing.
                                 </h3>
-                                <p className="text-sm font-semibold text-white/90 leading-relaxed italic">
-                                    "Commercial Impact: Detected 91% integrity failure in a live candidate audit, saving a pilot client <span className="font-bold">$15,000 per bad hire</span>."
+                                <p className="text-base text-slate-300 leading-relaxed mb-6">
+                                    Our beta program monitored 82 live interviews and detected 6,824 integrity anomalies across 15 different signal types.
                                 </p>
-                                <div className="flex items-center gap-4 p-4 rounded-2xl bg-brand/5 border border-brand/10">
+                                <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-800 border border-slate-700">
                                     <div className="w-12 h-12 rounded-xl bg-brand/20 flex items-center justify-center text-brand shrink-0">
                                         <ShieldAlert className="w-6 h-6" />
                                     </div>
                                     <div>
-                                        <div className="text-[10px] font-bold text-brand uppercase tracking-widest mb-0.5">Commercial Impact</div>
+                                        <div className="text-xs font-bold text-brand uppercase tracking-wide mb-0.5">Top Detection</div>
                                         <div className="text-lg font-bold text-white">
-                                            $15,000 bad-hire cost avoided.
+                                            3,077 face absent signals caught
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="grid grid-cols-2 gap-4">
+                            <div className="grid grid-cols-2 gap-3 sm:gap-4">
                                 {[
-                                    { label: "Integrity Failure", value: "91%", sub: "Forensic Certainty", color: "text-brand" },
-                                    { label: "Detection Time", value: "<1.2s", sub: "Latency Trap", color: "text-white" },
-                                    { label: "Proxy Type", value: "Advanced", sub: "Interleaving", color: "text-white" },
-                                    { label: "Status", value: "FLAGGED", sub: "Session Terminated", color: "text-danger" }
+                                    { label: "Total Anomalies", value: "6,824", sub: "Signals Detected", color: "text-brand" },
+                                    { label: "Interviews", value: "82", sub: "Sessions Monitored", color: "text-white" },
+                                    { label: "Flag Rate", value: "41%", sub: "Sessions Flagged", color: "text-white" },
+                                    { label: "Signal Types", value: "15", sub: "Detection Categories", color: "text-green-400" }
                                 ].map((stat, i) => (
-                                    <div key={i} className="p-6 rounded-2xl bg-white/[0.03] border border-white/5 group hover:border-brand/30 transition-all">
-                                        <div className="text-[10px] text-text-muted font-bold uppercase tracking-widest mb-3">{stat.label}</div>
-                                        <div className={`text-4xl font-bold mb-1 ${stat.color} tracking-tighter`}>{stat.value}</div>
-                                        <div className="text-[10px] text-text-muted font-mono uppercase">{stat.sub}</div>
+                                    <div key={i} className="p-4 sm:p-6 rounded-xl bg-slate-800 border border-slate-700 hover:border-brand/30 transition-all">
+                                        <div className="text-[10px] sm:text-xs text-slate-400 font-bold uppercase tracking-wide mb-2">{stat.label}</div>
+                                        <div className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-1 ${stat.color} tracking-tighter`}>{stat.value}</div>
+                                        <div className="text-[10px] sm:text-xs text-slate-500">{stat.sub}</div>
                                     </div>
                                 ))}
                             </div>

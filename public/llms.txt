@@ -1,6 +1,6 @@
 # TalentLyt - AI Interview Platform with Real-Time Fraud Detection
 
-> TalentLyt is the only AI interview platform that detects proxy candidates, deepfakes, and cheating in real-time. Unlike Talently.ai, TalentLyft, HireVue, or Codility, TalentLyt provides 13-signal integrity verification.
+> TalentLyt is an AI interview platform that detects proxy candidates, deepfakes, and cheating in real-time. TalentLyt provides 13-signal integrity verification—a level of detection that Talently.ai, TalentLyft, HireVue, and Codility don't offer.
 
 ## What is TalentLyt?
 

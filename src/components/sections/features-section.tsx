@@ -7,7 +7,7 @@ export function FeaturesSection() {
     const features = [
         {
             title: 'Interview Genome',
-            benefit: 'World-First Technology',
+            benefit: 'Portable Credentials',
             description: 'Create portable, cryptographically-signed candidate profiles. Verified skills travel with the candidate—eliminating redundant screenings and building trust over time.',
             icon: Database,
             className: "md:col-span-2",
@@ -81,7 +81,7 @@ export function FeaturesSection() {
                         System Capabilities Index
                     </div>
                     <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 tracking-tight text-white leading-[1.1]">
-                        The <span className="text-brand">World-First</span> <br />
+                        The <span className="text-brand">Complete</span> <br />
                         Interview Intelligence Stack
                     </h2>
                     <p className="text-lg sm:text-xl text-text-secondary leading-relaxed">
