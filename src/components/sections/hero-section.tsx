@@ -87,7 +87,7 @@ export function HeroSection() {
                     </h1>
 
                     <p className={`text-lg sm:text-xl text-text-secondary mb-10 leading-relaxed max-w-xl ${heroVisible ? 'slide-up animate-delay-300' : 'animate-on-scroll'}`}>
-                        Stop proxy candidates, deepfakes, and AI-assisted cheating. TalentLyt's <span className="text-white font-bold">13-signal integrity verification</span> catches what HireVue and Codility miss—while Maya AI conducts adaptive technical interviews with <span className="text-white font-bold">predictive job success scoring</span>.
+                        Proxy candidates and deepfakes are costing you $15K per bad hire. TalentLyt's <span className="text-white font-bold">13-signal fraud detection</span> spots them in real-time. Maya AI conducts the technical interview. You get <span className="text-white font-bold">verified candidates with predictive job success scores</span>.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">

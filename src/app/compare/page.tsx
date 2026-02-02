@@ -79,7 +79,7 @@ export default function ComparisonPage() {
         {
             icon: ShieldCheck,
             title: '13-Signal Forensic Audit',
-            description: 'We analyze 12 distinct biometric and behavioral signals (lip-sync, gaze, voice biometrics) in real-time to ensure absolute session integrity and zero fraud.',
+            description: 'We analyze 13 distinct biometric and behavioral signals (lip-sync, gaze, voice biometrics) in real-time to ensure absolute session integrity and zero fraud.',
         },
         {
             icon: Eye,
@@ -210,20 +210,19 @@ export default function ComparisonPage() {
                             </h2>
                             <div className="space-y-4 text-text-secondary leading-relaxed">
                                 <p>
-                                    Traditional AI interview platforms were built to <strong className="text-white">automate assessment</strong>.
-                                    They help you evaluate candidates faster, but they don&apos;t address a fundamental problem:
-                                    <strong className="text-white"> How do you know the candidate is being authentic?</strong>
+                                    Here&apos;s what nobody talks about: <strong className="text-white">30-40% of remote interviews involve some form of cheating</strong>.
+                                    Proxy candidates. Deepfakes. ChatGPT running in another tab. The person you interviewed might not be the person who shows up on day one.
                                 </p>
                                 <p>
-                                    TalentLyt was built for a different purpose: <strong className="text-white">integrity-first technical hiring</strong>.
-                                    Every feature, from our Multi-Agent AI architecture to our forensic verification systems,
-                                    is designed to ensure that the person you interview is the person you hire,
-                                    and that their skills are genuinely their own.
+                                    Most AI interview tools? They&apos;re built to ask questions faster. Great.
+                                    But they can&apos;t tell you if the candidate is actually <strong className="text-white">who they claim to be</strong>.
+                                    That&apos;s the gap we fill.
                                 </p>
                                 <p>
-                                    This isn&apos;t about being &quot;better&quot; than existing platforms—it&apos;s about solving a problem they weren&apos;t designed to address.
-                                    If your priority is speed alone, any platform will do.
-                                    If your priority is <strong className="text-white">truth in hiring</strong>, there&apos;s only TalentLyt.
+                                    We built TalentLyt because we got burned. Hired engineers who couldn&apos;t code.
+                                    Discovered proxy candidates after onboarding. So we built the verification layer that should have existed from the start.
+                                    If you just want faster interviews, there are plenty of options.
+                                    If you want to <strong className="text-white">know who you&apos;re actually hiring</strong>, that&apos;s us.
                                 </p>
                             </div>
                         </div>

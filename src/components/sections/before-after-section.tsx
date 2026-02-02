@@ -145,7 +145,7 @@ export function BeforeAfterSection() {
                             className="absolute inset-1.5 bg-brand rounded-xl z-0"
                             animate={{
                                 x: state === 'before' ? 0 : '100%',
-                                backgroundColor: state === 'before' ? '#fb7185' : '#6366f1'
+                                backgroundColor: state === 'before' ? '#fb7185' : '#0066FF'
                             }}
                             transition={{ type: "spring", stiffness: 300, damping: 30 }}
                             style={{ width: 'calc(50% - 6px)' }}
