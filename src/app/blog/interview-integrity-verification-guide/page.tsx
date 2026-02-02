@@ -191,7 +191,7 @@ export default function InterviewIntegrityVerificationPage() {
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <Link
-                                        href="/contact"
+                                        href="/request-demo"
                                         className="inline-flex items-center justify-center gap-2 px-10 py-5 bg-brand text-white font-black rounded-2xl hover:bg-brand-hover transition-all uppercase tracking-widest text-xs shadow-2xl shadow-brand/40"
                                     >
                                         Request Integrity Audit

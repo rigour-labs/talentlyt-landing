@@ -127,7 +127,7 @@ export function LiveDemoContent() {
                                     ))}
                                 </div>
                                 <Link
-                                    href="/contact"
+                                    href="/request-demo"
                                     className="inline-flex items-center gap-2 px-8 py-4 bg-white/[0.03] border border-white/10 text-white rounded-2xl hover:bg-brand hover:border-brand transition-all font-bold group"
                                 >
                                     Experience This Stage
@@ -171,7 +171,7 @@ export function LiveDemoContent() {
                             Join the ranks of high-security teams who never settle for "Good Enough" integrity.
                         </p>
                         <Link
-                            href="/contact"
+                            href="/request-demo"
                             className="inline-flex items-center gap-3 px-10 py-5 bg-white text-brand rounded-2xl hover:scale-105 transition-all font-bold shadow-2xl"
                         >
                             <Activity className="w-5 h-5" />

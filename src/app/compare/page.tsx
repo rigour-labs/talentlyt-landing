@@ -271,7 +271,7 @@ export default function ComparisonPage() {
                                 See how TalentLyt&apos;s Multi-Agent AI and forensic verification can transform your technical hiring process.
                             </p>
                             <Link
-                                href="/contact"
+                                href="/request-demo"
                                 className="inline-flex items-center gap-2 px-8 py-4 bg-brand text-white font-bold rounded-2xl hover:shadow-[0_0_30px_rgba(0,102,255,0.4)] transition-all"
                             >
                                 Start Free Trial

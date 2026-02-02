@@ -54,7 +54,7 @@ export function Navbar() {
                     </div>
 
                     <Link
-                        href="/contact"
+                        href="/request-demo"
                         onClick={() => analytics.track({
                             event: 'cta_clicked',
                             properties: {
@@ -123,14 +123,14 @@ export function Navbar() {
                                 Sign In
                             </a>
                             <Link
-                                href="/contact"
+                                href="/request-demo"
                                 onClick={() => analytics.track({
                                     event: 'cta_clicked',
                                     properties: {
                                         location: 'navbar',
                                         cta_type: 'start_trial',
                                         cta_text: 'Start Free Trial',
-                                        destination_url: '/contact',
+                                        destination_url: '/request-demo',
                                     },
                                 })}
                                 className="group relative px-6 py-2.5 bg-brand text-white rounded-xl hover:shadow-[0_0_25px_rgba(0,102,255,0.4)] transition-all flex items-center gap-2 overflow-hidden hidden sm:flex focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
@@ -184,7 +184,7 @@ export function Navbar() {
                                 Sign In
                             </a>
                             <Link
-                                href="/contact"
+                                href="/request-demo"
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="px-4 py-4 bg-brand text-white rounded-xl text-center technical-label hover:bg-brand-hover transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
                                 aria-label="Start free trial"

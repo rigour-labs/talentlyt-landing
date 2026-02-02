@@ -192,7 +192,7 @@ export default function WhatIsAIInterviewPlatformPage() {
                                 Stop wasting senior engineering hours on screening calls. Deploy Maya and see why the world&apos;s fastest-growing teams trust TalentLyt.
                             </p>
                             <Link
-                                href="/contact"
+                                href="/request-demo"
                                 className="inline-flex items-center gap-3 px-10 py-5 bg-brand text-white font-black rounded-2xl hover:bg-brand-hover shadow-2xl shadow-brand/30 transition-all uppercase tracking-[0.2em] text-xs"
                             >
                                 Get Started for Free <ArrowLeft className="w-4 h-4 rotate-180" />

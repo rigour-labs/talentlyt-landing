@@ -92,14 +92,14 @@ export function HeroSection() {
 
                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
                         <Link
-                            href="/contact"
+                            href="/request-demo"
                             onClick={() => analytics.track({
                                 event: 'cta_clicked',
                                 properties: {
                                     location: 'hero',
                                     cta_type: 'start_trial',
                                     cta_text: 'Start Free Trial',
-                                    destination_url: '/contact',
+                                    destination_url: '/request-demo',
                                 },
                             })}
                             className="group relative px-10 py-5 bg-brand text-white font-bold rounded-2xl transition-all shadow-[0_0_30px_rgba(0,102,255,0.3)] hover:shadow-[0_0_50px_rgba(0,102,255,0.5)] flex items-center justify-center gap-3 overflow-hidden focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"

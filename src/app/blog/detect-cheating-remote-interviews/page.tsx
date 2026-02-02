@@ -175,7 +175,7 @@ export default function DetectCheatingPage() {
                                 Don&apos;t let proxy actors dilute your engineering quality. Secure your hiring pipeline with forensic-grade verification.
                             </p>
                             <Link
-                                href="/contact"
+                                href="/request-demo"
                                 className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-red-600 text-white font-black rounded-2xl hover:bg-red-700 transition-all uppercase tracking-widest text-xs shadow-2xl shadow-red-500/30"
                             >
                                 Secure My Pipeline Now <ArrowLeft className="w-4 h-4 rotate-180" />

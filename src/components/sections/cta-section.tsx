@@ -36,14 +36,14 @@ export function CTASection() {
                         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-6 mb-16">
                             <div>
                                 <Link
-                                    href="/contact"
+                                    href="/request-demo"
                                     onClick={() => analytics.track({
                                         event: 'cta_clicked',
                                         properties: {
                                             location: 'bottom_cta',
                                             cta_type: 'start_trial',
                                             cta_text: 'Start Free Trial',
-                                            destination_url: '/contact',
+                                            destination_url: '/request-demo',
                                         },
                                     })}
                                     className="group relative px-10 py-5 bg-brand text-white font-bold rounded-2xl transition-all shadow-[0_0_30px_rgba(0,102,255,0.3)] hover:shadow-[0_0_50px_rgba(0,102,255,0.5)] flex items-center justify-center gap-3 overflow-hidden text-lg focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"

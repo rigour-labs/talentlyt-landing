@@ -210,7 +210,7 @@ export default function GlossaryPage() {
                                 Experience how TalentLyt brings multi-agent AI and integrity verification to life in technical interviews.
                             </p>
                             <Link
-                                href="/contact"
+                                href="/request-demo"
                                 className="inline-flex items-center gap-2 px-8 py-4 bg-brand text-white font-bold rounded-2xl hover:shadow-[0_0_30px_rgba(0,102,255,0.4)] transition-all"
                             >
                                 Start Free Trial

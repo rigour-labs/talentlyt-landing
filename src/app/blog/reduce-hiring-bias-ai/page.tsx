@@ -180,7 +180,7 @@ export default function ReduceHiringBiasPage() {
                                 Level the playing field for your engineering funnel. Deploy an objective assessment layer that cares about code, not pedigree.
                             </p>
                             <Link
-                                href="/contact"
+                                href="/request-demo"
                                 className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-brand text-white font-black rounded-2xl hover:bg-brand-hover shadow-2xl shadow-brand/40 transition-all uppercase tracking-[0.2em] text-xs"
                             >
                                 Start Unbiased Hiring <ArrowLeft className="w-4 h-4 rotate-180" />

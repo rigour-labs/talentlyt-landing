@@ -174,7 +174,7 @@ export default function DeepfakeDetectionPage() {
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <Link
-                                        href="/contact"
+                                        href="/request-demo"
                                         className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand text-white font-black rounded-2xl hover:bg-brand-hover transition-all uppercase tracking-widest text-xs shadow-xl shadow-brand/20"
                                     >
                                         Deploy Sentinel Now
