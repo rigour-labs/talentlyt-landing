@@ -78,7 +78,7 @@ export function HeroSection() {
                 <div className={`flex flex-col items-start text-left max-w-2xl order-2 lg:order-1 ${heroVisible ? 'slide-up' : 'animate-on-scroll'}`}>
                     <div className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand/10 border border-brand/20 shadow-[0_0_15px_rgba(0,102,255,0.1)] mb-8 ${heroVisible ? 'fade-in animate-delay-100' : 'animate-on-scroll'}`}>
                         <ShieldCheck className="w-3.5 h-3.5 text-brand" />
-                        <span className="technical-label text-brand">Your AI Interview Co-Pilot</span>
+                        <span className="technical-label text-brand">The AI Co-Pilot for Hiring</span>
                     </div>
 
                     <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[1.02] tracking-tight text-white ${heroVisible ? 'slide-up animate-delay-200' : 'animate-on-scroll'}`}>
