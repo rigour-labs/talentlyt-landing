@@ -78,16 +78,16 @@ export function HeroSection() {
                 <div className={`flex flex-col items-start text-left max-w-2xl order-2 lg:order-1 ${heroVisible ? 'slide-up' : 'animate-on-scroll'}`}>
                     <div className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand/10 border border-brand/20 shadow-[0_0_15px_rgba(0,102,255,0.1)] mb-8 ${heroVisible ? 'fade-in animate-delay-100' : 'animate-on-scroll'}`}>
                         <ShieldCheck className="w-3.5 h-3.5 text-brand" />
-                        <span className="technical-label text-brand">Zero-Trust Recruitment Platform</span>
+                        <span className="technical-label text-brand">Your AI Interview Co-Pilot</span>
                     </div>
 
                     <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[1.02] tracking-tight text-white ${heroVisible ? 'slide-up animate-delay-200' : 'animate-on-scroll'}`}>
-                        AI Interviews That <br />
-                        <span className="text-brand">Detect Fraud</span> in Real-Time.
+                        Interview Smarter.<br />
+                        <span className="text-brand">Hire Faster.</span>
                     </h1>
 
                     <p className={`text-lg sm:text-xl text-text-secondary mb-10 leading-relaxed max-w-xl ${heroVisible ? 'slide-up animate-delay-300' : 'animate-on-scroll'}`}>
-                        Proxy candidates and deepfakes are costing you $15K per bad hire. TalentLyt's <span className="text-white font-bold">13-signal fraud detection</span> spots them in real-time. Maya AI conducts the technical interview. You get <span className="text-white font-bold">verified candidates with predictive job success scores</span>.
+                        Maya AI handles technical screening while you focus on culture fit. <span className="text-white font-bold">13-signal fraud detection</span> catches proxy candidates and deepfakes in real-time. You stay in control—with <span className="text-white font-bold">verified candidates and predictive job success scores</span>.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">

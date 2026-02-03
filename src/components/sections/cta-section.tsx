@@ -26,11 +26,11 @@ export function CTASection() {
                         </div>
 
                         <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 tracking-tighter text-white leading-[0.9] text-center">
-                            Hire with confidence. <br />
-                            The #1 <span className="text-brand">AI Interview Platform.</span>
+                            Your team. <br />
+                            Your <span className="text-brand">AI Co-Pilot.</span>
                         </h2>
                         <p className="text-lg sm:text-xl text-text-secondary mb-12 max-w-2xl mx-auto text-center opacity-70">
-                            Transform your process with the world's most advanced <span className="text-white font-bold">AI Interview</span> technology. Verified integrity, automated assessments, and zero bias.
+                            TalentLyt handles technical screening so you can focus on culture fit. <span className="text-white font-bold">Verified candidates, faster decisions</span>—with you in control.
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-6 mb-16">
@@ -84,7 +84,7 @@ export function CTASection() {
                         {/* Legal Disclaimer */}
                         <div className="mt-16 text-xs text-slate-400 max-w-3xl mx-auto space-y-2 text-center leading-relaxed">
                             <p>
-                                By using TalentLyt, you acknowledge that our AI agents provide assessment support based on observable metrics. TalentLyt is not a substitute for human judgment.
+                                TalentLyt empowers your hiring team with AI-verified insights. You always make the final call—we just help you make it faster and with more confidence.
                             </p>
                             <p>
                                 For more information on how we handle biometric and behavioral data, see our <Link href="/privacy" className="underline text-slate-300 hover:text-white transition-colors">Privacy Policy</Link> and <Link href="/ethics" className="underline text-slate-300 hover:text-white transition-colors">AI Ethics Disclosure</Link>.

@@ -14,8 +14,8 @@ import { CTASection } from '@/components/sections/cta-section';
 import { BeforeAfterSection } from '@/components/sections/before-after-section';
 
 export const metadata: Metadata = {
-  title: 'TalentLyt | AI Interview Platform - 6,800+ Anomalies Detected in Beta',
-  description: 'The gold standard for AI interviews. Beta results: 6,800+ anomalies detected, 41% fraud flag rate across 82 interviews. TalentLyt is a complete interview intelligence platform with 13-signal fraud detection, job success prediction, and portable interview genomes.',
+  title: 'TalentLyt | Your AI Co-Pilot for Technical Hiring',
+  description: 'Interview smarter, hire faster. Maya AI handles technical screening while you focus on culture fit. 13-signal fraud detection catches deepfakes & proxy candidates. Beta: 6,800+ anomalies detected across 82 interviews.',
   keywords: [
     'AI interview',
     'AI interview platform',

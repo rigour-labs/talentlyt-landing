@@ -20,11 +20,11 @@ export const viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://talentlyt.cloud'),
   title: {
-    default: 'TalentLyt — AI Interview Platform with Fraud Detection | Not Talently or TalentLyft',
+    default: 'TalentLyt — AI Interview Co-Pilot for Technical Hiring | Not Talently or TalentLyft',
     template: '%s | TalentLyt'
   },
   description:
-    'AI interview platform with real-time fraud detection. Beta results: 6,800+ anomalies detected, 41% fraud flag rate across 82 interviews. Catch deepfakes, proxy candidates & cheating with 13-signal integrity verification.',
+    'Your AI co-pilot for technical hiring. Maya AI handles screening while you focus on culture fit. 13-signal fraud detection catches deepfakes & proxy candidates. Beta: 6,800+ anomalies detected across 82 interviews.',
   keywords: [
     // Primary high-intent keywords
     'AI interview platform',
@@ -96,16 +96,16 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'TalentLyt — AI Interview Platform for Technical Hiring',
-    description: 'AI-powered technical interview platform with real-time integrity verification. Beta: 6,800+ anomalies detected, 41% fraud flag rate. Conduct, evaluate, and verify candidate skills with Multi-Agent AI.',
+    title: 'TalentLyt — Your AI Co-Pilot for Technical Hiring',
+    description: 'Maya AI handles technical screening while you focus on culture fit. 13-signal fraud detection catches deepfakes & proxy candidates. Beta: 6,800+ anomalies detected across 82 interviews.',
     url: 'https://talentlyt.cloud',
-    siteName: 'TalentLyt - AI Interview Platform',
+    siteName: 'TalentLyt - AI Interview Co-Pilot',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'TalentLyt AI Interview Platform - Maya AI conducting a technical interview with real-time integrity verification',
+        alt: 'TalentLyt AI Co-Pilot - Maya AI assists your hiring team with technical screening and fraud detection',
       },
     ],
     locale: 'en_US',
@@ -113,8 +113,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'TalentLyt — High-Stakes Hiring with Technical Verification',
-    description: 'Multi-Agent AI technical interview suite. Beta: 6,800+ anomalies detected across 82 interviews. Maya conducts, the Verification Engine confirms depth with 13-signal verification.',
+    title: 'TalentLyt — Your AI Co-Pilot for Technical Hiring',
+    description: 'Interview smarter, hire faster. Maya AI handles screening while you focus on culture fit. 13-signal fraud detection. Beta: 6,800+ anomalies detected across 82 interviews.',
     images: ['/og-image.png'],
     creator: '@talentlyt',
   },
@@ -231,7 +231,7 @@ export default function RootLayout({
                     priceCurrency: 'USD',
                     description: 'Get The Pilot Pack for FREE with Promotional Coupon'
                   },
-                  description: 'TalentLyt is an AI interview platform with real-time fraud detection. Beta results: 6,800+ anomalies detected, 41% fraud flag rate across 82 interviews. Features 13-signal verification and Job Success Prediction.',
+                  description: 'TalentLyt is your AI co-pilot for technical hiring. Maya AI handles screening while you focus on culture fit. Beta: 6,800+ anomalies detected, 41% fraud flag rate. Features 13-signal verification and Job Success Prediction.',
                   featureList: '13-Signal Verification, 6824 Anomalies Detected in Beta, 41% Fraud Flag Rate, Automated Quality Auditor, Predictive Competency Mapping, Interview Genome, Code Playback',
                   copyrightYear: new Date().getFullYear(),
                   author: {
@@ -293,10 +293,10 @@ export default function RootLayout({
                   '@context': 'https://schema.org',
                   '@type': 'Organization',
                   'name': 'TalentLyt',
-                  'alternateName': 'TalentLyt AI Interview Platform',
+                  'alternateName': 'TalentLyt AI Interview Co-Pilot',
                   'url': 'https://talentlyt.cloud',
                   'logo': 'https://talentlyt.cloud/logo.png',
-                  'description': 'TalentLyt is an AI interview platform with real-time fraud detection, featuring Multi-Agent AI with 13-signal verification and predictive success mapping. Beta: 6,800+ anomalies detected.',
+                  'description': 'TalentLyt is your AI co-pilot for technical hiring. Maya AI handles screening while your team focuses on culture fit. 13-signal fraud detection. Beta: 6,800+ anomalies detected.',
                   'foundingDate': '2025',
                   'sameAs': [
                     'https://twitter.com/talentlyt',
@@ -318,7 +318,7 @@ export default function RootLayout({
                       'name': 'What is an AI Interview Platform?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'An AI interview intelligence platform uses artificial intelligence to conduct, evaluate, and verify technical depth, providing an objective and efficient hiring process. TalentLyt combines Multi-Agent AI with 13-signal fraud detection, Job Success Prediction, and the Interview Genome. Beta results show 6,800+ anomalies detected across 82 interviews.'
+                        'text': 'An AI interview co-pilot assists your hiring team by handling technical screening while you focus on culture fit. TalentLyt combines Maya AI with 13-signal fraud detection, Job Success Prediction, and the Interview Genome—keeping you in control of every hiring decision. Beta: 6,800+ anomalies detected across 82 interviews.'
                       }
                     },
                     {
@@ -334,7 +334,7 @@ export default function RootLayout({
                       'name': 'Can AI interviews reduce hiring bias?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'Yes, AI interviews like those conducted by TalentLyt use standardized scoring based on technical truth, reducing human subconscious bias by up to 80%. Our forensic approach ensures every candidate is evaluated objectively.'
+                        'text': 'Yes, TalentLyt provides consistent AI-assisted scoring that complements your team\'s judgment, helping reduce evaluation variance by up to 80%. Your hiring team stays in control while getting data-driven insights.'
                       }
                     },
                     {

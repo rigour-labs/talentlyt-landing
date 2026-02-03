@@ -22,7 +22,7 @@ export function ProblemSolutionSection() {
         },
         {
             title: 'Evaluation Variance',
-            description: 'Subjective assessments lead to inconsistent hiring and unconscious bias.',
+            description: 'Inconsistent scoring across interviewers makes it hard to compare candidates fairly.',
             impact: '50% Score Variance',
             icon: Zap
         },
@@ -49,8 +49,8 @@ export function ProblemSolutionSection() {
         },
         {
             title: 'Standardized Maya Scoring',
-            description: 'AI-driven assessment grounded in technical truth, not human vibes.',
-            benefit: '99% Bias Reduction',
+            description: 'Consistent AI-assisted evaluation that complements your team\'s judgment.',
+            benefit: '99% More Consistency',
             icon: Zap
         }
     ];
@@ -78,7 +78,7 @@ export function ProblemSolutionSection() {
                         The <span className="text-brand">Live Intelligence</span> Solution.
                     </h2>
                     <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto">
-                        Traditional hiring is broken by pre-recorded questions and siloed data. TalentLyt restores trust with <span className="text-white font-bold">live adaptive AI</span> and collective <span className="text-white font-bold">federated learning</span>.
+                        Remote hiring faces new integrity challenges. TalentLyt helps your team verify candidates with <span className="text-white font-bold">live adaptive AI</span> while you stay in control of every hiring decision.
                     </p>
                 </div>
 

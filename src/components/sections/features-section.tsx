@@ -6,18 +6,18 @@ export function FeaturesSection() {
 
     const features = [
         {
-            title: 'Interview Genome',
-            benefit: 'Portable Credentials',
-            description: 'Create portable, cryptographically-signed candidate profiles. Verified skills travel with the candidate—eliminating redundant screenings and building trust over time.',
-            icon: Database,
+            title: 'Panel Mode (Maya Whispers)',
+            benefit: 'You Stay in Control',
+            description: 'Run interviews your way with real-time AI suggestions. Maya provides high-signal probing questions while you focus on culture fit and soft skills.',
+            icon: Zap,
             className: "md:col-span-2",
-            metric: 'Portable Intelligence',
-            tag: 'LIVE'
+            metric: 'Zero-Latency',
+            tag: 'CO-PILOT MODE'
         },
         {
             title: 'Predictive Job Success',
-            benefit: 'AI Forecasting',
-            description: 'Our ML models predict actual on-the-job performance probability with 85% accuracy, synthesized from behavioral signals and technical depth indicators.',
+            benefit: 'Data-Driven Decisions',
+            description: 'Our ML models help you predict on-the-job performance with 85% accuracy. Get insights that complement your team\'s judgment.',
             icon: Brain,
             className: "md:col-span-1",
             metric: '85% Accuracy',
@@ -33,13 +33,13 @@ export function FeaturesSection() {
             tag: 'LIVENESS+'
         },
         {
-            title: 'Panel Mode (Maya Whispers)',
-            benefit: 'Human Augmentation',
-            description: 'Your human interviewers get real-time AI suggestions and high-signal probing questions. Maya handles the technical deep-dive while you observe.',
-            icon: Zap,
+            title: 'Interview Genome',
+            benefit: 'Portable Credentials',
+            description: 'Create portable, cryptographically-signed candidate profiles. Verified skills travel with the candidate—eliminating redundant screenings.',
+            icon: Database,
             className: "md:col-span-2",
-            metric: 'Zero-Latency',
-            tag: 'PANEL MODE'
+            metric: 'Portable Intelligence',
+            tag: 'LIVE'
         },
         {
             title: 'Standalone Forensic Scans',
@@ -53,7 +53,7 @@ export function FeaturesSection() {
         {
             title: '13-Signal Fraud Detection',
             benefit: 'Detection Excellence',
-            description: 'Real-time monitoring for gaze drift, tab switching, voice mismatches, typing bursts, clipboard activity, and deepfake indicators during live interviews.',
+            description: 'Real-time monitoring for gaze drift, tab switching, voice mismatches, and deepfake indicators. Automated alerts so you can focus on the interview.',
             icon: Lock,
             className: "md:col-span-2",
             metric: '99.9% Detection',
@@ -81,11 +81,11 @@ export function FeaturesSection() {
                         System Capabilities Index
                     </div>
                     <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 tracking-tight text-white leading-[1.1]">
-                        The <span className="text-brand">Complete</span> <br />
-                        Interview Intelligence Stack
+                        Tools That <span className="text-brand">Empower</span> <br />
+                        Your Hiring Team
                     </h2>
                     <p className="text-lg sm:text-xl text-text-secondary leading-relaxed">
-                        TalentLyt is a comprehensive <span className="text-white font-bold">SaaS Platform</span> built to orchestrate <span className="text-white font-bold">multi-stage recruitment workflows</span> with forensic-level trust.
+                        TalentLyt gives your recruiters and hiring managers <span className="text-white font-bold">AI-powered superpowers</span>—not a replacement. You stay in control of every hiring decision.
                     </p>
                 </div>
 
