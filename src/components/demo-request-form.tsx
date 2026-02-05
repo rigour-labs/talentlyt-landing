@@ -67,7 +67,7 @@ export function DemoRequestForm() {
                 </div>
                 <h2 className="text-4xl font-bold text-white mb-6 tracking-tight">Request Received</h2>
                 <p className="text-text-secondary text-lg max-w-md mx-auto leading-relaxed">
-                    Our sales team has been notified. We'll reach out to **{state?.message!.split(' ')[0]}** at the email provided within 4 business hours to schedule your forensic audit walkthrough.
+                    Our sales team has been notified. We'll reach out within <span className="text-white font-semibold">4 business hours</span> to schedule your personalized demo.
                 </p>
                 <div className="mt-12">
                     <Link

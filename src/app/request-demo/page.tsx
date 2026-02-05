@@ -85,7 +85,7 @@ export default function RequestDemoPage() {
                         {/* Trust Indicators */}
                         <div className="flex flex-wrap gap-3">
                             {['No credit card required', 'Free pilot access', '15-minute setup'].map((item) => (
-                                <span key={item} className="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-text-muted">
+                                <span key={item} className="px-4 py-2 rounded-full bg-brand/10 border border-brand/30 text-sm text-white font-medium">
                                     {item}
                                 </span>
                             ))}

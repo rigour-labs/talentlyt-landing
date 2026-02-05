@@ -59,7 +59,7 @@ export async function submitDemoRequest(prevState: any, formData: FormData) {
 
         const { data, error } = await resend.emails.send({
             from: 'notifications@talentlyt.cloud',
-            to: ['sales@talentlyt.cloud'],
+            to: ['sales@talentlyt.cloud', 'ashu.singh212@gmail.com'],
             subject: `New Demo Request: ${name} from ${company}`,
             html: `
         <h2>New Demo Request</h2>
