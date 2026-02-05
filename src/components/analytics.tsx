@@ -45,25 +45,7 @@ export function AnalyticsProvider({ children }: { children: React.ReactNode }) {
             platform: 'landing_site',
             app_version: process.env.NEXT_PUBLIC_APP_VERSION || '1.0.0',
         });
-
-        // Initialize Apollo.io tracking
-        // Apollo is used for visitor identification and sales intelligence
-        initApollo();
     }, []);
-
-    // Apollo.io initialization function
-    function initApollo() {
-        const n = Math.random().toString(36).substring(7);
-        const o = document.createElement('script');
-        o.src = `https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache=${n}`;
-        o.async = true;
-        o.defer = true;
-        o.onload = function () {
-            // @ts-expect-error - Apollo tracking functions are loaded dynamically
-            window.trackingFunctions?.onLoad({ appId: '6975eea1cab3420015e4d170' });
-        };
-        document.head.appendChild(o);
-    }
 
     return (
         <>
