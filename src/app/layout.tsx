@@ -405,25 +405,6 @@ export default function RootLayout({
                 },
                 {
                   '@context': 'https://schema.org',
-                  '@type': 'VideoObject',
-                  'name': 'Maya AI Interviewer Demo - TalentLyt Technical Interview Platform',
-                  'description': 'Watch Maya AI conduct a live technical interview with real-time fraud detection and integrity verification. See how TalentLyt detects proxy candidates, deepfakes, and cheating.',
-                  'thumbnailUrl': 'https://talentlyt.cloud/assets/maya.jpg',
-                  'uploadDate': '2026-01-15T00:00:00+00:00',
-                  'duration': 'PT2M30S',
-                  'contentUrl': 'https://onbadqcmbugvszb0.public.blob.vercel-storage.com/maya-speaking.mp4',
-                  'embedUrl': 'https://talentlyt.cloud/',
-                  'publisher': {
-                    '@type': 'Organization',
-                    'name': 'TalentLyt',
-                    'logo': {
-                      '@type': 'ImageObject',
-                      'url': 'https://talentlyt.cloud/logo.png'
-                    }
-                  }
-                },
-                {
-                  '@context': 'https://schema.org',
                   '@type': 'HowTo',
                   'name': 'How to Detect Interview Fraud with TalentLyt',
                   'description': 'Learn how to detect proxy candidates, deepfakes, and cheating in remote interviews using TalentLyt 13-signal fraud detection.',
