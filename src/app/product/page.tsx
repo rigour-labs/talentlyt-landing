@@ -158,23 +158,45 @@ export default function ProductPage() {
                         Enterprise-grade infrastructure built for security, scale, and reliability.
                     </p>
 
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-                        {[
-                            { icon: Code2, label: 'TypeScript', sublabel: 'Frontend & API' },
-                            { icon: Server, label: 'Python', sublabel: 'ML & Forensics' },
-                            { icon: Globe, label: 'WebRTC', sublabel: 'Real-time Video' },
-                            { icon: Database, label: 'PostgreSQL', sublabel: 'Data Layer' },
-                            { icon: Cpu, label: 'TensorFlow', sublabel: 'ML Models' },
-                            { icon: Lock, label: 'AES-256', sublabel: 'Encryption' },
-                            { icon: Layers, label: 'Next.js', sublabel: 'Web Framework' },
-                            { icon: Zap, label: 'Vercel', sublabel: 'Edge Deployment' },
-                        ].map((tech) => (
-                            <div key={tech.label} className="p-4 rounded-xl bg-card border border-border/50 text-center">
-                                <tech.icon className="w-8 h-8 text-brand mx-auto mb-3" />
-                                <div className="font-medium text-white">{tech.label}</div>
-                                <div className="text-xs text-text-muted">{tech.sublabel}</div>
-                            </div>
-                        ))}
+                    {/* Core Infrastructure */}
+                    <div className="max-w-5xl mx-auto mb-12">
+                        <h3 className="text-lg font-semibold text-white mb-6 text-center">Core Infrastructure</h3>
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            {[
+                                { label: 'LiveKit', sublabel: 'Real-time Video/Audio', color: 'text-purple-400' },
+                                { label: 'Deepgram', sublabel: 'Speech-to-Text AI', color: 'text-green-400' },
+                                { label: 'Azure AI', sublabel: 'Identity & Face API', color: 'text-blue-400' },
+                                { label: 'AWS Rekognition', sublabel: 'Liveness Detection', color: 'text-orange-400' },
+                            ].map((tech) => (
+                                <div key={tech.label} className="p-4 rounded-xl bg-gradient-to-b from-white/5 to-transparent border border-white/10 text-center">
+                                    <div className={`font-bold text-lg ${tech.color}`}>{tech.label}</div>
+                                    <div className="text-xs text-text-muted mt-1">{tech.sublabel}</div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Application Stack */}
+                    <div className="max-w-5xl mx-auto">
+                        <h3 className="text-lg font-semibold text-white mb-6 text-center">Application Stack</h3>
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            {[
+                                { icon: Code2, label: 'TypeScript', sublabel: 'Frontend & API' },
+                                { icon: Server, label: 'Python', sublabel: 'ML & Forensics' },
+                                { icon: Database, label: 'PostgreSQL', sublabel: 'Data Layer' },
+                                { icon: Layers, label: 'Next.js', sublabel: 'Web Framework' },
+                                { icon: Cpu, label: 'TensorFlow', sublabel: 'ML Models' },
+                                { icon: Lock, label: 'AES-256', sublabel: 'Encryption' },
+                                { icon: Shield, label: 'Cloudflare', sublabel: 'Edge & Security' },
+                                { icon: Globe, label: 'WebRTC', sublabel: 'P2P Media' },
+                            ].map((tech) => (
+                                <div key={tech.label} className="p-4 rounded-xl bg-card border border-border/50 text-center">
+                                    <tech.icon className="w-6 h-6 text-brand mx-auto mb-2" />
+                                    <div className="font-medium text-white text-sm">{tech.label}</div>
+                                    <div className="text-xs text-text-muted">{tech.sublabel}</div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </section>
 
