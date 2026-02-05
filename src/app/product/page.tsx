@@ -165,8 +165,8 @@ export default function ProductPage() {
                             {[
                                 { label: 'LiveKit', sublabel: 'Real-time Video/Audio', color: 'text-purple-400' },
                                 { label: 'Deepgram', sublabel: 'Speech-to-Text AI', color: 'text-green-400' },
-                                { label: 'Azure AI', sublabel: 'Identity & Face API', color: 'text-blue-400' },
-                                { label: 'AWS Rekognition', sublabel: 'Liveness Detection', color: 'text-orange-400' },
+                                { label: 'AWS Rekognition', sublabel: 'Face & Liveness Detection', color: 'text-orange-400' },
+                                { label: 'Azure Cloud', sublabel: 'Infrastructure & Hosting', color: 'text-blue-400' },
                             ].map((tech) => (
                                 <div key={tech.label} className="p-4 rounded-xl bg-gradient-to-b from-white/5 to-transparent border border-white/10 text-center">
                                     <div className={`font-bold text-lg ${tech.color}`}>{tech.label}</div>
