@@ -8,6 +8,10 @@ interface RelatedArticle {
 }
 
 const allArticles: RelatedArticle[] = [
+    { slug: 'skills-based-hiring-2026', title: 'Skills-Based Hiring: Why Degrees No Longer Matter', category: 'Hiring Strategy' },
+    { slug: 'ai-agents-recruiting-2026', title: 'AI Agents in Recruiting: What Works in 2026', category: 'Technology' },
+    { slug: 'entry-level-hiring-crisis-2026', title: 'The Entry-Level Hiring Crisis', category: 'Industry Crisis' },
+    { slug: 'candidate-trust-ai-hiring', title: 'Why 66% Avoid AI-Driven Jobs', category: 'Candidate Experience' },
     { slug: 'what-is-ai-interview-platform', title: 'What is an AI Interview Platform?', category: 'Guide' },
     { slug: 'interview-integrity-verification-guide', title: 'Interview Integrity Verification Guide', category: 'Deep Dive' },
     { slug: 'multi-agent-ai-interviews', title: 'Multi-Agent AI for Interviews', category: 'Technology' },
@@ -15,6 +19,8 @@ const allArticles: RelatedArticle[] = [
     { slug: 'ai-leadership-remote-interviews', title: 'AI Leadership in Remote Interviews', category: 'Verification' },
     { slug: 'ai-collaboration-interview-verification', title: 'AI Collaboration Interview Verification', category: 'Guide' },
     { slug: 'identity-verification-remote-hiring', title: 'Identity Verification in Remote Hiring', category: 'Verification' },
+    { slug: 'cost-of-bad-hire-engineering', title: 'The Real Cost of a Bad Engineering Hire', category: 'Business Case' },
+    { slug: 'remote-hiring-challenges-2026', title: 'Remote Hiring Challenges in 2026', category: 'Industry Trends' },
 ];
 
 interface RelatedArticlesProps {

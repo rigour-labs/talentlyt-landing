@@ -26,12 +26,44 @@ export const metadata: Metadata = {
 
 const blogPosts = [
     {
+        slug: 'skills-based-hiring-2026',
+        title: 'Skills-Based Hiring in 2026: Why Degrees No Longer Matter',
+        excerpt: '65% of employers dropped degree requirements. Companies clinging to credential-based hiring are losing the talent war.',
+        category: 'Hiring Strategy',
+        readTime: '8 min read',
+        date: '2026-02-05',
+    },
+    {
+        slug: 'ai-agents-recruiting-2026',
+        title: 'AI Agents in Recruiting: What Actually Works in 2026',
+        excerpt: '52% of talent leaders are adding AI agents. But only 22% know how to manage them. Here\'s what separates success from disaster.',
+        category: 'Technology',
+        readTime: '10 min read',
+        date: '2026-02-04',
+    },
+    {
+        slug: 'entry-level-hiring-crisis-2026',
+        title: 'The Entry-Level Hiring Crisis: Where Did Junior Jobs Go?',
+        excerpt: 'AI eliminated traditional entry-level positions. A friend\'s kid graduated top of his CS class—9 months later, still no offers.',
+        category: 'Industry Crisis',
+        readTime: '9 min read',
+        date: '2026-02-03',
+    },
+    {
+        slug: 'candidate-trust-ai-hiring',
+        title: 'Why 66% of Candidates Won\'t Apply to AI-Driven Jobs',
+        excerpt: 'Two-thirds of job seekers avoid AI-driven hiring. The trust gap is real, but fixable. Here\'s what candidates actually want.',
+        category: 'Candidate Experience',
+        readTime: '8 min read',
+        date: '2026-02-02',
+    },
+    {
         slug: 'ai-collaboration-interview-verification',
         title: 'AI Collaboration in Technical Interviews: Verification Guide 2026',
         excerpt: '1 in 5 candidates now uses AI during interviews. Learn how to verify authentic AI leadership and distinguish architects from passengers.',
         category: 'Verification',
         readTime: '12 min read',
-        date: '2026-02-02',
+        date: '2026-02-01',
     },
     {
         slug: 'cost-of-bad-hire-engineering',
@@ -39,7 +71,7 @@ const blogPosts = [
         excerpt: 'A bad engineering hire costs $150K-$500K. Here is the breakdown of hidden costs and proven strategies to protect your hiring investment.',
         category: 'Business Case',
         readTime: '9 min read',
-        date: '2026-02-01',
+        date: '2026-01-31',
     },
     {
         slug: 'remote-hiring-challenges-2026',
