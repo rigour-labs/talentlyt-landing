@@ -5,7 +5,7 @@ import { Footer } from '@/components/footer';
 import { ArrowRight, BookOpen, Clock } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'Blog — AI Interview Fraud Detection & Technical Hiring Guides 2026',
+    title: 'Blog | AI Interview & Fraud Detection Guides',
     description: 'Expert guides on detecting ChatGPT cheating, deepfake candidates, interview fraud prevention, and AI-powered technical hiring. Updated for 2026.',
     keywords: [
         'ChatGPT cheating interviews',

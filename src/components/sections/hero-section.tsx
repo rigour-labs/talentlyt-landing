@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Play, ShieldCheck, Sparkles, Activity, Cpu, Database, Eye } from 'lucide-react';
+import { ArrowRight, Play, ShieldCheck, Sparkles, Activity, Cpu, Database, Eye, ChevronDown, CheckCircle2, Users, Clock } from 'lucide-react';
 import { BlueParticles } from '@/components/ui/blue-particles';
 import { MayaVoiceWidget } from '@/components/ui/maya-voice-widget';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
@@ -86,9 +86,23 @@ export function HeroSection() {
                         <span className="text-brand">Hire Faster.</span>
                     </h1>
 
-                    <p className={`text-lg sm:text-xl text-text-secondary mb-10 leading-relaxed max-w-xl ${heroVisible ? 'slide-up animate-delay-300' : 'animate-on-scroll'}`}>
-                        Maya AI handles technical screening while you focus on culture fit. <span className="text-white font-bold">13-signal fraud detection</span> catches proxy candidates and deepfakes in real-time. You stay in control—with <span className="text-white font-bold">verified candidates and predictive job success scores</span>.
+                    <p className={`text-lg sm:text-xl text-text-secondary mb-6 leading-relaxed max-w-xl ${heroVisible ? 'slide-up animate-delay-300' : 'animate-on-scroll'}`}>
+                        Maya AI handles technical screening while you focus on culture fit. <span className="text-white font-bold">13-signal fraud detection</span> catches proxy candidates and deepfakes in real-time.
                     </p>
+
+                    {/* Quick Value Props - Reduces bounce by showing immediate value */}
+                    <div className={`flex flex-wrap gap-3 mb-8 ${heroVisible ? 'slide-up animate-delay-350' : 'animate-on-scroll'}`}>
+                        {[
+                            { icon: CheckCircle2, text: 'No more bad hires' },
+                            { icon: Clock, text: '70% faster screening' },
+                            { icon: Users, text: 'You stay in control' },
+                        ].map((item, i) => (
+                            <div key={i} className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm text-text-secondary">
+                                <item.icon className="w-3.5 h-3.5 text-brand" />
+                                <span>{item.text}</span>
+                            </div>
+                        ))}
+                    </div>
 
                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
                         <Link
@@ -279,23 +293,28 @@ export function HeroSection() {
                 </div>
             </div>
 
-            {/* {false && (
-                <div className="mt-20 w-full border-y border-white/5 py-10 bg-white/[0.01]">
-                    <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
-                        <span className="text-[10px] font-bold text-text-muted uppercase tracking-[0.3em] shrink-0 text-center md:text-left">Standardizing Hiring At</span>
-                        <div className="flex-1 overflow-hidden relative w-full [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]" aria-label="Trusted by companies">
-                            <div className="flex gap-12 md:gap-16 animate-scroll items-center opacity-30 grayscale hover:grayscale-0 transition-all duration-700">
-                                {['Acme Corp', 'GlobalTech', 'Nebula', 'Vertex', 'Fusion', 'Apex', 'Horizon', 'Synergy'].map((company, i) => (
-                                    <span key={`1-${company}-${i}`} className="text-lg md:text-xl font-bold tracking-widest text-white whitespace-nowrap uppercase">{company}</span>
-                                ))}
-                                {['Acme Corp', 'GlobalTech', 'Nebula', 'Vertex', 'Fusion', 'Apex', 'Horizon', 'Synergy'].map((company, i) => (
-                                    <span key={`2-${company}-${i}`} className="text-lg md:text-xl font-bold tracking-widest text-white whitespace-nowrap uppercase">{company}</span>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            )} */}
+            {/* Scroll Indicator - Encourages users to explore more */}
+            <motion.div
+                className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer group"
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.5, duration: 0.5 }}
+                onClick={() => {
+                    document.getElementById('before-after-section')?.scrollIntoView({ behavior: 'smooth' });
+                    analytics.track({
+                        event: 'scroll_indicator_clicked',
+                        properties: { location: 'hero' },
+                    });
+                }}
+            >
+                <span className="text-[10px] text-text-muted uppercase tracking-widest group-hover:text-brand transition-colors">See How It Works</span>
+                <motion.div
+                    animate={{ y: [0, 6, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                >
+                    <ChevronDown className="w-5 h-5 text-text-muted group-hover:text-brand transition-colors" />
+                </motion.div>
+            </motion.div>
         </section>
     );
 }

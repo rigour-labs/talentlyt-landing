@@ -177,6 +177,17 @@ interface FeatureToggledEvent {
   };
 }
 
+/**
+ * Scroll/Engagement Events
+ * Fired when users interact with scroll indicators or engagement elements
+ */
+interface ScrollIndicatorClickedEvent {
+  event: 'scroll_indicator_clicked';
+  properties: {
+    location: 'hero' | 'section';
+  };
+}
+
 // ============================================================================
 // UNION TYPE
 // ============================================================================
@@ -195,7 +206,8 @@ type AnalyticsEvent =
   | LinkClickedEvent
   | VideoPlayedEvent
   | VideoPausedEvent
-  | FeatureToggledEvent;
+  | FeatureToggledEvent
+  | ScrollIndicatorClickedEvent;
 
 // ============================================================================
 // ANALYTICS CLASS

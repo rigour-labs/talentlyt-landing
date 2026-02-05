@@ -48,7 +48,7 @@ const TalentLytProductView = () => (
             <div className="absolute top-6 right-6 w-56 p-4 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 shadow-2xl z-30">
                 <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-xl bg-brand/20 border border-brand/30 flex items-center justify-center overflow-hidden">
-                        <Image src="/assets/maya.jpg" alt="Maya" width={40} height={40} className="object-cover" />
+                        <Image src="/assets/maya.jpg" alt="Maya AI Interview Co-Pilot - Technical Screening Assistant" width={40} height={40} className="object-cover" />
                     </div>
                     <div>
                         <div className="text-[10px] font-black text-white uppercase tracking-widest">Maya AI</div>
@@ -109,7 +109,7 @@ export function BeforeAfterSection() {
     const [state, setState] = useState<'before' | 'after'>('after');
 
     return (
-        <section className="py-24 sm:py-32 px-4 sm:px-6 bg-black relative overflow-hidden">
+        <section id="before-after-section" className="py-24 sm:py-32 px-4 sm:px-6 bg-black relative overflow-hidden">
             {/* Optimized Background Aesthetics - Reduced Blur Radius */}
             <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
                 <div className={`absolute top-0 left-1/4 w-[400px] h-[400px] rounded-full blur-[80px] transition-all duration-1000 ${state === 'before' ? 'bg-danger/5' : 'bg-brand/10'}`} />

@@ -278,14 +278,32 @@ export default function RootLayout({
                     {
                       '@type': 'ListItem',
                       'position': 2,
+                      'name': 'Blog',
+                      'item': 'https://talentlyt.cloud/blog'
+                    },
+                    {
+                      '@type': 'ListItem',
+                      'position': 3,
+                      'name': 'Compare',
+                      'item': 'https://talentlyt.cloud/compare'
+                    },
+                    {
+                      '@type': 'ListItem',
+                      'position': 4,
                       'name': 'Pricing',
                       'item': 'https://talentlyt.cloud/pricing'
                     },
                     {
                       '@type': 'ListItem',
-                      'position': 3,
+                      'position': 5,
                       'name': 'About',
                       'item': 'https://talentlyt.cloud/about'
+                    },
+                    {
+                      '@type': 'ListItem',
+                      'position': 6,
+                      'name': 'Contact',
+                      'item': 'https://talentlyt.cloud/contact'
                     }
                   ]
                 },

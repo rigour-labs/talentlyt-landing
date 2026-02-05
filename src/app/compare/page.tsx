@@ -5,8 +5,8 @@ import { Footer } from '@/components/footer';
 import { Check, X, ShieldCheck, Bot, Eye, Fingerprint, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'TalentLyt vs HireVue vs Codility vs Talently.ai — AI Interview Platform Comparison 2026',
-    description: 'Compare TalentLyt with HireVue, Codility, Talently.ai, HackerRank. TalentLyt offers 13-signal fraud detection with 6,800+ anomalies detected in beta. See the full comparison.',
+    title: 'Compare TalentLyt vs HireVue, Codility & More',
+    description: 'Compare TalentLyt with HireVue, Codility, Talently.ai. 13-signal fraud detection, 6,800+ anomalies detected in beta.',
     keywords: [
         'TalentLyt vs HireVue',
         'TalentLyt vs Codility',

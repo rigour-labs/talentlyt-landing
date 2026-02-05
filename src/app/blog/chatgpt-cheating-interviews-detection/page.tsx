@@ -6,7 +6,7 @@ import { ArrowLeft, Clock, Bot, AlertTriangle, Eye, Keyboard, Timer, Shield } fr
 import { RelatedArticles } from '@/components/blog/related-articles';
 
 export const metadata: Metadata = {
-    title: 'ChatGPT Cheating in Technical Interviews: Detection & Prevention Guide 2026',
+    title: 'ChatGPT Cheating Detection in Interviews | Guide',
     description: 'AI cheating tools have become nearly undetectable. Learn how to spot ChatGPT-assisted answers, deepfake proxies, and AI interview fraud with proven detection methods.',
     keywords: [
         'ChatGPT cheating interviews',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         'leetcode cheating detection'
     ],
     openGraph: {
-        title: 'ChatGPT Cheating in Technical Interviews: Detection & Prevention Guide 2026',
+        title: 'ChatGPT Cheating Detection in Technical Interviews',
         description: '1 in 5 candidates now uses AI during interviews. Here is how to detect it and protect your hiring process.',
         type: 'article',
         publishedTime: '2026-02-02T00:00:00Z',

@@ -12,10 +12,11 @@ import { ArchitectureSection } from '@/components/sections/architecture-section'
 import { HowItWorksSection } from '@/components/sections/how-it-works-section';
 import { CTASection } from '@/components/sections/cta-section';
 import { BeforeAfterSection } from '@/components/sections/before-after-section';
+import { ScrollProgress } from '@/components/ui/scroll-progress';
 
 export const metadata: Metadata = {
   title: 'TalentLyt | Your AI Co-Pilot for Technical Hiring',
-  description: 'Interview smarter, hire faster. Maya AI handles technical screening while you focus on culture fit. 13-signal fraud detection catches deepfakes & proxy candidates. Beta: 6,800+ anomalies detected across 82 interviews.',
+  description: 'Maya AI handles technical screening while you focus on culture fit. 13-signal fraud detection catches deepfakes. Beta: 6,800+ anomalies detected.',
   keywords: [
     'AI interview',
     'AI interview platform',
@@ -36,6 +37,7 @@ export const metadata: Metadata = {
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <ScrollProgress />
       <Navbar />
       <main id="main-content" role="main">
         <HeroSection />
