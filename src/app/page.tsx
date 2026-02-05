@@ -13,6 +13,8 @@ import { HowItWorksSection } from '@/components/sections/how-it-works-section';
 import { CTASection } from '@/components/sections/cta-section';
 import { BeforeAfterSection } from '@/components/sections/before-after-section';
 import { ScrollProgress } from '@/components/ui/scroll-progress';
+import { ExitIntentPopup } from '@/components/ui/exit-intent-popup';
+import { FloatingCTA } from '@/components/ui/floating-cta';
 
 export const metadata: Metadata = {
   title: 'TalentLyt | Your AI Co-Pilot for Technical Hiring',
@@ -38,6 +40,8 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <ScrollProgress />
+      <ExitIntentPopup />
+      <FloatingCTA />
       <Navbar />
       <main id="main-content" role="main">
         <HeroSection />
