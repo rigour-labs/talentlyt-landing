@@ -20,10 +20,10 @@ export function Navbar() {
 
     const navLinks = [
         { name: 'Platform', href: '/' },
+        { name: 'Product', href: '/product' },
         { name: 'Compare', href: '/compare' },
         { name: 'Pricing', href: '/pricing' },
         { name: 'Blog', href: '/blog' },
-        { name: 'Glossary', href: '/glossary' },
         { name: 'About', href: '/about' },
     ];
 
