@@ -37,11 +37,11 @@ export function BlueParticles() {
         let animationFrameId: number;
         let particles: Particle[] = [];
 
-        // Create particles
+        // Create particles - reduced from 150 to 50 for performance
         const initParticles = () => {
             particles = [];
-            const particleCount = 150;
-            
+            const particleCount = 50;
+
             for (let i = 0; i < particleCount; i++) {
                 particles.push({
                     x: Math.random() * canvas.width,
@@ -117,7 +117,7 @@ export function BlueParticles() {
         <canvas
             ref={canvasRef}
             className="absolute inset-0 z-0 pointer-events-none"
-            style={{ width: '100%', height: '100%' }}
+            style={{ width: '100%', height: '100%', willChange: 'transform' }}
         />
     );
 }

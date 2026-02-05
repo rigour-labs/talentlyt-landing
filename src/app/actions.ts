@@ -3,7 +3,15 @@
 import { Resend } from 'resend';
 import { z } from 'zod';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Lazy instantiation to avoid build-time errors when API key is not set
+const getResend = () => {
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+        console.warn('RESEND_API_KEY not configured - email sending disabled');
+        return null;
+    }
+    return new Resend(apiKey);
+};
 
 const demoSchema = z.object({
     name: z.string().min(2, "Name is required"),
@@ -38,8 +46,19 @@ export async function submitDemoRequest(prevState: any, formData: FormData) {
     const { name, email, company, role, message } = validatedFields.data;
 
     try {
+        const resend = getResend();
+
+        if (!resend) {
+            // Email not configured - log the request and return success
+            console.log('Demo request received (email disabled):', { name, email, company, role, message });
+            return {
+                success: true,
+                message: "Thank you! We've received your request and will reach out shortly.",
+            };
+        }
+
         const { data, error } = await resend.emails.send({
-            from: 'notifications@talentlyt.cloud', // Should use verified domain in prod
+            from: 'notifications@talentlyt.cloud',
             to: ['sales@talentlyt.cloud'],
             subject: `New Demo Request: ${name} from ${company}`,
             html: `
@@ -90,6 +109,17 @@ export async function submitContactForm(prevState: any, formData: FormData) {
     const { name, email, message } = validatedFields.data;
 
     try {
+        const resend = getResend();
+
+        if (!resend) {
+            // Email not configured - log the request and return success
+            console.log('Contact form received (email disabled):', { name, email, message });
+            return {
+                success: true,
+                message: name,
+            };
+        }
+
         const { data, error } = await resend.emails.send({
             from: 'notifications@talentlyt.cloud',
             to: ['sales@talentlyt.cloud'],

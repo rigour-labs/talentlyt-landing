@@ -31,15 +31,20 @@ export function DemoRequestForm() {
 
         if (state.success) {
             // Extract email from form for domain tracking
-            const formData = new FormData(formRef.current!);
-            const email = formData.get('email') as string;
+            // Check if form ref exists before accessing
+            let companyDomain: string | undefined;
+            if (formRef.current) {
+                const formData = new FormData(formRef.current);
+                const email = formData.get('email') as string;
+                companyDomain = email ? extractDomain(email) : undefined;
+            }
 
             analytics.track({
                 event: 'form_submitted',
                 properties: {
                     form_type: 'demo_request',
                     location: 'contact_page',
-                    company_domain: email ? extractDomain(email) : undefined,
+                    company_domain: companyDomain,
                 },
             });
         } else if (state.errors || state.message) {

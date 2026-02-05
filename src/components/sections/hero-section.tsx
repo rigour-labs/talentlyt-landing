@@ -24,7 +24,7 @@ const ConnectivityMesh = () => (
             </defs>
             <rect width="100%" height="100%" fill="url(#hero-grid)" />
 
-            {/* Distant Neural Paths */}
+            {/* Distant Neural Paths - animate once on load */}
             {[...Array(3)].map((_, i) => (
                 <motion.path
                     key={i}
@@ -33,8 +33,9 @@ const ConnectivityMesh = () => (
                     strokeWidth="0.5"
                     fill="none"
                     strokeDasharray="1 10"
-                    animate={{ strokeDashoffset: [0, -100] }}
-                    transition={{ duration: 20 + i * 5, repeat: Infinity, ease: "linear" }}
+                    initial={{ strokeDashoffset: 0 }}
+                    animate={{ strokeDashoffset: -100 }}
+                    transition={{ duration: 20 + i * 5, ease: "linear" }}
                 />
             ))}
         </svg>
