@@ -39,7 +39,7 @@ export default function PrivacyPolicyPage() {
                         <section className="p-8 rounded-[2rem] bg-gradient-to-br from-brand/10 to-transparent border border-brand/20">
                             <h2 className="text-xl font-bold mb-4">The Short Version</h2>
                             <div className="text-text-secondary text-sm leading-relaxed space-y-3">
-                                <p>• We collect data necessary to run AI interviews and detect fraud</p>
+                                <p>• We collect data necessary to run AI interviews and verify authentic engagement</p>
                                 <p>• We encrypt everything and follow industry security standards</p>
                                 <p>• We never sell your data to third parties</p>
                                 <p>• You can request your data or ask us to delete it anytime</p>
@@ -67,14 +67,14 @@ export default function PrivacyPolicyPage() {
                                 <div className="pl-4 border-l-2 border-brand/20">
                                     <h3 className="font-semibold text-white mb-2">Interview Session Data</h3>
                                     <p className="text-text-secondary text-sm leading-relaxed">
-                                        During AI-powered interviews, we process audio/video streams (when enabled), code submissions, chat messages, screen activity, and behavioral signals. This data powers our assessments and fraud detection.
+                                        During AI-powered interviews, we process audio/video streams (when enabled), code submissions, chat messages, screen activity, and behavioral signals. This data powers our assessments and AI leadership verification.
                                     </p>
                                 </div>
 
                                 <div className="pl-4 border-l-2 border-brand/20">
                                     <h3 className="font-semibold text-white mb-2">Integrity Verification Data</h3>
                                     <p className="text-text-secondary text-sm leading-relaxed">
-                                        Our 13-Signal Forensic Engine analyzes patterns to detect cheating, proxy candidates, and AI-assisted responses. This includes keystroke dynamics, audio-visual sync, and behavioral consistency metrics. We do <strong className="text-white">not</strong> collect biometric templates or create permanent identity databases.
+                                        Our 13-Signal Forensic Engine analyzes patterns to verify authentic problem-solving and AI leadership capabilities. This includes keystroke dynamics, audio-visual sync, and behavioral consistency metrics. We do <strong className="text-white">not</strong> collect biometric templates or create permanent identity databases.
                                     </p>
                                 </div>
 
@@ -114,7 +114,7 @@ export default function PrivacyPolicyPage() {
                                 <div className="pl-4 border-l-2 border-brand/20">
                                     <h3 className="font-semibold text-white mb-2">Improving Our AI</h3>
                                     <p className="text-text-secondary text-sm leading-relaxed">
-                                        We use aggregated, anonymized data to improve our AI models, reduce bias, and enhance fraud detection accuracy. Individual interview recordings are not used for training without explicit consent.
+                                        We use aggregated, anonymized data to improve our AI models, reduce bias, and enhance verification accuracy. Individual interview recordings are not used for training without explicit consent.
                                     </p>
                                 </div>
 

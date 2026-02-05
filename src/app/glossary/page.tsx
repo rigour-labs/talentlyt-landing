@@ -31,7 +31,7 @@ const glossaryTerms = [
     },
     {
         term: 'Behavioral Analysis',
-        definition: 'The process of monitoring and analyzing a candidate\'s behavior patterns during an interview, including typing speed, response timing, and interaction patterns to detect anomalies.',
+        definition: 'The process of monitoring and analyzing a candidate\'s behavior patterns during an interview, including typing speed, response timing, and interaction patterns to verify authentic engagement.',
         category: 'Integrity',
     },
     {
@@ -41,7 +41,7 @@ const glossaryTerms = [
     },
     {
         term: 'Cognitive Pattern Detection',
-        definition: 'AI analysis of how a candidate approaches problems, their vocabulary usage, and thinking patterns to verify consistency and detect potential fraud.',
+        definition: 'AI analysis of how a candidate approaches problems, their vocabulary usage, and thinking patterns to verify they lead AI rather than follow it.',
         category: 'Integrity',
     },
     {
@@ -52,7 +52,7 @@ const glossaryTerms = [
     },
     {
         term: 'Forensic Engine',
-        definition: 'A specialized AI component that monitors interview sessions for signs of fraud, cheating, or misrepresentation. TalentLyt\'s Forensic Engine works alongside Maya to verify integrity.',
+        definition: 'A specialized AI component that analyzes interview sessions for authentic problem-solving and AI leadership verification. TalentLyt\'s Forensic Engine works alongside Maya to verify candidates architect solutions.',
         category: 'Platform',
     },
     {
@@ -62,12 +62,12 @@ const glossaryTerms = [
     },
     {
         term: 'Gaze Tracking',
-        definition: 'Technology that monitors where a candidate is looking during an interview to detect if they are reading from notes, a second screen, or receiving off-camera assistance.',
+        definition: 'Technology that monitors where a candidate is looking during an interview to understand their problem-solving approach and verify authentic engagement.',
         category: 'Integrity',
     },
     {
         term: 'Integrity Verification',
-        definition: 'The process of ensuring that an interview candidate is authentic and completing assessments without unauthorized assistance, including proxy detection and fraud prevention.',
+        definition: 'The process of ensuring that an interview candidate is authentic and demonstrating genuine technical leadership, including identity verification and AI collaboration assessment.',
         category: 'Integrity',
         relatedLink: '/blog/interview-integrity-verification-guide',
     },
@@ -78,7 +78,7 @@ const glossaryTerms = [
     },
     {
         term: 'Keystroke Dynamics',
-        definition: 'Analysis of typing patterns, speed, and rhythm to detect anomalies like copy-paste events, AI-generated responses, or multiple users working on the same session.',
+        definition: 'Analysis of typing patterns, speed, and rhythm to understand how candidates approach problem-solving and verify authentic code authorship.',
         category: 'Integrity',
     },
     {
@@ -99,9 +99,9 @@ const glossaryTerms = [
     },
     {
         term: 'Proxy Actor',
-        definition: 'A person who fraudulently takes an interview on behalf of another candidate. Detecting proxy actors is a key function of interview integrity verification systems.',
+        definition: 'A person who takes an interview on behalf of another candidate. Verifying candidate identity throughout the session is a key function of interview integrity systems.',
         category: 'Integrity',
-        relatedLink: '/blog/detect-cheating-remote-interviews',
+        relatedLink: '/blog/ai-leadership-remote-interviews',
     },
     {
         term: 'Sentinel Hierarchy',

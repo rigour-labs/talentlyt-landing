@@ -6,7 +6,7 @@ import { ShieldCheck, Activity, Globe, Sparkles } from 'lucide-react';
 
 export const metadata: Metadata = {
     title: 'Request a Demo | TalentLyt AI Interview Platform',
-    description: 'Schedule a personalized demo of TalentLyt. Discover how our AI-powered technical interview platform with fraud detection can transform your hiring.',
+    description: 'Schedule a personalized demo of TalentLyt. Discover how our AI-powered technical interview platform with AI leadership verification can transform your hiring.',
     alternates: {
         canonical: 'https://talentlyt.cloud/request-demo',
     },
@@ -27,7 +27,7 @@ export default function RequestDemoPage() {
                         See TalentLyt in <span className="text-brand">Action</span>
                     </h1>
                     <p className="text-xl text-text-secondary">
-                        Get a personalized walkthrough of our AI interview platform and fraud detection capabilities.
+                        Get a personalized walkthrough of our AI interview platform and integrity verification capabilities.
                     </p>
                 </div>
 
@@ -44,9 +44,9 @@ export default function RequestDemoPage() {
                                     <ShieldCheck className="w-5 h-5 text-brand" />
                                 </div>
                                 <div>
-                                    <h3 className="font-semibold text-white mb-1">13-Signal Fraud Detection</h3>
+                                    <h3 className="font-semibold text-white mb-1">13-Signal AI Leadership Verification</h3>
                                     <p className="text-text-secondary text-sm leading-relaxed">
-                                        See how our forensic engine catches deepfakes, proxy candidates, and AI-assisted cheating in real-time.
+                                        See how our forensic engine verifies candidates are authentic architects who lead AI, not just prompt it.
                                     </p>
                                 </div>
                             </div>

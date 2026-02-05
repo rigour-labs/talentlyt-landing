@@ -6,17 +6,17 @@ import { ArrowRight, BookOpen, Clock } from 'lucide-react';
 import { NewsletterSignup } from '@/components/ui/newsletter-signup';
 
 export const metadata: Metadata = {
-    title: 'Blog | AI Interview & Fraud Detection Guides',
-    description: 'Expert guides on detecting ChatGPT cheating, deepfake candidates, interview fraud prevention, and AI-powered technical hiring. Updated for 2026.',
+    title: 'Blog | AI Interview & Integrity Verification Guides',
+    description: 'Expert guides on AI leadership verification, candidate authenticity, identity verification, and AI-powered technical hiring. Updated for 2026.',
     keywords: [
-        'ChatGPT cheating interviews',
-        'detect AI cheating job interview',
-        'deepfake candidate detection',
-        'interview fraud prevention',
+        'AI interview verification',
+        'AI leadership interviews',
+        'candidate identity verification',
+        'interview integrity verification',
         'AI interview platform',
         'technical hiring 2026',
-        'remote interview fraud',
-        'coding interview cheating',
+        'remote interview verification',
+        'technical interview authenticity',
         'cost of bad hire',
     ],
     alternates: {
@@ -26,10 +26,10 @@ export const metadata: Metadata = {
 
 const blogPosts = [
     {
-        slug: 'chatgpt-cheating-interviews-detection',
-        title: 'ChatGPT Cheating in Technical Interviews: Detection & Prevention Guide 2026',
-        excerpt: '1 in 5 candidates now uses AI during interviews. Learn how to detect ChatGPT-assisted answers, deepfake proxies, and AI interview fraud.',
-        category: 'Urgent',
+        slug: 'ai-collaboration-interview-verification',
+        title: 'AI Collaboration in Technical Interviews: Verification Guide 2026',
+        excerpt: '1 in 5 candidates now uses AI during interviews. Learn how to verify authentic AI leadership and distinguish architects from passengers.',
+        category: 'Verification',
         readTime: '12 min read',
         date: '2026-02-02',
     },
@@ -44,16 +44,16 @@ const blogPosts = [
     {
         slug: 'remote-hiring-challenges-2026',
         title: 'Remote Hiring in 2026: The New Challenges Nobody Prepared For',
-        excerpt: 'Interview fraud up 340%, timezone coordination nightmares, and AI arms races. The remote hiring landscape has fundamentally changed.',
+        excerpt: 'Interview verification complexity up 340%, timezone coordination nightmares, and AI arms races. The remote hiring landscape has fundamentally changed.',
         category: 'Industry Trends',
         readTime: '8 min read',
         date: '2026-01-28',
     },
     {
-        slug: 'detect-deepfake-proxy-candidates',
-        title: 'AI Interview Integrity: How to Detect Deepfake Proxy Candidates',
-        excerpt: 'Forensic techniques and AI-powered signals used to detect deepfake proxy candidates and verify candidate identity in real-time.',
-        category: 'Forensics',
+        slug: 'identity-verification-remote-hiring',
+        title: 'Identity Verification in Remote Hiring: A Technical Guide',
+        excerpt: 'Forensic techniques and AI-powered signals used to verify candidate identity and ensure authentic participation in real-time.',
+        category: 'Verification',
         readTime: '10 min read',
         date: '2026-01-23',
     },
@@ -68,7 +68,7 @@ const blogPosts = [
     {
         slug: 'interview-integrity-verification-guide',
         title: 'Interview Integrity Verification: Why It Matters for Technical Hiring',
-        excerpt: 'Discover how forensic interview verification detects cheating, proxy actors, and AI-assisted responses in real-time.',
+        excerpt: 'Discover how forensic interview verification ensures authentic problem-solving and verifies AI leadership in real-time.',
         category: 'Deep Dive',
         readTime: '6 min read',
         date: '2025-01-10',
@@ -76,7 +76,7 @@ const blogPosts = [
     {
         slug: 'multi-agent-ai-interviews',
         title: 'Multi-Agent AI for Technical Interviews: The Future of Hiring',
-        excerpt: 'How consensus-based AI systems ensure accurate and fraud-proof technical assessments.',
+        excerpt: 'How consensus-based AI systems ensure accurate and verified technical assessments.',
         category: 'Technology',
         readTime: '7 min read',
         date: '2025-01-05',
@@ -90,10 +90,10 @@ const blogPosts = [
         date: '2025-01-01',
     },
     {
-        slug: 'detect-cheating-remote-interviews',
-        title: 'How to Detect Cheating in Remote Technical Interviews',
-        excerpt: 'Expert strategies for identifying fraud, proxy actors, AI assistance, and unauthorized help in remote hiring.',
-        category: 'Security',
+        slug: 'ai-leadership-remote-interviews',
+        title: 'How to Verify AI Leadership in Remote Technical Interviews',
+        excerpt: 'Expert strategies for verifying authentic problem-solving, candidate identity, and AI leadership in remote hiring.',
+        category: 'Verification',
         readTime: '8 min read',
         date: '2024-12-20',
     },
@@ -157,7 +157,7 @@ export default function BlogPage() {
                         <div className="my-12">
                             <NewsletterSignup
                                 title="Get Hiring Insights Weekly"
-                                description="Join 500+ hiring managers getting tips on fraud detection, AI interviews, and technical recruitment."
+                                description="Join 500+ hiring managers getting tips on integrity verification, AI interviews, and technical recruitment."
                             />
                         </div>
 

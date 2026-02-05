@@ -17,7 +17,7 @@ export function PricingContent() {
                 '90 Minutes Included',
                 'Maya AI Interviewer',
                 'Panel Mode (AI + Human)',
-                '13-Signal Fraud Detection',
+                '13-Signal Verification',
                 'Deepfake & Voice Forensics',
                 '7-Day Data Retention'
             ],
@@ -36,7 +36,7 @@ export function PricingContent() {
             features: [
                 'Unlimited Minutes',
                 'Real-time Maya AI',
-                'Adversarial Fraud Detection',
+                'Adversarial Integrity Detection',
                 'Voice Biometrics (ECAPA-TDNN)',
                 'Unlimited Team Seats',
                 '30-Day Data Retention'
@@ -376,7 +376,7 @@ export function PricingContent() {
                                         { feature: 'Interview Model', talent: 'Live Multi-Agent Voice', trad: 'Asynchronous / One-way' },
                                         { feature: 'Job Success Prediction', talent: 'AI-Forecasting (85% Accuracy)', trad: 'Manual Intuition / None' },
                                         { feature: 'Candidate Intelligence', talent: 'Portable Interview Genomes', trad: 'Static PDF Resumes' },
-                                        { feature: 'Fraud Analysis', talent: '13-Signal Adversarial', trad: 'Basic Human Review' },
+                                        { feature: 'Integrity Verification', talent: '13-Signal Adversarial', trad: 'Basic Human Review' },
                                         { feature: 'Real-time Adaptation', talent: 'Claim Extraction & Probing', trad: 'Static Question Bank' },
                                         { feature: 'Learning Model', talent: 'Federated Collective Intelligence', trad: 'Siloed / Zero-Learning' },
                                         { feature: 'Feature Availability', talent: 'Zero Gates (All Tiers)', trad: 'Pay-for-Access Gates' },

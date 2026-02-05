@@ -133,6 +133,26 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  // Redirects for renamed blog posts
+  async redirects() {
+    return [
+      {
+        source: '/blog/detect-cheating-remote-interviews',
+        destination: '/blog/ai-leadership-remote-interviews',
+        permanent: true,
+      },
+      {
+        source: '/blog/chatgpt-cheating-interviews-detection',
+        destination: '/blog/ai-collaboration-interview-verification',
+        permanent: true,
+      },
+      {
+        source: '/blog/detect-deepfake-proxy-candidates',
+        destination: '/blog/identity-verification-remote-hiring',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

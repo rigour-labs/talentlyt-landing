@@ -70,7 +70,7 @@ export default function TermsPage() {
                                 </p>
                                 <ul className="list-disc pl-6 space-y-2">
                                     <li><strong className="text-white">Maya AI Interviewer:</strong> Conducts technical interviews with adaptive questioning and real-time evaluation</li>
-                                    <li><strong className="text-white">13-Signal Forensic Engine:</strong> Detects interview fraud, proxy candidates, and AI-assisted cheating</li>
+                                    <li><strong className="text-white">13-Signal Forensic Engine:</strong> Verifies candidate identity, authentic problem-solving, and AI leadership capabilities</li>
                                     <li><strong className="text-white">Job Success Prediction:</strong> Provides data-driven predictions of candidate performance</li>
                                     <li><strong className="text-white">Assessment Reports:</strong> Detailed technical evaluations with actionable insights</li>
                                 </ul>
@@ -195,7 +195,7 @@ export default function TermsPage() {
                                 <ul className="list-disc pl-6 space-y-2">
                                     <li>Uninterrupted or error-free service</li>
                                     <li>Specific hiring outcomes or candidate quality</li>
-                                    <li>That our fraud detection will catch every instance of cheating</li>
+                                    <li>That our verification system will identify every instance requiring review</li>
                                     <li>Compatibility with all systems or browsers</li>
                                 </ul>
                                 <p>

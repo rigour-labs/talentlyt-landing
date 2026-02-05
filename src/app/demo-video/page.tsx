@@ -7,9 +7,9 @@ import { ArrowRight, Play, Shield, Brain, Activity } from 'lucide-react';
 
 export const metadata: Metadata = {
     title: 'Watch Demo | TalentLyt AI Interview Platform in Action',
-    description: 'Watch a complete demo of TalentLyt AI interview platform. See Maya AI conduct technical interviews with real-time fraud detection, 13-signal integrity verification, and predictive job success scoring.',
+    description: 'Watch a complete demo of TalentLyt AI interview platform. See Maya AI conduct technical interviews with real-time AI leadership verification, 13-signal integrity verification, and predictive job success scoring.',
     openGraph: {
-        title: 'TalentLyt Demo Video - AI Interview Platform with Fraud Detection',
+        title: 'TalentLyt Demo Video - AI Interview Platform with Integrity Verification',
         description: 'Watch how TalentLyt catches proxy candidates and deepfakes while Maya AI conducts adaptive technical interviews.',
         type: 'video.other',
         videos: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     twitter: {
         card: 'player',
         title: 'TalentLyt Demo - AI Interview Platform',
-        description: 'See Maya AI interview candidates with real-time fraud detection',
+        description: 'See Maya AI interview candidates with real-time integrity verification',
     },
     alternates: {
         canonical: 'https://talentlyt.cloud/demo-video',
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
 const videoStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'VideoObject',
-    name: 'TalentLyt AI Interview Platform Demo - Maya AI & 13-Signal Fraud Detection',
-    description: 'Watch a complete walkthrough of TalentLyt, the AI interview platform with real-time fraud detection. See how Maya AI conducts adaptive technical interviews while our 13-signal integrity system catches proxy candidates, deepfakes, and AI-assisted cheating.',
+    name: 'TalentLyt AI Interview Platform Demo - Maya AI & 13-Signal Integrity Verification',
+    description: 'Watch a complete walkthrough of TalentLyt, the AI interview platform with real-time AI leadership verification. See how Maya AI conducts adaptive technical interviews while our 13-signal integrity system verifies candidates are authentic architects of their solutions.',
     thumbnailUrl: 'https://cdn.loom.com/sessions/thumbnails/b0a8d53703514523b7c21f9f585d9a73-00001.jpg',
     uploadDate: '2026-01-15T00:00:00Z',
     duration: 'PT3M',
@@ -77,7 +77,7 @@ export default function DemoVideoPage() {
                                 See TalentLyt <span className="text-brand">in Action</span>
                             </h1>
                             <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-                                Watch how Maya AI conducts technical interviews while our 13-signal integrity system catches fraud in real-time.
+                                Watch how Maya AI conducts technical interviews while our 13-signal integrity system verifies authenticity in real-time.
                             </p>
                         </div>
 
@@ -114,9 +114,9 @@ export default function DemoVideoPage() {
                                     <div className="w-12 h-12 rounded-xl bg-brand/10 flex items-center justify-center mb-4">
                                         <Shield className="w-6 h-6 text-brand" />
                                     </div>
-                                    <h3 className="font-bold text-lg mb-2">13-Signal Fraud Detection</h3>
+                                    <h3 className="font-bold text-lg mb-2">13-Signal AI Leadership Verification</h3>
                                     <p className="text-text-secondary text-sm">
-                                        See how we detect proxy candidates, deepfakes, and AI-assisted cheating.
+                                        See how we verify candidates are authentic architects who lead AI, not just prompt it.
                                     </p>
                                 </div>
                                 <div className="p-6 rounded-2xl bg-card border border-border/50">

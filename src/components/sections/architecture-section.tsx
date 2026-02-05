@@ -489,7 +489,7 @@ export function ArchitectureSection() {
                         </div>
                         <h4 className="text-3xl font-bold text-white mb-5 tracking-tight">Real-Time Truth Verification</h4>
                         <p className="text-base text-white/50 leading-relaxed font-medium">
-                            TalentLyt logic demands a signed consensus between Sentinels. We don't just detect fraud; we extract claims, verify depth, and predict success using a decentralized intelligence stack.
+                            TalentLyt logic demands a signed consensus between Sentinels. We verify authentic technical leadership; extracting claims, verifying depth, and predicting success using a decentralized intelligence stack.
                         </p>
                     </div>
 

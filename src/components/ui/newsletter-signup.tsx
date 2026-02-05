@@ -13,7 +13,7 @@ interface NewsletterSignupProps {
 export function NewsletterSignup({
     variant = 'card',
     title = 'Stay Updated on AI Hiring',
-    description = 'Get weekly insights on interview fraud detection, AI hiring trends, and technical recruitment best practices.',
+    description = 'Get weekly insights on interview integrity verification, AI hiring trends, and technical recruitment best practices.',
 }: NewsletterSignupProps) {
     const [email, setEmail] = useState('');
     const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');

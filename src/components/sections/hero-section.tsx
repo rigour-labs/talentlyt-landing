@@ -99,7 +99,7 @@ export function HeroSection() {
                     </h1>
 
                     <p className={`text-lg sm:text-xl text-text-secondary mb-6 leading-relaxed max-w-xl ${heroVisible ? 'slide-up animate-delay-300' : 'animate-on-scroll'}`}>
-                        Maya AI handles technical screening while you focus on culture fit. <span className="text-white font-bold">13-signal fraud detection</span> catches proxy candidates and deepfakes in real-time.
+                        Maya AI handles technical screening while you focus on culture fit. <span className="text-white font-bold">13-signal verification</span> ensures candidates lead AI—proving they're the architect, not the passenger.
                     </p>
 
                     {/* Quick Value Props - Reduces bounce by showing immediate value */}
@@ -192,12 +192,12 @@ export function HeroSection() {
                     >
                         <div>
                             <div className="text-2xl sm:text-3xl font-bold text-white mb-1">6,800+</div>
-                            <div className="technical-label text-text-muted text-xs sm:text-[10px]">Anomalies Detected</div>
+                            <div className="technical-label text-text-muted text-xs sm:text-[10px]">Sessions Analyzed</div>
                         </div>
                         <div className="w-px h-8 bg-white/10" aria-hidden="true" />
                         <div>
                             <div className="text-2xl sm:text-3xl font-bold text-white mb-1">41%</div>
-                            <div className="technical-label text-text-muted text-xs sm:text-[10px]">Fraud Flag Rate</div>
+                            <div className="technical-label text-text-muted text-xs sm:text-[10px]">Required Deeper Review</div>
                         </div>
                         <div className="w-px h-8 bg-white/10 hidden sm:block" aria-hidden="true" />
                         <div className="hidden sm:block">
@@ -220,7 +220,7 @@ export function HeroSection() {
                                     >
                                         <Image
                                             src="/assets/maya.jpg"
-                                            alt="Maya AI interviewer conducting a live technical coding interview with real-time integrity verification and fraud detection on TalentLyt AI interview platform"
+                                            alt="Maya AI interviewer conducting a live technical coding interview with real-time AI leadership verification on TalentLyt AI interview platform"
                                             fill
                                             priority
                                             className="object-cover brightness-[1.1]"

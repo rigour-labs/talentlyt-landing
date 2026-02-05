@@ -15,7 +15,7 @@ import { BeforeAfterSection } from '@/components/sections/before-after-section';
 
 export const metadata: Metadata = {
   title: 'TalentLyt | Your AI Co-Pilot for Technical Hiring',
-  description: 'Maya AI handles technical screening while you focus on culture fit. 13-signal fraud detection catches deepfakes. Beta: 6,800+ anomalies detected.',
+  description: 'Maya AI handles technical screening while you focus on culture fit. 13-signal verification ensures candidates lead AI, not follow it. Beta: 6,800+ sessions analyzed.',
   keywords: [
     'AI interview',
     'AI interview platform',

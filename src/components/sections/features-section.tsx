@@ -25,8 +25,8 @@ export function FeaturesSection() {
         },
         {
             title: 'Identity Verification',
-            benefit: 'Anti-Fraud Shield',
-            description: 'Face matching with ID documents, liveness checks, and candidate swap detection. Ensure the person you interview is the person you hire.',
+            benefit: 'Authenticity Shield',
+            description: 'Face matching with ID documents, liveness checks, and identity continuity. Ensure the person you interview is the person you hire.',
             icon: Shield,
             className: "md:col-span-1",
             metric: 'Real-time Audit',
@@ -51,12 +51,12 @@ export function FeaturesSection() {
             tag: 'SENTINEL SOLO'
         },
         {
-            title: '13-Signal Fraud Detection',
-            benefit: 'Detection Excellence',
-            description: 'Real-time monitoring for gaze drift, tab switching, voice mismatches, and deepfake indicators. Automated alerts so you can focus on the interview.',
+            title: '13-Signal AI Leadership Verification',
+            benefit: 'Verification Excellence',
+            description: 'Real-time analysis of problem-solving patterns, response authenticity, and AI collaboration style. Verify candidates architect solutions, not just prompt them.',
             icon: Lock,
             className: "md:col-span-2",
-            metric: '99.9% Detection',
+            metric: '99.9% Accuracy',
             tag: 'GOVERNOR'
         },
     ];

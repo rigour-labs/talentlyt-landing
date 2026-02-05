@@ -38,13 +38,13 @@ export function ProblemSolutionSection() {
         {
             title: 'Governor Verification',
             description: 'Real-time consensus mapping detects sub-100ms behavioral anomalies.',
-            benefit: '95% Fraud Detection',
+            benefit: '95% Verification Accuracy',
             icon: CheckCircle2
         },
         {
             title: 'Biometric Guard',
             description: 'Proprietary candidate recognition with automated matching and continuous focus re-verification.',
-            benefit: 'Zero Identity Fraud',
+            benefit: 'Zero Identity Risk',
             icon: Cpu
         },
         {

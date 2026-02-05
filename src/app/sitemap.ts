@@ -47,19 +47,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.85,
         },
         {
-            url: `${baseUrl}/blog/detect-cheating-remote-interviews`,
+            url: `${baseUrl}/blog/ai-leadership-remote-interviews`,
             lastModified: new Date('2024-12-20'),
             changeFrequency: 'monthly',
             priority: 0.85,
         },
         {
-            url: `${baseUrl}/blog/detect-deepfake-proxy-candidates`,
+            url: `${baseUrl}/blog/identity-verification-remote-hiring`,
             lastModified: new Date('2026-01-23'),
             changeFrequency: 'monthly',
             priority: 0.85,
         },
         {
-            url: `${baseUrl}/blog/chatgpt-cheating-interviews-detection`,
+            url: `${baseUrl}/blog/ai-collaboration-interview-verification`,
             lastModified: new Date('2026-02-02'),
             changeFrequency: 'monthly',
             priority: 0.9,

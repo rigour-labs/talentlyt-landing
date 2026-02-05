@@ -36,7 +36,7 @@ export default function ProductPage() {
                             Technical <span className="text-brand">Architecture</span>
                         </h1>
                         <p className="text-xl text-text-secondary max-w-2xl mx-auto">
-                            A multi-agent AI system that conducts technical interviews while detecting fraud in real-time. Built for scale, designed for trust.
+                            A multi-agent AI system that conducts technical interviews while verifying candidates lead AI, not follow it. Built for scale, designed for trust.
                         </p>
                     </div>
 
@@ -44,8 +44,8 @@ export default function ProductPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16">
                         {[
                             { label: 'Beta Interviews', value: '82', sublabel: 'Completed' },
-                            { label: 'Anomalies Detected', value: '6,824', sublabel: 'Signals analyzed' },
-                            { label: 'Fraud Signal Rate', value: '41%', sublabel: 'Flagged for review' },
+                            { label: 'Sessions Analyzed', value: '6,824', sublabel: 'Signals processed' },
+                            { label: 'AI Assistance Rate', value: '41%', sublabel: 'Required deeper review' },
                         ].map((stat) => (
                             <div key={stat.label} className="p-6 rounded-2xl bg-card border border-border/50 text-center">
                                 <div className="text-3xl font-bold text-brand mb-1">{stat.value}</div>
@@ -202,9 +202,9 @@ export default function ProductPage() {
 
                 {/* 13 Signals */}
                 <section className="container mx-auto px-4 py-16 border-t border-border/30">
-                    <h2 className="text-3xl font-bold text-center mb-4">13-Signal Fraud Detection</h2>
+                    <h2 className="text-3xl font-bold text-center mb-4">13-Signal AI Leadership Verification</h2>
                     <p className="text-text-secondary text-center max-w-2xl mx-auto mb-12">
-                        Our forensic engine analyzes multiple behavioral and technical signals to detect fraud attempts.
+                        Our forensic engine analyzes behavioral and technical signals to verify candidates architect solutions, not just prompt them.
                     </p>
 
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">

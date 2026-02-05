@@ -6,42 +6,42 @@ import { ArrowLeft, Clock, AlertTriangle, Eye, Keyboard, Users, Monitor, Shield,
 import { RelatedArticles } from '@/components/blog/related-articles';
 
 export const metadata: Metadata = {
-    title: 'The Cat and Mouse Game: Modern Fraud in Remote Technical Hiring',
-    description: 'Cheating in remote interviews is evolving. From hidden earpieces to live code-injection, discover the expert strategies for maintaining your hiring integrity.',
+    title: 'Verifying AI Leadership in Remote Technical Interviews | TalentLyt',
+    description: 'Remote interviews require new verification approaches. Learn how to ensure candidates architect solutions rather than just prompt AI tools.',
     keywords: [
-        'detect interview cheating',
-        'remote recruitment fraud',
-        'interview security protocols',
-        'technical screening integrity',
-        'proxy actor red flags',
-        'AI interview security'
+        'AI leadership verification',
+        'remote interview verification',
+        'interview integrity protocols',
+        'technical screening authenticity',
+        'candidate verification',
+        'AI interview verification'
     ],
     openGraph: {
-        title: 'The Cat and Mouse Game: Modern Fraud in Remote Technical Hiring',
-        description: 'A security-first guide to identifying and neutralizing fraud in the interview room.',
+        title: 'Verifying AI Leadership in Remote Technical Interviews',
+        description: 'A verification-first guide to ensuring authentic technical leadership in remote hiring.',
         type: 'article',
         publishedTime: '2024-12-20T00:00:00Z',
         authors: ['TalentLyt Product Team'],
     },
     alternates: {
-        canonical: 'https://talentlyt.cloud/blog/detect-cheating-remote-interviews',
+        canonical: 'https://talentlyt.cloud/blog/ai-leadership-remote-interviews',
     },
 };
 
 const articleStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'NewsArticle',
-    headline: 'The Cat and Mouse Game: Modern Fraud in Remote Technical Hiring',
-    description: 'Cheating in remote interviews is evolving. From hidden earpieces to live code-injection, discover the expert strategies for maintaining your hiring integrity.',
+    headline: 'Verifying AI Leadership in Remote Technical Interviews',
+    description: 'Remote interviews require new verification approaches. Learn how to ensure candidates architect solutions rather than just prompt AI tools.',
     image: 'https://talentlyt.cloud/og-image.png',
     datePublished: '2024-12-20T00:00:00Z',
     dateModified: '2024-12-20T00:00:00Z',
     author: { '@type': 'Organization', name: 'TalentLyt Product Team', url: 'https://talentlyt.cloud/about' },
     publisher: { '@type': 'Organization', name: 'TalentLyt', logo: { '@type': 'ImageObject', url: 'https://talentlyt.cloud/logo.png' } },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://talentlyt.cloud/blog/detect-cheating-remote-interviews' },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://talentlyt.cloud/blog/ai-leadership-remote-interviews' },
 };
 
-export default function DetectCheatingPage() {
+export default function AILeadershipRemoteInterviewsPage() {
     return (
         <>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleStructuredData) }} />
@@ -59,8 +59,8 @@ export default function DetectCheatingPage() {
 
                         <header className="mb-12">
                             <div className="flex items-center gap-4 mb-6">
-                                <span className="px-3 py-1 rounded-lg bg-red-500/10 text-red-500 text-xs font-bold uppercase tracking-wider">
-                                    Security Field Report
+                                <span className="px-3 py-1 rounded-lg bg-brand/10 text-brand text-xs font-bold uppercase tracking-wider">
+                                    AI Leadership Verification
                                 </span>
                                 <div className="flex items-center gap-2 text-text-muted text-xs">
                                     <Clock className="w-3 h-3" />
@@ -68,10 +68,10 @@ export default function DetectCheatingPage() {
                                 </div>
                             </div>
                             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-6 tracking-tight leading-[1.1]">
-                                The Cat and Mouse Game: Modern <span className="text-brand">Fraud</span> in Technical Hiring
+                                Verifying <span className="text-brand">AI Leadership</span> in Remote Technical Interviews
                             </h1>
                             <p className="text-xl text-text-secondary leading-relaxed max-w-2xl font-medium">
-                                In remote recruitment, security isn&apos;t just about proctoring—it&apos;s about staying one step ahead of a highly motivated adversarial market.
+                                In the AI era, verification isn&apos;t about catching people—it&apos;s about ensuring candidates can architect solutions, not just prompt them.
                             </p>
                             <time className="block mt-8 text-sm text-text-muted font-mono uppercase tracking-widest">
                                 By Rigour Labs Security Division | Dec 20, 2024
@@ -81,20 +81,20 @@ export default function DetectCheatingPage() {
                         <div className="prose prose-invert prose-lg max-w-none">
                             <section className="mb-16">
                                 <p className="text-text-secondary mb-6">
-                                    Let&apos;s be honest: If a six-figure salary is on the line, someone, somewhere, is going to try to cheat the system.
+                                    AI tools have transformed how engineers work. The question isn&apos;t whether candidates use AI—it&apos;s whether they can lead it.
                                 </p>
                                 <p className="text-text-secondary mb-6">
-                                    Over the last two years, interview fraud has shifted from amateur &quot;notes on a sticky-note&quot; to professional-grade proxy networks. We are now seeing specialized services where candidates pay a fee to a &quot;ghost interviewer&quot; who takes the technical screen on their behalf.
+                                    Over the last two years, the hiring challenge has shifted. Today&apos;s most valuable engineers aren&apos;t those who avoid AI—they&apos;re the ones who can architect solutions while using AI as a tool, not a crutch.
                                 </p>
                                 <p className="text-text-secondary mb-6 font-bold text-white">
-                                    If you&apos;re still relying on &quot;camera-on&quot; as your only security measure, you&apos;re already compromised.
+                                    The goal isn&apos;t to catch people—it&apos;s to verify they can lead technical decisions.
                                 </p>
                             </section>
 
                             <section className="mb-16">
-                                <h2 className="text-3xl font-black text-white mb-8 tracking-tight">The Forensic Red Flags</h2>
+                                <h2 className="text-3xl font-black text-white mb-8 tracking-tight">The Verification Signals</h2>
                                 <p className="text-text-secondary mb-10">
-                                    Detection today isn&apos;t about catching a person &quot;looking away.&quot; It&apos;s about analyzing the <strong>telemetry of technical truth.</strong> Here are the sophisticated signals we track to differentiate a honest candidate from a proxy.
+                                    Verification today isn&apos;t about watching for suspicious behavior. It&apos;s about understanding <strong>the telemetry of technical leadership.</strong> Here are the signals that distinguish an AI-leading architect from an AI-following prompter.
                                 </p>
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">

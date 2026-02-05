@@ -6,46 +6,46 @@ import { ArrowLeft, Clock, Bot, AlertTriangle, Eye, Keyboard, Timer, Shield } fr
 import { RelatedArticles } from '@/components/blog/related-articles';
 
 export const metadata: Metadata = {
-    title: 'ChatGPT Cheating Detection in Interviews | Guide',
-    description: 'AI cheating tools have become nearly undetectable. Learn how to spot ChatGPT-assisted answers, deepfake proxies, and AI interview fraud with proven detection methods.',
+    title: 'AI Collaboration in Interviews: Verification Guide | TalentLyt',
+    description: 'AI tools are now standard in engineering. Learn how to verify candidates lead AI rather than follow it, ensuring you hire architects not prompters.',
     keywords: [
-        'ChatGPT cheating interviews',
-        'detect AI cheating interviews',
-        'coding interview cheating prevention',
-        'AI interview fraud detection',
+        'AI collaboration verification',
+        'verify AI leadership interviews',
+        'coding interview AI assessment',
+        'AI interview verification',
         'ChatGPT technical interview',
-        'interview cheating software',
-        'anti-cheating hiring software',
-        'detect AI assisted answers',
-        'remote interview fraud',
-        'leetcode cheating detection'
+        'AI assisted interview assessment',
+        'verify authentic problem solving',
+        'AI collaboration assessment',
+        'remote interview verification',
+        'technical leadership verification'
     ],
     openGraph: {
-        title: 'ChatGPT Cheating Detection in Technical Interviews',
-        description: '1 in 5 candidates now uses AI during interviews. Here is how to detect it and protect your hiring process.',
+        title: 'AI Collaboration in Interviews: Verification Guide',
+        description: 'AI is now standard in engineering. Here is how to verify candidates lead AI rather than follow it.',
         type: 'article',
         publishedTime: '2026-02-02T00:00:00Z',
         authors: ['TalentLyt Product Team'],
     },
     alternates: {
-        canonical: 'https://talentlyt.cloud/blog/chatgpt-cheating-interviews-detection',
+        canonical: 'https://talentlyt.cloud/blog/ai-collaboration-interview-verification',
     },
 };
 
 const articleStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'NewsArticle',
-    headline: 'ChatGPT Cheating in Technical Interviews: Detection & Prevention Guide 2026',
-    description: 'AI cheating tools have become nearly undetectable. Learn how to spot ChatGPT-assisted answers, deepfake proxies, and AI interview fraud with proven detection methods.',
+    headline: 'AI Collaboration in Technical Interviews: Verification Guide 2026',
+    description: 'AI tools are now standard in engineering. Learn how to verify candidates lead AI rather than follow it, ensuring you hire architects not prompters.',
     image: 'https://talentlyt.cloud/og-image.png',
     datePublished: '2026-02-02T00:00:00Z',
     dateModified: '2026-02-02T00:00:00Z',
     author: { '@type': 'Organization', name: 'TalentLyt Product Team', url: 'https://talentlyt.cloud/about' },
     publisher: { '@type': 'Organization', name: 'TalentLyt', logo: { '@type': 'ImageObject', url: 'https://talentlyt.cloud/logo.png' } },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://talentlyt.cloud/blog/chatgpt-cheating-interviews-detection' },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://talentlyt.cloud/blog/ai-collaboration-interview-verification' },
 };
 
-export default function ChatGPTCheatingDetectionPage() {
+export default function AICollaborationVerificationPage() {
     return (
         <>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleStructuredData) }} />
@@ -63,8 +63,8 @@ export default function ChatGPTCheatingDetectionPage() {
 
                             <header className="mb-12">
                                 <div className="flex items-center gap-4 mb-6">
-                                    <span className="px-3 py-1 rounded-lg bg-danger/10 text-danger text-xs font-bold uppercase tracking-wider">
-                                        Urgent
+                                    <span className="px-3 py-1 rounded-lg bg-brand/10 text-brand text-xs font-bold uppercase tracking-wider">
+                                        AI Verification Guide
                                     </span>
                                     <div className="flex items-center gap-2 text-text-muted text-xs">
                                         <Clock className="w-3 h-3" />
@@ -72,10 +72,10 @@ export default function ChatGPTCheatingDetectionPage() {
                                     </div>
                                 </div>
                                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-6 tracking-tight leading-[1.1]">
-                                    ChatGPT Cheating in Technical Interviews: <span className="text-brand">Detection & Prevention Guide</span>
+                                    AI Collaboration in Technical Interviews: <span className="text-brand">Verification Guide</span>
                                 </h1>
                                 <p className="text-xl text-text-secondary leading-relaxed max-w-2xl font-medium">
-                                    1 in 5 employees now admits to using AI during interviews. Cheating tools claim 93% pass rates. Here&apos;s what&apos;s actually happening and how to protect your hiring process.
+                                    AI tools are now standard in engineering workflows. Here&apos;s how to verify candidates can lead AI—proving they&apos;re the architect, not the passenger.
                                 </p>
                                 <time className="block mt-8 text-sm text-text-muted font-mono uppercase tracking-widest">
                                     By Rigour Labs Trust Team | Feb 2, 2026

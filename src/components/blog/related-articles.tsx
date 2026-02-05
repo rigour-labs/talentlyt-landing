@@ -12,7 +12,9 @@ const allArticles: RelatedArticle[] = [
     { slug: 'interview-integrity-verification-guide', title: 'Interview Integrity Verification Guide', category: 'Deep Dive' },
     { slug: 'multi-agent-ai-interviews', title: 'Multi-Agent AI for Interviews', category: 'Technology' },
     { slug: 'reduce-hiring-bias-ai', title: 'Reduce Hiring Bias with AI', category: 'Best Practices' },
-    { slug: 'detect-cheating-remote-interviews', title: 'Detect Cheating in Remote Interviews', category: 'Security' },
+    { slug: 'ai-leadership-remote-interviews', title: 'AI Leadership in Remote Interviews', category: 'Verification' },
+    { slug: 'ai-collaboration-interview-verification', title: 'AI Collaboration Interview Verification', category: 'Guide' },
+    { slug: 'identity-verification-remote-hiring', title: 'Identity Verification in Remote Hiring', category: 'Verification' },
 ];
 
 interface RelatedArticlesProps {

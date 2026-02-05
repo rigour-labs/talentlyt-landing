@@ -6,43 +6,43 @@ import { ArrowLeft, Clock, Shield, Eye, Lock, Zap, AlertTriangle, Search } from 
 import { RelatedArticles } from '@/components/blog/related-articles';
 
 export const metadata: Metadata = {
-    title: 'The Ghost in the Machine: Detecting Deepfake Proxy Candidates',
-    description: 'Recruiting has entered a new chapter. Real-time deepfakes are infiltrating the technical hiring funnel. Here is how forensic engines are fighting back.',
+    title: 'Identity Verification in Remote Hiring: A Technical Guide | TalentLyt',
+    description: 'Remote hiring requires robust identity verification. Learn how modern verification systems ensure the person you interview is the person you hire.',
     keywords: [
-        'detect deepfake candidates',
+        'identity verification remote hiring',
         'AI interview integrity',
-        'proxy interviewers',
+        'candidate identity verification',
         'high-integrity technical screening',
         'identity verification AI',
-        'interview ethics',
+        'interview authenticity',
         'biometric privacy'
     ],
     openGraph: {
-        title: 'The Ghost in the Machine: Detecting Deepfake Proxy Candidates',
-        description: 'Verification strategies to identify fraud, proxy actors, and generative technology in remote technical hiring.',
+        title: 'Identity Verification in Remote Hiring: A Technical Guide',
+        description: 'Verification strategies for authentic candidate identity in remote technical hiring.',
         type: 'article',
         publishedTime: '2026-01-23T00:00:00Z',
         authors: ['TalentLyt Product Team'],
     },
     alternates: {
-        canonical: 'https://talentlyt.cloud/blog/detect-deepfake-proxy-candidates',
+        canonical: 'https://talentlyt.cloud/blog/identity-verification-remote-hiring',
     },
 };
 
 const articleStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'NewsArticle',
-    headline: 'The Ghost in the Machine: Detecting Deepfake Proxy Candidates',
-    description: 'Recruiting has entered a new chapter. Real-time deepfakes are infiltrating the technical hiring funnel. Here is how forensic engines are fighting back.',
+    headline: 'Identity Verification in Remote Hiring: A Technical Guide',
+    description: 'Remote hiring requires robust identity verification. Learn how modern verification systems ensure the person you interview is the person you hire.',
     image: 'https://talentlyt.cloud/og-image.png',
     datePublished: '2026-01-23T00:00:00Z',
     dateModified: '2026-01-23T00:00:00Z',
     author: { '@type': 'Organization', name: 'TalentLyt Product Team', url: 'https://talentlyt.cloud/about' },
     publisher: { '@type': 'Organization', name: 'TalentLyt', logo: { '@type': 'ImageObject', url: 'https://talentlyt.cloud/logo.png' } },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://talentlyt.cloud/blog/detect-deepfake-proxy-candidates' },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://talentlyt.cloud/blog/identity-verification-remote-hiring' },
 };
 
-export default function DeepfakeDetectionPage() {
+export default function IdentityVerificationRemoteHiringPage() {
     return (
         <>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleStructuredData) }} />
@@ -69,10 +69,10 @@ export default function DeepfakeDetectionPage() {
                                 </div>
                             </div>
                             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-6 tracking-tight leading-[1.1]">
-                                The Ghost in the Machine: Detecting <span className="text-brand">Deepfake</span> Proxy Candidates
+                                <span className="text-brand">Identity Verification</span> in Remote Hiring: A Technical Guide
                             </h1>
                             <p className="text-xl text-text-secondary leading-relaxed max-w-2xl font-medium">
-                                Recruiting has entered a new, darker chapter. Real-time deepfakes aren't just a gimmick anymore—they are actively infiltrating the technical hiring funnel. Here is what we&apos;re seeing on the front lines.
+                                Remote hiring requires new approaches to identity verification. Here&apos;s how modern systems ensure the person you interview is the person you hire.
                             </p>
                             <time className="block mt-8 text-sm text-text-muted font-mono uppercase tracking-widest">
                                 By Rigour Labs Trust Team | Jan 23, 2026

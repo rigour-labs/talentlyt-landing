@@ -114,14 +114,14 @@ export function ExitIntentPopup() {
 
                                 <p className="text-text-secondary mb-6">
                                     Try TalentLyt free for your first <span className="text-white font-semibold">5 interviews</span>.
-                                    See why teams detect 41% more fraud with our 13-signal verification.
+                                    See why teams catch 41% more issues with our 13-signal verification.
                                 </p>
 
                                 {/* Benefits */}
                                 <div className="flex flex-col gap-2 mb-6 text-left">
                                     {[
                                         '5 free AI-powered interviews',
-                                        'Full fraud detection enabled',
+                                        'Full integrity verification enabled',
                                         'No credit card required',
                                     ].map((benefit, i) => (
                                         <div key={i} className="flex items-center gap-2 text-sm text-text-secondary">
