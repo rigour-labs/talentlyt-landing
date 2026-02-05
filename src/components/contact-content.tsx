@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useActionState } from 'react';
-import { Mail, MessageSquare, Send, CheckCircle2, Loader2, User } from 'lucide-react';
+import { Mail, MessageSquare, Send, CheckCircle2, Loader2, User, MapPin, Clock, Building2 } from 'lucide-react';
 import { submitContactForm } from '@/app/actions';
 import Link from 'next/link';
 
@@ -133,6 +133,39 @@ export function ContactContent() {
                                     <h3 className="text-xl font-bold mb-1">Sales & Support</h3>
                                     <p className="text-text-muted text-sm mb-4">For demos, pricing, and technical questions</p>
                                     <a href="mailto:sales@talentlyt.cloud" className="text-brand text-lg font-bold hover:underline">sales@talentlyt.cloud</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Team Location */}
+                        <div className="block p-8 rounded-[2rem] bg-card border border-border/50 transition-all">
+                            <div className="flex items-start gap-4">
+                                <div className="w-12 h-12 rounded-xl bg-brand/10 flex items-center justify-center">
+                                    <MapPin className="w-5 h-5 text-brand" />
+                                </div>
+                                <div>
+                                    <h3 className="text-xl font-bold mb-1">Team Location</h3>
+                                    <p className="text-text-secondary text-sm leading-relaxed">
+                                        <span className="text-white font-semibold">Rigour Labs</span><br />
+                                        Pune, India<br />
+                                        Remote-first team
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Business Hours */}
+                        <div className="block p-8 rounded-[2rem] bg-card border border-border/50 transition-all">
+                            <div className="flex items-start gap-4">
+                                <div className="w-12 h-12 rounded-xl bg-brand/10 flex items-center justify-center">
+                                    <Clock className="w-5 h-5 text-brand" />
+                                </div>
+                                <div>
+                                    <h3 className="text-xl font-bold mb-1">Response Time</h3>
+                                    <p className="text-text-secondary text-sm">
+                                        We typically respond within <span className="text-white font-semibold">24 hours</span><br />
+                                        Mon-Fri, 9 AM - 6 PM IST
+                                    </p>
                                 </div>
                             </div>
                         </div>

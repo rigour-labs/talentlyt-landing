@@ -1,7 +1,8 @@
 'use client';
 
 import React from 'react';
-import { Target, Zap, Shield, Users, Rocket, Award } from 'lucide-react';
+import { Target, Zap, Shield, Users, Rocket, Award, MapPin, Building2, Globe, Linkedin } from 'lucide-react';
+import Link from 'next/link';
 
 export function AboutContent() {
     const values = [
@@ -102,11 +103,84 @@ export function AboutContent() {
                     </div>
                 </section>
 
-                <section className="text-center p-8 rounded-[2rem] bg-muted/30 border border-border/30">
-                    <h2 className="text-2xl font-bold mb-4">Rigour Labs Inc.</h2>
-                    <p className="text-text-secondary mb-4">
-                        TalentLyt is a product of Rigour Labs Inc., focusing on trust infrastructure for the AI era.
-                    </p>
+                {/* Team Section */}
+                <section className="mb-16">
+                    <h2 className="text-3xl font-bold text-center mb-12">Our Team</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {[
+                            {
+                                name: "Ashutosh Singh",
+                                role: "Co-Founder & CEO",
+                                bio: "15+ years building enterprise software. Previously at Oracle and multiple startups. Passionate about eliminating hiring bias through AI.",
+                                linkedin: "https://www.linkedin.com/in/erashu212/"
+                            },
+                            {
+                                name: "Gaurav Prakash",
+                                role: "Co-Founder & CTO",
+                                bio: "Full-stack architect with deep expertise in AI/ML systems. Built scalable platforms processing millions of transactions.",
+                                linkedin: "https://www.linkedin.com/in/gaurav-prakash-910aa9a0/"
+                            }
+                        ].map((member) => (
+                            <div key={member.name} className="p-6 rounded-[1.5rem] bg-card border border-border/50 hover:border-brand/20 transition-all">
+                                <div className="flex items-start justify-between mb-4">
+                                    <div>
+                                        <h3 className="text-xl font-bold text-white">{member.name}</h3>
+                                        <p className="text-brand text-sm font-medium">{member.role}</p>
+                                    </div>
+                                    <Link
+                                        href={member.linkedin}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="p-2 rounded-lg bg-white/5 hover:bg-brand/20 transition-colors"
+                                        aria-label={`${member.name}'s LinkedIn profile`}
+                                    >
+                                        <Linkedin className="w-5 h-5 text-brand" />
+                                    </Link>
+                                </div>
+                                <p className="text-text-secondary text-sm leading-relaxed">{member.bio}</p>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                {/* Company Info Section */}
+                <section className="p-8 rounded-[2rem] bg-muted/30 border border-border/30">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="text-center md:text-left">
+                            <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+                                <Building2 className="w-5 h-5 text-brand" />
+                                <h3 className="text-lg font-bold">Company</h3>
+                            </div>
+                            <p className="text-text-secondary text-sm">
+                                <span className="text-white font-semibold">Rigour Labs</span><br />
+                                Early-Stage Startup<br />
+                                Founded June 2025
+                            </p>
+                        </div>
+
+                        <div className="text-center md:text-left">
+                            <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+                                <MapPin className="w-5 h-5 text-brand" />
+                                <h3 className="text-lg font-bold">Based In</h3>
+                            </div>
+                            <p className="text-text-secondary text-sm">
+                                Pune, Maharashtra<br />
+                                India
+                            </p>
+                        </div>
+
+                        <div className="text-center md:text-left">
+                            <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+                                <Globe className="w-5 h-5 text-brand" />
+                                <h3 className="text-lg font-bold">Stage</h3>
+                            </div>
+                            <p className="text-text-secondary text-sm">
+                                Beta Testing Complete<br />
+                                82 interviews conducted<br />
+                                Ready for early adopters
+                            </p>
+                        </div>
+                    </div>
                 </section>
             </div>
         </main>
