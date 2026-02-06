@@ -3,19 +3,16 @@ import { Metadata } from 'next';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { HeroSection } from '@/components/sections/hero-section';
-import { WhyWeBuiltThisSection } from '@/components/sections/why-we-built-this-section';
-import { ProblemSolutionSection } from '@/components/sections/problem-solution-section';
 import { StatsSection } from '@/components/sections/stats-section';
-import { TestimonialsSection } from '@/components/sections/testimonials-section';
-import { FeaturesSection } from '@/components/sections/features-section';
-import { ArchitectureSection } from '@/components/sections/architecture-section';
+import { CapabilitiesSection } from '@/components/sections/capabilities-section';
 import { HowItWorksSection } from '@/components/sections/how-it-works-section';
+import { ProblemSolutionSection } from '@/components/sections/problem-solution-section';
 import { CTASection } from '@/components/sections/cta-section';
-import { BeforeAfterSection } from '@/components/sections/before-after-section';
+import { HomepageAnalytics } from '@/components/homepage-analytics';
 
 export const metadata: Metadata = {
   title: 'TalentLyt | Your AI Co-Pilot for Technical Hiring',
-  description: 'Maya AI handles technical screening while you focus on culture fit. 13-signal verification ensures candidates lead AI, not follow it. Beta: 6,800+ sessions analyzed.',
+  description: 'Maya AI handles technical screening while you focus on culture fit. Multi-signal verification ensures candidates demonstrate genuine technical ability. Beta: 6,800+ sessions analyzed.',
   keywords: [
     'AI interview',
     'AI interview platform',
@@ -28,8 +25,8 @@ export const metadata: Metadata = {
     'integrity verification system',
     'SaaS recruitment platform',
     'Job Success Prediction',
-    'Interview Genome',
-    'Interview Marketplace'
+    'candidate verification',
+    'interview platform'
   ],
 };
 
@@ -39,19 +36,14 @@ export default function LandingPage() {
       <Navbar />
       <main id="main-content" role="main">
         <HeroSection />
-        <BeforeAfterSection />
-        <ArchitectureSection />
-        <WhyWeBuiltThisSection />
-        <ProblemSolutionSection />
         <StatsSection />
-        <FeaturesSection />
+        <CapabilitiesSection />
         <HowItWorksSection />
-        {/* TODO: Uncomment when real testimonials/stats are available */}
-        {/* <StatsSection /> */}
-        {/* <TestimonialsSection /> */}
+        <ProblemSolutionSection />
         <CTASection />
       </main>
       <Footer />
+      <HomepageAnalytics />
     </div>
   );
 }

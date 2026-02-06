@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: '%s | TalentLyt'
   },
   description:
-    'Your AI co-pilot for technical hiring. Maya AI handles screening while you focus on culture fit. 13-signal verification ensures candidates lead AI, not follow it. Beta: 6,800+ sessions analyzed across 82 interviews.',
+    'Your AI co-pilot for technical hiring. Maya AI handles screening while you focus on culture fit. Multi-signal verification ensures candidates demonstrate genuine technical ability. Beta: 6,800+ sessions analyzed across 82 interviews.',
   keywords: [
     // Primary high-intent keywords
     'AI interview platform',

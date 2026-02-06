@@ -188,6 +188,48 @@ interface ScrollIndicatorClickedEvent {
   };
 }
 
+/**
+ * Scroll Depth Event
+ * Fired when user scrolls past milestone percentages
+ */
+interface ScrollDepthEvent {
+  event: 'scroll_depth';
+  properties: {
+    depth_percentage: 25 | 50 | 75 | 100;
+    page_path: string;
+    time_to_reach_seconds: number;
+  };
+}
+
+/**
+ * Section Impression Event
+ * Fired when a homepage section enters the viewport
+ */
+interface SectionImpressionEvent {
+  event: 'section_impression';
+  properties: {
+    section_id: string;
+    section_name: string;
+    section_index: number;
+    time_on_page_seconds: number;
+    scroll_depth_at_impression: number;
+  };
+}
+
+/**
+ * Engagement Time Milestone Event
+ * Fired when user reaches time milestones on a page
+ */
+interface EngagementMilestoneEvent {
+  event: 'engagement_milestone';
+  properties: {
+    milestone_seconds: 15 | 30 | 60 | 120;
+    page_path: string;
+    scroll_depth_at_milestone: number;
+    sections_viewed: number;
+  };
+}
+
 // ============================================================================
 // UNION TYPE
 // ============================================================================
@@ -207,7 +249,10 @@ type AnalyticsEvent =
   | VideoPlayedEvent
   | VideoPausedEvent
   | FeatureToggledEvent
-  | ScrollIndicatorClickedEvent;
+  | ScrollIndicatorClickedEvent
+  | ScrollDepthEvent
+  | SectionImpressionEvent
+  | EngagementMilestoneEvent;
 
 // ============================================================================
 // ANALYTICS CLASS

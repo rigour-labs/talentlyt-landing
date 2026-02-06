@@ -55,7 +55,7 @@ export function StatsSection() {
     ];
 
     return (
-        <section ref={sectionRef} className="px-4 sm:px-6 py-16 sm:py-24 md:py-32 bg-slate-950 relative overflow-hidden">
+        <section id="social-proof" ref={sectionRef} className="px-4 sm:px-6 py-16 sm:py-24 md:py-32 bg-slate-950 relative overflow-hidden">
             <div className="max-w-7xl mx-auto relative z-10">
                 {/* Section Header */}
                 <div className="text-center mb-12 sm:mb-16">
@@ -64,7 +64,7 @@ export function StatsSection() {
                         <span className="text-blue-400 font-semibold text-sm uppercase tracking-wide">Beta Testing Results</span>
                     </div>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-white">
-                        Proven in <span className="text-blue-500">Real Testing</span>
+                        Real Results from Our <span className="text-blue-500">Beta Program</span>
                     </h2>
                     <p className="text-lg text-slate-300 max-w-2xl mx-auto">
                         Our beta program detected thousands of integrity signals across live interviews.

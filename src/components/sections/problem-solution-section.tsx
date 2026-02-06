@@ -9,7 +9,7 @@ export function ProblemSolutionSection() {
 
     const problems = [
         {
-            title: 'Integrity Fragmentation',
+            title: 'Unverified Interviews',
             description: 'Candidates bypass legacy monitoring via dual-device or screen-share exploits.',
             impact: '30-40% compromised sessions',
             icon: ShieldAlert
@@ -27,7 +27,7 @@ export function ProblemSolutionSection() {
             icon: Zap
         },
         {
-            title: 'Proxy Interleaving',
+            title: 'Identity Swapping',
             description: 'Candidates swap identities mid-session or use proxy actors for technical rounds.',
             impact: 'Critical Integrity Breach',
             icon: ShieldAlert
@@ -36,14 +36,14 @@ export function ProblemSolutionSection() {
 
     const solutions = [
         {
-            title: 'Governor Verification',
-            description: 'Real-time consensus mapping detects sub-100ms behavioral anomalies.',
+            title: 'AI Verification',
+            description: 'Our AI continuously monitors interview integrity across multiple signals, catching issues human reviewers miss.',
             benefit: '95% Verification Accuracy',
             icon: CheckCircle2
         },
         {
-            title: 'Biometric Guard',
-            description: 'Proprietary candidate recognition with automated matching and continuous focus re-verification.',
+            title: 'Identity Verification',
+            description: 'Continuous face matching and liveness checks ensure the person you interview is the person you hire.',
             benefit: 'Zero Identity Risk',
             icon: Cpu
         },
@@ -56,7 +56,7 @@ export function ProblemSolutionSection() {
     ];
 
     return (
-        <section className="py-24 sm:py-32 px-4 sm:px-6 bg-[#030303] relative overflow-hidden" ref={ref}>
+        <section id="problem-solution" className="py-24 sm:py-32 px-4 sm:px-6 bg-[#030303] relative overflow-hidden" ref={ref}>
             {/* 3D Grid Pattern Overlay */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
                 <Image
@@ -71,11 +71,11 @@ export function ProblemSolutionSection() {
             <div className="max-w-7xl mx-auto relative z-10">
                 <div className="text-center mb-20 sm:mb-28">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-warning/10 border border-warning/20 mb-8">
-                        <span className="technical-label text-warning">Market Diagnostic: Global</span>
+                        <span className="technical-label text-warning">The Problem We Solve</span>
                     </div>
                     <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 tracking-tight text-white leading-[1.1]">
-                        The <span className="text-warning">Remote Truth</span> Crisis. <br />
-                        The <span className="text-brand">Live Intelligence</span> Solution.
+                        The <span className="text-warning">Remote Hiring</span> Challenge. <br />
+                        The <span className="text-brand">AI-Powered</span> Solution.
                     </h2>
                     <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto">
                         Remote hiring faces new integrity challenges. TalentLyt helps your team verify candidates with <span className="text-white font-bold">live adaptive AI</span> while you stay in control of every hiring decision.

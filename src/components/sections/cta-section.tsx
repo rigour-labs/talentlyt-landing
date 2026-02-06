@@ -7,7 +7,7 @@ import { analytics } from '@/lib/analytics';
 export function CTASection() {
 
     return (
-        <section className="px-4 sm:px-6 py-24 sm:py-32 bg-[#030303] relative overflow-hidden">
+        <section id="final-cta" className="px-4 sm:px-6 py-24 sm:py-32 bg-[#030303] relative overflow-hidden">
             {/* Background Glows */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-4xl opacity-20 pointer-events-none">
                 <div className="absolute inset-0 bg-brand/20 blur-[120px] rounded-full animate-pulse" />
@@ -17,13 +17,10 @@ export function CTASection() {
                 <div className="relative bg-white/[0.02] backdrop-blur-3xl border border-white/10 rounded-[4rem] p-12 sm:p-20 md:p-24 overflow-hidden group shadow-2xl">
 
                     <div className="relative z-10 flex flex-col items-center">
-                        {/* Urgency Badge */}
-                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand/10 border border-brand/20 rounded-full mb-10">
-                            <span className="technical-label text-[10px] text-brand">
-                                [Operational_Status: Scalable]
-                            </span>
-                            <div className="w-1.5 h-1.5 rounded-full bg-brand animate-pulse" />
-                        </div>
+                        {/* Mission Quote */}
+                        <p className="text-sm text-text-secondary italic mb-10 max-w-xl text-center">
+                            &ldquo;We built TalentLyt to give engineering teams an AI co-pilot that handles screening while they focus on what matters — finding the right culture fit.&rdquo;
+                        </p>
 
                         <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 tracking-tighter text-white leading-[0.9] text-center">
                             Your team. <br />
