@@ -12,7 +12,7 @@ export function HeroSection() {
     const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation({ threshold: 0.2, triggerOnce: true });
 
     return (
-        <section id="hero" ref={heroRef as React.RefObject<HTMLElement>} className="relative min-h-[90vh] flex flex-col justify-center pt-32 pb-12 px-4 sm:px-6 overflow-hidden">
+        <section id="hero" ref={heroRef as React.RefObject<HTMLElement>} className="relative min-h-[90vh] flex flex-col justify-start pt-40 pb-12 px-4 sm:px-6 overflow-hidden">
             {/* Background Glows */}
             <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-full h-full max-w-6xl pointer-events-none -z-10">
                 <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-brand/5 blur-[120px] rounded-full" />
@@ -21,7 +21,7 @@ export function HeroSection() {
 
             <div className="max-w-7xl mx-auto relative z-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                 <div className={`flex flex-col items-start text-left max-w-2xl order-2 lg:order-1 ${heroVisible ? 'slide-up' : 'animate-on-scroll'}`}>
-                    <div className={`flex flex-wrap items-center gap-3 mb-8 ${heroVisible ? 'fade-in animate-delay-100' : 'animate-on-scroll'}`}>
+                    <div className={`flex flex-wrap items-center gap-3 mb-8 mt-4 ${heroVisible ? 'fade-in animate-delay-100' : 'animate-on-scroll'}`}>
                         {/* Live Beta Badge */}
                         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/20 border border-green-500/40 shadow-[0_0_15px_rgba(34,197,94,0.2)]">
                             <span className="relative flex h-2 w-2">
@@ -43,7 +43,7 @@ export function HeroSection() {
                     </h1>
 
                     <p className={`text-lg sm:text-xl text-text-secondary mb-6 leading-relaxed max-w-xl ${heroVisible ? 'slide-up animate-delay-300' : 'animate-on-scroll'}`}>
-                        Maya AI handles technical screening while you focus on culture fit. <span className="text-white font-bold">Multi-signal verification</span> ensures candidates demonstrate genuine technical ability—not just AI-assisted answers.
+                        Let Maya handle the technical screening so your team can focus on culture fit. We verify that candidates actually know their stuff — no more wondering if they had help.
                     </p>
 
                     {/* Quick Value Props */}
@@ -110,7 +110,7 @@ export function HeroSection() {
                         <div className="w-px h-8 bg-white/10" aria-hidden="true" />
                         <div>
                             <div className="text-2xl sm:text-3xl font-bold text-white mb-1">41%</div>
-                            <div className="technical-label text-text-muted text-xs sm:text-[10px]">Required Deeper Review</div>
+                            <div className="technical-label text-text-muted text-xs sm:text-[10px]">Flagged for Review</div>
                         </div>
                         <div className="w-px h-8 bg-white/10 hidden sm:block" aria-hidden="true" />
                         <div className="hidden sm:block">

@@ -9,23 +9,23 @@ export function StatsSection() {
     const betaHighlights = [
         {
             title: "Face Detection",
-            description: "Caught candidates looking away or not visible during responses",
+            description: "Caught candidates looking away, leaving the frame, or not visible when answering questions",
             metric: "3,077",
-            metricLabel: "Detections",
+            metricLabel: "Times Caught",
             icon: Eye,
         },
         {
-            title: "Identity Verification",
-            description: "Flagged potential proxy or deepfake attempts via lip-sync and identity analysis",
+            title: "Identity Check",
+            description: "Flagged sessions where the face didn't match or showed signs of a deepfake",
             metric: "1,390",
-            metricLabel: "Flags",
+            metricLabel: "Flags Raised",
             icon: ShieldCheck,
         },
         {
-            title: "Behavior Monitoring",
-            description: "Detected tab switches, clipboard pastes, and robotic typing patterns",
+            title: "Behavior Watch",
+            description: "Spotted tab switching, copy-pasting answers, and robotic typing during interviews",
             metric: "1,186",
-            metricLabel: "Catches",
+            metricLabel: "Issues Found",
             icon: Keyboard,
         }
     ];
@@ -67,7 +67,7 @@ export function StatsSection() {
                         Real Results from Our <span className="text-blue-500">Beta Program</span>
                     </h2>
                     <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-                        Our beta program detected thousands of integrity signals across live interviews.
+                        We ran 82 real interviews and tracked everything. Here&apos;s what the data looked like.
                     </p>
                 </div>
 

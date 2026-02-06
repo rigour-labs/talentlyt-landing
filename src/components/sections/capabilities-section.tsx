@@ -7,42 +7,42 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 const capabilities = [
     {
         title: 'Maya AI Interviewer',
-        description: 'Maya conducts adaptive technical interviews in real-time. She probes deeper when answers are surface-level and validates understanding through follow-up questions.',
+        description: 'Maya runs technical interviews for you. She asks follow-ups when something doesn\'t add up and digs into areas where candidates are vague. Think of her as the technical screener you wish you had time to be.',
         metric: '82 beta interviews completed',
         icon: Bot,
         className: 'md:col-span-2',
     },
     {
         title: 'Identity Verification',
-        description: 'Continuous face matching, voice verification, and liveness checks ensure the person you interview is the person you hire.',
+        description: 'Face matching and liveness checks run throughout the entire interview. The person who shows up is the person you evaluate — no swaps, no surprises.',
         metric: '3,077 signals caught in beta',
         icon: Shield,
         className: 'md:col-span-1',
     },
     {
         title: 'Multi-Signal Analysis',
-        description: '13 verification signals work together — from keystroke patterns to response timing — to verify candidates are genuinely solving problems, not reading from scripts.',
+        description: 'We look at 13+ signals — keystroke rhythm, response timing, tab behavior — to spot when someone\'s reading off a script vs. actually problem-solving.',
         metric: '15 signal types monitored',
         icon: Activity,
         className: 'md:col-span-1',
     },
     {
-        title: 'Predictive Job Success',
-        description: 'ML models analyze verified interview data to predict on-the-job performance, helping your team make data-backed hiring decisions.',
+        title: 'Job Success Prediction',
+        description: 'Our models use verified interview data to estimate how well a candidate will actually perform on the job. It\'s data, not gut feeling.',
         metric: '85% prediction accuracy',
         icon: Brain,
         className: 'md:col-span-1',
     },
     {
-        title: 'Panel Mode (AI Whisper)',
-        description: 'Run interviews your way. Maya provides real-time suggestions and probing questions while you focus on culture fit and soft skills.',
+        title: 'Panel Mode',
+        description: 'Want to run the interview yourself? Maya sits in the background and whispers suggested questions and flags in real-time. You lead, she supports.',
         metric: 'Real-time co-pilot',
         icon: Zap,
         className: 'md:col-span-1',
     },
     {
-        title: 'Forensic Video Scans',
-        description: 'Upload any recorded interview (Zoom, Teams, etc.) for deepfake and lip-sync analysis. Get verdicts on existing footage — no live interview required.',
+        title: 'Video Scan',
+        description: 'Already have recorded interviews from Zoom or Teams? Upload them and we\'ll check for deepfakes, lip-sync issues, and identity mismatches.',
         metric: '$35 per scan',
         icon: Cpu,
         className: 'md:col-span-1',
@@ -69,7 +69,7 @@ export function CapabilitiesSection() {
                         What <span className="text-brand">TalentLyt</span> Does
                     </h2>
                     <p className="text-lg sm:text-xl text-text-secondary leading-relaxed">
-                        AI-powered tools that <span className="text-white font-bold">empower your hiring team</span> — not replace them. You stay in control of every hiring decision.
+                        Tools that make your hiring team faster and more confident. <span className="text-white font-bold">You still make every call</span> — we just give you better information to work with.
                     </p>
                 </div>
 

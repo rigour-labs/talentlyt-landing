@@ -19,7 +19,7 @@ export function CTASection() {
                     <div className="relative z-10 flex flex-col items-center">
                         {/* Mission Quote */}
                         <p className="text-sm text-text-secondary italic mb-10 max-w-xl text-center">
-                            &ldquo;We built TalentLyt to give engineering teams an AI co-pilot that handles screening while they focus on what matters — finding the right culture fit.&rdquo;
+                            &ldquo;We got tired of watching great engineering teams waste weeks on screening calls. So we built something to handle that part for them.&rdquo;
                         </p>
 
                         <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 tracking-tighter text-white leading-[0.9] text-center">
@@ -27,7 +27,7 @@ export function CTASection() {
                             Your <span className="text-brand">AI Co-Pilot.</span>
                         </h2>
                         <p className="text-lg sm:text-xl text-text-secondary mb-12 max-w-2xl mx-auto text-center opacity-70">
-                            TalentLyt handles technical screening so you can focus on culture fit. <span className="text-white font-bold">Verified candidates, faster decisions</span>—with you in control.
+                            Stop spending your best engineers&apos; time on screening calls. <span className="text-white font-bold">Let Maya handle it</span> — you focus on finding the right fit.
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-6 mb-16">
@@ -81,7 +81,7 @@ export function CTASection() {
                         {/* Legal Disclaimer */}
                         <div className="mt-16 text-xs text-slate-400 max-w-3xl mx-auto space-y-2 text-center leading-relaxed">
                             <p>
-                                TalentLyt empowers your hiring team with AI-verified insights. You always make the final call—we just help you make it faster and with more confidence.
+                                You make the hiring decisions. We just make sure you have the right information when you do.
                             </p>
                             <p>
                                 For more information on how we handle biometric and behavioral data, see our <Link href="/privacy" className="underline text-slate-300 hover:text-white transition-colors">Privacy Policy</Link> and <Link href="/ethics" className="underline text-slate-300 hover:text-white transition-colors">AI Ethics Disclosure</Link>.

@@ -9,48 +9,48 @@ export function ProblemSolutionSection() {
 
     const problems = [
         {
-            title: 'Unverified Interviews',
-            description: 'Candidates bypass legacy monitoring via dual-device or screen-share exploits.',
-            impact: '30-40% compromised sessions',
+            title: 'Cheating is Easy',
+            description: 'A second laptop, a screen share to a friend, ChatGPT on another tab — candidates have dozens of ways to fake their way through.',
+            impact: '30-40% of sessions compromised',
             icon: ShieldAlert
         },
         {
-            title: 'Audit Bottleneck',
-            description: 'Manual review of hour-long recordings delays hiring pipelines by days.',
-            impact: '4-6 hours per audit',
+            title: 'Review Takes Forever',
+            description: 'Watching hour-long recordings to catch issues? That\'s days of your team\'s time, per role.',
+            impact: '4-6 hours per manual review',
             icon: Activity
         },
         {
-            title: 'Evaluation Variance',
-            description: 'Inconsistent scoring across interviewers makes it hard to compare candidates fairly.',
-            impact: '50% Score Variance',
+            title: 'Scoring is Inconsistent',
+            description: 'Different interviewers grade differently. Two candidates with similar skills get wildly different scores.',
+            impact: 'Up to 50% score variance',
             icon: Zap
         },
         {
-            title: 'Identity Swapping',
-            description: 'Candidates swap identities mid-session or use proxy actors for technical rounds.',
-            impact: 'Critical Integrity Breach',
+            title: 'People Swap In',
+            description: 'Someone else shows up on day one. It happens more than you\'d think — especially in remote hiring.',
+            impact: 'Hard to catch without tools',
             icon: ShieldAlert
         }
     ];
 
     const solutions = [
         {
-            title: 'AI Verification',
-            description: 'Our AI continuously monitors interview integrity across multiple signals, catching issues human reviewers miss.',
-            benefit: '95% Verification Accuracy',
+            title: 'Always-On Monitoring',
+            description: 'Maya watches for red flags the entire session — tab switches, unusual pauses, copy-paste patterns. Things a human reviewer would need hours to spot.',
+            benefit: '95% detection accuracy',
             icon: CheckCircle2
         },
         {
-            title: 'Identity Verification',
-            description: 'Continuous face matching and liveness checks ensure the person you interview is the person you hire.',
-            benefit: 'Zero Identity Risk',
+            title: 'Face Match, Every Minute',
+            description: 'We check the candidate\'s face throughout the interview, not just at the start. If someone swaps in, we know.',
+            benefit: 'Continuous verification',
             icon: Cpu
         },
         {
-            title: 'Standardized Maya Scoring',
-            description: 'Consistent AI-assisted evaluation that complements your team\'s judgment.',
-            benefit: '99% More Consistency',
+            title: 'Same Bar, Every Time',
+            description: 'Maya scores every candidate the same way. No more "tough interviewer" vs "easy interviewer" lottery.',
+            benefit: 'Consistent scoring',
             icon: Zap
         }
     ];
@@ -74,11 +74,11 @@ export function ProblemSolutionSection() {
                         <span className="technical-label text-warning">The Problem We Solve</span>
                     </div>
                     <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 tracking-tight text-white leading-[1.1]">
-                        The <span className="text-warning">Remote Hiring</span> Challenge. <br />
-                        The <span className="text-brand">AI-Powered</span> Solution.
+                        Remote hiring is <span className="text-warning">broken</span>. <br />
+                        We&apos;re <span className="text-brand">fixing it</span>.
                     </h2>
                     <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto">
-                        Remote hiring faces new integrity challenges. TalentLyt helps your team verify candidates with <span className="text-white font-bold">live adaptive AI</span> while you stay in control of every hiring decision.
+                        Candidates cheat, identities get swapped, and your team wastes hours on manual review. TalentLyt catches what humans can&apos;t — while you keep full control of every hiring decision.
                     </p>
                 </div>
 
@@ -91,8 +91,8 @@ export function ProblemSolutionSection() {
                                 <ShieldAlert className="w-6 h-6" />
                             </div>
                             <div>
-                                <h3 className="text-2xl font-bold text-white mb-1 tracking-tight">Legacy Frameworks</h3>
-                                <p className="technical-label text-danger">Compromised Status</p>
+                                <h3 className="text-2xl font-bold text-white mb-1 tracking-tight">The Old Way</h3>
+                                <p className="technical-label text-danger">Broken</p>
                             </div>
                         </div>
 
@@ -105,7 +105,7 @@ export function ProblemSolutionSection() {
                                 <p className="text-sm text-text-muted leading-relaxed mb-6">{problem.description}</p>
                                 <div className="flex items-center gap-2 bg-danger/5 px-3 py-1.5 rounded-lg border border-danger/10 w-fit">
                                     <Activity className="w-3 h-3 text-danger" />
-                                    <span className="technical-label text-danger uppercase tracking-widest">Incident Risk</span>
+                                    <span className="technical-label text-danger uppercase tracking-widest">Common Problem</span>
                                 </div>
                             </div>
                         ))}
@@ -118,8 +118,8 @@ export function ProblemSolutionSection() {
                                 <Cpu className="w-6 h-6" />
                             </div>
                             <div>
-                                <h3 className="text-2xl font-bold text-white mb-1 tracking-tight">TalentLyt Engine</h3>
-                                <p className="technical-label text-brand">Optimized State</p>
+                                <h3 className="text-2xl font-bold text-white mb-1 tracking-tight">With TalentLyt</h3>
+                                <p className="technical-label text-brand">Fixed</p>
                             </div>
                         </div>
 
@@ -134,7 +134,7 @@ export function ProblemSolutionSection() {
                                 <p className="text-sm text-text-muted leading-relaxed mb-6">{solution.description}</p>
                                 <div className="flex items-center gap-2 bg-brand/10 px-3 py-1.5 rounded-lg border border-brand/20 w-fit">
                                     <CheckCircle2 className="w-3 h-3 text-brand" />
-                                    <span className="technical-label text-brand uppercase tracking-widest">Verified Signal</span>
+                                    <span className="technical-label text-brand uppercase tracking-widest">How We Fix It</span>
                                 </div>
                             </div>
                         ))}
@@ -156,19 +156,19 @@ export function ProblemSolutionSection() {
                                     <span className="text-green-400 text-xs font-bold uppercase tracking-wide">Live Beta Results</span>
                                 </div>
                                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight leading-tight">
-                                    Real <span className="text-brand">Detection Results</span> from Beta Testing.
+                                    Here&apos;s what we found in <span className="text-brand">82 real interviews</span>.
                                 </h3>
                                 <p className="text-base text-slate-300 leading-relaxed mb-6">
-                                    Our beta program monitored 82 live interviews and detected 6,824 integrity anomalies across 15 different signal types.
+                                    During our beta, we ran 82 live interviews and flagged 6,824 integrity issues across 15 signal types. Almost half the sessions had something worth a closer look.
                                 </p>
                                 <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-800 border border-slate-700">
                                     <div className="w-12 h-12 rounded-xl bg-brand/20 flex items-center justify-center text-brand shrink-0">
                                         <ShieldAlert className="w-6 h-6" />
                                     </div>
                                     <div>
-                                        <div className="text-xs font-bold text-brand uppercase tracking-wide mb-0.5">Top Detection</div>
+                                        <div className="text-xs font-bold text-brand uppercase tracking-wide mb-0.5">Most Common Flag</div>
                                         <div className="text-lg font-bold text-white">
-                                            3,077 face absent signals caught
+                                            3,077 times someone wasn&apos;t on camera
                                         </div>
                                     </div>
                                 </div>

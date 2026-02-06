@@ -10,18 +10,18 @@ export function HowItWorksSection() {
 
     const steps = [
         {
-            title: 'Verify Identity',
-            description: 'Each candidate gets a unique, secure session link with automated identity verification before the interview begins.',
+            title: 'Send a Link',
+            description: 'Share a unique interview link with your candidate. We handle identity checks before they even start — face match, liveness, the works.',
             icon: MousePointer2,
         },
         {
-            title: 'AI-Powered Interview',
-            description: 'Maya conducts the technical interview while continuously verifying candidate authenticity across 13 signals. Your team can observe or co-pilot in real time.',
+            title: 'Maya Runs the Interview',
+            description: 'Maya asks the technical questions, follows up on weak answers, and monitors for anything suspicious. Your team can watch live or jump in anytime.',
             icon: Cpu,
         },
         {
-            title: 'Get Your Report',
-            description: 'Receive a detailed report with technical scores, integrity verification results, and job success predictions — all backed by data, not gut feelings.',
+            title: 'Review the Results',
+            description: 'You get a clear report: technical scores, integrity flags, and a job-fit prediction. Everything you need to make a confident hire.',
             icon: ShieldCheck,
         },
     ];
@@ -43,7 +43,7 @@ export function HowItWorksSection() {
                         How It <span className="text-brand">Works</span>
                     </h2>
                     <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto">
-                        Three steps from candidate link to hire decision — with enterprise-level verification at every stage.
+                        Send a link, let Maya do the heavy lifting, and get a report you can actually trust. That&apos;s it.
                     </p>
                 </div>
 
