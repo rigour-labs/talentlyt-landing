@@ -6,7 +6,7 @@ import { Check, X, ShieldCheck, Bot, Eye, Fingerprint, ArrowRight } from 'lucide
 
 export const metadata: Metadata = {
     title: 'Compare TalentLyt vs HireVue, Codility & More',
-    description: 'Compare TalentLyt with HireVue, Codility, Talently.ai. 13-signal AI leadership verification, 6,800+ sessions analyzed in beta.',
+    description: 'Compare TalentLyt with HireVue, Codility, Talently.ai. 15-signal AI leadership verification, 6,800+ sessions analyzed in beta.',
     keywords: [
         'TalentLyt vs HireVue',
         'TalentLyt vs Codility',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     },
     openGraph: {
         title: 'TalentLyt vs HireVue vs Codility vs Talently.ai — Full Comparison 2026',
-        description: 'TalentLyt offers 13-signal AI leadership verification with 6,800+ sessions analyzed in beta testing. Compare all AI interview platforms.',
+        description: 'TalentLyt offers 15-signal AI leadership verification with 6,800+ sessions analyzed in beta testing. Compare all AI interview platforms.',
         type: 'website',
     },
 };
@@ -50,7 +50,7 @@ export default function ComparisonPage() {
         {
             category: 'Forensic Integrity & Trust',
             features: [
-                { name: '13-Signal Verification', talentlyt: true, traditional: false },
+                { name: '15-Signal Verification', talentlyt: true, traditional: false },
                 { name: 'Nova-grade Voice Auth', talentlyt: true, traditional: false },
                 { name: 'Lip-Sync & Gaze Sync', talentlyt: true, traditional: false },
                 { name: 'Micro-expression Analysis', talentlyt: true, traditional: false },
@@ -78,7 +78,7 @@ export default function ComparisonPage() {
         },
         {
             icon: ShieldCheck,
-            title: '13-Signal Forensic Audit',
+            title: '15-Signal Forensic Audit',
             description: 'We analyze 13 distinct biometric and behavioral signals (lip-sync, gaze, voice biometrics) in real-time to ensure absolute session integrity and authentic candidate verification.',
         },
         {
@@ -108,7 +108,7 @@ export default function ComparisonPage() {
                             TalentLyt vs HireVue, Codility, <span className="text-brand">Talently.ai</span> & Others
                         </h1>
                         <p className="text-lg sm:text-xl text-text-secondary leading-relaxed max-w-3xl mx-auto">
-                            Looking for a HireVue alternative? Comparing Codility vs TalentLyt? <strong className="text-white">TalentLyt features real-time 13-signal AI leadership verification</strong>—ensuring candidates architect solutions, not just prompt AI, with identity verification that other platforms miss entirely.
+                            Looking for a HireVue alternative? Comparing Codility vs TalentLyt? <strong className="text-white">TalentLyt features real-time 15-signal AI leadership verification</strong>—ensuring candidates architect solutions, not just prompt AI, with identity verification that other platforms miss entirely.
                         </p>
                     </div>
                 </section>

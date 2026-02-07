@@ -129,7 +129,7 @@ export default function InterviewIntegrityVerificationPage() {
                             <section className="mb-16">
                                 <h2 className="text-3xl font-black text-white mb-8 tracking-tight">The Verification Approach: Signals vs. Symptoms</h2>
                                 <p className="text-text-secondary mb-8">
-                                    To catch modern fraud, we look for <strong>behavioral and technical inconsistencies.</strong> Our Sentinel Engine analyzes 12 signal layers that are difficult to replicate simultaneously:
+                                    To catch modern fraud, we look for <strong>behavioral and technical inconsistencies.</strong> Our Sentinel Engine analyzes 15 signal layers that are difficult to replicate simultaneously:
                                 </p>
                                 <div className="space-y-6">
                                     <div className="flex gap-4 p-6 rounded-2xl bg-white/[0.01] border border-white/5">

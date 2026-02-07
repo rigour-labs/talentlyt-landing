@@ -328,7 +328,7 @@ export default function AICollaborationVerificationPage() {
                                         Stop AI Cheating Before It Costs You $240K
                                     </h3>
                                     <p className="text-text-secondary mb-10 max-w-xl mx-auto text-lg">
-                                        TalentLyt&apos;s 13-signal verification catches AI-assisted fraud in real-time. See how our Sentinel engine protects your hiring process.
+                                        TalentLyt&apos;s 15-signal verification catches AI-assisted fraud in real-time. See how our Sentinel engine protects your hiring process.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                         <Link

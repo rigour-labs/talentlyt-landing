@@ -56,7 +56,7 @@ const glossaryTerms = [
         category: 'Platform',
     },
     {
-        term: '13-Signal Forensic Audit',
+        term: '15-Signal Forensic Audit',
         definition: 'TalentLyt\'s comprehensive integrity stack that analyzes 13 distinct signal types—including lip-sync, voice biometrics, and gaze tracking—to ensure absolute session authenticity.',
         category: 'Integrity',
     },

@@ -31,11 +31,11 @@ export function LiveDemoContent() {
         {
             id: 'verdict',
             tag: 'Section 3: The Verification',
-            title: '13-Signal Integrity Synthesis',
+            title: '15-Signal Integrity Synthesis',
             copy: 'Sessions are reviewed across 12 distinct signal types, including biometric-aware lip-sync and gaze patterns, to generate a comprehensive record of interview integrity.',
             image: 'https://onbadqcmbugvszb0.public.blob.vercel-storage.com/screencapture-platform-talentlyt-cloud-dashboard-audit-cmk9wgczv000001s6hl78jtgm-2026-01-11-22_26_25.png',
             icon: Search,
-            highlights: ['13-Signal Verification Stack', 'Multi-Modal Signal Audit', 'Integrity Confidence Scoring', 'Transparent Audit Records']
+            highlights: ['15-Signal Verification Stack', 'Multi-Modal Signal Audit', 'Integrity Confidence Scoring', 'Transparent Audit Records']
         },
         {
             id: 'orchestration',

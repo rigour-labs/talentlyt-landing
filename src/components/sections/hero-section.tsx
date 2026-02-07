@@ -43,7 +43,7 @@ export function HeroSection() {
                     </h1>
 
                     <p className={`text-lg sm:text-xl text-text-secondary mb-6 leading-relaxed max-w-xl ${heroVisible ? 'slide-up animate-delay-300' : 'animate-on-scroll'}`}>
-                        Let Maya handle the technical screening so your team can focus on culture fit. We verify that candidates actually know their stuff — no more wondering if they had help.
+                        Maya runs your technical screens. You focus on culture fit. And when it comes to AI? We don&apos;t care if they used it — we care if they understood what it gave them.
                     </p>
 
                     {/* Quick Value Props */}
@@ -100,23 +100,28 @@ export function HeroSection() {
 
                     {/* Beta Stats */}
                     <div
-                        className="mt-12 flex items-center gap-6 sm:gap-10 border-t border-white/5 pt-8 w-full"
+                        className="mt-12 flex flex-col gap-4 border-t border-white/5 pt-8 w-full"
                         aria-label="Beta testing metrics"
                     >
-                        <div>
-                            <div className="text-2xl sm:text-3xl font-bold text-white mb-1">6,800+</div>
-                            <div className="technical-label text-text-muted text-xs sm:text-[10px]">Sessions Analyzed</div>
+                        <div className="flex items-center gap-6 sm:gap-10">
+                            <div>
+                                <div className="text-2xl sm:text-3xl font-bold text-white mb-1">6,824</div>
+                                <div className="technical-label text-text-muted text-xs sm:text-[10px]">Signal Events Analyzed</div>
+                            </div>
+                            <div className="w-px h-8 bg-white/10" aria-hidden="true" />
+                            <div>
+                                <div className="text-2xl sm:text-3xl font-bold text-white mb-1">41%</div>
+                                <div className="technical-label text-text-muted text-xs sm:text-[10px]">Required Deeper Review</div>
+                            </div>
+                            <div className="w-px h-8 bg-white/10 hidden sm:block" aria-hidden="true" />
+                            <div className="hidden sm:block">
+                                <div className="text-2xl sm:text-3xl font-bold text-white mb-1">82</div>
+                                <div className="technical-label text-text-muted text-xs sm:text-[10px]">Beta Interviews</div>
+                            </div>
                         </div>
-                        <div className="w-px h-8 bg-white/10" aria-hidden="true" />
-                        <div>
-                            <div className="text-2xl sm:text-3xl font-bold text-white mb-1">41%</div>
-                            <div className="technical-label text-text-muted text-xs sm:text-[10px]">Flagged for Review</div>
-                        </div>
-                        <div className="w-px h-8 bg-white/10 hidden sm:block" aria-hidden="true" />
-                        <div className="hidden sm:block">
-                            <div className="text-2xl sm:text-3xl font-bold text-white mb-1">82</div>
-                            <div className="technical-label text-text-muted text-xs sm:text-[10px]">Beta Interviews</div>
-                        </div>
+                        <p className="text-[10px] text-text-muted/60 max-w-md">
+                            *Signal events are behavioral data points (gaze, audio sync, response patterns) — not fraud flags. 41% triggered review based on inconsistencies worth a second look.
+                        </p>
                     </div>
                 </div>
 

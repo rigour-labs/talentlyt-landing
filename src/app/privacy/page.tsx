@@ -74,7 +74,7 @@ export default function PrivacyPolicyPage() {
                                 <div className="pl-4 border-l-2 border-brand/20">
                                     <h3 className="font-semibold text-white mb-2">Integrity Verification Data</h3>
                                     <p className="text-text-secondary text-sm leading-relaxed">
-                                        Our 13-Signal Forensic Engine analyzes patterns to verify authentic problem-solving and AI leadership capabilities. This includes keystroke dynamics, audio-visual sync, and behavioral consistency metrics. We do <strong className="text-white">not</strong> collect biometric templates or create permanent identity databases.
+                                        Our 15-Signal Forensic Engine analyzes patterns to verify authentic problem-solving and AI leadership capabilities. This includes keystroke dynamics, audio-visual sync, and behavioral consistency metrics. We do <strong className="text-white">not</strong> collect biometric templates or create permanent identity databases.
                                     </p>
                                 </div>
 

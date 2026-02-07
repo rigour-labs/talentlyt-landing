@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     'TalentLyt interview platform',
     'Maya AI interviewer',
     'Interview Genome',
-    '13-signal verification',
+    '15-signal verification',
     // Long-tail high-intent
     'best AI interview platform 2025',
     'AI interview with verification',
@@ -97,7 +97,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'TalentLyt — Your AI Co-Pilot for Technical Hiring',
-    description: 'Maya AI handles technical screening while you focus on culture fit. 13-signal verification ensures candidates lead AI, not follow it. Beta: 6,800+ sessions analyzed across 82 interviews.',
+    description: 'Maya AI handles technical screening while you focus on culture fit. 15-signal verification ensures candidates lead AI, not follow it. Beta: 6,800+ sessions analyzed across 82 interviews.',
     url: 'https://talentlyt.cloud',
     siteName: 'TalentLyt - AI Interview Co-Pilot',
     images: [
@@ -114,7 +114,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'TalentLyt — Your AI Co-Pilot for Technical Hiring',
-    description: 'Interview smarter, hire faster. Maya AI handles screening while you focus on culture fit. 13-signal AI leadership verification. Beta: 6,800+ sessions analyzed across 82 interviews.',
+    description: 'Interview smarter, hire faster. Maya AI handles screening while you focus on culture fit. 15-signal AI leadership verification. Beta: 6,800+ sessions analyzed across 82 interviews.',
     images: ['/og-image.png'],
     creator: '@talentlyt',
   },
@@ -214,8 +214,8 @@ export default function RootLayout({
                     priceCurrency: 'USD',
                     description: 'Get The Pilot Pack for FREE with Promotional Coupon'
                   },
-                  description: 'TalentLyt is your AI co-pilot for technical hiring. Maya AI handles screening while you focus on culture fit. Beta: 6,800+ sessions analyzed, 41% required deeper review. Features 13-signal AI leadership verification and Job Success Prediction.',
-                  featureList: '13-Signal Verification, 6824 Sessions Analyzed in Beta, 41% Required Deeper Review, Automated Quality Auditor, Predictive Competency Mapping, Interview Genome, Code Playback',
+                  description: 'TalentLyt is your AI co-pilot for technical hiring. Maya AI handles screening while you focus on culture fit. Beta: 6,800+ sessions analyzed, 41% required deeper review. Features 15-signal AI leadership verification and Job Success Prediction.',
+                  featureList: '15-Signal Verification, 6824 Sessions Analyzed in Beta, 41% Required Deeper Review, Automated Quality Auditor, Predictive Competency Mapping, Interview Genome, Code Playback',
                   copyrightYear: new Date().getFullYear(),
                   author: {
                     '@type': 'Organization',
@@ -246,7 +246,7 @@ export default function RootLayout({
                     name: 'Rigour Labs Inc.'
                   },
                   areaServed: 'Worldwide',
-                  description: 'High-integrity technical screening using the Sentinel Hierarchy (13-signal verification + Predictive Competency Mapping).'
+                  description: 'High-integrity technical screening using the Sentinel Hierarchy (15-signal verification + Predictive Competency Mapping).'
                 },
                 {
                   '@context': 'https://schema.org',
@@ -297,7 +297,7 @@ export default function RootLayout({
                   'alternateName': 'TalentLyt AI Interview Co-Pilot',
                   'url': 'https://talentlyt.cloud',
                   'logo': 'https://talentlyt.cloud/logo.png',
-                  'description': 'TalentLyt is your AI co-pilot for technical hiring. Maya AI handles screening while your team focuses on culture fit. 13-signal AI leadership verification. Beta: 6,800+ sessions analyzed.',
+                  'description': 'TalentLyt is your AI co-pilot for technical hiring. Maya AI handles screening while your team focuses on culture fit. 15-signal AI leadership verification. Beta: 6,800+ sessions analyzed.',
                   'foundingDate': '2025',
                   'sameAs': [
                     'https://twitter.com/talentlyt',
@@ -319,7 +319,7 @@ export default function RootLayout({
                       'name': 'What is an AI Interview Platform?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'An AI interview co-pilot assists your hiring team by handling technical screening while you focus on culture fit. TalentLyt combines Maya AI with 13-signal AI leadership verification, Job Success Prediction, and the Interview Genome—keeping you in control of every hiring decision. Beta: 6,800+ sessions analyzed across 82 interviews.'
+                        'text': 'An AI interview co-pilot assists your hiring team by handling technical screening while you focus on culture fit. TalentLyt combines Maya AI with 15-signal AI leadership verification, Job Success Prediction, and the Interview Genome—keeping you in control of every hiring decision. Beta: 6,800+ sessions analyzed across 82 interviews.'
                       }
                     },
                     {
@@ -367,7 +367,7 @@ export default function RootLayout({
                       'name': 'How does TalentLyt verify identity in interviews?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'TalentLyt uses 13-signal verification including lip-sync analysis, voice biometrics, facial recognition consistency, and video feed analysis to verify candidate identity in real-time. Our Governor agent ensures the person you interview is the person you hire.'
+                        'text': 'TalentLyt uses 15-signal verification including lip-sync analysis, voice biometrics, facial recognition consistency, and video feed analysis to verify candidate identity in real-time. Our Governor agent ensures the person you interview is the person you hire.'
                       }
                     },
                     {
@@ -375,7 +375,7 @@ export default function RootLayout({
                       'name': 'What is the difference between TalentLyt and Talently.ai?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'TalentLyt and Talently.ai are different products. TalentLyt provides 13-signal AI leadership verification and identity verification that Talently.ai lacks. TalentLyt also offers Interview Genome (portable verified profiles) and 85% accurate job success prediction.'
+                        'text': 'TalentLyt and Talently.ai are different products. TalentLyt provides 15-signal AI leadership verification and identity verification that Talently.ai lacks. TalentLyt also offers Interview Genome (portable verified profiles) and 85% accurate job success prediction.'
                       }
                     },
                     {
@@ -399,7 +399,7 @@ export default function RootLayout({
                       'name': 'How is TalentLyt different from InterviewGuard or Talview?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'TalentLyt combines AI interviewing (Maya AI) with AI leadership verification in one platform. InterviewGuard and Talview focus on proctoring existing interviews. TalentLyt conducts the entire interview autonomously while simultaneously verifying authenticity with 13 signals.'
+                        'text': 'TalentLyt combines AI interviewing (Maya AI) with AI leadership verification in one platform. InterviewGuard and Talview focus on proctoring existing interviews. TalentLyt conducts the entire interview autonomously while simultaneously verifying authenticity with 15 signals.'
                       }
                     }
                   ]
@@ -408,12 +408,12 @@ export default function RootLayout({
                   '@context': 'https://schema.org',
                   '@type': 'HowTo',
                   'name': 'How to Verify AI Leadership with TalentLyt',
-                  'description': 'Learn how to verify candidates lead AI rather than follow it using TalentLyt 13-signal AI leadership verification.',
+                  'description': 'Learn how to verify candidates lead AI rather than follow it using TalentLyt 15-signal AI leadership verification.',
                   'step': [
                     {
                       '@type': 'HowToStep',
                       'name': 'Enable AI Leadership Verification',
-                      'text': 'TalentLyt automatically enables 13-signal verification including problem-solving analysis, voice biometrics, and gaze tracking.'
+                      'text': 'TalentLyt automatically enables 15-signal verification including problem-solving analysis, voice biometrics, and gaze tracking.'
                     },
                     {
                       '@type': 'HowToStep',

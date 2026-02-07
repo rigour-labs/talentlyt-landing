@@ -295,7 +295,7 @@ export function ArchitectureSection() {
                 { icon: Filter, text: "Communication Noise Filtering" },
                 { icon: Anchor, text: "Technical Grounding Audit" },
                 { icon: EyeOff, text: "Privacy-Preserving Verification" },
-                { icon: Layers, text: "13-Signal Verification Stack" }
+                { icon: Layers, text: "15-Signal Verification Stack" }
             ]
         },
         {
@@ -308,7 +308,7 @@ export function ArchitectureSection() {
             color: "warning",
             visual: "orb", // Changed to orb for better connection feel
             features: [
-                { icon: Merge, text: "13-Signal Signal Synthesis" },
+                { icon: Merge, text: "15-Signal Signal Synthesis" },
                 { icon: Cpu, text: "Continuous Learning Weights" },
                 { icon: TrendingUp, text: "85% Predictive Reliability" },
                 { icon: Dna, text: "Interview Genome Archiving" },

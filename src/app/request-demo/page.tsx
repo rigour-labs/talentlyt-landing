@@ -44,7 +44,7 @@ export default function RequestDemoPage() {
                                     <ShieldCheck className="w-5 h-5 text-brand" />
                                 </div>
                                 <div>
-                                    <h3 className="font-semibold text-white mb-1">13-Signal AI Leadership Verification</h3>
+                                    <h3 className="font-semibold text-white mb-1">15-Signal AI Leadership Verification</h3>
                                     <p className="text-text-secondary text-sm leading-relaxed">
                                         See how our forensic engine verifies candidates are authentic architects who lead AI, not just prompt it.
                                     </p>

@@ -238,7 +238,7 @@ export default function AIEthicsPage() {
                         </div>
                         <div className="text-text-secondary text-sm leading-relaxed space-y-4">
                             <p>
-                                Our 13-Signal Forensic Engine is designed to detect cheating, proxy candidates, and AI-assisted fraud. This capability raises important ethical questions that we take seriously:
+                                Our 15-Signal Forensic Engine is designed to detect cheating, proxy candidates, and AI-assisted fraud. This capability raises important ethical questions that we take seriously:
                             </p>
                             <ul className="list-disc pl-6 space-y-3">
                                 <li>

@@ -312,7 +312,7 @@ export default function AIAgentsRecruitingPage() {
                                         AI Interviews Done Right
                                     </h3>
                                     <p className="text-text-secondary mb-10 max-w-xl mx-auto text-lg">
-                                        TalentLyt combines AI efficiency with human oversight. Our 13-signal verification ensures every interview is authentic and explainable.
+                                        TalentLyt combines AI efficiency with human oversight. Our 15-signal verification ensures every interview is authentic and explainable.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                         <Link

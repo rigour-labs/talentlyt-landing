@@ -243,7 +243,7 @@ export default function CostOfBadHirePage() {
                                         Stop Paying the Bad Hire Tax
                                     </h3>
                                     <p className="text-text-secondary mb-10 max-w-xl mx-auto text-lg">
-                                        TalentLyt&apos;s 13-signal verification catches mismatches before they become costly mistakes. See how it works.
+                                        TalentLyt&apos;s 15-signal verification catches mismatches before they become costly mistakes. See how it works.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                         <Link

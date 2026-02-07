@@ -11,7 +11,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
     title: 'Product | TalentLyt Technical Architecture',
-    description: 'Deep dive into TalentLyt\'s 3-agent AI architecture: Maya conversational AI, NEMO security sentinel, and 13-signal forensic engine. Built with Python, TypeScript, WebRTC.',
+    description: 'Deep dive into TalentLyt\'s 3-agent AI architecture: Maya conversational AI, NEMO security sentinel, and 15-signal forensic engine. Built with Python, TypeScript, WebRTC.',
     alternates: {
         canonical: 'https://talentlyt.cloud/product',
     },
@@ -132,7 +132,7 @@ export default function ProductPage() {
                                 <Fingerprint className="w-7 h-7 text-red-500" />
                             </div>
                             <h3 className="text-xl font-bold text-white mb-2">Forensic Engine</h3>
-                            <p className="text-red-500 text-sm font-medium mb-4">13-Signal Analysis</p>
+                            <p className="text-red-500 text-sm font-medium mb-4">15-Signal Analysis</p>
                             <ul className="space-y-3 text-sm text-text-secondary">
                                 <li className="flex items-start gap-2">
                                     <Binary className="w-4 h-4 text-red-500 mt-0.5 shrink-0" />
@@ -200,9 +200,9 @@ export default function ProductPage() {
                     </div>
                 </section>
 
-                {/* 13 Signals */}
+                {/* 15 Signals */}
                 <section className="container mx-auto px-4 py-16 border-t border-border/30">
-                    <h2 className="text-3xl font-bold text-center mb-4">13-Signal AI Leadership Verification</h2>
+                    <h2 className="text-3xl font-bold text-center mb-4">15-Signal AI Leadership Verification</h2>
                     <p className="text-text-secondary text-center max-w-2xl mx-auto mb-12">
                         Our forensic engine analyzes behavioral and technical signals to verify candidates architect solutions, not just prompt them.
                     </p>

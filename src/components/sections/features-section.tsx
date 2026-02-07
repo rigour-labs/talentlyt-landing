@@ -51,9 +51,9 @@ export function FeaturesSection() {
             tag: 'SENTINEL SOLO'
         },
         {
-            title: '13-Signal AI Leadership Verification',
-            benefit: 'Verification Excellence',
-            description: 'Real-time analysis of problem-solving patterns, response authenticity, and AI collaboration style. Verify candidates architect solutions, not just prompt them.',
+            title: '15-Signal AI Leadership Verification',
+            benefit: 'Architect or Passenger?',
+            description: 'We don\'t detect AI usage — we measure understanding. Used Copilot and can explain every decision? You\'re good. Freeze when asked "why that approach"? That\'s a flag.',
             icon: Lock,
             className: "md:col-span-2",
             metric: '99.9% Accuracy',
