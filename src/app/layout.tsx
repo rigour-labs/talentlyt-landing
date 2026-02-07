@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: '%s | TalentLyt'
   },
   description:
-    'Your AI co-pilot for technical hiring. Maya AI handles screening while you focus on culture fit. Multi-signal verification ensures candidates demonstrate genuine technical ability. Beta: 6,800+ sessions analyzed across 82 interviews.',
+    'Your AI co-pilot for technical hiring. Maya AI handles screening while you focus on culture fit. Multi-signal verification ensures candidates demonstrate genuine technical ability. Beta: 6,824 signal events analyzed across 82 interviews.',
   keywords: [
     // Primary high-intent keywords
     'AI interview platform',
@@ -97,7 +97,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'TalentLyt — Your AI Co-Pilot for Technical Hiring',
-    description: 'Maya AI handles technical screening while you focus on culture fit. 15-signal verification ensures candidates lead AI, not follow it. Beta: 6,800+ sessions analyzed across 82 interviews.',
+    description: 'Maya AI handles technical screening while you focus on culture fit. 15-signal verification ensures candidates lead AI, not follow it. Beta: 6,824 signal events analyzed across 82 interviews.',
     url: 'https://talentlyt.cloud',
     siteName: 'TalentLyt - AI Interview Co-Pilot',
     images: [
@@ -114,7 +114,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'TalentLyt — Your AI Co-Pilot for Technical Hiring',
-    description: 'Interview smarter, hire faster. Maya AI handles screening while you focus on culture fit. 15-signal AI leadership verification. Beta: 6,800+ sessions analyzed across 82 interviews.',
+    description: 'Interview smarter, hire faster. Maya AI handles screening while you focus on culture fit. 15-signal AI leadership verification. Beta: 6,824 signal events analyzed across 82 interviews.',
     images: ['/og-image.png'],
     creator: '@talentlyt',
   },
@@ -214,8 +214,8 @@ export default function RootLayout({
                     priceCurrency: 'USD',
                     description: 'Get The Pilot Pack for FREE with Promotional Coupon'
                   },
-                  description: 'TalentLyt is your AI co-pilot for technical hiring. Maya AI handles screening while you focus on culture fit. Beta: 6,800+ sessions analyzed, 41% required deeper review. Features 15-signal AI leadership verification and Job Success Prediction.',
-                  featureList: '15-Signal Verification, 6824 Sessions Analyzed in Beta, 41% Required Deeper Review, Automated Quality Auditor, Predictive Competency Mapping, Interview Genome, Code Playback',
+                  description: 'TalentLyt is your AI co-pilot for technical hiring. Maya AI handles screening while you focus on culture fit. Beta: 6,824 signal events analyzed, 41% required deeper review. Features 15-signal AI leadership verification and Job Success Prediction.',
+                  featureList: '15-Signal Verification, 6824 Signal Events Analyzed in Beta, 41% Required Deeper Review, Automated Quality Auditor, Predictive Competency Mapping, Interview Genome, Code Playback',
                   copyrightYear: new Date().getFullYear(),
                   author: {
                     '@type': 'Organization',
@@ -297,7 +297,7 @@ export default function RootLayout({
                   'alternateName': 'TalentLyt AI Interview Co-Pilot',
                   'url': 'https://talentlyt.cloud',
                   'logo': 'https://talentlyt.cloud/logo.png',
-                  'description': 'TalentLyt is your AI co-pilot for technical hiring. Maya AI handles screening while your team focuses on culture fit. 15-signal AI leadership verification. Beta: 6,800+ sessions analyzed.',
+                  'description': 'TalentLyt is your AI co-pilot for technical hiring. Maya AI handles screening while your team focuses on culture fit. 15-signal AI leadership verification. Beta: 6,824 signal events analyzed.',
                   'foundingDate': '2025',
                   'sameAs': [
                     'https://twitter.com/talentlyt',
@@ -319,7 +319,7 @@ export default function RootLayout({
                       'name': 'What is an AI Interview Platform?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'An AI interview co-pilot assists your hiring team by handling technical screening while you focus on culture fit. TalentLyt combines Maya AI with 15-signal AI leadership verification, Job Success Prediction, and the Interview Genome—keeping you in control of every hiring decision. Beta: 6,800+ sessions analyzed across 82 interviews.'
+                        'text': 'An AI interview co-pilot assists your hiring team by handling technical screening while you focus on culture fit. TalentLyt combines Maya AI with 15-signal AI leadership verification, Job Success Prediction, and the Interview Genome—keeping you in control of every hiring decision. Beta: 6,824 signal events analyzed across 82 interviews.'
                       }
                     },
                     {

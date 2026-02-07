@@ -33,8 +33,8 @@ export function StatsSection() {
     const summaryStats = [
         {
             value: "6,824",
-            label: "Total Anomalies",
-            sub: "Detected in Beta",
+            label: "Signal Events",
+            sub: "Analyzed in Beta",
             detail: "15 Signal Types",
             icon: TrendingUp,
         },
@@ -47,9 +47,9 @@ export function StatsSection() {
         },
         {
             value: "41%",
-            label: "Sessions Flagged",
-            sub: "For Review",
-            detail: "34 Flagged Total",
+            label: "Required Review",
+            sub: "Worth a Second Look",
+            detail: "34 Sessions Total",
             icon: Activity,
         }
     ];

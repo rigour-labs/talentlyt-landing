@@ -44,8 +44,8 @@ export default function ProductPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16">
                         {[
                             { label: 'Beta Interviews', value: '82', sublabel: 'Completed' },
-                            { label: 'Sessions Analyzed', value: '6,824', sublabel: 'Signals processed' },
-                            { label: 'AI Assistance Rate', value: '41%', sublabel: 'Required deeper review' },
+                            { label: 'Signal Events', value: '6,824', sublabel: 'Analyzed in beta' },
+                            { label: 'Review Rate', value: '41%', sublabel: 'Worth a second look' },
                         ].map((stat) => (
                             <div key={stat.label} className="p-6 rounded-2xl bg-card border border-border/50 text-center">
                                 <div className="text-3xl font-bold text-brand mb-1">{stat.value}</div>

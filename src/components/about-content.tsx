@@ -30,7 +30,7 @@ export function AboutContent() {
 
     const milestones = [
         { year: "2025", event: "Founded in June by engineers who experienced hiring pain firsthand" },
-        { year: "2026", event: "Launched Maya AI Interviewer, Forensic Engine, and completed beta testing with 6,800+ anomalies detected" }
+        { year: "2026", event: "Launched Maya AI Interviewer, Forensic Engine, and completed beta testing with 6,824 signal events analyzed" }
     ];
 
     return (
@@ -106,19 +106,13 @@ export function AboutContent() {
                 {/* Team Section */}
                 <section className="mb-16">
                     <h2 className="text-3xl font-bold text-center mb-12">Our Team</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 max-w-lg mx-auto gap-6">
                         {[
                             {
                                 name: "Ashutosh Singh",
-                                role: "Co-Founder & CEO",
+                                role: "Founder & CEO",
                                 bio: "15+ years building enterprise software. Previously at Oracle and multiple startups. Passionate about eliminating hiring bias through AI.",
                                 linkedin: "https://www.linkedin.com/in/erashu212/"
-                            },
-                            {
-                                name: "Gaurav Prakash",
-                                role: "Co-Founder & CTO",
-                                bio: "Full-stack architect with deep expertise in AI/ML systems. Built scalable platforms processing millions of transactions.",
-                                linkedin: "https://www.linkedin.com/in/gaurav-prakash-910aa9a0/"
                             }
                         ].map((member) => (
                             <div key={member.name} className="p-6 rounded-[1.5rem] bg-card border border-border/50 hover:border-brand/20 transition-all">

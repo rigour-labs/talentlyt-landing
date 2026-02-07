@@ -12,7 +12,7 @@ import { HomepageAnalytics } from '@/components/homepage-analytics';
 
 export const metadata: Metadata = {
   title: 'TalentLyt | Your AI Co-Pilot for Technical Hiring',
-  description: 'Maya AI handles technical screening while you focus on culture fit. Multi-signal verification ensures candidates demonstrate genuine technical ability. Beta: 6,800+ sessions analyzed.',
+  description: 'Maya AI handles technical screening while you focus on culture fit. Multi-signal verification ensures candidates demonstrate genuine technical ability. Beta: 6,824 signal events analyzed.',
   keywords: [
     'AI interview',
     'AI interview platform',

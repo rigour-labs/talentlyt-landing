@@ -6,7 +6,7 @@ import { Check, X, ShieldCheck, Bot, Eye, Fingerprint, ArrowRight } from 'lucide
 
 export const metadata: Metadata = {
     title: 'Compare TalentLyt vs HireVue, Codility & More',
-    description: 'Compare TalentLyt with HireVue, Codility, Talently.ai. 15-signal AI leadership verification, 6,800+ sessions analyzed in beta.',
+    description: 'Compare TalentLyt with HireVue, Codility, Talently.ai. 15-signal AI leadership verification, 6,824 signal events analyzed in beta.',
     keywords: [
         'TalentLyt vs HireVue',
         'TalentLyt vs Codility',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     },
     openGraph: {
         title: 'TalentLyt vs HireVue vs Codility vs Talently.ai — Full Comparison 2026',
-        description: 'TalentLyt offers 15-signal AI leadership verification with 6,800+ sessions analyzed in beta testing. Compare all AI interview platforms.',
+        description: 'TalentLyt offers 15-signal AI leadership verification with 6,824 signal events analyzed in beta testing. Compare all AI interview platforms.',
         type: 'website',
     },
 };

@@ -159,7 +159,7 @@ export function ProblemSolutionSection() {
                                     Here&apos;s what we found in <span className="text-brand">82 real interviews</span>.
                                 </h3>
                                 <p className="text-base text-slate-300 leading-relaxed mb-6">
-                                    During our beta, we ran 82 live interviews and flagged 6,824 integrity issues across 15 signal types. Almost half the sessions had something worth a closer look.
+                                    During our beta, we ran 82 live interviews and analyzed 6,824 signal events across 15 signal types. Almost half the sessions had something worth a closer look.
                                 </p>
                                 <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-800 border border-slate-700">
                                     <div className="w-12 h-12 rounded-xl bg-brand/20 flex items-center justify-center text-brand shrink-0">
@@ -176,9 +176,9 @@ export function ProblemSolutionSection() {
 
                             <div className="grid grid-cols-2 gap-3 sm:gap-4">
                                 {[
-                                    { label: "Total Anomalies", value: "6,824", sub: "Signals Detected", color: "text-brand" },
+                                    { label: "Signal Events", value: "6,824", sub: "Analyzed in Beta", color: "text-brand" },
                                     { label: "Interviews", value: "82", sub: "Sessions Monitored", color: "text-white" },
-                                    { label: "Flag Rate", value: "41%", sub: "Sessions Flagged", color: "text-white" },
+                                    { label: "Review Rate", value: "41%", sub: "Worth a Second Look", color: "text-white" },
                                     { label: "Signal Types", value: "15", sub: "Detection Categories", color: "text-green-400" }
                                 ].map((stat, i) => (
                                     <div key={i} className="p-4 sm:p-6 rounded-xl bg-slate-800 border border-slate-700 hover:border-brand/30 transition-all">
