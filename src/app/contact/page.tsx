@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Metadata } from 'next';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
@@ -11,9 +11,11 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
     return (
-        <div className="min-h-screen bg-background flex flex-col pt-32">
+        <div className="min-h-screen bg-background flex flex-col pt-56">
             <Navbar />
-            <ContactContent />
+            <Suspense fallback={<div className="flex-1 flex items-center justify-center"><div className="text-text-muted">Loading...</div></div>}>
+                <ContactContent />
+            </Suspense>
             <Footer />
         </div>
     );

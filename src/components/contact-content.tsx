@@ -2,11 +2,23 @@
 
 import React from 'react';
 import { useActionState } from 'react';
-import { Mail, MessageSquare, Send, CheckCircle2, Loader2, User, MapPin, Clock, Building2 } from 'lucide-react';
+import { useSearchParams } from 'next/navigation';
+import { Mail, MessageSquare, Send, CheckCircle2, Loader2, User, MapPin, Clock, Tag } from 'lucide-react';
 import { submitContactForm } from '@/app/actions';
 import Link from 'next/link';
 
+const subjectOptions = [
+    { value: 'general', label: 'General Inquiry' },
+    { value: 'security', label: 'Security & Compliance' },
+    { value: 'technical', label: 'Technical Questions' },
+    { value: 'sales', label: 'Sales & Pricing' },
+    { value: 'support', label: 'Support' },
+    { value: 'partnership', label: 'Partnership' },
+];
+
 export function ContactContent() {
+    const searchParams = useSearchParams();
+    const subjectParam = searchParams.get('subject') || 'general';
     const [state, formAction, isPending] = useActionState(submitContactForm, null);
 
     if (state?.success) {
@@ -83,6 +95,28 @@ export function ContactContent() {
                                         />
                                     </div>
                                     {state?.errors?.email && <p className="text-xs text-danger mt-1">{state.errors.email}</p>}
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-medium text-text-secondary mb-2">Subject</label>
+                                    <div className="relative">
+                                        <Tag className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted" />
+                                        <select
+                                            name="subject"
+                                            defaultValue={subjectParam}
+                                            className="w-full px-4 py-3 pl-12 rounded-xl bg-muted border border-border/50 text-white focus:border-brand/50 focus:outline-none focus:ring-2 focus:ring-brand/50 appearance-none cursor-pointer"
+                                        >
+                                            {subjectOptions.map((option) => (
+                                                <option key={option.value} value={option.value} className="bg-background">
+                                                    {option.label}
+                                                </option>
+                                            ))}
+                                        </select>
+                                        <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+                                            <svg className="w-4 h-4 text-text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div>
                                     <label className="block text-sm font-medium text-text-secondary mb-2">Message</label>

@@ -68,6 +68,12 @@ export function Footer() {
                             Terms
                         </FooterLink>
                         <FooterLink
+                            href="/security"
+                            className="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded px-2 py-1"
+                        >
+                            Security
+                        </FooterLink>
+                        <FooterLink
                             href="/ai-ethics"
                             className="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded px-2 py-1"
                         >
@@ -89,6 +95,13 @@ export function Footer() {
                     </p>
                     <p className="text-xs text-white/40 mt-2">
                         For information on our legally-defensible audit trails and candidate recognition protocols, review our{' '}
+                        <FooterLink
+                            href="/security"
+                            className="text-white/60 underline hover:text-brand transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded"
+                        >
+                            Security & Compliance
+                        </FooterLink>
+                        ,{' '}
                         <FooterLink
                             href="/privacy"
                             className="text-white/60 underline hover:text-brand transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded"

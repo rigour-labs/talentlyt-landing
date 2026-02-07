@@ -24,8 +24,18 @@ const demoSchema = z.object({
 const contactSchema = z.object({
     name: z.string().min(2, "Name is required"),
     email: z.string().email("Invalid email address"),
+    subject: z.string().optional(),
     message: z.string().min(10, "Message must be at least 10 characters"),
 });
+
+const subjectLabels: Record<string, string> = {
+    general: 'General Inquiry',
+    security: 'Security & Compliance',
+    technical: 'Technical Questions',
+    sales: 'Sales & Pricing',
+    support: 'Support',
+    partnership: 'Partnership',
+};
 
 export async function submitDemoRequest(prevState: any, formData: FormData) {
     const validatedFields = demoSchema.safeParse({
@@ -96,6 +106,7 @@ export async function submitContactForm(prevState: any, formData: FormData) {
     const validatedFields = contactSchema.safeParse({
         name: formData.get('name'),
         email: formData.get('email'),
+        subject: formData.get('subject'),
         message: formData.get('message'),
     });
 
@@ -106,14 +117,15 @@ export async function submitContactForm(prevState: any, formData: FormData) {
         };
     }
 
-    const { name, email, message } = validatedFields.data;
+    const { name, email, subject, message } = validatedFields.data;
+    const subjectLabel = subjectLabels[subject || 'general'] || 'General Inquiry';
 
     try {
         const resend = getResend();
 
         if (!resend) {
             // Email not configured - log the request and return success
-            console.log('Contact form received (email disabled):', { name, email, message });
+            console.log('Contact form received (email disabled):', { name, email, subject: subjectLabel, message });
             return {
                 success: true,
                 message: name,
@@ -124,11 +136,12 @@ export async function submitContactForm(prevState: any, formData: FormData) {
             from: 'notifications@rigovo.com',
             to: ['sales@rigovo.com'],
             replyTo: email,
-            subject: `Contact Form: ${name}`,
+            subject: `[${subjectLabel}] Contact Form: ${name}`,
             html: `
         <h2>New Contact Form Submission</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Subject:</strong> ${subjectLabel}</p>
         <p><strong>Message:</strong></p>
         <p>${message}</p>
       `,
