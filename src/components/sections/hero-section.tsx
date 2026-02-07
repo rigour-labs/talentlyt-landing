@@ -1,15 +1,36 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { ArrowRight, Play, ShieldCheck, ChevronDown, CheckCircle2, Users, Clock } from 'lucide-react';
+import { MayaVoiceWidget } from '@/components/ui/maya-voice-widget';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { analytics } from '@/lib/analytics';
 
 export function HeroSection() {
+    const [isMayaSpeaking, setIsMayaSpeaking] = useState(false);
+    const videoRef = useRef<HTMLVideoElement>(null);
     const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation({ threshold: 0.2, triggerOnce: true });
+
+    useEffect(() => {
+        if (!videoRef.current) return;
+
+        if (isMayaSpeaking) {
+            videoRef.current.play().catch(console.error);
+            analytics.track({
+                event: 'video_played',
+                properties: {
+                    video_name: 'maya-speaking',
+                    location: 'hero',
+                },
+            });
+        } else {
+            videoRef.current.pause();
+            videoRef.current.currentTime = 0; // Reset to frame 1 when paused
+        }
+    }, [isMayaSpeaking]);
 
     return (
         <section id="hero" ref={heroRef as React.RefObject<HTMLElement>} className="relative min-h-[90vh] flex flex-col justify-start pt-40 pb-12 px-4 sm:px-6 overflow-hidden">
@@ -103,6 +124,14 @@ export function HeroSection() {
                         </Link>
                     </div>
 
+                    {/* Maya Voice Widget - Push to Talk */}
+                    <div className={`mt-8 w-full sm:w-auto min-w-[320px] ${heroVisible ? 'slide-up animate-delay-400' : 'animate-on-scroll'}`}>
+                        <MayaVoiceWidget
+                            isPlaying={isMayaSpeaking}
+                            onToggle={() => setIsMayaSpeaking(!isMayaSpeaking)}
+                        />
+                    </div>
+
                     {/* Beta Stats */}
                     <div
                         className="mt-12 flex flex-col gap-4 border-t border-white/5 pt-8 w-full"
@@ -130,23 +159,47 @@ export function HeroSection() {
                     </div>
                 </div>
 
-                {/* Hero Visual - Static Maya Image */}
+                {/* Hero Visual - Maya Video Player */}
                 <div className={`relative order-1 lg:order-2 ${heroVisible ? 'slide-right animate-delay-300' : 'animate-on-scroll'}`}>
                     <div className="relative z-20 w-full aspect-square max-w-[400px] lg:max-w-[600px] mx-auto rounded-[1.5rem] lg:rounded-[2.5rem] overflow-hidden shadow-[0_0_40px_rgba(0,102,255,0.1)] lg:shadow-[0_0_80px_rgba(0,102,255,0.15)] border border-white/20 bg-card/40 backdrop-blur-md">
-                        <Image
-                            src="/assets/maya.jpg"
-                            alt="Maya AI interviewer conducting a live technical coding interview with real-time AI leadership verification on Rigovo AI interview platform"
-                            fill
-                            priority
-                            className="object-cover brightness-[1.1]"
-                            sizes="(max-width: 768px) 100vw, 600px"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent opacity-30" />
+                        <div className="w-full h-full relative">
+                            {/* Static Image (shown when not playing) */}
+                            <AnimatePresence>
+                                {!isMayaSpeaking && (
+                                    <motion.div
+                                        initial={{ opacity: 1 }}
+                                        exit={{ opacity: 0 }}
+                                        className="absolute inset-0 z-10"
+                                    >
+                                        <Image
+                                            src="/assets/maya.jpg"
+                                            alt="Maya AI interviewer conducting a live technical coding interview with real-time AI leadership verification on Rigovo AI interview platform"
+                                            fill
+                                            priority
+                                            className="object-cover brightness-[1.1]"
+                                            sizes="(max-width: 768px) 100vw, 600px"
+                                        />
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
+
+                            {/* Video (plays when Push to Talk is clicked) */}
+                            <video
+                                ref={videoRef}
+                                src="https://onbadqcmbugvszb0.public.blob.vercel-storage.com/maya-speaking.mp4"
+                                className="w-full h-full object-cover brightness-[1.05]"
+                                playsInline
+                                onEnded={() => setIsMayaSpeaking(false)}
+                                preload="metadata"
+                                aria-label="Maya AI interviewer demonstration"
+                            />
+                        </div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent opacity-30 pointer-events-none" />
 
                         {/* AI Interviewer Label */}
                         <div className="absolute bottom-4 right-4 lg:bottom-6 lg:right-6 p-3 rounded-xl bg-black/60 backdrop-blur-xl border border-white/10">
                             <div className="technical-label text-text-muted text-[8px] leading-none mb-1">AI Interviewer</div>
-                            <div className="text-xs text-white font-bold leading-none">Maya <span className="text-green-400">&#x2022; Live</span></div>
+                            <div className="text-xs text-white font-bold leading-none">Maya <span className={isMayaSpeaking ? 'text-green-400' : 'text-text-muted'}>&#x2022; {isMayaSpeaking ? 'Speaking' : 'Ready'}</span></div>
                         </div>
                     </div>
                     {/* Decorative Background Elements */}
