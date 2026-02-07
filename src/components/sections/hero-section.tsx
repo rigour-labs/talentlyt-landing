@@ -22,6 +22,11 @@ export function HeroSection() {
             <div className="max-w-7xl mx-auto relative z-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                 <div className={`flex flex-col items-start text-left max-w-2xl order-2 lg:order-1 ${heroVisible ? 'slide-up' : 'animate-on-scroll'}`}>
                     <div className={`flex flex-wrap items-center gap-3 mb-8 mt-4 ${heroVisible ? 'fade-in animate-delay-100' : 'animate-on-scroll'}`}>
+                        {/* Formerly TalentLyt Badge */}
+                        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10">
+                            <span className="technical-label text-text-muted text-[10px]">Formerly <span className="text-white font-semibold">TalentLyt</span></span>
+                        </div>
+
                         {/* Live Beta Badge */}
                         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/20 border border-green-500/40 shadow-[0_0_15px_rgba(34,197,94,0.2)]">
                             <span className="relative flex h-2 w-2">
