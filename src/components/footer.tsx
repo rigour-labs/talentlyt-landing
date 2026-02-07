@@ -44,7 +44,7 @@ export function Footer() {
                     <Link
                         href="/"
                         className="flex items-center group focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded-lg px-2 py-1 -ml-2"
-                        aria-label="TalentLyt Home"
+                        aria-label="Rigovo Home"
                     >
                         <Logo size="md" />
                     </Link>
@@ -85,7 +85,7 @@ export function Footer() {
                 {/* AI Disclosure & Legal Advisory */}
                 <div className="text-center py-8 border-t border-white/5 mt-8">
                     <p className="text-xs text-white/40 max-w-2xl mx-auto leading-relaxed">
-                        * TalentLyt provides automated assessment signals and integrity auditing. All data processed is subject to our standard data protection protocols. TalentLyt is designed to assist human decision-making, not replace it.
+                        * Rigovo provides automated assessment signals and integrity auditing. All data processed is subject to our standard data protection protocols. Rigovo is designed to assist human decision-making, not replace it.
                     </p>
                     <p className="text-xs text-white/40 mt-2">
                         For information on our legally-defensible audit trails and candidate recognition protocols, review our{' '}

@@ -6,7 +6,7 @@ import { ArrowLeft, Clock, Bot, AlertTriangle, Eye, Keyboard, Timer, Shield } fr
 import { RelatedArticles } from '@/components/blog/related-articles';
 
 export const metadata: Metadata = {
-    title: 'AI Collaboration in Interviews: Verification Guide | TalentLyt',
+    title: 'AI Collaboration in Interviews: Verification Guide | Rigovo',
     description: 'AI tools are now standard in engineering. Learn how to verify candidates lead AI rather than follow it, ensuring you hire architects not prompters.',
     keywords: [
         'AI collaboration verification',
@@ -25,10 +25,10 @@ export const metadata: Metadata = {
         description: 'AI is now standard in engineering. Here is how to verify candidates lead AI rather than follow it.',
         type: 'article',
         publishedTime: '2026-02-02T00:00:00Z',
-        authors: ['TalentLyt Product Team'],
+        authors: ['Rigovo Product Team'],
     },
     alternates: {
-        canonical: 'https://talentlyt.cloud/blog/ai-collaboration-interview-verification',
+        canonical: 'https://rigovo.com/blog/ai-collaboration-interview-verification',
     },
 };
 
@@ -37,12 +37,12 @@ const articleStructuredData = {
     '@type': 'NewsArticle',
     headline: 'AI Collaboration in Technical Interviews: Verification Guide 2026',
     description: 'AI tools are now standard in engineering. Learn how to verify candidates lead AI rather than follow it, ensuring you hire architects not prompters.',
-    image: 'https://talentlyt.cloud/og-image.png',
+    image: 'https://rigovo.com/og-image.png',
     datePublished: '2026-02-02T00:00:00Z',
     dateModified: '2026-02-02T00:00:00Z',
-    author: { '@type': 'Organization', name: 'TalentLyt Product Team', url: 'https://talentlyt.cloud/about' },
-    publisher: { '@type': 'Organization', name: 'TalentLyt', logo: { '@type': 'ImageObject', url: 'https://talentlyt.cloud/logo.png' } },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://talentlyt.cloud/blog/ai-collaboration-interview-verification' },
+    author: { '@type': 'Organization', name: 'Rigovo Product Team', url: 'https://rigovo.com/about' },
+    publisher: { '@type': 'Organization', name: 'Rigovo', logo: { '@type': 'ImageObject', url: 'https://rigovo.com/logo.png' } },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://rigovo.com/blog/ai-collaboration-interview-verification' },
 };
 
 export default function AICollaborationVerificationPage() {
@@ -328,7 +328,7 @@ export default function AICollaborationVerificationPage() {
                                         Stop AI Cheating Before It Costs You $240K
                                     </h3>
                                     <p className="text-text-secondary mb-10 max-w-xl mx-auto text-lg">
-                                        TalentLyt&apos;s 15-signal verification catches AI-assisted fraud in real-time. See how our Sentinel engine protects your hiring process.
+                                        Rigovo&apos;s 15-signal verification catches AI-assisted fraud in real-time. See how our Sentinel engine protects your hiring process.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                         <Link

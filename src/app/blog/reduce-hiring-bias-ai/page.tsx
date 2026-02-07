@@ -21,10 +21,10 @@ export const metadata: Metadata = {
         description: 'Strip away the noise and focus on technical truth. A guide to fairer hiring in 2026.',
         type: 'article',
         publishedTime: '2025-01-01T00:00:00Z',
-        authors: ['TalentLyt Product Team'],
+        authors: ['Rigovo Product Team'],
     },
     alternates: {
-        canonical: 'https://talentlyt.cloud/blog/reduce-hiring-bias-ai',
+        canonical: 'https://rigovo.com/blog/reduce-hiring-bias-ai',
     },
 };
 
@@ -33,12 +33,12 @@ const articleStructuredData = {
     '@type': 'NewsArticle',
     headline: 'Objective Truth: How AI Can Strip Bias from Technical Hiring',
     description: 'Recruitment is inherently human—and inherently biased. Discover how high-integrity AI systems can level the playing field for global technical talent.',
-    image: 'https://talentlyt.cloud/og-image.png',
+    image: 'https://rigovo.com/og-image.png',
     datePublished: '2025-01-01T00:00:00Z',
     dateModified: '2025-01-01T00:00:00Z',
-    author: { '@type': 'Organization', name: 'TalentLyt Product Team', url: 'https://talentlyt.cloud/about' },
-    publisher: { '@type': 'Organization', name: 'TalentLyt', logo: { '@type': 'ImageObject', url: 'https://talentlyt.cloud/logo.png' } },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://talentlyt.cloud/blog/reduce-hiring-bias-ai' },
+    author: { '@type': 'Organization', name: 'Rigovo Product Team', url: 'https://rigovo.com/about' },
+    publisher: { '@type': 'Organization', name: 'Rigovo', logo: { '@type': 'ImageObject', url: 'https://rigovo.com/logo.png' } },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://rigovo.com/blog/reduce-hiring-bias-ai' },
 };
 
 export default function ReduceHiringBiasPage() {
@@ -74,7 +74,7 @@ export default function ReduceHiringBiasPage() {
                                 We like to think we&apos;re objective. The data suggests otherwise. Technical hiring is often a mirror of our own unconscious preferences.
                             </p>
                             <time className="block mt-8 text-sm text-text-muted font-mono uppercase tracking-widest">
-                                By The TalentLyt Ethics Committee | Jan 1, 2026
+                                By The Rigovo Ethics Committee | Jan 1, 2026
                             </time>
                         </header>
 
@@ -142,7 +142,7 @@ export default function ReduceHiringBiasPage() {
                             <section className="mb-16">
                                 <h2 className="text-3xl font-black text-white mb-8 tracking-tight">The Ethics of Algorithmic Fairness</h2>
                                 <p className="text-text-secondary mb-6 leading-relaxed">
-                                    We must be careful: AI can inherit the biases of its training data. This is why TalentLyt uses a <strong>Multi-Agent Architecture.</strong>
+                                    We must be careful: AI can inherit the biases of its training data. This is why Rigovo uses a <strong>Multi-Agent Architecture.</strong>
                                 </p>
                                 <p className="text-text-secondary mb-8">
                                     If one model shows a preference pattern for certain syntax or reasoning styles, other models in the consensus loop can counterbalance it. We actively audit our models for &quot;disparate impact&quot; to ensure our technology is a tool for equity, not automated exclusion.

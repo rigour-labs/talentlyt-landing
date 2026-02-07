@@ -359,7 +359,7 @@ export function PricingContent() {
                         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand/50 to-transparent" />
                         <div className="text-center mb-16">
                             <h2 className="text-3xl font-black mb-4 tracking-tight">Competitive Matrix</h2>
-                            <p className="text-text-secondary font-medium text-sm px-6">How TalentLyt scales and secures where traditional platforms fail.</p>
+                            <p className="text-text-secondary font-medium text-sm px-6">How Rigovo scales and secures where traditional platforms fail.</p>
                         </div>
 
                         <div className="overflow-x-auto px-4 md:px-0">
@@ -367,7 +367,7 @@ export function PricingContent() {
                                 <thead>
                                     <tr className="border-b border-white/10">
                                         <th className="py-8 px-6 text-[10px] font-black text-text-muted uppercase tracking-[0.2em]">Capability</th>
-                                        <th className="py-8 px-6 text-[10px] font-black text-brand uppercase tracking-[0.2em]">TalentLyt Engine</th>
+                                        <th className="py-8 px-6 text-[10px] font-black text-brand uppercase tracking-[0.2em]">Rigovo Engine</th>
                                         <th className="py-8 px-6 text-[10px] font-black text-text-muted uppercase tracking-[0.2em]">Traditional ATS / AI</th>
                                     </tr>
                                 </thead>
@@ -424,7 +424,7 @@ export function PricingContent() {
                             },
                             {
                                 q: "How does the Interview Genome work?",
-                                a: "Every interview conducted builds the candidate's verified genome. Candidates can export this signed JSON to other TalentLyt-enabled companies, and you can browse the Marketplace for pre-verified talent."
+                                a: "Every interview conducted builds the candidate's verified genome. Candidates can export this signed JSON to other Rigovo-enabled companies, and you can browse the Marketplace for pre-verified talent."
                             },
                             {
                                 q: "Why minutes instead of per-interview?",
@@ -471,7 +471,7 @@ export function PricingContent() {
                             Prices in USD. India: ₹18/min. Pakistan: $0.18/min.
                         </p>
                         <p className="text-[9px] text-white/20 max-w-2xl leading-relaxed">
-                            TalentLyt uses legally-defensible biometric chain-of-custody protocols. All pricing is subject to our <Link href="/terms" className="underline hover:text-brand">Terms of Service</Link> and data retention schedules.
+                            Rigovo uses legally-defensible biometric chain-of-custody protocols. All pricing is subject to our <Link href="/terms" className="underline hover:text-brand">Terms of Service</Link> and data retention schedules.
                         </p>
                     </div>
                 </div>

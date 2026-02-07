@@ -113,7 +113,7 @@ export function ExitIntentPopup() {
                                 </h3>
 
                                 <p className="text-text-secondary mb-6">
-                                    Try TalentLyt free for your first <span className="text-white font-semibold">5 interviews</span>.
+                                    Try Rigovo free for your first <span className="text-white font-semibold">5 interviews</span>.
                                     See why teams catch 41% more issues with our 15-signal verification.
                                 </p>
 

@@ -130,7 +130,7 @@ export function HeroSection() {
                     <div className="relative z-20 w-full aspect-square max-w-[400px] lg:max-w-[600px] mx-auto rounded-[1.5rem] lg:rounded-[2.5rem] overflow-hidden shadow-[0_0_40px_rgba(0,102,255,0.1)] lg:shadow-[0_0_80px_rgba(0,102,255,0.15)] border border-white/20 bg-card/40 backdrop-blur-md">
                         <Image
                             src="/assets/maya.jpg"
-                            alt="Maya AI interviewer conducting a live technical coding interview with real-time AI leadership verification on TalentLyt AI interview platform"
+                            alt="Maya AI interviewer conducting a live technical coding interview with real-time AI leadership verification on Rigovo AI interview platform"
                             fill
                             priority
                             className="object-cover brightness-[1.1]"

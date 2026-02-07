@@ -85,7 +85,7 @@ export function FeaturesSection() {
                         Your Hiring Team
                     </h2>
                     <p className="text-lg sm:text-xl text-text-secondary leading-relaxed">
-                        TalentLyt gives your recruiters and hiring managers <span className="text-white font-bold">AI-powered superpowers</span>—not a replacement. You stay in control of every hiring decision.
+                        Rigovo gives your recruiters and hiring managers <span className="text-white font-bold">AI-powered superpowers</span>—not a replacement. You stay in control of every hiring decision.
                     </p>
                 </div>
 
@@ -135,7 +135,7 @@ export function FeaturesSection() {
                                 <div className="space-y-10">
                                     <div className="space-y-3">
                                         <div className="flex justify-between items-end">
-                                            <span className="text-sm font-bold text-white tracking-widest uppercase">TalentLyt Accuracy</span>
+                                            <span className="text-sm font-bold text-white tracking-widest uppercase">Rigovo Accuracy</span>
                                             <span className="text-2xl font-bold text-brand leading-none">99.9%</span>
                                         </div>
                                         <div className="h-2 w-full bg-white/5 rounded-full overflow-hidden">

@@ -6,7 +6,7 @@ import { ArrowLeft, Clock, Shield, Eye, Lock, Zap, AlertTriangle, Search } from 
 import { RelatedArticles } from '@/components/blog/related-articles';
 
 export const metadata: Metadata = {
-    title: 'Identity Verification in Remote Hiring: A Technical Guide | TalentLyt',
+    title: 'Identity Verification in Remote Hiring: A Technical Guide | Rigovo',
     description: 'Remote hiring requires robust identity verification. Learn how modern verification systems ensure the person you interview is the person you hire.',
     keywords: [
         'identity verification remote hiring',
@@ -22,10 +22,10 @@ export const metadata: Metadata = {
         description: 'Verification strategies for authentic candidate identity in remote technical hiring.',
         type: 'article',
         publishedTime: '2026-01-23T00:00:00Z',
-        authors: ['TalentLyt Product Team'],
+        authors: ['Rigovo Product Team'],
     },
     alternates: {
-        canonical: 'https://talentlyt.cloud/blog/identity-verification-remote-hiring',
+        canonical: 'https://rigovo.com/blog/identity-verification-remote-hiring',
     },
 };
 
@@ -34,12 +34,12 @@ const articleStructuredData = {
     '@type': 'NewsArticle',
     headline: 'Identity Verification in Remote Hiring: A Technical Guide',
     description: 'Remote hiring requires robust identity verification. Learn how modern verification systems ensure the person you interview is the person you hire.',
-    image: 'https://talentlyt.cloud/og-image.png',
+    image: 'https://rigovo.com/og-image.png',
     datePublished: '2026-01-23T00:00:00Z',
     dateModified: '2026-01-23T00:00:00Z',
-    author: { '@type': 'Organization', name: 'TalentLyt Product Team', url: 'https://talentlyt.cloud/about' },
-    publisher: { '@type': 'Organization', name: 'TalentLyt', logo: { '@type': 'ImageObject', url: 'https://talentlyt.cloud/logo.png' } },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://talentlyt.cloud/blog/identity-verification-remote-hiring' },
+    author: { '@type': 'Organization', name: 'Rigovo Product Team', url: 'https://rigovo.com/about' },
+    publisher: { '@type': 'Organization', name: 'Rigovo', logo: { '@type': 'ImageObject', url: 'https://rigovo.com/logo.png' } },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://rigovo.com/blog/identity-verification-remote-hiring' },
 };
 
 export default function IdentityVerificationRemoteHiringPage() {
@@ -89,7 +89,7 @@ export default function IdentityVerificationRemoteHiringPage() {
                                     Last year, &quot;proxy interviewing&quot; meant someone else was whispering answers into an earpiece. Today, it’s a high-stakes tech-stack of its own. Using generative adversarial networks (GANs), bad actors are now injecting real-time video feeds into Zoom, Teams, and specialized platforms. They aren’t just helping candidates; they <span className="text-white italic">are</span> the candidates.
                                 </p>
                                 <p className="text-text-secondary mb-6">
-                                    At TalentLyt, we’ve analyzed over 50,000 interview hours. We don&apos;t just see pixels; we see the systematic patterns left behind by visual injection.
+                                    At Rigovo, we’ve analyzed over 50,000 interview hours. We don&apos;t just see pixels; we see the systematic patterns left behind by visual injection.
                                 </p>
                             </section>
 
@@ -132,7 +132,7 @@ export default function IdentityVerificationRemoteHiringPage() {
                                     <div className="flex gap-4 items-start">
                                         <Shield className="w-6 h-6 text-danger shrink-0 mt-1" />
                                         <div className="text-sm text-text-secondary space-y-4">
-                                            <p><strong className="text-white uppercase tracking-wider">A Note on Privacy:</strong> As a recruiter or engineering leader, you must ensure that your integrity tools are compliant with GDPR, CCPA, and BIPA. At TalentLyt, we use &quot;ephemeral processing.&quot; We don&apos;t build biometric databases; we analyze signals in real-time and discard the raw biological markers immediately after verification.</p>
+                                            <p><strong className="text-white uppercase tracking-wider">A Note on Privacy:</strong> As a recruiter or engineering leader, you must ensure that your integrity tools are compliant with GDPR, CCPA, and BIPA. At Rigovo, we use &quot;ephemeral processing.&quot; We don&apos;t build biometric databases; we analyze signals in real-time and discard the raw biological markers immediately after verification.</p>
                                             <p><em>Always disclose that automated integrity verification is in use. Transparency is the best deterrent.</em></p>
                                         </div>
                                     </div>

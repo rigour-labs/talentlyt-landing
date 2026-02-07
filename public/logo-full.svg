@@ -9,18 +9,18 @@
   <!-- Icon background -->
   <rect width="40" height="40" rx="10" fill="url(#bgGradient)"/>
 
-  <!-- T letter -->
-  <path d="M9 11H31V15.5H22.5V31H17.5V15.5H9V11Z" fill="white"/>
+  <!-- R letter -->
+  <path d="M12 11H24C27.3137 11 30 13.6863 30 17C30 20.3137 27.3137 23 24 23H22L30 31H24L16.5 23H17.5V31H12V11ZM17.5 15.5V18.5H24C25.1046 18.5 26 17.6046 26 16.5C26 15.3954 25.1046 14.5 24 14.5H17.5V15.5Z" fill="white"/>
 
   <!-- Detection dot with rings -->
   <circle cx="32" cy="28" r="2.5" fill="white"/>
   <circle cx="32" cy="28" r="4.5" fill="none" stroke="white" stroke-width="1" opacity="0.4"/>
   <circle cx="32" cy="28" r="6.5" fill="none" stroke="white" stroke-width="0.75" opacity="0.2"/>
 
-  <!-- Wordmark: TalentLyt -->
-  <!-- "Talent" in white -->
-  <text x="52" y="27" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="700" fill="white" letter-spacing="-0.5">Talent</text>
+  <!-- Wordmark: Rigovo -->
+  <!-- "Rigo" in white -->
+  <text x="52" y="27" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="700" fill="white" letter-spacing="-0.5">Rigo</text>
 
-  <!-- "Lyt" in brand blue -->
-  <text x="122" y="27" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="700" fill="#0066FF" letter-spacing="-0.5">Lyt</text>
+  <!-- "vo" in brand blue -->
+  <text x="106" y="27" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="700" fill="#0066FF" letter-spacing="-0.5">vo</text>
 </svg>

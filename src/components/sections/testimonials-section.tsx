@@ -6,7 +6,7 @@ import { Quote, Star } from 'lucide-react';
 export function TestimonialsSection() {
     const testimonials = [
         {
-            quote: "TalentLyt transformed our hiring process. We've reduced false positives by 95% and cut our time-to-hire in half. The integrity verification gives us confidence we're making the right decisions.",
+            quote: "Rigovo transformed our hiring process. We've reduced false positives by 95% and cut our time-to-hire in half. The integrity verification gives us confidence we're making the right decisions.",
             author: "Sarah Chen",
             role: "VP of Engineering",
             company: "TechFlow Inc.",
@@ -20,7 +20,7 @@ export function TestimonialsSection() {
             metrics: "50% faster interview reviews",
         },
         {
-            quote: "We were skeptical about AI interviews, but TalentLyt's dual-agent system maintains the human touch while providing objective assessments. Our candidate experience scores improved significantly.",
+            quote: "We were skeptical about AI interviews, but Rigovo's dual-agent system maintains the human touch while providing objective assessments. Our candidate experience scores improved significantly.",
             author: "Emily Watson",
             role: "Chief People Officer",
             company: "InnovateLabs",

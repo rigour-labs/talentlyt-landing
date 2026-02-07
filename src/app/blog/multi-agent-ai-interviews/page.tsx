@@ -21,10 +21,10 @@ export const metadata: Metadata = {
         description: 'How multi-agent systems ensure accurate and fraud-proof technical assessments through consensus.',
         type: 'article',
         publishedTime: '2025-01-05T00:00:00Z',
-        authors: ['TalentLyt Product Team'],
+        authors: ['Rigovo Product Team'],
     },
     alternates: {
-        canonical: 'https://talentlyt.cloud/blog/multi-agent-ai-interviews',
+        canonical: 'https://rigovo.com/blog/multi-agent-ai-interviews',
     },
 };
 
@@ -33,12 +33,12 @@ const articleStructuredData = {
     '@type': 'NewsArticle',
     headline: 'Consensus in the Machine: Why Multi-Agent AI is the Future of Hiring',
     description: "One AI model isn't enough. Discover how multi-agent systems create a checks and balances architecture to eliminate hallucination and fraud in technical interviews.",
-    image: 'https://talentlyt.cloud/og-image.png',
+    image: 'https://rigovo.com/og-image.png',
     datePublished: '2025-01-05T00:00:00Z',
     dateModified: '2025-01-05T00:00:00Z',
-    author: { '@type': 'Organization', name: 'TalentLyt Product Team', url: 'https://talentlyt.cloud/about' },
-    publisher: { '@type': 'Organization', name: 'TalentLyt', logo: { '@type': 'ImageObject', url: 'https://talentlyt.cloud/logo.png' } },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://talentlyt.cloud/blog/multi-agent-ai-interviews' },
+    author: { '@type': 'Organization', name: 'Rigovo Product Team', url: 'https://rigovo.com/about' },
+    publisher: { '@type': 'Organization', name: 'Rigovo', logo: { '@type': 'ImageObject', url: 'https://rigovo.com/logo.png' } },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://rigovo.com/blog/multi-agent-ai-interviews' },
 };
 
 export default function MultiAgentAIPage() {
@@ -172,7 +172,7 @@ export default function MultiAgentAIPage() {
                                 Experience Consensus-Based Hiring
                             </h3>
                             <p className="text-text-secondary mb-8 max-w-xl mx-auto text-lg leading-relaxed">
-                                TalentLyt is the only platform built on true Multi-Agent AI. See why &quot;checks and balances&quot; are the key to technical hiring parity.
+                                Rigovo is the only platform built on true Multi-Agent AI. See why &quot;checks and balances&quot; are the key to technical hiring parity.
                             </p>
                             <Link
                                 href="/request-demo"

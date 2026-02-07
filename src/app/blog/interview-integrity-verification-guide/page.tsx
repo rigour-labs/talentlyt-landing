@@ -22,10 +22,10 @@ export const metadata: Metadata = {
         description: 'Verification reality check: How to protect your technical hiring funnel from sophisticated modern fraud.',
         type: 'article',
         publishedTime: '2025-01-10T00:00:00Z',
-        authors: ['TalentLyt Product Team'],
+        authors: ['Rigovo Product Team'],
     },
     alternates: {
-        canonical: 'https://talentlyt.cloud/blog/interview-integrity-verification-guide',
+        canonical: 'https://rigovo.com/blog/interview-integrity-verification-guide',
     },
 };
 
@@ -34,12 +34,12 @@ const articleStructuredData = {
     '@type': 'NewsArticle',
     headline: 'The Trust Crisis: Why Interview Integrity Is the New Technical Standard',
     description: 'Remote hiring is broken. Discover the forensic strategies to identify proxy actors and AI-assisted responses while maintaining candidate dignity and legal compliance.',
-    image: 'https://talentlyt.cloud/og-image.png',
+    image: 'https://rigovo.com/og-image.png',
     datePublished: '2025-01-10T00:00:00Z',
     dateModified: '2025-01-10T00:00:00Z',
-    author: { '@type': 'Organization', name: 'TalentLyt Product Team', url: 'https://talentlyt.cloud/about' },
-    publisher: { '@type': 'Organization', name: 'TalentLyt', logo: { '@type': 'ImageObject', url: 'https://talentlyt.cloud/logo.png' } },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://talentlyt.cloud/blog/interview-integrity-verification-guide' },
+    author: { '@type': 'Organization', name: 'Rigovo Product Team', url: 'https://rigovo.com/about' },
+    publisher: { '@type': 'Organization', name: 'Rigovo', logo: { '@type': 'ImageObject', url: 'https://rigovo.com/logo.png' } },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://rigovo.com/blog/interview-integrity-verification-guide' },
 };
 
 export default function InterviewIntegrityVerificationPage() {
@@ -85,7 +85,7 @@ export default function InterviewIntegrityVerificationPage() {
                                     The dirty secret of modern technical hiring is that it has never been easier to game. While we celebrate the accessibility of remote work, we must also acknowledge the elephant in the Zoom room: <strong>Interview Fraud.</strong>
                                 </p>
                                 <p className="text-text-secondary mb-6">
-                                    At TalentLyt, we don&apos;t see integrity as a &quot;feature.&quot; We see it as the fundamental prerequisite for a fair hiring market. If we can&apos;t verify identity, we can&apos;t verify skill. And if we can&apos;t verify skill, the entire recruitment economy begins to devalue.
+                                    At Rigovo, we don&apos;t see integrity as a &quot;feature.&quot; We see it as the fundamental prerequisite for a fair hiring market. If we can&apos;t verify identity, we can&apos;t verify skill. And if we can&apos;t verify skill, the entire recruitment economy begins to devalue.
                                 </p>
                             </section>
 

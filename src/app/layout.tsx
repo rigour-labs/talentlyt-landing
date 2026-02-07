@@ -18,10 +18,10 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://talentlyt.cloud'),
+  metadataBase: new URL('https://rigovo.com'),
   title: {
-    default: 'TalentLyt — AI Interview Co-Pilot for Technical Hiring | Not Talently or TalentLyft',
-    template: '%s | TalentLyt'
+    default: 'Rigovo — AI Interview Co-Pilot for Technical Hiring | Not Talently or TalentLyft',
+    template: '%s | Rigovo'
   },
   description:
     'Your AI co-pilot for technical hiring. Maya AI handles screening while you focus on culture fit. Multi-signal verification ensures candidates demonstrate genuine technical ability. Beta: 6,824 signal events analyzed across 82 interviews.',
@@ -63,9 +63,9 @@ export const metadata: Metadata = {
     'job success prediction AI',
     'candidate verification AI',
     // Brand keywords (exact match for brand searches)
-    'TalentLyt',
-    'TalentLyt AI',
-    'TalentLyt interview platform',
+    'Rigovo',
+    'Rigovo AI',
+    'Rigovo interview platform',
     'Maya AI interviewer',
     'Interview Genome',
     '15-signal verification',
@@ -77,11 +77,11 @@ export const metadata: Metadata = {
     'free AI interview trial',
   ],
   alternates: {
-    canonical: 'https://talentlyt.cloud',
+    canonical: 'https://rigovo.com',
     languages: {
-      'en-US': 'https://talentlyt.cloud',
-      'en': 'https://talentlyt.cloud',
-      'x-default': 'https://talentlyt.cloud',
+      'en-US': 'https://rigovo.com',
+      'en': 'https://rigovo.com',
+      'x-default': 'https://rigovo.com',
     },
   },
   robots: {
@@ -96,16 +96,16 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'TalentLyt — Your AI Co-Pilot for Technical Hiring',
+    title: 'Rigovo — Your AI Co-Pilot for Technical Hiring',
     description: 'Maya AI handles technical screening while you focus on culture fit. 15-signal verification ensures candidates lead AI, not follow it. Beta: 6,824 signal events analyzed across 82 interviews.',
-    url: 'https://talentlyt.cloud',
-    siteName: 'TalentLyt - AI Interview Co-Pilot',
+    url: 'https://rigovo.com',
+    siteName: 'Rigovo - AI Interview Co-Pilot',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'TalentLyt AI Co-Pilot - Maya AI assists your hiring team with technical screening and AI leadership verification',
+        alt: 'Rigovo AI Co-Pilot - Maya AI assists your hiring team with technical screening and AI leadership verification',
       },
     ],
     locale: 'en_US',
@@ -113,15 +113,15 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'TalentLyt — Your AI Co-Pilot for Technical Hiring',
+    title: 'Rigovo — Your AI Co-Pilot for Technical Hiring',
     description: 'Interview smarter, hire faster. Maya AI handles screening while you focus on culture fit. 15-signal AI leadership verification. Beta: 6,824 signal events analyzed across 82 interviews.',
     images: ['/og-image.png'],
-    creator: '@talentlyt',
+    creator: '@rigovo',
   },
   category: 'Technology',
   other: {
-    'apple-mobile-web-app-title': 'TalentLyt',
-    'application-name': 'TalentLyt',
+    'apple-mobile-web-app-title': 'Rigovo',
+    'application-name': 'Rigovo',
     'msapplication-TileColor': '#4f46e5',
     'theme-color': '#020617',
   }
@@ -205,7 +205,7 @@ export default function RootLayout({
                 {
                   '@context': 'https://schema.org',
                   '@type': 'SoftwareApplication',
-                  name: 'TalentLyt',
+                  name: 'Rigovo',
                   applicationCategory: 'BusinessApplication',
                   operatingSystem: 'Web',
                   offers: {
@@ -214,16 +214,16 @@ export default function RootLayout({
                     priceCurrency: 'USD',
                     description: 'Get The Pilot Pack for FREE with Promotional Coupon'
                   },
-                  description: 'TalentLyt is your AI co-pilot for technical hiring. Maya AI handles screening while you focus on culture fit. Beta: 6,824 signal events analyzed, 41% required deeper review. Features 15-signal AI leadership verification and Job Success Prediction.',
+                  description: 'Rigovo is your AI co-pilot for technical hiring. Maya AI handles screening while you focus on culture fit. Beta: 6,824 signal events analyzed, 41% required deeper review. Features 15-signal AI leadership verification and Job Success Prediction.',
                   featureList: '15-Signal Verification, 6824 Signal Events Analyzed in Beta, 41% Required Deeper Review, Automated Quality Auditor, Predictive Competency Mapping, Interview Genome, Code Playback',
                   copyrightYear: new Date().getFullYear(),
                   author: {
                     '@type': 'Organization',
                     name: 'Rigour Labs Inc.',
-                    url: 'https://talentlyt.cloud',
-                    logo: 'https://talentlyt.cloud/logo.png',
+                    url: 'https://rigovo.com',
+                    logo: 'https://rigovo.com/logo.png',
                     sameAs: [
-                      'https://twitter.com/talentlyt',
+                      'https://twitter.com/rigovo',
                       'https://github.com/rigour-labs'
                     ]
                   }
@@ -231,11 +231,11 @@ export default function RootLayout({
                 {
                   '@context': 'https://schema.org',
                   '@type': 'Brand',
-                  name: 'TalentLyt',
-                  alternateName: 'TalentLyt AI',
+                  name: 'Rigovo',
+                  alternateName: 'Rigovo AI',
                   description: 'High-fidelity technical interview intelligence powered by multi-agent consensus.',
-                  logo: 'https://talentlyt.cloud/logo.png',
-                  url: 'https://talentlyt.cloud'
+                  logo: 'https://rigovo.com/logo.png',
+                  url: 'https://rigovo.com'
                 },
                 {
                   '@context': 'https://schema.org',
@@ -256,57 +256,57 @@ export default function RootLayout({
                       '@type': 'ListItem',
                       'position': 1,
                       'name': 'Home',
-                      'item': 'https://talentlyt.cloud/'
+                      'item': 'https://rigovo.com/'
                     },
                     {
                       '@type': 'ListItem',
                       'position': 2,
                       'name': 'Blog',
-                      'item': 'https://talentlyt.cloud/blog'
+                      'item': 'https://rigovo.com/blog'
                     },
                     {
                       '@type': 'ListItem',
                       'position': 3,
                       'name': 'Compare',
-                      'item': 'https://talentlyt.cloud/compare'
+                      'item': 'https://rigovo.com/compare'
                     },
                     {
                       '@type': 'ListItem',
                       'position': 4,
                       'name': 'Pricing',
-                      'item': 'https://talentlyt.cloud/pricing'
+                      'item': 'https://rigovo.com/pricing'
                     },
                     {
                       '@type': 'ListItem',
                       'position': 5,
                       'name': 'About',
-                      'item': 'https://talentlyt.cloud/about'
+                      'item': 'https://rigovo.com/about'
                     },
                     {
                       '@type': 'ListItem',
                       'position': 6,
                       'name': 'Contact',
-                      'item': 'https://talentlyt.cloud/contact'
+                      'item': 'https://rigovo.com/contact'
                     }
                   ]
                 },
                 {
                   '@context': 'https://schema.org',
                   '@type': 'Organization',
-                  'name': 'TalentLyt',
-                  'alternateName': 'TalentLyt AI Interview Co-Pilot',
-                  'url': 'https://talentlyt.cloud',
-                  'logo': 'https://talentlyt.cloud/logo.png',
-                  'description': 'TalentLyt is your AI co-pilot for technical hiring. Maya AI handles screening while your team focuses on culture fit. 15-signal AI leadership verification. Beta: 6,824 signal events analyzed.',
+                  'name': 'Rigovo',
+                  'alternateName': 'Rigovo AI Interview Co-Pilot',
+                  'url': 'https://rigovo.com',
+                  'logo': 'https://rigovo.com/logo.png',
+                  'description': 'Rigovo is your AI co-pilot for technical hiring. Maya AI handles screening while your team focuses on culture fit. 15-signal AI leadership verification. Beta: 6,824 signal events analyzed.',
                   'foundingDate': '2025',
                   'sameAs': [
-                    'https://twitter.com/talentlyt',
-                    'https://linkedin.com/company/talentlyt',
+                    'https://twitter.com/rigovo',
+                    'https://linkedin.com/company/rigovo',
                     'https://github.com/rigour-labs'
                   ],
                   'contactPoint': {
                     '@type': 'ContactPoint',
-                    'email': 'hello@talentlyt.cloud',
+                    'email': 'hello@rigovo.com',
                     'contactType': 'sales'
                   }
                 },
@@ -319,15 +319,15 @@ export default function RootLayout({
                       'name': 'What is an AI Interview Platform?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'An AI interview co-pilot assists your hiring team by handling technical screening while you focus on culture fit. TalentLyt combines Maya AI with 15-signal AI leadership verification, Job Success Prediction, and the Interview Genome—keeping you in control of every hiring decision. Beta: 6,824 signal events analyzed across 82 interviews.'
+                        'text': 'An AI interview co-pilot assists your hiring team by handling technical screening while you focus on culture fit. Rigovo combines Maya AI with 15-signal AI leadership verification, Job Success Prediction, and the Interview Genome—keeping you in control of every hiring decision. Beta: 6,824 signal events analyzed across 82 interviews.'
                       }
                     },
                     {
                       '@type': 'Question',
-                      'name': 'How does TalentLyt ensure integrity in AI interviews?',
+                      'name': 'How does Rigovo ensure integrity in AI interviews?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'TalentLyt uses a Multi-Agent AI system featuring Maya (Conversational Lead) and a Forensic Engine to verify authentic problem-solving and AI leadership in real-time. Our Vision-Sync and Cognitive-Audit systems provide sub-millisecond consensus verification.'
+                        'text': 'Rigovo uses a Multi-Agent AI system featuring Maya (Conversational Lead) and a Forensic Engine to verify authentic problem-solving and AI leadership in real-time. Our Vision-Sync and Cognitive-Audit systems provide sub-millisecond consensus verification.'
                       }
                     },
                     {
@@ -335,15 +335,15 @@ export default function RootLayout({
                       'name': 'Can AI interviews reduce hiring bias?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'Yes, TalentLyt provides consistent AI-assisted scoring that complements your team\'s judgment, helping reduce evaluation variance by up to 80%. Your hiring team stays in control while getting data-driven insights.'
+                        'text': 'Yes, Rigovo provides consistent AI-assisted scoring that complements your team\'s judgment, helping reduce evaluation variance by up to 80%. Your hiring team stays in control while getting data-driven insights.'
                       }
                     },
                     {
                       '@type': 'Question',
-                      'name': 'How is TalentLyt different from HireVue or Codility?',
+                      'name': 'How is Rigovo different from HireVue or Codility?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'TalentLyt is an AI interview platform with Multi-Agent consensus verification. While other platforms focus on assessment, TalentLyt combines adaptive AI interviews with forensic integrity verification to ensure candidates lead AI—proving they are architects, not passengers.'
+                        'text': 'Rigovo is an AI interview platform with Multi-Agent consensus verification. While other platforms focus on assessment, Rigovo combines adaptive AI interviews with forensic integrity verification to ensure candidates lead AI—proving they are architects, not passengers.'
                       }
                     },
                     {
@@ -351,55 +351,55 @@ export default function RootLayout({
                       'name': 'What is interview integrity verification?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'Interview integrity verification ensures candidates are authentic and demonstrating genuine technical leadership. TalentLyt provides verification through behavioral analysis, gaze tracking, and cognitive pattern analysis to ensure candidates architect solutions, not just prompt them.'
+                        'text': 'Interview integrity verification ensures candidates are authentic and demonstrating genuine technical leadership. Rigovo provides verification through behavioral analysis, gaze tracking, and cognitive pattern analysis to ensure candidates architect solutions, not just prompt them.'
                       }
                     },
                     {
                       '@type': 'Question',
-                      'name': 'Is TalentLyt suitable for enterprise technical hiring?',
+                      'name': 'Is Rigovo suitable for enterprise technical hiring?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'Yes, TalentLyt is designed for enterprise-scale technical hiring. We offer SOC2 compliance, legally-defensible audit trails, and can handle high-volume recruitment with consistent quality and integrity verification.'
+                        'text': 'Yes, Rigovo is designed for enterprise-scale technical hiring. We offer SOC2 compliance, legally-defensible audit trails, and can handle high-volume recruitment with consistent quality and integrity verification.'
                       }
                     },
                     {
                       '@type': 'Question',
-                      'name': 'How does TalentLyt verify identity in interviews?',
+                      'name': 'How does Rigovo verify identity in interviews?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'TalentLyt uses 15-signal verification including lip-sync analysis, voice biometrics, facial recognition consistency, and video feed analysis to verify candidate identity in real-time. Our Governor agent ensures the person you interview is the person you hire.'
+                        'text': 'Rigovo uses 15-signal verification including lip-sync analysis, voice biometrics, facial recognition consistency, and video feed analysis to verify candidate identity in real-time. Our Governor agent ensures the person you interview is the person you hire.'
                       }
                     },
                     {
                       '@type': 'Question',
-                      'name': 'What is the difference between TalentLyt and Talently.ai?',
+                      'name': 'What is the difference between Rigovo and Talently.ai?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'TalentLyt and Talently.ai are different products. TalentLyt provides 15-signal AI leadership verification and identity verification that Talently.ai lacks. TalentLyt also offers Interview Genome (portable verified profiles) and 85% accurate job success prediction.'
+                        'text': 'Rigovo and Talently.ai are different products. Rigovo provides 15-signal AI leadership verification and identity verification that Talently.ai lacks. Rigovo also offers Interview Genome (portable verified profiles) and 85% accurate job success prediction.'
                       }
                     },
                     {
                       '@type': 'Question',
-                      'name': 'Can TalentLyt verify candidate identity?',
+                      'name': 'Can Rigovo verify candidate identity?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'Yes. TalentLyt verifies candidate identity through continuous verification, voice biometrics, behavioral analysis, and cognitive pattern analysis. The system ensures the person being interviewed maintains consistent identity throughout the session.'
+                        'text': 'Yes. Rigovo verifies candidate identity through continuous verification, voice biometrics, behavioral analysis, and cognitive pattern analysis. The system ensures the person being interviewed maintains consistent identity throughout the session.'
                       }
                     },
                     {
                       '@type': 'Question',
-                      'name': 'How does TalentLyt verify AI leadership vs AI following?',
+                      'name': 'How does Rigovo verify AI leadership vs AI following?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'TalentLyt verifies AI leadership through keystroke dynamics, response timing patterns, problem-solving approach analysis, and cognitive load indicators. The system ensures candidates architect solutions rather than simply prompt AI tools for answers.'
+                        'text': 'Rigovo verifies AI leadership through keystroke dynamics, response timing patterns, problem-solving approach analysis, and cognitive load indicators. The system ensures candidates architect solutions rather than simply prompt AI tools for answers.'
                       }
                     },
                     {
                       '@type': 'Question',
-                      'name': 'How is TalentLyt different from InterviewGuard or Talview?',
+                      'name': 'How is Rigovo different from InterviewGuard or Talview?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'TalentLyt combines AI interviewing (Maya AI) with AI leadership verification in one platform. InterviewGuard and Talview focus on proctoring existing interviews. TalentLyt conducts the entire interview autonomously while simultaneously verifying authenticity with 15 signals.'
+                        'text': 'Rigovo combines AI interviewing (Maya AI) with AI leadership verification in one platform. InterviewGuard and Talview focus on proctoring existing interviews. Rigovo conducts the entire interview autonomously while simultaneously verifying authenticity with 15 signals.'
                       }
                     }
                   ]
@@ -407,13 +407,13 @@ export default function RootLayout({
                 {
                   '@context': 'https://schema.org',
                   '@type': 'HowTo',
-                  'name': 'How to Verify AI Leadership with TalentLyt',
-                  'description': 'Learn how to verify candidates lead AI rather than follow it using TalentLyt 15-signal AI leadership verification.',
+                  'name': 'How to Verify AI Leadership with Rigovo',
+                  'description': 'Learn how to verify candidates lead AI rather than follow it using Rigovo 15-signal AI leadership verification.',
                   'step': [
                     {
                       '@type': 'HowToStep',
                       'name': 'Enable AI Leadership Verification',
-                      'text': 'TalentLyt automatically enables 15-signal verification including problem-solving analysis, voice biometrics, and gaze tracking.'
+                      'text': 'Rigovo automatically enables 15-signal verification including problem-solving analysis, voice biometrics, and gaze tracking.'
                     },
                     {
                       '@type': 'HowToStep',

@@ -84,7 +84,7 @@ export function Navbar() {
                         <Link
                             href="/"
                             className="flex items-center group focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded-lg px-2 py-1 -ml-2"
-                            aria-label="TalentLyt Home"
+                            aria-label="Rigovo Home"
                         >
                             <Logo size="md" />
                         </Link>
@@ -112,7 +112,7 @@ export function Navbar() {
 
                         <div className="flex items-center gap-4 sm:gap-8">
                             <a
-                                href="https://platform.talentlyt.cloud"
+                                href="https://platform.rigovo.com"
                                 className="technical-label text-[10px] text-white/50 hover:text-white transition-colors hidden md:block focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded px-2 py-1"
                                 aria-label="Sign in to platform"
                             >
@@ -173,7 +173,7 @@ export function Navbar() {
                             ))}
                             <div className="h-px bg-white/10 my-2" role="separator" />
                             <a
-                                href="https://platform.talentlyt.cloud"
+                                href="https://platform.rigovo.com"
                                 className="px-4 py-3 text-white/70 technical-label hover:bg-white/5 rounded-xl transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
                                 aria-label="Sign in to platform"
                             >

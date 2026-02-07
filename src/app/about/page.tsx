@@ -5,8 +5,8 @@ import { Footer } from '@/components/footer';
 import { AboutContent } from '@/components/about-content';
 
 export const metadata: Metadata = {
-    title: 'About Us | Trust in Hiring with TalentLyt',
-    description: 'Learn about the mission of TalentLyt. We are engineers building the world\'s first multi-agent technical interview suite to ensure truth and integrity in hiring.',
+    title: 'About Us | Trust in Hiring with Rigovo',
+    description: 'Learn about the mission of Rigovo. We are engineers building the world\'s first multi-agent technical interview suite to ensure truth and integrity in hiring.',
 };
 
 export default function AboutPage() {

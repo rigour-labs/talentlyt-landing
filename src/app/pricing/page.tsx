@@ -15,7 +15,7 @@ export const metadata: Metadata = {
         'enterprise recruitment pricing'
     ],
     alternates: {
-        canonical: 'https://talentlyt.cloud/pricing',
+        canonical: 'https://rigovo.com/pricing',
     },
 };
 

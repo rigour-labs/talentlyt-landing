@@ -5,8 +5,8 @@ import { Footer } from '@/components/footer';
 import { ContactContent } from '@/components/contact-content';
 
 export const metadata: Metadata = {
-    title: 'Contact Us | TalentLyt Support & Sales',
-    description: 'Get in touch with the TalentLyt team. Whether you have questions about our AI interview platform, need technical support, or want to discuss enterprise solutions, we are here to help.',
+    title: 'Contact Us | Rigovo Support & Sales',
+    description: 'Get in touch with the Rigovo team. Whether you have questions about our AI interview platform, need technical support, or want to discuss enterprise solutions, we are here to help.',
 };
 
 export default function ContactPage() {

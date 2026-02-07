@@ -22,10 +22,10 @@ export const metadata: Metadata = {
         description: 'AI eliminated traditional entry-level positions. Here\'s what companies are doing about it.',
         type: 'article',
         publishedTime: '2026-02-03T00:00:00Z',
-        authors: ['TalentLyt Product Team'],
+        authors: ['Rigovo Product Team'],
     },
     alternates: {
-        canonical: 'https://talentlyt.cloud/blog/entry-level-hiring-crisis-2026',
+        canonical: 'https://rigovo.com/blog/entry-level-hiring-crisis-2026',
     },
 };
 
@@ -34,12 +34,12 @@ const articleStructuredData = {
     '@type': 'NewsArticle',
     headline: 'The Entry-Level Hiring Crisis: Why Junior Developer Jobs Vanished in 2026',
     description: 'AI didn\'t just change senior hiring—it eliminated the traditional entry-level pipeline.',
-    image: 'https://talentlyt.cloud/og-image.png',
+    image: 'https://rigovo.com/og-image.png',
     datePublished: '2026-02-03T00:00:00Z',
     dateModified: '2026-02-03T00:00:00Z',
-    author: { '@type': 'Organization', name: 'TalentLyt Product Team', url: 'https://talentlyt.cloud/about' },
-    publisher: { '@type': 'Organization', name: 'TalentLyt', logo: { '@type': 'ImageObject', url: 'https://talentlyt.cloud/logo.png' } },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://talentlyt.cloud/blog/entry-level-hiring-crisis-2026' },
+    author: { '@type': 'Organization', name: 'Rigovo Product Team', url: 'https://rigovo.com/about' },
+    publisher: { '@type': 'Organization', name: 'Rigovo', logo: { '@type': 'ImageObject', url: 'https://rigovo.com/logo.png' } },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://rigovo.com/blog/entry-level-hiring-crisis-2026' },
 };
 
 export default function EntryLevelCrisisPage() {
@@ -330,7 +330,7 @@ export default function EntryLevelCrisisPage() {
                                         Assess Potential, Not Just Experience
                                     </h3>
                                     <p className="text-text-secondary mb-10 max-w-xl mx-auto text-lg">
-                                        TalentLyt&apos;s AI interviews evaluate problem-solving ability and learning velocity—the signals that actually predict junior success.
+                                        Rigovo&apos;s AI interviews evaluate problem-solving ability and learning velocity—the signals that actually predict junior success.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                         <Link

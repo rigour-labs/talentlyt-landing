@@ -22,10 +22,10 @@ export const metadata: Metadata = {
         description: 'A bad engineering hire costs $150K-$500K. Here is the breakdown and how to prevent it.',
         type: 'article',
         publishedTime: '2026-02-01T00:00:00Z',
-        authors: ['TalentLyt Product Team'],
+        authors: ['Rigovo Product Team'],
     },
     alternates: {
-        canonical: 'https://talentlyt.cloud/blog/cost-of-bad-hire-engineering',
+        canonical: 'https://rigovo.com/blog/cost-of-bad-hire-engineering',
     },
 };
 
@@ -34,12 +34,12 @@ const articleStructuredData = {
     '@type': 'NewsArticle',
     headline: 'The Real Cost of a Bad Engineering Hire (And How to Avoid It)',
     description: 'A bad engineering hire costs $150K-$500K when you factor in salary, onboarding, team disruption, and missed deadlines. Learn how to protect your hiring investment.',
-    image: 'https://talentlyt.cloud/og-image.png',
+    image: 'https://rigovo.com/og-image.png',
     datePublished: '2026-02-01T00:00:00Z',
     dateModified: '2026-02-01T00:00:00Z',
-    author: { '@type': 'Organization', name: 'TalentLyt Product Team', url: 'https://talentlyt.cloud/about' },
-    publisher: { '@type': 'Organization', name: 'TalentLyt', logo: { '@type': 'ImageObject', url: 'https://talentlyt.cloud/logo.png' } },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://talentlyt.cloud/blog/cost-of-bad-hire-engineering' },
+    author: { '@type': 'Organization', name: 'Rigovo Product Team', url: 'https://rigovo.com/about' },
+    publisher: { '@type': 'Organization', name: 'Rigovo', logo: { '@type': 'ImageObject', url: 'https://rigovo.com/logo.png' } },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://rigovo.com/blog/cost-of-bad-hire-engineering' },
 };
 
 export default function CostOfBadHirePage() {
@@ -243,7 +243,7 @@ export default function CostOfBadHirePage() {
                                         Stop Paying the Bad Hire Tax
                                     </h3>
                                     <p className="text-text-secondary mb-10 max-w-xl mx-auto text-lg">
-                                        TalentLyt&apos;s 15-signal verification catches mismatches before they become costly mistakes. See how it works.
+                                        Rigovo&apos;s 15-signal verification catches mismatches before they become costly mistakes. See how it works.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                         <Link

@@ -5,14 +5,14 @@ import { Footer } from '@/components/footer';
 import { Check, X, ShieldCheck, Bot, Eye, Fingerprint, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'Compare TalentLyt vs HireVue, Codility & More',
-    description: 'Compare TalentLyt with HireVue, Codility, Talently.ai. 15-signal AI leadership verification, 6,824 signal events analyzed in beta.',
+    title: 'Compare Rigovo vs HireVue, Codility & More',
+    description: 'Compare Rigovo with HireVue, Codility, Talently.ai. 15-signal AI leadership verification, 6,824 signal events analyzed in beta.',
     keywords: [
-        'TalentLyt vs HireVue',
-        'TalentLyt vs Codility',
-        'TalentLyt vs Talently.ai',
-        'TalentLyt vs HackerRank',
-        'TalentLyt vs TalentLyft',
+        'Rigovo vs HireVue',
+        'Rigovo vs Codility',
+        'Rigovo vs Talently.ai',
+        'Rigovo vs HackerRank',
+        'Rigovo vs TalentLyft',
         'HireVue alternative',
         'Codility alternative',
         'Talently.ai alternative',
@@ -24,11 +24,11 @@ export const metadata: Metadata = {
         'proxy candidate detection software',
     ],
     alternates: {
-        canonical: 'https://talentlyt.cloud/compare',
+        canonical: 'https://rigovo.com/compare',
     },
     openGraph: {
-        title: 'TalentLyt vs HireVue vs Codility vs Talently.ai — Full Comparison 2026',
-        description: 'TalentLyt offers 15-signal AI leadership verification with 6,824 signal events analyzed in beta testing. Compare all AI interview platforms.',
+        title: 'Rigovo vs HireVue vs Codility vs Talently.ai — Full Comparison 2026',
+        description: 'Rigovo offers 15-signal AI leadership verification with 6,824 signal events analyzed in beta testing. Compare all AI interview platforms.',
         type: 'website',
     },
 };
@@ -36,36 +36,36 @@ export const metadata: Metadata = {
 export default function ComparisonPage() {
     type FeatureValue = boolean | 'partial';
 
-    const comparisonFeatures: { category: string; features: { name: string; talentlyt: FeatureValue; traditional: FeatureValue }[] }[] = [
+    const comparisonFeatures: { category: string; features: { name: string; rigovo: FeatureValue; traditional: FeatureValue }[] }[] = [
         {
             category: 'Interview Intelligence',
             features: [
-                { name: 'Live Multi-Agent AI (Maya)', talentlyt: true, traditional: true },
-                { name: 'Predictive Job Success (85%)', talentlyt: true, traditional: false },
-                { name: 'Interview Genome Export', talentlyt: true, traditional: false },
-                { name: 'Federated Collective Intelligence', talentlyt: true, traditional: false },
-                { name: 'Adaptive Claim Probing', talentlyt: true, traditional: 'partial' },
+                { name: 'Live Multi-Agent AI (Maya)', rigovo: true, traditional: true },
+                { name: 'Predictive Job Success (85%)', rigovo: true, traditional: false },
+                { name: 'Interview Genome Export', rigovo: true, traditional: false },
+                { name: 'Federated Collective Intelligence', rigovo: true, traditional: false },
+                { name: 'Adaptive Claim Probing', rigovo: true, traditional: 'partial' },
             ],
         },
         {
             category: 'Forensic Integrity & Trust',
             features: [
-                { name: '15-Signal Verification', talentlyt: true, traditional: false },
-                { name: 'Nova-grade Voice Auth', talentlyt: true, traditional: false },
-                { name: 'Lip-Sync & Gaze Sync', talentlyt: true, traditional: false },
-                { name: 'Micro-expression Analysis', talentlyt: true, traditional: false },
-                { name: 'Jailbreak & Prompt Defense', talentlyt: true, traditional: false },
-                { name: 'Cognitive Load Analysis', talentlyt: true, traditional: false },
+                { name: '15-Signal Verification', rigovo: true, traditional: false },
+                { name: 'Nova-grade Voice Auth', rigovo: true, traditional: false },
+                { name: 'Lip-Sync & Gaze Sync', rigovo: true, traditional: false },
+                { name: 'Micro-expression Analysis', rigovo: true, traditional: false },
+                { name: 'Jailbreak & Prompt Defense', rigovo: true, traditional: false },
+                { name: 'Cognitive Load Analysis', rigovo: true, traditional: false },
             ],
         },
         {
             category: 'Enterprise Governance',
             features: [
-                { name: 'Bias Auditor (EEOC)', talentlyt: true, traditional: 'partial' },
-                { name: 'Self-Learning RL Weights', talentlyt: true, traditional: false },
-                { name: 'Legally-Defensible Audit Trails', talentlyt: true, traditional: 'partial' },
-                { name: 'White-Label Reports', talentlyt: true, traditional: 'partial' },
-                { name: 'SAML / SSO (WorkOS)', talentlyt: true, traditional: true },
+                { name: 'Bias Auditor (EEOC)', rigovo: true, traditional: 'partial' },
+                { name: 'Self-Learning RL Weights', rigovo: true, traditional: false },
+                { name: 'Legally-Defensible Audit Trails', rigovo: true, traditional: 'partial' },
+                { name: 'White-Label Reports', rigovo: true, traditional: 'partial' },
+                { name: 'SAML / SSO (WorkOS)', rigovo: true, traditional: true },
             ],
         },
     ];
@@ -74,7 +74,7 @@ export default function ComparisonPage() {
         {
             icon: Bot,
             title: 'Portable Interview Genome',
-            description: 'TalentLyt creates portable, cryptographically-signed candidate profiles. Verified skills that travel with the candidate, eliminating repetitive evaluation and securing hiring intent.',
+            description: 'Rigovo creates portable, cryptographically-signed candidate profiles. Verified skills that travel with the candidate, eliminating repetitive evaluation and securing hiring intent.',
         },
         {
             icon: ShieldCheck,
@@ -105,10 +105,10 @@ export default function ComparisonPage() {
                             Platform Comparison
                         </div>
                         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">
-                            TalentLyt vs HireVue, Codility, <span className="text-brand">Talently.ai</span> & Others
+                            Rigovo vs HireVue, Codility, <span className="text-brand">Talently.ai</span> & Others
                         </h1>
                         <p className="text-lg sm:text-xl text-text-secondary leading-relaxed max-w-3xl mx-auto">
-                            Looking for a HireVue alternative? Comparing Codility vs TalentLyt? <strong className="text-white">TalentLyt features real-time 15-signal AI leadership verification</strong>—ensuring candidates architect solutions, not just prompt AI, with identity verification that other platforms miss entirely.
+                            Looking for a HireVue alternative? Comparing Codility vs Rigovo? <strong className="text-white">Rigovo features real-time 15-signal AI leadership verification</strong>—ensuring candidates architect solutions, not just prompt AI, with identity verification that other platforms miss entirely.
                         </p>
                     </div>
                 </section>
@@ -117,7 +117,7 @@ export default function ComparisonPage() {
                 <section className="px-4 sm:px-6 py-16 bg-white/[0.01]">
                     <div className="max-w-7xl mx-auto">
                         <h2 className="text-3xl font-bold text-white mb-12 text-center">
-                            What Makes TalentLyt <span className="text-brand">Different</span>
+                            What Makes Rigovo <span className="text-brand">Different</span>
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             {uniqueAdvantages.map((advantage, i) => (
@@ -140,7 +140,7 @@ export default function ComparisonPage() {
                             Feature Comparison
                         </h2>
                         <p className="text-text-secondary text-center mb-12 max-w-2xl mx-auto">
-                            See how TalentLyt&apos;s integrity-first approach compares to traditional AI interview platforms.
+                            See how Rigovo&apos;s integrity-first approach compares to traditional AI interview platforms.
                         </p>
 
                         <div className="overflow-x-auto">
@@ -150,7 +150,7 @@ export default function ComparisonPage() {
                                         <th className="py-4 px-4 text-left text-white font-bold">Feature</th>
                                         <th className="py-4 px-4 text-center">
                                             <div className="inline-flex flex-col items-center">
-                                                <span className="text-brand font-bold">TalentLyt</span>
+                                                <span className="text-brand font-bold">Rigovo</span>
                                                 <span className="text-[10px] text-text-muted uppercase tracking-wider">Integrity-First</span>
                                             </div>
                                         </th>
@@ -174,9 +174,9 @@ export default function ComparisonPage() {
                                                 <tr key={`feature-${sectionIdx}-${featureIdx}`} className="border-b border-white/5">
                                                     <td className="py-3 sm:py-4 px-2 sm:px-4 text-white text-sm sm:text-base">{feature.name}</td>
                                                     <td className="py-3 sm:py-4 px-2 sm:px-4 text-center">
-                                                        {feature.talentlyt === true ? (
+                                                        {feature.rigovo === true ? (
                                                             <Check className="w-5 h-5 text-green-500 mx-auto" />
-                                                        ) : feature.talentlyt === 'partial' ? (
+                                                        ) : feature.rigovo === 'partial' ? (
                                                             <span className="text-amber-500 text-sm">Partial</span>
                                                         ) : (
                                                             <X className="w-5 h-5 text-red-500 mx-auto" />
@@ -219,7 +219,7 @@ export default function ComparisonPage() {
                                     That&apos;s the gap we fill.
                                 </p>
                                 <p>
-                                    We built TalentLyt because we got burned. Hired engineers who couldn&apos;t code.
+                                    We built Rigovo because we got burned. Hired engineers who couldn&apos;t code.
                                     Discovered proxy candidates after onboarding. So we built the verification layer that should have existed from the start.
                                     If you just want faster interviews, there are plenty of options.
                                     If you want to <strong className="text-white">know who you&apos;re actually hiring</strong>, that&apos;s us.
@@ -233,7 +233,7 @@ export default function ComparisonPage() {
                 <section className="px-4 sm:px-6 py-16">
                     <div className="max-w-5xl mx-auto">
                         <h2 className="text-3xl font-bold text-white mb-12 text-center">
-                            When to Choose TalentLyt
+                            When to Choose Rigovo
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             {[
@@ -268,7 +268,7 @@ export default function ComparisonPage() {
                                 Ready for Integrity-First Hiring?
                             </h2>
                             <p className="text-text-secondary mb-8 max-w-xl mx-auto">
-                                See how TalentLyt&apos;s Multi-Agent AI and forensic verification can transform your technical hiring process.
+                                See how Rigovo&apos;s Multi-Agent AI and forensic verification can transform your technical hiring process.
                             </p>
                             <Link
                                 href="/request-demo"

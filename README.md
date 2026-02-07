@@ -1,6 +1,6 @@
-# TalentLyt Landing Page
+# Rigovo Landing Page
 
-Professional Next.js landing page for TalentLyt - AI-Powered Interview Intelligence platform.
+Professional Next.js landing page for Rigovo - AI-Powered Interview Intelligence platform.
 
 ## Features
 

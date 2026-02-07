@@ -21,10 +21,10 @@ export const metadata: Metadata = {
         description: 'A deep dive into how AI is redefining the "first call" in technical recruitment.',
         type: 'article',
         publishedTime: '2025-01-15T00:00:00Z',
-        authors: ['TalentLyt Product Team'],
+        authors: ['Rigovo Product Team'],
     },
     alternates: {
-        canonical: 'https://talentlyt.cloud/blog/what-is-ai-interview-platform',
+        canonical: 'https://rigovo.com/blog/what-is-ai-interview-platform',
     },
 };
 
@@ -34,25 +34,25 @@ const articleStructuredData = {
     '@type': 'NewsArticle',
     headline: 'The Blueprint: What is an AI Interview Platform in 2026?',
     description: 'Beyond automated scripts. Discover how AI interview platforms are evolving into complex socio-technical systems that balance scale with human empathy and integrity.',
-    image: 'https://talentlyt.cloud/og-image.png',
+    image: 'https://rigovo.com/og-image.png',
     datePublished: '2025-01-15T00:00:00Z',
     dateModified: '2025-01-15T00:00:00Z',
     author: {
         '@type': 'Organization',
-        name: 'TalentLyt Product Team',
-        url: 'https://talentlyt.cloud/about',
+        name: 'Rigovo Product Team',
+        url: 'https://rigovo.com/about',
     },
     publisher: {
         '@type': 'Organization',
-        name: 'TalentLyt',
+        name: 'Rigovo',
         logo: {
             '@type': 'ImageObject',
-            url: 'https://talentlyt.cloud/logo.png',
+            url: 'https://rigovo.com/logo.png',
         },
     },
     mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://talentlyt.cloud/blog/what-is-ai-interview-platform',
+        '@id': 'https://rigovo.com/blog/what-is-ai-interview-platform',
     },
 };
 
@@ -92,7 +92,7 @@ export default function WhatIsAIInterviewPlatformPage() {
                                 We&apos;re past the era of &quot;proctored quizzes.&quot; Modern technical hiring requires a system that understands code, detects fraud, and—most importantly—respects the candidate&apos;s time.
                             </p>
                             <time className="block mt-8 text-sm text-text-muted font-mono uppercase tracking-widest">
-                                By The TalentLyt Product Team | Jan 15, 2026
+                                By The Rigovo Product Team | Jan 15, 2026
                             </time>
                         </header>
 
@@ -124,7 +124,7 @@ export default function WhatIsAIInterviewPlatformPage() {
                                         <ShieldCheck className="w-8 h-8 text-emerald-500 mb-6" />
                                         <h3 className="text-xl font-bold text-white mb-3">15-Signal Verification</h3>
                                         <p className="text-sm text-text-secondary leading-relaxed">
-                                            Integrity is fundamental. TalentLyt analyzes 12 distinct signal types in real-time to maintain session authenticity through high-precision technical mapping.
+                                            Integrity is fundamental. Rigovo analyzes 12 distinct signal types in real-time to maintain session authenticity through high-precision technical mapping.
                                         </p>
                                     </div>
                                     <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/5">
@@ -140,7 +140,7 @@ export default function WhatIsAIInterviewPlatformPage() {
                             <section className="mb-16">
                                 <h2 className="text-3xl font-black text-white mb-8 tracking-tight">How it Actually Works (The Human View)</h2>
                                 <p className="text-text-secondary mb-6">
-                                    When a candidate enters a TalentLyt session, they aren&apos;t meeting a chatbot. They are meeting <strong>Maya</strong>—our conversational agent.
+                                    When a candidate enters a Rigovo session, they aren&apos;t meeting a chatbot. They are meeting <strong>Maya</strong>—our conversational agent.
                                 </p>
                                 <p className="text-text-secondary mb-6">
                                     The experience is fluid. Maya might start with a high-level system design problem. If the candidate struggles, she provides a hint—not to catch them out, but to see how they respond to feedback. This is the &quot;human&quot; element that traditional automated tests completely miss.
@@ -189,7 +189,7 @@ export default function WhatIsAIInterviewPlatformPage() {
                                 Tired of Scaling the Unscalable?
                             </h3>
                             <p className="text-text-secondary mb-8 max-w-xl mx-auto text-lg leading-relaxed">
-                                Stop wasting senior engineering hours on screening calls. Deploy Maya and see why the world&apos;s fastest-growing teams trust TalentLyt.
+                                Stop wasting senior engineering hours on screening calls. Deploy Maya and see why the world&apos;s fastest-growing teams trust Rigovo.
                             </p>
                             <Link
                                 href="/request-demo"

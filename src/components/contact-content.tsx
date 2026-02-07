@@ -47,7 +47,7 @@ export function ContactContent() {
                         Contact <span className="text-brand">Us</span>
                     </h1>
                     <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-                        Have questions about TalentLyt? We'd love to hear from you.
+                        Have questions about Rigovo? We'd love to hear from you.
                     </p>
                 </div>
 
@@ -132,7 +132,7 @@ export function ContactContent() {
                                 <div>
                                     <h3 className="text-xl font-bold mb-1">Sales & Support</h3>
                                     <p className="text-text-muted text-sm mb-4">For demos, pricing, and technical questions</p>
-                                    <a href="mailto:sales@talentlyt.cloud" className="text-brand text-lg font-bold hover:underline">sales@talentlyt.cloud</a>
+                                    <a href="mailto:sales@rigovo.com" className="text-brand text-lg font-bold hover:underline">sales@rigovo.com</a>
                                 </div>
                             </div>
                         </div>
@@ -173,7 +173,7 @@ export function ContactContent() {
                         <div className="p-8 rounded-[2rem] bg-gradient-to-br from-brand/10 to-transparent border border-brand/20">
                             <h3 className="text-xl font-bold mb-4">Looking for a demo?</h3>
                             <p className="text-text-secondary text-sm mb-6">
-                                See TalentLyt in action with a personalized walkthrough of our AI interview platform.
+                                See Rigovo in action with a personalized walkthrough of our AI interview platform.
                             </p>
                             <Link
                                 href="/request-demo"

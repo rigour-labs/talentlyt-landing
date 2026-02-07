@@ -6,11 +6,11 @@ import Link from 'next/link';
 import { ArrowRight, Play, Shield, Brain, Activity } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'Watch Demo | TalentLyt AI Interview Platform in Action',
-    description: 'Watch a complete demo of TalentLyt AI interview platform. See Maya AI conduct technical interviews with real-time AI leadership verification, 15-signal integrity verification, and predictive job success scoring.',
+    title: 'Watch Demo | Rigovo AI Interview Platform in Action',
+    description: 'Watch a complete demo of Rigovo AI interview platform. See Maya AI conduct technical interviews with real-time AI leadership verification, 15-signal integrity verification, and predictive job success scoring.',
     openGraph: {
-        title: 'TalentLyt Demo Video - AI Interview Platform with Integrity Verification',
-        description: 'Watch how TalentLyt catches proxy candidates and deepfakes while Maya AI conducts adaptive technical interviews.',
+        title: 'Rigovo Demo Video - AI Interview Platform with Integrity Verification',
+        description: 'Watch how Rigovo catches proxy candidates and deepfakes while Maya AI conducts adaptive technical interviews.',
         type: 'video.other',
         videos: [
             {
@@ -22,11 +22,11 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: 'player',
-        title: 'TalentLyt Demo - AI Interview Platform',
+        title: 'Rigovo Demo - AI Interview Platform',
         description: 'See Maya AI interview candidates with real-time integrity verification',
     },
     alternates: {
-        canonical: 'https://talentlyt.cloud/demo-video',
+        canonical: 'https://rigovo.com/demo-video',
     },
 };
 
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
 const videoStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'VideoObject',
-    name: 'TalentLyt AI Interview Platform Demo - Maya AI & 15-Signal Integrity Verification',
-    description: 'Watch a complete walkthrough of TalentLyt, the AI interview platform with real-time AI leadership verification. See how Maya AI conducts adaptive technical interviews while our 15-signal integrity system verifies candidates are authentic architects of their solutions.',
+    name: 'Rigovo AI Interview Platform Demo - Maya AI & 15-Signal Integrity Verification',
+    description: 'Watch a complete walkthrough of Rigovo, the AI interview platform with real-time AI leadership verification. See how Maya AI conducts adaptive technical interviews while our 15-signal integrity system verifies candidates are authentic architects of their solutions.',
     thumbnailUrl: 'https://cdn.loom.com/sessions/thumbnails/b0a8d53703514523b7c21f9f585d9a73-00001.jpg',
     uploadDate: '2026-01-15T00:00:00Z',
     duration: 'PT3M',
@@ -43,15 +43,15 @@ const videoStructuredData = {
     embedUrl: 'https://www.loom.com/embed/b0a8d53703514523b7c21f9f585d9a73',
     publisher: {
         '@type': 'Organization',
-        name: 'TalentLyt',
+        name: 'Rigovo',
         logo: {
             '@type': 'ImageObject',
-            url: 'https://talentlyt.cloud/logo.png',
+            url: 'https://rigovo.com/logo.png',
         },
     },
     potentialAction: {
         '@type': 'WatchAction',
-        target: 'https://talentlyt.cloud/demo-video',
+        target: 'https://rigovo.com/demo-video',
     },
 };
 
@@ -74,7 +74,7 @@ export default function DemoVideoPage() {
                                 <span className="text-sm font-medium text-brand">Product Demo</span>
                             </div>
                             <h1 className="text-4xl sm:text-5xl font-bold mb-6 tracking-tight">
-                                See TalentLyt <span className="text-brand">in Action</span>
+                                See Rigovo <span className="text-brand">in Action</span>
                             </h1>
                             <p className="text-lg text-text-secondary max-w-2xl mx-auto">
                                 Watch how Maya AI conducts technical interviews while our 15-signal integrity system verifies authenticity in real-time.
@@ -91,7 +91,7 @@ export default function DemoVideoPage() {
                                         frameBorder="0"
                                         allowFullScreen
                                         style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-                                        title="TalentLyt AI Interview Platform Demo"
+                                        title="Rigovo AI Interview Platform Demo"
                                     />
                                 </div>
                             </div>
@@ -135,7 +135,7 @@ export default function DemoVideoPage() {
                         <div className="text-center p-12 rounded-3xl bg-gradient-to-br from-brand/10 to-transparent border border-brand/20">
                             <h2 className="text-3xl font-bold mb-4">Ready to try it yourself?</h2>
                             <p className="text-text-secondary mb-8 max-w-xl mx-auto">
-                                Experience TalentLyt firsthand with a personalized demo tailored to your hiring needs.
+                                Experience Rigovo firsthand with a personalized demo tailored to your hiring needs.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <Link

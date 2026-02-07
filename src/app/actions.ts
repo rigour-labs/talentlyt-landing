@@ -58,8 +58,8 @@ export async function submitDemoRequest(prevState: any, formData: FormData) {
         }
 
         const { data, error } = await resend.emails.send({
-            from: 'notifications@talentlyt.cloud',
-            to: ['sales@talentlyt.cloud', 'ashu.singh212@gmail.com'],
+            from: 'notifications@rigovo.com',
+            to: ['sales@rigovo.com', 'ashu.singh212@gmail.com'],
             subject: `New Demo Request: ${name} from ${company}`,
             html: `
         <h2>New Demo Request</h2>
@@ -121,8 +121,8 @@ export async function submitContactForm(prevState: any, formData: FormData) {
         }
 
         const { data, error } = await resend.emails.send({
-            from: 'notifications@talentlyt.cloud',
-            to: ['sales@talentlyt.cloud'],
+            from: 'notifications@rigovo.com',
+            to: ['sales@rigovo.com'],
             replyTo: email,
             subject: `Contact Form: ${name}`,
             html: `

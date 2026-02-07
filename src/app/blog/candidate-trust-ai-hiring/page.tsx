@@ -22,10 +22,10 @@ export const metadata: Metadata = {
         description: 'The trust gap in AI hiring is costing you candidates. Here\'s how to fix it.',
         type: 'article',
         publishedTime: '2026-02-02T00:00:00Z',
-        authors: ['TalentLyt Product Team'],
+        authors: ['Rigovo Product Team'],
     },
     alternates: {
-        canonical: 'https://talentlyt.cloud/blog/candidate-trust-ai-hiring',
+        canonical: 'https://rigovo.com/blog/candidate-trust-ai-hiring',
     },
 };
 
@@ -34,12 +34,12 @@ const articleStructuredData = {
     '@type': 'NewsArticle',
     headline: 'Why 66% of Candidates Won\'t Apply to Jobs Using AI (And How to Fix It)',
     description: 'Two-thirds of job seekers avoid AI-driven hiring. The trust gap is real, but fixable.',
-    image: 'https://talentlyt.cloud/og-image.png',
+    image: 'https://rigovo.com/og-image.png',
     datePublished: '2026-02-02T00:00:00Z',
     dateModified: '2026-02-02T00:00:00Z',
-    author: { '@type': 'Organization', name: 'TalentLyt Product Team', url: 'https://talentlyt.cloud/about' },
-    publisher: { '@type': 'Organization', name: 'TalentLyt', logo: { '@type': 'ImageObject', url: 'https://talentlyt.cloud/logo.png' } },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://talentlyt.cloud/blog/candidate-trust-ai-hiring' },
+    author: { '@type': 'Organization', name: 'Rigovo Product Team', url: 'https://rigovo.com/about' },
+    publisher: { '@type': 'Organization', name: 'Rigovo', logo: { '@type': 'ImageObject', url: 'https://rigovo.com/logo.png' } },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://rigovo.com/blog/candidate-trust-ai-hiring' },
 };
 
 export default function CandidateTrustPage() {
@@ -290,7 +290,7 @@ export default function CandidateTrustPage() {
                                         AI Candidates Can Trust
                                     </h3>
                                     <p className="text-text-secondary mb-10 max-w-xl mx-auto text-lg">
-                                        TalentLyt is built on transparency. Every signal we analyze is explainable. Every decision has human oversight. See why candidates actually prefer our process.
+                                        Rigovo is built on transparency. Every signal we analyze is explainable. Every decision has human oversight. See why candidates actually prefer our process.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                         <Link

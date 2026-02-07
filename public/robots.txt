@@ -3,10 +3,10 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://talentlyt.cloud/sitemap.xml
+Sitemap: https://rigovo.com/sitemap.xml
 
 # LLM Specification
-LLMS: https://talentlyt.cloud/llms.txt
+LLMS: https://rigovo.com/llms.txt
 
 # Disallow admin and API routes
 Disallow: /api/

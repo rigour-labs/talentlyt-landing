@@ -45,7 +45,7 @@ export function AboutContent() {
                         Building the Future of <span className="text-brand">Verified</span> Hiring
                     </h1>
                     <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-                        TalentLyt was born from a simple frustration: hiring is broken. We're fixing that with AI that doesn't just screen—it verifies.
+                        Rigovo was born from a simple frustration: hiring is broken. We're fixing that with AI that doesn't just screen—it verifies.
                     </p>
                 </div>
 

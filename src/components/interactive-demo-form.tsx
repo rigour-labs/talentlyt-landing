@@ -135,7 +135,7 @@ export function InteractiveDemoForm() {
       // Handle rate limit specially - show booking option
       if (res.status === 429) {
         setRateLimitExceeded(true);
-        setBookingUrl(data.bookingUrl || 'https://calendly.com/talentlyt/demo');
+        setBookingUrl(data.bookingUrl || 'https://calendly.com/rigovo/demo');
         setError(data.error);
         setIsLoading(false);
 
@@ -289,7 +289,7 @@ export function InteractiveDemoForm() {
             <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl p-4 text-center">
               <p className="text-amber-300 text-sm mb-3">{error}</p>
               <a 
-                href={bookingUrl || 'https://calendly.com/talentlyt/demo'}
+                href={bookingUrl || 'https://calendly.com/rigovo/demo'}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-brand to-emerald-500 hover:from-brand/90 hover:to-emerald-400 rounded-lg text-white font-medium text-sm transition-all"

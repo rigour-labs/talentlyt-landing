@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         'cost of bad hire',
     ],
     alternates: {
-        canonical: 'https://talentlyt.cloud/blog',
+        canonical: 'https://rigovo.com/blog',
     },
 };
 
@@ -141,7 +141,7 @@ export default function BlogPage() {
                         <div className="max-w-3xl mb-16">
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 border border-brand/20 text-brand text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
                                 <BookOpen className="w-3 h-3" />
-                                TalentLyt Blog
+                                Rigovo Blog
                             </div>
                             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">
                                 AI Interview <span className="text-brand">Insights</span>

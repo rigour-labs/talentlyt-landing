@@ -27,7 +27,7 @@ const LegacyCard = ({ icon: Icon, title, status, color = "danger" }: any) => (
     </motion.div>
 );
 
-const TalentLytProductView = () => (
+const RigovoProductView = () => (
     <div className="relative w-full h-full flex items-center justify-center p-4">
         {/* Main Product Mockup Container */}
         <div className="relative w-full max-w-5xl aspect-[16/10] rounded-[2rem] border border-white/10 overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] bg-black group will-change-transform">
@@ -35,7 +35,7 @@ const TalentLytProductView = () => (
             <div className="absolute inset-0">
                 <Image
                     src="https://onbadqcmbugvszb0.public.blob.vercel-storage.com/screencapture-localhost-3000-interview-cmk9zk46300008p1t9fhlvbcs-2026-01-11-22_38_58.png"
-                    alt="TalentLyt Unified Interview Interface"
+                    alt="Rigovo Unified Interview Interface"
                     fill
                     sizes="(max-width: 768px) 100vw, 1200px"
                     className="object-cover opacity-90 group-hover:scale-[1.01] transition-transform duration-700"
@@ -162,7 +162,7 @@ export function BeforeAfterSection() {
                             className={`relative z-10 px-8 py-3 text-sm font-bold transition-colors duration-300 flex items-center gap-2 ${state === 'after' ? 'text-white' : 'text-text-muted'}`}
                         >
                             <ShieldCheck className="w-4 h-4" />
-                            TalentLyt Unified
+                            Rigovo Unified
                         </button>
                     </div>
                 </div>
@@ -208,7 +208,7 @@ export function BeforeAfterSection() {
                                     exit={{ opacity: 0, scale: 0.9 }}
                                     className="absolute inset-0 flex flex-col items-center justify-center p-8"
                                 >
-                                    <TalentLytProductView />
+                                    <RigovoProductView />
                                 </motion.div>
                             )}
                         </AnimatePresence>

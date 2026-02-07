@@ -4,10 +4,10 @@ import { Footer } from '@/components/footer';
 import { FileText, AlertCircle, Shield, CreditCard, Scale, Ban, RefreshCw, Gavel, Clock, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'Terms of Service — TalentLyt',
-    description: 'TalentLyt Terms of Service. Read our terms governing the use of our AI interview platform, billing, data usage, and your rights as a user.',
+    title: 'Terms of Service — Rigovo',
+    description: 'Rigovo Terms of Service. Read our terms governing the use of our AI interview platform, billing, data usage, and your rights as a user.',
     alternates: {
-        canonical: 'https://talentlyt.cloud/terms',
+        canonical: 'https://rigovo.com/terms',
     },
 };
 
@@ -27,7 +27,7 @@ export default function TermsPage() {
                             Terms of <span className="text-brand">Service</span>
                         </h1>
                         <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-                            These terms govern your use of TalentLyt. We&apos;ve tried to keep them readable while covering the legal bases. If something is unclear, reach out—we&apos;re happy to explain.
+                            These terms govern your use of Rigovo. We&apos;ve tried to keep them readable while covering the legal bases. If something is unclear, reach out—we&apos;re happy to explain.
                         </p>
                         <p className="text-sm text-text-muted mt-4">
                             Last updated: February 2, 2026 | Effective: February 2, 2026
@@ -45,13 +45,13 @@ export default function TermsPage() {
                             </div>
                             <div className="text-text-secondary text-sm leading-relaxed space-y-4">
                                 <p>
-                                    Welcome to TalentLyt. These Terms of Service (&quot;Terms&quot;) constitute a legally binding agreement between you (&quot;User,&quot; &quot;you,&quot; or &quot;your&quot;) and Rigour Labs Inc. (&quot;TalentLyt,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;).
+                                    Welcome to Rigovo. These Terms of Service (&quot;Terms&quot;) constitute a legally binding agreement between you (&quot;User,&quot; &quot;you,&quot; or &quot;your&quot;) and Rigour Labs Inc. (&quot;Rigovo,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;).
                                 </p>
                                 <p>
-                                    By creating an account, accessing our platform, or using any of our services, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you are using TalentLyt on behalf of an organization, you represent that you have the authority to bind that organization to these Terms.
+                                    By creating an account, accessing our platform, or using any of our services, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you are using Rigovo on behalf of an organization, you represent that you have the authority to bind that organization to these Terms.
                                 </p>
                                 <p>
-                                    <strong className="text-white">Plain English:</strong> By using TalentLyt, you&apos;re agreeing to these rules. If you&apos;re signing up for your company, make sure you&apos;re authorized to do so.
+                                    <strong className="text-white">Plain English:</strong> By using Rigovo, you&apos;re agreeing to these rules. If you&apos;re signing up for your company, make sure you&apos;re authorized to do so.
                                 </p>
                             </div>
                         </section>
@@ -62,11 +62,11 @@ export default function TermsPage() {
                                 <div className="w-10 h-10 rounded-xl bg-brand/10 flex items-center justify-center">
                                     <Shield className="w-5 h-5 text-brand" />
                                 </div>
-                                <h2 className="text-xl font-bold">2. What TalentLyt Provides</h2>
+                                <h2 className="text-xl font-bold">2. What Rigovo Provides</h2>
                             </div>
                             <div className="text-text-secondary text-sm leading-relaxed space-y-4">
                                 <p>
-                                    TalentLyt is an AI-powered interview intelligence platform designed to help organizations make better hiring decisions. Our services include:
+                                    Rigovo is an AI-powered interview intelligence platform designed to help organizations make better hiring decisions. Our services include:
                                 </p>
                                 <ul className="list-disc pl-6 space-y-2">
                                     <li><strong className="text-white">Maya AI Interviewer:</strong> Conducts technical interviews with adaptive questioning and real-time evaluation</li>
@@ -75,7 +75,7 @@ export default function TermsPage() {
                                     <li><strong className="text-white">Assessment Reports:</strong> Detailed technical evaluations with actionable insights</li>
                                 </ul>
                                 <p>
-                                    <strong className="text-white">Important:</strong> TalentLyt is a decision-support tool. We provide data and analysis to inform your hiring decisions—we do not make hiring decisions for you. Final employment decisions must always be made by qualified human recruiters.
+                                    <strong className="text-white">Important:</strong> Rigovo is a decision-support tool. We provide data and analysis to inform your hiring decisions—we do not make hiring decisions for you. Final employment decisions must always be made by qualified human recruiters.
                                 </p>
                             </div>
                         </section>
@@ -90,7 +90,7 @@ export default function TermsPage() {
                             </div>
                             <div className="text-text-secondary text-sm leading-relaxed space-y-4">
                                 <p>
-                                    To use TalentLyt, you must create an account with accurate, complete information. You are responsible for:
+                                    To use Rigovo, you must create an account with accurate, complete information. You are responsible for:
                                 </p>
                                 <ul className="list-disc pl-6 space-y-2">
                                     <li>Maintaining the confidentiality of your login credentials</li>
@@ -114,7 +114,7 @@ export default function TermsPage() {
                             </div>
                             <div className="text-text-secondary text-sm leading-relaxed space-y-4">
                                 <p>
-                                    TalentLyt offers multiple pricing tiers based on interview minutes:
+                                    Rigovo offers multiple pricing tiers based on interview minutes:
                                 </p>
                                 <ul className="list-disc pl-6 space-y-2">
                                     <li><strong className="text-white">Pilot:</strong> One-time purchase, no recurring charges</li>
@@ -141,7 +141,7 @@ export default function TermsPage() {
                             </div>
                             <div className="text-text-secondary text-sm leading-relaxed space-y-4">
                                 <p>
-                                    You agree to use TalentLyt lawfully and ethically. Specifically, you may NOT:
+                                    You agree to use Rigovo lawfully and ethically. Specifically, you may NOT:
                                 </p>
                                 <ul className="list-disc pl-6 space-y-2">
                                     <li>Use the platform to discriminate against candidates based on protected characteristics (race, gender, age, disability, religion, national origin, etc.)</li>
@@ -169,7 +169,7 @@ export default function TermsPage() {
                             </div>
                             <div className="text-text-secondary text-sm leading-relaxed space-y-4">
                                 <p>
-                                    <strong className="text-white">Our IP:</strong> TalentLyt, including our software, AI models, algorithms, branding, and documentation, is owned by Rigour Labs Inc. and protected by intellectual property laws. Your use of TalentLyt does not grant you ownership of any IP.
+                                    <strong className="text-white">Our IP:</strong> Rigovo, including our software, AI models, algorithms, branding, and documentation, is owned by Rigour Labs Inc. and protected by intellectual property laws. Your use of Rigovo does not grant you ownership of any IP.
                                 </p>
                                 <p>
                                     <strong className="text-white">Your Content:</strong> You retain ownership of any content you submit (job descriptions, evaluation criteria, etc.). By submitting content, you grant us a license to use it to provide our services.
@@ -190,7 +190,7 @@ export default function TermsPage() {
                             </div>
                             <div className="text-text-secondary text-sm leading-relaxed space-y-4">
                                 <p>
-                                    TalentLyt is provided &quot;as is&quot; and &quot;as available&quot; without warranties of any kind, express or implied. We do not guarantee:
+                                    Rigovo is provided &quot;as is&quot; and &quot;as available&quot; without warranties of any kind, express or implied. We do not guarantee:
                                 </p>
                                 <ul className="list-disc pl-6 space-y-2">
                                     <li>Uninterrupted or error-free service</li>
@@ -199,7 +199,7 @@ export default function TermsPage() {
                                     <li>Compatibility with all systems or browsers</li>
                                 </ul>
                                 <p>
-                                    <strong className="text-white">Liability Cap:</strong> To the maximum extent permitted by law, our total liability for any claims arising from your use of TalentLyt is limited to the amount you paid us in the 12 months preceding the claim.
+                                    <strong className="text-white">Liability Cap:</strong> To the maximum extent permitted by law, our total liability for any claims arising from your use of Rigovo is limited to the amount you paid us in the 12 months preceding the claim.
                                 </p>
                                 <p>
                                     <strong className="text-white">Exclusions:</strong> We are not liable for indirect, incidental, special, consequential, or punitive damages, including lost profits, lost data, or business interruption.
@@ -259,7 +259,7 @@ export default function TermsPage() {
                                     These Terms are governed by the laws of the State of Delaware, USA, without regard to conflict of law principles.
                                 </p>
                                 <p>
-                                    <strong className="text-white">Dispute Resolution:</strong> We prefer to resolve disputes informally. Contact us first at <a href="mailto:legal@talentlyt.cloud" className="text-brand hover:underline">legal@talentlyt.cloud</a>. If informal resolution fails, disputes will be resolved through binding arbitration administered by JAMS in Delaware, except where prohibited by law.
+                                    <strong className="text-white">Dispute Resolution:</strong> We prefer to resolve disputes informally. Contact us first at <a href="mailto:legal@rigovo.com" className="text-brand hover:underline">legal@rigovo.com</a>. If informal resolution fails, disputes will be resolved through binding arbitration administered by JAMS in Delaware, except where prohibited by law.
                                 </p>
                                 <p>
                                     <strong className="text-white">Class Action Waiver:</strong> To the extent permitted by law, you agree to resolve disputes individually and waive any right to participate in class actions.
@@ -271,7 +271,7 @@ export default function TermsPage() {
                         <div className="text-center pt-8 text-sm text-text-muted">
                             <p>
                                 Questions about these Terms? Contact us at{' '}
-                                <a href="mailto:legal@talentlyt.cloud" className="text-brand hover:underline">legal@talentlyt.cloud</a>
+                                <a href="mailto:legal@rigovo.com" className="text-brand hover:underline">legal@rigovo.com</a>
                             </p>
                             <p className="mt-2">
                                 Rigour Labs Inc. | Delaware, United States

@@ -5,10 +5,10 @@ import { DemoRequestForm } from '@/components/demo-request-form';
 import { ShieldCheck, Activity, Globe, Sparkles } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'Request a Demo | TalentLyt AI Interview Platform',
-    description: 'Schedule a personalized demo of TalentLyt. Discover how our AI-powered technical interview platform with AI leadership verification can transform your hiring.',
+    title: 'Request a Demo | Rigovo AI Interview Platform',
+    description: 'Schedule a personalized demo of Rigovo. Discover how our AI-powered technical interview platform with AI leadership verification can transform your hiring.',
     alternates: {
-        canonical: 'https://talentlyt.cloud/request-demo',
+        canonical: 'https://rigovo.com/request-demo',
     },
 };
 
@@ -24,7 +24,7 @@ export default function RequestDemoPage() {
                         <span className="text-sm font-medium text-brand">Free Personalized Demo</span>
                     </div>
                     <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4 leading-tight">
-                        See TalentLyt in <span className="text-brand">Action</span>
+                        See Rigovo in <span className="text-brand">Action</span>
                     </h1>
                     <p className="text-xl text-text-secondary">
                         Get a personalized walkthrough of our AI interview platform and integrity verification capabilities.
@@ -78,7 +78,7 @@ export default function RequestDemoPage() {
 
                         <div className="p-6 rounded-xl bg-gradient-to-br from-brand/10 to-transparent border border-brand/20">
                             <p className="text-text-secondary text-sm leading-relaxed">
-                                <span className="text-white font-medium">Tailored to you:</span> Our team will address your specific hiring challenges and show you exactly how TalentLyt fits your workflow.
+                                <span className="text-white font-medium">Tailored to you:</span> Our team will address your specific hiring challenges and show you exactly how Rigovo fits your workflow.
                             </p>
                         </div>
 

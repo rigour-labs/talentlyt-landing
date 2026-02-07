@@ -4,10 +4,10 @@ import { Footer } from '@/components/footer';
 import { Shield, Lock, Eye, Database, Globe, UserCheck, Mail, Server, Clock, FileWarning } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'Privacy Policy — TalentLyt',
-    description: 'TalentLyt Privacy Policy. Learn how we collect, use, protect, and handle your data. GDPR and CCPA compliant.',
+    title: 'Privacy Policy — Rigovo',
+    description: 'Rigovo Privacy Policy. Learn how we collect, use, protect, and handle your data. GDPR and CCPA compliant.',
     alternates: {
-        canonical: 'https://talentlyt.cloud/privacy',
+        canonical: 'https://rigovo.com/privacy',
     },
 };
 
@@ -284,7 +284,7 @@ export default function PrivacyPolicyPage() {
 
                             <div className="text-text-secondary text-sm leading-relaxed space-y-4">
                                 <p>
-                                    TalentLyt is based in the United States. If you&apos;re located outside the US, your data may be transferred to and processed in the US or other countries where our cloud providers operate.
+                                    Rigovo is based in the United States. If you&apos;re located outside the US, your data may be transferred to and processed in the US or other countries where our cloud providers operate.
                                 </p>
                                 <p>
                                     For transfers from the European Economic Area (EEA), UK, or Switzerland, we rely on Standard Contractual Clauses (SCCs) approved by the European Commission. We also implement supplementary technical measures where required.
@@ -353,11 +353,11 @@ export default function PrivacyPolicyPage() {
                             <div className="space-y-3 text-sm">
                                 <p>
                                     <span className="text-text-muted">Email:</span>{' '}
-                                    <a href="mailto:privacy@talentlyt.cloud" className="text-brand hover:underline">privacy@talentlyt.cloud</a>
+                                    <a href="mailto:privacy@rigovo.com" className="text-brand hover:underline">privacy@rigovo.com</a>
                                 </p>
                                 <p>
                                     <span className="text-text-muted">Data Protection Officer:</span>{' '}
-                                    <a href="mailto:dpo@talentlyt.cloud" className="text-brand hover:underline">dpo@talentlyt.cloud</a>
+                                    <a href="mailto:dpo@rigovo.com" className="text-brand hover:underline">dpo@rigovo.com</a>
                                 </p>
                                 <p>
                                     <span className="text-text-muted">Address:</span> Rigour Labs Inc., Delaware, United States

@@ -52,12 +52,12 @@ const glossaryTerms = [
     },
     {
         term: 'Forensic Engine',
-        definition: 'A specialized AI component that analyzes interview sessions for authentic problem-solving and AI leadership verification. TalentLyt\'s Forensic Engine works alongside Maya to verify candidates architect solutions.',
+        definition: 'A specialized AI component that analyzes interview sessions for authentic problem-solving and AI leadership verification. Rigovo\'s Forensic Engine works alongside Maya to verify candidates architect solutions.',
         category: 'Platform',
     },
     {
         term: '15-Signal Forensic Audit',
-        definition: 'TalentLyt\'s comprehensive integrity stack that analyzes 13 distinct signal types—including lip-sync, voice biometrics, and gaze tracking—to ensure absolute session authenticity.',
+        definition: 'Rigovo\'s comprehensive integrity stack that analyzes 13 distinct signal types—including lip-sync, voice biometrics, and gaze tracking—to ensure absolute session authenticity.',
         category: 'Integrity',
     },
     {
@@ -88,7 +88,7 @@ const glossaryTerms = [
     },
     {
         term: 'Maya',
-        definition: 'TalentLyt\'s conversational AI agent that conducts adaptive technical interviews, asking questions and evaluating responses with natural, human-like conversation.',
+        definition: 'Rigovo\'s conversational AI agent that conducts adaptive technical interviews, asking questions and evaluating responses with natural, human-like conversation.',
         category: 'Platform',
     },
     {
@@ -105,7 +105,7 @@ const glossaryTerms = [
     },
     {
         term: 'Sentinel Hierarchy',
-        definition: 'TalentLyt\'s multi-layered integrity verification architecture that includes Vision-Sync and Cognitive-Audit systems working together to ensure interview authenticity.',
+        definition: 'Rigovo\'s multi-layered integrity verification architecture that includes Vision-Sync and Cognitive-Audit systems working together to ensure interview authenticity.',
         category: 'Platform',
     },
     {
@@ -132,7 +132,7 @@ const glossaryTerms = [
     },
     {
         term: 'Vision-Sync',
-        definition: 'TalentLyt\'s multi-modal monitoring system that synchronizes video, audio, and behavioral data to create a comprehensive view of the interview session.',
+        definition: 'Rigovo\'s multi-modal monitoring system that synchronizes video, audio, and behavioral data to create a comprehensive view of the interview session.',
         category: 'Platform',
     },
 ];
@@ -207,7 +207,7 @@ export default function GlossaryPage() {
                                 See These Concepts in Action
                             </h3>
                             <p className="text-text-secondary mb-6 max-w-xl mx-auto">
-                                Experience how TalentLyt brings multi-agent AI and integrity verification to life in technical interviews.
+                                Experience how Rigovo brings multi-agent AI and integrity verification to life in technical interviews.
                             </p>
                             <Link
                                 href="/request-demo"

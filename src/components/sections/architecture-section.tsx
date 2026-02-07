@@ -401,7 +401,7 @@ export function ArchitectureSection() {
                                         <div className="relative w-full h-full">
                                             <Image
                                                 src={agent.image || ''}
-                                                alt={`${agent.name} - ${agent.tag} | TalentLyt AI Interview`}
+                                                alt={`${agent.name} - ${agent.tag} | Rigovo AI Interview`}
                                                 fill
                                                 className={`object-cover transition-all duration-[2s] group-hover:scale-110 ${agent.id === 'audit' ? 'grayscale brightness-75' : 'brightness-[1.1]'}`}
                                                 sizes="(max-width: 1024px) 100vw, 400px"
@@ -489,7 +489,7 @@ export function ArchitectureSection() {
                         </div>
                         <h4 className="text-3xl font-bold text-white mb-5 tracking-tight">Real-Time Truth Verification</h4>
                         <p className="text-base text-white/50 leading-relaxed font-medium">
-                            TalentLyt logic demands a signed consensus between Sentinels. We verify authentic technical leadership; extracting claims, verifying depth, and predicting success using a decentralized intelligence stack.
+                            Rigovo logic demands a signed consensus between Sentinels. We verify authentic technical leadership; extracting claims, verifying depth, and predicting success using a decentralized intelligence stack.
                         </p>
                     </div>
 

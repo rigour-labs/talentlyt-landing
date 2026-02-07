@@ -5,10 +5,10 @@ import { Footer } from '@/components/footer';
 import { Brain, Shield, Users, Scale, AlertTriangle, Eye, Target, Heart, Lightbulb, MessageSquare } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'AI Ethics — TalentLyt',
-    description: 'TalentLyt AI Ethics Disclosure. Our principles for responsible AI in hiring: human oversight, fairness, transparency, and candidate dignity.',
+    title: 'AI Ethics — Rigovo',
+    description: 'Rigovo AI Ethics Disclosure. Our principles for responsible AI in hiring: human oversight, fairness, transparency, and candidate dignity.',
     alternates: {
-        canonical: 'https://talentlyt.cloud/ai-ethics',
+        canonical: 'https://rigovo.com/ai-ethics',
     },
 };
 
@@ -42,7 +42,7 @@ export default function AIEthicsPage() {
                             <div>
                                 <h3 className="font-bold text-warning mb-2">A Note on AI Limitations</h3>
                                 <p className="text-sm text-text-secondary leading-relaxed">
-                                    TalentLyt&apos;s AI is a tool to support human decision-making, not replace it. Our technology has limitations—it can make mistakes, and no algorithm fully captures human potential. We design our systems to augment your judgment, provide data-driven insights, and flag potential issues. But the final hiring decision must always rest with qualified humans who consider the full context of each candidate.
+                                    Rigovo&apos;s AI is a tool to support human decision-making, not replace it. Our technology has limitations—it can make mistakes, and no algorithm fully captures human potential. We design our systems to augment your judgment, provide data-driven insights, and flag potential issues. But the final hiring decision must always rest with qualified humans who consider the full context of each candidate.
                                 </p>
                             </div>
                         </div>
@@ -58,7 +58,7 @@ export default function AIEthicsPage() {
                         </div>
                         <div className="text-text-secondary text-sm leading-relaxed space-y-4">
                             <p>
-                                We built TalentLyt because we saw a problem: technical hiring is broken. Resumes reward credential inflation. Traditional interviews reward charisma over competence. Cheating and fraud are rampant in remote assessments.
+                                We built Rigovo because we saw a problem: technical hiring is broken. Resumes reward credential inflation. Traditional interviews reward charisma over competence. Cheating and fraud are rampant in remote assessments.
                             </p>
                             <p>
                                 AI can help fix this—but only if it&apos;s built thoughtfully. We&apos;re not trying to automate human judgment out of hiring. We&apos;re trying to give humans better information to make better decisions. That means being honest about what AI can and cannot do, being vigilant about bias, and always keeping candidates&apos; dignity at the center of our design.
@@ -105,7 +105,7 @@ export default function AIEthicsPage() {
                                 <h3 className="font-bold text-lg">Fairness & Bias Mitigation</h3>
                             </div>
                             <p className="text-text-secondary text-sm mb-4 leading-relaxed">
-                                Bias in hiring is a real problem—and AI can either reduce it or amplify it. We actively work to make sure TalentLyt reduces bias.
+                                Bias in hiring is a real problem—and AI can either reduce it or amplify it. We actively work to make sure Rigovo reduces bias.
                             </p>
                             <div className="space-y-2">
                                 <div className="flex gap-2 text-xs text-text-muted">
@@ -278,7 +278,7 @@ export default function AIEthicsPage() {
                         </div>
                         <div className="flex flex-wrap gap-4">
                             <a
-                                href="mailto:ethics@talentlyt.cloud"
+                                href="mailto:ethics@rigovo.com"
                                 className="px-6 py-3 rounded-xl bg-brand text-white text-sm font-medium hover:bg-brand-hover transition-colors"
                             >
                                 Report an Ethics Concern

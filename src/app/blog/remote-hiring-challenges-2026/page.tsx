@@ -22,10 +22,10 @@ export const metadata: Metadata = {
         description: 'The remote hiring landscape has fundamentally changed. Here are the challenges and how to overcome them.',
         type: 'article',
         publishedTime: '2026-01-28T00:00:00Z',
-        authors: ['TalentLyt Product Team'],
+        authors: ['Rigovo Product Team'],
     },
     alternates: {
-        canonical: 'https://talentlyt.cloud/blog/remote-hiring-challenges-2026',
+        canonical: 'https://rigovo.com/blog/remote-hiring-challenges-2026',
     },
 };
 
@@ -34,12 +34,12 @@ const articleStructuredData = {
     '@type': 'NewsArticle',
     headline: 'Remote Hiring in 2026: The New Challenges Nobody Prepared For',
     description: 'Remote hiring has evolved beyond Zoom fatigue. AI-powered fraud, timezone juggling, and culture assessment at scale present new obstacles for technical recruiters.',
-    image: 'https://talentlyt.cloud/og-image.png',
+    image: 'https://rigovo.com/og-image.png',
     datePublished: '2026-01-28T00:00:00Z',
     dateModified: '2026-01-28T00:00:00Z',
-    author: { '@type': 'Organization', name: 'TalentLyt Product Team', url: 'https://talentlyt.cloud/about' },
-    publisher: { '@type': 'Organization', name: 'TalentLyt', logo: { '@type': 'ImageObject', url: 'https://talentlyt.cloud/logo.png' } },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://talentlyt.cloud/blog/remote-hiring-challenges-2026' },
+    author: { '@type': 'Organization', name: 'Rigovo Product Team', url: 'https://rigovo.com/about' },
+    publisher: { '@type': 'Organization', name: 'Rigovo', logo: { '@type': 'ImageObject', url: 'https://rigovo.com/logo.png' } },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://rigovo.com/blog/remote-hiring-challenges-2026' },
 };
 
 export default function RemoteHiringChallengesPage() {
@@ -233,7 +233,7 @@ export default function RemoteHiringChallengesPage() {
                                         Build for the Remote Reality
                                     </h3>
                                     <p className="text-text-secondary mb-10 max-w-xl mx-auto text-lg">
-                                        TalentLyt was built from the ground up for distributed hiring. Real-time verification, async assessment, and global scheduling that just works.
+                                        Rigovo was built from the ground up for distributed hiring. Real-time verification, async assessment, and global scheduling that just works.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                         <Link

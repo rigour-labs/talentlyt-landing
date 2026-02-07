@@ -6,7 +6,7 @@ import { ArrowLeft, Clock, AlertTriangle, Eye, Keyboard, Users, Monitor, Shield,
 import { RelatedArticles } from '@/components/blog/related-articles';
 
 export const metadata: Metadata = {
-    title: 'Verifying AI Leadership in Remote Technical Interviews | TalentLyt',
+    title: 'Verifying AI Leadership in Remote Technical Interviews | Rigovo',
     description: 'Remote interviews require new verification approaches. Learn how to ensure candidates architect solutions rather than just prompt AI tools.',
     keywords: [
         'AI leadership verification',
@@ -21,10 +21,10 @@ export const metadata: Metadata = {
         description: 'A verification-first guide to ensuring authentic technical leadership in remote hiring.',
         type: 'article',
         publishedTime: '2024-12-20T00:00:00Z',
-        authors: ['TalentLyt Product Team'],
+        authors: ['Rigovo Product Team'],
     },
     alternates: {
-        canonical: 'https://talentlyt.cloud/blog/ai-leadership-remote-interviews',
+        canonical: 'https://rigovo.com/blog/ai-leadership-remote-interviews',
     },
 };
 
@@ -33,12 +33,12 @@ const articleStructuredData = {
     '@type': 'NewsArticle',
     headline: 'Verifying AI Leadership in Remote Technical Interviews',
     description: 'Remote interviews require new verification approaches. Learn how to ensure candidates architect solutions rather than just prompt AI tools.',
-    image: 'https://talentlyt.cloud/og-image.png',
+    image: 'https://rigovo.com/og-image.png',
     datePublished: '2024-12-20T00:00:00Z',
     dateModified: '2024-12-20T00:00:00Z',
-    author: { '@type': 'Organization', name: 'TalentLyt Product Team', url: 'https://talentlyt.cloud/about' },
-    publisher: { '@type': 'Organization', name: 'TalentLyt', logo: { '@type': 'ImageObject', url: 'https://talentlyt.cloud/logo.png' } },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://talentlyt.cloud/blog/ai-leadership-remote-interviews' },
+    author: { '@type': 'Organization', name: 'Rigovo Product Team', url: 'https://rigovo.com/about' },
+    publisher: { '@type': 'Organization', name: 'Rigovo', logo: { '@type': 'ImageObject', url: 'https://rigovo.com/logo.png' } },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://rigovo.com/blog/ai-leadership-remote-interviews' },
 };
 
 export default function AILeadershipRemoteInterviewsPage() {

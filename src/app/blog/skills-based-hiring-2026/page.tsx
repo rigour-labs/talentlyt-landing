@@ -22,10 +22,10 @@ export const metadata: Metadata = {
         description: '65% of employers dropped degree requirements. Here\'s why credential-based hiring is dead.',
         type: 'article',
         publishedTime: '2026-02-05T00:00:00Z',
-        authors: ['TalentLyt Product Team'],
+        authors: ['Rigovo Product Team'],
     },
     alternates: {
-        canonical: 'https://talentlyt.cloud/blog/skills-based-hiring-2026',
+        canonical: 'https://rigovo.com/blog/skills-based-hiring-2026',
     },
 };
 
@@ -34,12 +34,12 @@ const articleStructuredData = {
     '@type': 'NewsArticle',
     headline: 'Skills-Based Hiring in 2026: Why Your Degree Requirements Are Costing You Talent',
     description: '65% of employers dropped degree requirements in 2026. Companies clinging to credential-based hiring are losing the talent war.',
-    image: 'https://talentlyt.cloud/og-image.png',
+    image: 'https://rigovo.com/og-image.png',
     datePublished: '2026-02-05T00:00:00Z',
     dateModified: '2026-02-05T00:00:00Z',
-    author: { '@type': 'Organization', name: 'TalentLyt Product Team', url: 'https://talentlyt.cloud/about' },
-    publisher: { '@type': 'Organization', name: 'TalentLyt', logo: { '@type': 'ImageObject', url: 'https://talentlyt.cloud/logo.png' } },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://talentlyt.cloud/blog/skills-based-hiring-2026' },
+    author: { '@type': 'Organization', name: 'Rigovo Product Team', url: 'https://rigovo.com/about' },
+    publisher: { '@type': 'Organization', name: 'Rigovo', logo: { '@type': 'ImageObject', url: 'https://rigovo.com/logo.png' } },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://rigovo.com/blog/skills-based-hiring-2026' },
 };
 
 export default function SkillsBasedHiringPage() {
@@ -293,7 +293,7 @@ export default function SkillsBasedHiringPage() {
                                         Stop Filtering Out Your Best Candidates
                                     </h3>
                                     <p className="text-text-secondary mb-10 max-w-xl mx-auto text-lg">
-                                        TalentLyt assesses actual skills with verified, AI-aware technical interviews. See who can really do the job—regardless of their resume.
+                                        Rigovo assesses actual skills with verified, AI-aware technical interviews. See who can really do the job—regardless of their resume.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                         <Link

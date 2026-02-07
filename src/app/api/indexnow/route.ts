@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 const INDEXNOW_KEY = 'c188e5391212e488b3f206a20e531e42';
-const SITE_HOST = 'talentlyt.cloud';
+const SITE_HOST = 'rigovo.com';
 
 // IndexNow endpoints (submit to one, it shares with others)
 const INDEXNOW_ENDPOINTS = [

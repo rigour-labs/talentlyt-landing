@@ -66,6 +66,6 @@ export default function robots(): MetadataRoute.Robots {
                 disallow: '/',
             },
         ],
-        sitemap: 'https://talentlyt.cloud/sitemap.xml',
+        sitemap: 'https://rigovo.com/sitemap.xml',
     }
 }

@@ -15,11 +15,11 @@ export function Logo({ size = 'md', showText = true, className = '' }: LogoProps
 
     return (
         <div className={`flex items-center gap-2.5 ${className}`}>
-            <TalentLytIcon size={icon} />
+            <RigovoIcon size={icon} />
             {showText && (
                 <span className={`${text} font-bold tracking-tight`}>
-                    <span className="text-white">Talent</span>
-                    <span className="text-brand">Lyt</span>
+                    <span className="text-white">Rigo</span>
+                    <span className="text-brand">vo</span>
                 </span>
             )}
         </div>
@@ -28,15 +28,15 @@ export function Logo({ size = 'md', showText = true, className = '' }: LogoProps
 
 // Icon-only version for favicons, social media, etc.
 export function LogoIcon({ size = 40, className = '' }: { size?: number; className?: string }) {
-    return <TalentLytIcon size={size} className={className} />;
+    return <RigovoIcon size={size} className={className} />;
 }
 
 /**
- * TalentLyt brand icon — stylized eye/shield with connected node
+ * Rigovo brand icon — stylized eye/shield with connected node
  * Recreates the official brand mark: geometric shield with eye,
  * crescent iris, and a connected data node
  */
-function TalentLytIcon({ size = 40, className = '' }: { size?: number; className?: string }) {
+function RigovoIcon({ size = 40, className = '' }: { size?: number; className?: string }) {
     return (
         <svg
             width={size}

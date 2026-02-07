@@ -6,7 +6,7 @@ import { LiveDemoContent } from '@/components/live-demo-content';
 
 export const metadata: Metadata = {
     title: 'Live Demo | Experience the Future of Technical Hiring',
-    description: 'See how TalentLyt\'s AI-powered platform conducts technical interviews while verifying candidate integrity in real-time. Explore our Maya AI and Audit Sentinel features.',
+    description: 'See how Rigovo\'s AI-powered platform conducts technical interviews while verifying candidate integrity in real-time. Explore our Maya AI and Audit Sentinel features.',
 };
 
 export default function LiveDemoPage() {

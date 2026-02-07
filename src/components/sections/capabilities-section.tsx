@@ -66,7 +66,7 @@ export function CapabilitiesSection() {
                         Platform Features
                     </div>
                     <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 tracking-tight text-white leading-[1.1]">
-                        What <span className="text-brand">TalentLyt</span> Does
+                        What <span className="text-brand">Rigovo</span> Does
                     </h2>
                     <p className="text-lg sm:text-xl text-text-secondary leading-relaxed">
                         Tools that make your hiring team faster and more confident. <span className="text-white font-bold">You still make every call</span> — we just give you better information to work with.
