@@ -4,6 +4,13 @@ import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { ArrowLeft, Clock, GraduationCap, Target, TrendingUp, Building2, CheckCircle } from 'lucide-react';
 import { RelatedArticles } from '@/components/blog/related-articles';
+import { Breadcrumb } from '@/components/breadcrumb';
+import { generateBreadcrumbJsonLd } from '@/lib/breadcrumb-utils';
+
+const breadcrumbItems = [
+    { label: 'Blog', href: '/blog' },
+    { label: 'Skills-Based Hiring 2026' }
+];
 
 export const metadata: Metadata = {
     title: 'Skills-Based Hiring in 2026: Why Your Degree Requirements Are Costing You Talent',
@@ -42,21 +49,19 @@ const articleStructuredData = {
     mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://rigovo.com/blog/skills-based-hiring-2026' },
 };
 
+const breadcrumbStructuredData = generateBreadcrumbJsonLd(breadcrumbItems);
+
 export default function SkillsBasedHiringPage() {
     return (
         <>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleStructuredData) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }} />
             <div className="min-h-screen bg-background text-foreground">
                 <Navbar />
                 <main id="main-content" role="main" className="pt-24 pb-16">
                     <article className="px-4 sm:px-6 py-12">
                         <div className="max-w-4xl mx-auto">
-                            <nav className="mb-8">
-                                <Link href="/blog" className="inline-flex items-center gap-2 text-text-muted hover:text-brand transition-colors text-sm">
-                                    <ArrowLeft className="w-4 h-4" />
-                                    Back to Blog
-                                </Link>
-                            </nav>
+                            <Breadcrumb items={breadcrumbItems} className="mb-8" />
 
                             <header className="mb-12">
                                 <div className="flex items-center gap-4 mb-6">
