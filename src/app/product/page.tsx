@@ -117,7 +117,7 @@ export default function ProductPage() {
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <ShieldAlert className="w-4 h-4 text-yellow-500 mt-0.5 shrink-0" />
-                                    <span>Real-time anomaly detection</span>
+                                    <span>Real-time signal analysis</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <Lock className="w-4 h-4 text-yellow-500 mt-0.5 shrink-0" />

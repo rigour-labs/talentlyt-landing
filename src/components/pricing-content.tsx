@@ -313,7 +313,7 @@ export function PricingContent() {
                                 name: 'Sentinel Advanced',
                                 price: '$50',
                                 unit: '/ Scan',
-                                features: ['v-JEPA2 Video Analysis', 'Temporal Consistency', 'Motion Anomaly', 'Enhanced Reasoning'],
+                                features: ['v-JEPA2 Video Analysis', 'Temporal Consistency', 'Motion Pattern Analysis', 'Enhanced Reasoning'],
                                 availability: 'Q2 2026',
                                 highlight: true
                             },

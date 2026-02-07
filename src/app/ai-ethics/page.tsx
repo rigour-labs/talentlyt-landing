@@ -242,7 +242,7 @@ export default function AIEthicsPage() {
                             </p>
                             <ul className="list-disc pl-6 space-y-3">
                                 <li>
-                                    <strong className="text-white">Presumption of innocence:</strong> Flagged anomalies are alerts for human review, not automatic disqualifications. False positives happen, and we design for that reality.
+                                    <strong className="text-white">Presumption of innocence:</strong> Flagged patterns are alerts for human review, not automatic disqualifications. False positives happen, and we design for that reality.
                                 </li>
                                 <li>
                                     <strong className="text-white">Transparency to candidates:</strong> We disclose that integrity monitoring is in use. Candidates know the rules of engagement.
