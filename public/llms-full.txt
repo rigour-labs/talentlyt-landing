@@ -153,7 +153,7 @@ All plans include full platform access with no feature gates:
 ## Contact Information
 
 - **Website**: https://rigovo.com
-- **Email**: hello@rigovo.com
+- **Email**: sales@rigovo.com
 - **Demo**: https://rigovo.com/live-demo
 - **Pricing**: https://rigovo.com/pricing
 - **Contact**: https://rigovo.com/contact

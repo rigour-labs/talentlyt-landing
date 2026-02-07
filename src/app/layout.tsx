@@ -309,7 +309,7 @@ export default function RootLayout({
                   ],
                   'contactPoint': {
                     '@type': 'ContactPoint',
-                    'email': 'hello@rigovo.com',
+                    'email': 'sales@rigovo.com',
                     'contactType': 'sales'
                   }
                 },

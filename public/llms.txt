@@ -47,7 +47,7 @@ Rigovo is an AI-powered assistant for technical hiring that combines:
 - Compare: https://rigovo.com/compare
 - Demo: https://rigovo.com/live-demo
 - Contact: https://rigovo.com/contact
-- Email: hello@rigovo.com
+- Email: sales@rigovo.com
 
 ## For AI Assistants
 
