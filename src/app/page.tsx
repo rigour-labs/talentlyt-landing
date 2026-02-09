@@ -12,33 +12,38 @@ import { CTASection } from '@/components/sections/cta-section';
 import { HomepageAnalytics } from '@/components/homepage-analytics';
 
 export const metadata: Metadata = {
-  title: 'Rigovo | Your AI Co-Pilot for Technical Hiring',
-  description: 'Maya AI handles technical screening while you focus on culture fit. 15-signal verification, voice biometrics, and deepfake detection ensure interview integrity. 85% job success prediction accuracy.',
+  title: 'Rigovo | AI Interview Software for Technical Hiring',
+  description: 'Screen technical candidates 5x faster with AI. Maya AI conducts interviews 24/7 while detecting fraud and verifying candidate identity. Free pilot included.',
   keywords: [
-    'AI interview',
+    // High-intent commercial keywords (what buyers search)
+    'AI interview software',
     'AI interview platform',
-    'AI technical interview',
-    'AI recruitment tool',
-    'technical hiring AI',
-    'Maya AI interviewer',
-    'interview integrity verification',
-    'Job Success Prediction',
-    'Interview Genome',
-    'voice biometrics hiring',
-    'deepfake detection interview',
-    'Panel Mode AI interview',
-    'AI human co-pilot interview',
-    'federated learning recruitment',
-    'anti-gaming interview',
-    'remote candidate verification',
-    'automated coding interview',
-    'claim verification interview',
-    'Maya Whisper',
-    'ECAPA-TDNN voice verification',
-    'SaaS recruitment platform',
-    'candidate verification',
-    'predictive hiring',
-    'interview forensics',
+    'technical interview platform',
+    'automated interview software',
+    'video interview software for hiring',
+    'technical screening platform',
+    'coding interview platform',
+    'remote candidate assessment',
+    // Problem-solution keywords (high conversion)
+    'prevent interview fraud',
+    'verify remote candidates',
+    'candidate identity verification',
+    'interview cheating detection',
+    'reduce time to hire',
+    'automated technical screening',
+    // Competitor alternatives (high intent)
+    'HireVue alternative',
+    'Codility alternative',
+    'HackerRank alternative',
+    // Category keywords
+    'AI recruiting software',
+    'technical assessment platform',
+    'developer assessment tool',
+    'engineering hiring software',
+    // Long-tail high-intent
+    'AI interview with identity verification',
+    'automated coding assessment',
+    'remote hiring verification software',
   ],
 };
 
