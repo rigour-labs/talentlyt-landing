@@ -26,6 +26,22 @@ export const metadata: Metadata = {
 
 const blogPosts = [
     {
+        slug: 'rigovo-vs-hirevue',
+        title: 'Rigovo vs HireVue: Which AI Interview Platform is Right for You?',
+        excerpt: 'Both offer AI interviews—but only one detects fraud. Complete comparison of features, pricing, and identity verification capabilities.',
+        category: 'Comparison',
+        readTime: '10 min read',
+        date: '2026-02-09',
+    },
+    {
+        slug: 'prevent-interview-fraud',
+        title: 'How to Prevent Interview Fraud: Complete Guide for 2026',
+        excerpt: 'Proxy interviews, AI cheating, deepfakes—interview fraud is rampant. Here\'s how to detect and prevent it before it costs you $280K.',
+        category: 'Security Guide',
+        readTime: '12 min read',
+        date: '2026-02-09',
+    },
+    {
         slug: 'skills-based-hiring-2026',
         title: 'Skills-Based Hiring in 2026: Why Degrees No Longer Matter',
         excerpt: '65% of employers dropped degree requirements. Companies clinging to credential-based hiring are losing the talent war.',

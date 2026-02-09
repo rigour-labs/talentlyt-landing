@@ -66,6 +66,9 @@ export default function robots(): MetadataRoute.Robots {
                 disallow: '/',
             },
         ],
-        sitemap: 'https://rigovo.com/sitemap.xml',
+        sitemap: [
+            'https://rigovo.com/sitemap.xml',
+            'https://rigovo.com/video-sitemap.xml',
+        ],
     }
 }
