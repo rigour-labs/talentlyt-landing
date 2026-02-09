@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     'Interview Genome',
     '15-signal verification',
     // Long-tail high-intent
-    'best AI interview platform 2025',
+    'best AI interview platform 2026',
     'AI interview with verification',
     'enterprise technical hiring software',
     'SOC2 compliant interview platform',

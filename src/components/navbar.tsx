@@ -54,22 +54,25 @@ export function Navbar() {
                         </p>
                     </div>
 
-                    <Link
-                        href="/request-demo"
+                    <a
+                        href="https://calendly.com/rigovo"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         onClick={() => analytics.track({
                             event: 'cta_clicked',
                             properties: {
                                 location: 'announcement_bar',
-                                cta_type: 'request_coupon',
-                                cta_text: 'Claim Pilot Access',
+                                cta_type: 'book_pilot_call',
+                                cta_text: 'Book Pilot Call',
+                                destination_url: 'https://calendly.com/rigovo',
                             },
                         })}
                         className="group relative px-3 sm:px-5 py-2 bg-brand text-white text-[10px] sm:text-[11px] font-black rounded-full transition-all hover:scale-105 active:scale-95 flex items-center gap-1.5 sm:gap-2 overflow-hidden shadow-[0_0_20px_rgba(0,102,255,0.4)] hover:shadow-[0_0_30px_rgba(0,102,255,0.6)] shrink-0"
                     >
-                        <span className="relative z-10 uppercase tracking-wider sm:tracking-widest">Claim Now</span>
+                        <span className="relative z-10 uppercase tracking-wider sm:tracking-widest">Book Call</span>
                         <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 group-hover:translate-x-0.5 transition-transform relative z-10" />
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
-                    </Link>
+                    </a>
                 </div>
             </div>
 
@@ -118,23 +121,25 @@ export function Navbar() {
                             >
                                 Sign In
                             </a>
-                            <Link
-                                href="/request-demo"
+                            <a
+                                href="https://calendly.com/rigovo"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 onClick={() => analytics.track({
                                     event: 'cta_clicked',
                                     properties: {
                                         location: 'navbar',
-                                        cta_type: 'start_trial',
-                                        cta_text: 'Start Free Trial',
-                                        destination_url: '/request-demo',
+                                        cta_type: 'book_pilot_call',
+                                        cta_text: 'Book Pilot Call',
+                                        destination_url: 'https://calendly.com/rigovo',
                                     },
                                 })}
                                 className="group relative px-6 py-2.5 bg-brand text-white rounded-xl hover:shadow-[0_0_25px_rgba(0,102,255,0.4)] transition-all flex items-center gap-2 overflow-hidden hidden sm:flex focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
-                                aria-label="Start free trial"
+                                aria-label="Book a 15-minute pilot setup call"
                             >
-                                <span className="technical-label text-[10px] relative z-10">Start Free Trial</span>
+                                <span className="technical-label text-[10px] relative z-10">Book Pilot Call</span>
                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-                            </Link>
+                            </a>
 
                             <button
                                 className="md:hidden p-2 text-white/70 hover:text-white focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded-lg transition-colors"
@@ -179,14 +184,16 @@ export function Navbar() {
                             >
                                 Sign In
                             </a>
-                            <Link
-                                href="/request-demo"
+                            <a
+                                href="https://calendly.com/rigovo"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="px-4 py-4 bg-brand text-white rounded-xl text-center technical-label hover:bg-brand-hover transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
-                                aria-label="Start free trial"
+                                aria-label="Book a 15-minute pilot setup call"
                             >
-                                Start Free Trial
-                            </Link>
+                                Book Pilot Call
+                            </a>
                         </nav>
                     </div>
                 )}

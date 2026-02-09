@@ -21,8 +21,8 @@ export function PricingContent() {
                 'Deepfake & Voice Forensics',
                 '7-Day Data Retention'
             ],
-            cta: 'Request Coupon',
-            ctaLink: '/contact',
+            cta: 'Book Pilot Call',
+            ctaLink: 'https://calendly.com/rigovo',
             highlight: false,
             tag: 'OFFER ACTIVE',
             woo: 'Contact us to receive a 100% discount coupon code for your pilot session.'
@@ -41,8 +41,8 @@ export function PricingContent() {
                 'Unlimited Team Seats',
                 '30-Day Data Retention'
             ],
-            cta: 'Get Started',
-            ctaLink: '/contact',
+            cta: 'Book Pilot Call',
+            ctaLink: 'https://calendly.com/rigovo',
             highlight: false,
             tag: 'Pay As You Go',
             woo: 'Ideal for agencies and variable hiring needs. Pay only for what you use.'
@@ -61,8 +61,8 @@ export function PricingContent() {
                 '$0.10/min Overage Rate',
                 'Priority Support (24h)'
             ],
-            cta: 'Scale Your Pipeline',
-            ctaLink: '/contact',
+            cta: 'Book Pilot Call',
+            ctaLink: 'https://calendly.com/rigovo',
             highlight: true,
             tag: 'Most Popular',
             woo: 'Includes all intelligence features: Success Prediction, Genome Building, and Maya Whispering.'
@@ -81,8 +81,8 @@ export function PricingContent() {
                 'SAML / SSO (WorkOS)',
                 'Dedicated Slack + CSM'
             ],
-            cta: 'Contact Sales',
-            ctaLink: '/contact',
+            cta: 'Book Pilot Call',
+            ctaLink: 'https://calendly.com/rigovo',
             highlight: false,
             woo: 'Includes All-Access Interview Genome and Unlimited Sentinel Forensic scans.'
         }
@@ -210,8 +210,10 @@ export function PricingContent() {
                                     ))}
                                 </div>
 
-                                <Link
+                                <a
                                     href={tier.ctaLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     onClick={() => {
                                         analytics.track({
                                             event: 'pricing_cta_clicked',
@@ -229,7 +231,7 @@ export function PricingContent() {
                                 >
                                     <span className="relative z-10">{tier.cta}</span>
                                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform relative z-10" />
-                                </Link>
+                                </a>
                             </div>
                         </motion.div>
                     ))}

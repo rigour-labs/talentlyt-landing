@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
-import { ArrowRight, Play, ShieldCheck, ChevronDown, CheckCircle2, Users, Clock } from 'lucide-react';
+// Link removed - using direct Calendly link
+import { ArrowRight, ShieldCheck, ChevronDown, CheckCircle2, Users, Clock } from 'lucide-react';
 import { MayaVoiceWidget } from '@/components/ui/maya-voice-widget';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -87,41 +87,29 @@ export function HeroSection() {
                     </div>
 
                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
-                        <Link
-                            href="/request-demo"
+                        <a
+                            href="https://calendly.com/rigovo"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             onClick={() => analytics.track({
                                 event: 'cta_clicked',
                                 properties: {
                                     location: 'hero',
-                                    cta_type: 'start_trial',
-                                    cta_text: 'Start Free Trial',
-                                    destination_url: '/request-demo',
+                                    cta_type: 'book_pilot_call',
+                                    cta_text: 'Book 15-min Pilot Call',
+                                    destination_url: 'https://calendly.com/rigovo',
                                 },
                             })}
                             className="group relative px-10 py-5 bg-brand text-white font-bold rounded-2xl transition-all shadow-[0_0_30px_rgba(0,102,255,0.3)] hover:shadow-[0_0_50px_rgba(0,102,255,0.5)] flex items-center justify-center gap-3 overflow-hidden focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
-                            aria-label="Start free trial"
+                            aria-label="Book a 15-minute pilot setup call"
                         >
-                            <span className="relative z-10 technical-label text-xs">Start Free Trial</span>
+                            <span className="relative z-10 technical-label text-xs">Book 15-min Pilot Call</span>
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" aria-hidden="true" />
                             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-                        </Link>
-                        <Link
-                            href="/live-demo"
-                            onClick={() => analytics.track({
-                                event: 'cta_clicked',
-                                properties: {
-                                    location: 'hero',
-                                    cta_type: 'watch_demo',
-                                    cta_text: 'Live Demo',
-                                    destination_url: '/live-demo',
-                                },
-                            })}
-                            className="w-full sm:w-auto px-8 py-4 bg-white/5 text-white border border-white/10 font-bold rounded-2xl hover:bg-white/10 transition-all flex items-center justify-center gap-2 backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-background"
-                            aria-label="Try live demo"
-                        >
-                            <Play className="w-4 h-4 fill-current" aria-hidden="true" />
-                            Live Demo
-                        </Link>
+                        </a>
+                        <span className="text-text-muted text-sm text-center sm:text-left">
+                            Free pilot included ($29 value)
+                        </span>
                     </div>
 
                     {/* Maya Voice Widget - Push to Talk */}

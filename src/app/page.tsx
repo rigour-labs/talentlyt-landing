@@ -7,26 +7,38 @@ import { StatsSection } from '@/components/sections/stats-section';
 import { CapabilitiesSection } from '@/components/sections/capabilities-section';
 import { HowItWorksSection } from '@/components/sections/how-it-works-section';
 import { ProblemSolutionSection } from '@/components/sections/problem-solution-section';
+import { ProofSection } from '@/components/sections/proof-section';
 import { CTASection } from '@/components/sections/cta-section';
 import { HomepageAnalytics } from '@/components/homepage-analytics';
 
 export const metadata: Metadata = {
   title: 'Rigovo | Your AI Co-Pilot for Technical Hiring',
-  description: 'Maya AI handles technical screening while you focus on culture fit. Multi-signal verification ensures candidates demonstrate genuine technical ability. Beta: 6,824 signal events analyzed.',
+  description: 'Maya AI handles technical screening while you focus on culture fit. 15-signal verification, voice biometrics, and deepfake detection ensure interview integrity. 85% job success prediction accuracy.',
   keywords: [
     'AI interview',
     'AI interview platform',
     'AI technical interview',
     'AI recruitment tool',
     'technical hiring AI',
-    'technical interview integrity',
-    'automated coding interview',
     'Maya AI interviewer',
-    'integrity verification system',
-    'SaaS recruitment platform',
+    'interview integrity verification',
     'Job Success Prediction',
+    'Interview Genome',
+    'voice biometrics hiring',
+    'deepfake detection interview',
+    'Panel Mode AI interview',
+    'AI human co-pilot interview',
+    'federated learning recruitment',
+    'anti-gaming interview',
+    'remote candidate verification',
+    'automated coding interview',
+    'claim verification interview',
+    'Maya Whisper',
+    'ECAPA-TDNN voice verification',
+    'SaaS recruitment platform',
     'candidate verification',
-    'interview platform'
+    'predictive hiring',
+    'interview forensics',
   ],
 };
 
@@ -40,6 +52,7 @@ export default function LandingPage() {
         <CapabilitiesSection />
         <HowItWorksSection />
         <ProblemSolutionSection />
+        <ProofSection />
         <CTASection />
       </main>
       <Footer />

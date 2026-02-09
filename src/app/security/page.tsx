@@ -121,6 +121,36 @@ const securityHeaders = [
     { header: 'Permissions-Policy', value: 'Camera/mic scoped to interview domain' },
 ];
 
+const biometricLayers = [
+    { layer: 'Layer 0', method: 'Anti-Spoofing Gate', threshold: 'replay_confidence > 0.7', result: 'DIFFERENT (blocks replay attacks)' },
+    { layer: 'Layer 1', method: 'Embedding Match', threshold: 'cosine distance < 0.15', result: 'MATCHED' },
+    { layer: 'Layer 2', method: 'Behavioral Confirm', threshold: 'distance 0.15-0.35, prosody >= 0.75', result: 'MATCHED_BEHAVIORAL' },
+    { layer: 'Layer 3', method: 'Uncertain Zone', threshold: 'distance 0.15-0.35, prosody < 0.75', result: 'UNCERTAIN' },
+    { layer: 'Layer 4', method: 'Behavioral Rescue', threshold: 'distance 0.35-0.40, prosody >= 0.85', result: 'UNCERTAIN' },
+    { layer: 'Layer 5', method: 'Different Speaker', threshold: 'cosine distance > 0.40', result: 'DIFFERENT' },
+];
+
+const screenAnalysis = [
+    { detection: 'AI Tool Detection', method: '10 patterns (ChatGPT, Claude, Gemini, Copilot, Cursor, etc.)', accuracy: 'OCR + pattern matching' },
+    { detection: 'Suspicious Tabs', method: '5 patterns (Stack Overflow, LeetCode, Chegg, etc.)', accuracy: 'Tab title matching' },
+    { detection: 'Overlay Tools', method: '3 patterns (Cluely, Parakeet, Interview Copilot)', accuracy: 'Edge detection + contour analysis' },
+    { detection: 'Hidden Notes', method: 'Floating window detection', accuracy: 'Canny edge analysis' },
+];
+
+const forensicEvents = [
+    'SESSION_START', 'SESSION_END', 'IDENTITY_VERIFIED', 'IDENTITY_FAILED',
+    'FACE_MATCH', 'FACE_MISMATCH', 'VOICE_MATCH', 'VOICE_MISMATCH',
+    'VOICE_SPOOFING_DETECTED', 'ANOMALY_DETECTED', 'THRESHOLD_BREACH',
+    'INTERVENTION_WARNING', 'INTERVENTION_TERMINATE', 'RECORDING_STARTED',
+    'RECORDING_STOPPED', 'AUTOMATED_DECISION', 'MANUAL_REVIEW'
+];
+
+const faceLivenessThresholds = [
+    { tier: 'PILOT', threshold: '80%', useCase: 'Try-before-buy, lower friction' },
+    { tier: 'ENGINE', threshold: '90%', useCase: 'Standard production' },
+    { tier: 'FORTRESS', threshold: '95%', useCase: 'Enterprise / high-security' },
+];
+
 export default function SecurityPage() {
     return (
         <div className="min-h-screen bg-background">
@@ -496,6 +526,165 @@ export default function SecurityPage() {
                                         Per-organization and per-IP tracking
                                     </li>
                                 </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Biometric Security */}
+                    <section className="mb-20">
+                        <div className="flex items-center gap-3 mb-8">
+                            <div className="w-10 h-10 rounded-xl bg-rose-500/10 flex items-center justify-center">
+                                <Eye className="w-5 h-5 text-rose-400" />
+                            </div>
+                            <h2 className="text-2xl sm:text-3xl font-bold text-white">Biometric Security & Anti-Spoofing</h2>
+                        </div>
+
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                            <div className="p-6 rounded-2xl bg-gradient-to-br from-rose-500/5 to-transparent border border-rose-500/20">
+                                <h3 className="text-lg font-bold text-white mb-4">Voice Biometrics (ECAPA-TDNN)</h3>
+                                <p className="text-text-secondary text-sm mb-4">
+                                    SpeechBrain ECAPA-TDNN generates 192-dimensional speaker embeddings with a multi-factor decision matrix:
+                                </p>
+                                <div className="overflow-x-auto">
+                                    <table className="w-full text-sm">
+                                        <thead>
+                                            <tr className="border-b border-white/10">
+                                                <th className="px-2 py-2 text-left text-xs font-bold text-text-muted">Layer</th>
+                                                <th className="px-2 py-2 text-left text-xs font-bold text-text-muted">Method</th>
+                                                <th className="px-2 py-2 text-left text-xs font-bold text-text-muted">Result</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody className="divide-y divide-white/5">
+                                            {biometricLayers.map((layer, i) => (
+                                                <tr key={i}>
+                                                    <td className="px-2 py-2 text-rose-400 font-mono text-xs">{layer.layer}</td>
+                                                    <td className="px-2 py-2 text-white text-xs">{layer.method}</td>
+                                                    <td className="px-2 py-2 text-text-muted text-xs">{layer.result}</td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
+                                <h3 className="text-lg font-bold text-white mb-4">AWS Face Liveness</h3>
+                                <p className="text-text-secondary text-sm mb-4">
+                                    Challenge-response liveness detection using AWS Rekognition prevents photo and video replay attacks.
+                                </p>
+                                <div className="space-y-3">
+                                    <div className="text-xs font-bold text-text-muted uppercase tracking-wider mb-2">Confidence Thresholds by Tier</div>
+                                    {faceLivenessThresholds.map((tier, i) => (
+                                        <div key={i} className="grid grid-cols-3 items-center py-2 border-b border-white/5 last:border-0">
+                                            <span className="text-white font-semibold">{tier.tier}</span>
+                                            <span className="text-rose-400 font-mono text-center">{tier.threshold}</span>
+                                            <span className="text-text-muted text-xs text-right">{tier.useCase}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
+                            <h3 className="text-lg font-bold text-white mb-4">Anti-Spoofing Capabilities</h3>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
+                                    <div className="text-sm font-bold text-white mb-2">Replay Attack Detection</div>
+                                    <p className="text-xs text-text-muted">Room impulse response analysis, noise floor evaluation, codec artifact fingerprinting</p>
+                                </div>
+                                <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
+                                    <div className="text-sm font-bold text-white mb-2">Environment Consistency</div>
+                                    <p className="text-xs text-text-muted">Spectral envelope fingerprinting across the session detects environment changes</p>
+                                </div>
+                                <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
+                                    <div className="text-sm font-bold text-white mb-2">TTS/Synthetic Speech</div>
+                                    <p className="text-xs text-text-muted">Spectral flatness (Wiener entropy) analysis detects AI-generated audio</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Screen Analysis & AI Detection */}
+                    <section className="mb-20">
+                        <div className="flex items-center gap-3 mb-8">
+                            <div className="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center">
+                                <AlertTriangle className="w-5 h-5 text-orange-400" />
+                            </div>
+                            <h2 className="text-2xl sm:text-3xl font-bold text-white">Screen Analysis & AI Detection</h2>
+                        </div>
+
+                        <div className="p-6 rounded-2xl bg-gradient-to-br from-orange-500/5 to-transparent border border-orange-500/20 mb-6">
+                            <p className="text-text-secondary mb-6">
+                                Real-time screen capture analysis using EasyOCR (primary) with pytesseract (fallback) for AI tool and cheating detection:
+                            </p>
+                            <div className="overflow-x-auto">
+                                <table className="w-full">
+                                    <thead>
+                                        <tr className="border-b border-white/10">
+                                            <th className="px-4 py-3 text-left text-xs font-bold text-text-muted uppercase">Detection Type</th>
+                                            <th className="px-4 py-3 text-left text-xs font-bold text-text-muted uppercase">Patterns/Method</th>
+                                            <th className="px-4 py-3 text-left text-xs font-bold text-text-muted uppercase">Technology</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="divide-y divide-white/5">
+                                        {screenAnalysis.map((item, i) => (
+                                            <tr key={i} className="hover:bg-white/[0.02]">
+                                                <td className="px-4 py-3 text-white font-medium">{item.detection}</td>
+                                                <td className="px-4 py-3 text-text-secondary text-sm">{item.method}</td>
+                                                <td className="px-4 py-3 text-orange-400 text-sm font-mono">{item.accuracy}</td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Forensic Audit Trail */}
+                    <section className="mb-20">
+                        <div className="flex items-center gap-3 mb-8">
+                            <div className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center">
+                                <FileText className="w-5 h-5 text-indigo-400" />
+                            </div>
+                            <h2 className="text-2xl sm:text-3xl font-bold text-white">Forensic Audit Trail</h2>
+                        </div>
+
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            <div className="p-6 rounded-2xl bg-gradient-to-br from-indigo-500/5 to-transparent border border-indigo-500/20">
+                                <h3 className="text-lg font-bold text-white mb-4">Chain Integrity (SHA-256)</h3>
+                                <p className="text-text-secondary text-sm mb-4">
+                                    Append-only event log with cryptographic chain hashing for tamper detection:
+                                </p>
+                                <ul className="space-y-2">
+                                    <li className="flex items-start gap-2 text-text-secondary text-sm">
+                                        <CheckCircle2 className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
+                                        Each event: <code className="text-indigo-400 text-xs">chain_hash = SHA256(previous_hash + event_data)</code>
+                                    </li>
+                                    <li className="flex items-start gap-2 text-text-secondary text-sm">
+                                        <CheckCircle2 className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
+                                        Chain integrity verification at any point
+                                    </li>
+                                    <li className="flex items-start gap-2 text-text-secondary text-sm">
+                                        <CheckCircle2 className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
+                                        JSON export for compliance auditors
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
+                                <h3 className="text-lg font-bold text-white mb-4">17 Event Types Captured</h3>
+                                <div className="flex flex-wrap gap-2">
+                                    {forensicEvents.map((event, i) => (
+                                        <span key={i} className="px-2 py-1 bg-white/5 border border-white/10 rounded text-xs font-mono text-text-muted">
+                                            {event}
+                                        </span>
+                                    ))}
+                                </div>
+                                <div className="mt-4 p-3 rounded-lg bg-indigo-500/10 border border-indigo-500/20">
+                                    <p className="text-xs text-indigo-300">
+                                        <strong>GDPR Article 22:</strong> Automated decisions generate structured summaries with decision type, outcome, confidence score, and contributing factors.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </section>

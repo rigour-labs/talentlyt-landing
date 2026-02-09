@@ -30,43 +30,30 @@ export function CTASection() {
                             Stop spending your best engineers&apos; time on screening calls. <span className="text-white font-bold">Let Maya handle it</span> — you focus on finding the right fit.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-6 mb-16">
-                            <div>
-                                <Link
-                                    href="/request-demo"
-                                    onClick={() => analytics.track({
-                                        event: 'cta_clicked',
-                                        properties: {
-                                            location: 'bottom_cta',
-                                            cta_type: 'start_trial',
-                                            cta_text: 'Start Free Trial',
-                                            destination_url: '/request-demo',
-                                        },
-                                    })}
-                                    className="group relative px-10 py-5 bg-brand text-white font-bold rounded-2xl transition-all shadow-[0_0_30px_rgba(0,102,255,0.3)] hover:shadow-[0_0_50px_rgba(0,102,255,0.5)] flex items-center justify-center gap-3 overflow-hidden text-lg focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
-                                    aria-label="Start free trial"
-                                >
-                                    <span className="relative z-10 technical-label text-xs">Start Free Trial</span>
-                                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" aria-hidden="true" />
-                                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-                                </Link>
-                            </div>
-                            <Link
-                                href="/live-demo"
+                        <div className="flex flex-col items-center gap-6 mb-16">
+                            <a
+                                href="https://calendly.com/rigovo"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 onClick={() => analytics.track({
                                     event: 'cta_clicked',
                                     properties: {
                                         location: 'bottom_cta',
-                                        cta_type: 'watch_demo',
-                                        cta_text: 'Live Demo',
-                                        destination_url: '/live-demo',
+                                        cta_type: 'book_pilot_call',
+                                        cta_text: 'Book 15-min Pilot Call',
+                                        destination_url: 'https://calendly.com/rigovo',
                                     },
                                 })}
-                                className="px-10 py-5 bg-white/5 border border-white/10 text-white font-bold rounded-2xl hover:bg-white/10 transition-all backdrop-blur-md technical-label text-xs focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-background text-center"
-                                aria-label="Try live demo"
+                                className="group relative px-12 py-6 bg-brand text-white font-bold rounded-2xl transition-all shadow-[0_0_30px_rgba(0,102,255,0.3)] hover:shadow-[0_0_50px_rgba(0,102,255,0.5)] flex items-center justify-center gap-3 overflow-hidden text-lg focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
+                                aria-label="Book a 15-minute pilot setup call"
                             >
-                                Live Demo
-                            </Link>
+                                <span className="relative z-10 technical-label text-sm">Book 15-min Pilot Call</span>
+                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" aria-hidden="true" />
+                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                            </a>
+                            <p className="text-text-muted text-sm">
+                                Free pilot included — get your coupon on the call
+                            </p>
                         </div>
 
 
