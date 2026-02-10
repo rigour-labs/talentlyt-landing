@@ -7,14 +7,14 @@ const features = [
     {
         icon: Globe,
         title: 'Screen Across MENA',
-        description: 'Interview candidates in any time zone. Maya conducts live AI interviews 24/7, so your UAE team wakes up to completed screenings.',
-        highlight: 'No scheduling conflicts',
+        description: 'Interview candidates in any time zone. Only 32% of Gulf firms have formal remote hiring policies — Maya gives you 24/7 coverage your competitors don\'t have.',
+        highlight: '68% lack remote hiring policy',
     },
     {
         icon: ShieldCheck,
         title: 'Verify Remote Identity',
-        description: 'Our 15-signal verification catches proxy interviews, deepfakes, and impersonation attempts that phone screens miss.',
-        highlight: '12% fraud detection rate',
+        description: 'Our 15-signal verification catches proxy interviews, deepfakes, and impersonation. In 2025, 1,300+ UAE companies were fined AED 34M for fake hiring practices.',
+        highlight: 'AED 34M in fines (2025)',
     },
     {
         icon: Clock,

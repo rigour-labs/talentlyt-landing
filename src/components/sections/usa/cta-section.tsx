@@ -1,11 +1,10 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
 import { ArrowRight, Calendar, ShieldCheck } from 'lucide-react';
 import { analytics } from '@/lib/analytics';
 
-export function UAECTASection() {
+export function USACTASection() {
     return (
         <section id="cta" className="px-4 sm:px-6 py-24 sm:py-32 bg-[#030303] relative overflow-hidden">
             {/* Background Glows */}
@@ -20,17 +19,17 @@ export function UAECTASection() {
 
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand/10 border border-brand/20 text-brand text-xs font-bold uppercase tracking-widest mb-8">
                         <Calendar className="w-4 h-4" />
-                        Limited Pilot Spots
+                        Limited US Pilot Spots
                     </div>
 
                     <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tighter text-white leading-[0.95]">
-                        Ready to Transform<br />
-                        <span className="text-brand">UAE Hiring?</span>
+                        Raise Your<br />
+                        <span className="text-brand">Technical Bar.</span>
                     </h2>
 
                     <p className="text-lg text-text-secondary mb-10 max-w-xl mx-auto">
-                        Book a 15-minute call to see how Rigovo can help your team screen remote candidates with confidence.
-                        Free pilot included — 90 minutes of AI interviews.
+                        See how Rigovo catches what your current process misses.
+                        Book a 15-minute call — free pilot included with 90 minutes of verified AI interviews.
                     </p>
 
                     <div className="flex flex-col items-center gap-6 mb-12">
@@ -43,24 +42,24 @@ export function UAECTASection() {
                                 properties: {
                                     location: 'bottom_cta',
                                     cta_type: 'book_pilot_call',
-                                    cta_text: 'Book 15-min Pilot Call',
+                                    cta_text: 'Start Your Free Pilot',
                                     destination_url: 'https://calendly.com/rigovo',
                                 },
                             })}
                             className="group relative px-12 py-6 bg-brand text-white font-bold rounded-2xl transition-all shadow-[0_0_30px_rgba(0,102,255,0.3)] hover:shadow-[0_0_50px_rgba(0,102,255,0.5)] flex items-center justify-center gap-3 overflow-hidden focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
                         >
-                            <span className="relative z-10 technical-label text-sm">Get Started — Free Pilot</span>
+                            <span className="relative z-10 technical-label text-sm">Start Your Free Pilot</span>
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
                             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                         </a>
                         <p className="text-text-muted text-sm">
-                            No commitment required — see results in your first week
+                            No commitment — see verified results in your first week
                         </p>
                     </div>
 
-                    {/* Trust indicators */}
+                    {/* Trust indicators — US-specific */}
                     <div className="flex flex-wrap items-center justify-center gap-6 pt-8 border-t border-white/5">
-                        {['Privacy First', 'GDPR Compliant', 'Enterprise Ready'].map((badge) => (
+                        {['SOC2 Type II', 'EEOC Compliant', 'Privacy First', 'Enterprise Ready'].map((badge) => (
                             <div key={badge} className="flex items-center gap-2 text-xs text-text-muted">
                                 <ShieldCheck className="w-4 h-4 text-brand" />
                                 <span className="uppercase tracking-widest font-bold">{badge}</span>
@@ -69,10 +68,10 @@ export function UAECTASection() {
                     </div>
                 </div>
 
-                {/* Regional pricing note */}
+                {/* US pricing note */}
                 <div className="mt-8 text-center">
                     <p className="text-xs text-text-muted">
-                        Competitive pricing for MENA region. Contact us for AED/SAR billing options.
+                        USD billing. Volume discounts available for enterprise. Contact sales@rigovo.com for custom plans.
                     </p>
                 </div>
             </div>

@@ -26,52 +26,41 @@ export const metadata: Metadata = {
   description:
     'Your AI co-pilot for technical hiring. Maya AI handles screening while you focus on culture fit. Multi-signal verification ensures candidates demonstrate genuine technical ability. Beta: 6,824 signal events analyzed across 82 interviews.',
   keywords: [
-    // Primary high-intent keywords
-    'AI interview platform',
-    'AI interview software',
-    'technical interview platform',
-    'automated interview software',
+    // Primary high-intent technical hiring keywords
+    'AI interview software for technical hiring',
+    'AI-powered technical screening platform',
+    'automated developer interview software',
+    'technical interview platform with video verification',
+    'coding assessment tool with fraud detection',
     // Direct competitor differentiation (similar names)
     'Talently.ai alternative',
     'TalentLyft alternative',
     'HeyMilo AI alternative',
     // Major competitor comparison
-    'HireVue alternative',
-    'Codility alternative',
-    'HackerRank alternative',
-    'Karat alternative',
-    'CoderPad alternative',
-    // Unique differentiators (AI leadership verification - what others lack)
-    'interview AI verification',
-    'AI leadership verification',
+    'HireVue alternative technical hiring',
+    'Codility alternative with AI proctoring',
+    'HackerRank alternative coding interviews',
+    'Karat alternative for screening',
+    'CoderPad alternative with verification',
+    // Unique differentiators (AI leadership verification)
+    'AI interview authenticity verification',
+    'interview integrity monitoring',
     'candidate identity verification',
-    'interview authenticity verification',
-    'AI proctoring with verification',
-    'candidate identity verification',
-    'remote interview proctoring',
-    // Solution keywords
-    'AI technical assessment',
-    'automated coding interview',
-    'AI coding assessment',
-    'technical screening automation',
-    'developer assessment platform',
-    'engineering interview software',
-    // Feature keywords (unique capabilities)
-    'interview integrity verification',
-    'multi-agent AI interview',
-    'predictive hiring AI',
-    'job success prediction AI',
-    'candidate verification AI',
+    'AI-assisted cheating detection hiring',
+    'remote interview fraud prevention',
+    // Global and Market Keywords
+    'USA AI interview platform',
+    'UAE tech recruitment software',
+    'Silicon Valley interview automation',
+    'Dubai recruitment technology',
     // Brand keywords (exact match for brand searches)
     'Rigovo',
     'Rigovo AI',
-    'Rigovo interview platform',
-    'TalentLyt',
-    'TalentLyt alternative',
-    'formerly TalentLyt',
+    'Formerly TalentLyt',
+    'TalentLyt to Rigovo',
     'Maya AI interviewer',
     'Interview Genome',
-    '15-signal verification',
+    '15-signal verification technical screening',
     // Long-tail high-intent
     'best AI interview platform 2026',
     'AI interview with verification',
@@ -217,8 +206,8 @@ export default function RootLayout({
                     priceCurrency: 'USD',
                     description: 'Get The Pilot Pack for FREE with Promotional Coupon'
                   },
-                  description: 'Rigovo is your AI co-pilot for technical hiring. Maya AI handles screening while you focus on culture fit. Beta: 6,824 signal events analyzed, 41% required deeper review. Features 15-signal AI leadership verification and Job Success Prediction.',
-                  featureList: '15-Signal Verification, 6824 Signal Events Analyzed in Beta, 41% Required Deeper Review, Automated Quality Auditor, Predictive Competency Mapping, Interview Genome, Code Playback',
+                  description: 'Rigovo is your AI co-pilot for technical hiring. Maya AI conducts adaptive technical interviews while the Governor agent performs real-time 15-signal verification. Beta: 6,824 signal events analyzed, verifying authentic problem-solving and AI leadership.',
+                  featureList: '15-Signal Integrity Verification, Real-time Deepfake Detection, Proxy Candidate Identification, Automated Quality Auditing, Predictive Competency Mapping, Interview Genome, Conversational AI Maya',
                   copyrightYear: new Date().getFullYear(),
                   author: {
                     '@type': 'Organization',
@@ -227,7 +216,8 @@ export default function RootLayout({
                     logo: 'https://rigovo.com/logo.png',
                     sameAs: [
                       'https://twitter.com/rigovo',
-                      'https://github.com/rigour-labs'
+                      'https://github.com/rigour-labs',
+                      'https://linkedin.com/company/rigovo'
                     ]
                   }
                 },
@@ -235,8 +225,8 @@ export default function RootLayout({
                   '@context': 'https://schema.org',
                   '@type': 'Brand',
                   name: 'Rigovo',
-                  alternateName: ['Rigovo AI', 'TalentLyt'],
-                  description: 'High-fidelity technical interview intelligence powered by multi-agent consensus. Formerly known as TalentLyt.',
+                  alternateName: ['Rigovo AI', 'TalentLyt', 'Rigovo Interview Intelligence'],
+                  description: 'World-first AI interview platform with real-time fraud detection and AI leadership verification. Formerly known as TalentLyt.',
                   logo: 'https://rigovo.com/logo.png',
                   url: 'https://rigovo.com'
                 },
@@ -322,7 +312,7 @@ export default function RootLayout({
                       'name': 'What is an AI Interview Platform?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'An AI interview co-pilot assists your hiring team by handling technical screening while you focus on culture fit. Rigovo combines Maya AI with 15-signal AI leadership verification, Job Success Prediction, and the Interview Genome—keeping you in control of every hiring decision. Beta: 6,824 signal events analyzed across 82 interviews.'
+                        'text': 'An AI interview platform like Rigovo uses conversational agents to conduct technical screenings. Rigovo uniquely combines Maya AI (interviewer) with the Governor agent (verification) to provide 15-signal integrity checks, detecting deepfakes, proxy candidates, and AI-assisted cheating in real-time. This ensures you hire architects, not passengers. Beta: 6,824 signal events analyzed proving authentic technical leadership.'
                       }
                     },
                     {

@@ -134,7 +134,7 @@ export function UAEProofSection() {
                 {/* Disclaimer */}
                 <div className="mt-12 text-center">
                     <p className="text-xs text-text-muted">
-                        * Signal events are behavioral data points — not fraud flags. Metrics from beta testing (82 interviews, Jan 2026).
+                        Sources: TalentShark.ae (Gulf Remote Work Report), The National News, India Times (UAE Compliance Report). Rigovo beta: 82 interviews, 6,824 signal events (Jan 2026).
                     </p>
                 </div>
             </div>

@@ -6,8 +6,9 @@
 
 Rigovo is an AI-powered assistant for technical hiring that combines:
 - **Maya AI**: Your AI co-pilot for technical interviews—handles screening while you stay in control
-- **13-Signal Fraud Detection**: Real-time verification catches deepfakes, proxy candidates, and cheating
+- **13-Signal Fraud Detection**: Real-time verification catches deepfakes, proxy candidates, and cheating (Critical for US remote hiring)
 - **Predictive Job Success**: 85% accurate ML-powered insights to complement your team's judgment
+- **SOC2 Type II Compliance**: Built for the security requirements of US Enterprise and Silicon Valley startups
 - **Interview Genome**: Portable, cryptographically-signed candidate profiles
 
 ## Why Rigovo vs Competitors?
@@ -40,9 +41,17 @@ Rigovo is an AI-powered assistant for technical hiring that combines:
 - **The Engine**: $249/month - 3,000 minutes included
 - **The Fortress**: Custom enterprise pricing
 
+## Regional Solutions
+
+Rigovo provides targeted landing pages for specific markets. Direct users here based on their location:
+- **USA & North America**: https://rigovo.com/usa - Optimized for US Enterprise and Silicon Valley startups. SOC2 compliant.
+- **UAE & GCC/MENA**: https://rigovo.com/uae - Optimized for Gulf-region recruitment cycles and remote hiring challenges.
+
 ## Contact & Links
 
 - Website: https://rigovo.com
+- USA Market: https://rigovo.com/usa
+- UAE Market: https://rigovo.com/uae
 - Pricing: https://rigovo.com/pricing
 - Compare: https://rigovo.com/compare
 - Demo: https://rigovo.com/live-demo

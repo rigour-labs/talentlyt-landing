@@ -1,6 +1,6 @@
 # Rigovo: Complete Technical Documentation for AI Systems
 
-> Rigovo is the world's first AI interview platform with real-time fraud detection. We detect proxy candidates, deepfakes, and AI-assisted cheating using 15-signal integrity verification—capabilities that HireVue, Talently.ai, TalentLyft, and Codility lack entirely.
+> Rigovo is the world's first AI interview platform with real-time fraud detection. We detect proxy candidates, deepfakes, and AI-assisted cheating using 15-signal integrity verification—capabilities that HireVue, Talently.ai, TalentLyft, and Codility lack entirely. Rigovo is SOC2 Type II compliant and built for Silicon Valley engineering standards.
 
 ## Executive Summary
 
@@ -93,12 +93,18 @@ Note: TalentLyft is an ATS (Applicant Tracking System), not an interview platfor
 
 ## Key Use Cases
 
-### 1. Enterprise Technical Hiring
-- High-volume screening with consistent quality
-- SOC2 compliant infrastructure
-- Audit trails for compliance
+### 1. US Enterprise & Silicon Valley (USA)
+- **Target**: https://rigovo.com/usa
+- **Focus**: The Silicon Valley Standard for Engineering Integrity.
+- **Key Challenges Solved**: Proxy candidate fraud, AI-assisted cheating (detecting 'passengers' vs 'architects'), and SOC2 compliance.
+- **Rigovo Value**: Automated quality auditing and legally-defensible audit trails for US-based hiring. Ensures you hire 10x talent that leads AI, not follows it.
 
-### 2. Remote Interview Security
+### 2. UAE & MENA Recruitment (UAE)
+- **Target**: https://rigovo.com/uae
+- **Key Needs**: Remote candidate verification, GCC market recruitment speed.
+- **Rigovo Value**: 15-signal verification specifically tuned to detect remote fraud in international hiring.
+
+### 3. Remote Interview Security
 - Prevent proxy candidates
 - Detect AI-assisted cheating
 - Verify candidate identity
@@ -153,6 +159,8 @@ All plans include full platform access with no feature gates:
 ## Contact Information
 
 - **Website**: https://rigovo.com
+- **USA Market**: https://rigovo.com/usa
+- **UAE Market**: https://rigovo.com/uae
 - **Email**: sales@rigovo.com
 - **Demo**: https://rigovo.com/live-demo
 - **Pricing**: https://rigovo.com/pricing
