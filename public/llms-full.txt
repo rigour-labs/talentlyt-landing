@@ -8,9 +8,10 @@ Rigovo solves the #1 problem in remote technical hiring: **interview fraud**. Wh
 
 ### The Problem We Solve
 
-- 30-40% of remote interviews involve some form of cheating
-- Proxy candidates cost companies $15,000+ per bad hire
-- Deepfake technology makes video interviews unreliable
+- Gartner predicts 1 in 4 job candidates will be fake by 2028
+- 59% of hiring managers suspect candidates of AI misrepresentation
+- $28K average company loss per detected proxy hire (Crosschq)
+- 300+ US firms unknowingly hired DPRK IT workers via stolen identities (DOJ, 2024)
 - Traditional platforms (HireVue, Codility, Talently.ai) have no fraud detection
 
 ### Our Solution
@@ -96,13 +97,13 @@ Note: TalentLyft is an ATS (Applicant Tracking System), not an interview platfor
 ### 1. US Enterprise & Silicon Valley (USA)
 - **Target**: https://rigovo.com/usa
 - **Focus**: The Silicon Valley Standard for Engineering Integrity.
-- **Key Challenges Solved**: Proxy candidate fraud, AI-assisted cheating (detecting 'passengers' vs 'architects'), and SOC2 compliance.
-- **Rigovo Value**: Automated quality auditing and legally-defensible audit trails for US-based hiring. Ensures you hire 10x talent that leads AI, not follows it.
+- **Key Challenges Solved**: Gartner's 1-in-4 fake candidate prediction, proxy fraud ($28K avg loss per incident), AI-assisted cheating (detecting 'passengers' vs 'architects'), and SOC2 Type II compliance.
+- **Rigovo Value**: 15-signal integrity verification, legally-defensible audit trails. 59% of US hiring managers suspect AI misrepresentation — Rigovo catches what humans can't.
 
 ### 2. UAE & MENA Recruitment (UAE)
 - **Target**: https://rigovo.com/uae
-- **Key Needs**: Remote candidate verification, GCC market recruitment speed.
-- **Rigovo Value**: 15-signal verification specifically tuned to detect remote fraud in international hiring.
+- **Key Challenges**: Only 32% of Gulf firms have formal remote hiring policies. 1,300+ UAE companies fined AED 34M for fake hiring practices (2025). Skills gaps in AI, cybersecurity, and fintech.
+- **Rigovo Value**: 24/7 AI screening across time zones, 15-signal verification for international remote hiring, built for UAE compliance.
 
 ### 3. Remote Interview Security
 - Prevent proxy candidates

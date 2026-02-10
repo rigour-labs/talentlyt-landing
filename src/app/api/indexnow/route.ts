@@ -105,6 +105,9 @@ export async function GET(request: NextRequest) {
         `https://${SITE_HOST}/request-demo`,
         `https://${SITE_HOST}/contact`,
         `https://${SITE_HOST}/ai-ethics`,
+        `https://${SITE_HOST}/usa`,
+        `https://${SITE_HOST}/uae`,
+        `https://${SITE_HOST}/security`,
     ];
 
     const payload = {

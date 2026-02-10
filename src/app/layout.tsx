@@ -71,7 +71,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://rigovo.com',
     languages: {
-      'en-US': 'https://rigovo.com',
+      'en-US': 'https://rigovo.com/usa',
+      'en-AE': 'https://rigovo.com/uae',
       'en': 'https://rigovo.com',
       'x-default': 'https://rigovo.com',
     },
@@ -280,6 +281,18 @@ export default function RootLayout({
                       'position': 6,
                       'name': 'Contact',
                       'item': 'https://rigovo.com/contact'
+                    },
+                    {
+                      '@type': 'ListItem',
+                      'position': 7,
+                      'name': 'USA',
+                      'item': 'https://rigovo.com/usa'
+                    },
+                    {
+                      '@type': 'ListItem',
+                      'position': 8,
+                      'name': 'UAE',
+                      'item': 'https://rigovo.com/uae'
                     }
                   ]
                 },

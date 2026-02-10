@@ -31,6 +31,11 @@ export const metadata: Metadata = {
     },
     alternates: {
         canonical: 'https://rigovo.com/usa',
+        languages: {
+            'en-US': 'https://rigovo.com/usa',
+            'en-AE': 'https://rigovo.com/uae',
+            'x-default': 'https://rigovo.com',
+        },
     },
 };
 
