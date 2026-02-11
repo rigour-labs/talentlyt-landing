@@ -4,6 +4,7 @@ import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { BookOpen, Search } from 'lucide-react';
 import { CTAButton } from '@/components/ui/cta-button';
+import { PageAnalytics } from '@/components/page-analytics';
 
 export const metadata: Metadata = {
     title: 'AI Interview Glossary | Technical Hiring Terms Explained',
@@ -205,6 +206,7 @@ export default function GlossaryPage() {
                     </div>
                 </section>
             </main>
+            <PageAnalytics pagePath="/glossary" />
             <Footer />
         </div>
     );

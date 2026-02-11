@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
+import { PageAnalytics } from '@/components/page-analytics';
 import { ArrowLeft, Clock, GraduationCap, Target, TrendingUp, Building2, CheckCircle } from 'lucide-react';
 import { RelatedArticles } from '@/components/blog/related-articles';
 import { Breadcrumb } from '@/components/breadcrumb';
@@ -319,6 +320,7 @@ export default function SkillsBasedHiringPage() {
                         </div>
                     </article>
                 </main>
+                <PageAnalytics pagePath="/blog/skills-based-hiring-2026" />
                 <Footer />
             </div>
         </>

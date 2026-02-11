@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
+import { PageAnalytics } from '@/components/page-analytics';
 import { ArrowLeft, Clock, TrendingDown, Briefcase, GraduationCap, Target, Lightbulb, Users } from 'lucide-react';
 import { RelatedArticles } from '@/components/blog/related-articles';
 
@@ -351,6 +352,7 @@ export default function EntryLevelCrisisPage() {
                         </div>
                     </article>
                 </main>
+                <PageAnalytics pagePath="/blog/entry-level-hiring-crisis-2026" />
                 <Footer />
             </div>
         </>

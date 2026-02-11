@@ -45,6 +45,8 @@ export function DemoRequestForm() {
                     form_type: 'demo_request',
                     location: 'contact_page',
                     company_domain: companyDomain,
+                    lead_value: 249,  // Engine tier ($249/mo) — highest-intent lead
+                    currency: 'USD',
                 },
             });
         } else if (state.errors || state.message) {

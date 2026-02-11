@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
+import { PageAnalytics } from '@/components/page-analytics';
 import { ArrowLeft, Clock, CheckCircle2, XCircle, ArrowRight, Shield, Zap, DollarSign } from 'lucide-react';
 import { RelatedArticles } from '@/components/blog/related-articles';
 import { CTAButton } from '@/components/ui/cta-button';
@@ -314,6 +315,7 @@ export default function RigovoVsHireVuePage() {
                         </div>
                     </article>
                 </main>
+                <PageAnalytics pagePath="/blog/rigovo-vs-hirevue" />
                 <Footer />
             </div>
         </>

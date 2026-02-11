@@ -170,6 +170,8 @@ export function InteractiveDemoForm() {
           location: 'live_demo_page',
           role: role,
           company_domain: extractDomain(email.trim()),
+          lead_value: 100,  // Weighted avg: Starter PAYG + Engine tier conversions
+          currency: 'USD',
         },
       });
 
@@ -268,11 +270,10 @@ export function InteractiveDemoForm() {
                   type="button"
                   onClick={() => handleRoleChange(r.value)}
                   disabled={isLoading}
-                  className={`flex flex-col items-center gap-1 px-2 py-3 rounded-xl border text-xs font-medium transition-all ${
-                    role === r.value
+                  className={`flex flex-col items-center gap-1 px-2 py-3 rounded-xl border text-xs font-medium transition-all ${role === r.value
                       ? 'bg-brand/20 border-brand/50 text-brand'
                       : 'bg-white/5 border-white/10 text-text-muted hover:bg-white/10 hover:text-white'
-                  }`}
+                    }`}
                 >
                   {r.icon}
                   <span>{r.label}</span>
@@ -285,7 +286,7 @@ export function InteractiveDemoForm() {
           {error && !rateLimitExceeded && (
             <p className="text-red-400 text-sm text-center">{error}</p>
           )}
-          
+
           {rateLimitExceeded && (
             <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl p-4 text-center">
               <p className="text-amber-300 text-sm mb-3">{error}</p>

@@ -6,6 +6,7 @@ import { USAHeroSection } from '@/components/sections/usa/hero-section';
 import { USAFeaturesSection } from '@/components/sections/usa/features-section';
 import { USAProofSection } from '@/components/sections/usa/proof-section';
 import { USACTASection } from '@/components/sections/usa/cta-section';
+import { PageAnalytics } from '@/components/page-analytics';
 
 export const metadata: Metadata = {
     title: 'Rigovo USA | AI Interview Integrity & SOC2 Compliant Technical Hiring',
@@ -81,6 +82,7 @@ export default function USALandingPage() {
                 <USAProofSection />
                 <USACTASection />
             </main>
+            <PageAnalytics pagePath="/usa" />
             <Footer />
         </div>
     );

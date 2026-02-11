@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { ContactContent } from '@/components/contact-content';
+import { PageAnalytics } from '@/components/page-analytics';
 
 export const metadata: Metadata = {
     title: 'Contact Us | Rigovo Support & Sales',
@@ -16,6 +17,7 @@ export default function ContactPage() {
             <Suspense fallback={<div className="flex-1 flex items-center justify-center"><div className="text-text-muted">Loading...</div></div>}>
                 <ContactContent />
             </Suspense>
+            <PageAnalytics pagePath="/contact" />
             <Footer />
         </div>
     );

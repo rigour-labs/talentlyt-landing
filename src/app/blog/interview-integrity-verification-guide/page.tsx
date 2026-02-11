@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
+import { PageAnalytics } from '@/components/page-analytics';
 import { ArrowLeft, Clock, ShieldCheck, Eye, AlertTriangle, Fingerprint, Lock, Scale } from 'lucide-react';
 import { RelatedArticles } from '@/components/blog/related-articles';
 
@@ -208,7 +209,8 @@ export default function InterviewIntegrityVerificationPage() {
                     </div>
                 </article>
             </main>
-            <Footer />
+            <PageAnalytics pagePath="/blog/interview-integrity-verification-guide" />
+                <Footer />
             </div>
         </>
     );

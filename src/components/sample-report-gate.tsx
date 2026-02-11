@@ -46,6 +46,8 @@ export function SampleReportGate() {
                     form_type: 'contact',
                     location: 'blog',
                     company_domain: email.split('@')[1],
+                    lead_value: 50,  // Content MQL — ~1 Sentinel scan ($35) + nurture upside
+                    currency: 'USD',
                 },
             });
 

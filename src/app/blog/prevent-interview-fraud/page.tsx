@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
+import { PageAnalytics } from '@/components/page-analytics';
 import { ArrowLeft, Clock, AlertTriangle, Shield, Eye, Mic, Monitor, CheckCircle2 } from 'lucide-react';
 import { RelatedArticles } from '@/components/blog/related-articles';
 import { CTA_CONFIG } from '@/components/ui/cta-button';
@@ -400,6 +401,7 @@ export default function PreventInterviewFraudPage() {
                         </div>
                     </article>
                 </main>
+                <PageAnalytics pagePath="/blog/prevent-interview-fraud" />
                 <Footer />
             </div>
         </>

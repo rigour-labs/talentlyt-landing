@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
+import { PageAnalytics } from '@/components/page-analytics';
 import { ArrowLeft, Clock, Scale, Users, Brain, Target, TrendingDown, ShieldAlert } from 'lucide-react';
 import { RelatedArticles } from '@/components/blog/related-articles';
 
@@ -189,7 +190,8 @@ export default function ReduceHiringBiasPage() {
                     </div>
                 </article>
             </main>
-            <Footer />
+            <PageAnalytics pagePath="/blog/reduce-hiring-bias-ai" />
+                <Footer />
             </div>
         </>
     );

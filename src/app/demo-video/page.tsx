@@ -5,6 +5,7 @@ import { Footer } from '@/components/footer';
 import Link from 'next/link';
 import { ArrowRight, Play, Shield, Brain, Activity } from 'lucide-react';
 import { CTA_CONFIG } from '@/lib/cta-config';
+import { PageAnalytics } from '@/components/page-analytics';
 
 export const metadata: Metadata = {
     title: 'Watch Demo | Rigovo AI Interview Platform in Action',
@@ -159,6 +160,7 @@ export default function DemoVideoPage() {
                     </div>
                 </main>
 
+                <PageAnalytics pagePath="/demo-video" />
                 <Footer />
             </div>
         </>

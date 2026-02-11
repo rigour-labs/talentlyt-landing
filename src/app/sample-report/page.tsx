@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { SampleReportGate } from '@/components/sample-report-gate';
+import { PageAnalytics } from '@/components/page-analytics';
 
 export const metadata: Metadata = {
     title: 'Sample Interview Intelligence Report | Rigovo',
@@ -32,6 +33,7 @@ export default function SampleReportPage() {
                     <SampleReportGate />
                 </div>
             </main>
+            <PageAnalytics pagePath="/sample-report" />
             <Footer />
         </div>
     );

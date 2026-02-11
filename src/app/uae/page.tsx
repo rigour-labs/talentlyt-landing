@@ -6,6 +6,7 @@ import { UAEHeroSection } from '@/components/sections/uae/hero-section';
 import { UAEProofSection } from '@/components/sections/uae/proof-section';
 import { UAEFeaturesSection } from '@/components/sections/uae/features-section';
 import { UAECTASection } from '@/components/sections/uae/cta-section';
+import { PageAnalytics } from '@/components/page-analytics';
 
 export const metadata: Metadata = {
     title: 'Rigovo UAE | AI Interview Platform for UAE & MENA Hiring',
@@ -89,6 +90,7 @@ export default function UAELandingPage() {
                 <UAEProofSection />
                 <UAECTASection />
             </main>
+            <PageAnalytics pagePath="/uae" />
             <Footer />
         </div>
     );

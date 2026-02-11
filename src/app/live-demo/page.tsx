@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { LiveDemoContent } from '@/components/live-demo-content';
+import { PageAnalytics } from '@/components/page-analytics';
 
 export const metadata: Metadata = {
     title: 'Live Demo | Experience the Future of Technical Hiring',
@@ -14,6 +15,7 @@ export default function LiveDemoPage() {
         <div className="min-h-screen bg-background">
             <Navbar />
             <LiveDemoContent />
+            <PageAnalytics pagePath="/live-demo" />
             <Footer />
         </div>
     );

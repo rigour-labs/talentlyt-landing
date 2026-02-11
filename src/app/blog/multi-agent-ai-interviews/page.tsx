@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
+import { PageAnalytics } from '@/components/page-analytics';
 import { ArrowLeft, Clock, Bot, Cpu, Shield, Users, Zap, MessageSquareQuote } from 'lucide-react';
 import { RelatedArticles } from '@/components/blog/related-articles';
 
@@ -184,7 +185,8 @@ export default function MultiAgentAIPage() {
                     </div>
                 </article>
             </main>
-            <Footer />
+            <PageAnalytics pagePath="/blog/multi-agent-ai-interviews" />
+                <Footer />
             </div>
         </>
     );

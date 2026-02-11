@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
+import { PageAnalytics } from '@/components/page-analytics';
 import { ArrowLeft, Clock, Globe, Wifi, ShieldAlert, Users, Video, Brain } from 'lucide-react';
 import { RelatedArticles } from '@/components/blog/related-articles';
 
@@ -254,6 +255,7 @@ export default function RemoteHiringChallengesPage() {
                         </div>
                     </article>
                 </main>
+                <PageAnalytics pagePath="/blog/remote-hiring-challenges-2026" />
                 <Footer />
             </div>
         </>

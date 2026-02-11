@@ -63,6 +63,10 @@ interface FormSubmittedEvent {
     role?: 'ENGINEER' | 'PRODUCT_MANAGER' | 'DESIGNER' | 'DATA_SCIENTIST';
     /** Company domain extracted from email */
     company_domain?: string;
+    /** Estimated lead value in USD for GA4 conversion value reporting */
+    lead_value?: number;
+    /** Currency code (default: USD) */
+    currency?: string;
   };
 }
 
@@ -387,10 +391,19 @@ class Analytics {
       // 3. GA4 Direct Event Sending via gtag()
       // This ensures custom events reach GA4 even if GTM tags aren't configured
       if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-        window.gtag('event', payload.event, {
+        // Build GA4 event params, including conversion value if present
+        const ga4Params: Record<string, unknown> = {
           ...payload.properties,
           send_to: 'G-TK1KFTDDED',
-        });
+        };
+
+        // If lead_value is present, map to GA4's value/currency fields for conversion tracking
+        if ('lead_value' in payload.properties && (payload.properties as any).lead_value) {
+          ga4Params.value = (payload.properties as any).lead_value;
+          ga4Params.currency = (payload.properties as any).currency || 'USD';
+        }
+
+        window.gtag('event', payload.event, ga4Params);
       }
 
       if (process.env.NODE_ENV === 'development') {

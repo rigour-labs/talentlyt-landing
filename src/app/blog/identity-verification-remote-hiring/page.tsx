@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
+import { PageAnalytics } from '@/components/page-analytics';
 import { ArrowLeft, Clock, Shield, Eye, Lock, Zap, AlertTriangle, Search } from 'lucide-react';
 import { RelatedArticles } from '@/components/blog/related-articles';
 
@@ -191,7 +192,8 @@ export default function IdentityVerificationRemoteHiringPage() {
                     </div>
                 </article>
             </main>
-            <Footer />
+            <PageAnalytics pagePath="/blog/identity-verification-remote-hiring" />
+                <Footer />
             </div>
         </>
     );

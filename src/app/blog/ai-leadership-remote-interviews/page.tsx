@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
+import { PageAnalytics } from '@/components/page-analytics';
 import { ArrowLeft, Clock, AlertTriangle, Eye, Keyboard, Users, Monitor, Shield, Search } from 'lucide-react';
 import { RelatedArticles } from '@/components/blog/related-articles';
 
@@ -184,7 +185,8 @@ export default function AILeadershipRemoteInterviewsPage() {
                     </div>
                 </article>
             </main>
-            <Footer />
+            <PageAnalytics pagePath="/blog/ai-leadership-remote-interviews" />
+                <Footer />
             </div>
         </>
     );

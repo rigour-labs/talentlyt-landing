@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { Brain, Shield, Users, Scale, AlertTriangle, Eye, Target, Heart, Lightbulb, MessageSquare } from 'lucide-react';
+import { PageAnalytics } from '@/components/page-analytics';
 
 export const metadata: Metadata = {
     title: 'AI Ethics — Rigovo',
@@ -300,6 +301,7 @@ export default function AIEthicsPage() {
                 </div>
             </main>
 
+            <PageAnalytics pagePath="/ai-ethics" />
             <Footer />
         </div>
     );

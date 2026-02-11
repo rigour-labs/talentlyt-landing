@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
+import { PageAnalytics } from '@/components/page-analytics';
 import { ArrowLeft, Clock, DollarSign, TrendingDown, Users, AlertCircle, Calculator } from 'lucide-react';
 import { RelatedArticles } from '@/components/blog/related-articles';
 
@@ -264,6 +265,7 @@ export default function CostOfBadHirePage() {
                         </div>
                     </article>
                 </main>
+                <PageAnalytics pagePath="/blog/cost-of-bad-hire-engineering" />
                 <Footer />
             </div>
         </>

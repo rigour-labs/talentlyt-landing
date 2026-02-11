@@ -70,6 +70,8 @@ export function NewsletterSignup({
                     form_type: 'newsletter',
                     location: 'newsletter',
                     company_domain: email.split('@')[1],
+                    lead_value: 10,  // Nurture lead — low immediate conversion, long-term value
+                    currency: 'USD',
                 },
             });
 

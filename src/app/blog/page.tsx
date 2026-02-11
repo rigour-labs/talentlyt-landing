@@ -4,6 +4,7 @@ import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { ArrowRight, BookOpen, Clock } from 'lucide-react';
 import { NewsletterSignup } from '@/components/ui/newsletter-signup';
+import { PageAnalytics } from '@/components/page-analytics';
 
 export const metadata: Metadata = {
     title: 'Blog | AI Interview & Integrity Verification Guides',
@@ -246,6 +247,7 @@ export default function BlogPage() {
                     </div>
                 </section>
             </main>
+            <PageAnalytics pagePath="/blog" />
             <Footer />
         </div>
     );
