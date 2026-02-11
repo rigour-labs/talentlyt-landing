@@ -4,7 +4,7 @@ import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import Link from 'next/link';
 import { ArrowRight, Play, Shield, Brain, Activity } from 'lucide-react';
-import { CTA_CONFIG } from '@/components/ui/cta-button';
+import { CTA_CONFIG } from '@/lib/cta-config';
 
 export const metadata: Metadata = {
     title: 'Watch Demo | Rigovo AI Interview Platform in Action',

@@ -21,22 +21,10 @@ import Link from 'next/link';
 import { ArrowRight, Calendar } from 'lucide-react';
 import { analytics } from '@/lib/analytics';
 
-// ============================================================================
-// CENTRAL CTA CONFIG — Change these to update ALL buttons sitewide
-// ============================================================================
-
-export const CTA_CONFIG = {
-    /** Primary CTA text shown on most buttons */
-    primaryText: 'Book 15-min Pilot Call',
-    /** Compact CTA text for navbar/small spaces */
-    compactText: 'Book Pilot Call',
-    /** Where the primary CTA links to */
-    primaryLink: 'https://calendly.com/rigovo/',
-    /** Secondary CTA text */
-    secondaryText: 'View Sample Report',
-    /** Where the secondary CTA links to */
-    secondaryLink: '/sample-report',
-} as const;
+// Re-export CTA_CONFIG from the server-safe shared module
+// so existing imports from this file continue to work.
+import { CTA_CONFIG } from '@/lib/cta-config';
+export { CTA_CONFIG };
 
 // ============================================================================
 // TYPES
