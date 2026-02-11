@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { analytics } from '@/lib/analytics';
 import { Logo } from './logo';
+import { NewsletterSignup } from './ui/newsletter-signup';
 
 /**
  * Tracked footer link component
@@ -80,12 +81,27 @@ export function Footer() {
                             AI Ethics
                         </FooterLink>
                         <FooterLink
+                            href="/glossary"
+                            className="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded px-2 py-1"
+                        >
+                            Glossary
+                        </FooterLink>
+                        <FooterLink
                             href="/contact"
                             className="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded px-2 py-1"
                         >
                             Contact
                         </FooterLink>
                     </nav>
+                </div>
+
+                {/* Newsletter Signup */}
+                <div className="mt-10 max-w-md mx-auto md:mx-0">
+                    <NewsletterSignup
+                        variant="inline"
+                        title="Stay Updated"
+                        description="Weekly insights on AI hiring and interview integrity."
+                    />
                 </div>
 
                 {/* AI Disclosure & Legal Advisory */}
