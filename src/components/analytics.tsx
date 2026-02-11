@@ -46,7 +46,7 @@ export function AnalyticsProvider({ children }: { children: React.ReactNode }) {
     // Initialize once on mount
     useEffect(() => {
         // Initialize Mixpanel with new project token
-        mixpanel.init('bf6d4651c960bb7031b11866fe705d83', {
+        mixpanel.init('7989d631a1926137d5667b739e57c6f9', {
             // Autocapture: Automatically tracks clicks, form submissions, page views
             // This provides baseline data without manual instrumentation
             autocapture: true,
@@ -108,7 +108,7 @@ export function AnalyticsProvider({ children }: { children: React.ReactNode }) {
             mixpanel.people.set({
                 '$browser': navigator.userAgent.includes('Chrome') ? 'Chrome' :
                     navigator.userAgent.includes('Firefox') ? 'Firefox' :
-                    navigator.userAgent.includes('Safari') ? 'Safari' : 'Other',
+                        navigator.userAgent.includes('Safari') ? 'Safari' : 'Other',
                 '$os': navigator.platform,
                 'last_seen_page': window.location.pathname,
                 'last_visit_date': now,
