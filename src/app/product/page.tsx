@@ -8,6 +8,7 @@ import {
     CheckCircle2, Play, Code2, Globe, Server, Layers
 } from 'lucide-react';
 import Link from 'next/link';
+import { TrackedProductCTAs } from '@/components/ui/tracked-product-ctas';
 
 export const metadata: Metadata = {
     title: 'Product | Rigovo Technical Architecture',
@@ -238,20 +239,7 @@ export default function ProductPage() {
                         <p className="text-text-secondary mb-8">
                             Get a personalized demo of Rigovo and see our 3-agent system in action.
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Link
-                                href="/request-demo"
-                                className="px-8 py-4 bg-brand text-white font-bold rounded-xl hover:bg-brand-hover transition-colors"
-                            >
-                                Request Demo
-                            </Link>
-                            <Link
-                                href="https://platform.rigovo.com"
-                                className="px-8 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-xl hover:bg-white/10 transition-colors"
-                            >
-                                Try Platform
-                            </Link>
-                        </div>
+                        <TrackedProductCTAs />
                     </div>
                 </section>
             </main>

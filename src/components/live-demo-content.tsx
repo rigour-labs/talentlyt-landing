@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, ShieldCheck, Activity, Globe, Zap, Database, Search } from 'lucide-react';
 import { InteractiveDemoForm } from './interactive-demo-form';
+import { analytics } from '@/lib/analytics';
 
 export function LiveDemoContent() {
     const sections = [
@@ -128,6 +129,15 @@ export function LiveDemoContent() {
                                 </div>
                                 <Link
                                     href="/request-demo"
+                                    onClick={() => analytics.track({
+                                        event: 'cta_clicked',
+                                        properties: {
+                                            location: 'blog',
+                                            cta_type: 'book_demo',
+                                            cta_text: `Experience This Stage - ${section.title}`,
+                                            destination_url: '/request-demo',
+                                        },
+                                    })}
                                     className="inline-flex items-center gap-2 px-8 py-4 bg-white/[0.03] border border-white/10 text-white rounded-2xl hover:bg-brand hover:border-brand transition-all font-bold group"
                                 >
                                     Experience This Stage
@@ -172,6 +182,15 @@ export function LiveDemoContent() {
                         </p>
                         <Link
                             href="/request-demo"
+                            onClick={() => analytics.track({
+                                event: 'cta_clicked',
+                                properties: {
+                                    location: 'bottom_cta',
+                                    cta_type: 'book_demo',
+                                    cta_text: 'Request System Access',
+                                    destination_url: '/request-demo',
+                                },
+                            })}
                             className="inline-flex items-center gap-3 px-10 py-5 bg-white text-brand rounded-2xl hover:scale-105 transition-all font-bold shadow-2xl"
                         >
                             <Activity className="w-5 h-5" />

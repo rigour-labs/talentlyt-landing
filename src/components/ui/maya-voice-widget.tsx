@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Play, Pause, Shield } from 'lucide-react';
+import { analytics } from '@/lib/analytics';
 
 interface MayaVoiceWidgetProps {
     isPlaying: boolean;
@@ -11,6 +12,32 @@ interface MayaVoiceWidgetProps {
 }
 
 export function MayaVoiceWidget({ isPlaying, onToggle, isSentinelMode, onToggleSentinel }: MayaVoiceWidgetProps) {
+    const handleTogglePlay = () => {
+        analytics.track({
+            event: 'feature_toggled',
+            properties: {
+                feature_name: 'maya_voice',
+                enabled: !isPlaying,
+                location: 'hero',
+            },
+        });
+        onToggle();
+    };
+
+    const handleToggleSentinel = () => {
+        if (onToggleSentinel) {
+            analytics.track({
+                event: 'feature_toggled',
+                properties: {
+                    feature_name: 'sentinel_mode',
+                    enabled: !isSentinelMode,
+                    location: 'hero',
+                },
+            });
+            onToggleSentinel();
+        }
+    };
+
     return (
         <div className="relative p-5 rounded-2xl bg-black/40 border border-white/10 backdrop-blur-2xl shadow-2xl overflow-hidden group">
             {/* Dynamic Background Glow */}
@@ -39,7 +66,7 @@ export function MayaVoiceWidget({ isPlaying, onToggle, isSentinelMode, onToggleS
                     {/* Sentinel Mode Toggle */}
                     {onToggleSentinel && (
                         <button
-                            onClick={onToggleSentinel}
+                            onClick={handleToggleSentinel}
                             title="Forensic Sentinel Mode"
                             className={`flex items-center justify-center w-10 h-10 rounded-full border transition-all ${isSentinelMode
                                 ? 'bg-brand/20 border-brand text-brand shadow-[0_0_15px_rgba(0,102,255,0.4)]'
@@ -60,7 +87,7 @@ export function MayaVoiceWidget({ isPlaying, onToggle, isSentinelMode, onToggleS
 
                     {/* Play Button */}
                     <button
-                        onClick={onToggle}
+                        onClick={handleTogglePlay}
                         className="flex items-center justify-center w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 border border-white/10 transition-all text-white group-hover:scale-105 active:scale-95"
                     >
                         {isPlaying ? (

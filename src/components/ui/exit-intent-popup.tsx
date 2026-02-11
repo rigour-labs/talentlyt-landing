@@ -20,12 +20,24 @@ export function ExitIntentPopup() {
             }
         }
 
+        const showPopup = (trigger: 'mouse_leave' | 'inactivity') => {
+            setIsVisible(true);
+            setHasShown(true);
+            sessionStorage.setItem('exitIntentShown', 'true');
+            analytics.track({
+                event: 'popup_shown',
+                properties: {
+                    popup_type: 'exit_intent',
+                    trigger,
+                    page_path: window.location.pathname,
+                },
+            });
+        };
+
         const handleMouseLeave = (e: MouseEvent) => {
             // Only trigger when mouse leaves from top of viewport (likely closing tab)
             if (e.clientY <= 0 && !hasShown) {
-                setIsVisible(true);
-                setHasShown(true);
-                sessionStorage.setItem('exitIntentShown', 'true');
+                showPopup('mouse_leave');
             }
         };
 
@@ -35,9 +47,7 @@ export function ExitIntentPopup() {
             clearTimeout(inactivityTimer);
             inactivityTimer = setTimeout(() => {
                 if (!hasShown) {
-                    setIsVisible(true);
-                    setHasShown(true);
-                    sessionStorage.setItem('exitIntentShown', 'true');
+                    showPopup('inactivity');
                 }
             }, 45000); // 45 seconds
         };
@@ -55,15 +65,23 @@ export function ExitIntentPopup() {
         };
     }, [hasShown]);
 
-    const handleClose = () => {
+    const handleClose = (method: 'close_button' | 'backdrop_click' | 'no_thanks') => {
         setIsVisible(false);
+        analytics.track({
+            event: 'popup_dismissed',
+            properties: {
+                popup_type: 'exit_intent',
+                dismiss_method: method,
+                page_path: typeof window !== 'undefined' ? window.location.pathname : '',
+            },
+        });
     };
 
     const handleCTAClick = () => {
         analytics.track({
             event: 'cta_clicked',
             properties: {
-                location: 'bottom_cta',
+                location: 'exit_intent',
                 cta_type: 'start_trial',
                 cta_text: 'Get Free Pilot Access',
                 destination_url: '/request-demo',
@@ -81,7 +99,7 @@ export function ExitIntentPopup() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        onClick={handleClose}
+                        onClick={() => handleClose('backdrop_click')}
                         className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50"
                     />
 
@@ -95,7 +113,7 @@ export function ExitIntentPopup() {
                         <div className="bg-card border border-white/10 rounded-3xl p-8 shadow-2xl relative">
                             {/* Close button */}
                             <button
-                                onClick={handleClose}
+                                onClick={() => handleClose('close_button')}
                                 className="absolute top-4 right-4 p-2 rounded-full hover:bg-white/10 transition-colors"
                                 aria-label="Close popup"
                             >
@@ -141,7 +159,7 @@ export function ExitIntentPopup() {
                                 </Link>
 
                                 <button
-                                    onClick={handleClose}
+                                    onClick={() => handleClose('no_thanks')}
                                     className="mt-4 text-sm text-text-muted hover:text-white transition-colors"
                                 >
                                     No thanks, I'll figure it out myself

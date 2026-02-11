@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Mail, ArrowRight, CheckCircle2, Loader2 } from 'lucide-react';
 import { analytics } from '@/lib/analytics';
 
@@ -18,6 +18,20 @@ export function NewsletterSignup({
     const [email, setEmail] = useState('');
     const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
     const [errorMessage, setErrorMessage] = useState('');
+    const hasTrackedFormStart = useRef(false);
+
+    const handleFocus = () => {
+        if (!hasTrackedFormStart.current) {
+            hasTrackedFormStart.current = true;
+            analytics.track({
+                event: 'form_started',
+                properties: {
+                    form_type: 'newsletter',
+                    location: 'newsletter',
+                },
+            });
+        }
+    };
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -25,19 +39,35 @@ export function NewsletterSignup({
         if (!email || !email.includes('@')) {
             setStatus('error');
             setErrorMessage('Please enter a valid email');
+            analytics.track({
+                event: 'form_error',
+                properties: {
+                    form_type: 'newsletter',
+                    error_type: 'validation',
+                    error_message: 'Invalid email',
+                },
+            });
             return;
         }
 
         setStatus('loading');
 
-        // Simulate API call - replace with actual newsletter signup
         try {
-            await new Promise(resolve => setTimeout(resolve, 1000));
+            const res = await fetch('/api/newsletter', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email: email.trim() }),
+            });
+
+            if (!res.ok) {
+                const data = await res.json();
+                throw new Error(data.error || 'Subscription failed');
+            }
 
             analytics.track({
                 event: 'form_submitted',
                 properties: {
-                    form_type: 'contact',
+                    form_type: 'newsletter',
                     location: 'newsletter',
                     company_domain: email.split('@')[1],
                 },
@@ -45,9 +75,18 @@ export function NewsletterSignup({
 
             setStatus('success');
             setEmail('');
-        } catch {
+        } catch (err) {
+            const msg = err instanceof Error ? err.message : 'Something went wrong. Please try again.';
             setStatus('error');
-            setErrorMessage('Something went wrong. Please try again.');
+            setErrorMessage(msg);
+            analytics.track({
+                event: 'form_error',
+                properties: {
+                    form_type: 'newsletter',
+                    error_type: 'submission',
+                    error_message: msg,
+                },
+            });
         }
     };
 
@@ -60,6 +99,7 @@ export function NewsletterSignup({
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
+                        onFocus={handleFocus}
                         placeholder="Enter your email"
                         className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder:text-text-muted focus:outline-none focus:border-brand/50 transition-colors"
                         disabled={status === 'loading' || status === 'success'}
@@ -110,6 +150,7 @@ export function NewsletterSignup({
                                 setEmail(e.target.value);
                                 setStatus('idle');
                             }}
+                            onFocus={handleFocus}
                             placeholder="you@company.com"
                             className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder:text-text-muted focus:outline-none focus:border-brand/50 transition-colors"
                             disabled={status === 'loading'}

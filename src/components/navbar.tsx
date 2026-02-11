@@ -97,6 +97,14 @@ export function Navbar() {
                                 <Link
                                     key={link.name}
                                     href={link.href}
+                                    onClick={() => analytics.track({
+                                        event: 'nav_link_clicked',
+                                        properties: {
+                                            link_name: link.name,
+                                            link_url: link.href,
+                                            location: 'navbar',
+                                        },
+                                    })}
                                     className={`px-5 py-2 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background ${pathname === link.href
                                         ? 'bg-brand/20'
                                         : 'hover:bg-white/5'
@@ -116,6 +124,13 @@ export function Navbar() {
                         <div className="flex items-center gap-4 sm:gap-8">
                             <a
                                 href="https://platform.rigovo.com"
+                                onClick={() => analytics.track({
+                                    event: 'sign_in_clicked',
+                                    properties: {
+                                        location: 'navbar',
+                                        destination_url: 'https://platform.rigovo.com',
+                                    },
+                                })}
                                 className="technical-label text-[10px] text-white/50 hover:text-white transition-colors hidden md:block focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background rounded px-2 py-1"
                                 aria-label="Sign in to platform"
                             >
@@ -166,7 +181,17 @@ export function Navbar() {
                                 <Link
                                     key={link.name}
                                     href={link.href}
-                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    onClick={() => {
+                                        analytics.track({
+                                            event: 'nav_link_clicked',
+                                            properties: {
+                                                link_name: link.name,
+                                                link_url: link.href,
+                                                location: 'mobile_menu',
+                                            },
+                                        });
+                                        setIsMobileMenuOpen(false);
+                                    }}
                                     className={`px-4 py-3 rounded-xl transition-all focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background ${pathname === link.href
                                         ? 'bg-brand/10 text-brand'
                                         : 'text-white/70 hover:bg-white/5'
@@ -179,6 +204,13 @@ export function Navbar() {
                             <div className="h-px bg-white/10 my-2" role="separator" />
                             <a
                                 href="https://platform.rigovo.com"
+                                onClick={() => analytics.track({
+                                    event: 'sign_in_clicked',
+                                    properties: {
+                                        location: 'mobile_menu',
+                                        destination_url: 'https://platform.rigovo.com',
+                                    },
+                                })}
                                 className="px-4 py-3 text-white/70 technical-label hover:bg-white/5 rounded-xl transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
                                 aria-label="Sign in to platform"
                             >
@@ -188,7 +220,18 @@ export function Navbar() {
                                 href="https://calendly.com/rigovo"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                onClick={() => setIsMobileMenuOpen(false)}
+                                onClick={() => {
+                                    analytics.track({
+                                        event: 'cta_clicked',
+                                        properties: {
+                                            location: 'mobile_menu',
+                                            cta_type: 'book_pilot_call',
+                                            cta_text: 'Book Pilot Call',
+                                            destination_url: 'https://calendly.com/rigovo',
+                                        },
+                                    });
+                                    setIsMobileMenuOpen(false);
+                                }}
                                 className="px-4 py-4 bg-brand text-white rounded-xl text-center technical-label hover:bg-brand-hover transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
                                 aria-label="Book a 15-minute pilot setup call"
                             >

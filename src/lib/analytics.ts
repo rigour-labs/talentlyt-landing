@@ -20,6 +20,7 @@ import mixpanel from 'mixpanel-browser';
 declare global {
   interface Window {
     dataLayer: any[];
+    gtag: (...args: any[]) => void;
   }
 }
 
@@ -34,7 +35,7 @@ declare global {
 interface CTAClickedEvent {
   event: 'cta_clicked';
   properties: {
-    location: 'hero' | 'navbar' | 'footer' | 'pricing' | 'bottom_cta' | 'blog' | 'comparison' | 'announcement_bar';
+    location: 'hero' | 'navbar' | 'footer' | 'pricing' | 'bottom_cta' | 'blog' | 'comparison' | 'announcement_bar' | 'mobile_menu' | 'floating_cta' | 'exit_intent' | 'product';
     cta_type: 'start_trial' | 'watch_demo' | 'contact_sales' | 'book_demo' | 'get_started' | 'scale_pipeline' | 'start_pilot' | 'request_coupon' | 'book_pilot_call';
     cta_text: string;
     destination_url?: string;
@@ -48,7 +49,7 @@ interface CTAClickedEvent {
 interface FormStartedEvent {
   event: 'form_started';
   properties: {
-    form_type: 'demo_request' | 'interactive_demo' | 'contact';
+    form_type: 'demo_request' | 'interactive_demo' | 'contact' | 'newsletter';
     location: string;
   };
 }
@@ -56,7 +57,7 @@ interface FormStartedEvent {
 interface FormSubmittedEvent {
   event: 'form_submitted';
   properties: {
-    form_type: 'demo_request' | 'interactive_demo' | 'contact';
+    form_type: 'demo_request' | 'interactive_demo' | 'contact' | 'newsletter';
     location: string;
     /** Role selected (for interactive demo) */
     role?: 'ENGINEER' | 'PRODUCT_MANAGER' | 'DESIGNER' | 'DATA_SCIENTIST';
@@ -68,7 +69,7 @@ interface FormSubmittedEvent {
 interface FormErrorEvent {
   event: 'form_error';
   properties: {
-    form_type: 'demo_request' | 'interactive_demo' | 'contact';
+    form_type: 'demo_request' | 'interactive_demo' | 'contact' | 'newsletter';
     error_type: 'validation' | 'submission' | 'rate_limit' | 'network';
     error_message?: string;
   };
@@ -230,6 +231,67 @@ interface EngagementMilestoneEvent {
   };
 }
 
+/**
+ * Popup Events
+ * Fired when exit-intent or floating CTAs appear/dismiss
+ */
+interface PopupShownEvent {
+  event: 'popup_shown';
+  properties: {
+    popup_type: 'exit_intent' | 'floating_cta';
+    trigger: 'mouse_leave' | 'inactivity' | 'scroll_depth';
+    page_path: string;
+  };
+}
+
+interface PopupDismissedEvent {
+  event: 'popup_dismissed';
+  properties: {
+    popup_type: 'exit_intent' | 'floating_cta';
+    dismiss_method: 'close_button' | 'backdrop_click' | 'no_thanks';
+    page_path: string;
+  };
+}
+
+/**
+ * Outbound Link Event
+ * Fired when user clicks a link that leaves the site
+ */
+interface OutboundLinkClickedEvent {
+  event: 'outbound_link_clicked';
+  properties: {
+    destination_url: string;
+    link_text: string;
+    location: string;
+    outbound_domain: string;
+  };
+}
+
+/**
+ * Sign In Click Event
+ * Fired when user clicks Sign In to go to platform
+ */
+interface SignInClickedEvent {
+  event: 'sign_in_clicked';
+  properties: {
+    location: 'navbar' | 'mobile_menu';
+    destination_url: string;
+  };
+}
+
+/**
+ * Navigation Link Click Event
+ * Fired when user clicks a navbar link
+ */
+interface NavLinkClickedEvent {
+  event: 'nav_link_clicked';
+  properties: {
+    link_name: string;
+    link_url: string;
+    location: 'navbar' | 'mobile_menu';
+  };
+}
+
 // ============================================================================
 // UNION TYPE
 // ============================================================================
@@ -252,7 +314,12 @@ type AnalyticsEvent =
   | ScrollIndicatorClickedEvent
   | ScrollDepthEvent
   | SectionImpressionEvent
-  | EngagementMilestoneEvent;
+  | EngagementMilestoneEvent
+  | PopupShownEvent
+  | PopupDismissedEvent
+  | OutboundLinkClickedEvent
+  | SignInClickedEvent
+  | NavLinkClickedEvent;
 
 // ============================================================================
 // ANALYTICS CLASS
@@ -305,7 +372,7 @@ class Analytics {
     }
 
     try {
-      // 1. Existing Mixpanel Tracking
+      // 1. Mixpanel Tracking
       mixpanel.track(payload.event, payload.properties);
 
       // 2. Google Tag Manager / DataLayer Sync
@@ -314,6 +381,15 @@ class Analytics {
         window.dataLayer.push({
           event: payload.event,
           ...payload.properties,
+        });
+      }
+
+      // 3. GA4 Direct Event Sending via gtag()
+      // This ensures custom events reach GA4 even if GTM tags aren't configured
+      if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+        window.gtag('event', payload.event, {
+          ...payload.properties,
+          send_to: 'G-TK1KFTDDED',
         });
       }
 

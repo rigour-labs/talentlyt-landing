@@ -10,6 +10,8 @@ export function FloatingCTA() {
     const [isVisible, setIsVisible] = useState(false);
     const [isDismissed, setIsDismissed] = useState(false);
 
+    const hasTrackedShown = React.useRef(false);
+
     useEffect(() => {
         // Check if dismissed this session
         if (typeof window !== 'undefined') {
@@ -21,9 +23,23 @@ export function FloatingCTA() {
         }
 
         const handleScroll = () => {
-            // Show after scrolling 50% of the page
+            // Show after scrolling 30% of the page
             const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-            setIsVisible(scrollPercent > 30 && !isDismissed);
+            const shouldShow = scrollPercent > 30 && !isDismissed;
+            setIsVisible(shouldShow);
+
+            // Track when floating CTA first becomes visible
+            if (shouldShow && !hasTrackedShown.current) {
+                hasTrackedShown.current = true;
+                analytics.track({
+                    event: 'popup_shown',
+                    properties: {
+                        popup_type: 'floating_cta',
+                        trigger: 'scroll_depth',
+                        page_path: window.location.pathname,
+                    },
+                });
+            }
         };
 
         window.addEventListener('scroll', handleScroll, { passive: true });
@@ -34,13 +50,21 @@ export function FloatingCTA() {
         setIsDismissed(true);
         setIsVisible(false);
         sessionStorage.setItem('floatingCTADismissed', 'true');
+        analytics.track({
+            event: 'popup_dismissed',
+            properties: {
+                popup_type: 'floating_cta',
+                dismiss_method: 'close_button',
+                page_path: typeof window !== 'undefined' ? window.location.pathname : '',
+            },
+        });
     };
 
     const handleCTAClick = () => {
         analytics.track({
             event: 'cta_clicked',
             properties: {
-                location: 'bottom_cta',
+                location: 'floating_cta',
                 cta_type: 'start_trial',
                 cta_text: 'Start Free Trial',
                 destination_url: '/request-demo',

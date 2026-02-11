@@ -288,10 +288,19 @@ export function InteractiveDemoForm() {
           {rateLimitExceeded && (
             <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl p-4 text-center">
               <p className="text-amber-300 text-sm mb-3">{error}</p>
-              <a 
+              <a
                 href={bookingUrl || 'https://calendly.com/rigovo/demo'}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => analytics.track({
+                  event: 'cta_clicked',
+                  properties: {
+                    location: 'blog',
+                    cta_type: 'book_demo',
+                    cta_text: 'Book a Personalized Demo',
+                    destination_url: bookingUrl || 'https://calendly.com/rigovo/demo',
+                  },
+                })}
                 className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-brand to-emerald-500 hover:from-brand/90 hover:to-emerald-400 rounded-lg text-white font-medium text-sm transition-all"
               >
                 Book a Personalized Demo
