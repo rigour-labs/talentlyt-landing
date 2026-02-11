@@ -61,20 +61,45 @@ export function DemoRequestForm() {
 
     if (state?.success) {
         return (
-            <div className="text-center p-12 rounded-[3rem] bg-brand/5 border border-brand/20 animate-fade-in">
-                <div className="w-20 h-20 rounded-full bg-brand/10 flex items-center justify-center mx-auto mb-8 border border-brand/20">
-                    <CheckCircle2 className="w-10 h-10 text-brand" />
+            <div className="space-y-6 animate-fade-in">
+                <div className="text-center p-12 rounded-[3rem] bg-brand/5 border border-brand/20">
+                    <div className="w-20 h-20 rounded-full bg-brand/10 flex items-center justify-center mx-auto mb-8 border border-brand/20">
+                        <CheckCircle2 className="w-10 h-10 text-brand" />
+                    </div>
+                    <h2 className="text-4xl font-bold text-white mb-6 tracking-tight">Request Received</h2>
+                    <p className="text-text-secondary text-lg max-w-md mx-auto leading-relaxed">
+                        Our sales team has been notified. We&apos;ll reach out within <span className="text-white font-semibold">4 business hours</span> to schedule your personalized demo.
+                    </p>
                 </div>
-                <h2 className="text-4xl font-bold text-white mb-6 tracking-tight">Request Received</h2>
-                <p className="text-text-secondary text-lg max-w-md mx-auto leading-relaxed">
-                    Our sales team has been notified. We'll reach out within <span className="text-white font-semibold">4 business hours</span> to schedule your personalized demo.
-                </p>
-                <div className="mt-12">
+
+                {/* While you wait section */}
+                <div className="p-8 rounded-2xl bg-card border border-border/50">
+                    <h3 className="text-lg font-bold text-white mb-4">While you wait — explore Rigovo</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <Link href="/sample-report" className="p-4 rounded-xl bg-white/[0.03] border border-white/10 hover:border-brand/30 transition-colors group">
+                            <ShieldCheck className="w-5 h-5 text-brand mb-2" />
+                            <h4 className="text-sm font-bold text-white group-hover:text-brand transition-colors">Sample Report</h4>
+                            <p className="text-xs text-text-muted mt-1">See a real Interview Intelligence Report</p>
+                        </Link>
+                        <Link href="/live-demo" className="p-4 rounded-xl bg-white/[0.03] border border-white/10 hover:border-brand/30 transition-colors group">
+                            <ArrowRight className="w-5 h-5 text-brand mb-2" />
+                            <h4 className="text-sm font-bold text-white group-hover:text-brand transition-colors">Interactive Demo</h4>
+                            <p className="text-xs text-text-muted mt-1">Try the platform walkthrough</p>
+                        </Link>
+                        <Link href="/blog" className="p-4 rounded-xl bg-white/[0.03] border border-white/10 hover:border-brand/30 transition-colors group">
+                            <Mail className="w-5 h-5 text-brand mb-2" />
+                            <h4 className="text-sm font-bold text-white group-hover:text-brand transition-colors">Blog</h4>
+                            <p className="text-xs text-text-muted mt-1">AI hiring insights & case studies</p>
+                        </Link>
+                    </div>
+                </div>
+
+                <div className="text-center">
                     <Link
                         href="/"
                         className="technical-label text-brand hover:underline flex items-center justify-center gap-2"
                     >
-                        Return to Dashboard <ArrowRight className="w-4 h-4" />
+                        Return to Home <ArrowRight className="w-4 h-4" />
                     </Link>
                 </div>
             </div>

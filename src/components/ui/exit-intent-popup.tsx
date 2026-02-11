@@ -1,12 +1,63 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Gift, ArrowRight, ShieldCheck } from 'lucide-react';
+import { X, Gift, ArrowRight, ShieldCheck, FileText, MessageSquare } from 'lucide-react';
 import Link from 'next/link';
 import { analytics } from '@/lib/analytics';
+import { CTA_CONFIG } from '@/components/ui/cta-button';
+
+type PopupVariant = 'default' | 'report' | 'pricing';
+
+function getVariant(pathname: string): PopupVariant {
+    if (pathname.startsWith('/blog') || pathname.startsWith('/compare')) return 'report';
+    if (pathname.startsWith('/pricing')) return 'pricing';
+    return 'default';
+}
+
+const variants: Record<PopupVariant, {
+    icon: React.ElementType;
+    title: string;
+    description: React.ReactNode;
+    benefits: string[];
+    ctaText: string;
+    ctaHref: string;
+    dismissText: string;
+}> = {
+    default: {
+        icon: Gift,
+        title: 'Wait! Get Your Free Pilot',
+        description: <>Try Rigovo free — see why teams catch more issues with our 15-signal verification.</>,
+        benefits: ['Free AI-powered pilot session', 'Full integrity verification enabled', 'No credit card required'],
+        ctaText: CTA_CONFIG.primaryText,
+        ctaHref: CTA_CONFIG.primaryLink,
+        dismissText: "No thanks, I'll figure it out myself",
+    },
+    report: {
+        icon: FileText,
+        title: 'See a Real Interview Report',
+        description: <>Integrity Score, AI Proficiency classification, and 15-signal forensic breakdown — see exactly what hiring managers receive.</>,
+        benefits: ['5-page detailed analysis', 'AI Architect vs Passenger classification', 'Forensic verification breakdown'],
+        ctaText: CTA_CONFIG.secondaryText,
+        ctaHref: CTA_CONFIG.secondaryLink,
+        dismissText: 'Maybe later',
+    },
+    pricing: {
+        icon: MessageSquare,
+        title: 'Need Help Choosing a Plan?',
+        description: <>Book a quick 15-minute call and we&apos;ll help you pick the right plan for your team size and hiring volume.</>,
+        benefits: ['Personalized plan recommendation', 'Volume discount for 10+ interviews/month', 'Free pilot to test first'],
+        ctaText: CTA_CONFIG.primaryText,
+        ctaHref: CTA_CONFIG.primaryLink,
+        dismissText: "I'll decide on my own",
+    },
+};
 
 export function ExitIntentPopup() {
+    const pathname = usePathname();
+    const variant = getVariant(pathname);
+    const config = variants[variant];
     const [isVisible, setIsVisible] = useState(false);
     const [hasShown, setHasShown] = useState(false);
 
@@ -83,8 +134,8 @@ export function ExitIntentPopup() {
             properties: {
                 location: 'exit_intent',
                 cta_type: 'start_trial',
-                cta_text: 'Get Free Pilot Access',
-                destination_url: '/request-demo',
+                cta_text: config.ctaText,
+                destination_url: config.ctaHref,
             },
         });
         setIsVisible(false);
@@ -123,25 +174,20 @@ export function ExitIntentPopup() {
                             {/* Content */}
                             <div className="text-center">
                                 <div className="w-16 h-16 rounded-2xl bg-brand/10 border border-brand/20 flex items-center justify-center mx-auto mb-6">
-                                    <Gift className="w-8 h-8 text-brand" />
+                                    <config.icon className="w-8 h-8 text-brand" />
                                 </div>
 
                                 <h3 className="text-2xl font-bold text-white mb-3">
-                                    Wait! Get Your Free Pilot
+                                    {config.title}
                                 </h3>
 
                                 <p className="text-text-secondary mb-6">
-                                    Try Rigovo free for your first <span className="text-white font-semibold">5 interviews</span>.
-                                    See why teams catch 41% more issues with our 15-signal verification.
+                                    {config.description}
                                 </p>
 
                                 {/* Benefits */}
                                 <div className="flex flex-col gap-2 mb-6 text-left">
-                                    {[
-                                        '5 free AI-powered interviews',
-                                        'Full integrity verification enabled',
-                                        'No credit card required',
-                                    ].map((benefit, i) => (
+                                    {config.benefits.map((benefit, i) => (
                                         <div key={i} className="flex items-center gap-2 text-sm text-text-secondary">
                                             <ShieldCheck className="w-4 h-4 text-brand shrink-0" />
                                             <span>{benefit}</span>
@@ -150,11 +196,12 @@ export function ExitIntentPopup() {
                                 </div>
 
                                 <Link
-                                    href="/request-demo"
+                                    href={config.ctaHref}
+                                    {...(config.ctaHref.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                                     onClick={handleCTAClick}
                                     className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-brand text-white font-bold rounded-2xl hover:shadow-[0_0_30px_rgba(0,102,255,0.4)] transition-all"
                                 >
-                                    Get Free Pilot Access
+                                    {config.ctaText}
                                     <ArrowRight className="w-5 h-5" />
                                 </Link>
 
@@ -162,7 +209,7 @@ export function ExitIntentPopup() {
                                     onClick={() => handleClose('no_thanks')}
                                     className="mt-4 text-sm text-text-muted hover:text-white transition-colors"
                                 >
-                                    No thanks, I'll figure it out myself
+                                    {config.dismissText}
                                 </button>
                             </div>
                         </div>

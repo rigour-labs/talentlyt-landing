@@ -101,23 +101,23 @@ export default function IdentityVerificationRemoteHiringPage() {
 
                                 <div className="space-y-8 mb-12">
                                     <div className="group p-8 rounded-[2rem] bg-card/50 border border-white/5 hover:border-brand/30 transition-all duration-500">
-                                        <h4 className="text-xl font-bold text-white mb-3 tracking-tight">1. Phonetic-to-Visual Latency (The &quot;Drip&quot;)</h4>
+                                        <h4 className="text-xl font-bold text-white mb-3 tracking-tight">1. Audio-Visual Synchronization</h4>
                                         <p className="text-base text-text-secondary leading-relaxed">
-                                            The brain processes sound and light at different speeds, but our speech muscles are biological clocks. Real-time neural re-rendering usually introduces a 150ms to 300ms lag. In a technical interview where speed of thought is key, this drift becomes a mathematical certainty for detection.
+                                            Real-time deepfake rendering introduces subtle timing mismatches between speech audio and facial movement. During a technical interview where rapid, natural responses are expected, these timing inconsistencies become detectable patterns that distinguish real candidates from digital proxies.
                                         </p>
                                     </div>
 
                                     <div className="group p-8 rounded-[2rem] bg-card/50 border border-white/5 hover:border-brand/30 transition-all duration-500">
-                                        <h4 className="text-xl font-bold text-white mb-3 tracking-tight">2. Neural Boundary Tearing</h4>
+                                        <h4 className="text-xl font-bold text-white mb-3 tracking-tight">2. Visual Consistency Analysis</h4>
                                         <p className="text-base text-text-secondary leading-relaxed">
-                                            Watch the edges. When a proxy candidate moves their head suddenly or raises a hand near their face, the neural mask &quot;tears.&quot; These are sub-pixel micro-glitches where the AI fails to map the depth of the occlusion. It looks like a shimmer to some; to us, it&apos;s a fraud alert.
+                                            Even the best consumer-grade deepfakes leave telltale signs during rapid movement, occlusion events, and edge cases. Advanced analysis detects these visual inconsistencies that are invisible to human reviewers but mathematically certain to our detection models.
                                         </p>
                                     </div>
 
                                     <div className="group p-8 rounded-[2rem] bg-card/50 border border-white/5 hover:border-brand/30 transition-all duration-500">
-                                        <h4 className="text-xl font-bold text-white mb-3 tracking-tight">3. Illumination Spectrum Mismatch</h4>
+                                        <h4 className="text-xl font-bold text-white mb-3 tracking-tight">3. Environmental Authenticity</h4>
                                         <p className="text-base text-text-secondary leading-relaxed">
-                                            A deepfake might match the color of the room, but it often fails to match the <span className="text-white">specular highlights</span> on the pupils. Real light bounces off an eye in a specific way; AI-generated light lacks the environmental consistency of the proxy&apos;s actual room.
+                                            A deepfake might look convincing at first glance, but it struggles to accurately reproduce the subtle physics of light, reflection, and shadow that occur naturally. Our models detect these environmental inconsistencies that AI-generated faces consistently fail to replicate.
                                         </p>
                                     </div>
                                 </div>
@@ -142,7 +142,7 @@ export default function IdentityVerificationRemoteHiringPage() {
                             <section className="mb-16">
                                 <h2 className="text-3xl font-black text-white mb-8 tracking-tight">Why We Built Sentinel</h2>
                                 <p className="text-text-secondary mb-8">
-                                    We didn&apos;t build the Sentinel Engine because we wanted to be &quot;Big Brother.&quot; We built it because we saw honest companies losing millions and honest engineers losing jobs to proxy actors. Our approach uses <span className="text-white">SyncNet</span> and adversarial modeling to create a &quot;Zero-Trust&quot; environment for every interview.
+                                    We didn&apos;t build the Sentinel Engine because we wanted to be &quot;Big Brother.&quot; We built it because we saw honest companies losing millions and honest engineers losing jobs to proxy actors. Our approach uses proprietary multi-signal analysis and adversarial modeling to create a &quot;Zero-Trust&quot; environment for every interview.
                                 </p>
                                 <p className="text-text-secondary mb-12">
                                     The &quot;resume check&quot; is dead. The &quot;video check&quot; is dying. The only thing left that you can actually trust is verified, real-time behavioral telemetry.

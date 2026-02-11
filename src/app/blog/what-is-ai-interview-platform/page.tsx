@@ -172,7 +172,7 @@ export default function WhatIsAIInterviewPlatformPage() {
                             <section className="mb-16">
                                 <h2 className="text-3xl font-black text-white mb-8 tracking-tight">The Verification Lifecycle</h2>
                                 <p className="text-text-secondary mb-8 leading-relaxed">
-                                    An AI interview platform provides a comprehensive intelligence layer for technical hiring. Every session results in high-reliability competency mapping and the generation of a portable Interview Genome.
+                                    An AI interview platform provides a comprehensive intelligence layer for technical hiring. Every session results in high-reliability competency mapping and the generation of a portable, verified candidate profile.
                                 </p>
                                 <p className="text-text-secondary leading-relaxed">
                                     The future of hiring is centered on efficiency, verified individual capability, and portable intelligence for the AI-accelerated era.

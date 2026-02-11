@@ -99,6 +99,42 @@ export function AnalyticsProvider({ children }: { children: React.ReactNode }) {
             }
         }
 
+        // Enrich anonymous visitor profile (Mixpanel People)
+        // This powers cohort analysis, user segmentation, and retention reports
+        try {
+            const now = new Date().toISOString();
+
+            // Set properties that update on every visit
+            mixpanel.people.set({
+                '$browser': navigator.userAgent.includes('Chrome') ? 'Chrome' :
+                    navigator.userAgent.includes('Firefox') ? 'Firefox' :
+                    navigator.userAgent.includes('Safari') ? 'Safari' : 'Other',
+                '$os': navigator.platform,
+                'last_seen_page': window.location.pathname,
+                'last_visit_date': now,
+                'screen_width': window.screen.width,
+                'screen_height': window.screen.height,
+                'device_type': window.innerWidth < 768 ? 'mobile' : window.innerWidth < 1024 ? 'tablet' : 'desktop',
+                'timezone': Intl.DateTimeFormat().resolvedOptions().timeZone,
+                'language': navigator.language,
+            });
+
+            // Set properties only on first visit (never overwritten)
+            mixpanel.people.set_once({
+                'first_visit_date': now,
+                'first_landing_page': window.location.pathname,
+                'first_referrer': document.referrer || 'direct',
+                'acquisition_source': attributionProps.utm_source || 'direct',
+                'acquisition_medium': attributionProps.utm_medium || 'none',
+                'acquisition_campaign': attributionProps.utm_campaign || 'none',
+            });
+
+            // Increment visit counter for frequency analysis
+            mixpanel.people.increment('total_visits', 1);
+        } catch (e) {
+            // People enrichment is non-critical
+        }
+
         // Clean tracking parameters from URL bar (keeps URL clean, data already captured)
         cleanTrackingParams();
 

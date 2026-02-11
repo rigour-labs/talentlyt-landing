@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, X } from 'lucide-react';
 import Link from 'next/link';
 import { analytics } from '@/lib/analytics';
+import { CTA_CONFIG } from '@/components/ui/cta-button';
 
 export function FloatingCTA() {
     const [isVisible, setIsVisible] = useState(false);
@@ -65,9 +66,9 @@ export function FloatingCTA() {
             event: 'cta_clicked',
             properties: {
                 location: 'floating_cta',
-                cta_type: 'start_trial',
-                cta_text: 'Start Free Trial',
-                destination_url: '/request-demo',
+                cta_type: 'book_demo',
+                cta_text: CTA_CONFIG.compactText,
+                destination_url: CTA_CONFIG.primaryLink,
             },
         });
     };
@@ -84,15 +85,17 @@ export function FloatingCTA() {
                     <div className="flex items-center gap-3 px-4 py-3 bg-card/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl">
                         <div className="text-sm">
                             <span className="text-text-secondary">Ready to hire smarter?</span>
-                            <span className="text-white font-semibold ml-1">Try 5 interviews free</span>
+                            <span className="text-white font-semibold ml-1">Book a free pilot</span>
                         </div>
 
                         <Link
-                            href="/request-demo"
+                            href={CTA_CONFIG.primaryLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             onClick={handleCTAClick}
                             className="flex items-center gap-2 px-4 py-2 bg-brand text-white text-sm font-bold rounded-xl hover:shadow-[0_0_20px_rgba(0,102,255,0.4)] transition-all whitespace-nowrap"
                         >
-                            Start Free
+                            {CTA_CONFIG.compactText}
                             <ArrowRight className="w-4 h-4" />
                         </Link>
 

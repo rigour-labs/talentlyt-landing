@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { ArrowRight, ShieldCheck, Activity, Globe, Zap, Database, Search } from 'lucide-react';
 import { InteractiveDemoForm } from './interactive-demo-form';
 import { analytics } from '@/lib/analytics';
+import { CTA_CONFIG } from '@/components/ui/cta-button';
 
 export function LiveDemoContent() {
     const sections = [
@@ -33,7 +34,7 @@ export function LiveDemoContent() {
             id: 'verdict',
             tag: 'Section 3: The Verification',
             title: '15-Signal Integrity Synthesis',
-            copy: 'Sessions are reviewed across 12 distinct signal types, including biometric-aware lip-sync and gaze patterns, to generate a comprehensive record of interview integrity.',
+            copy: 'Sessions are analyzed across 15 proprietary signal types — spanning identity, behavior, and technical depth — to generate a comprehensive record of interview integrity.',
             image: 'https://onbadqcmbugvszb0.public.blob.vercel-storage.com/screencapture-platform-rigovo-cloud-dashboard-audit-cmk9wgczv000001s6hl78jtgm-2026-01-11-22_26_25.png',
             icon: Search,
             highlights: ['15-Signal Verification Stack', 'Multi-Modal Signal Audit', 'Integrity Confidence Scoring', 'Transparent Audit Records']
@@ -50,11 +51,11 @@ export function LiveDemoContent() {
         {
             id: 'intelligence',
             tag: 'Section 5: Strategic Intelligence',
-            title: 'Competency Mapping & The Interview Genome',
-            copy: 'Synthesize session data into a detailed competency map and an Interview Genome—a portable, verified record of a candidate\'s technical depth and potential.',
+            title: 'Competency Mapping & Verified Profiles',
+            copy: 'Synthesize session data into a detailed competency map and a verified candidate profile—a portable, cryptographically-signed record of technical depth and potential.',
             image: 'https://onbadqcmbugvszb0.public.blob.vercel-storage.com/screencapture-localhost-3000-dashboard-audit-cmk77brjr013401s6usey0luk-2026-01-11-22_51_01.png',
             icon: Activity,
-            highlights: ['Detailed Competency Mapping', 'Verified Interview Genome', 'Behavioral Signal Analysis', 'Portable Professional Record']
+            highlights: ['Detailed Competency Mapping', 'Verified Candidate Profile', 'Behavioral Signal Analysis', 'Portable Professional Record']
         }
     ];
 
@@ -128,14 +129,16 @@ export function LiveDemoContent() {
                                     ))}
                                 </div>
                                 <Link
-                                    href="/request-demo"
+                                    href={CTA_CONFIG.primaryLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     onClick={() => analytics.track({
                                         event: 'cta_clicked',
                                         properties: {
                                             location: 'blog',
                                             cta_type: 'book_demo',
                                             cta_text: `Experience This Stage - ${section.title}`,
-                                            destination_url: '/request-demo',
+                                            destination_url: CTA_CONFIG.primaryLink,
                                         },
                                     })}
                                     className="inline-flex items-center gap-2 px-8 py-4 bg-white/[0.03] border border-white/10 text-white rounded-2xl hover:bg-brand hover:border-brand transition-all font-bold group"
@@ -181,14 +184,16 @@ export function LiveDemoContent() {
                             Join the ranks of high-security teams who never settle for "Good Enough" integrity.
                         </p>
                         <Link
-                            href="/request-demo"
+                            href={CTA_CONFIG.primaryLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                             onClick={() => analytics.track({
                                 event: 'cta_clicked',
                                 properties: {
                                     location: 'bottom_cta',
                                     cta_type: 'book_demo',
                                     cta_text: 'Request System Access',
-                                    destination_url: '/request-demo',
+                                    destination_url: CTA_CONFIG.primaryLink,
                                 },
                             })}
                             className="inline-flex items-center gap-3 px-10 py-5 bg-white text-brand rounded-2xl hover:scale-105 transition-all font-bold shadow-2xl"

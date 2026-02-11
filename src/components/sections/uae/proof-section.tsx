@@ -44,7 +44,7 @@ export function UAEProofSection() {
                             icon: ShieldCheck,
                             value: '15',
                             label: 'Verification Signals',
-                            description: 'Simultaneous checks including voice biometrics, face liveness, and gaze tracking',
+                            description: 'Simultaneous checks across identity, behavior, and technical integrity signals',
                         },
                     ].map((stat, i) => (
                         <div key={i} className="p-8 rounded-[2rem] bg-white/[0.02] border border-white/5 text-center group hover:border-brand/30 transition-all">

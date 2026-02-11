@@ -37,7 +37,7 @@ export function ProblemSolutionSection() {
     const solutions = [
         {
             title: 'Always-On Monitoring',
-            description: 'Maya watches for red flags the entire session — tab switches, unusual pauses, copy-paste patterns. Things a human reviewer would need hours to spot.',
+            description: 'Maya watches for red flags the entire session — behavioral anomalies, suspicious patterns, integrity signals. Things a human reviewer would need hours to spot.',
             benefit: '95% detection accuracy',
             icon: CheckCircle2
         },

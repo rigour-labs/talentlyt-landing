@@ -4,6 +4,7 @@ import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { ArrowLeft, Clock, AlertTriangle, Shield, Eye, Mic, Monitor, CheckCircle2 } from 'lucide-react';
 import { RelatedArticles } from '@/components/blog/related-articles';
+import { CTA_CONFIG } from '@/components/ui/cta-button';
 
 export const metadata: Metadata = {
     title: 'How to Prevent Interview Fraud: Complete Guide for 2026',
@@ -166,9 +167,9 @@ export default function PreventInterviewFraudPage() {
                                         </p>
                                         <div className="space-y-4 mb-6">
                                             <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10">
-                                                <h4 className="text-sm font-bold text-white mb-2">Voice Biometrics</h4>
+                                                <h4 className="text-sm font-bold text-white mb-2">Continuous Speaker Verification</h4>
                                                 <p className="text-text-secondary text-sm m-0">
-                                                    Capture a voice sample at the start of the interview. Compare it continuously throughout. If the speaker changes, you&apos;ll know.
+                                                    Verify the speaker&apos;s identity at the start of the interview and continuously throughout the session. If the person changes, the system flags it immediately.
                                                 </p>
                                             </div>
                                             <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10">
@@ -209,9 +210,9 @@ export default function PreventInterviewFraudPage() {
                                                 </p>
                                             </div>
                                             <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10">
-                                                <h4 className="text-sm font-bold text-white mb-2">Gaze Tracking</h4>
+                                                <h4 className="text-sm font-bold text-white mb-2">Attention Analysis</h4>
                                                 <p className="text-text-secondary text-sm m-0">
-                                                    If a candidate is constantly looking off-screen or at another monitor, they may be reading from a second source.
+                                                    Behavioral signals can indicate when a candidate is consistently referencing off-screen sources rather than thinking through problems.
                                                 </p>
                                             </div>
                                             <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10">
@@ -234,9 +235,9 @@ export default function PreventInterviewFraudPage() {
                                         </p>
                                         <div className="space-y-4 mb-6">
                                             <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10">
-                                                <h4 className="text-sm font-bold text-white mb-2">Lip-Sync Analysis</h4>
+                                                <h4 className="text-sm font-bold text-white mb-2">Deepfake Detection</h4>
                                                 <p className="text-text-secondary text-sm m-0">
-                                                    Current deepfakes often have subtle mismatches between lip movements and audio. Analyzing this can catch many attempts.
+                                                    Current deepfakes have subtle inconsistencies that automated systems can detect. Multi-signal analysis catches attempts that humans miss.
                                                 </p>
                                             </div>
                                             <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10">
@@ -333,7 +334,7 @@ export default function PreventInterviewFraudPage() {
                                             Manual fraud detection works for low-volume hiring. But if you&apos;re screening dozens of candidates, you need automation.
                                         </p>
                                         <p className="text-text-secondary mb-6">
-                                            Rigovo monitors 15 signals simultaneously during every interview—voice biometrics, face liveness, gaze tracking, screen analysis, and more. Our beta analyzed 6,824 signal events across 82 interviews.
+                                            Rigovo monitors 15 proprietary signals simultaneously during every interview — covering identity verification, behavioral analysis, and technical integrity. Our beta analyzed 6,824 signal events across 82 interviews.
                                         </p>
                                         <ul className="space-y-3">
                                             <li className="flex items-start gap-3 text-text-secondary">
@@ -380,12 +381,12 @@ export default function PreventInterviewFraudPage() {
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                         <a
-                                            href="https://calendly.com/rigovo"
+                                            href={CTA_CONFIG.primaryLink}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand text-white font-black rounded-2xl hover:bg-brand-hover transition-all uppercase tracking-widest text-xs shadow-xl shadow-brand/20"
                                         >
-                                            Book Free Pilot Call
+                                            {CTA_CONFIG.compactText}
                                         </a>
                                         <Link
                                             href="/security"

@@ -1,18 +1,18 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
-import { Check, X, ShieldCheck, Bot, Eye, Fingerprint, ArrowRight } from 'lucide-react';
+import { Check, X, ShieldCheck, Bot, Eye, Fingerprint, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { PageAnalytics } from '@/components/page-analytics';
+import { CTAButton } from '@/components/ui/cta-button';
 
 export const metadata: Metadata = {
-    title: 'Compare Rigovo vs HireVue, Codility & More',
-    description: 'Compare Rigovo with HireVue, Codility, Talently.ai. 15-signal AI leadership verification, 6,824 signal events analyzed in beta.',
+    title: 'Compare Rigovo vs HireVue, Codility & More | AI Interview Platform',
+    description: 'Compare Rigovo with HireVue, Codility, Talently.ai. See why teams choose Rigovo for 15-signal integrity verification that other platforms don\'t offer.',
     keywords: [
         'Rigovo vs HireVue',
         'Rigovo vs Codility',
         'Rigovo vs Talently.ai',
         'Rigovo vs HackerRank',
-        'Rigovo vs TalentLyft',
         'HireVue alternative',
         'Codility alternative',
         'Talently.ai alternative',
@@ -20,7 +20,6 @@ export const metadata: Metadata = {
         'best AI interview platform 2026',
         'AI interview platform comparison',
         'interview verification comparison',
-        'deepfake detection interview platform',
         'proxy candidate detection software',
     ],
     alternates: {
@@ -28,7 +27,7 @@ export const metadata: Metadata = {
     },
     openGraph: {
         title: 'Rigovo vs HireVue vs Codility vs Talently.ai — Full Comparison 2026',
-        description: 'Rigovo offers 15-signal AI leadership verification with 6,824 signal events analyzed in beta testing. Compare all AI interview platforms.',
+        description: 'Rigovo offers 15-signal integrity verification that other AI interview platforms miss entirely. Compare features side by side.',
         type: 'website',
     },
 };
@@ -40,32 +39,33 @@ export default function ComparisonPage() {
         {
             category: 'Interview Intelligence',
             features: [
-                { name: 'Live Multi-Agent AI (Maya)', rigovo: true, traditional: true },
-                { name: 'Predictive Job Success (85%)', rigovo: true, traditional: false },
-                { name: 'Interview Genome Export', rigovo: true, traditional: false },
-                { name: 'Federated Collective Intelligence', rigovo: true, traditional: false },
-                { name: 'Adaptive Claim Probing', rigovo: true, traditional: 'partial' },
+                { name: 'Live AI Interviewer (Conversational)', rigovo: true, traditional: true },
+                { name: 'Adaptive Follow-Up Questions', rigovo: true, traditional: 'partial' },
+                { name: 'Skill-by-Skill Scoring Rubric', rigovo: true, traditional: 'partial' },
+                { name: 'Hire/No-Hire Recommendation', rigovo: true, traditional: false },
+                { name: 'Full Interview Transcript', rigovo: true, traditional: true },
             ],
         },
         {
-            category: 'Forensic Integrity & Trust',
+            category: 'Integrity & Verification',
             features: [
-                { name: '15-Signal Verification', rigovo: true, traditional: false },
-                { name: 'Nova-grade Voice Auth', rigovo: true, traditional: false },
-                { name: 'Lip-Sync & Gaze Sync', rigovo: true, traditional: false },
-                { name: 'Micro-expression Analysis', rigovo: true, traditional: false },
-                { name: 'Jailbreak & Prompt Defense', rigovo: true, traditional: false },
-                { name: 'Cognitive Load Analysis', rigovo: true, traditional: false },
+                { name: '15-Signal Forensic Verification', rigovo: true, traditional: false },
+                { name: 'Continuous Identity Verification', rigovo: true, traditional: false },
+                { name: 'Real-Time Anomaly Detection', rigovo: true, traditional: false },
+                { name: 'Proxy & Impersonation Detection', rigovo: true, traditional: false },
+                { name: 'AI-Assisted Cheating Detection', rigovo: true, traditional: false },
+                { name: 'Session Integrity Scoring', rigovo: true, traditional: false },
             ],
         },
         {
-            category: 'Enterprise Governance',
+            category: 'Enterprise & Compliance',
             features: [
-                { name: 'Bias Auditor (EEOC)', rigovo: true, traditional: 'partial' },
-                { name: 'Self-Learning RL Weights', rigovo: true, traditional: false },
+                { name: 'Bias-Reduced Assessments', rigovo: true, traditional: 'partial' },
                 { name: 'Legally-Defensible Audit Trails', rigovo: true, traditional: 'partial' },
-                { name: 'White-Label Reports', rigovo: true, traditional: 'partial' },
-                { name: 'SAML / SSO (WorkOS)', rigovo: true, traditional: true },
+                { name: 'GDPR & CCPA Compliant', rigovo: true, traditional: true },
+                { name: 'SSO Integration', rigovo: true, traditional: true },
+                { name: 'AES-256 Encryption', rigovo: true, traditional: 'partial' },
+                { name: 'Role-Based Access Control', rigovo: true, traditional: true },
             ],
         },
     ];
@@ -73,29 +73,30 @@ export default function ComparisonPage() {
     const uniqueAdvantages = [
         {
             icon: Bot,
-            title: 'Portable Interview Genome',
-            description: 'Rigovo creates portable, cryptographically-signed candidate profiles. Verified skills that travel with the candidate, eliminating repetitive evaluation and securing hiring intent.',
+            title: 'AI That Interviews, Not Just Tests',
+            description: 'Maya conducts a real conversation — adaptive, technical, and indistinguishable from talking to a senior engineer. Not a quiz. Not a chatbot. A live interview.',
         },
         {
             icon: ShieldCheck,
-            title: '15-Signal Forensic Audit',
-            description: 'We analyze 13 distinct biometric and behavioral signals (lip-sync, gaze, voice biometrics) in real-time to ensure absolute session integrity and authentic candidate verification.',
+            title: '15-Signal Forensic Verification',
+            description: 'Every interview is analyzed across 15 proprietary signals covering identity, behavior, and technical depth. Know exactly who you\'re hiring — not just what they say they know.',
         },
         {
             icon: Eye,
-            title: 'Predictive Job Success',
-            description: 'Our proprietary ML models predict actual on-the-job performance probability with 85% accuracy, synthesized from million-point interview signals.',
+            title: 'Catches What Others Miss',
+            description: 'Proxy candidates, AI-assisted cheating, identity fraud — 41% of beta candidates were flagged for issues that would have slipped through traditional platforms.',
         },
         {
             icon: Fingerprint,
-            title: 'Self-Learning Neural Weights',
-            description: 'Our system uses reinforcement learning (RL) to continuously calibrate integrity scores against global patterns, ensuring the most accurate audit in the world.',
+            title: 'Verification Built In, Not Bolted On',
+            description: 'Other platforms assess skills. We verify the human behind the screen. Identity, authenticity, and technical integrity — checked simultaneously during every session.',
         },
     ];
 
     return (
         <div className="min-h-screen bg-background text-foreground">
             <Navbar />
+            <PageAnalytics pagePath="/compare" />
             <main id="main-content" role="main" className="pt-36 pb-16">
                 {/* Hero */}
                 <section className="px-4 sm:px-6 py-16 sm:py-24">
@@ -105,10 +106,10 @@ export default function ComparisonPage() {
                             Platform Comparison
                         </div>
                         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">
-                            Rigovo vs HireVue, Codility, <span className="text-brand">Talently.ai</span> & Others
+                            Rigovo vs HireVue, Codility, <span className="text-brand">Talently.ai</span> &amp; Others
                         </h1>
                         <p className="text-lg sm:text-xl text-text-secondary leading-relaxed max-w-3xl mx-auto">
-                            Looking for a HireVue alternative? Comparing Codility vs Rigovo? <strong className="text-white">Rigovo features real-time 15-signal AI leadership verification</strong>—ensuring candidates architect solutions, not just prompt AI, with identity verification that other platforms miss entirely.
+                            Most AI interview platforms assess skills. <strong className="text-white">Rigovo verifies the human behind the screen.</strong> 15-signal forensic verification that catches proxy candidates, AI-assisted cheating, and identity fraud — things other platforms miss entirely.
                         </p>
                     </div>
                 </section>
@@ -210,8 +211,8 @@ export default function ComparisonPage() {
                             </h2>
                             <div className="space-y-4 text-text-secondary leading-relaxed">
                                 <p>
-                                    Here&apos;s what nobody talks about: <strong className="text-white">30-40% of remote interviews involve candidates who struggle to demonstrate authentic problem-solving</strong>.
-                                    Proxy candidates. Deepfakes. ChatGPT running in another tab. The person you interviewed might not be the person who shows up on day one.
+                                    Here&apos;s what nobody talks about: <strong className="text-white">proxy interviews and AI-assisted cheating are surging</strong>.
+                                    The person you interviewed might not be the person who shows up on day one.
                                 </p>
                                 <p>
                                     Most AI interview tools? They&apos;re built to ask questions faster. Great.
@@ -265,18 +266,23 @@ export default function ComparisonPage() {
                         <div className="p-12 rounded-[2.5rem] bg-gradient-to-b from-brand/10 to-transparent border border-brand/20">
                             <ShieldCheck className="w-16 h-16 text-brand mx-auto mb-6" />
                             <h2 className="text-3xl font-bold text-white mb-4">
-                                Ready for Integrity-First Hiring?
+                                Ready to See the Difference?
                             </h2>
                             <p className="text-text-secondary mb-8 max-w-xl mx-auto">
-                                See how Rigovo&apos;s Multi-Agent AI and forensic verification can transform your technical hiring process.
+                                Free pilot — 5 interviews, full forensic reports. See what other platforms miss.
                             </p>
-                            <Link
-                                href="/request-demo"
-                                className="inline-flex items-center gap-2 px-8 py-4 bg-brand text-white font-bold rounded-2xl hover:shadow-[0_0_30px_rgba(0,102,255,0.4)] transition-all"
-                            >
-                                Start Free Trial
-                                <ArrowRight className="w-5 h-5" />
-                            </Link>
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+                                <CTAButton location="compare" className="px-10 py-4 text-base" />
+                                <CTAButton variant="secondary" location="compare" className="px-10 py-4 text-base" />
+                            </div>
+                            <div className="flex flex-wrap justify-center gap-4 text-xs text-text-muted">
+                                {['No credit card required', 'Setup in 5 minutes', 'Full forensic reports'].map((badge) => (
+                                    <span key={badge} className="flex items-center gap-1.5">
+                                        <CheckCircle2 className="w-3.5 h-3.5 text-green-400" />
+                                        {badge}
+                                    </span>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </section>

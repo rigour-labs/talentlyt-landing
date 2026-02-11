@@ -11,21 +11,21 @@ import {
     FileCheck,
     Server,
     Key,
-    Users,
     Clock,
     Globe,
     CheckCircle2,
-    AlertTriangle,
     Layers,
     FileText,
     Trash2,
     Download,
     Activity,
+    ArrowRight,
 } from 'lucide-react';
+import { PageAnalytics } from '@/components/page-analytics';
 
 export const metadata: Metadata = {
     title: 'Security & Compliance | Rigovo - Enterprise-Grade Data Protection',
-    description: 'Learn how Rigovo protects your data with defense-in-depth security: encryption at rest & transit, row-level isolation, GDPR compliance, SOC2 audit logging, and more.',
+    description: 'Rigovo protects your hiring data with defense-in-depth security: end-to-end encryption, multi-tenant isolation, GDPR compliance, SOC2-aligned audit logging, and tamper-proof forensic trails.',
     keywords: ['security', 'compliance', 'GDPR', 'SOC2', 'data protection', 'encryption', 'enterprise security', 'AI interview security'],
     openGraph: {
         title: 'Security & Compliance | Rigovo',
@@ -35,49 +35,92 @@ export const metadata: Metadata = {
     },
 };
 
-const securityFeatures = [
+const securityPillars = [
     {
         icon: Lock,
         title: 'End-to-End Encryption',
-        description: 'TLS 1.2+ in transit, AES-256-GCM at rest. PII fields encrypted at application layer before database write.',
+        description: 'All data encrypted in transit (TLS 1.2+) and at rest (AES-256-GCM). Sensitive PII fields receive an additional layer of application-level encryption before storage.',
         color: 'text-brand',
         bgColor: 'bg-brand/10',
+        borderColor: 'border-brand/20',
     },
     {
         icon: Database,
-        title: 'Row-Level Isolation',
-        description: 'PostgreSQL RLS policies enforce organization-level data isolation at the database layer. Even application bugs cannot leak cross-tenant data.',
+        title: 'Multi-Tenant Isolation',
+        description: 'Database-level row isolation ensures each organization\'s data is completely separated. Even application-layer bugs cannot leak cross-tenant data.',
         color: 'text-emerald-400',
         bgColor: 'bg-emerald-500/10',
+        borderColor: 'border-emerald-500/20',
     },
     {
-        icon: Eye,
-        title: 'Zero Unauthenticated Endpoints',
-        description: 'Every data-accepting API requires authentication: SSO tokens, HMAC-signed keys, or time-limited candidate tokens.',
+        icon: Key,
+        title: 'Zero-Trust Authentication',
+        description: 'Every endpoint requires authentication — SSO for dashboard users, time-limited tokens for candidates, and cryptographically signed keys for all internal services.',
         color: 'text-amber-400',
         bgColor: 'bg-amber-500/10',
+        borderColor: 'border-amber-500/20',
     },
     {
         icon: FileCheck,
         title: 'SOC2-Aligned Audit Logging',
-        description: 'Every sensitive action logged with actor, resource, timestamp, and metadata. Super admin actions retained for 7 years.',
+        description: 'Every sensitive action is logged with actor, resource, timestamp, and full metadata. Audit trails are retained for up to 7 years for compliance.',
         color: 'text-purple-400',
         bgColor: 'bg-purple-500/10',
+        borderColor: 'border-purple-500/20',
+    },
+    {
+        icon: Server,
+        title: 'Network-Level Protection',
+        description: 'Enterprise WAF, DDoS protection, restrictive Content Security Policies, HSTS enforcement, and strict rate limiting across all endpoints.',
+        color: 'text-cyan-400',
+        bgColor: 'bg-cyan-500/10',
+        borderColor: 'border-cyan-500/20',
+    },
+    {
+        icon: Eye,
+        title: 'Integrity Verification',
+        description: 'Proprietary multi-signal detection engine continuously monitors interview sessions for identity fraud, AI-generated answers, and unauthorized assistance.',
+        color: 'text-rose-400',
+        bgColor: 'bg-rose-500/10',
+        borderColor: 'border-rose-500/20',
     },
 ];
 
-const authMethods = [
-    { layer: 'Dashboard Users', method: 'WorkOS SSO (SAML, Google, Microsoft)', scope: 'All dashboard routes' },
-    { layer: 'Candidate Access', method: 'Unique interview tokens (time-limited, single-use)', scope: 'Join/interview pages' },
-    { layer: 'Agent-to-API', method: 'HMAC-signed API keys', scope: 'Governor, Maya, all services' },
-    { layer: 'Webhook Ingress', method: 'HMAC-SHA256 signature verification', scope: 'Stripe, LiveKit, internal' },
-    { layer: 'Inter-Service', method: 'M2M tokens with scoped permissions', scope: 'Learning Engine, Identity' },
+const dataProtectionFeatures = [
+    {
+        title: 'Encryption at Every Layer',
+        items: [
+            'TLS 1.2+ enforced on all connections with HSTS',
+            'AES-256-GCM encryption for data at rest',
+            'Application-level PII encryption before database write',
+            'Encrypted media storage for all recordings',
+        ],
+    },
+    {
+        title: 'Access Control',
+        items: [
+            'Enterprise SSO integration (SAML, Google, Microsoft)',
+            'Role-based access control with granular permissions',
+            'Time-limited, single-use tokens for candidate sessions',
+            'Cryptographically signed internal service authentication',
+        ],
+    },
+    {
+        title: 'Network Security',
+        items: [
+            'Enterprise WAF with edge-level DDoS protection',
+            'Restrictive Content Security Policy with domain allowlisting',
+            'Rate limiting across all API endpoints',
+            'Security headers (X-Frame-Options, X-Content-Type-Options, HSTS)',
+        ],
+    },
 ];
 
-const encryptedFields = [
-    { model: 'IdentityVerification', fields: 'idExtractedDOB, idExtractedName' },
-    { model: 'Candidate', fields: 'phone' },
-    { model: 'Interview', fields: 'idExtractedDOB, idExtractedName' },
+const complianceStatus = [
+    { standard: 'GDPR', status: 'Implemented', timeline: 'Live', statusColor: 'text-green-400', bgColor: 'bg-green-500/10', borderColor: 'border-green-500/20' },
+    { standard: 'SOC2 Type II', status: 'In Progress', timeline: 'Q2 2026', statusColor: 'text-amber-400', bgColor: 'bg-amber-500/10', borderColor: 'border-amber-500/20' },
+    { standard: 'ISO 27001', status: 'Roadmap', timeline: 'Q3 2026', statusColor: 'text-blue-400', bgColor: 'bg-blue-500/10', borderColor: 'border-blue-500/20' },
+    { standard: 'HIPAA', status: 'Roadmap', timeline: 'Q4 2026', statusColor: 'text-blue-400', bgColor: 'bg-blue-500/10', borderColor: 'border-blue-500/20' },
 ];
 
 const retentionPlans = [
@@ -88,73 +131,60 @@ const retentionPlans = [
     { plan: 'Fortress (Enterprise)', retention: '3 years' },
 ];
 
-const gdprActions = [
-    { type: 'Candidate PII', action: 'Anonymized with hash' },
-    { type: 'Interview recordings', action: 'Permanently deleted from Azure Blob' },
-    { type: 'Identity photos', action: 'Permanently deleted' },
-    { type: 'Transcripts & evidence', action: 'Permanently deleted' },
-    { type: 'Resume files', action: 'Permanently deleted' },
-    { type: 'Video uploads', action: 'Soft-deleted + blobs removed' },
+const gdprRights = [
+    {
+        article: 'Article 17',
+        title: 'Right to Erasure',
+        description: 'Complete data anonymization on request. All recordings, transcripts, identity materials, and PII are permanently removed with a cryptographic deletion certificate.',
+        icon: Trash2,
+        color: 'text-blue-400',
+    },
+    {
+        article: 'Article 20',
+        title: 'Data Portability',
+        description: 'Full data export in machine-readable format on request — all candidate data, assessments, and audit records.',
+        icon: Download,
+        color: 'text-emerald-400',
+    },
+    {
+        article: 'Article 22',
+        title: 'Automated Decision Transparency',
+        description: 'Every automated assessment generates structured decision summaries with outcome, confidence score, and contributing factors for human review.',
+        icon: FileText,
+        color: 'text-purple-400',
+    },
+    {
+        article: 'Article 30',
+        title: 'Records of Processing',
+        description: 'Comprehensive audit logging captures all data processing activities with retention periods of 1 to 7 years depending on category.',
+        icon: Activity,
+        color: 'text-amber-400',
+    },
 ];
 
-const auditRetention = [
-    { category: 'Authentication events', retention: '1 year' },
-    { category: 'Data changes (create, update, delete)', retention: '3 years' },
-    { category: 'Data read/view access', retention: '90 days' },
-    { category: 'Exports, imports, anonymization', retention: '7 years' },
-    { category: 'Super admin actions', retention: '7 years' },
-    { category: 'Interview lifecycle events', retention: '3 years' },
-];
-
-const complianceStatus = [
-    { standard: 'GDPR', status: 'Implemented', timeline: 'Live', statusColor: 'text-green-400' },
-    { standard: 'SOC2 Type II', status: 'In Progress', timeline: 'Q2 2026', statusColor: 'text-amber-400' },
-    { standard: 'ISO 27001', status: 'Roadmap', timeline: 'Q3 2026', statusColor: 'text-blue-400' },
-    { standard: 'HIPAA', status: 'Roadmap', timeline: 'Q4 2026', statusColor: 'text-blue-400' },
-];
-
-const securityHeaders = [
-    { header: 'Content-Security-Policy', value: 'Restrictive policy with domain allowlisting' },
-    { header: 'X-Frame-Options', value: 'DENY' },
-    { header: 'X-Content-Type-Options', value: 'nosniff' },
-    { header: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' },
-    { header: 'Permissions-Policy', value: 'Camera/mic scoped to interview domain' },
-];
-
-const biometricLayers = [
-    { layer: 'Layer 0', method: 'Anti-Spoofing Gate', threshold: 'replay_confidence > 0.7', result: 'DIFFERENT (blocks replay attacks)' },
-    { layer: 'Layer 1', method: 'Embedding Match', threshold: 'cosine distance < 0.15', result: 'MATCHED' },
-    { layer: 'Layer 2', method: 'Behavioral Confirm', threshold: 'distance 0.15-0.35, prosody >= 0.75', result: 'MATCHED_BEHAVIORAL' },
-    { layer: 'Layer 3', method: 'Uncertain Zone', threshold: 'distance 0.15-0.35, prosody < 0.75', result: 'UNCERTAIN' },
-    { layer: 'Layer 4', method: 'Behavioral Rescue', threshold: 'distance 0.35-0.40, prosody >= 0.85', result: 'UNCERTAIN' },
-    { layer: 'Layer 5', method: 'Different Speaker', threshold: 'cosine distance > 0.40', result: 'DIFFERENT' },
-];
-
-const screenAnalysis = [
-    { detection: 'AI Tool Detection', method: '10 patterns (ChatGPT, Claude, Gemini, Copilot, Cursor, etc.)', accuracy: 'OCR + pattern matching' },
-    { detection: 'Suspicious Tabs', method: '5 patterns (Stack Overflow, LeetCode, Chegg, etc.)', accuracy: 'Tab title matching' },
-    { detection: 'Overlay Tools', method: '3 patterns (Cluely, Parakeet, Interview Copilot)', accuracy: 'Edge detection + contour analysis' },
-    { detection: 'Hidden Notes', method: 'Floating window detection', accuracy: 'Canny edge analysis' },
-];
-
-const forensicEvents = [
-    'SESSION_START', 'SESSION_END', 'IDENTITY_VERIFIED', 'IDENTITY_FAILED',
-    'FACE_MATCH', 'FACE_MISMATCH', 'VOICE_MATCH', 'VOICE_MISMATCH',
-    'VOICE_SPOOFING_DETECTED', 'ANOMALY_DETECTED', 'THRESHOLD_BREACH',
-    'INTERVENTION_WARNING', 'INTERVENTION_TERMINATE', 'RECORDING_STARTED',
-    'RECORDING_STOPPED', 'AUTOMATED_DECISION', 'MANUAL_REVIEW'
-];
-
-const faceLivenessThresholds = [
-    { tier: 'PILOT', threshold: '80%', useCase: 'Try-before-buy, lower friction' },
-    { tier: 'ENGINE', threshold: '90%', useCase: 'Standard production' },
-    { tier: 'FORTRESS', threshold: '95%', useCase: 'Enterprise / high-security' },
+const integrityCapabilities = [
+    {
+        title: 'Identity Verification',
+        description: 'Multi-factor identity checks throughout the session — not just at the start. If someone swaps in, the system flags it.',
+        signals: '5 signal types',
+    },
+    {
+        title: 'Behavioral Analysis',
+        description: 'Continuous monitoring for behavioral anomalies, suspicious patterns, and indicators of unauthorized assistance during the interview.',
+        signals: '6 signal types',
+    },
+    {
+        title: 'Anti-Spoofing',
+        description: 'Detection of replay attacks, synthetic speech, and deepfake attempts. Multiple layers of liveness and authenticity verification.',
+        signals: '4 signal types',
+    },
 ];
 
 export default function SecurityPage() {
     return (
         <div className="min-h-screen bg-background">
             <Navbar />
+            <PageAnalytics pagePath="/security" />
 
             <main className="pt-56 pb-20 px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
@@ -169,85 +199,54 @@ export default function SecurityPage() {
                         </h1>
                         <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
                             Rigovo is built with a <span className="text-white font-semibold">defense-in-depth</span> security architecture.
-                            Every layer — from network edge to database field — enforces isolation, authentication, and audit.
+                            Every layer — from network edge to database field — enforces isolation, encryption, and audit.
                         </p>
                     </div>
 
-                    {/* Key Security Features Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
-                        {securityFeatures.map((feature, i) => (
+                    {/* Security Pillars Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24">
+                        {securityPillars.map((pillar, i) => (
                             <div
                                 key={i}
-                                className="p-6 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-white/20 transition-all"
+                                className={`p-6 rounded-2xl bg-white/[0.02] border ${pillar.borderColor} hover:border-white/20 transition-all`}
                             >
-                                <div className={`w-12 h-12 rounded-xl ${feature.bgColor} flex items-center justify-center mb-4`}>
-                                    <feature.icon className={`w-6 h-6 ${feature.color}`} />
+                                <div className={`w-12 h-12 rounded-xl ${pillar.bgColor} flex items-center justify-center mb-4`}>
+                                    <pillar.icon className={`w-6 h-6 ${pillar.color}`} />
                                 </div>
-                                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-                                <p className="text-text-secondary leading-relaxed">{feature.description}</p>
+                                <h3 className="text-xl font-bold text-white mb-2">{pillar.title}</h3>
+                                <p className="text-text-secondary leading-relaxed">{pillar.description}</p>
                             </div>
                         ))}
                     </div>
 
-                    {/* Authentication & Authorization */}
-                    <section className="mb-20">
-                        <div className="flex items-center gap-3 mb-8">
-                            <div className="w-10 h-10 rounded-xl bg-brand/10 flex items-center justify-center">
-                                <Key className="w-5 h-5 text-brand" />
-                            </div>
-                            <h2 className="text-2xl sm:text-3xl font-bold text-white">Authentication & Authorization</h2>
+                    {/* Data Protection Deep Dive */}
+                    <section className="mb-24">
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">How We Protect Your Data</h2>
+                            <p className="text-text-secondary max-w-2xl mx-auto">
+                                Multiple independent security layers ensure that a breach in any single layer cannot compromise your data.
+                            </p>
                         </div>
 
-                        <div className="bg-white/[0.02] border border-white/10 rounded-2xl overflow-hidden">
-                            <div className="overflow-x-auto">
-                                <table className="w-full">
-                                    <thead>
-                                        <tr className="border-b border-white/10">
-                                            <th className="px-6 py-4 text-left text-xs font-bold text-text-muted uppercase tracking-wider">Layer</th>
-                                            <th className="px-6 py-4 text-left text-xs font-bold text-text-muted uppercase tracking-wider">Method</th>
-                                            <th className="px-6 py-4 text-left text-xs font-bold text-text-muted uppercase tracking-wider">Scope</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody className="divide-y divide-white/5">
-                                        {authMethods.map((auth, i) => (
-                                            <tr key={i} className="hover:bg-white/[0.02] transition-colors">
-                                                <td className="px-6 py-4 text-white font-medium">{auth.layer}</td>
-                                                <td className="px-6 py-4 text-text-secondary">{auth.method}</td>
-                                                <td className="px-6 py-4 text-text-muted text-sm">{auth.scope}</td>
-                                            </tr>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            {dataProtectionFeatures.map((feature, i) => (
+                                <div key={i} className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
+                                    <h3 className="text-lg font-bold text-white mb-4">{feature.title}</h3>
+                                    <ul className="space-y-3">
+                                        {feature.items.map((item, j) => (
+                                            <li key={j} className="flex items-start gap-2 text-text-secondary text-sm">
+                                                <CheckCircle2 className="w-4 h-4 text-brand shrink-0 mt-0.5" />
+                                                <span>{item}</span>
+                                            </li>
                                         ))}
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                        <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
-                            <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10">
-                                <div className="flex items-center gap-2 mb-2">
-                                    <Users className="w-4 h-4 text-brand" />
-                                    <span className="text-sm font-bold text-white">RBAC via WorkOS</span>
+                                    </ul>
                                 </div>
-                                <p className="text-xs text-text-muted">Role-based permissions for granular access control</p>
-                            </div>
-                            <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10">
-                                <div className="flex items-center gap-2 mb-2">
-                                    <AlertTriangle className="w-4 h-4 text-amber-400" />
-                                    <span className="text-sm font-bold text-white">Super Admin Isolation</span>
-                                </div>
-                                <p className="text-xs text-text-muted">Every cross-org access is audit-logged with 7-year retention</p>
-                            </div>
-                            <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10">
-                                <div className="flex items-center gap-2 mb-2">
-                                    <Lock className="w-4 h-4 text-emerald-400" />
-                                    <span className="text-sm font-bold text-white">Candidate Scoping</span>
-                                </div>
-                                <p className="text-xs text-text-muted">Time-limited tokens restrict access to own session only</p>
-                            </div>
+                            ))}
                         </div>
                     </section>
 
-                    {/* Data Isolation */}
-                    <section className="mb-20">
+                    {/* Multi-Tenant Isolation */}
+                    <section className="mb-24">
                         <div className="flex items-center gap-3 mb-8">
                             <div className="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center">
                                 <Layers className="w-5 h-5 text-emerald-400" />
@@ -255,100 +254,152 @@ export default function SecurityPage() {
                             <h2 className="text-2xl sm:text-3xl font-bold text-white">Multi-Tenant Data Isolation</h2>
                         </div>
 
-                        <div className="p-6 rounded-2xl bg-gradient-to-br from-emerald-500/5 to-transparent border border-emerald-500/20">
-                            <h3 className="text-lg font-bold text-white mb-4">Row-Level Security (RLS)</h3>
-                            <ul className="space-y-3">
-                                {[
-                                    'PostgreSQL RLS policies enforce organization-level data isolation at the database layer',
-                                    'Every query runs within an organization context (app.current_org_id)',
-                                    'Even if application code has a bug, the database will not return data from other organizations',
-                                    'Super admin access sets app.is_super_admin flag, which is audit-logged before bypass',
-                                ].map((item, i) => (
-                                    <li key={i} className="flex items-start gap-3">
-                                        <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
-                                        <span className="text-text-secondary">{item}</span>
-                                    </li>
-                                ))}
-                            </ul>
+                        <div className="p-8 rounded-2xl bg-gradient-to-br from-emerald-500/5 to-transparent border border-emerald-500/20">
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                                <div>
+                                    <h3 className="text-xl font-bold text-white mb-4">Database-Level Isolation</h3>
+                                    <p className="text-text-secondary leading-relaxed mb-6">
+                                        Your data is isolated at the database level — not just the application level. This means that even if there were a bug in our application code, it would be physically impossible for another organization&apos;s data to be returned in your queries.
+                                    </p>
+                                    <ul className="space-y-3">
+                                        {[
+                                            'Every query executes within your organization\'s isolated context',
+                                            'Database-enforced policies prevent cross-tenant data access',
+                                            'Privileged access is audit-logged with 7-year retention',
+                                            'Regular third-party penetration testing validates isolation',
+                                        ].map((item, i) => (
+                                            <li key={i} className="flex items-start gap-3">
+                                                <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                                                <span className="text-text-secondary">{item}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                                <div className="grid grid-cols-2 gap-4">
+                                    {[
+                                        { label: 'Data Isolation', value: 'Database-Level', color: 'text-emerald-400' },
+                                        { label: 'PII Encryption', value: 'AES-256-GCM', color: 'text-brand' },
+                                        { label: 'Audit Retention', value: 'Up to 7 Years', color: 'text-purple-400' },
+                                        { label: 'Access Control', value: 'Role-Based', color: 'text-amber-400' },
+                                    ].map((stat, i) => (
+                                        <div key={i} className="p-4 rounded-xl bg-white/[0.03] border border-white/10 text-center">
+                                            <div className="text-xs text-text-muted uppercase tracking-wider mb-2">{stat.label}</div>
+                                            <div className={`text-lg font-bold ${stat.color}`}>{stat.value}</div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
                     </section>
 
-                    {/* Encryption */}
-                    <section className="mb-20">
+                    {/* Interview Integrity */}
+                    <section className="mb-24">
+                        <div className="flex items-center gap-3 mb-4">
+                            <div className="w-10 h-10 rounded-xl bg-rose-500/10 flex items-center justify-center">
+                                <Eye className="w-5 h-5 text-rose-400" />
+                            </div>
+                            <h2 className="text-2xl sm:text-3xl font-bold text-white">Interview Integrity Protection</h2>
+                        </div>
+                        <p className="text-text-secondary mb-8 max-w-3xl">
+                            Our proprietary Sentinel Engine continuously monitors every interview session across 15 signal types. Here&apos;s what it covers — without revealing how.
+                        </p>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                            {integrityCapabilities.map((cap, i) => (
+                                <div key={i} className="p-6 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-rose-500/30 transition-all">
+                                    <div className="flex items-center gap-2 mb-4">
+                                        <ShieldCheck className="w-5 h-5 text-rose-400" />
+                                        <span className="text-xs font-bold text-rose-400 uppercase tracking-wider">{cap.signals}</span>
+                                    </div>
+                                    <h3 className="text-lg font-bold text-white mb-3">{cap.title}</h3>
+                                    <p className="text-text-secondary text-sm leading-relaxed">{cap.description}</p>
+                                </div>
+                            ))}
+                        </div>
+
+                        <div className="p-6 rounded-2xl bg-gradient-to-br from-rose-500/5 to-transparent border border-rose-500/20">
+                            <div className="flex items-start gap-4">
+                                <div className="w-10 h-10 rounded-xl bg-rose-500/10 flex items-center justify-center shrink-0">
+                                    <Lock className="w-5 h-5 text-rose-400" />
+                                </div>
+                                <div>
+                                    <h3 className="text-lg font-bold text-white mb-2">Detection Methodology Under NDA</h3>
+                                    <p className="text-text-secondary text-sm leading-relaxed mb-4">
+                                        The specific signals, thresholds, and detection algorithms that power our integrity engine are proprietary and shared only under NDA during the enterprise evaluation process. This protects the effectiveness of the system — if bad actors knew exactly what we look for, they could engineer around it.
+                                    </p>
+                                    <Link
+                                        href="/contact?subject=security"
+                                        className="inline-flex items-center gap-2 text-sm font-semibold text-rose-400 hover:text-rose-300 transition-colors"
+                                    >
+                                        Request security whitepaper
+                                        <ArrowRight className="w-4 h-4" />
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Forensic Audit Trail */}
+                    <section className="mb-24">
                         <div className="flex items-center gap-3 mb-8">
-                            <div className="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center">
-                                <Lock className="w-5 h-5 text-purple-400" />
+                            <div className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center">
+                                <FileText className="w-5 h-5 text-indigo-400" />
                             </div>
-                            <h2 className="text-2xl sm:text-3xl font-bold text-white">Encryption</h2>
+                            <h2 className="text-2xl sm:text-3xl font-bold text-white">Tamper-Proof Forensic Trail</h2>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
-                                <h3 className="text-lg font-bold text-white mb-4">In Transit</h3>
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            <div className="p-6 rounded-2xl bg-gradient-to-br from-indigo-500/5 to-transparent border border-indigo-500/20">
+                                <h3 className="text-lg font-bold text-white mb-4">Cryptographic Chain Integrity</h3>
+                                <p className="text-text-secondary text-sm mb-4">
+                                    Every interview generates an append-only forensic event log with cryptographic chain hashing. Each event is linked to the previous one, making it impossible to tamper with or delete records without detection.
+                                </p>
                                 <ul className="space-y-2">
-                                    <li className="flex items-center gap-2 text-text-secondary">
-                                        <CheckCircle2 className="w-4 h-4 text-brand" />
-                                        TLS 1.2+ enforced on all connections
-                                    </li>
-                                    <li className="flex items-center gap-2 text-text-secondary">
-                                        <CheckCircle2 className="w-4 h-4 text-brand" />
-                                        HSTS header with 1-year max-age
-                                    </li>
-                                    <li className="flex items-center gap-2 text-text-secondary">
-                                        <CheckCircle2 className="w-4 h-4 text-brand" />
-                                        Cloudflare WAF edge-level protection
-                                    </li>
+                                    {[
+                                        'SHA-256 chain hashing — each event cryptographically linked to the previous',
+                                        'Chain integrity can be independently verified at any point',
+                                        'Full JSON export available for compliance auditors',
+                                        'Legally defensible evidence chain for hiring decisions',
+                                    ].map((item, i) => (
+                                        <li key={i} className="flex items-start gap-2 text-text-secondary text-sm">
+                                            <CheckCircle2 className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
+                                            <span>{item}</span>
+                                        </li>
+                                    ))}
                                 </ul>
                             </div>
 
                             <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
-                                <h3 className="text-lg font-bold text-white mb-4">At Rest (Infrastructure)</h3>
-                                <ul className="space-y-2">
-                                    <li className="flex items-center gap-2 text-text-secondary">
-                                        <CheckCircle2 className="w-4 h-4 text-brand" />
-                                        Azure PostgreSQL: AES-256 encryption
-                                    </li>
-                                    <li className="flex items-center gap-2 text-text-secondary">
-                                        <CheckCircle2 className="w-4 h-4 text-brand" />
-                                        Azure Blob Storage: SSE encryption
-                                    </li>
-                                    <li className="flex items-center gap-2 text-text-secondary">
-                                        <CheckCircle2 className="w-4 h-4 text-brand" />
-                                        LiveKit recordings: Encrypted egress
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div className="mt-6 p-6 rounded-2xl bg-gradient-to-br from-purple-500/5 to-transparent border border-purple-500/20">
-                            <h3 className="text-lg font-bold text-white mb-4">Application-Level PII Encryption (AES-256-GCM)</h3>
-                            <p className="text-text-secondary mb-4">
-                                Sensitive fields are additionally encrypted at the application layer before database write.
-                                Even if the database is compromised, PII fields are unreadable without the encryption key.
-                            </p>
-                            <div className="overflow-x-auto">
-                                <table className="w-full">
-                                    <thead>
-                                        <tr className="border-b border-white/10">
-                                            <th className="px-4 py-2 text-left text-xs font-bold text-text-muted uppercase">Model</th>
-                                            <th className="px-4 py-2 text-left text-xs font-bold text-text-muted uppercase">Encrypted Fields</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody className="divide-y divide-white/5">
-                                        {encryptedFields.map((item, i) => (
-                                            <tr key={i}>
-                                                <td className="px-4 py-3 text-white font-mono text-sm">{item.model}</td>
-                                                <td className="px-4 py-3 text-text-secondary font-mono text-sm">{item.fields}</td>
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
+                                <h3 className="text-lg font-bold text-white mb-4">What Gets Logged</h3>
+                                <p className="text-text-secondary text-sm mb-4">
+                                    Comprehensive event coverage across the entire interview lifecycle:
+                                </p>
+                                <div className="grid grid-cols-2 gap-3">
+                                    {[
+                                        'Session lifecycle events',
+                                        'Identity verification',
+                                        'Integrity signal events',
+                                        'Automated assessments',
+                                        'Manual review actions',
+                                        'Data access & exports',
+                                    ].map((event, i) => (
+                                        <div key={i} className="flex items-center gap-2 py-2">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-indigo-400" />
+                                            <span className="text-sm text-text-secondary">{event}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                                <div className="mt-4 p-3 rounded-lg bg-indigo-500/10 border border-indigo-500/20">
+                                    <p className="text-xs text-indigo-300">
+                                        <strong>GDPR Article 22:</strong> Every automated decision generates a structured summary with decision type, outcome, confidence score, and contributing factors.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </section>
 
                     {/* Data Retention */}
-                    <section className="mb-20">
+                    <section className="mb-24">
                         <div className="flex items-center gap-3 mb-8">
                             <div className="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center">
                                 <Clock className="w-5 h-5 text-amber-400" />
@@ -359,11 +410,14 @@ export default function SecurityPage() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
                                 <h3 className="text-lg font-bold text-white mb-4">Plan-Based Retention</h3>
+                                <p className="text-text-secondary text-sm mb-4">
+                                    Data is automatically deleted after your plan&apos;s retention window. No manual action required.
+                                </p>
                                 <div className="space-y-3">
                                     {retentionPlans.map((item, i) => (
                                         <div key={i} className="flex items-center justify-between py-2 border-b border-white/5 last:border-0">
                                             <span className="text-text-secondary">{item.plan}</span>
-                                            <span className="text-white font-mono text-sm">{item.retention}</span>
+                                            <span className="text-white font-semibold text-sm">{item.retention}</span>
                                         </div>
                                     ))}
                                 </div>
@@ -371,30 +425,28 @@ export default function SecurityPage() {
 
                             <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
                                 <h3 className="text-lg font-bold text-white mb-4">Automated Enforcement</h3>
+                                <p className="text-text-secondary text-sm mb-4">
+                                    Retention is enforced automatically — not dependent on manual processes:
+                                </p>
                                 <ul className="space-y-3">
-                                    <li className="flex items-start gap-2 text-text-secondary">
-                                        <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0 mt-1" />
-                                        Daily cron job scans for expired interviews (3 AM UTC)
-                                    </li>
-                                    <li className="flex items-start gap-2 text-text-secondary">
-                                        <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0 mt-1" />
-                                        Deletes: Recordings, transcripts, evidence, identity photos
-                                    </li>
-                                    <li className="flex items-start gap-2 text-text-secondary">
-                                        <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0 mt-1" />
-                                        Full audit trail for every deletion
-                                    </li>
-                                    <li className="flex items-start gap-2 text-text-secondary">
-                                        <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0 mt-1" />
-                                        Azure Blob lifecycle policy as safety net (1,095 days max)
-                                    </li>
+                                    {[
+                                        'Automated daily scans identify expired interview data',
+                                        'Recordings, transcripts, identity materials, and evidence permanently removed',
+                                        'Full audit trail generated for every deletion event',
+                                        'Infrastructure-level lifecycle policies as an additional safety net',
+                                    ].map((item, i) => (
+                                        <li key={i} className="flex items-start gap-2 text-text-secondary text-sm">
+                                            <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                                            <span>{item}</span>
+                                        </li>
+                                    ))}
                                 </ul>
                             </div>
                         </div>
                     </section>
 
                     {/* GDPR Compliance */}
-                    <section className="mb-20">
+                    <section className="mb-24">
                         <div className="flex items-center gap-3 mb-8">
                             <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center">
                                 <Globe className="w-5 h-5 text-blue-400" />
@@ -403,294 +455,76 @@ export default function SecurityPage() {
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/5 to-transparent border border-blue-500/20">
-                                <div className="flex items-center gap-2 mb-4">
-                                    <Trash2 className="w-5 h-5 text-blue-400" />
-                                    <h3 className="text-lg font-bold text-white">Article 17: Right to Erasure</h3>
-                                </div>
-                                <p className="text-text-secondary text-sm mb-4">Complete data anonymization on request:</p>
-                                <div className="space-y-2">
-                                    {gdprActions.map((item, i) => (
-                                        <div key={i} className="flex items-center justify-between py-1.5 text-sm">
-                                            <span className="text-text-muted">{item.type}</span>
-                                            <span className="text-blue-400 font-medium">{item.action}</span>
+                            {gdprRights.map((right, i) => (
+                                <div key={i} className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
+                                    <div className="flex items-center gap-3 mb-4">
+                                        <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center">
+                                            <right.icon className={`w-5 h-5 ${right.color}`} />
                                         </div>
-                                    ))}
-                                </div>
-                                <div className="mt-4 p-3 rounded-lg bg-blue-500/10 border border-blue-500/20">
-                                    <p className="text-xs text-blue-300">
-                                        <strong>Deletion Certificate:</strong> Every anonymization returns a cryptographic certificate with timestamp, counts, and compliance notes.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="space-y-6">
-                                <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
-                                    <div className="flex items-center gap-2 mb-4">
-                                        <Download className="w-5 h-5 text-emerald-400" />
-                                        <h3 className="text-lg font-bold text-white">Article 20: Data Portability</h3>
+                                        <div>
+                                            <div className="text-xs font-bold text-blue-400 uppercase tracking-wider">{right.article}</div>
+                                            <h3 className="text-lg font-bold text-white">{right.title}</h3>
+                                        </div>
                                     </div>
-                                    <p className="text-text-secondary text-sm">
-                                        Export endpoint provides all candidate data in machine-readable JSON format on request.
-                                    </p>
+                                    <p className="text-text-secondary text-sm leading-relaxed">{right.description}</p>
                                 </div>
-
-                                <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
-                                    <div className="flex items-center gap-2 mb-4">
-                                        <FileText className="w-5 h-5 text-purple-400" />
-                                        <h3 className="text-lg font-bold text-white">Article 30: Records of Processing</h3>
-                                    </div>
-                                    <p className="text-text-secondary text-sm">
-                                        SOC2-compliant audit logging captures all data processing activities with 1-7 year retention.
-                                    </p>
-                                </div>
-                            </div>
+                            ))}
                         </div>
                     </section>
 
                     {/* Audit Logging */}
-                    <section className="mb-20">
+                    <section className="mb-24">
                         <div className="flex items-center gap-3 mb-8">
                             <div className="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center">
                                 <Activity className="w-5 h-5 text-purple-400" />
                             </div>
-                            <h2 className="text-2xl sm:text-3xl font-bold text-white">Audit Logging (SOC2 Alignment)</h2>
+                            <h2 className="text-2xl sm:text-3xl font-bold text-white">Audit Logging</h2>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
-                                <h3 className="text-lg font-bold text-white mb-4">Every Action Logged</h3>
-                                <div className="space-y-2 font-mono text-sm">
-                                    {['actorId', 'actorType', 'action', 'resource', 'resourceId', 'organizationId', 'timestamp', 'metadata'].map((field, i) => (
-                                        <div key={i} className="flex items-center gap-2">
-                                            <span className="text-brand">•</span>
-                                            <span className="text-text-secondary">{field}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-
-                            <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
-                                <h3 className="text-lg font-bold text-white mb-4">Retention Policies</h3>
-                                <div className="space-y-2">
-                                    {auditRetention.map((item, i) => (
-                                        <div key={i} className="flex items-center justify-between py-1.5 text-sm border-b border-white/5 last:border-0">
-                                            <span className="text-text-secondary">{item.category}</span>
-                                            <span className="text-white font-mono">{item.retention}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    {/* Network Security */}
-                    <section className="mb-20">
-                        <div className="flex items-center gap-3 mb-8">
-                            <div className="w-10 h-10 rounded-xl bg-cyan-500/10 flex items-center justify-center">
-                                <Server className="w-5 h-5 text-cyan-400" />
-                            </div>
-                            <h2 className="text-2xl sm:text-3xl font-bold text-white">Network & Application Security</h2>
-                        </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
-                                <h3 className="text-lg font-bold text-white mb-4">Security Headers</h3>
-                                <div className="space-y-2">
-                                    {securityHeaders.map((item, i) => (
-                                        <div key={i} className="py-2 border-b border-white/5 last:border-0">
-                                            <div className="text-white font-mono text-sm">{item.header}</div>
-                                            <div className="text-text-muted text-xs mt-1">{item.value}</div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-
-                            <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
-                                <h3 className="text-lg font-bold text-white mb-4">Rate Limiting</h3>
-                                <ul className="space-y-3">
-                                    <li className="flex items-start gap-2 text-text-secondary">
-                                        <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-1" />
-                                        Auth endpoints: 10 requests/minute
-                                    </li>
-                                    <li className="flex items-start gap-2 text-text-secondary">
-                                        <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-1" />
-                                        Export endpoints: 5 requests/hour
-                                    </li>
-                                    <li className="flex items-start gap-2 text-text-secondary">
-                                        <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-1" />
-                                        General API: 100 requests/minute
-                                    </li>
-                                    <li className="flex items-start gap-2 text-text-secondary">
-                                        <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-1" />
-                                        Per-organization and per-IP tracking
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-
-                    {/* Biometric Security */}
-                    <section className="mb-20">
-                        <div className="flex items-center gap-3 mb-8">
-                            <div className="w-10 h-10 rounded-xl bg-rose-500/10 flex items-center justify-center">
-                                <Eye className="w-5 h-5 text-rose-400" />
-                            </div>
-                            <h2 className="text-2xl sm:text-3xl font-bold text-white">Biometric Security & Anti-Spoofing</h2>
-                        </div>
-
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-                            <div className="p-6 rounded-2xl bg-gradient-to-br from-rose-500/5 to-transparent border border-rose-500/20">
-                                <h3 className="text-lg font-bold text-white mb-4">Voice Biometrics (ECAPA-TDNN)</h3>
-                                <p className="text-text-secondary text-sm mb-4">
-                                    SpeechBrain ECAPA-TDNN generates 192-dimensional speaker embeddings with a multi-factor decision matrix:
-                                </p>
-                                <div className="overflow-x-auto">
-                                    <table className="w-full text-sm">
-                                        <thead>
-                                            <tr className="border-b border-white/10">
-                                                <th className="px-2 py-2 text-left text-xs font-bold text-text-muted">Layer</th>
-                                                <th className="px-2 py-2 text-left text-xs font-bold text-text-muted">Method</th>
-                                                <th className="px-2 py-2 text-left text-xs font-bold text-text-muted">Result</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody className="divide-y divide-white/5">
-                                            {biometricLayers.map((layer, i) => (
-                                                <tr key={i}>
-                                                    <td className="px-2 py-2 text-rose-400 font-mono text-xs">{layer.layer}</td>
-                                                    <td className="px-2 py-2 text-white text-xs">{layer.method}</td>
-                                                    <td className="px-2 py-2 text-text-muted text-xs">{layer.result}</td>
-                                                </tr>
-                                            ))}
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-
-                            <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
-                                <h3 className="text-lg font-bold text-white mb-4">AWS Face Liveness</h3>
-                                <p className="text-text-secondary text-sm mb-4">
-                                    Challenge-response liveness detection using AWS Rekognition prevents photo and video replay attacks.
-                                </p>
-                                <div className="space-y-3">
-                                    <div className="text-xs font-bold text-text-muted uppercase tracking-wider mb-2">Confidence Thresholds by Tier</div>
-                                    {faceLivenessThresholds.map((tier, i) => (
-                                        <div key={i} className="grid grid-cols-3 items-center py-2 border-b border-white/5 last:border-0">
-                                            <span className="text-white font-semibold">{tier.tier}</span>
-                                            <span className="text-rose-400 font-mono text-center">{tier.threshold}</span>
-                                            <span className="text-text-muted text-xs text-right">{tier.useCase}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
-                            <h3 className="text-lg font-bold text-white mb-4">Anti-Spoofing Capabilities</h3>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
-                                    <div className="text-sm font-bold text-white mb-2">Replay Attack Detection</div>
-                                    <p className="text-xs text-text-muted">Room impulse response analysis, noise floor evaluation, codec artifact fingerprinting</p>
-                                </div>
-                                <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
-                                    <div className="text-sm font-bold text-white mb-2">Environment Consistency</div>
-                                    <p className="text-xs text-text-muted">Spectral envelope fingerprinting across the session detects environment changes</p>
-                                </div>
-                                <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
-                                    <div className="text-sm font-bold text-white mb-2">TTS/Synthetic Speech</div>
-                                    <p className="text-xs text-text-muted">Spectral flatness (Wiener entropy) analysis detects AI-generated audio</p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    {/* Screen Analysis & AI Detection */}
-                    <section className="mb-20">
-                        <div className="flex items-center gap-3 mb-8">
-                            <div className="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center">
-                                <AlertTriangle className="w-5 h-5 text-orange-400" />
-                            </div>
-                            <h2 className="text-2xl sm:text-3xl font-bold text-white">Screen Analysis & AI Detection</h2>
-                        </div>
-
-                        <div className="p-6 rounded-2xl bg-gradient-to-br from-orange-500/5 to-transparent border border-orange-500/20 mb-6">
-                            <p className="text-text-secondary mb-6">
-                                Real-time screen capture analysis using EasyOCR (primary) with pytesseract (fallback) for AI tool and cheating detection:
-                            </p>
-                            <div className="overflow-x-auto">
-                                <table className="w-full">
-                                    <thead>
-                                        <tr className="border-b border-white/10">
-                                            <th className="px-4 py-3 text-left text-xs font-bold text-text-muted uppercase">Detection Type</th>
-                                            <th className="px-4 py-3 text-left text-xs font-bold text-text-muted uppercase">Patterns/Method</th>
-                                            <th className="px-4 py-3 text-left text-xs font-bold text-text-muted uppercase">Technology</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody className="divide-y divide-white/5">
-                                        {screenAnalysis.map((item, i) => (
-                                            <tr key={i} className="hover:bg-white/[0.02]">
-                                                <td className="px-4 py-3 text-white font-medium">{item.detection}</td>
-                                                <td className="px-4 py-3 text-text-secondary text-sm">{item.method}</td>
-                                                <td className="px-4 py-3 text-orange-400 text-sm font-mono">{item.accuracy}</td>
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </section>
-
-                    {/* Forensic Audit Trail */}
-                    <section className="mb-20">
-                        <div className="flex items-center gap-3 mb-8">
-                            <div className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center">
-                                <FileText className="w-5 h-5 text-indigo-400" />
-                            </div>
-                            <h2 className="text-2xl sm:text-3xl font-bold text-white">Forensic Audit Trail</h2>
-                        </div>
-
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                            <div className="p-6 rounded-2xl bg-gradient-to-br from-indigo-500/5 to-transparent border border-indigo-500/20">
-                                <h3 className="text-lg font-bold text-white mb-4">Chain Integrity (SHA-256)</h3>
-                                <p className="text-text-secondary text-sm mb-4">
-                                    Append-only event log with cryptographic chain hashing for tamper detection:
-                                </p>
-                                <ul className="space-y-2">
-                                    <li className="flex items-start gap-2 text-text-secondary text-sm">
-                                        <CheckCircle2 className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
-                                        Each event: <code className="text-indigo-400 text-xs">chain_hash = SHA256(previous_hash + event_data)</code>
-                                    </li>
-                                    <li className="flex items-start gap-2 text-text-secondary text-sm">
-                                        <CheckCircle2 className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
-                                        Chain integrity verification at any point
-                                    </li>
-                                    <li className="flex items-start gap-2 text-text-secondary text-sm">
-                                        <CheckCircle2 className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
-                                        JSON export for compliance auditors
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
-                                <h3 className="text-lg font-bold text-white mb-4">17 Event Types Captured</h3>
-                                <div className="flex flex-wrap gap-2">
-                                    {forensicEvents.map((event, i) => (
-                                        <span key={i} className="px-2 py-1 bg-white/5 border border-white/10 rounded text-xs font-mono text-text-muted">
-                                            {event}
-                                        </span>
-                                    ))}
-                                </div>
-                                <div className="mt-4 p-3 rounded-lg bg-indigo-500/10 border border-indigo-500/20">
-                                    <p className="text-xs text-indigo-300">
-                                        <strong>GDPR Article 22:</strong> Automated decisions generate structured summaries with decision type, outcome, confidence score, and contributing factors.
+                        <div className="p-8 rounded-2xl bg-gradient-to-br from-purple-500/5 to-transparent border border-purple-500/20">
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                                <div>
+                                    <h3 className="text-xl font-bold text-white mb-4">SOC2-Aligned Logging</h3>
+                                    <p className="text-text-secondary leading-relaxed mb-6">
+                                        Every sensitive action across the platform is captured in an immutable audit log. Who did what, when, and what changed — with full metadata for compliance auditors.
                                     </p>
+                                    <div className="grid grid-cols-2 gap-4">
+                                        {[
+                                            { label: 'Auth Events', retention: '1 year' },
+                                            { label: 'Data Changes', retention: '3 years' },
+                                            { label: 'Data Access', retention: '90 days' },
+                                            { label: 'Admin Actions', retention: '7 years' },
+                                        ].map((item, i) => (
+                                            <div key={i} className="p-3 rounded-lg bg-white/[0.03] border border-white/10">
+                                                <div className="text-xs text-text-muted mb-1">{item.label}</div>
+                                                <div className="text-sm font-bold text-white">{item.retention}</div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 className="text-xl font-bold text-white mb-4">Access Controls</h3>
+                                    <ul className="space-y-3">
+                                        {[
+                                            'Role-based access control with granular permission sets',
+                                            'Super admin actions require elevated authentication and are always logged',
+                                            'Cross-organization access is strictly audited and time-limited',
+                                            'Candidate tokens are single-use and scoped to their session only',
+                                            'All API keys are cryptographically signed and scoped',
+                                        ].map((item, i) => (
+                                            <li key={i} className="flex items-start gap-2 text-text-secondary text-sm">
+                                                <CheckCircle2 className="w-4 h-4 text-purple-400 shrink-0 mt-0.5" />
+                                                <span>{item}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </section>
 
                     {/* Compliance Roadmap */}
-                    <section className="mb-20">
+                    <section className="mb-24">
                         <div className="flex items-center gap-3 mb-8">
                             <div className="w-10 h-10 rounded-xl bg-brand/10 flex items-center justify-center">
                                 <FileCheck className="w-5 h-5 text-brand" />
@@ -700,7 +534,7 @@ export default function SecurityPage() {
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                             {complianceStatus.map((item, i) => (
-                                <div key={i} className="p-6 rounded-2xl bg-white/[0.02] border border-white/10 text-center">
+                                <div key={i} className={`p-6 rounded-2xl ${item.bgColor} border ${item.borderColor} text-center`}>
                                     <h3 className="text-xl font-bold text-white mb-2">{item.standard}</h3>
                                     <div className={`text-sm font-semibold ${item.statusColor} mb-1`}>{item.status}</div>
                                     <div className="text-xs text-text-muted">{item.timeline}</div>
@@ -709,64 +543,25 @@ export default function SecurityPage() {
                         </div>
                     </section>
 
-                    {/* Architecture Diagram */}
-                    <section className="mb-20">
-                        <div className="flex items-center gap-3 mb-8">
-                            <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center">
-                                <Layers className="w-5 h-5 text-white" />
-                            </div>
-                            <h2 className="text-2xl sm:text-3xl font-bold text-white">Architecture Overview</h2>
-                        </div>
-
-                        <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10 font-mono text-sm overflow-x-auto">
-                            <pre className="text-text-secondary whitespace-pre leading-relaxed">
-{`Client Browser
-     │
-     ▼
-Cloudflare (CDN/WAF/DDoS Protection)
-     │
-     ▼
-Azure Container Apps
-     ├── Rigovo Dashboard (Next.js)
-     │     ├── WorkOS Auth (SSO)
-     │     ├── Rate Limiter
-     │     ├── CSP Headers
-     │     ├── RLS Context
-     │     └── Prisma + PII Encryption Middleware
-     │
-     ├── Maya Agent (Python/LiveKit)
-     │     └── x-agent-key authentication
-     │
-     └── Governor Agent (Python/LiveKit)
-           └── x-agent-key authentication
-     │
-     ▼
-Azure PostgreSQL (RLS + Encryption at Rest)
-     │
-     ▼
-Azure Blob Storage (SSE + Plan-Based Retention)`}
-                            </pre>
-                        </div>
-                    </section>
-
                     {/* Contact CTA */}
                     <section className="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-brand/10 to-transparent border border-brand/20 text-center">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">Questions about our security?</h2>
+                        <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">Need More Detail?</h2>
                         <p className="text-text-secondary mb-6 max-w-xl mx-auto">
-                            Our security team is happy to discuss our controls, provide additional documentation, or answer any compliance questions.
+                            We&apos;re happy to provide our full security whitepaper, walk through our architecture under NDA, or answer any compliance questions your team may have.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                             <Link
                                 href="/contact?subject=security"
-                                className="px-6 py-3 bg-brand text-white font-bold rounded-xl hover:bg-brand/90 transition-colors"
+                                className="px-6 py-3 bg-brand text-white font-bold rounded-xl hover:bg-brand/90 transition-colors inline-flex items-center gap-2"
                             >
-                                Contact Security Team
+                                Request Security Whitepaper
+                                <ArrowRight className="w-4 h-4" />
                             </Link>
                             <Link
                                 href="/contact?subject=technical"
                                 className="px-6 py-3 bg-white/5 text-white font-bold rounded-xl border border-white/10 hover:bg-white/10 transition-colors"
                             >
-                                Technical Questions
+                                Schedule Architecture Review
                             </Link>
                         </div>
                     </section>

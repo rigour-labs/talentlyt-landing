@@ -6,7 +6,7 @@ export function FeaturesSection() {
 
     const features = [
         {
-            title: 'Panel Mode (Maya Whispers)',
+            title: 'Panel Mode (AI Co-Pilot)',
             benefit: 'You Stay in Control',
             description: 'Run interviews your way with real-time AI suggestions. Maya provides high-signal probing questions while you focus on culture fit and soft skills.',
             icon: Zap,
@@ -15,13 +15,13 @@ export function FeaturesSection() {
             tag: 'CO-PILOT MODE'
         },
         {
-            title: 'Predictive Job Success',
+            title: 'Hire Confidence Scoring',
             benefit: 'Data-Driven Decisions',
-            description: 'Our ML models help you predict on-the-job performance with 85% accuracy. Get insights that complement your team\'s judgment.',
+            description: 'Our AI models help you predict on-the-job performance with high reliability. Get insights that complement your team\'s judgment.',
             icon: Brain,
             className: "md:col-span-1",
-            metric: '85% Accuracy',
-            tag: 'ML POWERED'
+            metric: 'High Reliability',
+            tag: 'AI POWERED'
         },
         {
             title: 'Identity Verification',
@@ -33,7 +33,7 @@ export function FeaturesSection() {
             tag: 'LIVENESS+'
         },
         {
-            title: 'Interview Genome',
+            title: 'Verified Candidate Profiles',
             benefit: 'Portable Credentials',
             description: 'Create portable, cryptographically-signed candidate profiles. Verified skills travel with the candidate—eliminating redundant screenings.',
             icon: Database,
@@ -44,7 +44,7 @@ export function FeaturesSection() {
         {
             title: 'Standalone Forensic Scans',
             benefit: 'Video Analysis',
-            description: 'Upload any recorded interview (Zoom, Teams, etc.) for deepfake and lip-sync analysis. Get verdicts on existing footage—no live interview required.',
+            description: 'Upload any recorded interview (Zoom, Teams, etc.) for deepfake and fraud analysis. Get verdicts on existing footage—no live interview required.',
             icon: Cpu,
             className: "md:col-span-1",
             metric: '$35 Per Scan',

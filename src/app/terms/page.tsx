@@ -45,7 +45,7 @@ export default function TermsPage() {
                             </div>
                             <div className="text-text-secondary text-sm leading-relaxed space-y-4">
                                 <p>
-                                    Welcome to Rigovo. These Terms of Service (&quot;Terms&quot;) constitute a legally binding agreement between you (&quot;User,&quot; &quot;you,&quot; or &quot;your&quot;) and Rigour Labs Inc. (&quot;Rigovo,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;).
+                                    Welcome to Rigovo. These Terms of Service (&quot;Terms&quot;) constitute a legally binding agreement between you (&quot;User,&quot; &quot;you,&quot; or &quot;your&quot;) and Rigour Labs (&quot;Rigovo,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;).
                                 </p>
                                 <p>
                                     By creating an account, accessing our platform, or using any of our services, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you are using Rigovo on behalf of an organization, you represent that you have the authority to bind that organization to these Terms.
@@ -169,7 +169,7 @@ export default function TermsPage() {
                             </div>
                             <div className="text-text-secondary text-sm leading-relaxed space-y-4">
                                 <p>
-                                    <strong className="text-white">Our IP:</strong> Rigovo, including our software, AI models, algorithms, branding, and documentation, is owned by Rigour Labs Inc. and protected by intellectual property laws. Your use of Rigovo does not grant you ownership of any IP.
+                                    <strong className="text-white">Our IP:</strong> Rigovo, including our software, AI models, algorithms, branding, and documentation, is owned by Rigour Labs and protected by intellectual property laws. Your use of Rigovo does not grant you ownership of any IP.
                                 </p>
                                 <p>
                                     <strong className="text-white">Your Content:</strong> You retain ownership of any content you submit (job descriptions, evaluation criteria, etc.). By submitting content, you grant us a license to use it to provide our services.
@@ -256,10 +256,10 @@ export default function TermsPage() {
                             </div>
                             <div className="text-text-secondary text-sm leading-relaxed space-y-4">
                                 <p>
-                                    These Terms are governed by the laws of the State of Delaware, USA, without regard to conflict of law principles.
+                                    These Terms are governed by the laws of the Republic of India, without regard to conflict of law principles.
                                 </p>
                                 <p>
-                                    <strong className="text-white">Dispute Resolution:</strong> We prefer to resolve disputes informally. Contact us first at <a href="mailto:legal@rigovo.com" className="text-brand hover:underline">legal@rigovo.com</a>. If informal resolution fails, disputes will be resolved through binding arbitration administered by JAMS in Delaware, except where prohibited by law.
+                                    <strong className="text-white">Dispute Resolution:</strong> We prefer to resolve disputes informally. Contact us first at <a href="mailto:legal@rigovo.com" className="text-brand hover:underline">legal@rigovo.com</a>. If informal resolution fails, disputes will be resolved through binding arbitration in Pune, India, except where prohibited by law.
                                 </p>
                                 <p>
                                     <strong className="text-white">Class Action Waiver:</strong> To the extent permitted by law, you agree to resolve disputes individually and waive any right to participate in class actions.
@@ -274,7 +274,7 @@ export default function TermsPage() {
                                 <a href="mailto:legal@rigovo.com" className="text-brand hover:underline">legal@rigovo.com</a>
                             </p>
                             <p className="mt-2">
-                                Rigour Labs Inc. | Delaware, United States
+                                Rigour Labs | Pune, India
                             </p>
                         </div>
                     </div>

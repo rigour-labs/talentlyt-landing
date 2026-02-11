@@ -7,13 +7,13 @@ const features = [
     {
         icon: Eye,
         title: 'Deepfake Detection',
-        description: 'Real-time pixel-level analysis catches face-swaps, lip-sync manipulation, and AI-generated video overlays. By mid-2025, 17% of HR managers had encountered deepfakes in video interviews.',
+        description: 'Real-time analysis catches face-swaps, video manipulation, and AI-generated overlays. By mid-2025, 17% of HR managers had encountered deepfakes in video interviews.',
         highlight: 'Deepfake crisis is real',
     },
     {
         icon: Shield,
         title: 'Proxy Candidate Blocking',
-        description: 'Voice biometrics, gaze tracking, and behavioral analysis detect when a different person answers than the one who showed up. 1 in 3 managers have found a proxy or fake identity.',
+        description: 'Continuous identity verification through multiple proprietary signals detects when a different person answers than the one who showed up. 1 in 3 managers have found a proxy or fake identity.',
         highlight: '$28K avg loss per proxy hire',
     },
     {
@@ -37,7 +37,7 @@ const features = [
     {
         icon: Zap,
         title: 'Instant Technical Scoring',
-        description: 'Get comprehensive reports within minutes — technical depth, integrity score, and a predictive job-success rating (85% accuracy).',
+        description: 'Get comprehensive reports within minutes — technical depth, integrity score, and a predictive hire-confidence rating.',
         highlight: 'Same-day results',
     },
 ];

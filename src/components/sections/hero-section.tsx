@@ -1,9 +1,9 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-// Link removed - using direct Calendly link
-import { ArrowRight, ShieldCheck, ChevronDown, CheckCircle2, Users, Clock } from 'lucide-react';
+import { ShieldCheck, ChevronDown, CheckCircle2, Users, Clock } from 'lucide-react';
 import { MayaVoiceWidget } from '@/components/ui/maya-voice-widget';
+import { CTAButton } from '@/components/ui/cta-button';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
@@ -87,26 +87,7 @@ export function HeroSection() {
                     </div>
 
                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
-                        <a
-                            href="https://calendly.com/rigovo"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            onClick={() => analytics.track({
-                                event: 'cta_clicked',
-                                properties: {
-                                    location: 'hero',
-                                    cta_type: 'book_pilot_call',
-                                    cta_text: 'Book 15-min Pilot Call',
-                                    destination_url: 'https://calendly.com/rigovo',
-                                },
-                            })}
-                            className="group relative px-10 py-5 bg-brand text-white font-bold rounded-2xl transition-all shadow-[0_0_30px_rgba(0,102,255,0.3)] hover:shadow-[0_0_50px_rgba(0,102,255,0.5)] flex items-center justify-center gap-3 overflow-hidden focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background"
-                            aria-label="Book a 15-minute pilot setup call"
-                        >
-                            <span className="relative z-10 technical-label text-xs">Book 15-min Pilot Call</span>
-                            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" aria-hidden="true" />
-                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-                        </a>
+                        <CTAButton location="hero" />
                         <span className="text-text-muted text-sm text-center sm:text-left">
                             Free pilot included ($29 value)
                         </span>

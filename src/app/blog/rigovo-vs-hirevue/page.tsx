@@ -4,6 +4,7 @@ import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { ArrowLeft, Clock, CheckCircle2, XCircle, ArrowRight, Shield, Zap, DollarSign } from 'lucide-react';
 import { RelatedArticles } from '@/components/blog/related-articles';
+import { CTAButton } from '@/components/ui/cta-button';
 
 export const metadata: Metadata = {
     title: 'Rigovo vs HireVue: Which AI Interview Platform is Right for You? (2026)',
@@ -47,13 +48,13 @@ const comparisonData = [
     { feature: 'AI Interview Conductor', rigovo: true, hirevue: true, note: 'Both offer AI-led interviews' },
     { feature: 'Identity Verification', rigovo: true, hirevue: false, note: 'Rigovo verifies candidate identity in real-time' },
     { feature: 'Fraud Detection (15 signals)', rigovo: true, hirevue: false, note: 'Deepfake, proxy, AI cheating detection' },
-    { feature: 'Voice Biometrics', rigovo: true, hirevue: false, note: 'Continuous speaker verification' },
-    { feature: 'Screen Sharing Analysis', rigovo: true, hirevue: false, note: 'Detects ChatGPT, Copilot, hidden notes' },
+    { feature: 'Continuous Identity Verification', rigovo: true, hirevue: false, note: 'Ongoing speaker verification throughout session' },
+    { feature: 'AI-Assisted Cheating Detection', rigovo: true, hirevue: false, note: 'Detects external assistance in real-time' },
     { feature: 'Technical Code Assessment', rigovo: true, hirevue: true, note: 'Live coding environment' },
     { feature: 'Free Pilot Available', rigovo: true, hirevue: false, note: 'Rigovo offers 90-min free pilot' },
     { feature: 'SOC2 Compliant', rigovo: true, hirevue: true, note: 'Enterprise security' },
     { feature: 'GDPR Compliant', rigovo: true, hirevue: true, note: 'Data privacy' },
-    { feature: 'Forensic Audit Trail', rigovo: true, hirevue: false, note: 'SHA-256 chain integrity' },
+    { feature: 'Forensic Audit Trail', rigovo: true, hirevue: false, note: 'Cryptographic chain integrity' },
 ];
 
 export default function RigovoVsHireVuePage() {
@@ -193,22 +194,16 @@ export default function RigovoVsHireVuePage() {
                                                 Rigovo monitors 15 signals simultaneously during every interview:
                                             </p>
                                             <ul className="grid grid-cols-2 gap-2 text-sm text-text-muted">
-                                                <li>Voice biometrics</li>
-                                                <li>Face liveness</li>
-                                                <li>Gaze tracking</li>
-                                                <li>Lip-sync analysis</li>
-                                                <li>Screen OCR</li>
-                                                <li>Tab detection</li>
-                                                <li>AI tool detection</li>
-                                                <li>Typing patterns</li>
-                                                <li>Response timing</li>
-                                                <li>Cognitive load analysis</li>
-                                                <li>Environment consistency</li>
-                                                <li>Network fingerprinting</li>
-                                                <li>Audio artifacts</li>
-                                                <li>Deepfake detection</li>
-                                                <li>Replay attack prevention</li>
+                                                <li>Identity verification (5 signals)</li>
+                                                <li>Behavioral analysis (6 signals)</li>
+                                                <li>Technical integrity (4 signals)</li>
+                                                <li>Proxy detection</li>
+                                                <li>AI-assisted cheating detection</li>
+                                                <li>Session anomaly detection</li>
                                             </ul>
+                                            <p className="text-xs text-text-muted mt-3 italic">
+                                                Signal details shared under NDA during pilot evaluation.
+                                            </p>
                                         </div>
 
                                         <div className="p-8 rounded-[2rem] bg-card/50 border border-white/5">
@@ -308,23 +303,11 @@ export default function RigovoVsHireVuePage() {
                                         See the Difference for Yourself
                                     </h3>
                                     <p className="text-text-secondary mb-10 max-w-xl mx-auto text-lg">
-                                        Get a free 90-minute pilot. No contracts, no sales pressure. Just see if Rigovo works for your technical hiring.
+                                        Free pilot — 5 interviews, full forensic reports. No contracts, no sales pressure.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                        <a
-                                            href="https://calendly.com/rigovo"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand text-white font-black rounded-2xl hover:bg-brand-hover transition-all uppercase tracking-widest text-xs shadow-xl shadow-brand/20"
-                                        >
-                                            Book Free Pilot Call
-                                        </a>
-                                        <Link
-                                            href="/pricing"
-                                            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/5 text-white font-black rounded-2xl border border-white/10 hover:bg-white/10 transition-all uppercase tracking-widest text-xs"
-                                        >
-                                            View Pricing
-                                        </Link>
+                                        <CTAButton location="blog" className="px-10 py-4" />
+                                        <CTAButton variant="secondary" location="blog" className="px-10 py-4" />
                                     </div>
                                 </div>
                             </div>

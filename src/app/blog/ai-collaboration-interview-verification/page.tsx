@@ -235,19 +235,19 @@ export default function AICollaborationVerificationPage() {
                                         <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
                                             <div className="flex items-center gap-3 mb-3">
                                                 <Shield className="w-5 h-5 text-brand" />
-                                                <h4 className="text-lg font-bold text-white">Keystroke Dynamics</h4>
+                                                <h4 className="text-lg font-bold text-white">Input Behavior Analysis</h4>
                                             </div>
                                             <p className="text-text-secondary text-sm">
-                                                Everyone types differently—speed, rhythm, error patterns. When a candidate suddenly shifts from typing 40 WPM with frequent corrections to pasting 200 characters instantly, that&apos;s a clear signal. Advanced systems can detect copy-paste even without clipboard access.
+                                                Everyone codes differently—speed, rhythm, error patterns. When a candidate suddenly shifts from their normal coding pace to pasting large blocks instantly, that&apos;s a clear signal of external assistance.
                                             </p>
                                         </div>
                                         <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
                                             <div className="flex items-center gap-3 mb-3">
                                                 <Shield className="w-5 h-5 text-brand" />
-                                                <h4 className="text-lg font-bold text-white">Cognitive Load Mapping</h4>
+                                                <h4 className="text-lg font-bold text-white">Response Authenticity Analysis</h4>
                                             </div>
                                             <p className="text-text-secondary text-sm">
-                                                Complex questions should create observable cognitive load: longer pauses, micro-expressions of concentration, slower speech. If a candidate answers a hard algorithmic question with the same ease as stating their name, something is off.
+                                                Complex questions should create observable behavioral patterns: longer pauses, visible concentration, slower speech. If a candidate answers a hard algorithmic question with the same ease as stating their name, something is off.
                                             </p>
                                         </div>
                                         <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
@@ -256,7 +256,7 @@ export default function AICollaborationVerificationPage() {
                                                 <h4 className="text-lg font-bold text-white">Cross-Session Identity Verification</h4>
                                             </div>
                                             <p className="text-text-secondary text-sm">
-                                                The person who aces the technical screen should be the same person in the behavioral interview. Comparing voice patterns, facial micro-expressions, and communication styles across sessions catches proxy swaps.
+                                                The person who aces the technical screen should be the same person in the behavioral interview. Cross-session identity verification using multiple proprietary signals catches proxy swaps that manual review would miss.
                                             </p>
                                         </div>
                                     </div>

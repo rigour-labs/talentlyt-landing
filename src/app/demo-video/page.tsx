@@ -4,6 +4,7 @@ import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import Link from 'next/link';
 import { ArrowRight, Play, Shield, Brain, Activity } from 'lucide-react';
+import { CTA_CONFIG } from '@/components/ui/cta-button';
 
 export const metadata: Metadata = {
     title: 'Watch Demo | Rigovo AI Interview Platform in Action',
@@ -123,9 +124,9 @@ export default function DemoVideoPage() {
                                     <div className="w-12 h-12 rounded-xl bg-brand/10 flex items-center justify-center mb-4">
                                         <Activity className="w-6 h-6 text-brand" />
                                     </div>
-                                    <h3 className="font-bold text-lg mb-2">Interview Genome</h3>
+                                    <h3 className="font-bold text-lg mb-2">Verified Candidate Profile</h3>
                                     <p className="text-text-secondary text-sm">
-                                        Explore the detailed competency mapping and predictive job success scoring.
+                                        Explore the detailed competency mapping and hire confidence scoring.
                                     </p>
                                 </div>
                             </div>
@@ -139,10 +140,12 @@ export default function DemoVideoPage() {
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <Link
-                                    href="/request-demo"
+                                    href={CTA_CONFIG.primaryLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand text-white rounded-2xl hover:bg-brand-hover transition-all font-bold"
                                 >
-                                    Request Personalized Demo
+                                    {CTA_CONFIG.primaryText}
                                     <ArrowRight className="w-5 h-5" />
                                 </Link>
                                 <Link

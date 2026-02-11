@@ -56,7 +56,7 @@ export function USAProofSection() {
                             icon: ShieldCheck,
                             value: '15',
                             label: 'Simultaneous Signals',
-                            description: 'Voice biometrics, face liveness, gaze tracking — Rigovo verifies in real-time',
+                            description: 'Identity, behavior, and technical signals — Rigovo verifies in real-time',
                             color: 'text-blue-400',
                             bgColor: 'bg-blue-500/10 border-blue-500/20',
                         },
@@ -139,7 +139,7 @@ export function USAProofSection() {
                             {[
                                 'Separate AI architects from AI passengers',
                                 'Detect proxy candidates and deepfakes in real-time',
-                                'Portable Interview Genome for verified candidate talent',
+                                'Portable verified profiles for candidate talent',
                             ].map((item, i) => (
                                 <li key={i} className="flex items-start gap-3 text-text-secondary">
                                     <CheckCircle2 className="w-5 h-5 text-brand shrink-0 mt-0.5" />

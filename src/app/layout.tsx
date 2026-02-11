@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     'Formerly TalentLyt',
     'TalentLyt to Rigovo',
     'Maya AI interviewer',
-    'Interview Genome',
+    'interview verification platform',
     '15-signal verification technical screening',
     // Long-tail high-intent
     'best AI interview platform 2026',
@@ -123,6 +123,7 @@ export const metadata: Metadata = {
 import { ThemeProvider } from '@/components/theme-provider';
 import { AnalyticsProvider } from '@/components/analytics';
 import { GlobalBackground } from '@/components/ui/global-background';
+import { MobileStickyCTA } from '@/components/ui/mobile-sticky-cta';
 
 export default function RootLayout({
   children,
@@ -167,6 +168,29 @@ export default function RootLayout({
           }}
         />
 
+        {/* LinkedIn Insight Tag - Replace PARTNER_ID with your LinkedIn Ads partner ID */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              _linkedin_partner_id = "${process.env.NEXT_PUBLIC_LINKEDIN_PARTNER_ID || ''}";
+              window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+              window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+              (function(l) { if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};window.lintrk.q=[]} var s = document.getElementsByTagName("script")[0]; var b = document.createElement("script"); b.type = "text/javascript";b.async = true; b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js"; s.parentNode.insertBefore(b, s);})(window.lintrk);
+            `,
+          }}
+        />
+
+        {/* Meta (Facebook) Pixel - Replace PIXEL_ID with your Meta Ads pixel ID */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+              var pixelId = "${process.env.NEXT_PUBLIC_META_PIXEL_ID || ''}";
+              if (pixelId) { fbq('init', pixelId); fbq('track', 'PageView'); }
+            `,
+          }}
+        />
+
         {/* Preconnect for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -207,12 +231,12 @@ export default function RootLayout({
                     priceCurrency: 'USD',
                     description: 'Get The Pilot Pack for FREE with Promotional Coupon'
                   },
-                  description: 'Rigovo is your AI co-pilot for technical hiring. Maya AI conducts adaptive technical interviews while the Governor agent performs real-time 15-signal verification. Beta: 6,824 signal events analyzed, verifying authentic problem-solving and AI leadership.',
-                  featureList: '15-Signal Integrity Verification, Real-time Deepfake Detection, Proxy Candidate Identification, Automated Quality Auditing, Predictive Competency Mapping, Interview Genome, Conversational AI Maya',
+                  description: 'Rigovo is your AI co-pilot for technical hiring. Maya AI conducts adaptive technical interviews while running 15-signal forensic verification in real-time. Beta: 6,824 signal events analyzed across 82 interviews.',
+                  featureList: '15-Signal Integrity Verification, Real-time Fraud Detection, Proxy Candidate Detection, Identity Verification, Technical Assessment, AI-Assisted Cheating Detection, Conversational AI Maya',
                   copyrightYear: new Date().getFullYear(),
                   author: {
                     '@type': 'Organization',
-                    name: 'Rigour Labs Inc.',
+                    name: 'Rigour Labs',
                     url: 'https://rigovo.com',
                     logo: 'https://rigovo.com/logo.png',
                     sameAs: [
@@ -237,10 +261,10 @@ export default function RootLayout({
                   serviceType: 'AI Technical Interviewing',
                   provider: {
                     '@type': 'Organization',
-                    name: 'Rigour Labs Inc.'
+                    name: 'Rigour Labs'
                   },
                   areaServed: 'Worldwide',
-                  description: 'High-integrity technical screening using the Sentinel Hierarchy (15-signal verification + Predictive Competency Mapping).'
+                  description: 'High-integrity technical screening with 15-signal verification and AI-powered competency assessment.'
                 },
                 {
                   '@context': 'https://schema.org',
@@ -325,7 +349,7 @@ export default function RootLayout({
                       'name': 'What is an AI Interview Platform?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'An AI interview platform like Rigovo uses conversational agents to conduct technical screenings. Rigovo uniquely combines Maya AI (interviewer) with the Governor agent (verification) to provide 15-signal integrity checks, detecting deepfakes, proxy candidates, and AI-assisted cheating in real-time. This ensures you hire architects, not passengers. Beta: 6,824 signal events analyzed proving authentic technical leadership.'
+                        'text': 'An AI interview platform like Rigovo uses conversational AI agents to conduct technical screenings. Rigovo combines adaptive AI interviews with multi-agent forensic verification to provide 15-signal integrity checks, detecting deepfakes, proxy candidates, and AI-assisted cheating in real-time. This ensures you hire architects, not passengers.'
                       }
                     },
                     {
@@ -333,7 +357,7 @@ export default function RootLayout({
                       'name': 'How does Rigovo ensure integrity in AI interviews?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'Rigovo uses a Multi-Agent AI system featuring Maya (Conversational Lead) and a Forensic Engine to verify authentic problem-solving and AI leadership in real-time. Our Vision-Sync and Cognitive-Audit systems provide sub-millisecond consensus verification.'
+                        'text': 'Rigovo uses a Multi-Agent AI system that combines adaptive conversational interviews with real-time forensic verification. Multiple specialized agents work together to verify authentic problem-solving and technical leadership through 15-signal consensus verification.'
                       }
                     },
                     {
@@ -357,7 +381,7 @@ export default function RootLayout({
                       'name': 'What is interview integrity verification?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'Interview integrity verification ensures candidates are authentic and demonstrating genuine technical leadership. Rigovo provides verification through behavioral analysis, gaze tracking, and cognitive pattern analysis to ensure candidates architect solutions, not just prompt them.'
+                        'text': 'Interview integrity verification ensures candidates are authentic and demonstrating genuine technical leadership. Rigovo provides 15-signal verification covering identity, behavior, and technical integrity to ensure candidates architect solutions, not just prompt them.'
                       }
                     },
                     {
@@ -373,7 +397,7 @@ export default function RootLayout({
                       'name': 'How does Rigovo verify identity in interviews?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'Rigovo uses 15-signal verification including lip-sync analysis, voice biometrics, facial recognition consistency, and video feed analysis to verify candidate identity in real-time. Our Governor agent ensures the person you interview is the person you hire.'
+                        'text': 'Rigovo uses 15-signal forensic verification covering identity, behavior, and technical integrity to verify candidate identity continuously throughout the interview. The system ensures the person you interview is the person you hire.'
                       }
                     },
                     {
@@ -381,7 +405,7 @@ export default function RootLayout({
                       'name': 'What is the difference between Rigovo and Talently.ai?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'Rigovo and Talently.ai are different products. Rigovo provides 15-signal AI leadership verification and identity verification that Talently.ai lacks. Rigovo also offers Interview Genome (portable verified profiles) and 85% accurate job success prediction.'
+                        'text': 'Rigovo and Talently.ai are different products. Rigovo provides 15-signal forensic verification and identity verification that Talently.ai lacks. Rigovo verifies the human behind the screen — not just their answers — with proprietary integrity signals.'
                       }
                     },
                     {
@@ -389,7 +413,7 @@ export default function RootLayout({
                       'name': 'Can Rigovo verify candidate identity?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'Yes. Rigovo verifies candidate identity through continuous verification, voice biometrics, behavioral analysis, and cognitive pattern analysis. The system ensures the person being interviewed maintains consistent identity throughout the session.'
+                        'text': 'Yes. Rigovo verifies candidate identity through continuous multi-signal verification throughout the entire interview session. The system ensures the person being interviewed maintains consistent identity from start to finish.'
                       }
                     },
                     {
@@ -397,7 +421,7 @@ export default function RootLayout({
                       'name': 'How does Rigovo verify AI leadership vs AI following?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'Rigovo verifies AI leadership through keystroke dynamics, response timing patterns, problem-solving approach analysis, and cognitive load indicators. The system ensures candidates architect solutions rather than simply prompt AI tools for answers.'
+                        'text': 'Rigovo verifies genuine technical ability through proprietary behavioral signals and problem-solving analysis. The system ensures candidates architect solutions rather than simply prompt AI tools for answers.'
                       }
                     },
                     {
@@ -419,12 +443,12 @@ export default function RootLayout({
                     {
                       '@type': 'HowToStep',
                       'name': 'Enable AI Leadership Verification',
-                      'text': 'Rigovo automatically enables 15-signal verification including problem-solving analysis, voice biometrics, and gaze tracking.'
+                      'text': 'Rigovo automatically enables 15-signal verification covering identity, behavior, and technical integrity — no configuration required.'
                     },
                     {
                       '@type': 'HowToStep',
                       'name': 'AI Verifies in Real-Time',
-                      'text': 'The Governor agent continuously verifies authentic problem-solving, identity consistency, and AI leadership throughout the interview.'
+                      'text': 'Our forensic verification system continuously verifies authentic problem-solving, identity consistency, and AI leadership throughout the interview.'
                     },
                     {
                       '@type': 'HowToStep',
@@ -445,6 +469,7 @@ export default function RootLayout({
           >
             <GlobalBackground />
             {children}
+            <MobileStickyCTA />
           </ThemeProvider>
         </AnalyticsProvider>
         <Analytics />

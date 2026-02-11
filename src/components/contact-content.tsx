@@ -205,17 +205,20 @@ export function ContactContent() {
                         </div>
 
                         <div className="p-8 rounded-[2rem] bg-gradient-to-br from-brand/10 to-transparent border border-brand/20">
-                            <h3 className="text-xl font-bold mb-4">Looking for a demo?</h3>
-                            <p className="text-text-secondary text-sm mb-6">
-                                See Rigovo in action with a personalized walkthrough of our AI interview platform.
+                            <h3 className="text-xl font-bold mb-2">Skip the form — book a call</h3>
+                            <p className="text-text-secondary text-sm mb-4">
+                                Get on a 15-minute call with our team. No waiting for email replies.
                             </p>
-                            <Link
-                                href="/request-demo"
-                                className="inline-flex items-center gap-2 px-6 py-3 bg-brand text-white font-bold rounded-xl hover:bg-brand-hover transition-colors"
-                            >
-                                Request Demo
-                                <Send className="w-4 h-4" />
-                            </Link>
+                            <div className="rounded-xl overflow-hidden border border-white/10">
+                                <iframe
+                                    src="https://calendly.com/rigovo/?hide_gdpr_banner=1"
+                                    width="100%"
+                                    height="400"
+                                    frameBorder="0"
+                                    title="Book a call with Rigovo"
+                                    className="w-full"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>

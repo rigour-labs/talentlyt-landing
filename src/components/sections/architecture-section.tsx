@@ -308,10 +308,10 @@ export function ArchitectureSection() {
             color: "warning",
             visual: "orb", // Changed to orb for better connection feel
             features: [
-                { icon: Merge, text: "15-Signal Signal Synthesis" },
-                { icon: Cpu, text: "Continuous Learning Weights" },
-                { icon: TrendingUp, text: "85% Predictive Reliability" },
-                { icon: Dna, text: "Interview Genome Archiving" },
+                { icon: Merge, text: "15-Signal Synthesis" },
+                { icon: Cpu, text: "Continuous Learning" },
+                { icon: TrendingUp, text: "Predictive Confidence Scoring" },
+                { icon: Dna, text: "Verified Profile Archiving" },
                 { icon: BadgeCheck, text: "Verified Competency Record" }
             ]
         }

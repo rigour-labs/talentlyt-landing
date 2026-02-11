@@ -134,15 +134,15 @@ export default function InterviewIntegrityVerificationPage() {
                                 <div className="space-y-6">
                                     <div className="flex gap-4 p-6 rounded-2xl bg-white/[0.01] border border-white/5">
                                         <div className="w-2 h-2 rounded-full bg-brand mt-2.5" />
-                                        <p className="text-text-secondary"><strong className="text-white">Active Speaker Detection (SyncNet):</strong> We measure the sub-millisecond sync between vocal audio waves and lip-tensor movements.</p>
+                                        <p className="text-text-secondary"><strong className="text-white">Audio-Visual Synchronization:</strong> Detecting mismatches between what a candidate says and how their face moves — a telltale sign of deepfake proxies.</p>
                                     </div>
                                     <div className="flex gap-4 p-6 rounded-2xl bg-white/[0.01] border border-white/5">
                                         <div className="w-2 h-2 rounded-full bg-brand mt-2.5" />
-                                        <p className="text-text-secondary"><strong className="text-white">Keystroke Biometrics:</strong> Validating that the person who is talking is actually the person typing, based on rhythmic consistency.</p>
+                                        <p className="text-text-secondary"><strong className="text-white">Session Consistency Verification:</strong> Confirming that the same person is present and engaged throughout the entire interview, not swapping in and out.</p>
                                     </div>
                                     <div className="flex gap-4 p-6 rounded-2xl bg-white/[0.01] border border-white/5">
                                         <div className="w-2 h-2 rounded-full bg-brand mt-2.5" />
-                                        <p className="text-text-secondary"><strong className="text-white">Cognitive Jitter:</strong> Analyzing the pause patterns in speech versus the complexity of the current technical problem.</p>
+                                        <p className="text-text-secondary"><strong className="text-white">Behavioral Pattern Analysis:</strong> Monitoring for anomalies that correlate with external assistance, AI-generated responses, or rehearsed proxy behavior.</p>
                                     </div>
                                 </div>
                             </section>
@@ -168,10 +168,10 @@ export default function InterviewIntegrityVerificationPage() {
                             <section className="mb-16">
                                 <h2 className="text-3xl font-black text-white mb-8 tracking-tight">The Future: Portable Integrity</h2>
                                 <p className="text-text-secondary leading-relaxed mb-6">
-                                    In 2026, companies that ignore interview integrity are effectively operating with an &quot;open border&quot; policy for their culture and their codebase. But for the candidate, integrity isn&apos;t just about detection—it&apos;s about building a <strong className="text-white">portable Interview Genome</strong>.
+                                    In 2026, companies that ignore interview integrity are effectively operating with an &quot;open border&quot; policy for their culture and their codebase. But for the candidate, integrity isn&apos;t just about detection—it&apos;s about building a <strong className="text-white">portable verified profile</strong>.
                                 </p>
                                 <p className="text-text-secondary leading-relaxed">
-                                    A verified session doesn&apos;t just catch fraud; it produces a <strong className="text-white">85% accurate job success prediction</strong> and a signed, portable profile that traveling with the candidate. This is how we ensure that trust scales across the entire technical ecosystem.
+                                    A verified session doesn&apos;t just catch fraud; it produces a <strong className="text-white">validated job success prediction</strong> and a signed, portable profile that travels with the candidate. This is how we ensure that trust scales across the entire technical ecosystem.
                                 </p>
                             </section>
                         </div>

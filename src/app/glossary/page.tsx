@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { BookOpen, Search } from 'lucide-react';
+import { CTAButton } from '@/components/ui/cta-button';
 
 export const metadata: Metadata = {
     title: 'AI Interview Glossary | Technical Hiring Terms Explained',
@@ -57,12 +58,7 @@ const glossaryTerms = [
     },
     {
         term: '15-Signal Forensic Audit',
-        definition: 'Rigovo\'s comprehensive integrity stack that analyzes 13 distinct signal types—including lip-sync, voice biometrics, and gaze tracking—to ensure absolute session authenticity.',
-        category: 'Integrity',
-    },
-    {
-        term: 'Gaze Tracking',
-        definition: 'Technology that monitors where a candidate is looking during an interview to understand their problem-solving approach and verify authentic engagement.',
+        definition: 'Rigovo\'s comprehensive integrity stack that simultaneously analyzes 15 proprietary signal categories covering identity, behavior, and technical depth to ensure absolute session authenticity.',
         category: 'Integrity',
     },
     {
@@ -72,14 +68,9 @@ const glossaryTerms = [
         relatedLink: '/blog/interview-integrity-verification-guide',
     },
     {
-        term: 'Interview Genome',
-        definition: 'A portable, cryptographically-signed record of a candidate\'s verified skills and interview performance. A portable intelligence standard for engineering hiring that travels with the candidate.',
+        term: 'Verified Candidate Profile',
+        definition: 'A portable, cryptographically-signed record of a candidate\'s verified skills and interview performance that travels with the candidate across organizations.',
         category: 'Platform',
-    },
-    {
-        term: 'Keystroke Dynamics',
-        definition: 'Analysis of typing patterns, speed, and rhythm to understand how candidates approach problem-solving and verify authentic code authorship.',
-        category: 'Integrity',
     },
     {
         term: 'LCP (Largest Contentful Paint)',
@@ -105,7 +96,7 @@ const glossaryTerms = [
     },
     {
         term: 'Sentinel Hierarchy',
-        definition: 'Rigovo\'s multi-layered integrity verification architecture that includes Vision-Sync and Cognitive-Audit systems working together to ensure interview authenticity.',
+        definition: 'Rigovo\'s multi-layered integrity verification architecture where multiple specialized agents work together through consensus to ensure interview authenticity.',
         category: 'Platform',
     },
     {
@@ -120,8 +111,8 @@ const glossaryTerms = [
         category: 'Assessment',
     },
     {
-        term: 'Predictive Job Success',
-        definition: 'An ML-driven model that analyzes interview performance and behavioral signals to predict a candidate\'s likelihood of success in a specific role with 85% accuracy.',
+        term: 'Hire Confidence Scoring',
+        definition: 'An AI-powered model that analyzes interview performance and behavioral signals to predict a candidate\'s likelihood of success in a specific role.',
         category: 'Assessment',
     },
     {
@@ -131,8 +122,8 @@ const glossaryTerms = [
         relatedLink: '/blog/reduce-hiring-bias-ai',
     },
     {
-        term: 'Vision-Sync',
-        definition: 'Rigovo\'s multi-modal monitoring system that synchronizes video, audio, and behavioral data to create a comprehensive view of the interview session.',
+        term: 'Multi-Modal Verification',
+        definition: 'Rigovo\'s approach to synchronizing multiple data streams during an interview session to create a comprehensive and verified view of candidate authenticity.',
         category: 'Platform',
     },
 ];
@@ -209,12 +200,7 @@ export default function GlossaryPage() {
                             <p className="text-text-secondary mb-6 max-w-xl mx-auto">
                                 Experience how Rigovo brings multi-agent AI and integrity verification to life in technical interviews.
                             </p>
-                            <Link
-                                href="/request-demo"
-                                className="inline-flex items-center gap-2 px-8 py-4 bg-brand text-white font-bold rounded-2xl hover:shadow-[0_0_30px_rgba(0,102,255,0.4)] transition-all"
-                            >
-                                Start Free Trial
-                            </Link>
+                            <CTAButton location="glossary" />
                         </div>
                     </div>
                 </section>

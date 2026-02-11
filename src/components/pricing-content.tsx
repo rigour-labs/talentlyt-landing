@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ShieldCheck, Zap, Globe, ArrowRight, Sparkles, Activity, Check, Minus, HelpCircle, CreditCard, Lock } from 'lucide-react';
 import { analytics, normalizeTierName } from '@/lib/analytics';
+import { CTA_CONFIG } from '@/components/ui/cta-button';
 
 export function PricingContent() {
     const tiers = [
@@ -21,8 +22,8 @@ export function PricingContent() {
                 'Deepfake & Voice Forensics',
                 '7-Day Data Retention'
             ],
-            cta: 'Book Pilot Call',
-            ctaLink: 'https://calendly.com/rigovo',
+            cta: CTA_CONFIG.compactText,
+            ctaLink: CTA_CONFIG.primaryLink,
             highlight: false,
             tag: 'OFFER ACTIVE',
             woo: 'Contact us to receive a 100% discount coupon code for your pilot session.'
@@ -37,12 +38,12 @@ export function PricingContent() {
                 'Unlimited Minutes',
                 'Real-time Maya AI',
                 'Adversarial Integrity Detection',
-                'Voice Biometrics (ECAPA-TDNN)',
+                'Voice Identity Verification',
                 'Unlimited Team Seats',
                 '30-Day Data Retention'
             ],
-            cta: 'Book Pilot Call',
-            ctaLink: 'https://calendly.com/rigovo',
+            cta: CTA_CONFIG.compactText,
+            ctaLink: CTA_CONFIG.primaryLink,
             highlight: false,
             tag: 'Pay As You Go',
             woo: 'Ideal for agencies and variable hiring needs. Pay only for what you use.'
@@ -55,17 +56,17 @@ export function PricingContent() {
             valueTag: 'Rate: $0.083 / min',
             features: [
                 'All Premium Features',
-                'Job Success Prediction',
-                'Interview Genome Export',
+                'Hire Confidence Scoring',
+                'Candidate Profile Export',
                 '3,000 Minutes Included',
                 '$0.10/min Overage Rate',
                 'Priority Support (24h)'
             ],
-            cta: 'Book Pilot Call',
-            ctaLink: 'https://calendly.com/rigovo',
+            cta: CTA_CONFIG.compactText,
+            ctaLink: CTA_CONFIG.primaryLink,
             highlight: true,
             tag: 'Most Popular',
-            woo: 'Includes all intelligence features: Success Prediction, Genome Building, and Maya Whispering.'
+            woo: 'Includes all intelligence features: Hire Confidence Scoring, Candidate Profile Building, and advanced forensic analysis.'
         },
         {
             name: 'The Fortress',
@@ -74,17 +75,17 @@ export function PricingContent() {
             description: 'Unlimited Scale. Forensic Sovereignty.',
             valueTag: 'Value: Full Intelligence Stack',
             features: [
-                'Interview Marketplace Access',
-                'Federated Learning Support',
-                'Bias Auditor (EEOC)',
+                'Pre-Verified Talent Network',
+                'Cross-Organization Learning',
+                'Bias-Reduced Assessments (EEOC)',
                 'White-Label Intelligence',
-                'SAML / SSO (WorkOS)',
+                'SAML / SSO Integration',
                 'Dedicated Slack + CSM'
             ],
-            cta: 'Book Pilot Call',
-            ctaLink: 'https://calendly.com/rigovo',
+            cta: CTA_CONFIG.compactText,
+            ctaLink: CTA_CONFIG.primaryLink,
             highlight: false,
-            woo: 'Includes All-Access Interview Genome and Unlimited Sentinel Forensic scans.'
+            woo: 'Includes Full Candidate Intelligence Suite and Unlimited Forensic Scans.'
         }
     ];
 
@@ -187,7 +188,7 @@ export function PricingContent() {
                                 </div>
 
                                 <div className="mb-8">
-                                    <div className="text-[10px] font-bold text-white/50 uppercase tracking-widest mb-3 flex items-center gap-2">
+                                    <div className="text-[10px] font-bold text-white/70 uppercase tracking-widest mb-3 flex items-center gap-2">
                                         <Sparkles className="w-3 h-3 text-brand" />
                                         {tier.valueTag}
                                     </div>
@@ -297,7 +298,7 @@ export function PricingContent() {
                         </div>
                         <h2 className="text-4xl sm:text-5xl font-black mb-6 tracking-tighter">Sentinel <span className="text-brand">Verification</span></h2>
                         <p className="text-text-secondary max-w-2xl mx-auto text-lg font-medium">
-                            Deep post-interview analysis for high-stakes hires. <br className="hidden md:block" /> Powered by <span className="text-white">SyncNet</span> and <span className="text-white">ECAPA-TDNN</span>.
+                            Deep post-interview analysis for high-stakes hires. <br className="hidden md:block" /> Powered by proprietary <span className="text-white">multi-modal forensic AI</span>.
                         </p>
                     </div>
 
@@ -307,7 +308,7 @@ export function PricingContent() {
                                 name: 'Sentinel Basic',
                                 price: '$35',
                                 unit: '/ Scan',
-                                features: ['Lip-Sync & Voice Bio', 'SyncNet CNN Analysis', 'Deepfake Detection', 'Evidence PDF Report'],
+                                features: ['Identity & Voice Verification', 'Deepfake Detection', 'Integrity Scoring', 'Evidence PDF Report'],
                                 availability: 'Available Now',
                                 highlight: false
                             },
@@ -315,7 +316,7 @@ export function PricingContent() {
                                 name: 'Sentinel Advanced',
                                 price: '$50',
                                 unit: '/ Scan',
-                                features: ['v-JEPA2 Video Analysis', 'Temporal Consistency', 'Motion Pattern Analysis', 'Enhanced Reasoning'],
+                                features: ['Advanced Video Analysis', 'Temporal Consistency', 'Motion Pattern Analysis', 'Enhanced Forensic Reasoning'],
                                 availability: 'Q2 2026',
                                 highlight: true
                             },
@@ -323,7 +324,7 @@ export function PricingContent() {
                                 name: 'Sentinel Premium',
                                 price: '$75',
                                 unit: '/ Scan',
-                                features: ['NVIDIA Alpamayo 10B', 'Behavioral Reasoning', 'Natural Language Logic', 'Forensic Evidence Chain'],
+                                features: ['Next-Gen AI Analysis', 'Behavioral Reasoning', 'Natural Language Logic', 'Full Forensic Evidence Chain'],
                                 availability: 'Q3 2026',
                                 highlight: false
                             }
@@ -376,11 +377,11 @@ export function PricingContent() {
                                 <tbody className="divide-y divide-white/5">
                                     {[
                                         { feature: 'Interview Model', talent: 'Live Multi-Agent Voice', trad: 'Asynchronous / One-way' },
-                                        { feature: 'Job Success Prediction', talent: 'AI-Forecasting (85% Accuracy)', trad: 'Manual Intuition / None' },
-                                        { feature: 'Candidate Intelligence', talent: 'Portable Interview Genomes', trad: 'Static PDF Resumes' },
-                                        { feature: 'Integrity Verification', talent: '15-Signal Adversarial', trad: 'Basic Human Review' },
+                                        { feature: 'Hire Confidence', talent: 'AI-Powered Predictive Scoring', trad: 'Manual Intuition / None' },
+                                        { feature: 'Candidate Intelligence', talent: 'Portable Verified Profiles', trad: 'Static PDF Resumes' },
+                                        { feature: 'Integrity Verification', talent: '15-Signal Forensic Analysis', trad: 'Basic Human Review' },
                                         { feature: 'Real-time Adaptation', talent: 'Claim Extraction & Probing', trad: 'Static Question Bank' },
-                                        { feature: 'Learning Model', talent: 'Federated Collective Intelligence', trad: 'Siloed / Zero-Learning' },
+                                        { feature: 'Learning Model', talent: 'Cross-Organization Intelligence', trad: 'Siloed / Zero-Learning' },
                                         { feature: 'Feature Availability', talent: 'Zero Gates (All Tiers)', trad: 'Pay-for-Access Gates' },
                                     ].map((row, i) => (
                                         <tr key={i} className="group/row hover:bg-white/[0.02] transition-colors">
@@ -422,19 +423,19 @@ export function PricingContent() {
                         {[
                             {
                                 q: "Are the 'Intelligence' features an extra cost?",
-                                a: "No. In line with our 'No Feature Gates' philosophy, Job Success Prediction, Interview Genome, and Maya Whisper are included in our standard tiers. We believe intelligence shouldn't be a premium add-on."
+                                a: "No. In line with our 'No Feature Gates' philosophy, Hire Confidence Scoring, Candidate Profiles, and Panel Mode are included in our standard tiers. We believe intelligence shouldn't be a premium add-on."
                             },
                             {
-                                q: "How does the Interview Genome work?",
-                                a: "Every interview conducted builds the candidate's verified genome. Candidates can export this signed JSON to other Rigovo-enabled companies, and you can browse the Marketplace for pre-verified talent."
+                                q: "How do verified candidate profiles work?",
+                                a: "Every interview conducted builds a verified candidate profile. Candidates can export this cryptographically-signed record to other Rigovo-enabled companies, and you can browse the network for pre-verified talent."
                             },
                             {
                                 q: "Why minutes instead of per-interview?",
                                 a: "Transparency. A 15-minute verification shouldn't cost as much as a 60-minute technical deep-dive. Minutes ensures you only pay for exactly what you consume."
                             },
                             {
-                                q: "What is Federated Learning?",
-                                a: "It's how we improve. We learn from millions of anonymized interview signals across organizations without ever sharing raw candidate data, ensuring your predictions are always world-class."
+                                q: "How does Rigovo improve over time?",
+                                a: "We learn from anonymized interview signals across organizations without ever sharing raw candidate data, ensuring assessment quality continuously improves."
                             }
                         ].map((faq, i) => (
                             <div key={i} className="group p-8 rounded-[2.5rem] bg-white/[0.02] border border-white/5 hover:border-brand/20 transition-all duration-500">
@@ -455,25 +456,25 @@ export function PricingContent() {
                 {/* Trust Footer */}
                 <div className="flex flex-col items-center gap-12 pt-16 border-t border-white/5">
                     <div className="flex flex-wrap items-center justify-center gap-8">
-                        <div className="flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-white/[0.02] border border-white/5 group grayscale hover:grayscale-0 transition-all hover:bg-white/[0.04]">
-                            <CreditCard className="w-4 h-4 text-text-muted group-hover:text-brand" />
-                            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-text-muted group-hover:text-white">Powered by Stripe</span>
+                        <div className="flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-white/[0.02] border border-white/5 group transition-all hover:bg-white/[0.04]">
+                            <CreditCard className="w-4 h-4 text-white/60 group-hover:text-brand" />
+                            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-white/60 group-hover:text-white">Powered by Stripe</span>
                         </div>
-                        <div className="flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-white/[0.02] border border-white/5 group grayscale hover:grayscale-0 transition-all hover:bg-white/[0.04]">
-                            <Lock className="w-4 h-4 text-text-muted group-hover:text-green-500" />
-                            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-text-muted group-hover:text-white">PCI DSS Compliant</span>
+                        <div className="flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-white/[0.02] border border-white/5 group transition-all hover:bg-white/[0.04]">
+                            <Lock className="w-4 h-4 text-white/60 group-hover:text-green-500" />
+                            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-white/60 group-hover:text-white">PCI DSS Compliant</span>
                         </div>
-                        <div className="flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-white/[0.02] border border-white/5 group grayscale hover:grayscale-0 transition-all hover:bg-white/[0.04]">
-                            <ShieldCheck className="w-4 h-4 text-text-muted group-hover:text-blue-500" />
-                            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-text-muted group-hover:text-white">Bank-Grade Invoicing</span>
+                        <div className="flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-white/[0.02] border border-white/5 group transition-all hover:bg-white/[0.04]">
+                            <ShieldCheck className="w-4 h-4 text-white/60 group-hover:text-blue-500" />
+                            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-white/60 group-hover:text-white">Bank-Grade Invoicing</span>
                         </div>
                     </div>
                     <div className="text-center space-y-4">
-                        <p className="text-[10px] text-text-muted max-w-xl leading-relaxed font-bold uppercase tracking-widest">
-                            Prices in USD. India: ₹18/min. Pakistan: $0.18/min.
+                        <p className="text-xs text-white/60 max-w-xl leading-relaxed font-bold uppercase tracking-widest">
+                            Prices in USD. India: ₹18/min. UAE, Europe, Asia &amp; Global pricing available.
                         </p>
-                        <p className="text-[9px] text-white/20 max-w-2xl leading-relaxed">
-                            Rigovo uses legally-defensible biometric chain-of-custody protocols. All pricing is subject to our <Link href="/terms" className="underline hover:text-brand">Terms of Service</Link> and data retention schedules.
+                        <p className="text-xs text-white/50 max-w-2xl leading-relaxed">
+                            All pricing is subject to our <Link href="/terms" className="underline hover:text-brand text-white/60">Terms of Service</Link> and data retention schedules.
                         </p>
                     </div>
                 </div>

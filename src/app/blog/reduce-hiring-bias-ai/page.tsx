@@ -163,7 +163,7 @@ export default function ReduceHiringBiasPage() {
                                     Bias is a complex human challenge that we can mitigate with the right tools. By focusing on technical proficiency and leveraging high-reliability predictive models, we can build teams that are both diverse and highly capable.
                                 </p>
                                 <p className="text-text-secondary leading-relaxed">
-                                    With the <strong className="text-white">Interview Genome</strong>, we ensure that a candidate&apos;s verified skills are portable—allowing them to skip the bias-prone &quot;first glance&quot; of traditional resume screenings in the future.
+                                    With <strong className="text-white">verified candidate profiles</strong>, we ensure that a candidate&apos;s verified skills are portable—allowing them to skip the bias-prone &quot;first glance&quot; of traditional resume screenings in the future.
                                 </p>
                             </section>
                         </div>

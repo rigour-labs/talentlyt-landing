@@ -117,7 +117,7 @@ export default function MultiAgentAIPage() {
                                         <div>
                                             <h3 className="text-xl font-bold text-white mb-2">The 15-Signal Verification Monitor</h3>
                                             <p className="text-text-secondary text-base leading-relaxed">
-                                                Monitoring session integrity across 12 distinct signal types. From lip-sync to voice biometrics, this agent ensures a consistent and high-trust evaluation record.
+                                                Monitoring session integrity across 15 proprietary signal types covering identity, behavior, and technical depth. This agent ensures a consistent and high-trust evaluation record.
                                             </p>
                                         </div>
                                     </div>

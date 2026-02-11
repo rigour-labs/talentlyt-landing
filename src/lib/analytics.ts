@@ -35,8 +35,8 @@ declare global {
 interface CTAClickedEvent {
   event: 'cta_clicked';
   properties: {
-    location: 'hero' | 'navbar' | 'footer' | 'pricing' | 'bottom_cta' | 'blog' | 'comparison' | 'announcement_bar' | 'mobile_menu' | 'floating_cta' | 'exit_intent' | 'product';
-    cta_type: 'start_trial' | 'watch_demo' | 'contact_sales' | 'book_demo' | 'get_started' | 'scale_pipeline' | 'start_pilot' | 'request_coupon' | 'book_pilot_call';
+    location: 'hero' | 'navbar' | 'navbar_mobile' | 'footer' | 'pricing' | 'bottom_cta' | 'blog' | 'comparison' | 'announcement_bar' | 'mobile_menu' | 'mobile_sticky' | 'floating_cta' | 'exit_intent' | 'product' | 'compare' | 'glossary' | 'contact' | 'security' | 'usa_hero' | 'usa_cta' | 'uae_hero' | 'uae_cta';
+    cta_type: 'start_trial' | 'watch_demo' | 'contact_sales' | 'book_demo' | 'get_started' | 'scale_pipeline' | 'start_pilot' | 'request_coupon' | 'book_pilot_call' | 'view_sample_report';
     cta_text: string;
     destination_url?: string;
   };

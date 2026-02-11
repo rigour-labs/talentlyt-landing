@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { PricingContent } from '@/components/pricing-content';
+import { PageAnalytics } from '@/components/page-analytics';
 
 export const metadata: Metadata = {
     title: 'Pricing — Usage-Based AI Interview Platform',
@@ -23,6 +24,7 @@ export default function PricingPage() {
     return (
         <div className="min-h-screen bg-background flex flex-col">
             <Navbar />
+            <PageAnalytics pagePath="/pricing" />
             <main id="main-content" role="main" className="pt-36 pb-16">
                 <PricingContent />
             </main>

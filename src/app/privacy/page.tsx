@@ -74,7 +74,7 @@ export default function PrivacyPolicyPage() {
                                 <div className="pl-4 border-l-2 border-brand/20">
                                     <h3 className="font-semibold text-white mb-2">Integrity Verification Data</h3>
                                     <p className="text-text-secondary text-sm leading-relaxed">
-                                        Our 15-Signal Forensic Engine analyzes patterns to verify authentic problem-solving and AI leadership capabilities. This includes keystroke dynamics, audio-visual sync, and behavioral consistency metrics. We do <strong className="text-white">not</strong> collect biometric templates or create permanent identity databases.
+                                        Our 15-Signal Forensic Engine analyzes patterns across identity, behavior, and technical integrity to verify authentic problem-solving and AI leadership capabilities. We do <strong className="text-white">not</strong> collect biometric templates or create permanent identity databases.
                                     </p>
                                 </div>
 
@@ -284,7 +284,7 @@ export default function PrivacyPolicyPage() {
 
                             <div className="text-text-secondary text-sm leading-relaxed space-y-4">
                                 <p>
-                                    Rigovo is based in the United States. If you&apos;re located outside the US, your data may be transferred to and processed in the US or other countries where our cloud providers operate.
+                                    Rigovo is based in India. If you&apos;re located outside India, your data may be transferred to and processed in India or other countries where our cloud providers operate.
                                 </p>
                                 <p>
                                     For transfers from the European Economic Area (EEA), UK, or Switzerland, we rely on Standard Contractual Clauses (SCCs) approved by the European Commission. We also implement supplementary technical measures where required.
@@ -360,7 +360,7 @@ export default function PrivacyPolicyPage() {
                                     <a href="mailto:dpo@rigovo.com" className="text-brand hover:underline">dpo@rigovo.com</a>
                                 </p>
                                 <p>
-                                    <span className="text-text-muted">Address:</span> Rigour Labs Inc., Delaware, United States
+                                    <span className="text-text-muted">Address:</span> Rigour Labs, Pune, India
                                 </p>
                             </div>
                             <p className="text-text-muted text-xs mt-6">

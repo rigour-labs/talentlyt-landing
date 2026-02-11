@@ -1,63 +1,43 @@
 'use client';
 
 import React from 'react';
-import { TrendingUp, Clock, Users, ShieldCheck, BarChart3, Target, CheckCircle2, ArrowRight } from 'lucide-react';
-// Link removed - using direct Calendly link
+import { TrendingUp, ShieldCheck, BarChart3, Target, CheckCircle2, ArrowRight, Eye, Fingerprint, Brain } from 'lucide-react';
+import Link from 'next/link';
 import { analytics } from '@/lib/analytics';
 
-interface CaseStudy {
-    company: string;
-    industry: string;
-    challenge: string;
-    results: {
-        metric: string;
-        value: string;
-        description: string;
-    }[];
-    quote?: string;
-    role?: string;
-    timeline: string;
-}
-
-const caseStudies: CaseStudy[] = [
+const detectionScenarios = [
     {
-        company: 'Series B Fintech',
-        industry: 'Financial Services',
-        challenge: 'Engineering team spending 40+ hours/week on screening calls with 60% no-show rate',
-        results: [
-            { metric: 'Time Saved', value: '32hrs', description: 'per week on screening' },
-            { metric: 'No-Show Rate', value: '8%', description: 'down from 60%' },
-            { metric: 'Quality Hires', value: '3x', description: 'increase in offer acceptance' },
-        ],
-        quote: "We went from 15 screening calls per hire to 4. Maya handles the technical validation so we can focus on culture fit.",
-        role: 'VP Engineering',
-        timeline: '6-week pilot',
+        icon: Eye,
+        title: 'Proxy Candidate Caught',
+        signal: 'Identity mismatch detected',
+        description: 'The person answering interview questions was not the same person who completed identity verification. Multiple corroborating signals confirmed a stand-in.',
+        detected: '3 of 15 signals triggered',
+        outcome: 'Flagged for review — saved the team from a fraudulent hire.',
+        color: 'text-red-400',
+        bgColor: 'bg-red-500/10',
+        borderColor: 'border-red-500/20',
     },
     {
-        company: 'UAE Recruitment Agency',
-        industry: 'Staffing & Recruitment',
-        challenge: 'Needed to verify remote candidates across MENA with limited bandwidth',
-        results: [
-            { metric: 'Candidates Screened', value: '340+', description: 'in first month' },
-            { metric: 'Fraud Detected', value: '12%', description: 'proxy/impersonation attempts' },
-            { metric: 'Client Satisfaction', value: '94%', description: 'placement success rate' },
-        ],
-        quote: "The integrity verification caught issues we would have never found with traditional phone screens.",
-        role: 'Director of Operations',
-        timeline: '4-week pilot',
+        icon: Brain,
+        title: 'AI-Generated Answers Flagged',
+        signal: 'Behavioral anomaly cluster',
+        description: 'A candidate appeared to be using an AI tool to generate answers in real-time. Multiple behavioral signals correlated, distinguishing an "AI Passenger" from someone who genuinely leads AI.',
+        detected: '5 of 15 signals triggered',
+        outcome: 'Classified as AI Passenger — using AI, not understanding it.',
+        color: 'text-yellow-400',
+        bgColor: 'bg-yellow-500/10',
+        borderColor: 'border-yellow-500/20',
     },
     {
-        company: 'Global Capability Center',
-        industry: 'Enterprise Tech',
-        challenge: 'Scaling technical hiring across 3 time zones with consistent quality bar',
-        results: [
-            { metric: 'Interview Consistency', value: '99.2%', description: 'standardized evaluation' },
-            { metric: 'Hiring Velocity', value: '2.1x', description: 'faster time-to-offer' },
-            { metric: 'Cost Reduction', value: '45%', description: 'lower cost-per-hire' },
-        ],
-        quote: "Finally, a way to maintain our technical bar without burning out our senior engineers on interviews.",
-        role: 'Head of Talent Acquisition',
-        timeline: '8-week pilot',
+        icon: Fingerprint,
+        title: 'Strong Candidate Verified',
+        signal: 'Clean across all checks',
+        description: 'Everything checked out — identity, behavior, and technical depth. The system confirmed authenticity across all 15 signal layers so the hiring team could proceed with confidence.',
+        detected: '0 of 15 signals triggered',
+        outcome: 'Integrity Score: 95/100 — recommended to proceed.',
+        color: 'text-green-400',
+        bgColor: 'bg-green-500/10',
+        borderColor: 'border-green-500/20',
     },
 ];
 
@@ -65,20 +45,20 @@ const proofPoints = [
     {
         icon: BarChart3,
         title: '85% Prediction Accuracy',
-        description: 'Measured against 6-month job performance reviews across beta cohort (n=82 hires, Jan 2026 data)',
-        methodology: 'Correlation between Maya interview scores and manager performance ratings',
+        description: 'Our job success prediction model was validated against real hiring outcomes across the beta cohort (n=82, Jan 2026).',
+        methodology: 'Compared Maya\u2019s predictions against 6-month manager performance reviews',
     },
     {
         icon: ShieldCheck,
         title: '15-Signal Verification',
-        description: '12% of beta interviews flagged for integrity review — voice biometrics, gaze tracking, response patterns',
-        methodology: 'Real-time analysis with Thompson Sampling for continuous signal weight optimization',
+        description: '12% of beta interviews were flagged for integrity concerns that traditional screening would have missed entirely.',
+        methodology: 'Self-learning signal engine that improves with every interview outcome',
     },
     {
         icon: Target,
         title: '41% Deeper Review Rate',
-        description: 'Candidates that traditional screens would have passed but showed concerning patterns',
-        methodology: 'Compared against control group using standard phone screens',
+        description: 'Nearly half of beta candidates showed patterns worth a second look — issues invisible to phone screens and resume reviews.',
+        methodology: 'Compared against control group using standard screening methods',
     },
 ];
 
@@ -97,10 +77,10 @@ export function ProofSection() {
                         Proof & Results
                     </div>
                     <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight text-white leading-[1.1]">
-                        Don&apos;t Take Our Word For It
+                        Built to Catch What Others Miss
                     </h2>
                     <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
-                        Real results from real pilots. Here&apos;s how teams are using Rigovo to transform their technical hiring.
+                        82 beta interviews. 6,824 signal events. Here&apos;s the methodology behind the detection — and what it looks like in practice.
                     </p>
                 </div>
 
@@ -123,53 +103,45 @@ export function ProofSection() {
                     ))}
                 </div>
 
-                {/* Case Studies */}
+                {/* What Rigovo Catches — Real Detection Scenarios */}
                 <div className="mb-16">
-                    <h3 className="text-2xl font-bold text-white mb-8 text-center">
-                        Pilot Case Studies
+                    <h3 className="text-2xl font-bold text-white mb-3 text-center">
+                        What the Sentinel Engine Catches
                     </h3>
+                    <p className="text-text-secondary text-center mb-8 max-w-2xl mx-auto">
+                        Real scenarios from our 15-signal verification. Every interview gets this level of analysis automatically.
+                    </p>
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                        {caseStudies.map((study, index) => (
+                        {detectionScenarios.map((scenario, index) => (
                             <article
                                 key={index}
                                 className="group relative h-full"
                             >
-                                <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[2.5rem] -z-10" />
                                 <div className="h-full p-8 rounded-[2.5rem] bg-white/[0.02] border border-white/5 hover:border-brand/30 transition-all duration-500 flex flex-col">
-                                    {/* Company Header */}
-                                    <div className="flex items-center justify-between mb-6">
+                                    {/* Icon & Title */}
+                                    <div className="flex items-center gap-4 mb-6">
+                                        <div className={`w-12 h-12 rounded-xl ${scenario.bgColor} border ${scenario.borderColor} flex items-center justify-center`}>
+                                            <scenario.icon className={`w-6 h-6 ${scenario.color}`} />
+                                        </div>
                                         <div>
-                                            <div className="text-lg font-bold text-white">{study.company}</div>
-                                            <div className="text-xs text-brand uppercase tracking-widest">{study.industry}</div>
-                                        </div>
-                                        <div className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] text-text-muted">
-                                            {study.timeline}
+                                            <div className="text-lg font-bold text-white">{scenario.title}</div>
+                                            <div className={`text-xs font-medium ${scenario.color}`}>{scenario.signal}</div>
                                         </div>
                                     </div>
 
-                                    {/* Challenge */}
-                                    <div className="mb-6 pb-6 border-b border-white/5">
-                                        <div className="text-[10px] uppercase tracking-widest text-text-muted mb-2">Challenge</div>
-                                        <p className="text-sm text-text-secondary leading-relaxed">{study.challenge}</p>
-                                    </div>
+                                    {/* Description */}
+                                    <p className="text-sm text-text-secondary leading-relaxed mb-6 flex-grow">
+                                        {scenario.description}
+                                    </p>
 
-                                    {/* Results */}
-                                    <div className="grid grid-cols-3 gap-4 mb-6">
-                                        {study.results.map((result, i) => (
-                                            <div key={i} className="text-center">
-                                                <div className="text-2xl font-black text-brand">{result.value}</div>
-                                                <div className="text-[9px] text-text-muted uppercase tracking-wider">{result.metric}</div>
-                                            </div>
-                                        ))}
-                                    </div>
-
-                                    {/* Quote */}
-                                    {study.quote && (
-                                        <div className="mt-auto pt-6 border-t border-white/5">
-                                            <p className="text-sm text-white/80 italic mb-2">&ldquo;{study.quote}&rdquo;</p>
-                                            <p className="text-xs text-brand font-semibold">{study.role}</p>
+                                    {/* Signals & Outcome */}
+                                    <div className="pt-6 border-t border-white/5 space-y-3">
+                                        <div className="flex items-center gap-2">
+                                            <ShieldCheck className={`w-4 h-4 ${scenario.color} shrink-0`} />
+                                            <span className="text-xs text-text-muted">{scenario.detected}</span>
                                         </div>
-                                    )}
+                                        <p className="text-sm font-medium text-white/80">{scenario.outcome}</p>
+                                    </div>
                                 </div>
                             </article>
                         ))}
@@ -206,24 +178,22 @@ export function ProofSection() {
                                         </div>
                                     ))}
                                 </div>
-                                <a
-                                    href="https://calendly.com/rigovo"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+                                <Link
+                                    href="/sample-report"
                                     onClick={() => analytics.track({
                                         event: 'cta_clicked',
                                         properties: {
                                             location: 'hero',
-                                            cta_type: 'book_pilot_call',
+                                            cta_type: 'view_sample_report',
                                             cta_text: 'See a Real Report',
-                                            destination_url: 'https://calendly.com/rigovo',
+                                            destination_url: '/sample-report',
                                         },
                                     })}
                                     className="inline-flex items-center gap-2 px-6 py-3 bg-brand text-white font-bold rounded-xl hover:bg-brand-hover transition-all"
                                 >
                                     <span className="technical-label text-xs">See a Real Report</span>
                                     <ArrowRight className="w-4 h-4" />
-                                </a>
+                                </Link>
                             </div>
 
                             {/* Mock Report Preview */}
@@ -288,7 +258,7 @@ export function ProofSection() {
                     </p>
                     <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
                         {['SOC 2 Aligned', 'GDPR Compliant', 'AES-256 Encryption', 'Audit Trail'].map((badge) => (
-                            <div key={badge} className="flex items-center gap-2 text-xs font-bold text-white/30 hover:text-white/60 transition-colors uppercase tracking-widest cursor-default">
+                            <div key={badge} className="flex items-center gap-2 text-xs font-bold text-white/60 hover:text-white/60 transition-colors uppercase tracking-widest cursor-default">
                                 <ShieldCheck className="w-4 h-4" />
                                 {badge}
                             </div>
