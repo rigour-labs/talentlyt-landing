@@ -12,17 +12,37 @@
  * Wrap your app with this provider in the root layout.
  */
 
-import { useEffect } from 'react';
+import { Suspense, useEffect } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 import mixpanel from 'mixpanel-browser';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { analytics } from '@/lib/analytics';
 import { captureTrafficAttribution, getAttributionProperties, cleanTrackingParams } from '@/lib/utm';
 
-export function AnalyticsProvider({ children }: { children: React.ReactNode }) {
+/**
+ * Inner component that uses useSearchParams for route-change page view tracking.
+ * Must be wrapped in <Suspense> to support static generation.
+ */
+function AnalyticsPageViewTracker() {
     const pathname = usePathname();
     const searchParams = useSearchParams();
 
+    // Track page views on route change (for GA4 — Mixpanel handles this via track_pageview: 'full-url')
+    useEffect(() => {
+        if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+            window.gtag('event', 'page_view', {
+                page_path: pathname,
+                page_title: document.title,
+                page_location: window.location.href,
+                send_to: 'G-TK1KFTDDED',
+            });
+        }
+    }, [pathname, searchParams]);
+
+    return null;
+}
+
+export function AnalyticsProvider({ children }: { children: React.ReactNode }) {
     // Initialize once on mount
     useEffect(() => {
         // Initialize Mixpanel with new project token
@@ -88,20 +108,11 @@ export function AnalyticsProvider({ children }: { children: React.ReactNode }) {
         }
     }, []);
 
-    // Track page views on route change (for GA4 — Mixpanel handles this via track_pageview: 'full-url')
-    useEffect(() => {
-        if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-            window.gtag('event', 'page_view', {
-                page_path: pathname,
-                page_title: document.title,
-                page_location: window.location.href,
-                send_to: 'G-TK1KFTDDED',
-            });
-        }
-    }, [pathname, searchParams]);
-
     return (
         <>
+            <Suspense fallback={null}>
+                <AnalyticsPageViewTracker />
+            </Suspense>
             {children}
             {/* Vercel Speed Insights: Monitors Core Web Vitals (LCP, FID, CLS, TTFB)
                 - Data appears in Vercel Dashboard → Analytics → Speed Insights
