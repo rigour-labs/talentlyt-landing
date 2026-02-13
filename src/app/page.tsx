@@ -12,8 +12,8 @@ import { CTASection } from '@/components/sections/cta-section';
 import { HomepageAnalytics } from '@/components/homepage-analytics';
 
 export const metadata: Metadata = {
-  title: 'Rigovo | AI Interview Software for Technical Hiring',
-  description: 'Screen technical candidates 5x faster with AI. Maya AI conducts interviews 24/7 while detecting fraud and verifying candidate identity. Free pilot included.',
+  title: 'Rigovo | AI-Allowed Interview Platform with Integrity Evidence',
+  description: 'Screen technical candidates 5x faster with AI. Maya AI conducts interviews 24/7 with built-in integrity evidence and a complete audit trail. Free pilot included.',
   keywords: [
     // High-intent commercial keywords (what buyers search)
     'AI interview software',
@@ -24,11 +24,12 @@ export const metadata: Metadata = {
     'technical screening platform',
     'coding interview platform',
     'remote candidate assessment',
-    // Problem-solution keywords (high conversion)
-    'prevent interview fraud',
-    'verify remote candidates',
+    // AI-forward positioning keywords
+    'AI-allowed interviews',
+    'interview integrity evidence',
+    'hiring audit trail',
     'candidate identity verification',
-    'interview cheating detection',
+    'interview verification platform',
     'reduce time to hire',
     'automated technical screening',
     // Competitor alternatives (high intent)
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
     'developer assessment tool',
     'engineering hiring software',
     // Long-tail high-intent
-    'AI interview with identity verification',
+    'AI interview with integrity evidence',
     'automated coding assessment',
     'remote hiring verification software',
   ],

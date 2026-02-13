@@ -18,15 +18,15 @@ export function CTASection() {
                     <div className="relative z-10 flex flex-col items-center">
                         {/* Mission Quote */}
                         <p className="text-sm text-text-secondary italic mb-10 max-w-xl text-center">
-                            &ldquo;We got tired of watching great engineering teams waste weeks on screening calls. So we built something to handle that part for them.&rdquo;
+                            &ldquo;We got tired of watching great engineering teams make hiring decisions without real evidence. So we built an interview process that produces it automatically.&rdquo;
                         </p>
 
                         <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 tracking-tighter text-white leading-[0.9] text-center">
                             Your team. <br />
-                            Your <span className="text-brand">AI Co-Pilot.</span>
+                            Your <span className="text-brand">evidence layer.</span>
                         </h2>
                         <p className="text-lg sm:text-xl text-text-secondary mb-12 max-w-2xl mx-auto text-center opacity-70">
-                            Stop spending your best engineers&apos; time on screening calls. <span className="text-white font-bold">Let Maya handle it</span> — you focus on finding the right fit.
+                            Every interview should produce integrity evidence, not just vibes. <span className="text-white font-bold">Let Maya handle it</span> — you focus on finding the right fit.
                         </p>
 
                         <div className="flex flex-col items-center gap-6 mb-16">

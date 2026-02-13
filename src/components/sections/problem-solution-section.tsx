@@ -9,48 +9,48 @@ export function ProblemSolutionSection() {
 
     const problems = [
         {
-            title: 'Cheating is Easy',
-            description: 'A second laptop, a screen share to a friend, ChatGPT on another tab — candidates have dozens of ways to fake their way through.',
-            impact: '30-40% of sessions compromised',
+            title: 'No AI Policy',
+            description: 'Candidates use AI tools whether you allow it or not. Without an official stance, you\'re guessing who actually understands the work.',
+            impact: 'No way to distinguish AI architects from passengers',
             icon: ShieldAlert
         },
         {
-            title: 'Review Takes Forever',
-            description: 'Watching hour-long recordings to catch issues? That\'s days of your team\'s time, per role.',
-            impact: '4-6 hours per manual review',
+            title: 'No Audit Trail',
+            description: 'Manual interviews produce notes and vibes, not evidence. When a hire goes wrong, there\'s nothing to learn from.',
+            impact: 'Zero documentation per interview',
             icon: Activity
         },
         {
-            title: 'Scoring is Inconsistent',
-            description: 'Different interviewers grade differently. Two candidates with similar skills get wildly different scores.',
-            impact: 'Up to 50% score variance',
+            title: 'No Consistent Evidence',
+            description: 'Different interviewers assess differently. Two candidates with similar skills get wildly different evaluations.',
+            impact: 'Up to 50% scoring variance',
             icon: Zap
         },
         {
-            title: 'People Swap In',
-            description: 'Someone else shows up on day one. It happens more than you\'d think — especially in remote hiring.',
-            impact: 'Hard to catch without tools',
+            title: 'No Identity Confidence',
+            description: 'In remote hiring, you can\'t be sure who\'s actually on the call. Phone screens and video intros don\'t cut it.',
+            impact: 'Especially in remote-first teams',
             icon: ShieldAlert
         }
     ];
 
     const solutions = [
         {
-            title: 'Always-On Monitoring',
-            description: 'Maya watches for red flags the entire session — behavioral anomalies, suspicious patterns, integrity signals. Things a human reviewer would need hours to spot.',
-            benefit: '95% detection accuracy',
+            title: 'Continuous Integrity Evidence',
+            description: 'Maya documents integrity signals throughout every session — presence, identity, and AI collaboration patterns. Evidence that a manual process can\'t produce.',
+            benefit: '15 signal types per interview',
             icon: CheckCircle2
         },
         {
-            title: 'Face Match, Every Minute',
-            description: 'We check the candidate\'s face throughout the interview, not just at the start. If someone swaps in, we know.',
+            title: 'Identity Confidence, Every Minute',
+            description: 'We verify the candidate\'s identity continuously throughout the interview, not just at the start. You get a confidence score, not just a checkbox.',
             benefit: 'Continuous verification',
             icon: Cpu
         },
         {
-            title: 'Same Bar, Every Time',
-            description: 'Maya scores every candidate the same way. No more "tough interviewer" vs "easy interviewer" lottery.',
-            benefit: 'Consistent scoring',
+            title: 'Consistent Evidence, Every Time',
+            description: 'Maya evaluates every candidate the same way. No more "tough interviewer" vs "easy interviewer" lottery. Every session produces comparable evidence.',
+            benefit: 'Standardized evidence',
             icon: Zap
         }
     ];
@@ -71,14 +71,14 @@ export function ProblemSolutionSection() {
             <div className="max-w-7xl mx-auto relative z-10">
                 <div className="text-center mb-20 sm:mb-28">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-warning/10 border border-warning/20 mb-8">
-                        <span className="technical-label text-warning">The Problem We Solve</span>
+                        <span className="technical-label text-warning">The Gap We Close</span>
                     </div>
                     <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 tracking-tight text-white leading-[1.1]">
-                        Remote hiring is <span className="text-warning">broken</span>. <br />
-                        We&apos;re <span className="text-brand">fixing it</span>.
+                        Interviews <span className="text-warning">evolved</span>. <br />
+                        Your process <span className="text-brand">didn&apos;t</span>.
                     </h2>
                     <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto">
-                        Candidates cheat, identities get swapped, and your team wastes hours on manual review. Rigovo catches what humans can&apos;t — while you keep full control of every hiring decision.
+                        AI is part of how people work now. But your interviews still have no policy, no audit trail, and no integrity evidence. Rigovo closes that gap.
                     </p>
                 </div>
 
@@ -92,7 +92,7 @@ export function ProblemSolutionSection() {
                             </div>
                             <div>
                                 <h3 className="text-2xl font-bold text-white mb-1 tracking-tight">The Old Way</h3>
-                                <p className="technical-label text-danger">Broken</p>
+                                <p className="technical-label text-danger">No Evidence</p>
                             </div>
                         </div>
 
@@ -105,7 +105,7 @@ export function ProblemSolutionSection() {
                                 <p className="text-sm text-text-muted leading-relaxed mb-6">{problem.description}</p>
                                 <div className="flex items-center gap-2 bg-danger/5 px-3 py-1.5 rounded-lg border border-danger/10 w-fit">
                                     <Activity className="w-3 h-3 text-danger" />
-                                    <span className="technical-label text-danger uppercase tracking-widest">Common Problem</span>
+                                    <span className="technical-label text-danger uppercase tracking-widest">Process Gap</span>
                                 </div>
                             </div>
                         ))}
@@ -119,7 +119,7 @@ export function ProblemSolutionSection() {
                             </div>
                             <div>
                                 <h3 className="text-2xl font-bold text-white mb-1 tracking-tight">With Rigovo</h3>
-                                <p className="technical-label text-brand">Fixed</p>
+                                <p className="technical-label text-brand">Evidence-Based</p>
                             </div>
                         </div>
 
@@ -134,7 +134,7 @@ export function ProblemSolutionSection() {
                                 <p className="text-sm text-text-muted leading-relaxed mb-6">{solution.description}</p>
                                 <div className="flex items-center gap-2 bg-brand/10 px-3 py-1.5 rounded-lg border border-brand/20 w-fit">
                                     <CheckCircle2 className="w-3 h-3 text-brand" />
-                                    <span className="technical-label text-brand uppercase tracking-widest">How We Fix It</span>
+                                    <span className="technical-label text-brand uppercase tracking-widest">How We Close It</span>
                                 </div>
                             </div>
                         ))}
@@ -166,9 +166,9 @@ export function ProblemSolutionSection() {
                                         <ShieldAlert className="w-6 h-6" />
                                     </div>
                                     <div>
-                                        <div className="text-xs font-bold text-brand uppercase tracking-wide mb-0.5">Most Common Flag</div>
+                                        <div className="text-xs font-bold text-brand uppercase tracking-wide mb-0.5">Most Common Insight</div>
                                         <div className="text-lg font-bold text-white">
-                                            3,077 times someone wasn&apos;t on camera
+                                            3,077 presence verification events documented
                                         </div>
                                     </div>
                                 </div>
@@ -178,7 +178,7 @@ export function ProblemSolutionSection() {
                                 {[
                                     { label: "Signal Events", value: "6,824", sub: "Analyzed in Beta", color: "text-brand" },
                                     { label: "Interviews", value: "82", sub: "Sessions Monitored", color: "text-white" },
-                                    { label: "Review Rate", value: "41%", sub: "Worth a Second Look", color: "text-white" },
+                                    { label: "Deeper Evidence", value: "41%", sub: "Generated Additional Insights", color: "text-white" },
                                     { label: "Signal Types", value: "15", sub: "Detection Categories", color: "text-green-400" }
                                 ].map((stat, i) => (
                                     <div key={i} className="p-4 sm:p-6 rounded-xl bg-slate-800 border border-slate-700 hover:border-brand/30 transition-all">

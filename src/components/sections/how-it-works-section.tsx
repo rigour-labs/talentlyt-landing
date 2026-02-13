@@ -11,17 +11,17 @@ export function HowItWorksSection() {
     const steps = [
         {
             title: 'Send a Link',
-            description: 'Share a unique interview link with your candidate. We handle identity checks before they even start — face match, liveness, the works.',
+            description: 'Share a unique interview link with your candidate. We handle identity verification before they even start — face match, liveness, the works.',
             icon: MousePointer2,
         },
         {
             title: 'Maya Runs the Interview',
-            description: 'Maya asks the technical questions, follows up on weak answers, and monitors for anything suspicious. Your team can watch live or jump in anytime.',
+            description: 'Maya asks the technical questions, follows up on weak answers, and documents integrity signals throughout. Your team can watch live or jump in anytime.',
             icon: Cpu,
         },
         {
             title: 'Review the Results',
-            description: 'You get a clear report: technical scores, integrity flags, and a job-fit prediction. Everything you need to make a confident hire.',
+            description: 'You get a clear report: technical scores, integrity evidence, and a job-fit prediction. Everything you need to make a confident hire.',
             icon: ShieldCheck,
         },
     ];

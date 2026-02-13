@@ -59,13 +59,13 @@ export function HeroSection() {
 
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand/10 border border-brand/20 shadow-[0_0_15px_rgba(0,102,255,0.1)]">
                             <ShieldCheck className="w-3.5 h-3.5 text-brand" />
-                            <span className="technical-label text-brand">The AI Co-Pilot for Hiring</span>
+                            <span className="technical-label text-brand">AI-Native Interview Intelligence</span>
                         </div>
                     </div>
 
                     <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[1.02] tracking-tight text-white ${heroVisible ? 'slide-up animate-delay-200' : 'animate-on-scroll'}`}>
-                        Interview Smarter.<br />
-                        <span className="text-brand">Hire Faster.</span>
+                        AI-Allowed Interviews.<br />
+                        <span className="text-brand">Verified Results.</span>
                     </h1>
 
                     <p className={`text-lg sm:text-xl text-text-secondary mb-6 leading-relaxed max-w-xl ${heroVisible ? 'slide-up animate-delay-300' : 'animate-on-scroll'}`}>
@@ -75,9 +75,9 @@ export function HeroSection() {
                     {/* Quick Value Props */}
                     <div className={`flex flex-wrap gap-3 mb-8 ${heroVisible ? 'slide-up animate-delay-350' : 'animate-on-scroll'}`}>
                         {[
-                            { icon: CheckCircle2, text: 'No more bad hires' },
+                            { icon: CheckCircle2, text: 'AI-allowed by default' },
                             { icon: Clock, text: '70% faster screening' },
-                            { icon: Users, text: 'You stay in control' },
+                            { icon: Users, text: 'Integrity evidence built in' },
                         ].map((item, i) => (
                             <div key={i} className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm text-text-secondary">
                                 <item.icon className="w-3.5 h-3.5 text-brand" />
@@ -109,12 +109,12 @@ export function HeroSection() {
                         <div className="flex items-center gap-6 sm:gap-10">
                             <div>
                                 <div className="text-2xl sm:text-3xl font-bold text-white mb-1">6,824</div>
-                                <div className="technical-label text-text-muted text-xs sm:text-[10px]">Signal Events Analyzed</div>
+                                <div className="technical-label text-text-muted text-xs sm:text-[10px]">Integrity Data Points</div>
                             </div>
                             <div className="w-px h-8 bg-white/10" aria-hidden="true" />
                             <div>
                                 <div className="text-2xl sm:text-3xl font-bold text-white mb-1">41%</div>
-                                <div className="technical-label text-text-muted text-xs sm:text-[10px]">Required Deeper Review</div>
+                                <div className="technical-label text-text-muted text-xs sm:text-[10px]">Generated Deeper Evidence</div>
                             </div>
                             <div className="w-px h-8 bg-white/10 hidden sm:block" aria-hidden="true" />
                             <div className="hidden sm:block">
@@ -123,7 +123,7 @@ export function HeroSection() {
                             </div>
                         </div>
                         <p className="text-[10px] text-text-muted/60 max-w-md">
-                            *Signal events are behavioral data points (gaze, audio sync, response patterns) — not fraud flags. 41% triggered review based on inconsistencies worth a second look.
+                            *Integrity data points include presence confidence, identity verification, and AI collaboration patterns — documented automatically across every session.
                         </p>
                     </div>
                 </div>

@@ -8,24 +8,24 @@ export function StatsSection() {
 
     const betaHighlights = [
         {
-            title: "Face Detection",
-            description: "Caught candidates looking away, leaving the frame, or not visible when answering questions",
+            title: "Presence Verification",
+            description: "Documented candidate presence and engagement throughout each session — camera visibility, gaze patterns, and attention signals",
             metric: "3,077",
-            metricLabel: "Times Caught",
+            metricLabel: "Events Documented",
             icon: Eye,
         },
         {
-            title: "Identity Check",
-            description: "Flagged sessions where the face didn't match or showed signs of a deepfake",
+            title: "Identity Confidence",
+            description: "Verified face consistency throughout the interview and assessed liveness confidence across every session",
             metric: "1,390",
-            metricLabel: "Flags Raised",
+            metricLabel: "Checks Completed",
             icon: ShieldCheck,
         },
         {
-            title: "Behavior Watch",
-            description: "Spotted tab switching, copy-pasting answers, and robotic typing during interviews",
+            title: "Session Integrity",
+            description: "Measured session behavior patterns including input methods, tab activity, and interaction consistency during interviews",
             metric: "1,186",
-            metricLabel: "Issues Found",
+            metricLabel: "Signals Recorded",
             icon: Keyboard,
         }
     ];
@@ -47,8 +47,8 @@ export function StatsSection() {
         },
         {
             value: "41%",
-            label: "Required Review",
-            sub: "Worth a Second Look",
+            label: "Deeper Evidence",
+            sub: "Generated Additional Insights",
             detail: "34 Sessions Total",
             icon: Activity,
         }
@@ -64,10 +64,10 @@ export function StatsSection() {
                         <span className="text-blue-400 font-semibold text-sm uppercase tracking-wide">Beta Testing Results</span>
                     </div>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-white">
-                        Real Results from Our <span className="text-blue-500">Beta Program</span>
+                        Integrity Evidence from Our <span className="text-blue-500">Beta Program</span>
                     </h2>
                     <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-                        We ran 82 real interviews and tracked everything. Here&apos;s what the data looked like.
+                        We ran 82 real interviews and documented every integrity signal. Here&apos;s what the evidence shows.
                     </p>
                 </div>
 

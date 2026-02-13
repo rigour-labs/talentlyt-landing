@@ -13,8 +13,8 @@ import { CTAButton } from '@/components/ui/cta-button';
 import { PageAnalytics } from '@/components/page-analytics';
 
 export const metadata: Metadata = {
-    title: 'Product | AI Interview Intelligence Platform — Rigovo',
-    description: 'See how Rigovo\'s AI interviewer Maya conducts technical interviews while verifying candidate authenticity with 15-signal forensic analysis. Book a free pilot.',
+    title: 'Product | AI-Allowed Interview Platform with Integrity Evidence — Rigovo',
+    description: 'See how Rigovo\'s AI interviewer Maya conducts technical interviews while building a complete integrity evidence package with 15-signal analysis. Book a free pilot.',
     alternates: {
         canonical: 'https://rigovo.com/product',
     },
@@ -37,13 +37,13 @@ export default function ProductPage() {
                             <span className="text-sm font-semibold text-green-400">Live &middot; Accepting Pilot Customers</span>
                         </div>
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
-                            Your Interviews Are <span className="text-brand">Broken</span>.<br className="hidden sm:block" /> We Fix Them.
+                            Let Candidates Use <span className="text-brand">AI</span>.<br className="hidden sm:block" /> Get Proof of Understanding.
                         </h1>
                         <p className="text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed mb-4">
-                            70% of resumes have discrepancies. Proxy interviews are surging. Your hiring team can&apos;t tell who&apos;s real anymore. Rigovo can.
+                            AI is part of how people work now. Your interviews should reflect that &mdash; with integrity evidence baked into every session.
                         </p>
                         <p className="text-base text-text-muted max-w-xl mx-auto mb-10">
-                            An AI interviewer that conducts technical assessments while running 15-signal forensic verification — so you know exactly who you&apos;re hiring.
+                            An AI interviewer that conducts technical assessments while building a complete integrity evidence package &mdash; so you know exactly who you&apos;re hiring and how they work with AI.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <CTAButton location="hero" className="px-8 py-4 text-base" />
@@ -55,8 +55,8 @@ export default function ProductPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16">
                         {[
                             { value: '82+', label: 'Interviews Completed', sublabel: 'in beta program' },
-                            { value: '15', label: 'Integrity Signals', sublabel: 'analyzed per interview' },
-                            { value: '41%', label: 'Flagged for Review', sublabel: 'would have slipped through' },
+                            { value: '15', label: 'Integrity Signals', sublabel: 'documented per interview' },
+                            { value: '41%', label: 'Deeper Evidence', sublabel: 'generated additional insights' },
                         ].map((stat) => (
                             <div key={stat.label} className="p-6 rounded-2xl bg-card border border-border/50 text-center">
                                 <div className="text-3xl font-bold text-brand mb-1">{stat.value}</div>
@@ -71,7 +71,7 @@ export default function ProductPage() {
                 <section className="container mx-auto px-4 py-16 border-t border-border/30">
                     <h2 className="text-3xl font-bold text-center mb-4">How It Works</h2>
                     <p className="text-text-secondary text-center max-w-2xl mx-auto mb-12">
-                        Three steps. Zero engineering effort. Go from job description to forensic interview report.
+                        Three steps. Zero engineering effort. Go from job description to integrity evidence report.
                     </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -97,7 +97,7 @@ export default function ProductPage() {
                             {
                                 step: '03',
                                 title: 'Get Forensic Report',
-                                description: 'Within minutes, you get a detailed assessment — skill scores, integrity flags, risk indicators, and a clear hire/no-hire recommendation backed by data.',
+                                description: 'Within minutes, you get a detailed assessment — skill scores, integrity evidence, risk indicators, and a clear hire/no-hire recommendation backed by data.',
                                 icon: BarChart3,
                                 color: 'text-green-400',
                                 borderColor: 'border-green-500/30',
@@ -141,7 +141,7 @@ export default function ProductPage() {
                     <div className="max-w-3xl mx-auto text-center p-10 rounded-3xl bg-gradient-to-r from-brand/10 via-brand/5 to-transparent border border-brand/20">
                         <h2 className="text-2xl font-bold mb-3">See it work on your actual job roles</h2>
                         <p className="text-text-secondary mb-6">
-                            Free pilot — 5 interviews, full forensic reports, zero commitment.
+                            Free pilot — 5 interviews, full integrity evidence reports, zero commitment.
                         </p>
                         <CTAButton location="product" className="px-10 py-4" />
                     </div>
@@ -190,9 +190,9 @@ export default function ProductPage() {
                                 <Shield className="w-7 h-7 text-yellow-500" />
                             </div>
                             <h3 className="text-xl font-bold text-white mb-1">Sentinel Engine</h3>
-                            <p className="text-yellow-500 text-sm font-medium mb-4">Integrity Monitor</p>
+                            <p className="text-yellow-500 text-sm font-medium mb-4">Integrity Evidence</p>
                             <p className="text-sm text-text-secondary leading-relaxed mb-4">
-                                Runs silently during the interview, monitoring for proxy assistance, AI-generated answers, and identity inconsistencies.
+                                Runs continuously during the interview, documenting session integrity, AI collaboration patterns, and identity consistency.
                             </p>
                             <div className="pt-4 border-t border-yellow-500/10">
                                 <p className="text-xs font-semibold text-yellow-400 uppercase tracking-wider mb-2">What you get</p>
@@ -221,7 +221,7 @@ export default function ProductPage() {
                             <h3 className="text-xl font-bold text-white mb-1">Forensic Engine</h3>
                             <p className="text-red-500 text-sm font-medium mb-4">15-Signal Analysis</p>
                             <p className="text-sm text-text-secondary leading-relaxed mb-4">
-                                Post-interview deep analysis that correlates all 15 signals into an actionable integrity report with clear risk flags.
+                                Post-interview deep analysis that correlates all 15 signals into an actionable integrity evidence report with clear confidence levels.
                             </p>
                             <div className="pt-4 border-t border-red-500/10">
                                 <p className="text-xs font-semibold text-red-400 uppercase tracking-wider mb-2">What you get</p>
@@ -266,7 +266,7 @@ export default function ProductPage() {
                             {
                                 category: 'Behavioral Analysis',
                                 question: 'Are they getting outside help?',
-                                description: 'Real-time monitoring for anomalies that indicate coaching, proxy assistance, or AI-generated responses during the session.',
+                                description: 'Real-time documentation of patterns that indicate AI collaboration style, session consistency, and response authenticity.',
                                 signals: '6 signals',
                                 color: 'text-yellow-400',
                                 bgColor: 'bg-yellow-500/10',
@@ -310,8 +310,8 @@ export default function ProductPage() {
                         {[
                             { icon: FileText, label: 'Full Transcript', description: 'Every question and answer, timestamped' },
                             { icon: BarChart3, label: 'Skill Scores', description: 'Granular ratings per competency area' },
-                            { icon: ShieldCheck, label: 'Integrity Report', description: '15-signal forensic analysis results' },
-                            { icon: AlertTriangle, label: 'Risk Flags', description: 'Clear red/yellow/green indicators' },
+                            { icon: ShieldCheck, label: 'Integrity Evidence', description: '15-signal integrity analysis results' },
+                            { icon: AlertTriangle, label: 'Confidence Levels', description: 'Clear confidence indicators per signal' },
                             { icon: TrendingUp, label: 'Hire Recommendation', description: 'Data-backed hire/no-hire signal' },
                             { icon: Play, label: 'Session Recording', description: 'Full audio/video playback' },
                             { icon: Users, label: 'Comparison View', description: 'Side-by-side candidate ranking' },
@@ -356,7 +356,7 @@ export default function ProductPage() {
                                 <ul className="space-y-4">
                                     {[
                                         { problem: 'Wasting senior engineers on screening', solution: 'Maya handles first-round interviews 24/7' },
-                                        { problem: 'Can\'t verify remote candidates', solution: '15-signal forensic verification in every session' },
+                                        { problem: 'Can\'t verify remote candidates', solution: '15-signal integrity evidence in every session' },
                                         { problem: 'Inconsistent interview quality', solution: 'Standardized, bias-reduced assessments every time' },
                                         { problem: 'Slow time-to-hire', solution: 'Interview today, get reports in minutes' },
                                     ].map((item) => (
@@ -379,14 +379,14 @@ export default function ProductPage() {
                     <div className="max-w-3xl mx-auto text-center p-12 rounded-3xl bg-gradient-to-br from-brand/10 via-brand/5 to-transparent border border-brand/20">
                         <h2 className="text-3xl font-bold mb-4">Ready to see who you&apos;re really hiring?</h2>
                         <p className="text-text-secondary mb-8 max-w-xl mx-auto">
-                            Start with a free pilot — 5 interviews, full forensic reports, zero risk. See the difference verified hiring makes.
+                            Start with a free pilot — 5 interviews, full integrity evidence reports, zero risk. See the difference evidence-based hiring makes.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                             <CTAButton location="product" className="px-10 py-4 text-base" />
                             <CTAButton variant="secondary" location="product" className="px-10 py-4 text-base" />
                         </div>
                         <div className="flex flex-wrap justify-center gap-4 text-xs text-text-muted">
-                            {['No credit card required', 'Setup in 5 minutes', 'Full forensic reports'].map((badge) => (
+                            {['No credit card required', 'Setup in 5 minutes', 'Full integrity evidence reports'].map((badge) => (
                                 <span key={badge} className="flex items-center gap-1.5">
                                     <CheckCircle2 className="w-3.5 h-3.5 text-green-400" />
                                     {badge}
