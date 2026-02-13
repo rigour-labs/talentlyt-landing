@@ -29,16 +29,16 @@ const blogPosts = [
     {
         slug: 'rigovo-vs-hirevue',
         title: 'Rigovo vs HireVue: Which AI Interview Platform is Right for You?',
-        excerpt: 'Both offer AI interviews—but only one detects fraud. Complete comparison of features, pricing, and identity verification capabilities.',
+        excerpt: 'Both offer AI interviews—but only one builds integrity evidence. Complete comparison of features, pricing, and identity verification capabilities.',
         category: 'Comparison',
         readTime: '10 min read',
         date: '2026-02-09',
     },
     {
         slug: 'prevent-interview-fraud',
-        title: 'How to Prevent Interview Fraud: Complete Guide for 2026',
-        excerpt: 'Proxy interviews, AI cheating, deepfakes—interview fraud is rampant. Here\'s how to detect and prevent it before it costs you $280K.',
-        category: 'Security Guide',
+        title: 'Interview Integrity Verification: Complete Guide for 2026',
+        excerpt: 'Proxy interviews, AI tools, deepfakes—verification gaps are everywhere. Here\'s how to build integrity evidence before gaps cost you $280K.',
+        category: 'Integrity Guide',
         readTime: '12 min read',
         date: '2026-02-09',
     },
@@ -101,7 +101,7 @@ const blogPosts = [
     {
         slug: 'identity-verification-remote-hiring',
         title: 'Identity Verification in Remote Hiring: A Technical Guide',
-        excerpt: 'Forensic techniques and AI-powered signals used to verify candidate identity and ensure authentic participation in real-time.',
+        excerpt: 'Evidence-based techniques and AI-powered signals used to verify candidate identity and ensure authentic participation in real-time.',
         category: 'Verification',
         readTime: '10 min read',
         date: '2026-01-23',
@@ -117,7 +117,7 @@ const blogPosts = [
     {
         slug: 'interview-integrity-verification-guide',
         title: 'Interview Integrity Verification: Why It Matters for Technical Hiring',
-        excerpt: 'Discover how forensic interview verification ensures authentic problem-solving and verifies AI leadership in real-time.',
+        excerpt: 'Discover how integrity verification ensures authentic problem-solving and verifies AI leadership in real-time.',
         category: 'Deep Dive',
         readTime: '6 min read',
         date: '2025-01-10',

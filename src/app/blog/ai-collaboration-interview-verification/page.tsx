@@ -93,7 +93,7 @@ export default function AICollaborationVerificationPage() {
                                                 <ul className="space-y-2">
                                                     <li><span className="text-white">1 in 5 employees</span> admits to using AI during job interviews</li>
                                                     <li><span className="text-white">Gartner predicts</span> 1 in 4 candidate profiles will be fake by 2028</li>
-                                                    <li><span className="text-white">Leading cheating tools</span> claim 93% pass rates in real coding interviews</li>
+                                                    <li><span className="text-white">Leading AI assistance tools</span> claim 93% pass rates in real coding interviews</li>
                                                     <li><span className="text-white">Google&apos;s CEO</span> has suggested returning to in-person interviews</li>
                                                 </ul>
                                             </div>
@@ -109,9 +109,9 @@ export default function AICollaborationVerificationPage() {
                                 </section>
 
                                 <section className="mb-16">
-                                    <h2 className="text-3xl font-black text-white mb-8 tracking-tight">The Modern Cheating Arsenal</h2>
+                                    <h2 className="text-3xl font-black text-white mb-8 tracking-tight">The AI Collaboration Landscape</h2>
                                     <p className="text-text-secondary mb-6">
-                                        Understanding the tools candidates are using is the first step to detecting them. Here&apos;s what we&apos;re seeing in the wild:
+                                        Understanding the tools candidates use is the first step to building evidence of authentic understanding. Here&apos;s the landscape:
                                     </p>
 
                                     <div className="space-y-8 mb-12">
@@ -124,7 +124,7 @@ export default function AICollaborationVerificationPage() {
                                                 Tools like Interview Coder and Leetcode Wizard run invisibly alongside video calls, parsing coding questions via screen capture and generating solutions in real-time. They&apos;re designed specifically to be undetectable by standard proctoring software.
                                             </p>
                                             <p className="text-base text-text-secondary leading-relaxed">
-                                                <span className="text-white">Detection challenge:</span> These tools don&apos;t trigger tab-switching alerts because they run in separate windows or on different devices.
+                                                <span className="text-white">Verification challenge:</span> These tools don&apos;t trigger tab-switching alerts because they run in separate windows or on different devices.
                                             </p>
                                         </div>
 
@@ -137,7 +137,7 @@ export default function AICollaborationVerificationPage() {
                                                 Bad actors use real-time face-swapping technology to have a proxy take interviews while appearing to be the actual candidate. The technology has improved enough that standard webcam quality makes detection extremely difficult.
                                             </p>
                                             <p className="text-base text-text-secondary leading-relaxed">
-                                                <span className="text-white">Detection challenge:</span> Modern deepfakes only break down at the pixel level, requiring specialized forensic analysis.
+                                                <span className="text-white">Verification challenge:</span> Modern deepfakes only break down at the pixel level, requiring specialized signal analysis.
                                             </p>
                                         </div>
 
@@ -150,7 +150,7 @@ export default function AICollaborationVerificationPage() {
                                                 Audio from the interviewer is transcribed in real-time, fed to ChatGPT or Claude, and the answer is displayed on a second screen or teleprompter. The candidate just reads the response.
                                             </p>
                                             <p className="text-base text-text-secondary leading-relaxed">
-                                                <span className="text-white">Detection challenge:</span> Latency has dropped to under 2 seconds, making pauses seem natural.
+                                                <span className="text-white">Verification challenge:</span> Latency has dropped to under 2 seconds, making pauses seem natural.
                                             </p>
                                         </div>
 
@@ -163,7 +163,7 @@ export default function AICollaborationVerificationPage() {
                                                 For recorded video interviews, candidates have unlimited time to generate polished responses. Some services even offer complete interview completion as a paid service—a proxy records answers for multiple candidates.
                                             </p>
                                             <p className="text-base text-text-secondary leading-relaxed">
-                                                <span className="text-white">Detection challenge:</span> Pre-recorded responses can be rehearsed to perfection.
+                                                <span className="text-white">Verification challenge:</span> Pre-recorded responses can be rehearsed to perfection.
                                             </p>
                                         </div>
                                     </div>
@@ -172,7 +172,7 @@ export default function AICollaborationVerificationPage() {
                                 <section className="mb-16">
                                     <h2 className="text-3xl font-black text-white mb-8 tracking-tight">Behavioral Detection Signals</h2>
                                     <p className="text-text-secondary mb-8">
-                                        While the tools are getting better, human behavior under AI assistance still leaves detectable patterns. Here&apos;s what to look for:
+                                        While the tools are getting better, human behavior under AI assistance still leaves documentable patterns. Here&apos;s what to look for:
                                     </p>
 
                                     <div className="overflow-x-auto mb-8">
@@ -221,7 +221,7 @@ export default function AICollaborationVerificationPage() {
                                 </section>
 
                                 <section className="mb-16">
-                                    <h2 className="text-3xl font-black text-white mb-8 tracking-tight">Technical Detection Methods</h2>
+                                    <h2 className="text-3xl font-black text-white mb-8 tracking-tight">Technical Verification Methods</h2>
 
                                     <div className="space-y-6 mb-12">
                                         <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
@@ -230,7 +230,7 @@ export default function AICollaborationVerificationPage() {
                                                 <h4 className="text-lg font-bold text-white">Audio-Visual Sync Analysis</h4>
                                             </div>
                                             <p className="text-text-secondary text-sm">
-                                                Real speech creates precise lip-to-audio timing. Deepfakes and video overlays introduce 150-300ms lag that&apos;s invisible to humans but measurable with proper tooling. This is one of the most reliable fraud indicators.
+                                                Real speech creates precise lip-to-audio timing. Deepfakes and video overlays introduce 150-300ms lag that&apos;s invisible to humans but measurable with proper tooling. This is one of the most reliable integrity indicators.
                                             </p>
                                         </div>
                                         <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
@@ -278,7 +278,7 @@ export default function AICollaborationVerificationPage() {
                                             <span className="flex-shrink-0 w-8 h-8 rounded-full bg-brand/20 text-brand font-bold flex items-center justify-center text-sm">2</span>
                                             <div>
                                                 <h4 className="text-white font-bold mb-2">Require thinking out loud</h4>
-                                                <p className="text-text-secondary text-sm">Force candidates to verbalize their thought process as they code. AI-assisted candidates struggle to explain reasoning they didn&apos;t generate. &quot;Walk me through why you chose that approach&quot; is devastating to cheaters.</p>
+                                                <p className="text-text-secondary text-sm">Force candidates to verbalize their thought process as they code. AI-assisted candidates struggle to explain reasoning they didn&apos;t generate. &quot;Walk me through why you chose that approach&quot; is revealing of understanding depth.</p>
                                             </div>
                                         </div>
                                         <div className="flex items-start gap-4">
@@ -299,7 +299,7 @@ export default function AICollaborationVerificationPage() {
                                             <span className="flex-shrink-0 w-8 h-8 rounded-full bg-brand/20 text-brand font-bold flex items-center justify-center text-sm">5</span>
                                             <div>
                                                 <h4 className="text-white font-bold mb-2">Use multi-modal assessment</h4>
-                                                <p className="text-text-secondary text-sm">Combine live coding with system design discussion, code review, and behavioral questions. It&apos;s hard to cheat across all formats simultaneously. Inconsistencies between modes reveal fraud.</p>
+                                                <p className="text-text-secondary text-sm">Combine live coding with system design discussion, code review, and behavioral questions. It&apos;s hard to maintain consistency across all formats simultaneously. Inconsistencies between modes reveal understanding gaps.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -308,13 +308,13 @@ export default function AICollaborationVerificationPage() {
                                 <section className="mb-16">
                                     <h2 className="text-3xl font-black text-white mb-8 tracking-tight">The Uncomfortable Truth</h2>
                                     <p className="text-text-secondary mb-6">
-                                        Here&apos;s what most detection guides won&apos;t tell you: you can&apos;t manually detect sophisticated AI cheating reliably. The tools have gotten too good. Human interviewers catch obvious cases, but the candidates using premium cheating tools often sail through.
+                                        Here&apos;s what most verification guides won&apos;t tell you: you can&apos;t manually verify authentic AI collaboration at scale. The tools have gotten too good. Human interviewers catch obvious cases, but candidates using premium assistance tools often sail through.
                                     </p>
                                     <p className="text-text-secondary mb-6">
                                         The only sustainable solution is automated, real-time integrity analysis that examines signals humans can&apos;t perceive: sub-frame video artifacts, keystroke timing patterns, audio-visual desynchronization, and cross-session behavioral consistency.
                                     </p>
                                     <p className="text-text-secondary mb-6 italic border-l-4 border-brand/30 pl-6 py-2">
-                                        &quot;We thought we had a good process. Then we implemented automated integrity checks and discovered that 12% of our recent technical hires had shown significant fraud indicators during interviews. Twelve percent. That&apos;s not a rounding error—that&apos;s a systemic failure.&quot;
+                                        &quot;We thought we had a good process. Then we implemented automated integrity checks and discovered that 12% of our recent technical hires had shown significant integrity signals during interviews. Twelve percent. That&apos;s not a rounding error—that&apos;s a systemic gap.&quot;
                                         <br />— VP Engineering, Series C startup
                                     </p>
                                 </section>
@@ -326,17 +326,17 @@ export default function AICollaborationVerificationPage() {
                             <div className="mt-16 p-1 rounded-[2.5rem] bg-gradient-to-r from-brand/50 to-transparent">
                                 <div className="bg-[#050505] p-10 md:p-16 rounded-[2.4rem] text-center">
                                     <h3 className="text-3xl font-black text-white mb-6 tracking-tight">
-                                        Stop AI Cheating Before It Costs You $240K
+                                        Build Evidence of Understanding Into Every Interview
                                     </h3>
                                     <p className="text-text-secondary mb-10 max-w-xl mx-auto text-lg">
-                                        Rigovo&apos;s 15-signal verification catches AI-assisted fraud in real-time. See how our Sentinel engine protects your hiring process.
+                                        Rigovo&apos;s 15-signal verification documents AI collaboration patterns in real-time. See how our Integrity Evidence Layer produces evidence you can trust.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                         <Link
                                             href="/request-demo"
                                             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand text-white font-black rounded-2xl hover:bg-brand-hover transition-all uppercase tracking-widest text-xs shadow-xl shadow-brand/20"
                                         >
-                                            See Fraud Detection in Action
+                                            See Evidence in Action
                                         </Link>
                                         <Link
                                             href="/blog/detect-deepfake-proxy-candidates"

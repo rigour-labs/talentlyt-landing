@@ -191,7 +191,7 @@ export default function CostOfBadHirePage() {
                                         </li>
                                         <li className="flex items-start gap-3">
                                             <span className="text-brand font-bold">3.</span>
-                                            <span><span className="text-white">Fraud is easier than ever.</span> With remote interviews, candidates can use AI assistance, have someone else take the interview, or even use deepfake technology. We&apos;ve seen all of these in the wild.</span>
+                                            <span><span className="text-white">Verification is harder than ever.</span> With remote interviews, candidates can use AI assistance, have someone else take the interview, or use deepfake technology. Without integrity evidence, you&apos;re guessing who you actually hired.</span>
                                         </li>
                                         <li className="flex items-start gap-3">
                                             <span className="text-brand font-bold">4.</span>

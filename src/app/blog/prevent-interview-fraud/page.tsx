@@ -8,22 +8,22 @@ import { RelatedArticles } from '@/components/blog/related-articles';
 import { CTA_CONFIG } from '@/components/ui/cta-button';
 
 export const metadata: Metadata = {
-    title: 'How to Prevent Interview Fraud: Complete Guide for 2026',
-    description: 'Learn how to detect and prevent interview fraud including proxy interviewing, AI cheating, deepfakes, and identity theft. Protect your technical hiring process.',
+    title: 'Interview Integrity Verification: Complete Guide for 2026',
+    description: 'Learn how to build integrity evidence into your hiring process—covering proxy detection, AI collaboration patterns, and identity verification. A practical guide for technical teams.',
     keywords: [
-        'prevent interview fraud',
-        'interview cheating detection',
-        'proxy interview prevention',
+        'interview integrity verification',
+        'interview evidence building',
+        'proxy interview verification',
         'deepfake detection interview',
-        'AI cheating interview',
+        'AI collaboration interview',
         'candidate identity verification',
-        'remote interview security',
-        'interview integrity',
-        'technical hiring fraud'
+        'remote interview integrity',
+        'interview integrity evidence',
+        'technical hiring verification'
     ],
     openGraph: {
-        title: 'How to Prevent Interview Fraud: Complete Guide for 2026',
-        description: 'Detect and prevent interview fraud including proxy interviewing, AI cheating, and deepfakes.',
+        title: 'Interview Integrity Verification: Complete Guide for 2026',
+        description: 'Build integrity evidence into every interview—covering identity verification, AI collaboration patterns, and session integrity.',
         type: 'article',
         publishedTime: '2026-02-09T00:00:00Z',
         authors: ['Rigovo Product Team'],
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
 const articleStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'NewsArticle',
-    headline: 'How to Prevent Interview Fraud: Complete Guide for 2026',
-    description: 'Learn how to detect and prevent interview fraud including proxy interviewing, AI cheating, deepfakes, and identity theft.',
+    headline: 'Interview Integrity Verification: Complete Guide for 2026',
+    description: 'Learn how to build integrity evidence into your hiring process—covering proxy detection, AI collaboration patterns, and identity verification.',
     image: 'https://rigovo.com/og-image.png',
     datePublished: '2026-02-09T00:00:00Z',
     dateModified: '2026-02-09T00:00:00Z',
@@ -91,8 +91,8 @@ export default function PreventInterviewFraudPage() {
 
                             <header className="mb-12">
                                 <div className="flex items-center gap-4 mb-6">
-                                    <span className="px-3 py-1 rounded-lg bg-danger/10 text-danger text-xs font-bold uppercase tracking-wider">
-                                        Security Guide
+                                    <span className="px-3 py-1 rounded-lg bg-brand/10 text-brand text-xs font-bold uppercase tracking-wider">
+                                        Integrity Guide
                                     </span>
                                     <div className="flex items-center gap-2 text-text-muted text-xs">
                                         <Clock className="w-3 h-3" />
@@ -100,10 +100,10 @@ export default function PreventInterviewFraudPage() {
                                     </div>
                                 </div>
                                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-6 tracking-tight leading-[1.1]">
-                                    How to Prevent <span className="text-brand">Interview Fraud</span> in 2026
+                                    Building <span className="text-brand">Interview Integrity</span> in 2026
                                 </h1>
                                 <p className="text-xl text-text-secondary leading-relaxed max-w-2xl font-medium">
-                                    Interview fraud costs companies millions in bad hires. Here&apos;s a practical guide to detecting proxy interviews, AI cheating, and deepfakes—before they become your problem.
+                                    Verification gaps cost companies millions in bad hires. Here&apos;s a practical guide to building integrity evidence—covering identity, AI collaboration patterns, and session authenticity.
                                 </p>
                                 <time className="block mt-8 text-sm text-text-muted font-mono uppercase tracking-widest">
                                     By Rigour Labs Team | Feb 9, 2026
@@ -115,28 +115,28 @@ export default function PreventInterviewFraudPage() {
                                 <section className="mb-16">
                                     <div className="p-8 rounded-[2rem] bg-gradient-to-br from-danger/10 to-transparent border border-danger/20 mb-8">
                                         <div className="flex items-center gap-3 mb-4">
-                                            <AlertTriangle className="w-6 h-6 text-danger" />
-                                            <h2 className="text-2xl font-black text-white m-0">The Scale of the Problem</h2>
+                                            <AlertTriangle className="w-6 h-6 text-amber-500" />
+                                            <h2 className="text-2xl font-black text-white m-0">The Scale of the Challenge</h2>
                                         </div>
                                         <p className="text-text-secondary m-0">
-                                            In our beta analysis of 82 interviews, <strong className="text-white">41% of candidates triggered at least one verification flag</strong> requiring deeper review. This isn&apos;t about catching cheaters—it&apos;s about ensuring you can trust who you&apos;re hiring.
+                                            In our beta analysis of 82 interviews, <strong className="text-white">41% of candidates generated at least one integrity signal</strong> requiring deeper evidence. This isn&apos;t about surveillance—it&apos;s about ensuring you have evidence to trust who you&apos;re hiring.
                                         </p>
                                     </div>
 
                                     <p className="text-text-secondary mb-6">
-                                        Remote hiring changed everything. When interviews moved from conference rooms to Zoom calls, the barrier to fraud dropped dramatically. Today, there are entire services that will take interviews on your behalf for $500-2000.
+                                        Remote hiring changed everything. When interviews moved from conference rooms to Zoom calls, the verification gap widened dramatically. Today, there are entire services that will take interviews on someone&apos;s behalf for $500-2000.
                                     </p>
                                     <p className="text-text-secondary mb-6">
-                                        The rise of AI made it worse. ChatGPT can answer most technical questions. GitHub Copilot can solve coding challenges. Voice cloning is getting cheaper. Deepfakes are getting more convincing.
+                                        The rise of AI made verification harder. ChatGPT can answer most technical questions. GitHub Copilot can solve coding challenges. Voice cloning is getting cheaper. Without integrity evidence, you&apos;re guessing.
                                     </p>
                                     <p className="text-text-secondary">
-                                        If you&apos;re still interviewing the same way you did in 2020, you&apos;re vulnerable.
+                                        If you&apos;re still interviewing without an evidence layer, you&apos;re flying blind.
                                     </p>
                                 </section>
 
                                 {/* Types of Fraud */}
                                 <section className="mb-16">
-                                    <h2 className="text-3xl font-black text-white mb-8 tracking-tight">4 Types of Interview Fraud</h2>
+                                    <h2 className="text-3xl font-black text-white mb-8 tracking-tight">4 Verification Challenges</h2>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         {fraudTypes.map((fraud, i) => (
                                             <div key={i} className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
@@ -155,7 +155,7 @@ export default function PreventInterviewFraudPage() {
 
                                 {/* Detection Methods */}
                                 <section className="mb-16">
-                                    <h2 className="text-3xl font-black text-white mb-8 tracking-tight">How to Detect Each Type</h2>
+                                    <h2 className="text-3xl font-black text-white mb-8 tracking-tight">How to Build Evidence for Each</h2>
 
                                     {/* Proxy Interviewing */}
                                     <div className="mb-12">
@@ -192,10 +192,10 @@ export default function PreventInterviewFraudPage() {
                                     <div className="mb-12">
                                         <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
                                             <Monitor className="w-6 h-6 text-brand" />
-                                            Detecting AI Assistance
+                                            Detecting AI Collaboration Patterns
                                         </h3>
                                         <p className="text-text-secondary mb-6">
-                                            With ChatGPT, Claude, and Copilot readily available, candidates can get real-time help during interviews. Here&apos;s how to detect it:
+                                            With ChatGPT, Claude, and Copilot readily available, candidates can get real-time help during interviews. Here&apos;s how to build evidence of authentic understanding:
                                         </p>
                                         <div className="space-y-4 mb-6">
                                             <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10">
@@ -332,23 +332,23 @@ export default function PreventInterviewFraudPage() {
                                             <h2 className="text-2xl font-black text-white m-0">The Automated Approach</h2>
                                         </div>
                                         <p className="text-text-secondary mb-6">
-                                            Manual fraud detection works for low-volume hiring. But if you&apos;re screening dozens of candidates, you need automation.
+                                            Manual verification works for low-volume hiring. But if you&apos;re screening dozens of candidates, you need automation.
                                         </p>
                                         <p className="text-text-secondary mb-6">
-                                            Rigovo monitors 15 proprietary signals simultaneously during every interview — covering identity verification, behavioral analysis, and technical integrity. Our beta analyzed 6,824 signal events across 82 interviews.
+                                            Rigovo documents 15 proprietary signals simultaneously during every interview — covering identity verification, behavioral analysis, and technical integrity. Our beta analyzed 6,824 signal events across 82 interviews.
                                         </p>
                                         <ul className="space-y-3">
                                             <li className="flex items-start gap-3 text-text-secondary">
                                                 <CheckCircle2 className="w-5 h-5 text-brand shrink-0 mt-0.5" />
-                                                <span>41% of candidates flagged for deeper review</span>
+                                                <span>41% of candidates generated deeper integrity evidence</span>
                                             </li>
                                             <li className="flex items-start gap-3 text-text-secondary">
                                                 <CheckCircle2 className="w-5 h-5 text-brand shrink-0 mt-0.5" />
-                                                <span>Real-time detection, not post-hoc analysis</span>
+                                                <span>Real-time evidence capture, not post-hoc analysis</span>
                                             </li>
                                             <li className="flex items-start gap-3 text-text-secondary">
                                                 <CheckCircle2 className="w-5 h-5 text-brand shrink-0 mt-0.5" />
-                                                <span>Forensic audit trail for compliance</span>
+                                                <span>Integrity evidence audit trail for compliance</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -358,10 +358,10 @@ export default function PreventInterviewFraudPage() {
                                 <section className="mb-16">
                                     <h2 className="text-3xl font-black text-white mb-8 tracking-tight">The Bottom Line</h2>
                                     <p className="text-text-secondary mb-6">
-                                        Interview fraud isn&apos;t going away. As remote work becomes permanent and AI tools become ubiquitous, the problem will only get worse.
+                                        Verification gaps aren&apos;t going away. As remote work becomes permanent and AI tools become ubiquitous, the need for integrity evidence will only grow.
                                     </p>
                                     <p className="text-text-secondary mb-6">
-                                        The companies that adapt their hiring processes—whether through manual verification steps or automated detection—will make better hires and avoid costly mistakes.
+                                        The companies that build evidence into their hiring processes—whether through manual verification steps or automated integrity layers—will make better hires and avoid costly mistakes.
                                     </p>
                                     <p className="text-text-secondary">
                                         The companies that pretend the problem doesn&apos;t exist will learn the hard way.
@@ -375,10 +375,10 @@ export default function PreventInterviewFraudPage() {
                             <div className="mt-16 p-1 rounded-[2.5rem] bg-gradient-to-r from-brand/50 to-transparent">
                                 <div className="bg-[#050505] p-10 md:p-16 rounded-[2.4rem] text-center">
                                     <h3 className="text-3xl font-black text-white mb-6 tracking-tight">
-                                        Stop Interview Fraud Before It Starts
+                                        Build Integrity Evidence Into Every Interview
                                     </h3>
                                     <p className="text-text-secondary mb-10 max-w-xl mx-auto text-lg">
-                                        See how Rigovo&apos;s 15-signal verification protects your technical hiring. Free 90-minute pilot included.
+                                        See how Rigovo&apos;s 15-signal verification produces integrity evidence for every candidate. Free 90-minute pilot included.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                         <a

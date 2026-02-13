@@ -9,7 +9,7 @@ import { CTAButton } from '@/components/ui/cta-button';
 
 export const metadata: Metadata = {
     title: 'Rigovo vs HireVue: Which AI Interview Platform is Right for You? (2026)',
-    description: 'Detailed comparison of Rigovo and HireVue for technical hiring. Compare features, pricing, fraud detection, and identity verification capabilities.',
+    description: 'Detailed comparison of Rigovo and HireVue for technical hiring. Compare features, pricing, integrity verification, and identity verification capabilities.',
     keywords: [
         'HireVue alternative',
         'Rigovo vs HireVue',
@@ -36,7 +36,7 @@ const articleStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'NewsArticle',
     headline: 'Rigovo vs HireVue: Which AI Interview Platform is Right for You? (2026)',
-    description: 'Detailed comparison of Rigovo and HireVue for technical hiring. Compare features, pricing, fraud detection, and identity verification.',
+    description: 'Detailed comparison of Rigovo and HireVue for technical hiring. Compare features, pricing, integrity verification, and identity verification.',
     image: 'https://rigovo.com/og-image.png',
     datePublished: '2026-02-09T00:00:00Z',
     dateModified: '2026-02-09T00:00:00Z',
@@ -48,14 +48,14 @@ const articleStructuredData = {
 const comparisonData = [
     { feature: 'AI Interview Conductor', rigovo: true, hirevue: true, note: 'Both offer AI-led interviews' },
     { feature: 'Identity Verification', rigovo: true, hirevue: false, note: 'Rigovo verifies candidate identity in real-time' },
-    { feature: 'Fraud Detection (15 signals)', rigovo: true, hirevue: false, note: 'Deepfake, proxy, AI cheating detection' },
+    { feature: 'Integrity Verification (15 signals)', rigovo: true, hirevue: false, note: 'Deepfake, proxy, AI collaboration detection' },
     { feature: 'Continuous Identity Verification', rigovo: true, hirevue: false, note: 'Ongoing speaker verification throughout session' },
-    { feature: 'AI-Assisted Cheating Detection', rigovo: true, hirevue: false, note: 'Detects external assistance in real-time' },
+    { feature: 'AI Collaboration Verification', rigovo: true, hirevue: false, note: 'Documents external assistance patterns in real-time' },
     { feature: 'Technical Code Assessment', rigovo: true, hirevue: true, note: 'Live coding environment' },
     { feature: 'Free Pilot Available', rigovo: true, hirevue: false, note: 'Rigovo offers 90-min free pilot' },
     { feature: 'SOC2 Compliant', rigovo: true, hirevue: true, note: 'Enterprise security' },
     { feature: 'GDPR Compliant', rigovo: true, hirevue: true, note: 'Data privacy' },
-    { feature: 'Forensic Audit Trail', rigovo: true, hirevue: false, note: 'Cryptographic chain integrity' },
+    { feature: 'Integrity Evidence Audit Trail', rigovo: true, hirevue: false, note: 'Cryptographic chain integrity' },
 ];
 
 export default function RigovoVsHireVuePage() {
@@ -88,7 +88,7 @@ export default function RigovoVsHireVuePage() {
                                     Rigovo vs HireVue: <span className="text-brand">Complete Comparison</span> for 2026
                                 </h1>
                                 <p className="text-xl text-text-secondary leading-relaxed max-w-2xl font-medium">
-                                    Both platforms offer AI-powered interviews. But when it comes to fraud detection, identity verification, and technical hiring—they&apos;re not the same. Here&apos;s an honest breakdown.
+                                    Both platforms offer AI-powered interviews. But when it comes to integrity verification, identity evidence, and technical hiring—they&apos;re not the same. Here&apos;s an honest breakdown.
                                 </p>
                                 <time className="block mt-8 text-sm text-text-muted font-mono uppercase tracking-widest">
                                     By Rigour Labs Team | Feb 9, 2026
@@ -107,7 +107,7 @@ export default function RigovoVsHireVuePage() {
                                             </li>
                                             <li className="flex items-start gap-3">
                                                 <CheckCircle2 className="w-5 h-5 text-brand shrink-0 mt-0.5" />
-                                                <span><strong className="text-white">Choose Rigovo</strong> if you need fraud detection, identity verification, and technical assessment for engineering roles.</span>
+                                                <span><strong className="text-white">Choose Rigovo</strong> if you need integrity verification, identity evidence, and technical assessment for engineering roles.</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -160,7 +160,7 @@ export default function RigovoVsHireVuePage() {
                                         HireVue pioneered video interviewing. They&apos;re excellent at what they do: high-volume screening for customer service, retail, and hospitality roles.
                                     </p>
                                     <p className="text-text-secondary mb-6">
-                                        But technical hiring in 2026 has a different challenge: <span className="text-white font-bold">fraud</span>.
+                                        But technical hiring in 2026 has a different challenge: <span className="text-white font-bold">verification gaps</span>.
                                     </p>
                                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
                                         <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10 text-center">
@@ -189,7 +189,7 @@ export default function RigovoVsHireVuePage() {
                                         <div className="p-8 rounded-[2rem] bg-card/50 border border-white/5">
                                             <div className="flex items-center gap-4 mb-4">
                                                 <Shield className="w-6 h-6 text-brand" />
-                                                <h3 className="text-xl font-bold text-white">15-Signal Fraud Detection</h3>
+                                                <h3 className="text-xl font-bold text-white">15-Signal Integrity Verification</h3>
                                             </div>
                                             <p className="text-text-secondary mb-4">
                                                 Rigovo monitors 15 signals simultaneously during every interview:
@@ -199,7 +199,7 @@ export default function RigovoVsHireVuePage() {
                                                 <li>Behavioral analysis (6 signals)</li>
                                                 <li>Technical integrity (4 signals)</li>
                                                 <li>Proxy detection</li>
-                                                <li>AI-assisted cheating detection</li>
+                                                <li>AI collaboration pattern analysis</li>
                                                 <li>Session anomaly detection</li>
                                             </ul>
                                             <p className="text-xs text-text-muted mt-3 italic">
@@ -265,11 +265,11 @@ export default function RigovoVsHireVuePage() {
                                                 </li>
                                                 <li className="flex items-start gap-2">
                                                     <CheckCircle2 className="w-4 h-4 text-brand shrink-0 mt-0.5" />
-                                                    Need fraud and identity verification
+                                                    Need integrity and identity verification
                                                 </li>
                                                 <li className="flex items-start gap-2">
                                                     <CheckCircle2 className="w-4 h-4 text-brand shrink-0 mt-0.5" />
-                                                    Want to detect AI cheating during interviews
+                                                    Want to verify AI collaboration during interviews
                                                 </li>
                                                 <li className="flex items-start gap-2">
                                                     <CheckCircle2 className="w-4 h-4 text-brand shrink-0 mt-0.5" />
@@ -287,7 +287,7 @@ export default function RigovoVsHireVuePage() {
                                         HireVue is a solid choice for general hiring at scale. They&apos;ve been doing this for years and have the enterprise relationships to prove it.
                                     </p>
                                     <p className="text-text-secondary mb-6">
-                                        But if you&apos;re specifically hiring technical talent in 2026—where fraud is rampant, AI assistance is everywhere, and a bad hire costs $280K—you need a platform built for that reality.
+                                        But if you&apos;re specifically hiring technical talent in 2026—where verification gaps are growing, AI assistance is everywhere, and a bad hire costs $280K—you need a platform built for that reality.
                                     </p>
                                     <p className="text-text-secondary">
                                         Rigovo isn&apos;t trying to replace HireVue for every use case. We&apos;re focused on one thing: ensuring the engineer you interview is the engineer you hire.
@@ -304,7 +304,7 @@ export default function RigovoVsHireVuePage() {
                                         See the Difference for Yourself
                                     </h3>
                                     <p className="text-text-secondary mb-10 max-w-xl mx-auto text-lg">
-                                        Free pilot — 5 interviews, full forensic reports. No contracts, no sales pressure.
+                                        Free pilot — 5 interviews, full integrity evidence reports. No contracts, no sales pressure.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                         <CTAButton location="blog" className="px-10 py-4" />
