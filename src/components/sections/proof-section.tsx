@@ -5,25 +5,25 @@ import { TrendingUp, ShieldCheck, BarChart3, Target, CheckCircle2, ArrowRight, E
 import Link from 'next/link';
 import { analytics } from '@/lib/analytics';
 
-const detectionScenarios = [
+const verificationScenarios = [
     {
         icon: Eye,
-        title: 'Proxy Candidate Caught',
-        signal: 'Identity mismatch detected',
-        description: 'The person answering interview questions was not the same person who completed identity verification. Multiple corroborating signals confirmed a stand-in.',
+        title: 'Identity Mismatch Found',
+        signal: 'Verification flagged for review',
+        description: 'The person answering interview questions didn\'t match the identity verification profile. Multiple corroborating signals gave the hiring team clear evidence before making a decision.',
         detected: '3 of 15 signals triggered',
-        outcome: 'Flagged for review — saved the team from a fraudulent hire.',
+        outcome: 'Flagged for review — team had full evidence before proceeding.',
         color: 'text-red-400',
         bgColor: 'bg-red-500/10',
         borderColor: 'border-red-500/20',
     },
     {
         icon: Brain,
-        title: 'AI-Generated Answers Flagged',
-        signal: 'Behavioral anomaly cluster',
-        description: 'A candidate appeared to be using an AI tool to generate answers in real-time. Multiple behavioral signals correlated, distinguishing an "AI Passenger" from someone who genuinely leads AI.',
+        title: 'AI Passenger vs. AI Leader',
+        signal: 'Collaboration depth measured',
+        description: 'We don\'t penalize AI usage — we measure understanding. This candidate used AI tools but couldn\'t explain their reasoning, revealing a gap between tool use and genuine comprehension.',
         detected: '5 of 15 signals triggered',
-        outcome: 'Classified as AI Passenger — using AI, not understanding it.',
+        outcome: 'Classified as AI Passenger — using AI, not leading with it.',
         color: 'text-yellow-400',
         bgColor: 'bg-yellow-500/10',
         borderColor: 'border-yellow-500/20',
@@ -31,8 +31,8 @@ const detectionScenarios = [
     {
         icon: Fingerprint,
         title: 'Strong Candidate Verified',
-        signal: 'Clean across all checks',
-        description: 'Everything checked out — identity, behavior, and technical depth. The system confirmed authenticity across all 15 signal layers so the hiring team could proceed with confidence.',
+        signal: 'Confident across all checks',
+        description: 'Identity, engagement, and technical depth all confirmed. This candidate used AI tools effectively and could explain every decision — exactly the kind of engineer you want to hire.',
         detected: '0 of 15 signals triggered',
         outcome: 'Integrity Score: 95/100 — recommended to proceed.',
         color: 'text-green-400',
@@ -51,7 +51,7 @@ const proofPoints = [
     {
         icon: ShieldCheck,
         title: '15-Signal Verification',
-        description: '12% of beta interviews were flagged for integrity concerns that traditional screening would have missed entirely.',
+        description: '12% of beta interviews surfaced insights that traditional screening would have missed entirely.',
         methodology: 'Self-learning signal engine that improves with every interview outcome',
     },
     {
@@ -77,10 +77,10 @@ export function ProofSection() {
                         Proof & Results
                     </div>
                     <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight text-white leading-[1.1]">
-                        Built to Catch What Others Miss
+                        Built to See What Others Can&apos;t
                     </h2>
                     <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
-                        82 beta interviews. 6,824 signal events. Here&apos;s the methodology behind the detection — and what it looks like in practice.
+                        82 beta interviews. 6,824 signal events. Here&apos;s the methodology behind our verification — and what it looks like in practice.
                     </p>
                 </div>
 
@@ -103,16 +103,16 @@ export function ProofSection() {
                     ))}
                 </div>
 
-                {/* What Rigovo Catches — Real Detection Scenarios */}
+                {/* What Rigovo Verifies — Real Scenarios */}
                 <div className="mb-16">
                     <h3 className="text-2xl font-bold text-white mb-3 text-center">
-                        What the Sentinel Engine Catches
+                        What the Sentinel Engine Reveals
                     </h3>
                     <p className="text-text-secondary text-center mb-8 max-w-2xl mx-auto">
                         Real scenarios from our 15-signal verification. Every interview gets this level of analysis automatically.
                     </p>
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                        {detectionScenarios.map((scenario, index) => (
+                        {verificationScenarios.map((scenario, index) => (
                             <article
                                 key={index}
                                 className="group relative h-full"

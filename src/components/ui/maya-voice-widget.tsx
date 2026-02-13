@@ -12,7 +12,33 @@ interface MayaVoiceWidgetProps {
 }
 
 export function MayaVoiceWidget({ isPlaying, onToggle, isSentinelMode, onToggleSentinel }: MayaVoiceWidgetProps) {
+    const playStartRef = React.useRef<number | null>(null);
+
     const handleTogglePlay = () => {
+        if (!isPlaying) {
+            // Starting playback — record start time
+            playStartRef.current = Date.now();
+            analytics.track({
+                event: 'maya_voice_played',
+                properties: {
+                    location: 'hero',
+                },
+            });
+        } else {
+            // Stopping playback — calculate duration
+            const duration = playStartRef.current
+                ? Math.round((Date.now() - playStartRef.current) / 1000)
+                : undefined;
+            playStartRef.current = null;
+            analytics.track({
+                event: 'maya_voice_played',
+                properties: {
+                    location: 'hero',
+                    listen_duration_seconds: duration,
+                },
+            });
+        }
+
         analytics.track({
             event: 'feature_toggled',
             properties: {

@@ -104,6 +104,15 @@ export function CTAButton({
                 destination_url: resolvedHref,
             },
         });
+
+        // For outbound links, fire GA4 event via sendBeacon so it completes before navigation
+        if (isExternal && typeof window !== 'undefined' && typeof window.gtag === 'function') {
+            window.gtag('event', 'outbound_click', {
+                link_url: resolvedHref,
+                link_location: location,
+                transport_type: 'beacon',
+            });
+        }
     };
 
     // Base styles per variant

@@ -108,6 +108,66 @@ interface DemoCompletedEvent {
 }
 
 /**
+ * Maya AI Interaction Events
+ * Tracks how users engage with Maya demo across the site
+ */
+interface MayaVoicePlayedEvent {
+  event: 'maya_voice_played';
+  properties: {
+    location: 'hero' | 'live_demo' | 'product';
+    /** How long they listened in seconds */
+    listen_duration_seconds?: number;
+  };
+}
+
+interface MayaDemoPageViewedEvent {
+  event: 'maya_demo_page_viewed';
+  properties: {
+    /** Where user came from */
+    referrer_section: 'hero_cta' | 'navbar' | 'bottom_cta' | 'direct' | 'external';
+    /** UTM source if present */
+    utm_source?: string;
+  };
+}
+
+interface MayaDemoFormFilledEvent {
+  event: 'maya_demo_form_filled';
+  properties: {
+    /** Which field was filled */
+    field: 'name' | 'email' | 'role';
+    /** For role changes, which role */
+    role?: 'ENGINEER' | 'PRODUCT_MANAGER' | 'DESIGNER' | 'DATA_SCIENTIST';
+    /** Company domain extracted from email */
+    company_domain?: string;
+  };
+}
+
+interface MayaDemoSessionCreatedEvent {
+  event: 'maya_demo_session_created';
+  properties: {
+    role: 'ENGINEER' | 'PRODUCT_MANAGER' | 'DESIGNER' | 'DATA_SCIENTIST';
+    company_domain?: string;
+    /** Time from page load to session creation in seconds */
+    time_to_start_seconds?: number;
+    /** GA4 conversion value */
+    value?: number;
+    currency?: string;
+  };
+}
+
+interface MayaDemoDropoffEvent {
+  event: 'maya_demo_dropoff';
+  properties: {
+    /** Where they dropped off */
+    dropoff_point: 'form_viewed_not_started' | 'form_started_not_submitted' | 'rate_limited' | 'error';
+    /** Time on page before dropping off */
+    time_on_page_seconds?: number;
+    /** Whether they had filled any fields */
+    fields_filled?: number;
+  };
+}
+
+/**
  * Pricing Events
  * Fired on pricing page interactions
  */
@@ -308,6 +368,11 @@ type AnalyticsEvent =
   | DemoRoleSelectedEvent
   | DemoStartedEvent
   | DemoCompletedEvent
+  | MayaVoicePlayedEvent
+  | MayaDemoPageViewedEvent
+  | MayaDemoFormFilledEvent
+  | MayaDemoSessionCreatedEvent
+  | MayaDemoDropoffEvent
   | PricingTierViewedEvent
   | PricingCTAClickedEvent
   | PageViewedEvent

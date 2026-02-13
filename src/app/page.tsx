@@ -8,12 +8,13 @@ import { CapabilitiesSection } from '@/components/sections/capabilities-section'
 import { HowItWorksSection } from '@/components/sections/how-it-works-section';
 import { ProblemSolutionSection } from '@/components/sections/problem-solution-section';
 import { ProofSection } from '@/components/sections/proof-section';
+import { LeadCaptureSection } from '@/components/sections/lead-capture-section';
 import { CTASection } from '@/components/sections/cta-section';
 import { HomepageAnalytics } from '@/components/homepage-analytics';
 
 export const metadata: Metadata = {
-  title: 'Rigovo | AI-Allowed Interview Platform with Integrity Evidence',
-  description: 'Screen technical candidates 5x faster with AI. Maya AI conducts interviews 24/7 with built-in integrity evidence and a complete audit trail. Free pilot included.',
+  title: 'Rigovo | AI-Powered Technical Interviews with Verified Hiring Intelligence',
+  description: 'Maya AI conducts technical interviews while our 15-signal verification engine confirms identity, engagement, and depth. Hire with confidence — try 5 interviews free.',
   keywords: [
     // High-intent commercial keywords (what buyers search)
     'AI interview software',
@@ -41,10 +42,17 @@ export const metadata: Metadata = {
     'technical assessment platform',
     'developer assessment tool',
     'engineering hiring software',
+    // Verified hiring keywords (primary differentiator)
+    'verified candidate assessment',
+    'interview integrity platform',
+    'candidate identity verification',
+    'remote interview verification',
+    'candidate identity verification software',
     // Long-tail high-intent
     'AI interview with integrity evidence',
     'automated coding assessment',
     'remote hiring verification software',
+    'verified technical hiring platform',
   ],
 };
 
@@ -59,6 +67,7 @@ export default function LandingPage() {
         <HowItWorksSection />
         <ProblemSolutionSection />
         <ProofSection />
+        <LeadCaptureSection />
         <CTASection />
       </main>
       <Footer />

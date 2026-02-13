@@ -48,6 +48,22 @@ export default function robots(): MetadataRoute.Robots {
                 userAgent: 'PerplexityBot',
                 allow: '/',
             },
+            {
+                userAgent: 'Bytespider',
+                allow: '/',
+            },
+            {
+                userAgent: 'Google-Extended',
+                allow: '/',
+            },
+            {
+                userAgent: 'cohere-ai',
+                allow: '/',
+            },
+            {
+                userAgent: 'YouBot',
+                allow: '/',
+            },
             // Block bad bots that waste crawl budget
             {
                 userAgent: 'AhrefsBot',

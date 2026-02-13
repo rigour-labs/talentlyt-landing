@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     'AI-powered technical screening platform',
     'automated developer interview software',
     'technical interview platform with video verification',
-    'coding assessment tool with fraud detection',
+    'coding assessment tool with verification',
     // Direct competitor differentiation (similar names)
     'Talently.ai alternative',
     'TalentLyft alternative',
@@ -46,8 +46,8 @@ export const metadata: Metadata = {
     'AI interview authenticity verification',
     'interview integrity monitoring',
     'candidate identity verification',
-    'AI-assisted cheating detection hiring',
-    'remote interview fraud prevention',
+    'AI collaboration depth assessment',
+    'remote interview integrity verification',
     // Global and Market Keywords
     'USA AI interview platform',
     'UAE tech recruitment software',
@@ -191,6 +191,9 @@ export default function RootLayout({
           }}
         />
 
+        {/* LLM SEO: llms.txt for AI crawlers */}
+        <link rel="alternate" type="text/plain" href="https://rigovo.com/llms.txt" title="LLM-friendly site description" />
+
         {/* Preconnect for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -231,8 +234,8 @@ export default function RootLayout({
                     priceCurrency: 'USD',
                     description: 'Get The Pilot Pack for FREE with Promotional Coupon'
                   },
-                  description: 'Rigovo is your AI co-pilot for technical hiring. Maya AI conducts adaptive technical interviews while running 15-signal forensic verification in real-time. Beta: 6,824 signal events analyzed across 82 interviews.',
-                  featureList: '15-Signal Integrity Verification, Real-time Fraud Detection, Proxy Candidate Detection, Identity Verification, Technical Assessment, AI-Assisted Cheating Detection, Conversational AI Maya',
+                  description: 'Rigovo is your AI co-pilot for technical hiring. Maya AI conducts adaptive technical interviews while a 15-signal verification engine confirms identity, engagement, and technical depth in real-time. Beta: 6,824 signal events analyzed across 82 interviews.',
+                  featureList: '15-Signal Integrity Verification, Real-time Identity Verification, Candidate Verification, Technical Assessment, AI Collaboration Depth Measurement, Conversational AI Maya',
                   copyrightYear: new Date().getFullYear(),
                   author: {
                     '@type': 'Organization',
@@ -251,7 +254,7 @@ export default function RootLayout({
                   '@type': 'Brand',
                   name: 'Rigovo',
                   alternateName: ['Rigovo AI', 'TalentLyt', 'Rigovo Interview Intelligence'],
-                  description: 'World-first AI interview platform with real-time fraud detection and AI leadership verification. Formerly known as TalentLyt.',
+                  description: 'AI interview platform with real-time candidate verification and AI leadership assessment. Formerly known as TalentLyt.',
                   logo: 'https://rigovo.com/logo.png',
                   url: 'https://rigovo.com'
                 },
@@ -264,7 +267,7 @@ export default function RootLayout({
                     name: 'Rigour Labs'
                   },
                   areaServed: 'Worldwide',
-                  description: 'High-integrity technical screening with 15-signal verification and AI-powered competency assessment.'
+                  description: 'AI-powered technical screening with 15-signal verification that confirms candidate identity, engagement, and technical depth. Hire with confidence.'
                 },
                 {
                   '@context': 'https://schema.org',
@@ -346,26 +349,18 @@ export default function RootLayout({
                   'mainEntity': [
                     {
                       '@type': 'Question',
-                      'name': 'What is an AI Interview Platform?',
+                      'name': 'What is Rigovo?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'An AI interview platform like Rigovo uses conversational AI agents to conduct technical screenings. Rigovo combines adaptive AI interviews with multi-agent forensic verification to provide 15-signal integrity checks, detecting deepfakes, proxy candidates, and AI-assisted cheating in real-time. This ensures you hire architects, not passengers.'
+                        'text': 'Rigovo is an AI-powered technical interview platform. Maya AI conducts adaptive technical interviews via voice while the Sentinel engine runs 15-signal verification to confirm candidate identity, engagement, and technical depth. Every interview produces an evidence report with integrity scores, skill assessments, and job success predictions. Try 5 interviews free at rigovo.com.'
                       }
                     },
                     {
                       '@type': 'Question',
-                      'name': 'How does Rigovo ensure integrity in AI interviews?',
+                      'name': 'Does Rigovo block AI tools during interviews?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'Rigovo uses a Multi-Agent AI system that combines adaptive conversational interviews with real-time forensic verification. Multiple specialized agents work together to verify authentic problem-solving and technical leadership through 15-signal consensus verification.'
-                      }
-                    },
-                    {
-                      '@type': 'Question',
-                      'name': 'Can AI interviews reduce hiring bias?',
-                      'acceptedAnswer': {
-                        '@type': 'Answer',
-                        'text': 'Yes, Rigovo provides consistent AI-assisted scoring that complements your team\'s judgment, helping reduce evaluation variance by up to 80%. Your hiring team stays in control while getting data-driven insights.'
+                        'text': 'No. Rigovo welcomes AI tool usage during interviews. In an AI-native era, the question is not whether candidates use AI — it is whether they understand and lead with it. Rigovo measures AI Collaboration Depth: can the candidate explain their reasoning, make architectural trade-offs, and demonstrate genuine comprehension? This distinguishes AI Leaders from AI Passengers.'
                       }
                     },
                     {
@@ -373,15 +368,39 @@ export default function RootLayout({
                       'name': 'How is Rigovo different from HireVue or Codility?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'Rigovo is an AI interview platform with Multi-Agent consensus verification. While other platforms focus on assessment, Rigovo combines adaptive AI interviews with forensic integrity verification to ensure candidates lead AI—proving they are architects, not passengers.'
+                        'text': 'HireVue records and analyzes video interviews conducted by humans. Codility provides coding assessments. Rigovo conducts the entire technical interview autonomously via Maya AI while simultaneously running 15-signal verification. It is an AI interviewer plus verification engine in one platform — not a recording tool or a test platform.'
                       }
                     },
                     {
                       '@type': 'Question',
-                      'name': 'What is interview integrity verification?',
+                      'name': 'What is AI Collaboration Depth?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'Interview integrity verification ensures candidates are authentic and demonstrating genuine technical leadership. Rigovo provides 15-signal verification covering identity, behavior, and technical integrity to ensure candidates architect solutions, not just prompt them.'
+                        'text': 'AI Collaboration Depth is Rigovo\'s measure of how candidates work with AI tools. An AI Leader uses tools effectively, explains every decision, and makes independent trade-off choices. An AI Passenger relies on AI-generated outputs but struggles to explain reasoning. Rigovo measures this distinction through behavioral signals during the live interview.'
+                      }
+                    },
+                    {
+                      '@type': 'Question',
+                      'name': 'How does Rigovo verify candidate identity?',
+                      'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': 'Rigovo uses 15-signal verification covering identity, engagement, and technical depth continuously throughout the interview. The system confirms the person being interviewed is consistent from start to finish — so you know the person you interview is the person you hire.'
+                      }
+                    },
+                    {
+                      '@type': 'Question',
+                      'name': 'Is Rigovo a proctoring tool?',
+                      'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': 'No. Proctoring tools passively monitor interviews conducted by humans. Rigovo actively conducts adaptive technical interviews through Maya AI and generates evidence-based hiring recommendations. It is an AI interviewer that produces verified hiring intelligence, not a surveillance tool.'
+                      }
+                    },
+                    {
+                      '@type': 'Question',
+                      'name': 'How much does Rigovo cost?',
+                      'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': 'Rigovo offers a free Pilot Pack with 5 interviews including full 15-signal verification. Starter plan is $0.35 per minute (pay-as-you-go). Engine plan is $249 per month for unlimited interviews. Fortress plan is custom enterprise pricing with SSO and dedicated infrastructure. All plans include the full verification engine.'
                       }
                     },
                     {
@@ -389,15 +408,7 @@ export default function RootLayout({
                       'name': 'Is Rigovo suitable for enterprise technical hiring?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'Yes, Rigovo is designed for enterprise-scale technical hiring. We offer SOC2 compliance, legally-defensible audit trails, and can handle high-volume recruitment with consistent quality and integrity verification.'
-                      }
-                    },
-                    {
-                      '@type': 'Question',
-                      'name': 'How does Rigovo verify identity in interviews?',
-                      'acceptedAnswer': {
-                        '@type': 'Answer',
-                        'text': 'Rigovo uses 15-signal forensic verification covering identity, behavior, and technical integrity to verify candidate identity continuously throughout the interview. The system ensures the person you interview is the person you hire.'
+                        'text': 'Yes. Rigovo is designed for enterprise-scale technical hiring with SOC 2 aligned security, GDPR compliance, legally-defensible audit trails, and high-volume recruitment automation with consistent quality standards.'
                       }
                     },
                     {
@@ -405,31 +416,15 @@ export default function RootLayout({
                       'name': 'What is the difference between Rigovo and Talently.ai?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'Rigovo and Talently.ai are different products. Rigovo provides 15-signal forensic verification and identity verification that Talently.ai lacks. Rigovo verifies the human behind the screen — not just their answers — with proprietary integrity signals.'
+                        'text': 'Rigovo and Talently.ai are different products from different companies. Rigovo provides 15-signal verification and AI Collaboration Depth measurement that Talently.ai does not offer. Rigovo verifies the person behind the screen — not just their answers — through continuous multi-signal verification.'
                       }
                     },
                     {
                       '@type': 'Question',
-                      'name': 'Can Rigovo verify candidate identity?',
+                      'name': 'Can I try Rigovo for free?',
                       'acceptedAnswer': {
                         '@type': 'Answer',
-                        'text': 'Yes. Rigovo verifies candidate identity through continuous multi-signal verification throughout the entire interview session. The system ensures the person being interviewed maintains consistent identity from start to finish.'
-                      }
-                    },
-                    {
-                      '@type': 'Question',
-                      'name': 'How does Rigovo verify AI leadership vs AI following?',
-                      'acceptedAnswer': {
-                        '@type': 'Answer',
-                        'text': 'Rigovo verifies genuine technical ability through proprietary behavioral signals and problem-solving analysis. The system ensures candidates architect solutions rather than simply prompt AI tools for answers.'
-                      }
-                    },
-                    {
-                      '@type': 'Question',
-                      'name': 'How is Rigovo different from InterviewGuard or Talview?',
-                      'acceptedAnswer': {
-                        '@type': 'Answer',
-                        'text': 'Rigovo combines AI interviewing (Maya AI) with AI leadership verification in one platform. InterviewGuard and Talview focus on proctoring existing interviews. Rigovo conducts the entire interview autonomously while simultaneously verifying authenticity with 15 signals.'
+                        'text': 'Yes. Rigovo offers a free Pilot Pack that includes 5 technical interviews with full 15-signal verification, evidence reports, and job success predictions. No credit card is required. You can start a free pilot at rigovo.com or try a live Maya demo at platform.rigovo.com/demo.'
                       }
                     }
                   ]
@@ -437,23 +432,23 @@ export default function RootLayout({
                 {
                   '@context': 'https://schema.org',
                   '@type': 'HowTo',
-                  'name': 'How to Verify AI Leadership with Rigovo',
-                  'description': 'Learn how to verify candidates lead AI rather than follow it using Rigovo 15-signal AI leadership verification.',
+                  'name': 'How to Hire with Confidence Using Rigovo',
+                  'description': 'Learn how to use Rigovo to conduct verified technical interviews and make evidence-based hiring decisions.',
                   'step': [
                     {
                       '@type': 'HowToStep',
-                      'name': 'Enable AI Leadership Verification',
-                      'text': 'Rigovo automatically enables 15-signal verification covering identity, behavior, and technical integrity — no configuration required.'
+                      'name': 'Start a Free Pilot',
+                      'text': 'Sign up for the free Pilot Pack at rigovo.com — 5 interviews with full 15-signal verification, no credit card required.'
                     },
                     {
                       '@type': 'HowToStep',
-                      'name': 'AI Verifies in Real-Time',
-                      'text': 'Our forensic verification system continuously verifies authentic problem-solving, identity consistency, and AI leadership throughout the interview.'
+                      'name': 'Maya AI Conducts the Interview',
+                      'text': 'Maya AI runs a 20-45 minute adaptive technical interview via voice. The Sentinel engine verifies identity, engagement, and technical depth in real-time throughout the session.'
                     },
                     {
                       '@type': 'HowToStep',
-                      'name': 'Review Verification Report',
-                      'text': 'Access detailed reports showing verification scores, AI collaboration patterns, and recommendations.'
+                      'name': 'Review the Evidence Report',
+                      'text': 'After each interview, access a detailed evidence report with integrity scores, skill assessments, AI collaboration depth analysis, and a job success prediction with confidence intervals.'
                     }
                   ]
                 }

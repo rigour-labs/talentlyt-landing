@@ -1,22 +1,13 @@
-import React from 'react';
+import { redirect } from 'next/navigation';
 import { Metadata } from 'next';
-import { Navbar } from '@/components/navbar';
-import { Footer } from '@/components/footer';
-import { LiveDemoContent } from '@/components/live-demo-content';
-import { PageAnalytics } from '@/components/page-analytics';
 
 export const metadata: Metadata = {
-    title: 'Live Demo | Experience the Future of Technical Hiring',
-    description: 'See how Rigovo\'s AI-powered platform conducts technical interviews while verifying candidate integrity in real-time. Explore our Maya AI and Audit Sentinel features.',
+    title: 'Try Maya Live | Rigovo',
+    description: 'Experience Maya AI — your AI interviewer for technical hiring. Try a live demo now.',
 };
 
+// Redirect to platform demo directly — no intermediary form needed
+// UTM tracks users who hit this via old bookmarks or indexed URLs
 export default function LiveDemoPage() {
-    return (
-        <div className="min-h-screen bg-background">
-            <Navbar />
-            <LiveDemoContent />
-            <PageAnalytics pagePath="/live-demo" />
-            <Footer />
-        </div>
-    );
+    redirect('https://platform.rigovo.com/demo?utm_source=landing&utm_medium=redirect&utm_content=live_demo_page');
 }

@@ -21,8 +21,8 @@ export function Navbar() {
 
     const navLinks = [
         { name: 'Platform', href: '/' },
+        { name: 'Try Maya', href: 'https://platform.rigovo.com/demo?utm_source=landing&utm_medium=nav&utm_content=navbar' },
         { name: 'Product', href: '/product' },
-        { name: 'Compare', href: '/compare' },
         { name: 'Pricing', href: '/pricing' },
         { name: 'Blog', href: '/blog' },
         { name: 'About', href: '/about' },
@@ -42,15 +42,15 @@ export function Navbar() {
                 <div className="relative z-10 flex items-center justify-center gap-4 py-3 px-4 backdrop-blur-xl">
                     <div className="flex items-center gap-3">
                         {/* Flashing "LIVE" indicator - hidden on smallest screens */}
-                        <div className="hidden xs:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-red-500/10 border border-red-500/30 animate-pulse">
-                            <div className="w-1.5 h-1.5 rounded-full bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.8)]" />
-                            <span className="text-[10px] sm:text-[11px] font-black text-red-500 uppercase tracking-widest">Live Offer</span>
+                        <div className="hidden xs:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-green-500/10 border border-green-500/30 animate-pulse">
+                            <div className="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.8)]" />
+                            <span className="text-[10px] sm:text-[11px] font-black text-green-500 uppercase tracking-widest">Free Pilot</span>
                         </div>
 
                         <p className="text-[11px] sm:text-xs font-bold text-white tracking-wide flex items-center gap-2">
                             <Sparkles className="w-3.5 h-3.5 text-brand animate-pulse-soft shrink-0" />
                             <span>
-                                <span className="hidden sm:inline">Get </span><span className="text-white underline underline-offset-4 decoration-brand/50">"The Pilot"</span> <span className="text-brand font-black">Free</span><span className="hidden sm:inline"> ($29)</span>
+                                <span className="hidden sm:inline">Verified technical hiring, powered by AI — </span><span className="text-brand font-black">5 free interviews</span><span className="hidden sm:inline">, no credit card</span>
                             </span>
                         </p>
                     </div>

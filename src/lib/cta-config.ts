@@ -6,13 +6,13 @@
 
 export const CTA_CONFIG = {
     /** Primary CTA text shown on most buttons */
-    primaryText: 'Book 15-min Pilot Call',
+    primaryText: 'Start Free Pilot',
     /** Compact CTA text for navbar/small spaces */
-    compactText: 'Book Pilot Call',
+    compactText: 'Start Free Pilot',
     /** Where the primary CTA links to */
     primaryLink: 'https://calendly.com/rigovo/',
     /** Secondary CTA text */
-    secondaryText: 'View Sample Report',
-    /** Where the secondary CTA links to */
-    secondaryLink: '/sample-report',
+    secondaryText: 'Try Maya Live',
+    /** Where the secondary CTA links to (platform demo — no intermediary form) */
+    secondaryLink: 'https://platform.rigovo.com/demo?utm_source=landing&utm_medium=cta&utm_content=default',
 } as const;

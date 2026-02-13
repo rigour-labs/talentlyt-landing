@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { ArrowRight, ShieldCheck, Activity, Globe, Zap, Database, Search } from 'lucide-react';
 import { InteractiveDemoForm } from './interactive-demo-form';
@@ -8,6 +8,30 @@ import { analytics } from '@/lib/analytics';
 import { CTA_CONFIG } from '@/components/ui/cta-button';
 
 export function LiveDemoContent() {
+    // Track Maya demo page arrival with referrer context
+    useEffect(() => {
+        const referrer = typeof document !== 'undefined' ? document.referrer : '';
+        const urlParams = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : null;
+
+        let referrerSection: 'hero_cta' | 'navbar' | 'bottom_cta' | 'direct' | 'external' = 'direct';
+        if (referrer.includes(window.location.hostname)) {
+            // Internal referrer — try to determine which CTA brought them
+            const hash = window.location.hash;
+            if (urlParams?.get('from') === 'hero') referrerSection = 'hero_cta';
+            else if (urlParams?.get('from') === 'nav') referrerSection = 'navbar';
+            else if (urlParams?.get('from') === 'cta') referrerSection = 'bottom_cta';
+        } else if (referrer) {
+            referrerSection = 'external';
+        }
+
+        analytics.track({
+            event: 'maya_demo_page_viewed',
+            properties: {
+                referrer_section: referrerSection,
+                utm_source: urlParams?.get('utm_source') || undefined,
+            },
+        });
+    }, []);
     const sections = [
         {
             id: 'initiation',

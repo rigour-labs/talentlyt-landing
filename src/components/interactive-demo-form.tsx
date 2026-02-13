@@ -54,6 +54,9 @@ export function InteractiveDemoForm() {
   const [rateLimitExceeded, setRateLimitExceeded] = useState(false);
   const [bookingUrl, setBookingUrl] = useState<string | null>(null);
   const hasTrackedStart = useRef(false);
+  const hasTrackedNameFill = useRef(false);
+  const hasTrackedEmailFill = useRef(false);
+  const pageLoadTime = useRef(Date.now());
 
   // Track form start on first interaction
   const handleFormInteraction = () => {
@@ -69,6 +72,32 @@ export function InteractiveDemoForm() {
     });
   };
 
+  // Track individual field fills for funnel analysis
+  const handleNameChange = (value: string) => {
+    setName(value);
+    if (value.trim().length >= 2 && !hasTrackedNameFill.current) {
+      hasTrackedNameFill.current = true;
+      analytics.track({
+        event: 'maya_demo_form_filled',
+        properties: { field: 'name' },
+      });
+    }
+  };
+
+  const handleEmailChange = (value: string) => {
+    setEmail(value);
+    if (value.includes('@') && value.includes('.') && !hasTrackedEmailFill.current) {
+      hasTrackedEmailFill.current = true;
+      analytics.track({
+        event: 'maya_demo_form_filled',
+        properties: {
+          field: 'email',
+          company_domain: extractDomain(value),
+        },
+      });
+    }
+  };
+
   // Track role selection changes
   const handleRoleChange = (newRole: RoleInterest) => {
     if (newRole === role) return;
@@ -79,6 +108,11 @@ export function InteractiveDemoForm() {
         role: newRole,
         previous_role: role,
       },
+    });
+
+    analytics.track({
+      event: 'maya_demo_form_filled',
+      properties: { field: 'role', role: newRole },
     });
 
     setRole(newRole);
@@ -162,6 +196,18 @@ export function InteractiveDemoForm() {
         },
       });
 
+      // GA4 conversion event — Maya demo session created
+      analytics.track({
+        event: 'maya_demo_session_created',
+        properties: {
+          role: role,
+          company_domain: extractDomain(email.trim()),
+          time_to_start_seconds: Math.round((Date.now() - pageLoadTime.current) / 1000),
+          value: 100,
+          currency: 'USD',
+        },
+      });
+
       // Also track as form submission for funnel analysis
       analytics.track({
         event: 'form_submitted',
@@ -232,7 +278,7 @@ export function InteractiveDemoForm() {
               <input
                 type="text"
                 value={name}
-                onChange={(e) => setName(e.target.value)}
+                onChange={(e) => handleNameChange(e.target.value)}
                 placeholder="John Doe"
                 className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-text-muted focus:outline-none focus:border-brand/50 transition-colors"
                 disabled={isLoading}
@@ -248,7 +294,7 @@ export function InteractiveDemoForm() {
                 <input
                   type="email"
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={(e) => handleEmailChange(e.target.value)}
                   placeholder="john@company.com"
                   className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-text-muted focus:outline-none focus:border-brand/50 transition-colors"
                   disabled={isLoading}

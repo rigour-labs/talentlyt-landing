@@ -26,15 +26,16 @@ export function CTASection() {
                             Your <span className="text-brand">evidence layer.</span>
                         </h2>
                         <p className="text-lg sm:text-xl text-text-secondary mb-12 max-w-2xl mx-auto text-center opacity-70">
-                            Every interview should produce integrity evidence, not just vibes. <span className="text-white font-bold">Let Maya handle it</span> — you focus on finding the right fit.
+                            Every interview produces a verified record of identity, engagement, and technical ability. <span className="text-white font-bold">Make every hire count</span> — start with 5 free interviews.
                         </p>
 
-                        <div className="flex flex-col items-center gap-6 mb-16">
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
                             <CTAButton location="bottom_cta" className="px-12 py-6 text-lg" />
-                            <p className="text-text-muted text-sm">
-                                Free pilot included — get your coupon on the call
-                            </p>
+                            <CTAButton variant="secondary" location="bottom_cta" text="Try Maya Live" href="https://platform.rigovo.com/demo?utm_source=landing&utm_medium=cta&utm_content=bottom_cta" className="px-10 py-5 text-base" />
                         </div>
+                        <p className="text-text-muted text-sm text-center mb-10">
+                            5 free interviews — no credit card, no commitment
+                        </p>
 
 
                         <div className="mt-20 flex flex-wrap items-center justify-center gap-8 text-[9px] text-white/60 uppercase tracking-[0.3em]">

@@ -48,13 +48,13 @@ export function HeroSection() {
                             <span className="technical-label text-text-muted text-[10px]">Formerly <span className="text-white font-semibold">TalentLyt</span></span>
                         </div>
 
-                        {/* Live Beta Badge */}
+                        {/* Early Access Badge */}
                         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/20 border border-green-500/40 shadow-[0_0_15px_rgba(34,197,94,0.2)]">
                             <span className="relative flex h-2 w-2">
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                             </span>
-                            <span className="technical-label text-green-400 font-semibold">Live Beta</span>
+                            <span className="technical-label text-green-400 font-semibold">Early Access</span>
                         </div>
 
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand/10 border border-brand/20 shadow-[0_0_15px_rgba(0,102,255,0.1)]">
@@ -64,20 +64,20 @@ export function HeroSection() {
                     </div>
 
                     <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[1.02] tracking-tight text-white ${heroVisible ? 'slide-up animate-delay-200' : 'animate-on-scroll'}`}>
-                        AI-Allowed Interviews.<br />
-                        <span className="text-brand">Verified Results.</span>
+                        Hire with Confidence.<br />
+                        <span className="text-brand">Know Who You&apos;re Hiring.</span>
                     </h1>
 
                     <p className={`text-lg sm:text-xl text-text-secondary mb-6 leading-relaxed max-w-xl ${heroVisible ? 'slide-up animate-delay-300' : 'animate-on-scroll'}`}>
-                        Maya runs your technical screens. You focus on culture fit. And when it comes to AI? We don&apos;t care if they used it — we care if they understood what it gave them.
+                        Maya AI conducts your technical interviews while our 15-signal verification engine confirms identity, engagement, and technical depth — so every hiring decision is backed by evidence.
                     </p>
 
                     {/* Quick Value Props */}
                     <div className={`flex flex-wrap gap-3 mb-8 ${heroVisible ? 'slide-up animate-delay-350' : 'animate-on-scroll'}`}>
                         {[
-                            { icon: CheckCircle2, text: 'AI-allowed by default' },
+                            { icon: ShieldCheck, text: 'Identity & engagement verified' },
                             { icon: Clock, text: '70% faster screening' },
-                            { icon: Users, text: 'Integrity evidence built in' },
+                            { icon: Users, text: '15-signal candidate intelligence' },
                         ].map((item, i) => (
                             <div key={i} className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm text-text-secondary">
                                 <item.icon className="w-3.5 h-3.5 text-brand" />
@@ -88,10 +88,11 @@ export function HeroSection() {
 
                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
                         <CTAButton location="hero" />
-                        <span className="text-text-muted text-sm text-center sm:text-left">
-                            Free pilot included ($29 value)
-                        </span>
+                        <CTAButton variant="secondary" location="hero" text="Try Maya Live" href="https://platform.rigovo.com/demo?utm_source=landing&utm_medium=cta&utm_content=hero" />
                     </div>
+                    <p className={`text-text-muted text-xs mt-3 ${heroVisible ? 'fade-in animate-delay-400' : 'animate-on-scroll'}`}>
+                        5 free interviews included — no credit card required
+                    </p>
 
                     {/* Maya Voice Widget - Push to Talk */}
                     <div className={`mt-8 w-full sm:w-auto min-w-[320px] ${heroVisible ? 'slide-up animate-delay-400' : 'animate-on-scroll'}`}>
